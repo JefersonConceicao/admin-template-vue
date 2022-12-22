@@ -46,6 +46,7 @@ mix.js('resources/main.js', 'public/js');
 // mix.setPublicPath('./')
 // We strongly recommend running vuejs projects on a domain or sub-domain but if you really need to run it in a sub-folder, please change below path
  mix.setResourceRoot('/')
+ 
 
 
 
