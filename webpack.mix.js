@@ -21,6 +21,9 @@ mix.autoload({
 
 //====set alias for isotope
 mix.webpackConfig({
+    output: {
+        publicPath: '/laravel_vue/public'
+    },
     resolve: {
         alias: {
             'masonry': 'masonry-layout',
@@ -43,9 +46,9 @@ mix.js('resources/main.js', 'public/js');
 // })
 
 
-// mix.setPublicPath('./')
+ //mix.setPublicPath('./laravel_vue')
 // We strongly recommend running vuejs projects on a domain or sub-domain but if you really need to run it in a sub-folder, please change below path
- mix.setResourceRoot('/')
+ mix.setResourceRoot('/laravel_vue/')
  
 
 
