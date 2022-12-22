@@ -8,7 +8,7 @@
             </span>
         </div>
         <div class="card-body" v-show="show">
-<slot></slot>
+            <slot></slot>
         </div>
     </div>
 </template>

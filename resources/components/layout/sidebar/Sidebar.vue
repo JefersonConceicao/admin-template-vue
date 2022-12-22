@@ -1,12 +1,7 @@
 <template>
-    <!-- Left side column. contains the logo and sidebar -->
     <aside class="left-aside sidebar-offcanvas">
-        <!-- sidebar: style can be found in sidebar -->
         <section class="sidebar">
             <div id="menu" role="navigation">
-                <div class="nav_profile">
-                    <profile></profile>
-                </div>
                 <vmenu>
                     <vmenu-item link="/" icon="ti-desktop">
                         &nbsp; Dashboard 1
@@ -256,10 +251,10 @@
 </template>
 <script>
 
-import profile from "../left-profile/user_profile.vue"
-import vmenu from "./menu/vueMenu.vue";
-import vsubMenu from "./menu/subMenu.vue";
-import vmenuItem from "./menu/MenuItem.vue";
+
+import vmenu from "./menu/ContainerMenu.vue";
+import vsubMenu from "./menu/SubMenuLink.vue";
+import vmenuItem from "./menu/MenuLink.vue";
 
 export default {
     name: "left-side",
@@ -267,11 +262,9 @@ export default {
         vmenu,
         vsubMenu,
         vmenuItem,
-        profile
     },
     data() {
-        return {
-        }
+        return {}
     }
 }
 </script>

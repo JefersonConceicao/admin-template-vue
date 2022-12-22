@@ -1,9 +1,15 @@
 <template>
     <header class="header">
+        <!-- <div class="img-banner-desktop-transalvador">
+            <img 
+                src="https://transonline2.salvador.ba.gov.br/zona-verde/web/images/topos/zona-verde-logo.png"
+                class="img-banner"
+            />
+        </div> -->
         <nav class="navbar navbar-expand-lg navbar-light">
             <router-link to="/" class="logo">
                 <!-- Add the class icon to your logo image or logo icon to add the margining -->
-                <img :src='require("../../img/logo.png")' alt="logo"/>
+                <img v-bind='objImage' alt="logo" />
             </router-link>
             <div class="navbar-collapse">
                 <!-- Sidebar toggle button -->
@@ -27,7 +33,6 @@
                             <span class="font-weight-bold text-white">Quick Links</span>
                             <span class="float-right badge  badge-warning">1 NEW</span>
                         </b-dropdown-item>
-
 
                         <b-list-group class="allicons-list d-block ">
                             <b-list-group-item class="d-inline-block mb-2" >
@@ -70,9 +75,6 @@
                                     <span>Chat</span>
                                 </a>
                             </b-list-group-item>
-
-
-
                         </b-list-group>
 
                     </b-dropdown>
@@ -92,7 +94,7 @@
                             </b-dropdown-item>
                         </b-dropdown-item>
                         <b-dropdown-item href="#" class="message striped-col">
-                            <img class="message-image rounded-circle" :src='require("../../img/authors/avatar7.jpg")'
+                            <img class="message-image rounded-circle" :src='require("../../../img/authors/avatar7.jpg")'
                                  alt="avatar-image">
                             <div class="message-body"><strong>Ernest Kerry</strong>
                                 <br> Can we Meet?
@@ -102,8 +104,7 @@
                             </div>
                         </b-dropdown-item>
                         <b-dropdown-item class="message striped-col">
-
-                            <img class="message-image rounded-circle" :src='require("../../img/authors/avatar7.jpg")'
+                            <img class="message-image rounded-circle" :src='require("../../../img/authors/avatar7.jpg")'
                                  alt="avatar-image">
                             <div class="message-body"><strong>Ernest Kerry</strong>
                                 <br> Can we Meet?
@@ -190,6 +191,20 @@
                 this.$store.commit('rightside_bar', "toggle");
             }
 
+        },
+        data(){
+            return {
+                objImage: {
+                    src:  "http://www.transalvador.salvador.ba.gov.br/templates/transalvador/img/logo_transalvador.png",
+                    width: '70%',
+                }
+            }
         }
     }
 </script>
+<style scoped>
+    .img-banner{
+        width:100%;
+    }
+
+</style>

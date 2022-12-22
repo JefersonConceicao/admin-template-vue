@@ -37,12 +37,13 @@ mix.webpackConfig({
 mix.copy('resources/img/flags', 'public/images/flags');
 
 
+mix.js('resources/main.js', 'public/js');
+// mix.browserSync({
+//     proxy: 'localhost:8000'
+// })
+
 
 // mix.setPublicPath('./')
-
-mix.js('resources/main.js', 'public/js');
-
-
 // We strongly recommend running vuejs projects on a domain or sub-domain but if you really need to run it in a sub-folder, please change below path
 // mix.setResourceRoot('/')
 

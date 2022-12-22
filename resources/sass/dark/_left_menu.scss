@@ -5,7 +5,7 @@
     border-right: 5px solid #EEE;
 }
 .submenu-header:hover{
-    color:#33CC99 !important;
+    color:$primary-color !important;
 }
 #menu {
     .navigation {
@@ -27,13 +27,13 @@
                 text-decoration: none;
 
                 &.active {
-                    border-right: 3px solid #68DEB7;
+                    border-right: 3px solid $primary-color;
                     background: #EEEEEE;
-                    color: #33CC99;
+                    color: $primary-color;
                 }
             }
             a:hover{
-                color:#33CC99 !important;
+                color:$primary-color !important;
             }
 
         }
@@ -55,9 +55,9 @@
 
             &.active {
                 >  .submenu-header {
-                    border-right: 3px solid #68DEB7;
+                    border-right: 3px solid $primary-color;
                     background: #EEEEEE;
-                    color: #33CC99;
+                    color: $primary-color;
 
                     > .submenu_icon {
                         transform: rotate(90deg);

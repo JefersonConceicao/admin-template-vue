@@ -15,6 +15,12 @@ Created by: Jyostna Designs
 
 */
 /*****  1.RESET STYLES  *****/
+ 
+
+//VARIABLES 
+$primary-color: #23527c;
+$default-color: #f9f9f9;
+
 html {
     background: none repeat scroll 0 0 #EEE;
     overflow-x: hidden;
@@ -113,7 +119,7 @@ blockquote {
     margin-top: 12px;
     font-weight: 600;
     font-size: 15px;
-    color: #2E576B;
+    color: $primary-color;
 }
 
 .nav_profile .profile-left .profile-thumb img {
@@ -137,6 +143,8 @@ body > #app .header .navbar-nav .user-dropdown .dropdown-toggle{
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     z-index: 2300;
 }
+
+
 /*=== Left menu ===*/
 @import 'left_menu';
 /********* 4. MAIN WRAPPER STYLES *********/
@@ -182,7 +190,7 @@ body > #app .header .navbar-nav .user-dropdown .dropdown-toggle{
         padding: 2px 15px 9px;
 
         .breadcrumb-item a {
-            color: #333;
+            color: $primary-color;
         }
     }
 }
@@ -243,7 +251,7 @@ body > #app .header .navbar-nav .user-dropdown .dropdown-toggle{
 .nav-tabs > li.active > a:hover {
     color: #555;
     background-color: #FFF;
-    border-top: 3px solid #6699CC;
+    border-top: 3px solid $primary-color;
     border-bottom-color: transparent;
     cursor: default;
     font-weight: 500;
@@ -275,7 +283,7 @@ a{
 }
 .form-control.focus,
 .form-control:focus {
-    border-color: #7EC4E7;
+    border-color: $primary-color;
     box-shadow: none;
 }
 // ui_elements page buttons code
@@ -531,7 +539,7 @@ body.boxed {
 }
 .submenu.active >.submenu-header{
     background-color: #EEEEEE;
-    color:#33CC99 !important;
+    color:$primary-color !important;
 }
 .collapse-item.active .vuemenu .submenu-header{
     padding-left: 30px !important;

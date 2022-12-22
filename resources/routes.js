@@ -1,9 +1,9 @@
 const routes = [{
     path: '/',
-    component: resolve => require(['./fixed_header.vue'], resolve),
+    component: resolve => require(['./components/layout/app.vue'], resolve),
     children: [
         {
-            path: '',
+            path: '/',
             component: resolve => require(['./components/pages/index.vue'], resolve),
             meta: {
                 title: 'Dashboard1',
@@ -1196,21 +1196,33 @@ const routes = [{
         title: '500',
         breadcrumb: ``
     }
-}, {
-    path: '/login',
-    component: resolve => require(['./components/pages/login.vue'], resolve),
-    meta: {
-        title: 'Login',
-        breadcrumb: ``
-    }
-}, {
-    path: '/register',
-    component: resolve => require(['./components/pages/register.vue'], resolve),
-    meta: {
-        title: 'Register',
-        breadcrumb: ``
-    }
-}, {
+}, 
+{
+    path: '/auth',
+    name: 'auth',
+    component: resolve => require(['./components/guest/app.vue'], resolve),
+    redirect: '/auth/login',
+    children: [
+        {
+            path: '/auth/login',
+            component: resolve => require(['./components/pages/login.vue'], resolve),
+            meta: {
+                title: 'Login',
+                breadcrumb: ``
+            },
+        },
+        {
+            path: '/auth/register',
+            component: resolve => require(['./components/pages/register.vue'], resolve),
+            meta: {
+                title: 'Register',
+                breadcrumb: ``
+            }
+        },
+    ],
+},
+
+ {
     path: '/lockscreen',
     component: resolve => require(['./components/pages/lockscreen.vue'], resolve),
     meta: {

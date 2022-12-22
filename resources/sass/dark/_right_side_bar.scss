@@ -34,12 +34,12 @@
   }
 
   .text-muted {
-    color: #555;
+    color: $primary-color;
   }
 
   .rightsidebar-right-heading,.rightside-right-heading  {
     background: #FFF;
-    color: #555;
+    color: $primary-color;
     border-bottom: 1px solid #DDD;
     border-top: 1px solid #DDD;
     margin: 0px -20px 0;
@@ -76,7 +76,7 @@
 .rightsidebar-contact-wrapper .rightsidebar-contact {
   padding: 15px 20px;
   display: block;
-  color: #2E576B;
+  color: $primary-color
 }
 
 .rightsidebar-contact-wrapper .rightsidebar-contact:hover {
@@ -91,7 +91,7 @@
 .rightsidebar-notification a {
   padding: 15px 0;
   display: block;
-  color: #2E576B;
+  color: $primary-color;
 }
 
 .sidebar-right-opened {
@@ -130,7 +130,7 @@
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
   border: 1px solid #DDD;
-  color: #555;
+  color: $primary-color;
   background-color: #FFF;
   border-bottom-color: transparent;
   margin-top: -2px;

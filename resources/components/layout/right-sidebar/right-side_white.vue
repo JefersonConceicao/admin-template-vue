@@ -2,12 +2,15 @@
     <aside class="right-side">
         <!-- Content Header (Page header) -->
         <section class="content-header">
-            <h1 v-html="this.$route.meta.title">Title</h1>
+            <h1> <span> {{ this.$route.meta.title }}   </span></h1>
             <ol class="breadcrumb" v-html="this.$route.meta.breadcrumb"></ol>
         </section>
         <!-- Main content -->
         <section class="content">
+            
             <slot></slot>
+
+
             <!--rightside bar -->
             <div id="right">
                 <div id="right-slim">

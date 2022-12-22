@@ -16,6 +16,7 @@
         margin: -25px 0 0 -25px;"><img :src='require("../../img/loader.gif")' alt="loading..." height="64" width="64"></div>
     </div>
 </template>
+
 <script>
 export default {
     name: 'preloader',

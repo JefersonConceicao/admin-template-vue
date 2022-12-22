@@ -119,6 +119,7 @@ a:focus {
     color: #2a6496 !important;
 }
 
+
 @media screen and (max-width: 400px) {
     .mar-left5 {
         margin-left: 18px !important;
@@ -139,9 +140,7 @@ a:focus {
     }
 }
 
-
 /* Chrome, Safari, Opera */
-
 @-webkit-keyframes CAnimation {
     from {
         -webkit-filter: hue-rotate(0deg);
@@ -153,7 +152,6 @@ a:focus {
 
 
 /* Standard syntax */
-
 @keyframes CAnimation {
     from {
         -webkit-filter: hue-rotate(0deg);

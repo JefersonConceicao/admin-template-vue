@@ -15,43 +15,43 @@
                                     <ul class="list-unstyled margin-none">
                                         <li class="rightsidebar-contact-wrapper">
                                             <a class="rightsidebar-contact" href="javascript:void(0)">
-                                                <img :src='require("../../img/authors/avatar6.jpg")' class="rounded-circle float-right" alt="avatar-image">
+                                                <img :src='require("../../../img/authors/avatar6.jpg")' class="rounded-circle float-right" alt="avatar-image">
                                                 <i class="fa fa-circle text-xs text-primary"></i> Annette
                                             </a>
                                         </li>
                                         <li class="rightsidebar-contact-wrapper">
                                             <a class="rightsidebar-contact" href="javascript:void(0)">
-                                                <img :src='require("../../img/authors/avatar.jpg")' class="rounded-circle float-right" alt="avatar-image">
+                                                <img :src='require("../../../img/authors/avatar.jpg")' class="rounded-circle float-right" alt="avatar-image">
                                                 <i class="fa fa-circle text-xs text-primary"></i> Jordan
                                             </a>
                                         </li>
                                         <li class="rightsidebar-contact-wrapper">
                                             <a class="rightsidebar-contact" href="javascript:void(0)">
-                                                <img :src='require("../../img/authors/avatar2.jpg")' class="rounded-circle float-right" alt="avatar-image">
+                                                <img :src='require("../../../img/authors/avatar2.jpg")' class="rounded-circle float-right" alt="avatar-image">
                                                 <i class="fa fa-circle text-xs text-primary"></i> Stewart
                                             </a>
                                         </li>
                                         <li class="rightsidebar-contact-wrapper">
                                             <a class="rightsidebar-contact" href="javascript:void(0)">
-                                                <img :src='require("../../img/authors/avatar3.jpg")' class="rounded-circle float-right" alt="avatar-image">
+                                                <img :src='require("../../../img/authors/avatar3.jpg")' class="rounded-circle float-right" alt="avatar-image">
                                                 <i class="fa fa-circle text-xs text-warning"></i> Alfred
                                             </a>
                                         </li>
                                         <li class="rightsidebar-contact-wrapper">
                                             <a class="rightsidebar-contact" href="javascript:void(0)">
-                                                <img :src='require("../../img/authors/avatar4.jpg")' class="rounded-circle float-right" alt="avatar-image">
+                                                <img :src='require("../../../img/authors/avatar4.jpg")' class="rounded-circle float-right" alt="avatar-image">
                                                 <i class="fa fa-circle text-xs text-danger"></i> Eileen
                                             </a>
                                         </li>
                                         <li class="rightsidebar-contact-wrapper">
                                             <a class="rightsidebar-contact" href="javascript:void(0)">
-                                                <img :src='require("../../img/authors/avatar5.jpg")' class="rounded-circle float-right" alt="avatar-image">
+                                                <img :src='require("../../../img/authors/avatar5.jpg")' class="rounded-circle float-right" alt="avatar-image">
                                                 <i class="fa fa-circle text-xs text-muted"></i> Robert
                                             </a>
                                         </li>
                                         <li class="rightsidebar-contact-wrapper">
                                             <a class="rightsidebar-contact" href="javascript:void(0)">
-                                                <img :src='require("../../img/authors/avatar7.jpg")' class="rounded-circle float-right" alt="avatar-image">
+                                                <img :src='require("../../../img/authors/avatar7.jpg")' class="rounded-circle float-right" alt="avatar-image">
                                                 <i class="fa fa-circle text-xs text-muted"></i> Cassandra
                                             </a>
                                         </li>

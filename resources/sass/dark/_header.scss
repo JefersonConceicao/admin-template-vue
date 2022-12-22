@@ -288,8 +288,8 @@ body > #app .header {
 }
 
 .skin-default .navbar {
-    background-color: #4B6E82;
-    background: url("../../img/nav_bg.jpg") repeat;
+    background-color: $primary-color;
+    
 }
 .striped-col:hover{
     background-color: #eee !important;
