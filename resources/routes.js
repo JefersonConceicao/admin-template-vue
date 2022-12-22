@@ -1221,7 +1221,6 @@ const routes = [{
         },
     ],
 },
-
  {
     path: '/lockscreen',
     component: resolve => require(['./components/pages/lockscreen.vue'], resolve),

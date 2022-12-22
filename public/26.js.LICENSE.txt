@@ -1,0 +1,8 @@
+/*!
+ * LABELAUTY jQuery Plugin
+ *
+ * @file: jquery-labelauty.js
+ * @author: Francisco Neves (@fntneves)
+ * @site: www.francisconeves.com
+ * @license: MIT License
+ */

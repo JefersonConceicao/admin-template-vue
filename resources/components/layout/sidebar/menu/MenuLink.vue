@@ -1,6 +1,6 @@
 <template>
     <div class="menu-item">
-        <router-link :to="link" exact >
+        <router-link :to="link">
             <i class="leftmenu_icon" :class="icon"></i>
             <span class="name">
                 <slot></slot>

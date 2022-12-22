@@ -1,0 +1,7 @@
+/*!
+ * Copyright (c) 2016 Naufal Rabbani (http://github.com/BosNaufal),
+ * ,Licensed Under MIT (http://opensource.org/licenses/MIT),
+ * ,
+ * ,Vue 2 Scrollbar @ Version 0.0.2,
+ * 
+ */

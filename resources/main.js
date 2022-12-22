@@ -25,6 +25,7 @@ router.beforeEach((to, from, next) => {
 
 router.afterEach((to, from) => {
     document.title = to.meta.title
+
     store.commit("routeChange", "end");
     
     if (window.innerWidth < 992) {

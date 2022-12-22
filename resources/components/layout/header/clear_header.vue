@@ -1,11 +1,11 @@
 <template>
     <header class="header">
-        <!-- <div class="img-banner-desktop-transalvador">
+         <div class="img-banner-desktop-transalvador">
             <img 
                 src="https://transonline2.salvador.ba.gov.br/zona-verde/web/images/topos/zona-verde-logo.png"
                 class="img-banner"
             />
-        </div> -->
+        </div>
         <nav class="navbar navbar-expand-lg navbar-light">
             <router-link to="/" class="logo">
                 <!-- Add the class icon to your logo image or logo icon to add the margining -->
@@ -124,14 +124,6 @@
                         <b-badge pill variant="danger">2</b-badge>
                     </button>
                 </div>
-                <!--<div class="right-toggle btn-group">-->
-                <!--<button type="button" class="btn btn-secondary" @click="toggle_right1">-->
-                <!--<i class="fa fa-fw ti-info black"></i>-->
-                <!--<b-badge pill variant="danger">2</b-badge>-->
-                <!--</button>-->
-                <!--</div>-->
-                <!--rightside toggle-->
-                <!-- User menu -->
                 <b-dd class="user-dropdown">
                     <template slot="button-content">
                         <a href="#">
@@ -183,23 +175,22 @@
     export default {
         name: "clear_header",
         methods: {
-            //Enable sidebar toggle
             toggle_left() {
                 this.$store.commit('left_menu', "toggle");
             },
             toggle_right() {
                 this.$store.commit('rightside_bar', "toggle");
             }
-
         },
         data(){
-            return {
+            return {    
                 objImage: {
-                    src:  "http://www.transalvador.salvador.ba.gov.br/templates/transalvador/img/logo_transalvador.png",
+                    src:  require('../../../img/transalvador_white.png'),
                     width: '70%',
                 }
             }
-        }
+        },
+    
     }
 </script>
 <style scoped>
