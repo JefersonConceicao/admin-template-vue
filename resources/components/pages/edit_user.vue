@@ -178,13 +178,15 @@
     import Vue from 'vue'
     import Multiselect from 'vue-multiselect';
     Vue.component(Multiselect);
+
     import Datepicker from 'vuejs-datepicker'
     import VueFormWizard from 'vue-form-wizard'
     import 'vue-form-wizard/dist/vue-form-wizard.min.css'
     import vue2Dropzone from 'vue2-dropzone'
     import 'vue2-dropzone/dist/vue2Dropzone.css'
     Vue.use(VueFormWizard)
-    export default {
+    
+	export default {
         name: "edit_user",
         components: {
             vueDropzone: vue2Dropzone,

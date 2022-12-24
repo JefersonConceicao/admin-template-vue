@@ -1205,9 +1205,19 @@ const routes = [{
     children: [
         {
             path: '/auth/login',
-            component: resolve => require(['./components/pages/login.vue'], resolve),
+            name: 'AuthLogin',
+            component: resolve => require(['./components/guest/Login/login.vue'], resolve),
             meta: {
                 title: 'Login',
+                breadcrumb: ``
+            },
+        },
+        {
+            path: '/auth/login_etapa2',
+            name: 'AuthLoginEtapa2',
+            component: resolve => require(['./components/guest/Login/loginNextStep.vue'], resolve),
+            meta: {
+                title: 'Login Etapa 2',
                 breadcrumb: ``
             },
         },
