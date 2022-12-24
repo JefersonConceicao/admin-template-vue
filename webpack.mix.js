@@ -22,7 +22,7 @@ mix.autoload({
 //====set alias for isotope
 mix.webpackConfig({
     output: {
-        publicPath: '/laravel_vue/public'
+        publicPath: '/laravel_vue/public/'
     },
     resolve: {
         alias: {
@@ -41,10 +41,6 @@ mix.copy('resources/img/flags', 'public/images/flags');
 
 
 mix.js('resources/main.js', 'public/js');
-// mix.browserSync({
-//     proxy: 'localhost:8000'
-// })
-
 
  //mix.setPublicPath('./laravel_vue')
 // We strongly recommend running vuejs projects on a domain or sub-domain but if you really need to run it in a sub-folder, please change below path

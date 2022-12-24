@@ -1,0 +1,86 @@
+<template>
+    <div>
+        <div class="row">
+            <div class="col-12">
+                <h4 class="bold text-primary"> Entre ou cadastre-se </h4>
+                <p> Preencha seu CPF </p> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <vue-form :state="formstate" @submit.prevent="onSubmit">
+                    <div class="row">
+                        <div class="col-sm-12 mt-3 ">
+                            <div class="form-group"> 
+                                <validate tag="div">
+                                    <input 
+                                        v-model="model.login" 
+                                        name="login" 
+                                        class="form-control" 
+                                        placeholder="preencha seu login ou CPF"
+                                        required
+                                    />
+
+                                    <field-messages name="login" show="$invalid && $focused || $invalid && $submitted" class="text-danger">
+                                        <div slot="required"> É obrigatório informar o login  </div>
+                                    </field-messages>
+                                </validate>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <b-button variant="primary" class="btn-block" type="submit"> 
+                                Avançar <span class="ti-arrow-right"> </span> 
+                            </b-button>
+                        </div>
+                    </div>
+                </vue-form>
+            </div>
+        </div>
+    </div>
+</template>
+<script>
+
+import Vue from "vue"
+import VueForm from "vue-form";
+import options from "../../../validations/validations.js";
+
+Vue.use(VueForm, options);
+
+export default {
+    name: "login",
+    data() {
+        return {
+            formstate: {},
+            model: {
+                login: "",
+            }
+        }
+    },
+    methods: {
+        onSubmit(){
+            if(!this.formstate.$invalid){
+                this.$router.push({ name: 'AuthLoginEtapa2', params: this.model.email})
+            }
+        },
+    },
+}
+</script>
+
+<style src="bootstrapValidator/dist/css/bootstrapValidator.min.css"></style>
+<style src="../../../css/login.css" scoped></style>
+<style type="text/css" scoped>
+.login {
+    padding-top: 6.5%;
+    padding-bottom: 2%;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: radial-gradient(ellipse at center, #5A93AF 0%, #004E74 100%);
+    overflow-y: auto;
+}
+</style>

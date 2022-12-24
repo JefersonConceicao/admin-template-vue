@@ -10,15 +10,12 @@
                         &nbsp; Dashboard 2
                     </vmenu-item>
                 </vmenu>
-                <!-- / .navigation -->
             </div>
-            <!-- menu -->
         </section>
-        <!-- /.sidebar -->
     </aside>
 </template>
-<script>
 
+<script>
 
 import vmenu from "./menu/ContainerMenu.vue";
 import vsubMenu from "./menu/SubMenuLink.vue";

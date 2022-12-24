@@ -1,48 +1,61 @@
 <template>
-    <div class="container-fluid login">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-10 col-sm-8 mx-auto login-form">
-                    <h2 class="text-center logo_h2">
-                        <img v-bind="objImage" />
-                    </h2>
-                    <div class="card-body">
-                        <router-view></router-view>
+    <div>
+        <div class="container-header-image-guest">
+            <img v-bind="propImageHeader" />
+        </div>
+
+        <div class="login"> </div>
+        <div class="container-fluid mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-10 col-sm-8 mx-auto login-form px-3">
+                        <div class="card-body">
+                            <router-view></router-view>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </template>
+
 <script>
-    export default{
-        data(){
-            return {
-                objImage: {
-                    src:  "http://www.transalvador.salvador.ba.gov.br/templates/transalvador/img/logo_transalvador.png",
-                    width: '70%',
-                }
+export default {
+    data() {
+        return {
+            propImageHeader: {
+                src: "https://transonline2.salvador.ba.gov.br/zona-verde/web/images/topos/zona-verde-logo.png",
+                style: {
+                    width: '100%',
+
+                },
+                alt: "header-image"
             }
         }
     }
+}
 </script>
+
+
 <style src="bootstrapValidator/dist/css/bootstrapValidator.min.css">
 
 </style>
 <style src="../../css/login.css" scoped>
 
 </style>
-<style type="text/css" scoped>
+<style scoped>
 .login {
     padding-top: 6.5%;
     padding-bottom: 2%;
     width: 100%;
     height: 100vh;
+    position: absolute;
     top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: radial-gradient(ellipse at center, #23527c 0%, #004E74 100%);
+    background: url('https://transonline2.salvador.ba.gov.br/zona-verde/web/images/zona-verde/ssa-zona-verde.png');
     overflow-y: auto;
+    opacity: 0.6;
+    filter: blur(10px);
+    z-index: -1;
+    background-size: 2024px;
 }
 </style>

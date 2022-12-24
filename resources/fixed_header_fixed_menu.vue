@@ -10,6 +10,7 @@
         <div class="background-overlay" @click="right_close"></div>
     </div>
 </template>
+
 <script>
     import clear_header from "./components/layout/clear_header";
     import left_side from "./components/layout/left-side/default/left-side";
@@ -32,6 +33,7 @@
 </script>
 <style src="./css/custom_css/metisMenu.css"></style>
 <style lang="scss" src="./sass/dark/custom.scss"></style>
+
 <style class>
     #menu{
         position: absolute;

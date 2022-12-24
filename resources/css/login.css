@@ -21,6 +21,7 @@ body {
     border-radius: 4px;
     padding-top: 15px;
     padding-bottom: 15px;
+    border: 1px solid #23527c;
 }
 
 .btn-primary,
@@ -29,6 +30,7 @@ body {
     border-color: #509DE0;
     background: #509DE0 !important;
 }
+
 .btn{
     cursor: pointer;
 }

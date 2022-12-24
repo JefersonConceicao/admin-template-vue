@@ -159,7 +159,7 @@
                                 </router-link>
                             </div>
                             <div class="float-right">
-                                <router-link to="/login" exact>
+                                <router-link to="/auth/login" exact>
                                     <i class="fa fa-fw ti-shift-right"></i> Logout
                                 </router-link>
                             </div>

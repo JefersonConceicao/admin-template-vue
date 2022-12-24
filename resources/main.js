@@ -13,9 +13,10 @@ Vue.use(VueRouter)
 Vue.use(BootstrapVue)
 
 const router = new VueRouter({
-    
+    mode: 'history',
     routes,
-    linkActiveClass: 'active'
+    linkActiveClass: 'active',
+    base: '/laravel_vue/'
 })
 
 router.beforeEach((to, from, next) => {
@@ -25,7 +26,6 @@ router.beforeEach((to, from, next) => {
 
 router.afterEach((to, from) => {
     document.title = to.meta.title
-
     store.commit("routeChange", "end");
     
     if (window.innerWidth < 992) {
