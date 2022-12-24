@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-12">
                 <h4 class="bold text-primary"> Entre ou cadastre-se </h4>
-                <p> Preencha seu CPF </p> 
+                <p> Preencha seu CPF </p>
             </div>
         </div>
         <div class="row">
@@ -11,18 +11,14 @@
                 <vue-form :state="formstate" @submit.prevent="onSubmit">
                     <div class="row">
                         <div class="col-sm-12 mt-3 ">
-                            <div class="form-group"> 
+                            <div class="form-group">
                                 <validate tag="div">
-                                    <input 
-                                        v-model="model.login" 
-                                        name="login" 
-                                        class="form-control" 
-                                        placeholder="preencha seu login ou CPF"
-                                        required
-                                    />
+                                    <input v-model="model.login" name="login" class="form-control"
+                                        placeholder="preencha seu login ou CPF" required />
 
-                                    <field-messages name="login" show="$invalid && $focused || $invalid && $submitted" class="text-danger">
-                                        <div slot="required"> É obrigatório informar o login  </div>
+                                    <field-messages name="login" show="$invalid && $focused || $invalid && $submitted"
+                                        class="text-danger">
+                                        <div slot="required"> É obrigatório informar o login </div>
                                     </field-messages>
                                 </validate>
                             </div>
@@ -30,8 +26,9 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <b-button variant="primary" class="btn-block" type="submit"> 
-                                Avançar <span class="ti-arrow-right"> </span> 
+                            <b-button variant="primary" class="btn-block" type="submit" :disabled="loading">
+                                <span v-if="!loading"> Avançar <span class="el-icon-arrow-right"> </span> </span>
+                                <span v-else> Carregando <span class="el-icon-loading"> </span> </span>
                             </b-button>
                         </div>
                     </div>
@@ -40,11 +37,14 @@
         </div>
     </div>
 </template>
+
 <script>
 
 import Vue from "vue"
 import VueForm from "vue-form";
 import options from "../../../validations/validations.js";
+import axios from 'axios';
+import toastr from "toastr/build/toastr.min.js"
 
 Vue.use(VueForm, options);
 
@@ -55,21 +55,43 @@ export default {
             formstate: {},
             model: {
                 login: "",
-            }
+            },
+
+            loading: false,
         }
     },
     methods: {
-        onSubmit(){
-            if(!this.formstate.$invalid){
-                this.$router.push({ name: 'AuthLoginEtapa2', params: this.model.email})
+        async onSubmit() {
+            if (!this.formstate.$invalid) {
+                this.loading = true;
+
+                const { data: response } = await axios.get('/laravel_vue/api/verifyUserExists', {
+                    params: {
+                        usu_nom_login: this.model.login
+                    }
+                });
+
+                if (!response.user) {
+                    toastr.error("Não foi encntrado usuário com este login ou CPF");
+
+                    this.loading = false;
+                    return;
+                }
+
+                this.$router.push({ name: 'AuthLoginEtapa2', params: { user: response.user } });
             }
         },
     },
 }
 </script>
 
-<style src="bootstrapValidator/dist/css/bootstrapValidator.min.css"></style>
-<style src="../../../css/login.css" scoped></style>
+
+<style src="bootstrapValidator/dist/css/bootstrapValidator.min.css">
+
+</style>
+<style src="../../../css/login.css" scoped>
+
+</style>
 <style type="text/css" scoped>
 .login {
     padding-top: 6.5%;

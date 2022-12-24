@@ -1977,7 +1977,6 @@ export default {
             return jQuery('<div />').append(this.eq(0).clone()).html();
         };
         $(document).ready(function() {
-
             $(".fa-icon").each(function() {
                 $(this).find("i").after("<br />");
             });

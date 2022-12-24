@@ -1,0 +1,18 @@
+/*!
+ *         ,/
+ *       ,'/
+ *     ,' /
+ *   ,'  /_____,
+ * .'____    ,'
+ *      /  ,'
+ *     / ,'
+ *    /,'
+ *   /'
+ *
+ * Selectric ϟ v1.13.0 (Aug 22 2017) - http://lcdsantos.github.io/jQuery-Selectric/
+ *
+ * Copyright (c) 2017 Leonardo Santos; MIT License
+ *
+ */
+
+/*! Select2 4.0.6-rc.1 | https://github.com/select2/select2/blob/master/LICENSE.md */

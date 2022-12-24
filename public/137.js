@@ -1,498 +1,525 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[137],{
 
-/***/ "./node_modules/Nestable/jquery.nestable.js":
-/*!**************************************************!*\
-  !*** ./node_modules/Nestable/jquery.nestable.js ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./node_modules/vuebars/dist/vue-bars.esm.js":
+/*!***************************************************!*\
+  !*** ./node_modules/vuebars/dist/vue-bars.esm.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {/*!
- * Nestable jQuery Plugin - Copyright (c) 2012 David Bushell - http://dbushell.com/
- * Dual-licensed under the BSD or MIT licenses
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function transitionColor(from, to, count) {
+  count = count + 1;
+  var int = parseInt(from, 16); // 100
+  var intTo = parseInt(to, 16); // 50
+  var list = []; // 5
+  var diff = int - intTo; // 50
+  var isNegative = diff < 0; // false
+  var one = diff / count; // 10
+ 
+  list.push(from);
+  for (var i = 1; i <= count; i++) {
+    list.push(Math.floor(int - (one * i)).toString(16));
+  }
+ 
+  return list
+}
+ 
+function transition(from, to, count) {
+  count = count || 3;
+  var r = from.slice(0, 2), g = from.slice(2, 4), b = from.slice(4, 6);
+  var rt = to.slice(0, 2), gt = to.slice(2, 4), bt = to.slice(4, 6);
+  var allR = transitionColor(r, rt, count);
+  var allG = transitionColor(g, gt, count);
+  var allB = transitionColor(b, bt, count);
+  var list = [];
+ 
+  allR.forEach(function(_, i) {
+    list.push('' + allR[i] + allG[i] + allB[i]);
+  });
+ 
+  return list
+}
+ 
+function generateGradientStepsCss(from, to, count) {
+  from = from.replace('#', '');
+  to = to.replace('#', '');
+  var values = transition(from, to, count);
+  var total = 100 / (count + 1);
+  var obj = [];
+  for (var i = 0; i <= count + 1; i++) {
+    obj.push({percentage: Math.floor(total * i), value: values[i]});
+  }
+  return obj.map(function(value) {
+    return '#' + value.value
+  })
+}
+
+/**
+ *  Calculate the coordinate
+ * @param  {number[]|object[]}  arr
+ * @param  {object}             boundary
+ * @return {object[]}
  */
-;(function($, window, document, undefined)
-{
-    var hasTouch = 'ontouchstart' in document;
+function genPoints (inArr, ref, ref$1) {
+  var minX = ref.minX;
+  var minY = ref.minY;
+  var maxX = ref.maxX;
+  var maxY = ref.maxY;
+  var max = ref$1.max;
+  var min = ref$1.min;
 
-    /**
-     * Detect CSS pointer-events property
-     * events are normally disabled on the dragging element to avoid conflicts
-     * https://github.com/ausi/Feature-detection-technique-for-pointer-events/blob/master/modernizr-pointerevents.js
-     */
-    var hasPointerEvents = (function()
-    {
-        var el    = document.createElement('div'),
-            docEl = document.documentElement;
-        if (!('pointerEvents' in el.style)) {
-            return false;
-        }
-        el.style.pointerEvents = 'auto';
-        el.style.pointerEvents = 'x';
-        docEl.appendChild(el);
-        var supports = window.getComputedStyle && window.getComputedStyle(el, '').pointerEvents === 'auto';
-        docEl.removeChild(el);
-        return !!supports;
-    })();
+  var arr = inArr.map(function (item) { return (typeof item === 'number' ? item : item.value); });
+  var minValue = Math.min.apply(Math, arr.concat( [min] )) - 0.001;
+  var gridX = (maxX - minX) / (arr.length - 1);
+  var gridY = (maxY - minY) / (Math.max.apply(Math, arr.concat( [max] )) + 0.001 - minValue);
 
-    var defaults = {
-            listNodeName    : 'ol',
-            itemNodeName    : 'li',
-            rootClass       : 'dd',
-            listClass       : 'dd-list',
-            itemClass       : 'dd-item',
-            dragClass       : 'dd-dragel',
-            handleClass     : 'dd-handle',
-            collapsedClass  : 'dd-collapsed',
-            placeClass      : 'dd-placeholder',
-            noDragClass     : 'dd-nodrag',
-            emptyClass      : 'dd-empty',
-            expandBtnHTML   : '<button data-action="expand" type="button">Expand</button>',
-            collapseBtnHTML : '<button data-action="collapse" type="button">Collapse</button>',
-            group           : 0,
-            maxDepth        : 5,
-            threshold       : 20
-        };
-
-    function Plugin(element, options)
-    {
-        this.w  = $(document);
-        this.el = $(element);
-        this.options = $.extend({}, defaults, options);
-        this.init();
+  return arr.map(function (value, index) {
+    var title = typeof inArr[index] === 'number' ? inArr[index] : inArr[index].title;
+    return {
+      x: index * gridX + minX,
+      y:
+        maxY -
+        (value - minValue) * gridY +
+        +(index === arr.length - 1) * 0.00001 -
+        +(index === 0) * 0.00001,
+      v: title
     }
+  })
+}
 
-    Plugin.prototype = {
+function genBars (_this, arr, h) {
+  var ref = _this.boundary;
+  var minX = ref.minX;
+  var minY = ref.minY;
+  var maxX = ref.maxX;
+  var maxY = ref.maxY;
+  var totalWidth = (maxX) / (arr.length-1);
+  if (!_this.barWidth) {
+    _this.barWidth = totalWidth - (_this.padding || 5);
+  }
+  if (!_this.rounding) {
+    _this.rounding = 2;
+  }
 
-        init: function()
-        {
-            var list = this;
+  var gradients = 0;
+  if (_this.gradient && _this.gradient.length > 1) {
+    gradients = generateGradientStepsCss(_this.gradient[0], _this.gradient[1], (arr.length-1));
+  }
+  var offsetX = (totalWidth - _this.barWidth) / 2;
 
-            list.reset();
+  return arr.map(function (item, index) {
+    return h('rect', {
+      attrs: {
+        id: ("bar-id-" + index),
+        fill: (gradients ? gradients[index] : (_this.gradient[0] ? _this.gradient[0] : '#000')),
+        x: item.x - offsetX,
+        y: 0,
+        width: _this.barWidth,
+        height: (maxY - item.y),
+        rx: _this.rounding,
+        ry: _this.rounding
+      }
+    }, [
+      h('animate', {
+        attrs: {
+          attributeName: 'height',
+          from: 0,
+          to: (maxY - item.y),
+          dur: ((_this.growDuration) + "s"),
+          fill: 'freeze'
+        }
+      }),
+      h('title', {}, [item.v])
+    ])
+  })
+}
 
-            list.el.data('nestable-group', this.options.group);
+var Path = {
+  props: ['data', 'boundary', 'barWidth', 'id', 'gradient', 'growDuration', 'max', 'min'],
 
-            list.placeEl = $('<div class="' + list.options.placeClass + '"/>');
+  render: function render (h) {
+    var ref = this;
+    var data = ref.data;
+    var boundary = ref.boundary;
+    var max = ref.max;
+    var min = ref.min;
+    var points = genPoints(data, boundary, { max: max, min: min } );
+    var bars = genBars(this, points, h);
 
-            $.each(this.el.find(list.options.itemNodeName), function(k, el) {
-                list.setParent($(el));
-            });
+    return h('g', {
+      attrs: {
+        transform: ("scale(1,-1) translate(0,-" + (this.boundary.maxY) + ")")
+      }
+    }, bars)
+  }
+};
 
-            list.el.on('click', 'button', function(e) {
-                if (list.dragEl) {
-                    return;
-                }
-                var target = $(e.currentTarget),
-                    action = target.data('action'),
-                    item   = target.parent(list.options.itemNodeName);
-                if (action === 'collapse') {
-                    list.collapseItem(item);
-                }
-                if (action === 'expand') {
-                    list.expandItem(item);
-                }
-            });
+var Bars$1 = {
+  name: 'Bars',
 
-            var onStartEvent = function(e)
-            {
-                var handle = $(e.target);
-                if (!handle.hasClass(list.options.handleClass)) {
-                    if (handle.closest('.' + list.options.noDragClass).length) {
-                        return;
-                    }
-                    handle = handle.closest('.' + list.options.handleClass);
-                }
+  props: {
+    data: {
+      type: Array,
+      required: true
+    },
+    autoDraw: Boolean,
+    barWidth: {
+      type: Number,
+      default: 8
+    },
+    growDuration: {
+      type: Number,
+      default: 0.5
+    },
+    gradient: {
+      type: Array,
+      default: function () { return ['#000']; }
+    },
+    max: {
+      type: Number,
+      default: -Infinity
+    },
+    min: {
+      type: Number,
+      default: Infinity
+    },
+    height: Number,
+    width: Number,
+    padding: {
+      type: Number,
+      default: 8
+    }
+  },
 
-                if (!handle.length || list.dragEl) {
-                    return;
-                }
+  render: function render (h) {
+    if (!this.data || this.data.length < 2) { return }
+    var ref = this;
+    var width = ref.width;
+    var height = ref.height;
+    var padding = ref.padding;
+    var viewWidth = width || 300;
+    var viewHeight = height || 75;
+    var boundary = {
+      minX: padding,
+      minY: padding,
+      maxX: viewWidth - padding,
+      maxY: viewHeight - padding
+    };
+    var props = this.$props;
 
-                list.isTouch = /^touch/.test(e.type);
-                if (list.isTouch && e.touches.length !== 1) {
-                    return;
-                }
+    props.boundary = boundary;
+    props.id = 'vue-bars-' + this._uid;
 
-                e.preventDefault();
-                list.dragStart(e.touches ? e.touches[0] : e);
-            };
+    return h('svg', {
+      attrs: {
+        width: width || '100%',
+        height: height || '25%',
+        viewBox: ("0 0 " + viewWidth + " " + viewHeight)
+      }
+    }, [
+      h(Path, {
+        props: props,
+        ref: 'path'
+      })
+    ])
+  }
+};
 
-            var onMoveEvent = function(e)
-            {
-                if (list.dragEl) {
-                    e.preventDefault();
-                    list.dragMove(e.touches ? e.touches[0] : e);
-                }
-            };
+Bars$1.install = function (Vue) {
+  Vue.component(Bars$1.name, Bars$1);
+};
 
-            var onEndEvent = function(e)
-            {
-                if (list.dragEl) {
-                    e.preventDefault();
-                    list.dragStop(e.touches ? e.touches[0] : e);
-                }
-            };
+if (typeof window !== 'undefined' && window.Vue) {
+  window.Vue.use(Bars$1);
+}
 
-            if (hasTouch) {
-                list.el[0].addEventListener('touchstart', onStartEvent, false);
-                window.addEventListener('touchmove', onMoveEvent, false);
-                window.addEventListener('touchend', onEndEvent, false);
-                window.addEventListener('touchcancel', onEndEvent, false);
-            }
+/* harmony default export */ __webpack_exports__["default"] = (Bars$1);
 
-            list.el.on('mousedown', onStartEvent);
-            list.w.on('mousemove', onMoveEvent);
-            list.w.on('mouseup', onEndEvent);
 
-        },
+/***/ }),
 
-        serialize: function()
-        {
-            var data,
-                depth = 0,
-                list  = this;
-                step  = function(level, depth)
-                {
-                    var array = [ ],
-                        items = level.children(list.options.itemNodeName);
-                    items.each(function()
-                    {
-                        var li   = $(this),
-                            item = $.extend({}, li.data()),
-                            sub  = li.children(list.options.listNodeName);
-                        if (sub.length) {
-                            item.children = step(sub, depth + 1);
-                        }
-                        array.push(item);
-                    });
-                    return array;
-                };
-            data = step(list.el.find(list.options.listNodeName).first(), depth);
-            return data;
-        },
+/***/ "./node_modules/vuetrend/dist/vue-trend.esm.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/vuetrend/dist/vue-trend.esm.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-        serialise: function()
-        {
-            return this.serialize();
-        },
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function int (value) {
+  return parseInt(value, 10)
+}
 
-        reset: function()
-        {
-            this.mouse = {
-                offsetX   : 0,
-                offsetY   : 0,
-                startX    : 0,
-                startY    : 0,
-                lastX     : 0,
-                lastY     : 0,
-                nowX      : 0,
-                nowY      : 0,
-                distX     : 0,
-                distY     : 0,
-                dirAx     : 0,
-                dirX      : 0,
-                dirY      : 0,
-                lastDirX  : 0,
-                lastDirY  : 0,
-                distAxX   : 0,
-                distAxY   : 0
-            };
-            this.isTouch    = false;
-            this.moving     = false;
-            this.dragEl     = null;
-            this.dragRootEl = null;
-            this.dragDepth  = 0;
-            this.hasNewRoot = false;
-            this.pointEl    = null;
-        },
+/**
+ * https://en.wikipedia.org/wiki/Collinearity
+ * x=(x1+x2)/2
+ * y=(y1+y2)/2
+ */
+function checkCollinear (p0, p1, p2) {
+  return (
+    int(p0.x + p2.x) === int(2 * p1.x) && int(p0.y + p2.y) === int(2 * p1.y)
+  )
+}
 
-        expandItem: function(li)
-        {
-            li.removeClass(this.options.collapsedClass);
-            li.children('[data-action="expand"]').hide();
-            li.children('[data-action="collapse"]').show();
-            li.children(this.options.listNodeName).show();
-        },
+function getDistance (p1, p2) {
+  return Math.sqrt(Math.pow(p2.x - p1.x, 2) + Math.pow(p2.y - p1.y, 2))
+}
 
-        collapseItem: function(li)
-        {
-            var lists = li.children(this.options.listNodeName);
-            if (lists.length) {
-                li.addClass(this.options.collapsedClass);
-                li.children('[data-action="collapse"]').hide();
-                li.children('[data-action="expand"]').show();
-                li.children(this.options.listNodeName).hide();
-            }
-        },
+function moveTo (to, from, radius) {
+  var vector = { x: to.x - from.x, y: to.y - from.y };
+  var length = Math.sqrt(vector.x * vector.x + vector.y * vector.y);
+  var unitVector = { x: vector.x / length, y: vector.y / length };
 
-        expandAll: function()
-        {
-            var list = this;
-            list.el.find(list.options.itemNodeName).each(function() {
-                list.expandItem($(this));
-            });
-        },
+  return {
+    x: from.x + unitVector.x * radius,
+    y: from.y + unitVector.y * radius
+  }
+}
 
-        collapseAll: function()
-        {
-            var list = this;
-            list.el.find(list.options.itemNodeName).each(function() {
-                list.collapseItem($(this));
-            });
-        },
+/**
+ *  Calculate the coordinate
+ * @param  {number[]|object[]}  arr
+ * @param  {object}             boundary
+ * @return {object[]}
+ */
+function genPoints (arr, ref, ref$1) {
+  var minX = ref.minX;
+  var minY = ref.minY;
+  var maxX = ref.maxX;
+  var maxY = ref.maxY;
+  var max = ref$1.max;
+  var min = ref$1.min;
 
-        setParent: function(li)
-        {
-            if (li.children(this.options.listNodeName).length) {
-                li.prepend($(this.options.expandBtnHTML));
-                li.prepend($(this.options.collapseBtnHTML));
-            }
-            li.children('[data-action="expand"]').hide();
-        },
+  arr = arr.map(function (item) { return (typeof item === 'number' ? item : item.value); });
+  var minValue = Math.min.apply(Math, arr.concat( [min] )) - 0.001;
+  var gridX = (maxX - minX) / (arr.length - 1);
+  var gridY = (maxY - minY) / (Math.max.apply(Math, arr.concat( [max] )) + 0.001 - minValue);
 
-        unsetParent: function(li)
-        {
-            li.removeClass(this.options.collapsedClass);
-            li.children('[data-action]').remove();
-            li.children(this.options.listNodeName).remove();
-        },
+  return arr.map(function (value, index) {
+    return {
+      x: index * gridX + minX,
+      y:
+        maxY -
+        (value - minValue) * gridY +
+        +(index === arr.length - 1) * 0.00001 -
+        +(index === 0) * 0.00001
+    }
+  })
+}
 
-        dragStart: function(e)
-        {
-            var mouse    = this.mouse,
-                target   = $(e.target),
-                dragItem = target.closest(this.options.itemNodeName);
+/**
+ * From https://github.com/unsplash/react-trend/blob/master/src/helpers/DOM.helpers.js#L18
+ */
+function genPath (points, radius) {
+  var start = points.shift();
 
-            this.placeEl.css('height', dragItem.height());
+  return (
+    "M" + (start.x) + " " + (start.y) +
+    points
+      .map(function (point, index) {
+        var next = points[index + 1];
+        var prev = points[index - 1] || start;
+        var isCollinear = next && checkCollinear(next, point, prev);
 
-            mouse.offsetX = e.offsetX !== undefined ? e.offsetX : e.pageX - target.offset().left;
-            mouse.offsetY = e.offsetY !== undefined ? e.offsetY : e.pageY - target.offset().top;
-            mouse.startX = mouse.lastX = e.pageX;
-            mouse.startY = mouse.lastY = e.pageY;
-
-            this.dragRootEl = this.el;
-
-            this.dragEl = $(document.createElement(this.options.listNodeName)).addClass(this.options.listClass + ' ' + this.options.dragClass);
-            this.dragEl.css('width', dragItem.width());
-
-            dragItem.after(this.placeEl);
-            dragItem[0].parentNode.removeChild(dragItem[0]);
-            dragItem.appendTo(this.dragEl);
-
-            $(document.body).append(this.dragEl);
-            this.dragEl.css({
-                'left' : e.pageX - mouse.offsetX,
-                'top'  : e.pageY - mouse.offsetY
-            });
-            // total depth of dragging item
-            var i, depth,
-                items = this.dragEl.find(this.options.itemNodeName);
-            for (i = 0; i < items.length; i++) {
-                depth = $(items[i]).parents(this.options.listNodeName).length;
-                if (depth > this.dragDepth) {
-                    this.dragDepth = depth;
-                }
-            }
-        },
-
-        dragStop: function(e)
-        {
-            var el = this.dragEl.children(this.options.itemNodeName).first();
-            el[0].parentNode.removeChild(el[0]);
-            this.placeEl.replaceWith(el);
-
-            this.dragEl.remove();
-            this.el.trigger('change');
-            if (this.hasNewRoot) {
-                this.dragRootEl.trigger('change');
-            }
-            this.reset();
-        },
-
-        dragMove: function(e)
-        {
-            var list, parent, prev, next, depth,
-                opt   = this.options,
-                mouse = this.mouse;
-
-            this.dragEl.css({
-                'left' : e.pageX - mouse.offsetX,
-                'top'  : e.pageY - mouse.offsetY
-            });
-
-            // mouse position last events
-            mouse.lastX = mouse.nowX;
-            mouse.lastY = mouse.nowY;
-            // mouse position this events
-            mouse.nowX  = e.pageX;
-            mouse.nowY  = e.pageY;
-            // distance mouse moved between events
-            mouse.distX = mouse.nowX - mouse.lastX;
-            mouse.distY = mouse.nowY - mouse.lastY;
-            // direction mouse was moving
-            mouse.lastDirX = mouse.dirX;
-            mouse.lastDirY = mouse.dirY;
-            // direction mouse is now moving (on both axis)
-            mouse.dirX = mouse.distX === 0 ? 0 : mouse.distX > 0 ? 1 : -1;
-            mouse.dirY = mouse.distY === 0 ? 0 : mouse.distY > 0 ? 1 : -1;
-            // axis mouse is now moving on
-            var newAx   = Math.abs(mouse.distX) > Math.abs(mouse.distY) ? 1 : 0;
-
-            // do nothing on first move
-            if (!mouse.moving) {
-                mouse.dirAx  = newAx;
-                mouse.moving = true;
-                return;
-            }
-
-            // calc distance moved on this axis (and direction)
-            if (mouse.dirAx !== newAx) {
-                mouse.distAxX = 0;
-                mouse.distAxY = 0;
-            } else {
-                mouse.distAxX += Math.abs(mouse.distX);
-                if (mouse.dirX !== 0 && mouse.dirX !== mouse.lastDirX) {
-                    mouse.distAxX = 0;
-                }
-                mouse.distAxY += Math.abs(mouse.distY);
-                if (mouse.dirY !== 0 && mouse.dirY !== mouse.lastDirY) {
-                    mouse.distAxY = 0;
-                }
-            }
-            mouse.dirAx = newAx;
-
-            /**
-             * move horizontal
-             */
-            if (mouse.dirAx && mouse.distAxX >= opt.threshold) {
-                // reset move distance on x-axis for new phase
-                mouse.distAxX = 0;
-                prev = this.placeEl.prev(opt.itemNodeName);
-                // increase horizontal level if previous sibling exists and is not collapsed
-                if (mouse.distX > 0 && prev.length && !prev.hasClass(opt.collapsedClass)) {
-                    // cannot increase level when item above is collapsed
-                    list = prev.find(opt.listNodeName).last();
-                    // check if depth limit has reached
-                    depth = this.placeEl.parents(opt.listNodeName).length;
-                    if (depth + this.dragDepth <= opt.maxDepth) {
-                        // create new sub-level if one doesn't exist
-                        if (!list.length) {
-                            list = $('<' + opt.listNodeName + '/>').addClass(opt.listClass);
-                            list.append(this.placeEl);
-                            prev.append(list);
-                            this.setParent(prev);
-                        } else {
-                            // else append to next level up
-                            list = prev.children(opt.listNodeName).last();
-                            list.append(this.placeEl);
-                        }
-                    }
-                }
-                // decrease horizontal level
-                if (mouse.distX < 0) {
-                    // we can't decrease a level if an item preceeds the current one
-                    next = this.placeEl.next(opt.itemNodeName);
-                    if (!next.length) {
-                        parent = this.placeEl.parent();
-                        this.placeEl.closest(opt.itemNodeName).after(this.placeEl);
-                        if (!parent.children().length) {
-                            this.unsetParent(parent.parent());
-                        }
-                    }
-                }
-            }
-
-            var isEmpty = false;
-
-            // find list item under cursor
-            if (!hasPointerEvents) {
-                this.dragEl[0].style.visibility = 'hidden';
-            }
-            this.pointEl = $(document.elementFromPoint(e.pageX - document.body.scrollLeft, e.pageY - (window.pageYOffset || document.documentElement.scrollTop)));
-            if (!hasPointerEvents) {
-                this.dragEl[0].style.visibility = 'visible';
-            }
-            if (this.pointEl.hasClass(opt.handleClass)) {
-                this.pointEl = this.pointEl.parent(opt.itemNodeName);
-            }
-            if (this.pointEl.hasClass(opt.emptyClass)) {
-                isEmpty = true;
-            }
-            else if (!this.pointEl.length || !this.pointEl.hasClass(opt.itemClass)) {
-                return;
-            }
-
-            // find parent list of item under cursor
-            var pointElRoot = this.pointEl.closest('.' + opt.rootClass),
-                isNewRoot   = this.dragRootEl.data('nestable-id') !== pointElRoot.data('nestable-id');
-
-            /**
-             * move vertical
-             */
-            if (!mouse.dirAx || isNewRoot || isEmpty) {
-                // check if groups match if dragging over new root
-                if (isNewRoot && opt.group !== pointElRoot.data('nestable-group')) {
-                    return;
-                }
-                // check depth limit
-                depth = this.dragDepth - 1 + this.pointEl.parents(opt.listNodeName).length;
-                if (depth > opt.maxDepth) {
-                    return;
-                }
-                var before = e.pageY < (this.pointEl.offset().top + this.pointEl.height() / 2);
-                    parent = this.placeEl.parent();
-                // if empty create new list to replace empty placeholder
-                if (isEmpty) {
-                    list = $(document.createElement(opt.listNodeName)).addClass(opt.listClass);
-                    list.append(this.placeEl);
-                    this.pointEl.replaceWith(list);
-                }
-                else if (before) {
-                    this.pointEl.before(this.placeEl);
-                }
-                else {
-                    this.pointEl.after(this.placeEl);
-                }
-                if (!parent.children().length) {
-                    this.unsetParent(parent.parent());
-                }
-                if (!this.dragRootEl.find(opt.itemNodeName).length) {
-                    this.dragRootEl.append('<div class="' + opt.emptyClass + '"/>');
-                }
-                // parent root list has changed
-                if (isNewRoot) {
-                    this.dragRootEl = pointElRoot;
-                    this.hasNewRoot = this.el[0] !== this.dragRootEl[0];
-                }
-            }
+        if (!next || isCollinear) {
+          return ("L" + (point.x) + " " + (point.y))
         }
 
-    };
+        var threshold = Math.min(
+          getDistance(prev, point),
+          getDistance(next, point)
+        );
+        var isTooCloseForRadius = threshold / 2 < radius;
+        var radiusForPoint = isTooCloseForRadius ? threshold / 2 : radius;
 
-    $.fn.nestable = function(params)
-    {
-        var lists  = this,
-            retval = this;
+        var before = moveTo(prev, point, radiusForPoint);
+        var after = moveTo(next, point, radiusForPoint);
 
-        lists.each(function()
+        return ("L" + (before.x) + " " + (before.y) + "S" + (point.x) + " " + (point.y) + " " + (after.x) + " " + (after.y))
+      })
+      .join('')
+  )
+}
+
+var Path = {
+  props: ['smooth', 'data', 'boundary', 'radius', 'id', 'max', 'min'],
+
+  render: function render (h) {
+    var ref = this;
+    var data = ref.data;
+    var smooth = ref.smooth;
+    var boundary = ref.boundary;
+    var radius = ref.radius;
+    var id = ref.id;
+    var max = ref.max;
+    var min = ref.min;
+    var points = genPoints(data, boundary, { max: max, min: min });
+    var d = genPath(points, smooth ? radius : 0);
+
+    return h('path', {
+      attrs: { d: d, fill: 'none', stroke: ("url(#" + id + ")") }
+    })
+  }
+};
+
+var Gradient = {
+  props: ['gradient', 'id'],
+
+  render: function render (h) {
+    var ref = this;
+    var gradient = ref.gradient;
+    var id = ref.id;
+    var len = gradient.length - 1 || 1;
+    var stops = gradient
+      .slice()
+      .reverse()
+      .map(function (color, index) { return h('stop', {
+          attrs: {
+            offset: index / len,
+            'stop-color': color
+          }
+        }); }
+      );
+
+    return h('defs', [
+      h(
+        'linearGradient',
         {
-            var plugin = $(this).data("nestable");
+          attrs: {
+            id: id,
+            x1: 0,
+            y1: 0,
+            x2: 0,
+            y2: 1
+          }
+        },
+        stops
+      )
+    ])
+  }
+};
 
-            if (!plugin) {
-                $(this).data("nestable", new Plugin(this, params));
-                $(this).data("nestable-id", new Date().getTime());
-            } else {
-                if (typeof params === 'string' && typeof plugin[params] === 'function') {
-                    retval = plugin[params]();
-                }
-            }
+var Trend$1 = {
+  name: 'Trend',
+
+  props: {
+    data: {
+      type: Array,
+      required: true
+    },
+    autoDraw: Boolean,
+    autoDrawDuration: {
+      type: Number,
+      default: 2000
+    },
+    autoDrawEasing: {
+      type: String,
+      default: 'ease'
+    },
+    gradient: {
+      type: Array,
+      default: function () { return ['#000']; }
+    },
+    max: {
+      type: Number,
+      default: -Infinity
+    },
+    min: {
+      type: Number,
+      default: Infinity
+    },
+    height: Number,
+    width: Number,
+    padding: {
+      type: Number,
+      default: 8
+    },
+    radius: {
+      type: Number,
+      default: 10
+    },
+    smooth: Boolean
+  },
+
+  watch: {
+    data: {
+      immediate: true,
+      handler: function handler (val) {
+        var this$1 = this;
+
+        this.$nextTick(function () {
+          if (this$1.$isServer || !this$1.$refs.path || !this$1.autoDraw) {
+            return
+          }
+
+          var path = this$1.$refs.path.$el;
+          var length = path.getTotalLength();
+
+          path.style.transition = 'none';
+          path.style.strokeDasharray = length + ' ' + length;
+          path.style.strokeDashoffset = Math.abs(
+            length - (this$1.lastLength || 0)
+          );
+          path.getBoundingClientRect();
+          path.style.transition = "stroke-dashoffset " + (this$1.autoDrawDuration) + "ms " + (this$1.autoDrawEasing);
+          path.style.strokeDashoffset = 0;
+          this$1.lastLength = length;
         });
+      }
+    }
+  },
 
-        return retval || lists;
+  render: function render (h) {
+    if (!this.data || this.data.length < 2) { return }
+    var ref = this;
+    var width = ref.width;
+    var height = ref.height;
+    var padding = ref.padding;
+    var viewWidth = width || 300;
+    var viewHeight = height || 75;
+    var boundary = {
+      minX: padding,
+      minY: padding,
+      maxX: viewWidth - padding,
+      maxY: viewHeight - padding
     };
+    var props = this.$props;
 
-})(__webpack_provided_window_dot_jQuery || window.Zepto, window, document);
+    props.boundary = boundary;
+    props.id = 'vue-trend-' + this._uid;
+    return h(
+      'svg',
+      {
+        attrs: {
+          width: width || '100%',
+          height: height || '25%',
+          viewBox: ("0 0 " + viewWidth + " " + viewHeight)
+        }
+      },
+      [
+        h(Gradient, { props: props }),
+        h(Path, {
+          props: props,
+          ref: 'path'
+        })
+      ]
+    )
+  }
+};
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
+Trend$1.install = function (Vue) {
+  Vue.component(Trend$1.name, Trend$1);
+};
+
+if (typeof window !== 'undefined' && window.Vue) {
+  window.Vue.use(Trend$1);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Trend$1);
+
 
 /***/ })
 
