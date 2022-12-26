@@ -5,10 +5,11 @@
         </div>
 
         <div class="login"> </div>
-        <div class="container-fluid mt-5">
+        
+        <div class="container-fluid">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-10 col-sm-8 mx-auto login-form px-3">
+                <div class="row mt-5">
+                    <div class="col-lg-8 col-12 col-sm-8 mt-5 login-form px-3">
                         <div class="card-body">
                             <router-view></router-view>
                         </div>
@@ -27,7 +28,6 @@ export default {
                 src: "https://transonline2.salvador.ba.gov.br/zona-verde/web/images/topos/zona-verde-logo.png",
                 style: {
                     width: '100%',
-
                 },
                 alt: "header-image"
             }
@@ -38,11 +38,12 @@ export default {
 
 
 <style src="toastr/build/toastr.min.css"></style>
-<style src="bootstrapValidator/dist/css/bootstrapValidator.min.css">
-</style>
-<style src="../../css/login.css" scoped>
+<style src="bootstrapValidator/dist/css/bootstrapValidator.min.css"></style>
 
-</style>
+
+<style src="../../css/login.css" scoped> </style>
+<style  lang="scss" src="../../sass/utils/app.scss" > </style>
+
 <style scoped>
 .login {
     padding-top: 6.5%;

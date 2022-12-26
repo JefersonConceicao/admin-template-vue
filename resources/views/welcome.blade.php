@@ -9,9 +9,7 @@
 </head>
 
 <body class="skin-default">
-<div id="app"></div>
-<script type="text/javascript" src="{{ url(mix('js/main.js'))}}"></script>
-
+    <div id="app"></div>
+    <script type="text/javascript" src="{{ url(mix('js/main.js'))}}"></script>
 </body>
-
 </html>

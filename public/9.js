@@ -1,1 +1,4507 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[9],{1294:function(e,t,i){(e.exports=i(30)(!1)).push([e.i,"/**\n * Swiper 4.4.1\n * Most modern mobile touch slider and framework with hardware accelerated transitions\n * http://www.idangero.us/swiper/\n *\n * Copyright 2014-2018 Vladimir Kharlampidi\n *\n * Released under the MIT License\n *\n * Released on: September 14, 2018\n */\n.swiper-container {\n  margin: 0 auto;\n  position: relative;\n  overflow: hidden;\n  list-style: none;\n  padding: 0;\n  /* Fix of Webkit flickering */\n  z-index: 1;\n}\n.swiper-container-no-flexbox .swiper-slide {\n  float: left;\n}\n.swiper-container-vertical > .swiper-wrapper {\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  -ms-flex-direction: column;\n  flex-direction: column;\n}\n.swiper-wrapper {\n  position: relative;\n  width: 100%;\n  height: 100%;\n  z-index: 1;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-transition-property: -webkit-transform;\n  transition-property: -webkit-transform;\n  -o-transition-property: transform;\n  transition-property: transform;\n  transition-property: transform, -webkit-transform;\n  -webkit-box-sizing: content-box;\n  box-sizing: content-box;\n}\n.swiper-container-android .swiper-slide,\n.swiper-wrapper {\n  -webkit-transform: translate3d(0px, 0, 0);\n  transform: translate3d(0px, 0, 0);\n}\n.swiper-container-multirow > .swiper-wrapper {\n  -webkit-flex-wrap: wrap;\n  -ms-flex-wrap: wrap;\n  flex-wrap: wrap;\n}\n.swiper-container-free-mode > .swiper-wrapper {\n  -webkit-transition-timing-function: ease-out;\n  -o-transition-timing-function: ease-out;\n  transition-timing-function: ease-out;\n  margin: 0 auto;\n}\n.swiper-slide {\n  -webkit-flex-shrink: 0;\n  -ms-flex-negative: 0;\n  flex-shrink: 0;\n  width: 100%;\n  height: 100%;\n  position: relative;\n  -webkit-transition-property: -webkit-transform;\n  transition-property: -webkit-transform;\n  -o-transition-property: transform;\n  transition-property: transform;\n  transition-property: transform, -webkit-transform;\n}\n.swiper-slide-invisible-blank {\n  visibility: hidden;\n}\n/* Auto Height */\n.swiper-container-autoheight,\n.swiper-container-autoheight .swiper-slide {\n  height: auto;\n}\n.swiper-container-autoheight .swiper-wrapper {\n  -webkit-box-align: start;\n  -webkit-align-items: flex-start;\n  -ms-flex-align: start;\n  align-items: flex-start;\n  -webkit-transition-property: height, -webkit-transform;\n  transition-property: height, -webkit-transform;\n  -o-transition-property: transform, height;\n  transition-property: transform, height;\n  transition-property: transform, height, -webkit-transform;\n}\n/* 3D Effects */\n.swiper-container-3d {\n  -webkit-perspective: 1200px;\n  perspective: 1200px;\n}\n.swiper-container-3d .swiper-wrapper,\n.swiper-container-3d .swiper-slide,\n.swiper-container-3d .swiper-slide-shadow-left,\n.swiper-container-3d .swiper-slide-shadow-right,\n.swiper-container-3d .swiper-slide-shadow-top,\n.swiper-container-3d .swiper-slide-shadow-bottom,\n.swiper-container-3d .swiper-cube-shadow {\n  -webkit-transform-style: preserve-3d;\n  transform-style: preserve-3d;\n}\n.swiper-container-3d .swiper-slide-shadow-left,\n.swiper-container-3d .swiper-slide-shadow-right,\n.swiper-container-3d .swiper-slide-shadow-top,\n.swiper-container-3d .swiper-slide-shadow-bottom {\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  pointer-events: none;\n  z-index: 10;\n}\n.swiper-container-3d .swiper-slide-shadow-left {\n  background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));\n  background-image: -webkit-linear-gradient(right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));\n  background-image: -o-linear-gradient(right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));\n  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));\n}\n.swiper-container-3d .swiper-slide-shadow-right {\n  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));\n  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));\n  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));\n  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));\n}\n.swiper-container-3d .swiper-slide-shadow-top {\n  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));\n  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));\n  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));\n  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));\n}\n.swiper-container-3d .swiper-slide-shadow-bottom {\n  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));\n  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));\n  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));\n  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));\n}\n/* IE10 Windows Phone 8 Fixes */\n.swiper-container-wp8-horizontal,\n.swiper-container-wp8-horizontal > .swiper-wrapper {\n  -ms-touch-action: pan-y;\n  touch-action: pan-y;\n}\n.swiper-container-wp8-vertical,\n.swiper-container-wp8-vertical > .swiper-wrapper {\n  -ms-touch-action: pan-x;\n  touch-action: pan-x;\n}\n.swiper-button-prev,\n.swiper-button-next {\n  position: absolute;\n  top: 50%;\n  width: 27px;\n  height: 44px;\n  margin-top: -22px;\n  z-index: 10;\n  cursor: pointer;\n  background-size: 27px 44px;\n  background-position: center;\n  background-repeat: no-repeat;\n}\n.swiper-button-prev.swiper-button-disabled,\n.swiper-button-next.swiper-button-disabled {\n  opacity: 0.35;\n  cursor: auto;\n  pointer-events: none;\n}\n.swiper-button-prev,\n.swiper-container-rtl .swiper-button-next {\n  background-image: url(\"data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E\");\n  left: 10px;\n  right: auto;\n}\n.swiper-button-next,\n.swiper-container-rtl .swiper-button-prev {\n  background-image: url(\"data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E\");\n  right: 10px;\n  left: auto;\n}\n.swiper-button-prev.swiper-button-white,\n.swiper-container-rtl .swiper-button-next.swiper-button-white {\n  background-image: url(\"data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E\");\n}\n.swiper-button-next.swiper-button-white,\n.swiper-container-rtl .swiper-button-prev.swiper-button-white {\n  background-image: url(\"data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E\");\n}\n.swiper-button-prev.swiper-button-black,\n.swiper-container-rtl .swiper-button-next.swiper-button-black {\n  background-image: url(\"data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E\");\n}\n.swiper-button-next.swiper-button-black,\n.swiper-container-rtl .swiper-button-prev.swiper-button-black {\n  background-image: url(\"data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E\");\n}\n.swiper-button-lock {\n  display: none;\n}\n.swiper-pagination {\n  position: absolute;\n  text-align: center;\n  -webkit-transition: 300ms opacity;\n  -o-transition: 300ms opacity;\n  transition: 300ms opacity;\n  -webkit-transform: translate3d(0, 0, 0);\n  transform: translate3d(0, 0, 0);\n  z-index: 10;\n}\n.swiper-pagination.swiper-pagination-hidden {\n  opacity: 0;\n}\n/* Common Styles */\n.swiper-pagination-fraction,\n.swiper-pagination-custom,\n.swiper-container-horizontal > .swiper-pagination-bullets {\n  bottom: 10px;\n  left: 0;\n  width: 100%;\n}\n/* Bullets */\n.swiper-pagination-bullets-dynamic {\n  overflow: hidden;\n  font-size: 0;\n}\n.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {\n  -webkit-transform: scale(0.33);\n  -ms-transform: scale(0.33);\n  transform: scale(0.33);\n  position: relative;\n}\n.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active {\n  -webkit-transform: scale(1);\n  -ms-transform: scale(1);\n  transform: scale(1);\n}\n.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main {\n  -webkit-transform: scale(1);\n  -ms-transform: scale(1);\n  transform: scale(1);\n}\n.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev {\n  -webkit-transform: scale(0.66);\n  -ms-transform: scale(0.66);\n  transform: scale(0.66);\n}\n.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev {\n  -webkit-transform: scale(0.33);\n  -ms-transform: scale(0.33);\n  transform: scale(0.33);\n}\n.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next {\n  -webkit-transform: scale(0.66);\n  -ms-transform: scale(0.66);\n  transform: scale(0.66);\n}\n.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next {\n  -webkit-transform: scale(0.33);\n  -ms-transform: scale(0.33);\n  transform: scale(0.33);\n}\n.swiper-pagination-bullet {\n  width: 8px;\n  height: 8px;\n  display: inline-block;\n  border-radius: 100%;\n  background: #000;\n  opacity: 0.2;\n}\nbutton.swiper-pagination-bullet {\n  border: none;\n  margin: 0;\n  padding: 0;\n  -webkit-box-shadow: none;\n  box-shadow: none;\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  appearance: none;\n}\n.swiper-pagination-clickable .swiper-pagination-bullet {\n  cursor: pointer;\n}\n.swiper-pagination-bullet-active {\n  opacity: 1;\n  background: #007aff;\n}\n.swiper-container-vertical > .swiper-pagination-bullets {\n  right: 10px;\n  top: 50%;\n  -webkit-transform: translate3d(0px, -50%, 0);\n  transform: translate3d(0px, -50%, 0);\n}\n.swiper-container-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {\n  margin: 6px 0;\n  display: block;\n}\n.swiper-container-vertical > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic {\n  top: 50%;\n  -webkit-transform: translateY(-50%);\n  -ms-transform: translateY(-50%);\n  transform: translateY(-50%);\n  width: 8px;\n}\n.swiper-container-vertical > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {\n  display: inline-block;\n  -webkit-transition: 200ms top, 200ms -webkit-transform;\n  transition: 200ms top, 200ms -webkit-transform;\n  -o-transition: 200ms transform, 200ms top;\n  transition: 200ms transform, 200ms top;\n  transition: 200ms transform, 200ms top, 200ms -webkit-transform;\n}\n.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {\n  margin: 0 4px;\n}\n.swiper-container-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic {\n  left: 50%;\n  -webkit-transform: translateX(-50%);\n  -ms-transform: translateX(-50%);\n  transform: translateX(-50%);\n  white-space: nowrap;\n}\n.swiper-container-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {\n  -webkit-transition: 200ms left, 200ms -webkit-transform;\n  transition: 200ms left, 200ms -webkit-transform;\n  -o-transition: 200ms transform, 200ms left;\n  transition: 200ms transform, 200ms left;\n  transition: 200ms transform, 200ms left, 200ms -webkit-transform;\n}\n.swiper-container-horizontal.swiper-container-rtl > .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {\n  -webkit-transition: 200ms right, 200ms -webkit-transform;\n  transition: 200ms right, 200ms -webkit-transform;\n  -o-transition: 200ms transform, 200ms right;\n  transition: 200ms transform, 200ms right;\n  transition: 200ms transform, 200ms right, 200ms -webkit-transform;\n}\n/* Progress */\n.swiper-pagination-progressbar {\n  background: rgba(0, 0, 0, 0.25);\n  position: absolute;\n}\n.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {\n  background: #007aff;\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  -webkit-transform: scale(0);\n  -ms-transform: scale(0);\n  transform: scale(0);\n  -webkit-transform-origin: left top;\n  -ms-transform-origin: left top;\n  transform-origin: left top;\n}\n.swiper-container-rtl .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {\n  -webkit-transform-origin: right top;\n  -ms-transform-origin: right top;\n  transform-origin: right top;\n}\n.swiper-container-horizontal > .swiper-pagination-progressbar,\n.swiper-container-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {\n  width: 100%;\n  height: 4px;\n  left: 0;\n  top: 0;\n}\n.swiper-container-vertical > .swiper-pagination-progressbar,\n.swiper-container-horizontal > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {\n  width: 4px;\n  height: 100%;\n  left: 0;\n  top: 0;\n}\n.swiper-pagination-white .swiper-pagination-bullet-active {\n  background: #ffffff;\n}\n.swiper-pagination-progressbar.swiper-pagination-white {\n  background: rgba(255, 255, 255, 0.25);\n}\n.swiper-pagination-progressbar.swiper-pagination-white .swiper-pagination-progressbar-fill {\n  background: #ffffff;\n}\n.swiper-pagination-black .swiper-pagination-bullet-active {\n  background: #000000;\n}\n.swiper-pagination-progressbar.swiper-pagination-black {\n  background: rgba(0, 0, 0, 0.25);\n}\n.swiper-pagination-progressbar.swiper-pagination-black .swiper-pagination-progressbar-fill {\n  background: #000000;\n}\n.swiper-pagination-lock {\n  display: none;\n}\n/* Scrollbar */\n.swiper-scrollbar {\n  border-radius: 10px;\n  position: relative;\n  -ms-touch-action: none;\n  background: rgba(0, 0, 0, 0.1);\n}\n.swiper-container-horizontal > .swiper-scrollbar {\n  position: absolute;\n  left: 1%;\n  bottom: 3px;\n  z-index: 50;\n  height: 5px;\n  width: 98%;\n}\n.swiper-container-vertical > .swiper-scrollbar {\n  position: absolute;\n  right: 3px;\n  top: 1%;\n  z-index: 50;\n  width: 5px;\n  height: 98%;\n}\n.swiper-scrollbar-drag {\n  height: 100%;\n  width: 100%;\n  position: relative;\n  background: rgba(0, 0, 0, 0.5);\n  border-radius: 10px;\n  left: 0;\n  top: 0;\n}\n.swiper-scrollbar-cursor-drag {\n  cursor: move;\n}\n.swiper-scrollbar-lock {\n  display: none;\n}\n.swiper-zoom-container {\n  width: 100%;\n  height: 100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -ms-flex-align: center;\n  align-items: center;\n  text-align: center;\n}\n.swiper-zoom-container > img,\n.swiper-zoom-container > svg,\n.swiper-zoom-container > canvas {\n  max-width: 100%;\n  max-height: 100%;\n  -o-object-fit: contain;\n  object-fit: contain;\n}\n.swiper-slide-zoomed {\n  cursor: move;\n}\n/* Preloader */\n.swiper-lazy-preloader {\n  width: 42px;\n  height: 42px;\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  margin-left: -21px;\n  margin-top: -21px;\n  z-index: 10;\n  -webkit-transform-origin: 50%;\n  -ms-transform-origin: 50%;\n  transform-origin: 50%;\n  -webkit-animation: swiper-preloader-spin 1s steps(12, end) infinite;\n  animation: swiper-preloader-spin 1s steps(12, end) infinite;\n}\n.swiper-lazy-preloader:after {\n  display: block;\n  content: '';\n  width: 100%;\n  height: 100%;\n  background-image: url(\"data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%236c6c6c'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E\");\n  background-position: 50%;\n  background-size: 100%;\n  background-repeat: no-repeat;\n}\n.swiper-lazy-preloader-white:after {\n  background-image: url(\"data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%23fff'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E\");\n}\n@-webkit-keyframes swiper-preloader-spin {\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n@keyframes swiper-preloader-spin {\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg);\n  }\n}\n/* a11y */\n.swiper-container .swiper-notification {\n  position: absolute;\n  left: 0;\n  top: 0;\n  pointer-events: none;\n  opacity: 0;\n  z-index: -1000;\n}\n.swiper-container-fade.swiper-container-free-mode .swiper-slide {\n  -webkit-transition-timing-function: ease-out;\n  -o-transition-timing-function: ease-out;\n  transition-timing-function: ease-out;\n}\n.swiper-container-fade .swiper-slide {\n  pointer-events: none;\n  -webkit-transition-property: opacity;\n  -o-transition-property: opacity;\n  transition-property: opacity;\n}\n.swiper-container-fade .swiper-slide .swiper-slide {\n  pointer-events: none;\n}\n.swiper-container-fade .swiper-slide-active,\n.swiper-container-fade .swiper-slide-active .swiper-slide-active {\n  pointer-events: auto;\n}\n.swiper-container-cube {\n  overflow: visible;\n}\n.swiper-container-cube .swiper-slide {\n  pointer-events: none;\n  -webkit-backface-visibility: hidden;\n  backface-visibility: hidden;\n  z-index: 1;\n  visibility: hidden;\n  -webkit-transform-origin: 0 0;\n  -ms-transform-origin: 0 0;\n  transform-origin: 0 0;\n  width: 100%;\n  height: 100%;\n}\n.swiper-container-cube .swiper-slide .swiper-slide {\n  pointer-events: none;\n}\n.swiper-container-cube.swiper-container-rtl .swiper-slide {\n  -webkit-transform-origin: 100% 0;\n  -ms-transform-origin: 100% 0;\n  transform-origin: 100% 0;\n}\n.swiper-container-cube .swiper-slide-active,\n.swiper-container-cube .swiper-slide-active .swiper-slide-active {\n  pointer-events: auto;\n}\n.swiper-container-cube .swiper-slide-active,\n.swiper-container-cube .swiper-slide-next,\n.swiper-container-cube .swiper-slide-prev,\n.swiper-container-cube .swiper-slide-next + .swiper-slide {\n  pointer-events: auto;\n  visibility: visible;\n}\n.swiper-container-cube .swiper-slide-shadow-top,\n.swiper-container-cube .swiper-slide-shadow-bottom,\n.swiper-container-cube .swiper-slide-shadow-left,\n.swiper-container-cube .swiper-slide-shadow-right {\n  z-index: 0;\n  -webkit-backface-visibility: hidden;\n  backface-visibility: hidden;\n}\n.swiper-container-cube .swiper-cube-shadow {\n  position: absolute;\n  left: 0;\n  bottom: 0px;\n  width: 100%;\n  height: 100%;\n  background: #000;\n  opacity: 0.6;\n  -webkit-filter: blur(50px);\n  filter: blur(50px);\n  z-index: 0;\n}\n.swiper-container-flip {\n  overflow: visible;\n}\n.swiper-container-flip .swiper-slide {\n  pointer-events: none;\n  -webkit-backface-visibility: hidden;\n  backface-visibility: hidden;\n  z-index: 1;\n}\n.swiper-container-flip .swiper-slide .swiper-slide {\n  pointer-events: none;\n}\n.swiper-container-flip .swiper-slide-active,\n.swiper-container-flip .swiper-slide-active .swiper-slide-active {\n  pointer-events: auto;\n}\n.swiper-container-flip .swiper-slide-shadow-top,\n.swiper-container-flip .swiper-slide-shadow-bottom,\n.swiper-container-flip .swiper-slide-shadow-left,\n.swiper-container-flip .swiper-slide-shadow-right {\n  z-index: 0;\n  -webkit-backface-visibility: hidden;\n  backface-visibility: hidden;\n}\n.swiper-container-coverflow .swiper-wrapper {\n  /* Windows 8 IE 10 fix */\n  -ms-perspective: 1200px;\n}\n",""])},1295:function(e,t,i){e.exports=function(){"use strict";var e="undefined"==typeof document?{body:{},addEventListener:function(){},removeEventListener:function(){},activeElement:{blur:function(){},nodeName:""},querySelector:function(){return null},querySelectorAll:function(){return[]},getElementById:function(){return null},createEvent:function(){return{initEvent:function(){}}},createElement:function(){return{children:[],childNodes:[],style:{},setAttribute:function(){},getElementsByTagName:function(){return[]}}},location:{hash:""}}:document,t="undefined"==typeof window?{document:e,navigator:{userAgent:""},location:{},history:{},CustomEvent:function(){return this},addEventListener:function(){},removeEventListener:function(){},getComputedStyle:function(){return{getPropertyValue:function(){return""}}},Image:function(){},Date:function(){},screen:{},setTimeout:function(){},clearTimeout:function(){}}:window,i=function(e){for(var t=0;t<e.length;t+=1)this[t]=e[t];return this.length=e.length,this};function s(s,a){var n=[],r=0;if(s&&!a&&s instanceof i)return s;if(s)if("string"==typeof s){var o,l,d=s.trim();if(d.indexOf("<")>=0&&d.indexOf(">")>=0){var h="div";for(0===d.indexOf("<li")&&(h="ul"),0===d.indexOf("<tr")&&(h="tbody"),0!==d.indexOf("<td")&&0!==d.indexOf("<th")||(h="tr"),0===d.indexOf("<tbody")&&(h="table"),0===d.indexOf("<option")&&(h="select"),(l=e.createElement(h)).innerHTML=d,r=0;r<l.childNodes.length;r+=1)n.push(l.childNodes[r])}else for(o=a||"#"!==s[0]||s.match(/[ .<>:~]/)?(a||e).querySelectorAll(s.trim()):[e.getElementById(s.trim().split("#")[1])],r=0;r<o.length;r+=1)o[r]&&n.push(o[r])}else if(s.nodeType||s===t||s===e)n.push(s);else if(s.length>0&&s[0].nodeType)for(r=0;r<s.length;r+=1)n.push(s[r]);return new i(n)}function a(e){for(var t=[],i=0;i<e.length;i+=1)-1===t.indexOf(e[i])&&t.push(e[i]);return t}s.fn=i.prototype,s.Class=i,s.Dom7=i;var n={addClass:function(e){if(void 0===e)return this;for(var t=e.split(" "),i=0;i<t.length;i+=1)for(var s=0;s<this.length;s+=1)void 0!==this[s]&&void 0!==this[s].classList&&this[s].classList.add(t[i]);return this},removeClass:function(e){for(var t=e.split(" "),i=0;i<t.length;i+=1)for(var s=0;s<this.length;s+=1)void 0!==this[s]&&void 0!==this[s].classList&&this[s].classList.remove(t[i]);return this},hasClass:function(e){return!!this[0]&&this[0].classList.contains(e)},toggleClass:function(e){for(var t=e.split(" "),i=0;i<t.length;i+=1)for(var s=0;s<this.length;s+=1)void 0!==this[s]&&void 0!==this[s].classList&&this[s].classList.toggle(t[i]);return this},attr:function(e,t){var i=arguments,s=this;if(1===arguments.length&&"string"==typeof e)return this[0]?this[0].getAttribute(e):void 0;for(var a=0;a<this.length;a+=1)if(2===i.length)s[a].setAttribute(e,t);else for(var n in e)s[a][n]=e[n],s[a].setAttribute(n,e[n]);return this},removeAttr:function(e){for(var t=0;t<this.length;t+=1)this[t].removeAttribute(e);return this},data:function(e,t){var i;if(void 0!==t){for(var s=0;s<this.length;s+=1)(i=this[s]).dom7ElementDataStorage||(i.dom7ElementDataStorage={}),i.dom7ElementDataStorage[e]=t;return this}if(i=this[0]){if(i.dom7ElementDataStorage&&e in i.dom7ElementDataStorage)return i.dom7ElementDataStorage[e];var a=i.getAttribute("data-"+e);return a||void 0}},transform:function(e){for(var t=0;t<this.length;t+=1){var i=this[t].style;i.webkitTransform=e,i.transform=e}return this},transition:function(e){"string"!=typeof e&&(e+="ms");for(var t=0;t<this.length;t+=1){var i=this[t].style;i.webkitTransitionDuration=e,i.transitionDuration=e}return this},on:function(){for(var e,t=this,i=[],a=arguments.length;a--;)i[a]=arguments[a];var n=i[0],r=i[1],o=i[2],l=i[3];function d(e){var t=e.target;if(t){var i=e.target.dom7EventData||[];if(i.indexOf(e)<0&&i.unshift(e),s(t).is(r))o.apply(t,i);else for(var a=s(t).parents(),n=0;n<a.length;n+=1)s(a[n]).is(r)&&o.apply(a[n],i)}}function h(e){var t=e&&e.target&&e.target.dom7EventData||[];t.indexOf(e)<0&&t.unshift(e),o.apply(this,t)}"function"==typeof i[1]&&(n=(e=i)[0],o=e[1],l=e[2],r=void 0),l||(l=!1);for(var p,c=n.split(" "),u=0;u<this.length;u+=1){var f=t[u];if(r)for(p=0;p<c.length;p+=1){var m=c[p];f.dom7LiveListeners||(f.dom7LiveListeners={}),f.dom7LiveListeners[m]||(f.dom7LiveListeners[m]=[]),f.dom7LiveListeners[m].push({listener:o,proxyListener:d}),f.addEventListener(m,d,l)}else for(p=0;p<c.length;p+=1){var v=c[p];f.dom7Listeners||(f.dom7Listeners={}),f.dom7Listeners[v]||(f.dom7Listeners[v]=[]),f.dom7Listeners[v].push({listener:o,proxyListener:h}),f.addEventListener(v,h,l)}}return this},off:function(){for(var e,t=this,i=[],s=arguments.length;s--;)i[s]=arguments[s];var a=i[0],n=i[1],r=i[2],o=i[3];"function"==typeof i[1]&&(a=(e=i)[0],r=e[1],o=e[2],n=void 0),o||(o=!1);for(var l=a.split(" "),d=0;d<l.length;d+=1)for(var h=l[d],p=0;p<this.length;p+=1){var c=t[p],u=void 0;if(!n&&c.dom7Listeners?u=c.dom7Listeners[h]:n&&c.dom7LiveListeners&&(u=c.dom7LiveListeners[h]),u&&u.length)for(var f=u.length-1;f>=0;f-=1){var m=u[f];r&&m.listener===r?(c.removeEventListener(h,m.proxyListener,o),u.splice(f,1)):r||(c.removeEventListener(h,m.proxyListener,o),u.splice(f,1))}}return this},trigger:function(){for(var i=this,s=[],a=arguments.length;a--;)s[a]=arguments[a];for(var n=s[0].split(" "),r=s[1],o=0;o<n.length;o+=1)for(var l=n[o],d=0;d<this.length;d+=1){var h=i[d],p=void 0;try{p=new t.CustomEvent(l,{detail:r,bubbles:!0,cancelable:!0})}catch(t){(p=e.createEvent("Event")).initEvent(l,!0,!0),p.detail=r}h.dom7EventData=s.filter((function(e,t){return t>0})),h.dispatchEvent(p),h.dom7EventData=[],delete h.dom7EventData}return this},transitionEnd:function(e){var t,i=["webkitTransitionEnd","transitionend"],s=this;function a(n){if(n.target===this)for(e.call(this,n),t=0;t<i.length;t+=1)s.off(i[t],a)}if(e)for(t=0;t<i.length;t+=1)s.on(i[t],a);return this},outerWidth:function(e){if(this.length>0){if(e){var t=this.styles();return this[0].offsetWidth+parseFloat(t.getPropertyValue("margin-right"))+parseFloat(t.getPropertyValue("margin-left"))}return this[0].offsetWidth}return null},outerHeight:function(e){if(this.length>0){if(e){var t=this.styles();return this[0].offsetHeight+parseFloat(t.getPropertyValue("margin-top"))+parseFloat(t.getPropertyValue("margin-bottom"))}return this[0].offsetHeight}return null},offset:function(){if(this.length>0){var i=this[0],s=i.getBoundingClientRect(),a=e.body,n=i.clientTop||a.clientTop||0,r=i.clientLeft||a.clientLeft||0,o=i===t?t.scrollY:i.scrollTop,l=i===t?t.scrollX:i.scrollLeft;return{top:s.top+o-n,left:s.left+l-r}}return null},css:function(e,i){var s,a=this;if(1===arguments.length){if("string"!=typeof e){for(s=0;s<this.length;s+=1)for(var n in e)a[s].style[n]=e[n];return this}if(this[0])return t.getComputedStyle(this[0],null).getPropertyValue(e)}if(2===arguments.length&&"string"==typeof e){for(s=0;s<this.length;s+=1)a[s].style[e]=i;return this}return this},each:function(e){if(!e)return this;for(var t=0;t<this.length;t+=1)if(!1===e.call(this[t],t,this[t]))return this;return this},html:function(e){if(void 0===e)return this[0]?this[0].innerHTML:void 0;for(var t=0;t<this.length;t+=1)this[t].innerHTML=e;return this},text:function(e){if(void 0===e)return this[0]?this[0].textContent.trim():null;for(var t=0;t<this.length;t+=1)this[t].textContent=e;return this},is:function(a){var n,r,o=this[0];if(!o||void 0===a)return!1;if("string"==typeof a){if(o.matches)return o.matches(a);if(o.webkitMatchesSelector)return o.webkitMatchesSelector(a);if(o.msMatchesSelector)return o.msMatchesSelector(a);for(n=s(a),r=0;r<n.length;r+=1)if(n[r]===o)return!0;return!1}if(a===e)return o===e;if(a===t)return o===t;if(a.nodeType||a instanceof i){for(n=a.nodeType?[a]:a,r=0;r<n.length;r+=1)if(n[r]===o)return!0;return!1}return!1},index:function(){var e,t=this[0];if(t){for(e=0;null!==(t=t.previousSibling);)1===t.nodeType&&(e+=1);return e}},eq:function(e){if(void 0===e)return this;var t,s=this.length;return new i(e>s-1?[]:e<0?(t=s+e)<0?[]:[this[t]]:[this[e]])},append:function(){for(var t,s=this,a=[],n=arguments.length;n--;)a[n]=arguments[n];for(var r=0;r<a.length;r+=1){t=a[r];for(var o=0;o<this.length;o+=1)if("string"==typeof t){var l=e.createElement("div");for(l.innerHTML=t;l.firstChild;)s[o].appendChild(l.firstChild)}else if(t instanceof i)for(var d=0;d<t.length;d+=1)s[o].appendChild(t[d]);else s[o].appendChild(t)}return this},prepend:function(t){var s,a;for(s=0;s<this.length;s+=1)if("string"==typeof t){var n=e.createElement("div");for(n.innerHTML=t,a=n.childNodes.length-1;a>=0;a-=1)this[s].insertBefore(n.childNodes[a],this[s].childNodes[0])}else if(t instanceof i)for(a=0;a<t.length;a+=1)this[s].insertBefore(t[a],this[s].childNodes[0]);else this[s].insertBefore(t,this[s].childNodes[0]);return this},next:function(e){return this.length>0?e?this[0].nextElementSibling&&s(this[0].nextElementSibling).is(e)?new i([this[0].nextElementSibling]):new i([]):this[0].nextElementSibling?new i([this[0].nextElementSibling]):new i([]):new i([])},nextAll:function(e){var t=[],a=this[0];if(!a)return new i([]);for(;a.nextElementSibling;){var n=a.nextElementSibling;e?s(n).is(e)&&t.push(n):t.push(n),a=n}return new i(t)},prev:function(e){if(this.length>0){var t=this[0];return e?t.previousElementSibling&&s(t.previousElementSibling).is(e)?new i([t.previousElementSibling]):new i([]):t.previousElementSibling?new i([t.previousElementSibling]):new i([])}return new i([])},prevAll:function(e){var t=[],a=this[0];if(!a)return new i([]);for(;a.previousElementSibling;){var n=a.previousElementSibling;e?s(n).is(e)&&t.push(n):t.push(n),a=n}return new i(t)},parent:function(e){for(var t=[],i=0;i<this.length;i+=1)null!==this[i].parentNode&&(e?s(this[i].parentNode).is(e)&&t.push(this[i].parentNode):t.push(this[i].parentNode));return s(a(t))},parents:function(e){for(var t=[],i=0;i<this.length;i+=1)for(var n=this[i].parentNode;n;)e?s(n).is(e)&&t.push(n):t.push(n),n=n.parentNode;return s(a(t))},closest:function(e){var t=this;return void 0===e?new i([]):(t.is(e)||(t=t.parents(e).eq(0)),t)},find:function(e){for(var t=[],s=0;s<this.length;s+=1)for(var a=this[s].querySelectorAll(e),n=0;n<a.length;n+=1)t.push(a[n]);return new i(t)},children:function(e){for(var t=[],n=0;n<this.length;n+=1)for(var r=this[n].childNodes,o=0;o<r.length;o+=1)e?1===r[o].nodeType&&s(r[o]).is(e)&&t.push(r[o]):1===r[o].nodeType&&t.push(r[o]);return new i(a(t))},remove:function(){for(var e=0;e<this.length;e+=1)this[e].parentNode&&this[e].parentNode.removeChild(this[e]);return this},add:function(){for(var e=[],t=arguments.length;t--;)e[t]=arguments[t];var i,a,n=this;for(i=0;i<e.length;i+=1){var r=s(e[i]);for(a=0;a<r.length;a+=1)n[n.length]=r[a],n.length+=1}return n},styles:function(){return this[0]?t.getComputedStyle(this[0],null):{}}};Object.keys(n).forEach((function(e){s.fn[e]=n[e]}));var r,o,l={deleteProps:function(e){var t=e;Object.keys(t).forEach((function(e){try{t[e]=null}catch(e){}try{delete t[e]}catch(e){}}))},nextTick:function(e,t){return void 0===t&&(t=0),setTimeout(e,t)},now:function(){return Date.now()},getTranslate:function(e,i){var s,a,n;void 0===i&&(i="x");var r=t.getComputedStyle(e,null);return t.WebKitCSSMatrix?((a=r.transform||r.webkitTransform).split(",").length>6&&(a=a.split(", ").map((function(e){return e.replace(",",".")})).join(", ")),n=new t.WebKitCSSMatrix("none"===a?"":a)):s=(n=r.MozTransform||r.OTransform||r.MsTransform||r.msTransform||r.transform||r.getPropertyValue("transform").replace("translate(","matrix(1, 0, 0, 1,")).toString().split(","),"x"===i&&(a=t.WebKitCSSMatrix?n.m41:16===s.length?parseFloat(s[12]):parseFloat(s[4])),"y"===i&&(a=t.WebKitCSSMatrix?n.m42:16===s.length?parseFloat(s[13]):parseFloat(s[5])),a||0},parseUrlQuery:function(e){var i,s,a,n,r={},o=e||t.location.href;if("string"==typeof o&&o.length)for(n=(s=(o=o.indexOf("?")>-1?o.replace(/\S*\?/,""):"").split("&").filter((function(e){return""!==e}))).length,i=0;i<n;i+=1)a=s[i].replace(/#\S+/g,"").split("="),r[decodeURIComponent(a[0])]=void 0===a[1]?void 0:decodeURIComponent(a[1])||"";return r},isObject:function(e){return"object"==typeof e&&null!==e&&e.constructor&&e.constructor===Object},extend:function(){for(var e=[],t=arguments.length;t--;)e[t]=arguments[t];for(var i=Object(e[0]),s=1;s<e.length;s+=1){var a=e[s];if(null!=a)for(var n=Object.keys(Object(a)),r=0,o=n.length;r<o;r+=1){var d=n[r],h=Object.getOwnPropertyDescriptor(a,d);void 0!==h&&h.enumerable&&(l.isObject(i[d])&&l.isObject(a[d])?l.extend(i[d],a[d]):!l.isObject(i[d])&&l.isObject(a[d])?(i[d]={},l.extend(i[d],a[d])):i[d]=a[d])}}return i}},d=(o=e.createElement("div"),{touch:t.Modernizr&&!0===t.Modernizr.touch||!!("ontouchstart"in t||t.DocumentTouch&&e instanceof t.DocumentTouch),pointerEvents:!(!t.navigator.pointerEnabled&&!t.PointerEvent),prefixedPointerEvents:!!t.navigator.msPointerEnabled,transition:(r=o.style,"transition"in r||"webkitTransition"in r||"MozTransition"in r),transforms3d:t.Modernizr&&!0===t.Modernizr.csstransforms3d||function(){var e=o.style;return"webkitPerspective"in e||"MozPerspective"in e||"OPerspective"in e||"MsPerspective"in e||"perspective"in e}(),flexbox:function(){for(var e=o.style,t="alignItems webkitAlignItems webkitBoxAlign msFlexAlign mozBoxAlign webkitFlexDirection msFlexDirection mozBoxDirection mozBoxOrient webkitBoxDirection webkitBoxOrient".split(" "),i=0;i<t.length;i+=1)if(t[i]in e)return!0;return!1}(),observer:"MutationObserver"in t||"WebkitMutationObserver"in t,passiveListener:function(){var e=!1;try{var i=Object.defineProperty({},"passive",{get:function(){e=!0}});t.addEventListener("testPassiveListener",null,i)}catch(e){}return e}(),gestures:"ongesturestart"in t}),h=function(e){void 0===e&&(e={});var t=this;t.params=e,t.eventsListeners={},t.params&&t.params.on&&Object.keys(t.params.on).forEach((function(e){t.on(e,t.params.on[e])}))},p={components:{configurable:!0}};h.prototype.on=function(e,t,i){var s=this;if("function"!=typeof t)return s;var a=i?"unshift":"push";return e.split(" ").forEach((function(e){s.eventsListeners[e]||(s.eventsListeners[e]=[]),s.eventsListeners[e][a](t)})),s},h.prototype.once=function(e,t,i){var s=this;return"function"!=typeof t?s:s.on(e,(function i(){for(var a=[],n=arguments.length;n--;)a[n]=arguments[n];t.apply(s,a),s.off(e,i)}),i)},h.prototype.off=function(e,t){var i=this;return i.eventsListeners?(e.split(" ").forEach((function(e){void 0===t?i.eventsListeners[e]=[]:i.eventsListeners[e]&&i.eventsListeners[e].length&&i.eventsListeners[e].forEach((function(s,a){s===t&&i.eventsListeners[e].splice(a,1)}))})),i):i},h.prototype.emit=function(){for(var e=[],t=arguments.length;t--;)e[t]=arguments[t];var i,s,a,n=this;if(!n.eventsListeners)return n;"string"==typeof e[0]||Array.isArray(e[0])?(i=e[0],s=e.slice(1,e.length),a=n):(i=e[0].events,s=e[0].data,a=e[0].context||n);var r=Array.isArray(i)?i:i.split(" ");return r.forEach((function(e){if(n.eventsListeners&&n.eventsListeners[e]){var t=[];n.eventsListeners[e].forEach((function(e){t.push(e)})),t.forEach((function(e){e.apply(a,s)}))}})),n},h.prototype.useModulesParams=function(e){var t=this;t.modules&&Object.keys(t.modules).forEach((function(i){var s=t.modules[i];s.params&&l.extend(e,s.params)}))},h.prototype.useModules=function(e){void 0===e&&(e={});var t=this;t.modules&&Object.keys(t.modules).forEach((function(i){var s=t.modules[i],a=e[i]||{};s.instance&&Object.keys(s.instance).forEach((function(e){var i=s.instance[e];t[e]="function"==typeof i?i.bind(t):i})),s.on&&t.on&&Object.keys(s.on).forEach((function(e){t.on(e,s.on[e])})),s.create&&s.create.bind(t)(a)}))},p.components.set=function(e){this.use&&this.use(e)},h.installModule=function(e){for(var t=[],i=arguments.length-1;i-- >0;)t[i]=arguments[i+1];var s=this;s.prototype.modules||(s.prototype.modules={});var a=e.name||Object.keys(s.prototype.modules).length+"_"+l.now();return s.prototype.modules[a]=e,e.proto&&Object.keys(e.proto).forEach((function(t){s.prototype[t]=e.proto[t]})),e.static&&Object.keys(e.static).forEach((function(t){s[t]=e.static[t]})),e.install&&e.install.apply(s,t),s},h.use=function(e){for(var t=[],i=arguments.length-1;i-- >0;)t[i]=arguments[i+1];var s=this;return Array.isArray(e)?(e.forEach((function(e){return s.installModule(e)})),s):s.installModule.apply(s,[e].concat(t))},Object.defineProperties(h,p);var c={updateSize:function(){var e,t,i=this.$el;e=void 0!==this.params.width?this.params.width:i[0].clientWidth,t=void 0!==this.params.height?this.params.height:i[0].clientHeight,0===e&&this.isHorizontal()||0===t&&this.isVertical()||(e=e-parseInt(i.css("padding-left"),10)-parseInt(i.css("padding-right"),10),t=t-parseInt(i.css("padding-top"),10)-parseInt(i.css("padding-bottom"),10),l.extend(this,{width:e,height:t,size:this.isHorizontal()?e:t}))},updateSlides:function(){var e=this.params,i=this.$wrapperEl,s=this.size,a=this.rtlTranslate,n=this.wrongRTL,r=this.virtual&&e.virtual.enabled,o=r?this.virtual.slides.length:this.slides.length,h=i.children("."+this.params.slideClass),p=r?this.virtual.slides.length:h.length,c=[],u=[],f=[],m=e.slidesOffsetBefore;"function"==typeof m&&(m=e.slidesOffsetBefore.call(this));var v=e.slidesOffsetAfter;"function"==typeof v&&(v=e.slidesOffsetAfter.call(this));var g=this.snapGrid.length,w=this.snapGrid.length,b=e.spaceBetween,x=-m,y=0,E=0;if(void 0!==s){var C,T;"string"==typeof b&&b.indexOf("%")>=0&&(b=parseFloat(b.replace("%",""))/100*s),this.virtualSize=-b,a?h.css({marginLeft:"",marginTop:""}):h.css({marginRight:"",marginBottom:""}),e.slidesPerColumn>1&&(C=Math.floor(p/e.slidesPerColumn)===p/this.params.slidesPerColumn?p:Math.ceil(p/e.slidesPerColumn)*e.slidesPerColumn,"auto"!==e.slidesPerView&&"row"===e.slidesPerColumnFill&&(C=Math.max(C,e.slidesPerView*e.slidesPerColumn)));for(var S,k=e.slidesPerColumn,M=C/k,z=M-(e.slidesPerColumn*M-p),D=0;D<p;D+=1){T=0;var P=h.eq(D);if(e.slidesPerColumn>1){var L=void 0,$=void 0,I=void 0;"column"===e.slidesPerColumnFill?(I=D-($=Math.floor(D/k))*k,($>z||$===z&&I===k-1)&&(I+=1)>=k&&(I=0,$+=1),L=$+I*C/k,P.css({"-webkit-box-ordinal-group":L,"-moz-box-ordinal-group":L,"-ms-flex-order":L,"-webkit-order":L,order:L})):$=D-(I=Math.floor(D/M))*M,P.css("margin-"+(this.isHorizontal()?"top":"left"),0!==I&&e.spaceBetween&&e.spaceBetween+"px").attr("data-swiper-column",$).attr("data-swiper-row",I)}if("none"!==P.css("display")){if("auto"===e.slidesPerView){var O=t.getComputedStyle(P[0],null),A=P[0].style.transform,F=P[0].style.webkitTransform;A&&(P[0].style.transform="none"),F&&(P[0].style.webkitTransform="none"),T=e.roundLengths?this.isHorizontal()?P.outerWidth(!0):P.outerHeight(!0):this.isHorizontal()?P[0].getBoundingClientRect().width+parseFloat(O.getPropertyValue("margin-left"))+parseFloat(O.getPropertyValue("margin-right")):P[0].getBoundingClientRect().height+parseFloat(O.getPropertyValue("margin-top"))+parseFloat(O.getPropertyValue("margin-bottom")),A&&(P[0].style.transform=A),F&&(P[0].style.webkitTransform=F),e.roundLengths&&(T=Math.floor(T))}else T=(s-(e.slidesPerView-1)*b)/e.slidesPerView,e.roundLengths&&(T=Math.floor(T)),h[D]&&(this.isHorizontal()?h[D].style.width=T+"px":h[D].style.height=T+"px");h[D]&&(h[D].swiperSlideSize=T),f.push(T),e.centeredSlides?(x=x+T/2+y/2+b,0===y&&0!==D&&(x=x-s/2-b),0===D&&(x=x-s/2-b),Math.abs(x)<.001&&(x=0),e.roundLengths&&(x=Math.floor(x)),E%e.slidesPerGroup==0&&c.push(x),u.push(x)):(e.roundLengths&&(x=Math.floor(x)),E%e.slidesPerGroup==0&&c.push(x),u.push(x),x=x+T+b),this.virtualSize+=T+b,y=T,E+=1}}if(this.virtualSize=Math.max(this.virtualSize,s)+v,a&&n&&("slide"===e.effect||"coverflow"===e.effect)&&i.css({width:this.virtualSize+e.spaceBetween+"px"}),d.flexbox&&!e.setWrapperSize||(this.isHorizontal()?i.css({width:this.virtualSize+e.spaceBetween+"px"}):i.css({height:this.virtualSize+e.spaceBetween+"px"})),e.slidesPerColumn>1&&(this.virtualSize=(T+e.spaceBetween)*C,this.virtualSize=Math.ceil(this.virtualSize/e.slidesPerColumn)-e.spaceBetween,this.isHorizontal()?i.css({width:this.virtualSize+e.spaceBetween+"px"}):i.css({height:this.virtualSize+e.spaceBetween+"px"}),e.centeredSlides)){S=[];for(var B=0;B<c.length;B+=1){var H=c[B];e.roundLengths&&(H=Math.floor(H)),c[B]<this.virtualSize+c[0]&&S.push(H)}c=S}if(!e.centeredSlides){S=[];for(var N=0;N<c.length;N+=1){var G=c[N];e.roundLengths&&(G=Math.floor(G)),c[N]<=this.virtualSize-s&&S.push(G)}c=S,Math.floor(this.virtualSize-s)-Math.floor(c[c.length-1])>1&&c.push(this.virtualSize-s)}if(0===c.length&&(c=[0]),0!==e.spaceBetween&&(this.isHorizontal()?a?h.css({marginLeft:b+"px"}):h.css({marginRight:b+"px"}):h.css({marginBottom:b+"px"})),e.centerInsufficientSlides){var X=0;if(f.forEach((function(t){X+=t+(e.spaceBetween?e.spaceBetween:0)})),(X-=e.spaceBetween)<s){var Y=(s-X)/2;c.forEach((function(e,t){c[t]=e-Y})),u.forEach((function(e,t){u[t]=e+Y}))}}l.extend(this,{slides:h,snapGrid:c,slidesGrid:u,slidesSizesGrid:f}),p!==o&&this.emit("slidesLengthChange"),c.length!==g&&(this.params.watchOverflow&&this.checkOverflow(),this.emit("snapGridLengthChange")),u.length!==w&&this.emit("slidesGridLengthChange"),(e.watchSlidesProgress||e.watchSlidesVisibility)&&this.updateSlidesOffset()}},updateAutoHeight:function(e){var t,i=[],s=0;if("number"==typeof e?this.setTransition(e):!0===e&&this.setTransition(this.params.speed),"auto"!==this.params.slidesPerView&&this.params.slidesPerView>1)for(t=0;t<Math.ceil(this.params.slidesPerView);t+=1){var a=this.activeIndex+t;if(a>this.slides.length)break;i.push(this.slides.eq(a)[0])}else i.push(this.slides.eq(this.activeIndex)[0]);for(t=0;t<i.length;t+=1)if(void 0!==i[t]){var n=i[t].offsetHeight;s=n>s?n:s}s&&this.$wrapperEl.css("height",s+"px")},updateSlidesOffset:function(){for(var e=this.slides,t=0;t<e.length;t+=1)e[t].swiperSlideOffset=this.isHorizontal()?e[t].offsetLeft:e[t].offsetTop},updateSlidesProgress:function(e){void 0===e&&(e=this&&this.translate||0);var t=this.params,i=this.slides,a=this.rtlTranslate;if(0!==i.length){void 0===i[0].swiperSlideOffset&&this.updateSlidesOffset();var n=-e;a&&(n=e),i.removeClass(t.slideVisibleClass),this.visibleSlidesIndexes=[],this.visibleSlides=[];for(var r=0;r<i.length;r+=1){var o=i[r],l=(n+(t.centeredSlides?this.minTranslate():0)-o.swiperSlideOffset)/(o.swiperSlideSize+t.spaceBetween);if(t.watchSlidesVisibility){var d=-(n-o.swiperSlideOffset),h=d+this.slidesSizesGrid[r];(d>=0&&d<this.size||h>0&&h<=this.size||d<=0&&h>=this.size)&&(this.visibleSlides.push(o),this.visibleSlidesIndexes.push(r),i.eq(r).addClass(t.slideVisibleClass))}o.progress=a?-l:l}this.visibleSlides=s(this.visibleSlides)}},updateProgress:function(e){void 0===e&&(e=this&&this.translate||0);var t=this.params,i=this.maxTranslate()-this.minTranslate(),s=this.progress,a=this.isBeginning,n=this.isEnd,r=a,o=n;0===i?(s=0,a=!0,n=!0):(a=(s=(e-this.minTranslate())/i)<=0,n=s>=1),l.extend(this,{progress:s,isBeginning:a,isEnd:n}),(t.watchSlidesProgress||t.watchSlidesVisibility)&&this.updateSlidesProgress(e),a&&!r&&this.emit("reachBeginning toEdge"),n&&!o&&this.emit("reachEnd toEdge"),(r&&!a||o&&!n)&&this.emit("fromEdge"),this.emit("progress",s)},updateSlidesClasses:function(){var e,t=this.slides,i=this.params,s=this.$wrapperEl,a=this.activeIndex,n=this.realIndex,r=this.virtual&&i.virtual.enabled;t.removeClass(i.slideActiveClass+" "+i.slideNextClass+" "+i.slidePrevClass+" "+i.slideDuplicateActiveClass+" "+i.slideDuplicateNextClass+" "+i.slideDuplicatePrevClass),(e=r?this.$wrapperEl.find("."+i.slideClass+'[data-swiper-slide-index="'+a+'"]'):t.eq(a)).addClass(i.slideActiveClass),i.loop&&(e.hasClass(i.slideDuplicateClass)?s.children("."+i.slideClass+":not(."+i.slideDuplicateClass+')[data-swiper-slide-index="'+n+'"]').addClass(i.slideDuplicateActiveClass):s.children("."+i.slideClass+"."+i.slideDuplicateClass+'[data-swiper-slide-index="'+n+'"]').addClass(i.slideDuplicateActiveClass));var o=e.nextAll("."+i.slideClass).eq(0).addClass(i.slideNextClass);i.loop&&0===o.length&&(o=t.eq(0)).addClass(i.slideNextClass);var l=e.prevAll("."+i.slideClass).eq(0).addClass(i.slidePrevClass);i.loop&&0===l.length&&(l=t.eq(-1)).addClass(i.slidePrevClass),i.loop&&(o.hasClass(i.slideDuplicateClass)?s.children("."+i.slideClass+":not(."+i.slideDuplicateClass+')[data-swiper-slide-index="'+o.attr("data-swiper-slide-index")+'"]').addClass(i.slideDuplicateNextClass):s.children("."+i.slideClass+"."+i.slideDuplicateClass+'[data-swiper-slide-index="'+o.attr("data-swiper-slide-index")+'"]').addClass(i.slideDuplicateNextClass),l.hasClass(i.slideDuplicateClass)?s.children("."+i.slideClass+":not(."+i.slideDuplicateClass+')[data-swiper-slide-index="'+l.attr("data-swiper-slide-index")+'"]').addClass(i.slideDuplicatePrevClass):s.children("."+i.slideClass+"."+i.slideDuplicateClass+'[data-swiper-slide-index="'+l.attr("data-swiper-slide-index")+'"]').addClass(i.slideDuplicatePrevClass))},updateActiveIndex:function(e){var t,i=this.rtlTranslate?this.translate:-this.translate,s=this.slidesGrid,a=this.snapGrid,n=this.params,r=this.activeIndex,o=this.realIndex,d=this.snapIndex,h=e;if(void 0===h){for(var p=0;p<s.length;p+=1)void 0!==s[p+1]?i>=s[p]&&i<s[p+1]-(s[p+1]-s[p])/2?h=p:i>=s[p]&&i<s[p+1]&&(h=p+1):i>=s[p]&&(h=p);n.normalizeSlideIndex&&(h<0||void 0===h)&&(h=0)}if((t=a.indexOf(i)>=0?a.indexOf(i):Math.floor(h/n.slidesPerGroup))>=a.length&&(t=a.length-1),h!==r){var c=parseInt(this.slides.eq(h).attr("data-swiper-slide-index")||h,10);l.extend(this,{snapIndex:t,realIndex:c,previousIndex:r,activeIndex:h}),this.emit("activeIndexChange"),this.emit("snapIndexChange"),o!==c&&this.emit("realIndexChange"),this.emit("slideChange")}else t!==d&&(this.snapIndex=t,this.emit("snapIndexChange"))},updateClickedSlide:function(e){var t=this.params,i=s(e.target).closest("."+t.slideClass)[0],a=!1;if(i)for(var n=0;n<this.slides.length;n+=1)this.slides[n]===i&&(a=!0);if(!i||!a)return this.clickedSlide=void 0,void(this.clickedIndex=void 0);this.clickedSlide=i,this.virtual&&this.params.virtual.enabled?this.clickedIndex=parseInt(s(i).attr("data-swiper-slide-index"),10):this.clickedIndex=s(i).index(),t.slideToClickedSlide&&void 0!==this.clickedIndex&&this.clickedIndex!==this.activeIndex&&this.slideToClickedSlide()}},u={getTranslate:function(e){void 0===e&&(e=this.isHorizontal()?"x":"y");var t=this.params,i=this.rtlTranslate,s=this.translate,a=this.$wrapperEl;if(t.virtualTranslate)return i?-s:s;var n=l.getTranslate(a[0],e);return i&&(n=-n),n||0},setTranslate:function(e,t){var i=this.rtlTranslate,s=this.params,a=this.$wrapperEl,n=this.progress,r=0,o=0;this.isHorizontal()?r=i?-e:e:o=e,s.roundLengths&&(r=Math.floor(r),o=Math.floor(o)),s.virtualTranslate||(d.transforms3d?a.transform("translate3d("+r+"px, "+o+"px, 0px)"):a.transform("translate("+r+"px, "+o+"px)")),this.previousTranslate=this.translate,this.translate=this.isHorizontal()?r:o;var l=this.maxTranslate()-this.minTranslate();(0===l?0:(e-this.minTranslate())/l)!==n&&this.updateProgress(e),this.emit("setTranslate",this.translate,t)},minTranslate:function(){return-this.snapGrid[0]},maxTranslate:function(){return-this.snapGrid[this.snapGrid.length-1]}},f={setTransition:function(e,t){this.$wrapperEl.transition(e),this.emit("setTransition",e,t)},transitionStart:function(e,t){void 0===e&&(e=!0);var i=this.activeIndex,s=this.params,a=this.previousIndex;s.autoHeight&&this.updateAutoHeight();var n=t;if(n||(n=i>a?"next":i<a?"prev":"reset"),this.emit("transitionStart"),e&&i!==a){if("reset"===n)return void this.emit("slideResetTransitionStart");this.emit("slideChangeTransitionStart"),"next"===n?this.emit("slideNextTransitionStart"):this.emit("slidePrevTransitionStart")}},transitionEnd:function(e,t){void 0===e&&(e=!0);var i=this.activeIndex,s=this.previousIndex;this.animating=!1,this.setTransition(0);var a=t;if(a||(a=i>s?"next":i<s?"prev":"reset"),this.emit("transitionEnd"),e&&i!==s){if("reset"===a)return void this.emit("slideResetTransitionEnd");this.emit("slideChangeTransitionEnd"),"next"===a?this.emit("slideNextTransitionEnd"):this.emit("slidePrevTransitionEnd")}}},m={slideTo:function(e,t,i,s){void 0===e&&(e=0),void 0===t&&(t=this.params.speed),void 0===i&&(i=!0);var a=this,n=e;n<0&&(n=0);var r=a.params,o=a.snapGrid,l=a.slidesGrid,h=a.previousIndex,p=a.activeIndex,c=a.rtlTranslate;if(a.animating&&r.preventInteractionOnTransition)return!1;var u=Math.floor(n/r.slidesPerGroup);u>=o.length&&(u=o.length-1),(p||r.initialSlide||0)===(h||0)&&i&&a.emit("beforeSlideChangeStart");var f,m=-o[u];if(a.updateProgress(m),r.normalizeSlideIndex)for(var v=0;v<l.length;v+=1)-Math.floor(100*m)>=Math.floor(100*l[v])&&(n=v);if(a.initialized&&n!==p){if(!a.allowSlideNext&&m<a.translate&&m<a.minTranslate())return!1;if(!a.allowSlidePrev&&m>a.translate&&m>a.maxTranslate()&&(p||0)!==n)return!1}return f=n>p?"next":n<p?"prev":"reset",c&&-m===a.translate||!c&&m===a.translate?(a.updateActiveIndex(n),r.autoHeight&&a.updateAutoHeight(),a.updateSlidesClasses(),"slide"!==r.effect&&a.setTranslate(m),"reset"!==f&&(a.transitionStart(i,f),a.transitionEnd(i,f)),!1):(0!==t&&d.transition?(a.setTransition(t),a.setTranslate(m),a.updateActiveIndex(n),a.updateSlidesClasses(),a.emit("beforeTransitionStart",t,s),a.transitionStart(i,f),a.animating||(a.animating=!0,a.onSlideToWrapperTransitionEnd||(a.onSlideToWrapperTransitionEnd=function(e){a&&!a.destroyed&&e.target===this&&(a.$wrapperEl[0].removeEventListener("transitionend",a.onSlideToWrapperTransitionEnd),a.$wrapperEl[0].removeEventListener("webkitTransitionEnd",a.onSlideToWrapperTransitionEnd),a.onSlideToWrapperTransitionEnd=null,delete a.onSlideToWrapperTransitionEnd,a.transitionEnd(i,f))}),a.$wrapperEl[0].addEventListener("transitionend",a.onSlideToWrapperTransitionEnd),a.$wrapperEl[0].addEventListener("webkitTransitionEnd",a.onSlideToWrapperTransitionEnd))):(a.setTransition(0),a.setTranslate(m),a.updateActiveIndex(n),a.updateSlidesClasses(),a.emit("beforeTransitionStart",t,s),a.transitionStart(i,f),a.transitionEnd(i,f)),!0)},slideToLoop:function(e,t,i,s){void 0===e&&(e=0),void 0===t&&(t=this.params.speed),void 0===i&&(i=!0);var a=e;return this.params.loop&&(a+=this.loopedSlides),this.slideTo(a,t,i,s)},slideNext:function(e,t,i){void 0===e&&(e=this.params.speed),void 0===t&&(t=!0);var s=this.params,a=this.animating;return s.loop?!a&&(this.loopFix(),this._clientLeft=this.$wrapperEl[0].clientLeft,this.slideTo(this.activeIndex+s.slidesPerGroup,e,t,i)):this.slideTo(this.activeIndex+s.slidesPerGroup,e,t,i)},slidePrev:function(e,t,i){void 0===e&&(e=this.params.speed),void 0===t&&(t=!0);var s=this.params,a=this.animating,n=this.snapGrid,r=this.slidesGrid,o=this.rtlTranslate;if(s.loop){if(a)return!1;this.loopFix(),this._clientLeft=this.$wrapperEl[0].clientLeft}function l(e){return e<0?-Math.floor(Math.abs(e)):Math.floor(e)}var d,h=l(o?this.translate:-this.translate),p=n.map((function(e){return l(e)})),c=(r.map((function(e){return l(e)})),n[p.indexOf(h)],n[p.indexOf(h)-1]);return void 0!==c&&(d=r.indexOf(c))<0&&(d=this.activeIndex-1),this.slideTo(d,e,t,i)},slideReset:function(e,t,i){return void 0===e&&(e=this.params.speed),void 0===t&&(t=!0),this.slideTo(this.activeIndex,e,t,i)},slideToClosest:function(e,t,i){void 0===e&&(e=this.params.speed),void 0===t&&(t=!0);var s=this.activeIndex,a=Math.floor(s/this.params.slidesPerGroup);if(a<this.snapGrid.length-1){var n=this.rtlTranslate?this.translate:-this.translate,r=this.snapGrid[a];n-r>(this.snapGrid[a+1]-r)/2&&(s=this.params.slidesPerGroup)}return this.slideTo(s,e,t,i)},slideToClickedSlide:function(){var e,t=this,i=t.params,a=t.$wrapperEl,n="auto"===i.slidesPerView?t.slidesPerViewDynamic():i.slidesPerView,r=t.clickedIndex;if(i.loop){if(t.animating)return;e=parseInt(s(t.clickedSlide).attr("data-swiper-slide-index"),10),i.centeredSlides?r<t.loopedSlides-n/2||r>t.slides.length-t.loopedSlides+n/2?(t.loopFix(),r=a.children("."+i.slideClass+'[data-swiper-slide-index="'+e+'"]:not(.'+i.slideDuplicateClass+")").eq(0).index(),l.nextTick((function(){t.slideTo(r)}))):t.slideTo(r):r>t.slides.length-n?(t.loopFix(),r=a.children("."+i.slideClass+'[data-swiper-slide-index="'+e+'"]:not(.'+i.slideDuplicateClass+")").eq(0).index(),l.nextTick((function(){t.slideTo(r)}))):t.slideTo(r)}else t.slideTo(r)}},v={loopCreate:function(){var t=this,i=t.params,a=t.$wrapperEl;a.children("."+i.slideClass+"."+i.slideDuplicateClass).remove();var n=a.children("."+i.slideClass);if(i.loopFillGroupWithBlank){var r=i.slidesPerGroup-n.length%i.slidesPerGroup;if(r!==i.slidesPerGroup){for(var o=0;o<r;o+=1){var l=s(e.createElement("div")).addClass(i.slideClass+" "+i.slideBlankClass);a.append(l)}n=a.children("."+i.slideClass)}}"auto"!==i.slidesPerView||i.loopedSlides||(i.loopedSlides=n.length),t.loopedSlides=parseInt(i.loopedSlides||i.slidesPerView,10),t.loopedSlides+=i.loopAdditionalSlides,t.loopedSlides>n.length&&(t.loopedSlides=n.length);var d=[],h=[];n.each((function(e,i){var a=s(i);e<t.loopedSlides&&h.push(i),e<n.length&&e>=n.length-t.loopedSlides&&d.push(i),a.attr("data-swiper-slide-index",e)}));for(var p=0;p<h.length;p+=1)a.append(s(h[p].cloneNode(!0)).addClass(i.slideDuplicateClass));for(var c=d.length-1;c>=0;c-=1)a.prepend(s(d[c].cloneNode(!0)).addClass(i.slideDuplicateClass))},loopFix:function(){var e,t=this.params,i=this.activeIndex,s=this.slides,a=this.loopedSlides,n=this.allowSlidePrev,r=this.allowSlideNext,o=this.snapGrid,l=this.rtlTranslate;this.allowSlidePrev=!0,this.allowSlideNext=!0;var d=-o[i]-this.getTranslate();i<a?(e=s.length-3*a+i,e+=a,this.slideTo(e,0,!1,!0)&&0!==d&&this.setTranslate((l?-this.translate:this.translate)-d)):("auto"===t.slidesPerView&&i>=2*a||i>=s.length-a)&&(e=-s.length+i+a,e+=a,this.slideTo(e,0,!1,!0)&&0!==d&&this.setTranslate((l?-this.translate:this.translate)-d)),this.allowSlidePrev=n,this.allowSlideNext=r},loopDestroy:function(){var e=this.$wrapperEl,t=this.params,i=this.slides;e.children("."+t.slideClass+"."+t.slideDuplicateClass).remove(),i.removeAttr("data-swiper-slide-index")}},g={setGrabCursor:function(e){if(!(d.touch||!this.params.simulateTouch||this.params.watchOverflow&&this.isLocked)){var t=this.el;t.style.cursor="move",t.style.cursor=e?"-webkit-grabbing":"-webkit-grab",t.style.cursor=e?"-moz-grabbin":"-moz-grab",t.style.cursor=e?"grabbing":"grab"}},unsetGrabCursor:function(){d.touch||this.params.watchOverflow&&this.isLocked||(this.el.style.cursor="")}},w={appendSlide:function(e){var t=this.$wrapperEl,i=this.params;if(i.loop&&this.loopDestroy(),"object"==typeof e&&"length"in e)for(var s=0;s<e.length;s+=1)e[s]&&t.append(e[s]);else t.append(e);i.loop&&this.loopCreate(),i.observer&&d.observer||this.update()},prependSlide:function(e){var t=this.params,i=this.$wrapperEl,s=this.activeIndex;t.loop&&this.loopDestroy();var a=s+1;if("object"==typeof e&&"length"in e){for(var n=0;n<e.length;n+=1)e[n]&&i.prepend(e[n]);a=s+e.length}else i.prepend(e);t.loop&&this.loopCreate(),t.observer&&d.observer||this.update(),this.slideTo(a,0,!1)},addSlide:function(e,t){var i=this.$wrapperEl,s=this.params,a=this.activeIndex;s.loop&&(a-=this.loopedSlides,this.loopDestroy(),this.slides=i.children("."+s.slideClass));var n=this.slides.length;if(e<=0)this.prependSlide(t);else if(e>=n)this.appendSlide(t);else{for(var r=a>e?a+1:a,o=[],l=n-1;l>=e;l-=1){var h=this.slides.eq(l);h.remove(),o.unshift(h)}if("object"==typeof t&&"length"in t){for(var p=0;p<t.length;p+=1)t[p]&&i.append(t[p]);r=a>e?a+t.length:a}else i.append(t);for(var c=0;c<o.length;c+=1)i.append(o[c]);s.loop&&this.loopCreate(),s.observer&&d.observer||this.update(),s.loop?this.slideTo(r+this.loopedSlides,0,!1):this.slideTo(r,0,!1)}},removeSlide:function(e){var t=this.params,i=this.$wrapperEl,s=this.activeIndex;t.loop&&(s-=this.loopedSlides,this.loopDestroy(),this.slides=i.children("."+t.slideClass));var a,n=s;if("object"==typeof e&&"length"in e){for(var r=0;r<e.length;r+=1)a=e[r],this.slides[a]&&this.slides.eq(a).remove(),a<n&&(n-=1);n=Math.max(n,0)}else a=e,this.slides[a]&&this.slides.eq(a).remove(),a<n&&(n-=1),n=Math.max(n,0);t.loop&&this.loopCreate(),t.observer&&d.observer||this.update(),t.loop?this.slideTo(n+this.loopedSlides,0,!1):this.slideTo(n,0,!1)},removeAllSlides:function(){for(var e=[],t=0;t<this.slides.length;t+=1)e.push(t);this.removeSlide(e)}},b=function(){var i=t.navigator.userAgent,s={ios:!1,android:!1,androidChrome:!1,desktop:!1,windows:!1,iphone:!1,ipod:!1,ipad:!1,cordova:t.cordova||t.phonegap,phonegap:t.cordova||t.phonegap},a=i.match(/(Windows Phone);?[\s\/]+([\d.]+)?/),n=i.match(/(Android);?[\s\/]+([\d.]+)?/),r=i.match(/(iPad).*OS\s([\d_]+)/),o=i.match(/(iPod)(.*OS\s([\d_]+))?/),l=!r&&i.match(/(iPhone\sOS|iOS)\s([\d_]+)/);if(a&&(s.os="windows",s.osVersion=a[2],s.windows=!0),n&&!a&&(s.os="android",s.osVersion=n[2],s.android=!0,s.androidChrome=i.toLowerCase().indexOf("chrome")>=0),(r||l||o)&&(s.os="ios",s.ios=!0),l&&!o&&(s.osVersion=l[2].replace(/_/g,"."),s.iphone=!0),r&&(s.osVersion=r[2].replace(/_/g,"."),s.ipad=!0),o&&(s.osVersion=o[3]?o[3].replace(/_/g,"."):null,s.iphone=!0),s.ios&&s.osVersion&&i.indexOf("Version/")>=0&&"10"===s.osVersion.split(".")[0]&&(s.osVersion=i.toLowerCase().split("version/")[1].split(" ")[0]),s.desktop=!(s.os||s.android||s.webView),s.webView=(l||r||o)&&i.match(/.*AppleWebKit(?!.*Safari)/i),s.os&&"ios"===s.os){var d=s.osVersion.split("."),h=e.querySelector('meta[name="viewport"]');s.minimalUi=!s.webView&&(o||l)&&(1*d[0]==7?1*d[1]>=1:1*d[0]>7)&&h&&h.getAttribute("content").indexOf("minimal-ui")>=0}return s.pixelRatio=t.devicePixelRatio||1,s}();function x(i){var a=this.touchEventsData,n=this.params,r=this.touches;if(!this.animating||!n.preventInteractionOnTransition){var o=i;if(o.originalEvent&&(o=o.originalEvent),a.isTouchEvent="touchstart"===o.type,(a.isTouchEvent||!("which"in o)||3!==o.which)&&!(!a.isTouchEvent&&"button"in o&&o.button>0||a.isTouched&&a.isMoved))if(n.noSwiping&&s(o.target).closest(n.noSwipingSelector?n.noSwipingSelector:"."+n.noSwipingClass)[0])this.allowClick=!0;else if(!n.swipeHandler||s(o).closest(n.swipeHandler)[0]){r.currentX="touchstart"===o.type?o.targetTouches[0].pageX:o.pageX,r.currentY="touchstart"===o.type?o.targetTouches[0].pageY:o.pageY;var d=r.currentX,h=r.currentY,p=n.edgeSwipeDetection||n.iOSEdgeSwipeDetection,c=n.edgeSwipeThreshold||n.iOSEdgeSwipeThreshold;if(!p||!(d<=c||d>=t.screen.width-c)){if(l.extend(a,{isTouched:!0,isMoved:!1,allowTouchCallbacks:!0,isScrolling:void 0,startMoving:void 0}),r.startX=d,r.startY=h,a.touchStartTime=l.now(),this.allowClick=!0,this.updateSize(),this.swipeDirection=void 0,n.threshold>0&&(a.allowThresholdMove=!1),"touchstart"!==o.type){var u=!0;s(o.target).is(a.formElements)&&(u=!1),e.activeElement&&s(e.activeElement).is(a.formElements)&&e.activeElement!==o.target&&e.activeElement.blur(),u&&this.allowTouchMove&&n.touchStartPreventDefault&&o.preventDefault()}this.emit("touchStart",o)}}}}function y(t){var i=this.touchEventsData,a=this.params,n=this.touches,r=this.rtlTranslate,o=t;if(o.originalEvent&&(o=o.originalEvent),i.isTouched){if(!i.isTouchEvent||"mousemove"!==o.type){var d="touchmove"===o.type?o.targetTouches[0].pageX:o.pageX,h="touchmove"===o.type?o.targetTouches[0].pageY:o.pageY;if(o.preventedByNestedSwiper)return n.startX=d,void(n.startY=h);if(!this.allowTouchMove)return this.allowClick=!1,void(i.isTouched&&(l.extend(n,{startX:d,startY:h,currentX:d,currentY:h}),i.touchStartTime=l.now()));if(i.isTouchEvent&&a.touchReleaseOnEdges&&!a.loop)if(this.isVertical()){if(h<n.startY&&this.translate<=this.maxTranslate()||h>n.startY&&this.translate>=this.minTranslate())return i.isTouched=!1,void(i.isMoved=!1)}else if(d<n.startX&&this.translate<=this.maxTranslate()||d>n.startX&&this.translate>=this.minTranslate())return;if(i.isTouchEvent&&e.activeElement&&o.target===e.activeElement&&s(o.target).is(i.formElements))return i.isMoved=!0,void(this.allowClick=!1);if(i.allowTouchCallbacks&&this.emit("touchMove",o),!(o.targetTouches&&o.targetTouches.length>1)){n.currentX=d,n.currentY=h;var p,c=n.currentX-n.startX,u=n.currentY-n.startY;if(!(this.params.threshold&&Math.sqrt(Math.pow(c,2)+Math.pow(u,2))<this.params.threshold))if(void 0===i.isScrolling&&(this.isHorizontal()&&n.currentY===n.startY||this.isVertical()&&n.currentX===n.startX?i.isScrolling=!1:c*c+u*u>=25&&(p=180*Math.atan2(Math.abs(u),Math.abs(c))/Math.PI,i.isScrolling=this.isHorizontal()?p>a.touchAngle:90-p>a.touchAngle)),i.isScrolling&&this.emit("touchMoveOpposite",o),void 0===i.startMoving&&(n.currentX===n.startX&&n.currentY===n.startY||(i.startMoving=!0)),i.isScrolling)i.isTouched=!1;else if(i.startMoving){this.allowClick=!1,o.preventDefault(),a.touchMoveStopPropagation&&!a.nested&&o.stopPropagation(),i.isMoved||(a.loop&&this.loopFix(),i.startTranslate=this.getTranslate(),this.setTransition(0),this.animating&&this.$wrapperEl.trigger("webkitTransitionEnd transitionend"),i.allowMomentumBounce=!1,!a.grabCursor||!0!==this.allowSlideNext&&!0!==this.allowSlidePrev||this.setGrabCursor(!0),this.emit("sliderFirstMove",o)),this.emit("sliderMove",o),i.isMoved=!0;var f=this.isHorizontal()?c:u;n.diff=f,f*=a.touchRatio,r&&(f=-f),this.swipeDirection=f>0?"prev":"next",i.currentTranslate=f+i.startTranslate;var m=!0,v=a.resistanceRatio;if(a.touchReleaseOnEdges&&(v=0),f>0&&i.currentTranslate>this.minTranslate()?(m=!1,a.resistance&&(i.currentTranslate=this.minTranslate()-1+Math.pow(-this.minTranslate()+i.startTranslate+f,v))):f<0&&i.currentTranslate<this.maxTranslate()&&(m=!1,a.resistance&&(i.currentTranslate=this.maxTranslate()+1-Math.pow(this.maxTranslate()-i.startTranslate-f,v))),m&&(o.preventedByNestedSwiper=!0),!this.allowSlideNext&&"next"===this.swipeDirection&&i.currentTranslate<i.startTranslate&&(i.currentTranslate=i.startTranslate),!this.allowSlidePrev&&"prev"===this.swipeDirection&&i.currentTranslate>i.startTranslate&&(i.currentTranslate=i.startTranslate),a.threshold>0){if(!(Math.abs(f)>a.threshold||i.allowThresholdMove))return void(i.currentTranslate=i.startTranslate);if(!i.allowThresholdMove)return i.allowThresholdMove=!0,n.startX=n.currentX,n.startY=n.currentY,i.currentTranslate=i.startTranslate,void(n.diff=this.isHorizontal()?n.currentX-n.startX:n.currentY-n.startY)}a.followFinger&&((a.freeMode||a.watchSlidesProgress||a.watchSlidesVisibility)&&(this.updateActiveIndex(),this.updateSlidesClasses()),a.freeMode&&(0===i.velocities.length&&i.velocities.push({position:n[this.isHorizontal()?"startX":"startY"],time:i.touchStartTime}),i.velocities.push({position:n[this.isHorizontal()?"currentX":"currentY"],time:l.now()})),this.updateProgress(i.currentTranslate),this.setTranslate(i.currentTranslate))}}}}else i.startMoving&&i.isScrolling&&this.emit("touchMoveOpposite",o)}function E(e){var t=this,i=t.touchEventsData,s=t.params,a=t.touches,n=t.rtlTranslate,r=t.$wrapperEl,o=t.slidesGrid,d=t.snapGrid,h=e;if(h.originalEvent&&(h=h.originalEvent),i.allowTouchCallbacks&&t.emit("touchEnd",h),i.allowTouchCallbacks=!1,!i.isTouched)return i.isMoved&&s.grabCursor&&t.setGrabCursor(!1),i.isMoved=!1,void(i.startMoving=!1);s.grabCursor&&i.isMoved&&i.isTouched&&(!0===t.allowSlideNext||!0===t.allowSlidePrev)&&t.setGrabCursor(!1);var p,c=l.now(),u=c-i.touchStartTime;if(t.allowClick&&(t.updateClickedSlide(h),t.emit("tap",h),u<300&&c-i.lastClickTime>300&&(i.clickTimeout&&clearTimeout(i.clickTimeout),i.clickTimeout=l.nextTick((function(){t&&!t.destroyed&&t.emit("click",h)}),300)),u<300&&c-i.lastClickTime<300&&(i.clickTimeout&&clearTimeout(i.clickTimeout),t.emit("doubleTap",h))),i.lastClickTime=l.now(),l.nextTick((function(){t.destroyed||(t.allowClick=!0)})),!i.isTouched||!i.isMoved||!t.swipeDirection||0===a.diff||i.currentTranslate===i.startTranslate)return i.isTouched=!1,i.isMoved=!1,void(i.startMoving=!1);if(i.isTouched=!1,i.isMoved=!1,i.startMoving=!1,p=s.followFinger?n?t.translate:-t.translate:-i.currentTranslate,s.freeMode){if(p<-t.minTranslate())return void t.slideTo(t.activeIndex);if(p>-t.maxTranslate())return void(t.slides.length<d.length?t.slideTo(d.length-1):t.slideTo(t.slides.length-1));if(s.freeModeMomentum){if(i.velocities.length>1){var f=i.velocities.pop(),m=i.velocities.pop(),v=f.position-m.position,g=f.time-m.time;t.velocity=v/g,t.velocity/=2,Math.abs(t.velocity)<s.freeModeMinimumVelocity&&(t.velocity=0),(g>150||l.now()-f.time>300)&&(t.velocity=0)}else t.velocity=0;t.velocity*=s.freeModeMomentumVelocityRatio,i.velocities.length=0;var w=1e3*s.freeModeMomentumRatio,b=t.velocity*w,x=t.translate+b;n&&(x=-x);var y,E,C=!1,T=20*Math.abs(t.velocity)*s.freeModeMomentumBounceRatio;if(x<t.maxTranslate())s.freeModeMomentumBounce?(x+t.maxTranslate()<-T&&(x=t.maxTranslate()-T),y=t.maxTranslate(),C=!0,i.allowMomentumBounce=!0):x=t.maxTranslate(),s.loop&&s.centeredSlides&&(E=!0);else if(x>t.minTranslate())s.freeModeMomentumBounce?(x-t.minTranslate()>T&&(x=t.minTranslate()+T),y=t.minTranslate(),C=!0,i.allowMomentumBounce=!0):x=t.minTranslate(),s.loop&&s.centeredSlides&&(E=!0);else if(s.freeModeSticky){for(var S,k=0;k<d.length;k+=1)if(d[k]>-x){S=k;break}x=-(x=Math.abs(d[S]-x)<Math.abs(d[S-1]-x)||"next"===t.swipeDirection?d[S]:d[S-1])}if(E&&t.once("transitionEnd",(function(){t.loopFix()})),0!==t.velocity)w=n?Math.abs((-x-t.translate)/t.velocity):Math.abs((x-t.translate)/t.velocity);else if(s.freeModeSticky)return void t.slideToClosest();s.freeModeMomentumBounce&&C?(t.updateProgress(y),t.setTransition(w),t.setTranslate(x),t.transitionStart(!0,t.swipeDirection),t.animating=!0,r.transitionEnd((function(){t&&!t.destroyed&&i.allowMomentumBounce&&(t.emit("momentumBounce"),t.setTransition(s.speed),t.setTranslate(y),r.transitionEnd((function(){t&&!t.destroyed&&t.transitionEnd()})))}))):t.velocity?(t.updateProgress(x),t.setTransition(w),t.setTranslate(x),t.transitionStart(!0,t.swipeDirection),t.animating||(t.animating=!0,r.transitionEnd((function(){t&&!t.destroyed&&t.transitionEnd()})))):t.updateProgress(x),t.updateActiveIndex(),t.updateSlidesClasses()}else if(s.freeModeSticky)return void t.slideToClosest();(!s.freeModeMomentum||u>=s.longSwipesMs)&&(t.updateProgress(),t.updateActiveIndex(),t.updateSlidesClasses())}else{for(var M=0,z=t.slidesSizesGrid[0],D=0;D<o.length;D+=s.slidesPerGroup)void 0!==o[D+s.slidesPerGroup]?p>=o[D]&&p<o[D+s.slidesPerGroup]&&(M=D,z=o[D+s.slidesPerGroup]-o[D]):p>=o[D]&&(M=D,z=o[o.length-1]-o[o.length-2]);var P=(p-o[M])/z;if(u>s.longSwipesMs){if(!s.longSwipes)return void t.slideTo(t.activeIndex);"next"===t.swipeDirection&&(P>=s.longSwipesRatio?t.slideTo(M+s.slidesPerGroup):t.slideTo(M)),"prev"===t.swipeDirection&&(P>1-s.longSwipesRatio?t.slideTo(M+s.slidesPerGroup):t.slideTo(M))}else{if(!s.shortSwipes)return void t.slideTo(t.activeIndex);"next"===t.swipeDirection&&t.slideTo(M+s.slidesPerGroup),"prev"===t.swipeDirection&&t.slideTo(M)}}}function C(){var e=this.params,t=this.el;if(!t||0!==t.offsetWidth){e.breakpoints&&this.setBreakpoint();var i=this.allowSlideNext,s=this.allowSlidePrev,a=this.snapGrid;if(this.allowSlideNext=!0,this.allowSlidePrev=!0,this.updateSize(),this.updateSlides(),e.freeMode){var n=Math.min(Math.max(this.translate,this.maxTranslate()),this.minTranslate());this.setTranslate(n),this.updateActiveIndex(),this.updateSlidesClasses(),e.autoHeight&&this.updateAutoHeight()}else this.updateSlidesClasses(),("auto"===e.slidesPerView||e.slidesPerView>1)&&this.isEnd&&!this.params.centeredSlides?this.slideTo(this.slides.length-1,0,!1,!0):this.slideTo(this.activeIndex,0,!1,!0);this.allowSlidePrev=s,this.allowSlideNext=i,this.params.watchOverflow&&a!==this.snapGrid&&this.checkOverflow()}}function T(e){this.allowClick||(this.params.preventClicks&&e.preventDefault(),this.params.preventClicksPropagation&&this.animating&&(e.stopPropagation(),e.stopImmediatePropagation()))}var S,k={attachEvents:function(){var t=this.params,i=this.touchEvents,s=this.el,a=this.wrapperEl;this.onTouchStart=x.bind(this),this.onTouchMove=y.bind(this),this.onTouchEnd=E.bind(this),this.onClick=T.bind(this);var n="container"===t.touchEventsTarget?s:a,r=!!t.nested;if(d.touch||!d.pointerEvents&&!d.prefixedPointerEvents){if(d.touch){var o=!("touchstart"!==i.start||!d.passiveListener||!t.passiveListeners)&&{passive:!0,capture:!1};n.addEventListener(i.start,this.onTouchStart,o),n.addEventListener(i.move,this.onTouchMove,d.passiveListener?{passive:!1,capture:r}:r),n.addEventListener(i.end,this.onTouchEnd,o)}(t.simulateTouch&&!b.ios&&!b.android||t.simulateTouch&&!d.touch&&b.ios)&&(n.addEventListener("mousedown",this.onTouchStart,!1),e.addEventListener("mousemove",this.onTouchMove,r),e.addEventListener("mouseup",this.onTouchEnd,!1))}else n.addEventListener(i.start,this.onTouchStart,!1),e.addEventListener(i.move,this.onTouchMove,r),e.addEventListener(i.end,this.onTouchEnd,!1);(t.preventClicks||t.preventClicksPropagation)&&n.addEventListener("click",this.onClick,!0),this.on(b.ios||b.android?"resize orientationchange observerUpdate":"resize observerUpdate",C,!0)},detachEvents:function(){var t=this.params,i=this.touchEvents,s=this.el,a=this.wrapperEl,n="container"===t.touchEventsTarget?s:a,r=!!t.nested;if(d.touch||!d.pointerEvents&&!d.prefixedPointerEvents){if(d.touch){var o=!("onTouchStart"!==i.start||!d.passiveListener||!t.passiveListeners)&&{passive:!0,capture:!1};n.removeEventListener(i.start,this.onTouchStart,o),n.removeEventListener(i.move,this.onTouchMove,r),n.removeEventListener(i.end,this.onTouchEnd,o)}(t.simulateTouch&&!b.ios&&!b.android||t.simulateTouch&&!d.touch&&b.ios)&&(n.removeEventListener("mousedown",this.onTouchStart,!1),e.removeEventListener("mousemove",this.onTouchMove,r),e.removeEventListener("mouseup",this.onTouchEnd,!1))}else n.removeEventListener(i.start,this.onTouchStart,!1),e.removeEventListener(i.move,this.onTouchMove,r),e.removeEventListener(i.end,this.onTouchEnd,!1);(t.preventClicks||t.preventClicksPropagation)&&n.removeEventListener("click",this.onClick,!0),this.off(b.ios||b.android?"resize orientationchange observerUpdate":"resize observerUpdate",C)}},M={setBreakpoint:function(){var e=this.activeIndex,t=this.initialized,i=this.loopedSlides;void 0===i&&(i=0);var s=this.params,a=s.breakpoints;if(a&&(!a||0!==Object.keys(a).length)){var n=this.getBreakpoint(a);if(n&&this.currentBreakpoint!==n){var r=n in a?a[n]:this.originalParams,o=s.loop&&r.slidesPerView!==s.slidesPerView;l.extend(this.params,r),l.extend(this,{allowTouchMove:this.params.allowTouchMove,allowSlideNext:this.params.allowSlideNext,allowSlidePrev:this.params.allowSlidePrev}),this.currentBreakpoint=n,o&&t&&(this.loopDestroy(),this.loopCreate(),this.updateSlides(),this.slideTo(e-i+this.loopedSlides,0,!1)),this.emit("breakpoint",r)}}},getBreakpoint:function(e){if(e){var i=!1,s=[];Object.keys(e).forEach((function(e){s.push(e)})),s.sort((function(e,t){return parseInt(e,10)-parseInt(t,10)}));for(var a=0;a<s.length;a+=1){var n=s[a];this.params.breakpointsInverse?n<=t.innerWidth&&(i=n):n>=t.innerWidth&&!i&&(i=n)}return i||"max"}}},z={isIE:!!t.navigator.userAgent.match(/Trident/g)||!!t.navigator.userAgent.match(/MSIE/g),isEdge:!!t.navigator.userAgent.match(/Edge/g),isSafari:(S=t.navigator.userAgent.toLowerCase(),S.indexOf("safari")>=0&&S.indexOf("chrome")<0&&S.indexOf("android")<0),isUiWebView:/(iPhone|iPod|iPad).*AppleWebKit(?!.*Safari)/i.test(t.navigator.userAgent)},D={init:!0,direction:"horizontal",touchEventsTarget:"container",initialSlide:0,speed:300,preventInteractionOnTransition:!1,edgeSwipeDetection:!1,edgeSwipeThreshold:20,freeMode:!1,freeModeMomentum:!0,freeModeMomentumRatio:1,freeModeMomentumBounce:!0,freeModeMomentumBounceRatio:1,freeModeMomentumVelocityRatio:1,freeModeSticky:!1,freeModeMinimumVelocity:.02,autoHeight:!1,setWrapperSize:!1,virtualTranslate:!1,effect:"slide",breakpoints:void 0,breakpointsInverse:!1,spaceBetween:0,slidesPerView:1,slidesPerColumn:1,slidesPerColumnFill:"column",slidesPerGroup:1,centeredSlides:!1,slidesOffsetBefore:0,slidesOffsetAfter:0,normalizeSlideIndex:!0,centerInsufficientSlides:!1,watchOverflow:!1,roundLengths:!1,touchRatio:1,touchAngle:45,simulateTouch:!0,shortSwipes:!0,longSwipes:!0,longSwipesRatio:.5,longSwipesMs:300,followFinger:!0,allowTouchMove:!0,threshold:0,touchMoveStopPropagation:!0,touchStartPreventDefault:!0,touchReleaseOnEdges:!1,uniqueNavElements:!0,resistance:!0,resistanceRatio:.85,watchSlidesProgress:!1,watchSlidesVisibility:!1,grabCursor:!1,preventClicks:!0,preventClicksPropagation:!0,slideToClickedSlide:!1,preloadImages:!0,updateOnImagesReady:!0,loop:!1,loopAdditionalSlides:0,loopedSlides:null,loopFillGroupWithBlank:!1,allowSlidePrev:!0,allowSlideNext:!0,swipeHandler:null,noSwiping:!0,noSwipingClass:"swiper-no-swiping",noSwipingSelector:null,passiveListeners:!0,containerModifierClass:"swiper-container-",slideClass:"swiper-slide",slideBlankClass:"swiper-slide-invisible-blank",slideActiveClass:"swiper-slide-active",slideDuplicateActiveClass:"swiper-slide-duplicate-active",slideVisibleClass:"swiper-slide-visible",slideDuplicateClass:"swiper-slide-duplicate",slideNextClass:"swiper-slide-next",slideDuplicateNextClass:"swiper-slide-duplicate-next",slidePrevClass:"swiper-slide-prev",slideDuplicatePrevClass:"swiper-slide-duplicate-prev",wrapperClass:"swiper-wrapper",runCallbacksOnInit:!0},P={update:c,translate:u,transition:f,slide:m,loop:v,grabCursor:g,manipulation:w,events:k,breakpoints:M,checkOverflow:{checkOverflow:function(){var e=this.isLocked;this.isLocked=1===this.snapGrid.length,this.allowSlideNext=!this.isLocked,this.allowSlidePrev=!this.isLocked,e!==this.isLocked&&this.emit(this.isLocked?"lock":"unlock"),e&&e!==this.isLocked&&(this.isEnd=!1,this.navigation.update())}},classes:{addClasses:function(){var e=this.classNames,t=this.params,i=this.rtl,s=this.$el,a=[];a.push(t.direction),t.freeMode&&a.push("free-mode"),d.flexbox||a.push("no-flexbox"),t.autoHeight&&a.push("autoheight"),i&&a.push("rtl"),t.slidesPerColumn>1&&a.push("multirow"),b.android&&a.push("android"),b.ios&&a.push("ios"),(z.isIE||z.isEdge)&&(d.pointerEvents||d.prefixedPointerEvents)&&a.push("wp8-"+t.direction),a.forEach((function(i){e.push(t.containerModifierClass+i)})),s.addClass(e.join(" "))},removeClasses:function(){var e=this.$el,t=this.classNames;e.removeClass(t.join(" "))}},images:{loadImage:function(e,i,s,a,n,r){var o;function l(){r&&r()}e.complete&&n?l():i?((o=new t.Image).onload=l,o.onerror=l,a&&(o.sizes=a),s&&(o.srcset=s),i&&(o.src=i)):l()},preloadImages:function(){var e=this;function t(){null!=e&&e&&!e.destroyed&&(void 0!==e.imagesLoaded&&(e.imagesLoaded+=1),e.imagesLoaded===e.imagesToLoad.length&&(e.params.updateOnImagesReady&&e.update(),e.emit("imagesReady")))}e.imagesToLoad=e.$el.find("img");for(var i=0;i<e.imagesToLoad.length;i+=1){var s=e.imagesToLoad[i];e.loadImage(s,s.currentSrc||s.getAttribute("src"),s.srcset||s.getAttribute("srcset"),s.sizes||s.getAttribute("sizes"),!0,t)}}}},L={},$=function(e){function t(){for(var i,a,n,r=[],o=arguments.length;o--;)r[o]=arguments[o];1===r.length&&r[0].constructor&&r[0].constructor===Object?n=r[0]:(a=(i=r)[0],n=i[1]),n||(n={}),n=l.extend({},n),a&&!n.el&&(n.el=a),e.call(this,n),Object.keys(P).forEach((function(e){Object.keys(P[e]).forEach((function(i){t.prototype[i]||(t.prototype[i]=P[e][i])}))}));var h=this;void 0===h.modules&&(h.modules={}),Object.keys(h.modules).forEach((function(e){var t=h.modules[e];if(t.params){var i=Object.keys(t.params)[0],s=t.params[i];if("object"!=typeof s||null===s)return;if(!(i in n)||!("enabled"in s))return;!0===n[i]&&(n[i]={enabled:!0}),"object"!=typeof n[i]||"enabled"in n[i]||(n[i].enabled=!0),n[i]||(n[i]={enabled:!1})}}));var p=l.extend({},D);h.useModulesParams(p),h.params=l.extend({},p,L,n),h.originalParams=l.extend({},h.params),h.passedParams=l.extend({},n),h.$=s;var c=s(h.params.el);if(a=c[0]){if(c.length>1){var u=[];return c.each((function(e,i){var s=l.extend({},n,{el:i});u.push(new t(s))})),u}a.swiper=h,c.data("swiper",h);var f,m,v=c.children("."+h.params.wrapperClass);return l.extend(h,{$el:c,el:a,$wrapperEl:v,wrapperEl:v[0],classNames:[],slides:s(),slidesGrid:[],snapGrid:[],slidesSizesGrid:[],isHorizontal:function(){return"horizontal"===h.params.direction},isVertical:function(){return"vertical"===h.params.direction},rtl:"rtl"===a.dir.toLowerCase()||"rtl"===c.css("direction"),rtlTranslate:"horizontal"===h.params.direction&&("rtl"===a.dir.toLowerCase()||"rtl"===c.css("direction")),wrongRTL:"-webkit-box"===v.css("display"),activeIndex:0,realIndex:0,isBeginning:!0,isEnd:!1,translate:0,previousTranslate:0,progress:0,velocity:0,animating:!1,allowSlideNext:h.params.allowSlideNext,allowSlidePrev:h.params.allowSlidePrev,touchEvents:(f=["touchstart","touchmove","touchend"],m=["mousedown","mousemove","mouseup"],d.pointerEvents?m=["pointerdown","pointermove","pointerup"]:d.prefixedPointerEvents&&(m=["MSPointerDown","MSPointerMove","MSPointerUp"]),h.touchEventsTouch={start:f[0],move:f[1],end:f[2]},h.touchEventsDesktop={start:m[0],move:m[1],end:m[2]},d.touch||!h.params.simulateTouch?h.touchEventsTouch:h.touchEventsDesktop),touchEventsData:{isTouched:void 0,isMoved:void 0,allowTouchCallbacks:void 0,touchStartTime:void 0,isScrolling:void 0,currentTranslate:void 0,startTranslate:void 0,allowThresholdMove:void 0,formElements:"input, select, option, textarea, button, video",lastClickTime:l.now(),clickTimeout:void 0,velocities:[],allowMomentumBounce:void 0,isTouchEvent:void 0,startMoving:void 0},allowClick:!0,allowTouchMove:h.params.allowTouchMove,touches:{startX:0,startY:0,currentX:0,currentY:0,diff:0},imagesToLoad:[],imagesLoaded:0}),h.useModules(),h.params.init&&h.init(),h}}e&&(t.__proto__=e),t.prototype=Object.create(e&&e.prototype),t.prototype.constructor=t;var i={extendedDefaults:{configurable:!0},defaults:{configurable:!0},Class:{configurable:!0},$:{configurable:!0}};return t.prototype.slidesPerViewDynamic=function(){var e=this.params,t=this.slides,i=this.slidesGrid,s=this.size,a=this.activeIndex,n=1;if(e.centeredSlides){for(var r,o=t[a].swiperSlideSize,l=a+1;l<t.length;l+=1)t[l]&&!r&&(n+=1,(o+=t[l].swiperSlideSize)>s&&(r=!0));for(var d=a-1;d>=0;d-=1)t[d]&&!r&&(n+=1,(o+=t[d].swiperSlideSize)>s&&(r=!0))}else for(var h=a+1;h<t.length;h+=1)i[h]-i[a]<s&&(n+=1);return n},t.prototype.update=function(){var e=this;if(e&&!e.destroyed){var t=e.snapGrid,i=e.params;i.breakpoints&&e.setBreakpoint(),e.updateSize(),e.updateSlides(),e.updateProgress(),e.updateSlidesClasses(),e.params.freeMode?(s(),e.params.autoHeight&&e.updateAutoHeight()):(("auto"===e.params.slidesPerView||e.params.slidesPerView>1)&&e.isEnd&&!e.params.centeredSlides?e.slideTo(e.slides.length-1,0,!1,!0):e.slideTo(e.activeIndex,0,!1,!0))||s(),i.watchOverflow&&t!==e.snapGrid&&e.checkOverflow(),e.emit("update")}function s(){var t=e.rtlTranslate?-1*e.translate:e.translate,i=Math.min(Math.max(t,e.maxTranslate()),e.minTranslate());e.setTranslate(i),e.updateActiveIndex(),e.updateSlidesClasses()}},t.prototype.init=function(){this.initialized||(this.emit("beforeInit"),this.params.breakpoints&&this.setBreakpoint(),this.addClasses(),this.params.loop&&this.loopCreate(),this.updateSize(),this.updateSlides(),this.params.watchOverflow&&this.checkOverflow(),this.params.grabCursor&&this.setGrabCursor(),this.params.preloadImages&&this.preloadImages(),this.params.loop?this.slideTo(this.params.initialSlide+this.loopedSlides,0,this.params.runCallbacksOnInit):this.slideTo(this.params.initialSlide,0,this.params.runCallbacksOnInit),this.attachEvents(),this.initialized=!0,this.emit("init"))},t.prototype.destroy=function(e,t){void 0===e&&(e=!0),void 0===t&&(t=!0);var i=this,s=i.params,a=i.$el,n=i.$wrapperEl,r=i.slides;return void 0===i.params||i.destroyed||(i.emit("beforeDestroy"),i.initialized=!1,i.detachEvents(),s.loop&&i.loopDestroy(),t&&(i.removeClasses(),a.removeAttr("style"),n.removeAttr("style"),r&&r.length&&r.removeClass([s.slideVisibleClass,s.slideActiveClass,s.slideNextClass,s.slidePrevClass].join(" ")).removeAttr("style").removeAttr("data-swiper-slide-index").removeAttr("data-swiper-column").removeAttr("data-swiper-row")),i.emit("destroy"),Object.keys(i.eventsListeners).forEach((function(e){i.off(e)})),!1!==e&&(i.$el[0].swiper=null,i.$el.data("swiper",null),l.deleteProps(i)),i.destroyed=!0),null},t.extendDefaults=function(e){l.extend(L,e)},i.extendedDefaults.get=function(){return L},i.defaults.get=function(){return D},i.Class.get=function(){return e},i.$.get=function(){return s},Object.defineProperties(t,i),t}(h),I={name:"device",proto:{device:b},static:{device:b}},O={name:"support",proto:{support:d},static:{support:d}},A={name:"browser",proto:{browser:z},static:{browser:z}},F={name:"resize",create:function(){var e=this;l.extend(e,{resize:{resizeHandler:function(){e&&!e.destroyed&&e.initialized&&(e.emit("beforeResize"),e.emit("resize"))},orientationChangeHandler:function(){e&&!e.destroyed&&e.initialized&&e.emit("orientationchange")}}})},on:{init:function(){t.addEventListener("resize",this.resize.resizeHandler),t.addEventListener("orientationchange",this.resize.orientationChangeHandler)},destroy:function(){t.removeEventListener("resize",this.resize.resizeHandler),t.removeEventListener("orientationchange",this.resize.orientationChangeHandler)}}},B={func:t.MutationObserver||t.WebkitMutationObserver,attach:function(e,i){void 0===i&&(i={});var s=this,a=new(0,B.func)((function(e){if(1!==e.length){var i=function(){s.emit("observerUpdate",e[0])};t.requestAnimationFrame?t.requestAnimationFrame(i):t.setTimeout(i,0)}else s.emit("observerUpdate",e[0])}));a.observe(e,{attributes:void 0===i.attributes||i.attributes,childList:void 0===i.childList||i.childList,characterData:void 0===i.characterData||i.characterData}),s.observer.observers.push(a)},init:function(){if(d.observer&&this.params.observer){if(this.params.observeParents)for(var e=this.$el.parents(),t=0;t<e.length;t+=1)this.observer.attach(e[t]);this.observer.attach(this.$el[0],{childList:!1}),this.observer.attach(this.$wrapperEl[0],{attributes:!1})}},destroy:function(){this.observer.observers.forEach((function(e){e.disconnect()})),this.observer.observers=[]}},H={name:"observer",params:{observer:!1,observeParents:!1},create:function(){l.extend(this,{observer:{init:B.init.bind(this),attach:B.attach.bind(this),destroy:B.destroy.bind(this),observers:[]}})},on:{init:function(){this.observer.init()},destroy:function(){this.observer.destroy()}}},N={update:function(e){var t=this,i=t.params,s=i.slidesPerView,a=i.slidesPerGroup,n=i.centeredSlides,r=t.params.virtual,o=r.addSlidesBefore,d=r.addSlidesAfter,h=t.virtual,p=h.from,c=h.to,u=h.slides,f=h.slidesGrid,m=h.renderSlide,v=h.offset;t.updateActiveIndex();var g,w,b,x=t.activeIndex||0;g=t.rtlTranslate?"right":t.isHorizontal()?"left":"top",n?(w=Math.floor(s/2)+a+o,b=Math.floor(s/2)+a+d):(w=s+(a-1)+o,b=a+d);var y=Math.max((x||0)-b,0),E=Math.min((x||0)+w,u.length-1),C=(t.slidesGrid[y]||0)-(t.slidesGrid[0]||0);function T(){t.updateSlides(),t.updateProgress(),t.updateSlidesClasses(),t.lazy&&t.params.lazy.enabled&&t.lazy.load()}if(l.extend(t.virtual,{from:y,to:E,offset:C,slidesGrid:t.slidesGrid}),p===y&&c===E&&!e)return t.slidesGrid!==f&&C!==v&&t.slides.css(g,C+"px"),void t.updateProgress();if(t.params.virtual.renderExternal)return t.params.virtual.renderExternal.call(t,{offset:C,from:y,to:E,slides:function(){for(var e=[],t=y;t<=E;t+=1)e.push(u[t]);return e}()}),void T();var S=[],k=[];if(e)t.$wrapperEl.find("."+t.params.slideClass).remove();else for(var M=p;M<=c;M+=1)(M<y||M>E)&&t.$wrapperEl.find("."+t.params.slideClass+'[data-swiper-slide-index="'+M+'"]').remove();for(var z=0;z<u.length;z+=1)z>=y&&z<=E&&(void 0===c||e?k.push(z):(z>c&&k.push(z),z<p&&S.push(z)));k.forEach((function(e){t.$wrapperEl.append(m(u[e],e))})),S.sort((function(e,t){return e<t})).forEach((function(e){t.$wrapperEl.prepend(m(u[e],e))})),t.$wrapperEl.children(".swiper-slide").css(g,C+"px"),T()},renderSlide:function(e,t){var i=this.params.virtual;if(i.cache&&this.virtual.cache[t])return this.virtual.cache[t];var a=i.renderSlide?s(i.renderSlide.call(this,e,t)):s('<div class="'+this.params.slideClass+'" data-swiper-slide-index="'+t+'">'+e+"</div>");return a.attr("data-swiper-slide-index")||a.attr("data-swiper-slide-index",t),i.cache&&(this.virtual.cache[t]=a),a},appendSlide:function(e){this.virtual.slides.push(e),this.virtual.update(!0)},prependSlide:function(e){if(this.virtual.slides.unshift(e),this.params.virtual.cache){var t=this.virtual.cache,i={};Object.keys(t).forEach((function(e){i[e+1]=t[e]})),this.virtual.cache=i}this.virtual.update(!0),this.slideNext(0)}},G={name:"virtual",params:{virtual:{enabled:!1,slides:[],cache:!0,renderSlide:null,renderExternal:null,addSlidesBefore:0,addSlidesAfter:0}},create:function(){l.extend(this,{virtual:{update:N.update.bind(this),appendSlide:N.appendSlide.bind(this),prependSlide:N.prependSlide.bind(this),renderSlide:N.renderSlide.bind(this),slides:this.params.virtual.slides,cache:{}}})},on:{beforeInit:function(){if(this.params.virtual.enabled){this.classNames.push(this.params.containerModifierClass+"virtual");var e={watchSlidesProgress:!0};l.extend(this.params,e),l.extend(this.originalParams,e),this.virtual.update()}},setTranslate:function(){this.params.virtual.enabled&&this.virtual.update()}}},X={handle:function(i){var s=this.rtlTranslate,a=i;a.originalEvent&&(a=a.originalEvent);var n=a.keyCode||a.charCode;if(!this.allowSlideNext&&(this.isHorizontal()&&39===n||this.isVertical()&&40===n))return!1;if(!this.allowSlidePrev&&(this.isHorizontal()&&37===n||this.isVertical()&&38===n))return!1;if(!(a.shiftKey||a.altKey||a.ctrlKey||a.metaKey||e.activeElement&&e.activeElement.nodeName&&("input"===e.activeElement.nodeName.toLowerCase()||"textarea"===e.activeElement.nodeName.toLowerCase()))){if(this.params.keyboard.onlyInViewport&&(37===n||39===n||38===n||40===n)){var r=!1;if(this.$el.parents("."+this.params.slideClass).length>0&&0===this.$el.parents("."+this.params.slideActiveClass).length)return;var o=t.innerWidth,l=t.innerHeight,d=this.$el.offset();s&&(d.left-=this.$el[0].scrollLeft);for(var h=[[d.left,d.top],[d.left+this.width,d.top],[d.left,d.top+this.height],[d.left+this.width,d.top+this.height]],p=0;p<h.length;p+=1){var c=h[p];c[0]>=0&&c[0]<=o&&c[1]>=0&&c[1]<=l&&(r=!0)}if(!r)return}this.isHorizontal()?(37!==n&&39!==n||(a.preventDefault?a.preventDefault():a.returnValue=!1),(39===n&&!s||37===n&&s)&&this.slideNext(),(37===n&&!s||39===n&&s)&&this.slidePrev()):(38!==n&&40!==n||(a.preventDefault?a.preventDefault():a.returnValue=!1),40===n&&this.slideNext(),38===n&&this.slidePrev()),this.emit("keyPress",n)}},enable:function(){this.keyboard.enabled||(s(e).on("keydown",this.keyboard.handle),this.keyboard.enabled=!0)},disable:function(){this.keyboard.enabled&&(s(e).off("keydown",this.keyboard.handle),this.keyboard.enabled=!1)}},Y={name:"keyboard",params:{keyboard:{enabled:!1,onlyInViewport:!0}},create:function(){l.extend(this,{keyboard:{enabled:!1,enable:X.enable.bind(this),disable:X.disable.bind(this),handle:X.handle.bind(this)}})},on:{init:function(){this.params.keyboard.enabled&&this.keyboard.enable()},destroy:function(){this.keyboard.enabled&&this.keyboard.disable()}}},V={lastScrollTime:l.now(),event:t.navigator.userAgent.indexOf("firefox")>-1?"DOMMouseScroll":function(){var t="onwheel"in e;if(!t){var i=e.createElement("div");i.setAttribute("onwheel","return;"),t="function"==typeof i.onwheel}return!t&&e.implementation&&e.implementation.hasFeature&&!0!==e.implementation.hasFeature("","")&&(t=e.implementation.hasFeature("Events.wheel","3.0")),t}()?"wheel":"mousewheel",normalize:function(e){var t=0,i=0,s=0,a=0;return"detail"in e&&(i=e.detail),"wheelDelta"in e&&(i=-e.wheelDelta/120),"wheelDeltaY"in e&&(i=-e.wheelDeltaY/120),"wheelDeltaX"in e&&(t=-e.wheelDeltaX/120),"axis"in e&&e.axis===e.HORIZONTAL_AXIS&&(t=i,i=0),s=10*t,a=10*i,"deltaY"in e&&(a=e.deltaY),"deltaX"in e&&(s=e.deltaX),(s||a)&&e.deltaMode&&(1===e.deltaMode?(s*=40,a*=40):(s*=800,a*=800)),s&&!t&&(t=s<1?-1:1),a&&!i&&(i=a<1?-1:1),{spinX:t,spinY:i,pixelX:s,pixelY:a}},handleMouseEnter:function(){this.mouseEntered=!0},handleMouseLeave:function(){this.mouseEntered=!1},handle:function(e){var i=e,s=this,a=s.params.mousewheel;if(!s.mouseEntered&&!a.releaseOnEdges)return!0;i.originalEvent&&(i=i.originalEvent);var n=0,r=s.rtlTranslate?-1:1,o=V.normalize(i);if(a.forceToAxis)if(s.isHorizontal()){if(!(Math.abs(o.pixelX)>Math.abs(o.pixelY)))return!0;n=o.pixelX*r}else{if(!(Math.abs(o.pixelY)>Math.abs(o.pixelX)))return!0;n=o.pixelY}else n=Math.abs(o.pixelX)>Math.abs(o.pixelY)?-o.pixelX*r:-o.pixelY;if(0===n)return!0;if(a.invert&&(n=-n),s.params.freeMode){s.params.loop&&s.loopFix();var d=s.getTranslate()+n*a.sensitivity,h=s.isBeginning,p=s.isEnd;if(d>=s.minTranslate()&&(d=s.minTranslate()),d<=s.maxTranslate()&&(d=s.maxTranslate()),s.setTransition(0),s.setTranslate(d),s.updateProgress(),s.updateActiveIndex(),s.updateSlidesClasses(),(!h&&s.isBeginning||!p&&s.isEnd)&&s.updateSlidesClasses(),s.params.freeModeSticky&&(clearTimeout(s.mousewheel.timeout),s.mousewheel.timeout=l.nextTick((function(){s.slideToClosest()}),300)),s.emit("scroll",i),s.params.autoplay&&s.params.autoplayDisableOnInteraction&&s.autoplay.stop(),d===s.minTranslate()||d===s.maxTranslate())return!0}else{if(l.now()-s.mousewheel.lastScrollTime>60)if(n<0)if(s.isEnd&&!s.params.loop||s.animating){if(a.releaseOnEdges)return!0}else s.slideNext(),s.emit("scroll",i);else if(s.isBeginning&&!s.params.loop||s.animating){if(a.releaseOnEdges)return!0}else s.slidePrev(),s.emit("scroll",i);s.mousewheel.lastScrollTime=(new t.Date).getTime()}return i.preventDefault?i.preventDefault():i.returnValue=!1,!1},enable:function(){if(!V.event)return!1;if(this.mousewheel.enabled)return!1;var e=this.$el;return"container"!==this.params.mousewheel.eventsTarged&&(e=s(this.params.mousewheel.eventsTarged)),e.on("mouseenter",this.mousewheel.handleMouseEnter),e.on("mouseleave",this.mousewheel.handleMouseLeave),e.on(V.event,this.mousewheel.handle),this.mousewheel.enabled=!0,!0},disable:function(){if(!V.event)return!1;if(!this.mousewheel.enabled)return!1;var e=this.$el;return"container"!==this.params.mousewheel.eventsTarged&&(e=s(this.params.mousewheel.eventsTarged)),e.off(V.event,this.mousewheel.handle),this.mousewheel.enabled=!1,!0}},R={update:function(){var e=this.params.navigation;if(!this.params.loop){var t=this.navigation,i=t.$nextEl,s=t.$prevEl;s&&s.length>0&&(this.isBeginning?s.addClass(e.disabledClass):s.removeClass(e.disabledClass),s[this.params.watchOverflow&&this.isLocked?"addClass":"removeClass"](e.lockClass)),i&&i.length>0&&(this.isEnd?i.addClass(e.disabledClass):i.removeClass(e.disabledClass),i[this.params.watchOverflow&&this.isLocked?"addClass":"removeClass"](e.lockClass))}},init:function(){var e,t,i=this,a=i.params.navigation;(a.nextEl||a.prevEl)&&(a.nextEl&&(e=s(a.nextEl),i.params.uniqueNavElements&&"string"==typeof a.nextEl&&e.length>1&&1===i.$el.find(a.nextEl).length&&(e=i.$el.find(a.nextEl))),a.prevEl&&(t=s(a.prevEl),i.params.uniqueNavElements&&"string"==typeof a.prevEl&&t.length>1&&1===i.$el.find(a.prevEl).length&&(t=i.$el.find(a.prevEl))),e&&e.length>0&&e.on("click",(function(e){e.preventDefault(),i.isEnd&&!i.params.loop||i.slideNext()})),t&&t.length>0&&t.on("click",(function(e){e.preventDefault(),i.isBeginning&&!i.params.loop||i.slidePrev()})),l.extend(i.navigation,{$nextEl:e,nextEl:e&&e[0],$prevEl:t,prevEl:t&&t[0]}))},destroy:function(){var e=this.navigation,t=e.$nextEl,i=e.$prevEl;t&&t.length&&(t.off("click"),t.removeClass(this.params.navigation.disabledClass)),i&&i.length&&(i.off("click"),i.removeClass(this.params.navigation.disabledClass))}},j={update:function(){var e=this.rtl,t=this.params.pagination;if(t.el&&this.pagination.el&&this.pagination.$el&&0!==this.pagination.$el.length){var i,a=this.virtual&&this.params.virtual.enabled?this.virtual.slides.length:this.slides.length,n=this.pagination.$el,r=this.params.loop?Math.ceil((a-2*this.loopedSlides)/this.params.slidesPerGroup):this.snapGrid.length;if(this.params.loop?((i=Math.ceil((this.activeIndex-this.loopedSlides)/this.params.slidesPerGroup))>a-1-2*this.loopedSlides&&(i-=a-2*this.loopedSlides),i>r-1&&(i-=r),i<0&&"bullets"!==this.params.paginationType&&(i=r+i)):i=void 0!==this.snapIndex?this.snapIndex:this.activeIndex||0,"bullets"===t.type&&this.pagination.bullets&&this.pagination.bullets.length>0){var o,l,d,h=this.pagination.bullets;if(t.dynamicBullets&&(this.pagination.bulletSize=h.eq(0)[this.isHorizontal()?"outerWidth":"outerHeight"](!0),n.css(this.isHorizontal()?"width":"height",this.pagination.bulletSize*(t.dynamicMainBullets+4)+"px"),t.dynamicMainBullets>1&&void 0!==this.previousIndex&&(this.pagination.dynamicBulletIndex+=i-this.previousIndex,this.pagination.dynamicBulletIndex>t.dynamicMainBullets-1?this.pagination.dynamicBulletIndex=t.dynamicMainBullets-1:this.pagination.dynamicBulletIndex<0&&(this.pagination.dynamicBulletIndex=0)),o=i-this.pagination.dynamicBulletIndex,d=((l=o+(Math.min(h.length,t.dynamicMainBullets)-1))+o)/2),h.removeClass(t.bulletActiveClass+" "+t.bulletActiveClass+"-next "+t.bulletActiveClass+"-next-next "+t.bulletActiveClass+"-prev "+t.bulletActiveClass+"-prev-prev "+t.bulletActiveClass+"-main"),n.length>1)h.each((function(e,a){var n=s(a),r=n.index();r===i&&n.addClass(t.bulletActiveClass),t.dynamicBullets&&(r>=o&&r<=l&&n.addClass(t.bulletActiveClass+"-main"),r===o&&n.prev().addClass(t.bulletActiveClass+"-prev").prev().addClass(t.bulletActiveClass+"-prev-prev"),r===l&&n.next().addClass(t.bulletActiveClass+"-next").next().addClass(t.bulletActiveClass+"-next-next"))}));else if(h.eq(i).addClass(t.bulletActiveClass),t.dynamicBullets){for(var p=h.eq(o),c=h.eq(l),u=o;u<=l;u+=1)h.eq(u).addClass(t.bulletActiveClass+"-main");p.prev().addClass(t.bulletActiveClass+"-prev").prev().addClass(t.bulletActiveClass+"-prev-prev"),c.next().addClass(t.bulletActiveClass+"-next").next().addClass(t.bulletActiveClass+"-next-next")}if(t.dynamicBullets){var f=Math.min(h.length,t.dynamicMainBullets+4),m=(this.pagination.bulletSize*f-this.pagination.bulletSize)/2-d*this.pagination.bulletSize,v=e?"right":"left";h.css(this.isHorizontal()?v:"top",m+"px")}}if("fraction"===t.type&&(n.find("."+t.currentClass).text(t.formatFractionCurrent(i+1)),n.find("."+t.totalClass).text(t.formatFractionTotal(r))),"progressbar"===t.type){var g;g=t.progressbarOpposite?this.isHorizontal()?"vertical":"horizontal":this.isHorizontal()?"horizontal":"vertical";var w=(i+1)/r,b=1,x=1;"horizontal"===g?b=w:x=w,n.find("."+t.progressbarFillClass).transform("translate3d(0,0,0) scaleX("+b+") scaleY("+x+")").transition(this.params.speed)}"custom"===t.type&&t.renderCustom?(n.html(t.renderCustom(this,i+1,r)),this.emit("paginationRender",this,n[0])):this.emit("paginationUpdate",this,n[0]),n[this.params.watchOverflow&&this.isLocked?"addClass":"removeClass"](t.lockClass)}},render:function(){var e=this.params.pagination;if(e.el&&this.pagination.el&&this.pagination.$el&&0!==this.pagination.$el.length){var t=this.virtual&&this.params.virtual.enabled?this.virtual.slides.length:this.slides.length,i=this.pagination.$el,s="";if("bullets"===e.type){for(var a=this.params.loop?Math.ceil((t-2*this.loopedSlides)/this.params.slidesPerGroup):this.snapGrid.length,n=0;n<a;n+=1)e.renderBullet?s+=e.renderBullet.call(this,n,e.bulletClass):s+="<"+e.bulletElement+' class="'+e.bulletClass+'"></'+e.bulletElement+">";i.html(s),this.pagination.bullets=i.find("."+e.bulletClass)}"fraction"===e.type&&(s=e.renderFraction?e.renderFraction.call(this,e.currentClass,e.totalClass):'<span class="'+e.currentClass+'"></span> / <span class="'+e.totalClass+'"></span>',i.html(s)),"progressbar"===e.type&&(s=e.renderProgressbar?e.renderProgressbar.call(this,e.progressbarFillClass):'<span class="'+e.progressbarFillClass+'"></span>',i.html(s)),"custom"!==e.type&&this.emit("paginationRender",this.pagination.$el[0])}},init:function(){var e=this,t=e.params.pagination;if(t.el){var i=s(t.el);0!==i.length&&(e.params.uniqueNavElements&&"string"==typeof t.el&&i.length>1&&1===e.$el.find(t.el).length&&(i=e.$el.find(t.el)),"bullets"===t.type&&t.clickable&&i.addClass(t.clickableClass),i.addClass(t.modifierClass+t.type),"bullets"===t.type&&t.dynamicBullets&&(i.addClass(""+t.modifierClass+t.type+"-dynamic"),e.pagination.dynamicBulletIndex=0,t.dynamicMainBullets<1&&(t.dynamicMainBullets=1)),"progressbar"===t.type&&t.progressbarOpposite&&i.addClass(t.progressbarOppositeClass),t.clickable&&i.on("click","."+t.bulletClass,(function(t){t.preventDefault();var i=s(this).index()*e.params.slidesPerGroup;e.params.loop&&(i+=e.loopedSlides),e.slideTo(i)})),l.extend(e.pagination,{$el:i,el:i[0]}))}},destroy:function(){var e=this.params.pagination;if(e.el&&this.pagination.el&&this.pagination.$el&&0!==this.pagination.$el.length){var t=this.pagination.$el;t.removeClass(e.hiddenClass),t.removeClass(e.modifierClass+e.type),this.pagination.bullets&&this.pagination.bullets.removeClass(e.bulletActiveClass),e.clickable&&t.off("click","."+e.bulletClass)}}},_={setTranslate:function(){if(this.params.scrollbar.el&&this.scrollbar.el){var e=this.scrollbar,t=this.rtlTranslate,i=this.progress,s=e.dragSize,a=e.trackSize,n=e.$dragEl,r=e.$el,o=this.params.scrollbar,l=s,h=(a-s)*i;t?(h=-h)>0?(l=s-h,h=0):-h+s>a&&(l=a+h):h<0?(l=s+h,h=0):h+s>a&&(l=a-h),this.isHorizontal()?(d.transforms3d?n.transform("translate3d("+h+"px, 0, 0)"):n.transform("translateX("+h+"px)"),n[0].style.width=l+"px"):(d.transforms3d?n.transform("translate3d(0px, "+h+"px, 0)"):n.transform("translateY("+h+"px)"),n[0].style.height=l+"px"),o.hide&&(clearTimeout(this.scrollbar.timeout),r[0].style.opacity=1,this.scrollbar.timeout=setTimeout((function(){r[0].style.opacity=0,r.transition(400)}),1e3))}},setTransition:function(e){this.params.scrollbar.el&&this.scrollbar.el&&this.scrollbar.$dragEl.transition(e)},updateSize:function(){if(this.params.scrollbar.el&&this.scrollbar.el){var e=this.scrollbar,t=e.$dragEl,i=e.$el;t[0].style.width="",t[0].style.height="";var s,a=this.isHorizontal()?i[0].offsetWidth:i[0].offsetHeight,n=this.size/this.virtualSize,r=n*(a/this.size);s="auto"===this.params.scrollbar.dragSize?a*n:parseInt(this.params.scrollbar.dragSize,10),this.isHorizontal()?t[0].style.width=s+"px":t[0].style.height=s+"px",i[0].style.display=n>=1?"none":"",this.params.scrollbarHide&&(i[0].style.opacity=0),l.extend(e,{trackSize:a,divider:n,moveDivider:r,dragSize:s}),e.$el[this.params.watchOverflow&&this.isLocked?"addClass":"removeClass"](this.params.scrollbar.lockClass)}},setDragPosition:function(e){var t,i=this.scrollbar,s=this.rtlTranslate,a=i.$el,n=i.dragSize,r=i.trackSize;t=((this.isHorizontal()?"touchstart"===e.type||"touchmove"===e.type?e.targetTouches[0].pageX:e.pageX||e.clientX:"touchstart"===e.type||"touchmove"===e.type?e.targetTouches[0].pageY:e.pageY||e.clientY)-a.offset()[this.isHorizontal()?"left":"top"]-n/2)/(r-n),t=Math.max(Math.min(t,1),0),s&&(t=1-t);var o=this.minTranslate()+(this.maxTranslate()-this.minTranslate())*t;this.updateProgress(o),this.setTranslate(o),this.updateActiveIndex(),this.updateSlidesClasses()},onDragStart:function(e){var t=this.params.scrollbar,i=this.scrollbar,s=this.$wrapperEl,a=i.$el,n=i.$dragEl;this.scrollbar.isTouched=!0,e.preventDefault(),e.stopPropagation(),s.transition(100),n.transition(100),i.setDragPosition(e),clearTimeout(this.scrollbar.dragTimeout),a.transition(0),t.hide&&a.css("opacity",1),this.emit("scrollbarDragStart",e)},onDragMove:function(e){var t=this.scrollbar,i=this.$wrapperEl,s=t.$el,a=t.$dragEl;this.scrollbar.isTouched&&(e.preventDefault?e.preventDefault():e.returnValue=!1,t.setDragPosition(e),i.transition(0),s.transition(0),a.transition(0),this.emit("scrollbarDragMove",e))},onDragEnd:function(e){var t=this.params.scrollbar,i=this.scrollbar.$el;this.scrollbar.isTouched&&(this.scrollbar.isTouched=!1,t.hide&&(clearTimeout(this.scrollbar.dragTimeout),this.scrollbar.dragTimeout=l.nextTick((function(){i.css("opacity",0),i.transition(400)}),1e3)),this.emit("scrollbarDragEnd",e),t.snapOnRelease&&this.slideToClosest())},enableDraggable:function(){if(this.params.scrollbar.el){var t=this.scrollbar,i=this.touchEvents,s=this.touchEventsDesktop,a=this.params,n=t.$el[0],r=!(!d.passiveListener||!a.passiveListeners)&&{passive:!1,capture:!1},o=!(!d.passiveListener||!a.passiveListeners)&&{passive:!0,capture:!1};d.touch||!d.pointerEvents&&!d.prefixedPointerEvents?(d.touch&&(n.addEventListener(i.start,this.scrollbar.onDragStart,r),n.addEventListener(i.move,this.scrollbar.onDragMove,r),n.addEventListener(i.end,this.scrollbar.onDragEnd,o)),(a.simulateTouch&&!b.ios&&!b.android||a.simulateTouch&&!d.touch&&b.ios)&&(n.addEventListener("mousedown",this.scrollbar.onDragStart,r),e.addEventListener("mousemove",this.scrollbar.onDragMove,r),e.addEventListener("mouseup",this.scrollbar.onDragEnd,o))):(n.addEventListener(s.start,this.scrollbar.onDragStart,r),e.addEventListener(s.move,this.scrollbar.onDragMove,r),e.addEventListener(s.end,this.scrollbar.onDragEnd,o))}},disableDraggable:function(){if(this.params.scrollbar.el){var t=this.scrollbar,i=this.touchEvents,s=this.touchEventsDesktop,a=this.params,n=t.$el[0],r=!(!d.passiveListener||!a.passiveListeners)&&{passive:!1,capture:!1},o=!(!d.passiveListener||!a.passiveListeners)&&{passive:!0,capture:!1};d.touch||!d.pointerEvents&&!d.prefixedPointerEvents?(d.touch&&(n.removeEventListener(i.start,this.scrollbar.onDragStart,r),n.removeEventListener(i.move,this.scrollbar.onDragMove,r),n.removeEventListener(i.end,this.scrollbar.onDragEnd,o)),(a.simulateTouch&&!b.ios&&!b.android||a.simulateTouch&&!d.touch&&b.ios)&&(n.removeEventListener("mousedown",this.scrollbar.onDragStart,r),e.removeEventListener("mousemove",this.scrollbar.onDragMove,r),e.removeEventListener("mouseup",this.scrollbar.onDragEnd,o))):(n.removeEventListener(s.start,this.scrollbar.onDragStart,r),e.removeEventListener(s.move,this.scrollbar.onDragMove,r),e.removeEventListener(s.end,this.scrollbar.onDragEnd,o))}},init:function(){if(this.params.scrollbar.el){var e=this.scrollbar,t=this.$el,i=this.params.scrollbar,a=s(i.el);this.params.uniqueNavElements&&"string"==typeof i.el&&a.length>1&&1===t.find(i.el).length&&(a=t.find(i.el));var n=a.find("."+this.params.scrollbar.dragClass);0===n.length&&(n=s('<div class="'+this.params.scrollbar.dragClass+'"></div>'),a.append(n)),l.extend(e,{$el:a,el:a[0],$dragEl:n,dragEl:n[0]}),i.draggable&&e.enableDraggable()}},destroy:function(){this.scrollbar.disableDraggable()}},q={setTransform:function(e,t){var i=this.rtl,a=s(e),n=i?-1:1,r=a.attr("data-swiper-parallax")||"0",o=a.attr("data-swiper-parallax-x"),l=a.attr("data-swiper-parallax-y"),d=a.attr("data-swiper-parallax-scale"),h=a.attr("data-swiper-parallax-opacity");if(o||l?(o=o||"0",l=l||"0"):this.isHorizontal()?(o=r,l="0"):(l=r,o="0"),o=o.indexOf("%")>=0?parseInt(o,10)*t*n+"%":o*t*n+"px",l=l.indexOf("%")>=0?parseInt(l,10)*t+"%":l*t+"px",null!=h){var p=h-(h-1)*(1-Math.abs(t));a[0].style.opacity=p}if(null==d)a.transform("translate3d("+o+", "+l+", 0px)");else{var c=d-(d-1)*(1-Math.abs(t));a.transform("translate3d("+o+", "+l+", 0px) scale("+c+")")}},setTranslate:function(){var e=this,t=e.$el,i=e.slides,a=e.progress,n=e.snapGrid;t.children("[data-swiper-parallax], [data-swiper-parallax-x], [data-swiper-parallax-y]").each((function(t,i){e.parallax.setTransform(i,a)})),i.each((function(t,i){var r=i.progress;e.params.slidesPerGroup>1&&"auto"!==e.params.slidesPerView&&(r+=Math.ceil(t/2)-a*(n.length-1)),r=Math.min(Math.max(r,-1),1),s(i).find("[data-swiper-parallax], [data-swiper-parallax-x], [data-swiper-parallax-y]").each((function(t,i){e.parallax.setTransform(i,r)}))}))},setTransition:function(e){void 0===e&&(e=this.params.speed),this.$el.find("[data-swiper-parallax], [data-swiper-parallax-x], [data-swiper-parallax-y]").each((function(t,i){var a=s(i),n=parseInt(a.attr("data-swiper-parallax-duration"),10)||e;0===e&&(n=0),a.transition(n)}))}},W={getDistanceBetweenTouches:function(e){if(e.targetTouches.length<2)return 1;var t=e.targetTouches[0].pageX,i=e.targetTouches[0].pageY,s=e.targetTouches[1].pageX,a=e.targetTouches[1].pageY;return Math.sqrt(Math.pow(s-t,2)+Math.pow(a-i,2))},onGestureStart:function(e){var t=this.params.zoom,i=this.zoom,a=i.gesture;if(i.fakeGestureTouched=!1,i.fakeGestureMoved=!1,!d.gestures){if("touchstart"!==e.type||"touchstart"===e.type&&e.targetTouches.length<2)return;i.fakeGestureTouched=!0,a.scaleStart=W.getDistanceBetweenTouches(e)}a.$slideEl&&a.$slideEl.length||(a.$slideEl=s(e.target).closest(".swiper-slide"),0===a.$slideEl.length&&(a.$slideEl=this.slides.eq(this.activeIndex)),a.$imageEl=a.$slideEl.find("img, svg, canvas"),a.$imageWrapEl=a.$imageEl.parent("."+t.containerClass),a.maxRatio=a.$imageWrapEl.attr("data-swiper-zoom")||t.maxRatio,0!==a.$imageWrapEl.length)?(a.$imageEl.transition(0),this.zoom.isScaling=!0):a.$imageEl=void 0},onGestureChange:function(e){var t=this.params.zoom,i=this.zoom,s=i.gesture;if(!d.gestures){if("touchmove"!==e.type||"touchmove"===e.type&&e.targetTouches.length<2)return;i.fakeGestureMoved=!0,s.scaleMove=W.getDistanceBetweenTouches(e)}s.$imageEl&&0!==s.$imageEl.length&&(d.gestures?this.zoom.scale=e.scale*i.currentScale:i.scale=s.scaleMove/s.scaleStart*i.currentScale,i.scale>s.maxRatio&&(i.scale=s.maxRatio-1+Math.pow(i.scale-s.maxRatio+1,.5)),i.scale<t.minRatio&&(i.scale=t.minRatio+1-Math.pow(t.minRatio-i.scale+1,.5)),s.$imageEl.transform("translate3d(0,0,0) scale("+i.scale+")"))},onGestureEnd:function(e){var t=this.params.zoom,i=this.zoom,s=i.gesture;if(!d.gestures){if(!i.fakeGestureTouched||!i.fakeGestureMoved)return;if("touchend"!==e.type||"touchend"===e.type&&e.changedTouches.length<2&&!b.android)return;i.fakeGestureTouched=!1,i.fakeGestureMoved=!1}s.$imageEl&&0!==s.$imageEl.length&&(i.scale=Math.max(Math.min(i.scale,s.maxRatio),t.minRatio),s.$imageEl.transition(this.params.speed).transform("translate3d(0,0,0) scale("+i.scale+")"),i.currentScale=i.scale,i.isScaling=!1,1===i.scale&&(s.$slideEl=void 0))},onTouchStart:function(e){var t=this.zoom,i=t.gesture,s=t.image;i.$imageEl&&0!==i.$imageEl.length&&(s.isTouched||(b.android&&e.preventDefault(),s.isTouched=!0,s.touchesStart.x="touchstart"===e.type?e.targetTouches[0].pageX:e.pageX,s.touchesStart.y="touchstart"===e.type?e.targetTouches[0].pageY:e.pageY))},onTouchMove:function(e){var t=this.zoom,i=t.gesture,s=t.image,a=t.velocity;if(i.$imageEl&&0!==i.$imageEl.length&&(this.allowClick=!1,s.isTouched&&i.$slideEl)){s.isMoved||(s.width=i.$imageEl[0].offsetWidth,s.height=i.$imageEl[0].offsetHeight,s.startX=l.getTranslate(i.$imageWrapEl[0],"x")||0,s.startY=l.getTranslate(i.$imageWrapEl[0],"y")||0,i.slideWidth=i.$slideEl[0].offsetWidth,i.slideHeight=i.$slideEl[0].offsetHeight,i.$imageWrapEl.transition(0),this.rtl&&(s.startX=-s.startX,s.startY=-s.startY));var n=s.width*t.scale,r=s.height*t.scale;if(!(n<i.slideWidth&&r<i.slideHeight)){if(s.minX=Math.min(i.slideWidth/2-n/2,0),s.maxX=-s.minX,s.minY=Math.min(i.slideHeight/2-r/2,0),s.maxY=-s.minY,s.touchesCurrent.x="touchmove"===e.type?e.targetTouches[0].pageX:e.pageX,s.touchesCurrent.y="touchmove"===e.type?e.targetTouches[0].pageY:e.pageY,!s.isMoved&&!t.isScaling){if(this.isHorizontal()&&(Math.floor(s.minX)===Math.floor(s.startX)&&s.touchesCurrent.x<s.touchesStart.x||Math.floor(s.maxX)===Math.floor(s.startX)&&s.touchesCurrent.x>s.touchesStart.x))return void(s.isTouched=!1);if(!this.isHorizontal()&&(Math.floor(s.minY)===Math.floor(s.startY)&&s.touchesCurrent.y<s.touchesStart.y||Math.floor(s.maxY)===Math.floor(s.startY)&&s.touchesCurrent.y>s.touchesStart.y))return void(s.isTouched=!1)}e.preventDefault(),e.stopPropagation(),s.isMoved=!0,s.currentX=s.touchesCurrent.x-s.touchesStart.x+s.startX,s.currentY=s.touchesCurrent.y-s.touchesStart.y+s.startY,s.currentX<s.minX&&(s.currentX=s.minX+1-Math.pow(s.minX-s.currentX+1,.8)),s.currentX>s.maxX&&(s.currentX=s.maxX-1+Math.pow(s.currentX-s.maxX+1,.8)),s.currentY<s.minY&&(s.currentY=s.minY+1-Math.pow(s.minY-s.currentY+1,.8)),s.currentY>s.maxY&&(s.currentY=s.maxY-1+Math.pow(s.currentY-s.maxY+1,.8)),a.prevPositionX||(a.prevPositionX=s.touchesCurrent.x),a.prevPositionY||(a.prevPositionY=s.touchesCurrent.y),a.prevTime||(a.prevTime=Date.now()),a.x=(s.touchesCurrent.x-a.prevPositionX)/(Date.now()-a.prevTime)/2,a.y=(s.touchesCurrent.y-a.prevPositionY)/(Date.now()-a.prevTime)/2,Math.abs(s.touchesCurrent.x-a.prevPositionX)<2&&(a.x=0),Math.abs(s.touchesCurrent.y-a.prevPositionY)<2&&(a.y=0),a.prevPositionX=s.touchesCurrent.x,a.prevPositionY=s.touchesCurrent.y,a.prevTime=Date.now(),i.$imageWrapEl.transform("translate3d("+s.currentX+"px, "+s.currentY+"px,0)")}}},onTouchEnd:function(){var e=this.zoom,t=e.gesture,i=e.image,s=e.velocity;if(t.$imageEl&&0!==t.$imageEl.length){if(!i.isTouched||!i.isMoved)return i.isTouched=!1,void(i.isMoved=!1);i.isTouched=!1,i.isMoved=!1;var a=300,n=300,r=s.x*a,o=i.currentX+r,l=s.y*n,d=i.currentY+l;0!==s.x&&(a=Math.abs((o-i.currentX)/s.x)),0!==s.y&&(n=Math.abs((d-i.currentY)/s.y));var h=Math.max(a,n);i.currentX=o,i.currentY=d;var p=i.width*e.scale,c=i.height*e.scale;i.minX=Math.min(t.slideWidth/2-p/2,0),i.maxX=-i.minX,i.minY=Math.min(t.slideHeight/2-c/2,0),i.maxY=-i.minY,i.currentX=Math.max(Math.min(i.currentX,i.maxX),i.minX),i.currentY=Math.max(Math.min(i.currentY,i.maxY),i.minY),t.$imageWrapEl.transition(h).transform("translate3d("+i.currentX+"px, "+i.currentY+"px,0)")}},onTransitionEnd:function(){var e=this.zoom,t=e.gesture;t.$slideEl&&this.previousIndex!==this.activeIndex&&(t.$imageEl.transform("translate3d(0,0,0) scale(1)"),t.$imageWrapEl.transform("translate3d(0,0,0)"),t.$slideEl=void 0,t.$imageEl=void 0,t.$imageWrapEl=void 0,e.scale=1,e.currentScale=1)},toggle:function(e){var t=this.zoom;t.scale&&1!==t.scale?t.out():t.in(e)},in:function(e){var t,i,a,n,r,o,l,d,h,p,c,u,f,m,v,g,w=this.zoom,b=this.params.zoom,x=w.gesture,y=w.image;x.$slideEl||(x.$slideEl=this.clickedSlide?s(this.clickedSlide):this.slides.eq(this.activeIndex),x.$imageEl=x.$slideEl.find("img, svg, canvas"),x.$imageWrapEl=x.$imageEl.parent("."+b.containerClass)),x.$imageEl&&0!==x.$imageEl.length&&(x.$slideEl.addClass(""+b.zoomedSlideClass),void 0===y.touchesStart.x&&e?(t="touchend"===e.type?e.changedTouches[0].pageX:e.pageX,i="touchend"===e.type?e.changedTouches[0].pageY:e.pageY):(t=y.touchesStart.x,i=y.touchesStart.y),w.scale=x.$imageWrapEl.attr("data-swiper-zoom")||b.maxRatio,w.currentScale=x.$imageWrapEl.attr("data-swiper-zoom")||b.maxRatio,e?(v=x.$slideEl[0].offsetWidth,g=x.$slideEl[0].offsetHeight,a=x.$slideEl.offset().left+v/2-t,n=x.$slideEl.offset().top+g/2-i,l=x.$imageEl[0].offsetWidth,d=x.$imageEl[0].offsetHeight,h=l*w.scale,p=d*w.scale,f=-(c=Math.min(v/2-h/2,0)),m=-(u=Math.min(g/2-p/2,0)),(r=a*w.scale)<c&&(r=c),r>f&&(r=f),(o=n*w.scale)<u&&(o=u),o>m&&(o=m)):(r=0,o=0),x.$imageWrapEl.transition(300).transform("translate3d("+r+"px, "+o+"px,0)"),x.$imageEl.transition(300).transform("translate3d(0,0,0) scale("+w.scale+")"))},out:function(){var e=this.zoom,t=this.params.zoom,i=e.gesture;i.$slideEl||(i.$slideEl=this.clickedSlide?s(this.clickedSlide):this.slides.eq(this.activeIndex),i.$imageEl=i.$slideEl.find("img, svg, canvas"),i.$imageWrapEl=i.$imageEl.parent("."+t.containerClass)),i.$imageEl&&0!==i.$imageEl.length&&(e.scale=1,e.currentScale=1,i.$imageWrapEl.transition(300).transform("translate3d(0,0,0)"),i.$imageEl.transition(300).transform("translate3d(0,0,0) scale(1)"),i.$slideEl.removeClass(""+t.zoomedSlideClass),i.$slideEl=void 0)},enable:function(){var e=this.zoom;if(!e.enabled){e.enabled=!0;var t=!("touchstart"!==this.touchEvents.start||!d.passiveListener||!this.params.passiveListeners)&&{passive:!0,capture:!1};d.gestures?(this.$wrapperEl.on("gesturestart",".swiper-slide",e.onGestureStart,t),this.$wrapperEl.on("gesturechange",".swiper-slide",e.onGestureChange,t),this.$wrapperEl.on("gestureend",".swiper-slide",e.onGestureEnd,t)):"touchstart"===this.touchEvents.start&&(this.$wrapperEl.on(this.touchEvents.start,".swiper-slide",e.onGestureStart,t),this.$wrapperEl.on(this.touchEvents.move,".swiper-slide",e.onGestureChange,t),this.$wrapperEl.on(this.touchEvents.end,".swiper-slide",e.onGestureEnd,t)),this.$wrapperEl.on(this.touchEvents.move,"."+this.params.zoom.containerClass,e.onTouchMove)}},disable:function(){var e=this.zoom;if(e.enabled){this.zoom.enabled=!1;var t=!("touchstart"!==this.touchEvents.start||!d.passiveListener||!this.params.passiveListeners)&&{passive:!0,capture:!1};d.gestures?(this.$wrapperEl.off("gesturestart",".swiper-slide",e.onGestureStart,t),this.$wrapperEl.off("gesturechange",".swiper-slide",e.onGestureChange,t),this.$wrapperEl.off("gestureend",".swiper-slide",e.onGestureEnd,t)):"touchstart"===this.touchEvents.start&&(this.$wrapperEl.off(this.touchEvents.start,".swiper-slide",e.onGestureStart,t),this.$wrapperEl.off(this.touchEvents.move,".swiper-slide",e.onGestureChange,t),this.$wrapperEl.off(this.touchEvents.end,".swiper-slide",e.onGestureEnd,t)),this.$wrapperEl.off(this.touchEvents.move,"."+this.params.zoom.containerClass,e.onTouchMove)}}},U={loadInSlide:function(e,t){void 0===t&&(t=!0);var i=this,a=i.params.lazy;if(void 0!==e&&0!==i.slides.length){var n=i.virtual&&i.params.virtual.enabled?i.$wrapperEl.children("."+i.params.slideClass+'[data-swiper-slide-index="'+e+'"]'):i.slides.eq(e),r=n.find("."+a.elementClass+":not(."+a.loadedClass+"):not(."+a.loadingClass+")");!n.hasClass(a.elementClass)||n.hasClass(a.loadedClass)||n.hasClass(a.loadingClass)||(r=r.add(n[0])),0!==r.length&&r.each((function(e,r){var o=s(r);o.addClass(a.loadingClass);var l=o.attr("data-background"),d=o.attr("data-src"),h=o.attr("data-srcset"),p=o.attr("data-sizes");i.loadImage(o[0],d||l,h,p,!1,(function(){if(null!=i&&i&&(!i||i.params)&&!i.destroyed){if(l?(o.css("background-image",'url("'+l+'")'),o.removeAttr("data-background")):(h&&(o.attr("srcset",h),o.removeAttr("data-srcset")),p&&(o.attr("sizes",p),o.removeAttr("data-sizes")),d&&(o.attr("src",d),o.removeAttr("data-src"))),o.addClass(a.loadedClass).removeClass(a.loadingClass),n.find("."+a.preloaderClass).remove(),i.params.loop&&t){var e=n.attr("data-swiper-slide-index");if(n.hasClass(i.params.slideDuplicateClass)){var s=i.$wrapperEl.children('[data-swiper-slide-index="'+e+'"]:not(.'+i.params.slideDuplicateClass+")");i.lazy.loadInSlide(s.index(),!1)}else{var r=i.$wrapperEl.children("."+i.params.slideDuplicateClass+'[data-swiper-slide-index="'+e+'"]');i.lazy.loadInSlide(r.index(),!1)}}i.emit("lazyImageReady",n[0],o[0])}})),i.emit("lazyImageLoad",n[0],o[0])}))}},load:function(){var e=this,t=e.$wrapperEl,i=e.params,a=e.slides,n=e.activeIndex,r=e.virtual&&i.virtual.enabled,o=i.lazy,l=i.slidesPerView;function d(e){if(r){if(t.children("."+i.slideClass+'[data-swiper-slide-index="'+e+'"]').length)return!0}else if(a[e])return!0;return!1}function h(e){return r?s(e).attr("data-swiper-slide-index"):s(e).index()}if("auto"===l&&(l=0),e.lazy.initialImageLoaded||(e.lazy.initialImageLoaded=!0),e.params.watchSlidesVisibility)t.children("."+i.slideVisibleClass).each((function(t,i){var a=r?s(i).attr("data-swiper-slide-index"):s(i).index();e.lazy.loadInSlide(a)}));else if(l>1)for(var p=n;p<n+l;p+=1)d(p)&&e.lazy.loadInSlide(p);else e.lazy.loadInSlide(n);if(o.loadPrevNext)if(l>1||o.loadPrevNextAmount&&o.loadPrevNextAmount>1){for(var c=o.loadPrevNextAmount,u=l,f=Math.min(n+u+Math.max(c,u),a.length),m=Math.max(n-Math.max(u,c),0),v=n+l;v<f;v+=1)d(v)&&e.lazy.loadInSlide(v);for(var g=m;g<n;g+=1)d(g)&&e.lazy.loadInSlide(g)}else{var w=t.children("."+i.slideNextClass);w.length>0&&e.lazy.loadInSlide(h(w));var b=t.children("."+i.slidePrevClass);b.length>0&&e.lazy.loadInSlide(h(b))}}},K={LinearSpline:function(e,t){var i,s,a,n,r,o=function(e,t){for(s=-1,i=e.length;i-s>1;)e[a=i+s>>1]<=t?s=a:i=a;return i};return this.x=e,this.y=t,this.lastIndex=e.length-1,this.interpolate=function(e){return e?(r=o(this.x,e),n=r-1,(e-this.x[n])*(this.y[r]-this.y[n])/(this.x[r]-this.x[n])+this.y[n]):0},this},getInterpolateFunction:function(e){this.controller.spline||(this.controller.spline=this.params.loop?new K.LinearSpline(this.slidesGrid,e.slidesGrid):new K.LinearSpline(this.snapGrid,e.snapGrid))},setTranslate:function(e,t){var i,s,a=this,n=a.controller.control;function r(e){var t=a.rtlTranslate?-a.translate:a.translate;"slide"===a.params.controller.by&&(a.controller.getInterpolateFunction(e),s=-a.controller.spline.interpolate(-t)),s&&"container"!==a.params.controller.by||(i=(e.maxTranslate()-e.minTranslate())/(a.maxTranslate()-a.minTranslate()),s=(t-a.minTranslate())*i+e.minTranslate()),a.params.controller.inverse&&(s=e.maxTranslate()-s),e.updateProgress(s),e.setTranslate(s,a),e.updateActiveIndex(),e.updateSlidesClasses()}if(Array.isArray(n))for(var o=0;o<n.length;o+=1)n[o]!==t&&n[o]instanceof $&&r(n[o]);else n instanceof $&&t!==n&&r(n)},setTransition:function(e,t){var i,s=this,a=s.controller.control;function n(t){t.setTransition(e,s),0!==e&&(t.transitionStart(),t.params.autoHeight&&l.nextTick((function(){t.updateAutoHeight()})),t.$wrapperEl.transitionEnd((function(){a&&(t.params.loop&&"slide"===s.params.controller.by&&t.loopFix(),t.transitionEnd())})))}if(Array.isArray(a))for(i=0;i<a.length;i+=1)a[i]!==t&&a[i]instanceof $&&n(a[i]);else a instanceof $&&t!==a&&n(a)}},Z={name:"controller",params:{controller:{control:void 0,inverse:!1,by:"slide"}},create:function(){l.extend(this,{controller:{control:this.params.controller.control,getInterpolateFunction:K.getInterpolateFunction.bind(this),setTranslate:K.setTranslate.bind(this),setTransition:K.setTransition.bind(this)}})},on:{update:function(){this.controller.control&&this.controller.spline&&(this.controller.spline=void 0,delete this.controller.spline)},resize:function(){this.controller.control&&this.controller.spline&&(this.controller.spline=void 0,delete this.controller.spline)},observerUpdate:function(){this.controller.control&&this.controller.spline&&(this.controller.spline=void 0,delete this.controller.spline)},setTranslate:function(e,t){this.controller.control&&this.controller.setTranslate(e,t)},setTransition:function(e,t){this.controller.control&&this.controller.setTransition(e,t)}}},J={makeElFocusable:function(e){return e.attr("tabIndex","0"),e},addElRole:function(e,t){return e.attr("role",t),e},addElLabel:function(e,t){return e.attr("aria-label",t),e},disableEl:function(e){return e.attr("aria-disabled",!0),e},enableEl:function(e){return e.attr("aria-disabled",!1),e},onEnterKey:function(e){var t=this.params.a11y;if(13===e.keyCode){var i=s(e.target);this.navigation&&this.navigation.$nextEl&&i.is(this.navigation.$nextEl)&&(this.isEnd&&!this.params.loop||this.slideNext(),this.isEnd?this.a11y.notify(t.lastSlideMessage):this.a11y.notify(t.nextSlideMessage)),this.navigation&&this.navigation.$prevEl&&i.is(this.navigation.$prevEl)&&(this.isBeginning&&!this.params.loop||this.slidePrev(),this.isBeginning?this.a11y.notify(t.firstSlideMessage):this.a11y.notify(t.prevSlideMessage)),this.pagination&&i.is("."+this.params.pagination.bulletClass)&&i[0].click()}},notify:function(e){var t=this.a11y.liveRegion;0!==t.length&&(t.html(""),t.html(e))},updateNavigation:function(){if(!this.params.loop){var e=this.navigation,t=e.$nextEl,i=e.$prevEl;i&&i.length>0&&(this.isBeginning?this.a11y.disableEl(i):this.a11y.enableEl(i)),t&&t.length>0&&(this.isEnd?this.a11y.disableEl(t):this.a11y.enableEl(t))}},updatePagination:function(){var e=this,t=e.params.a11y;e.pagination&&e.params.pagination.clickable&&e.pagination.bullets&&e.pagination.bullets.length&&e.pagination.bullets.each((function(i,a){var n=s(a);e.a11y.makeElFocusable(n),e.a11y.addElRole(n,"button"),e.a11y.addElLabel(n,t.paginationBulletMessage.replace(/{{index}}/,n.index()+1))}))},init:function(){this.$el.append(this.a11y.liveRegion);var e,t,i=this.params.a11y;this.navigation&&this.navigation.$nextEl&&(e=this.navigation.$nextEl),this.navigation&&this.navigation.$prevEl&&(t=this.navigation.$prevEl),e&&(this.a11y.makeElFocusable(e),this.a11y.addElRole(e,"button"),this.a11y.addElLabel(e,i.nextSlideMessage),e.on("keydown",this.a11y.onEnterKey)),t&&(this.a11y.makeElFocusable(t),this.a11y.addElRole(t,"button"),this.a11y.addElLabel(t,i.prevSlideMessage),t.on("keydown",this.a11y.onEnterKey)),this.pagination&&this.params.pagination.clickable&&this.pagination.bullets&&this.pagination.bullets.length&&this.pagination.$el.on("keydown","."+this.params.pagination.bulletClass,this.a11y.onEnterKey)},destroy:function(){var e,t;this.a11y.liveRegion&&this.a11y.liveRegion.length>0&&this.a11y.liveRegion.remove(),this.navigation&&this.navigation.$nextEl&&(e=this.navigation.$nextEl),this.navigation&&this.navigation.$prevEl&&(t=this.navigation.$prevEl),e&&e.off("keydown",this.a11y.onEnterKey),t&&t.off("keydown",this.a11y.onEnterKey),this.pagination&&this.params.pagination.clickable&&this.pagination.bullets&&this.pagination.bullets.length&&this.pagination.$el.off("keydown","."+this.params.pagination.bulletClass,this.a11y.onEnterKey)}},Q={init:function(){if(this.params.history){if(!t.history||!t.history.pushState)return this.params.history.enabled=!1,void(this.params.hashNavigation.enabled=!0);var e=this.history;e.initialized=!0,e.paths=Q.getPathValues(),(e.paths.key||e.paths.value)&&(e.scrollToSlide(0,e.paths.value,this.params.runCallbacksOnInit),this.params.history.replaceState||t.addEventListener("popstate",this.history.setHistoryPopState))}},destroy:function(){this.params.history.replaceState||t.removeEventListener("popstate",this.history.setHistoryPopState)},setHistoryPopState:function(){this.history.paths=Q.getPathValues(),this.history.scrollToSlide(this.params.speed,this.history.paths.value,!1)},getPathValues:function(){var e=t.location.pathname.slice(1).split("/").filter((function(e){return""!==e})),i=e.length;return{key:e[i-2],value:e[i-1]}},setHistory:function(e,i){if(this.history.initialized&&this.params.history.enabled){var s=this.slides.eq(i),a=Q.slugify(s.attr("data-history"));t.location.pathname.includes(e)||(a=e+"/"+a);var n=t.history.state;n&&n.value===a||(this.params.history.replaceState?t.history.replaceState({value:a},null,a):t.history.pushState({value:a},null,a))}},slugify:function(e){return e.toString().toLowerCase().replace(/\s+/g,"-").replace(/[^\w-]+/g,"").replace(/--+/g,"-").replace(/^-+/,"").replace(/-+$/,"")},scrollToSlide:function(e,t,i){if(t)for(var s=0,a=this.slides.length;s<a;s+=1){var n=this.slides.eq(s);if(Q.slugify(n.attr("data-history"))===t&&!n.hasClass(this.params.slideDuplicateClass)){var r=n.index();this.slideTo(r,e,i)}}else this.slideTo(0,e,i)}},ee={onHashCange:function(){var t=e.location.hash.replace("#","");if(t!==this.slides.eq(this.activeIndex).attr("data-hash")){var i=this.$wrapperEl.children("."+this.params.slideClass+'[data-hash="'+t+'"]').index();if(void 0===i)return;this.slideTo(i)}},setHash:function(){if(this.hashNavigation.initialized&&this.params.hashNavigation.enabled)if(this.params.hashNavigation.replaceState&&t.history&&t.history.replaceState)t.history.replaceState(null,null,"#"+this.slides.eq(this.activeIndex).attr("data-hash")||!1);else{var i=this.slides.eq(this.activeIndex),s=i.attr("data-hash")||i.attr("data-history");e.location.hash=s||""}},init:function(){if(!(!this.params.hashNavigation.enabled||this.params.history&&this.params.history.enabled)){this.hashNavigation.initialized=!0;var i=e.location.hash.replace("#","");if(i)for(var a=0,n=this.slides.length;a<n;a+=1){var r=this.slides.eq(a);if((r.attr("data-hash")||r.attr("data-history"))===i&&!r.hasClass(this.params.slideDuplicateClass)){var o=r.index();this.slideTo(o,0,this.params.runCallbacksOnInit,!0)}}this.params.hashNavigation.watchState&&s(t).on("hashchange",this.hashNavigation.onHashCange)}},destroy:function(){this.params.hashNavigation.watchState&&s(t).off("hashchange",this.hashNavigation.onHashCange)}},te={run:function(){var e=this,t=e.slides.eq(e.activeIndex),i=e.params.autoplay.delay;t.attr("data-swiper-autoplay")&&(i=t.attr("data-swiper-autoplay")||e.params.autoplay.delay),e.autoplay.timeout=l.nextTick((function(){e.params.autoplay.reverseDirection?e.params.loop?(e.loopFix(),e.slidePrev(e.params.speed,!0,!0),e.emit("autoplay")):e.isBeginning?e.params.autoplay.stopOnLastSlide?e.autoplay.stop():(e.slideTo(e.slides.length-1,e.params.speed,!0,!0),e.emit("autoplay")):(e.slidePrev(e.params.speed,!0,!0),e.emit("autoplay")):e.params.loop?(e.loopFix(),e.slideNext(e.params.speed,!0,!0),e.emit("autoplay")):e.isEnd?e.params.autoplay.stopOnLastSlide?e.autoplay.stop():(e.slideTo(0,e.params.speed,!0,!0),e.emit("autoplay")):(e.slideNext(e.params.speed,!0,!0),e.emit("autoplay"))}),i)},start:function(){return void 0===this.autoplay.timeout&&!this.autoplay.running&&(this.autoplay.running=!0,this.emit("autoplayStart"),this.autoplay.run(),!0)},stop:function(){return!!this.autoplay.running&&void 0!==this.autoplay.timeout&&(this.autoplay.timeout&&(clearTimeout(this.autoplay.timeout),this.autoplay.timeout=void 0),this.autoplay.running=!1,this.emit("autoplayStop"),!0)},pause:function(e){this.autoplay.running&&(this.autoplay.paused||(this.autoplay.timeout&&clearTimeout(this.autoplay.timeout),this.autoplay.paused=!0,0!==e&&this.params.autoplay.waitForTransition?(this.$wrapperEl[0].addEventListener("transitionend",this.autoplay.onTransitionEnd),this.$wrapperEl[0].addEventListener("webkitTransitionEnd",this.autoplay.onTransitionEnd)):(this.autoplay.paused=!1,this.autoplay.run())))}},ie={setTranslate:function(){for(var e=this.slides,t=0;t<e.length;t+=1){var i=this.slides.eq(t),s=-i[0].swiperSlideOffset;this.params.virtualTranslate||(s-=this.translate);var a=0;this.isHorizontal()||(a=s,s=0);var n=this.params.fadeEffect.crossFade?Math.max(1-Math.abs(i[0].progress),0):1+Math.min(Math.max(i[0].progress,-1),0);i.css({opacity:n}).transform("translate3d("+s+"px, "+a+"px, 0px)")}},setTransition:function(e){var t=this,i=t.slides,s=t.$wrapperEl;if(i.transition(e),t.params.virtualTranslate&&0!==e){var a=!1;i.transitionEnd((function(){if(!a&&t&&!t.destroyed){a=!0,t.animating=!1;for(var e=["webkitTransitionEnd","transitionend"],i=0;i<e.length;i+=1)s.trigger(e[i])}}))}}},se={setTranslate:function(){var e,t=this.$el,i=this.$wrapperEl,a=this.slides,n=this.width,r=this.height,o=this.rtlTranslate,l=this.size,d=this.params.cubeEffect,h=this.isHorizontal(),p=this.virtual&&this.params.virtual.enabled,c=0;d.shadow&&(h?(0===(e=i.find(".swiper-cube-shadow")).length&&(e=s('<div class="swiper-cube-shadow"></div>'),i.append(e)),e.css({height:n+"px"})):0===(e=t.find(".swiper-cube-shadow")).length&&(e=s('<div class="swiper-cube-shadow"></div>'),t.append(e)));for(var u=0;u<a.length;u+=1){var f=a.eq(u),m=u;p&&(m=parseInt(f.attr("data-swiper-slide-index"),10));var v=90*m,g=Math.floor(v/360);o&&(v=-v,g=Math.floor(-v/360));var w=Math.max(Math.min(f[0].progress,1),-1),b=0,x=0,y=0;m%4==0?(b=4*-g*l,y=0):(m-1)%4==0?(b=0,y=4*-g*l):(m-2)%4==0?(b=l+4*g*l,y=l):(m-3)%4==0&&(b=-l,y=3*l+4*l*g),o&&(b=-b),h||(x=b,b=0);var E="rotateX("+(h?0:-v)+"deg) rotateY("+(h?v:0)+"deg) translate3d("+b+"px, "+x+"px, "+y+"px)";if(w<=1&&w>-1&&(c=90*m+90*w,o&&(c=90*-m-90*w)),f.transform(E),d.slideShadows){var C=h?f.find(".swiper-slide-shadow-left"):f.find(".swiper-slide-shadow-top"),T=h?f.find(".swiper-slide-shadow-right"):f.find(".swiper-slide-shadow-bottom");0===C.length&&(C=s('<div class="swiper-slide-shadow-'+(h?"left":"top")+'"></div>'),f.append(C)),0===T.length&&(T=s('<div class="swiper-slide-shadow-'+(h?"right":"bottom")+'"></div>'),f.append(T)),C.length&&(C[0].style.opacity=Math.max(-w,0)),T.length&&(T[0].style.opacity=Math.max(w,0))}}if(i.css({"-webkit-transform-origin":"50% 50% -"+l/2+"px","-moz-transform-origin":"50% 50% -"+l/2+"px","-ms-transform-origin":"50% 50% -"+l/2+"px","transform-origin":"50% 50% -"+l/2+"px"}),d.shadow)if(h)e.transform("translate3d(0px, "+(n/2+d.shadowOffset)+"px, "+-n/2+"px) rotateX(90deg) rotateZ(0deg) scale("+d.shadowScale+")");else{var S=Math.abs(c)-90*Math.floor(Math.abs(c)/90),k=1.5-(Math.sin(2*S*Math.PI/360)/2+Math.cos(2*S*Math.PI/360)/2),M=d.shadowScale,D=d.shadowScale/k,P=d.shadowOffset;e.transform("scale3d("+M+", 1, "+D+") translate3d(0px, "+(r/2+P)+"px, "+-r/2/D+"px) rotateX(-90deg)")}var L=z.isSafari||z.isUiWebView?-l/2:0;i.transform("translate3d(0px,0,"+L+"px) rotateX("+(this.isHorizontal()?0:c)+"deg) rotateY("+(this.isHorizontal()?-c:0)+"deg)")},setTransition:function(e){var t=this.$el;this.slides.transition(e).find(".swiper-slide-shadow-top, .swiper-slide-shadow-right, .swiper-slide-shadow-bottom, .swiper-slide-shadow-left").transition(e),this.params.cubeEffect.shadow&&!this.isHorizontal()&&t.find(".swiper-cube-shadow").transition(e)}},ae={setTranslate:function(){for(var e=this.slides,t=this.rtlTranslate,i=0;i<e.length;i+=1){var a=e.eq(i),n=a[0].progress;this.params.flipEffect.limitRotation&&(n=Math.max(Math.min(a[0].progress,1),-1));var r=-180*n,o=0,l=-a[0].swiperSlideOffset,d=0;if(this.isHorizontal()?t&&(r=-r):(d=l,l=0,o=-r,r=0),a[0].style.zIndex=-Math.abs(Math.round(n))+e.length,this.params.flipEffect.slideShadows){var h=this.isHorizontal()?a.find(".swiper-slide-shadow-left"):a.find(".swiper-slide-shadow-top"),p=this.isHorizontal()?a.find(".swiper-slide-shadow-right"):a.find(".swiper-slide-shadow-bottom");0===h.length&&(h=s('<div class="swiper-slide-shadow-'+(this.isHorizontal()?"left":"top")+'"></div>'),a.append(h)),0===p.length&&(p=s('<div class="swiper-slide-shadow-'+(this.isHorizontal()?"right":"bottom")+'"></div>'),a.append(p)),h.length&&(h[0].style.opacity=Math.max(-n,0)),p.length&&(p[0].style.opacity=Math.max(n,0))}a.transform("translate3d("+l+"px, "+d+"px, 0px) rotateX("+o+"deg) rotateY("+r+"deg)")}},setTransition:function(e){var t=this,i=t.slides,s=t.activeIndex,a=t.$wrapperEl;if(i.transition(e).find(".swiper-slide-shadow-top, .swiper-slide-shadow-right, .swiper-slide-shadow-bottom, .swiper-slide-shadow-left").transition(e),t.params.virtualTranslate&&0!==e){var n=!1;i.eq(s).transitionEnd((function(){if(!n&&t&&!t.destroyed){n=!0,t.animating=!1;for(var e=["webkitTransitionEnd","transitionend"],i=0;i<e.length;i+=1)a.trigger(e[i])}}))}}},ne={setTranslate:function(){for(var e=this.width,t=this.height,i=this.slides,a=this.$wrapperEl,n=this.slidesSizesGrid,r=this.params.coverflowEffect,o=this.isHorizontal(),l=this.translate,h=o?e/2-l:t/2-l,p=o?r.rotate:-r.rotate,c=r.depth,u=0,f=i.length;u<f;u+=1){var m=i.eq(u),v=n[u],g=(h-m[0].swiperSlideOffset-v/2)/v*r.modifier,w=o?p*g:0,b=o?0:p*g,x=-c*Math.abs(g),y=o?0:r.stretch*g,E=o?r.stretch*g:0;Math.abs(E)<.001&&(E=0),Math.abs(y)<.001&&(y=0),Math.abs(x)<.001&&(x=0),Math.abs(w)<.001&&(w=0),Math.abs(b)<.001&&(b=0);var C="translate3d("+E+"px,"+y+"px,"+x+"px)  rotateX("+b+"deg) rotateY("+w+"deg)";if(m.transform(C),m[0].style.zIndex=1-Math.abs(Math.round(g)),r.slideShadows){var T=o?m.find(".swiper-slide-shadow-left"):m.find(".swiper-slide-shadow-top"),S=o?m.find(".swiper-slide-shadow-right"):m.find(".swiper-slide-shadow-bottom");0===T.length&&(T=s('<div class="swiper-slide-shadow-'+(o?"left":"top")+'"></div>'),m.append(T)),0===S.length&&(S=s('<div class="swiper-slide-shadow-'+(o?"right":"bottom")+'"></div>'),m.append(S)),T.length&&(T[0].style.opacity=g>0?g:0),S.length&&(S[0].style.opacity=-g>0?-g:0)}}(d.pointerEvents||d.prefixedPointerEvents)&&(a[0].style.perspectiveOrigin=h+"px 50%")},setTransition:function(e){this.slides.transition(e).find(".swiper-slide-shadow-top, .swiper-slide-shadow-right, .swiper-slide-shadow-bottom, .swiper-slide-shadow-left").transition(e)}},re={init:function(){var e=this.params.thumbs,t=this.constructor;e.swiper instanceof t?(this.thumbs.swiper=e.swiper,l.extend(this.thumbs.swiper.originalParams,{watchSlidesProgress:!0,slideToClickedSlide:!1}),l.extend(this.thumbs.swiper.params,{watchSlidesProgress:!0,slideToClickedSlide:!1})):l.isObject(e.swiper)&&(this.thumbs.swiper=new t(l.extend({},e.swiper,{watchSlidesVisibility:!0,watchSlidesProgress:!0,slideToClickedSlide:!1})),this.thumbs.swiperCreated=!0),this.thumbs.swiper.$el.addClass(this.params.thumbs.thumbsContainerClass),this.thumbs.swiper.on("tap",this.thumbs.onThumbClick)},onThumbClick:function(){var e=this.thumbs.swiper;if(e){var t=e.clickedIndex;if(null!=t){var i;if(i=e.params.loop?parseInt(s(e.clickedSlide).attr("data-swiper-slide-index"),10):t,this.params.loop){var a=this.activeIndex;this.slides.eq(a).hasClass(this.params.slideDuplicateClass)&&(this.loopFix(),this._clientLeft=this.$wrapperEl[0].clientLeft,a=this.activeIndex);var n=this.slides.eq(a).prevAll('[data-swiper-slide-index="'+i+'"]').eq(0).index(),r=this.slides.eq(a).nextAll('[data-swiper-slide-index="'+i+'"]').eq(0).index();i=void 0===n?r:void 0===r?n:r-a<a-n?r:n}this.slideTo(i)}}},update:function(e){var t=this.thumbs.swiper;if(t){var i="auto"===t.params.slidesPerView?t.slidesPerViewDynamic():t.params.slidesPerView;if(this.realIndex!==t.realIndex){var s,a=t.activeIndex;if(t.params.loop){t.slides.eq(a).hasClass(t.params.slideDuplicateClass)&&(t.loopFix(),t._clientLeft=t.$wrapperEl[0].clientLeft,a=t.activeIndex);var n=t.slides.eq(a).prevAll('[data-swiper-slide-index="'+this.realIndex+'"]').eq(0).index(),r=t.slides.eq(a).nextAll('[data-swiper-slide-index="'+this.realIndex+'"]').eq(0).index();s=void 0===n?r:void 0===r?n:r-a<a-n?r:n}else s=this.realIndex;t.visibleSlidesIndexes.indexOf(s)<0&&(t.params.centeredSlides?s=s>a?s-Math.floor(i/2)+1:s+Math.floor(i/2)-1:s>a&&(s=s-i+1),t.slideTo(s,e?0:void 0))}var o=1,l=this.params.thumbs.slideThumbActiveClass;if(this.params.slidesPerView>1&&!this.params.centeredSlides&&(o=this.params.slidesPerView),t.slides.removeClass(l),t.params.loop)for(var d=0;d<o;d+=1)t.$wrapperEl.children('[data-swiper-slide-index="'+(this.realIndex+d)+'"]').addClass(l);else for(var h=0;h<o;h+=1)t.slides.eq(this.realIndex+h).addClass(l)}}},oe=[I,O,A,F,H,G,Y,{name:"mousewheel",params:{mousewheel:{enabled:!1,releaseOnEdges:!1,invert:!1,forceToAxis:!1,sensitivity:1,eventsTarged:"container"}},create:function(){l.extend(this,{mousewheel:{enabled:!1,enable:V.enable.bind(this),disable:V.disable.bind(this),handle:V.handle.bind(this),handleMouseEnter:V.handleMouseEnter.bind(this),handleMouseLeave:V.handleMouseLeave.bind(this),lastScrollTime:l.now()}})},on:{init:function(){this.params.mousewheel.enabled&&this.mousewheel.enable()},destroy:function(){this.mousewheel.enabled&&this.mousewheel.disable()}}},{name:"navigation",params:{navigation:{nextEl:null,prevEl:null,hideOnClick:!1,disabledClass:"swiper-button-disabled",hiddenClass:"swiper-button-hidden",lockClass:"swiper-button-lock"}},create:function(){l.extend(this,{navigation:{init:R.init.bind(this),update:R.update.bind(this),destroy:R.destroy.bind(this)}})},on:{init:function(){this.navigation.init(),this.navigation.update()},toEdge:function(){this.navigation.update()},fromEdge:function(){this.navigation.update()},destroy:function(){this.navigation.destroy()},click:function(e){var t=this.navigation,i=t.$nextEl,a=t.$prevEl;!this.params.navigation.hideOnClick||s(e.target).is(a)||s(e.target).is(i)||(i&&i.toggleClass(this.params.navigation.hiddenClass),a&&a.toggleClass(this.params.navigation.hiddenClass))}}},{name:"pagination",params:{pagination:{el:null,bulletElement:"span",clickable:!1,hideOnClick:!1,renderBullet:null,renderProgressbar:null,renderFraction:null,renderCustom:null,progressbarOpposite:!1,type:"bullets",dynamicBullets:!1,dynamicMainBullets:1,formatFractionCurrent:function(e){return e},formatFractionTotal:function(e){return e},bulletClass:"swiper-pagination-bullet",bulletActiveClass:"swiper-pagination-bullet-active",modifierClass:"swiper-pagination-",currentClass:"swiper-pagination-current",totalClass:"swiper-pagination-total",hiddenClass:"swiper-pagination-hidden",progressbarFillClass:"swiper-pagination-progressbar-fill",progressbarOppositeClass:"swiper-pagination-progressbar-opposite",clickableClass:"swiper-pagination-clickable",lockClass:"swiper-pagination-lock"}},create:function(){l.extend(this,{pagination:{init:j.init.bind(this),render:j.render.bind(this),update:j.update.bind(this),destroy:j.destroy.bind(this),dynamicBulletIndex:0}})},on:{init:function(){this.pagination.init(),this.pagination.render(),this.pagination.update()},activeIndexChange:function(){(this.params.loop||void 0===this.snapIndex)&&this.pagination.update()},snapIndexChange:function(){this.params.loop||this.pagination.update()},slidesLengthChange:function(){this.params.loop&&(this.pagination.render(),this.pagination.update())},snapGridLengthChange:function(){this.params.loop||(this.pagination.render(),this.pagination.update())},destroy:function(){this.pagination.destroy()},click:function(e){this.params.pagination.el&&this.params.pagination.hideOnClick&&this.pagination.$el.length>0&&!s(e.target).hasClass(this.params.pagination.bulletClass)&&this.pagination.$el.toggleClass(this.params.pagination.hiddenClass)}}},{name:"scrollbar",params:{scrollbar:{el:null,dragSize:"auto",hide:!1,draggable:!1,snapOnRelease:!0,lockClass:"swiper-scrollbar-lock",dragClass:"swiper-scrollbar-drag"}},create:function(){l.extend(this,{scrollbar:{init:_.init.bind(this),destroy:_.destroy.bind(this),updateSize:_.updateSize.bind(this),setTranslate:_.setTranslate.bind(this),setTransition:_.setTransition.bind(this),enableDraggable:_.enableDraggable.bind(this),disableDraggable:_.disableDraggable.bind(this),setDragPosition:_.setDragPosition.bind(this),onDragStart:_.onDragStart.bind(this),onDragMove:_.onDragMove.bind(this),onDragEnd:_.onDragEnd.bind(this),isTouched:!1,timeout:null,dragTimeout:null}})},on:{init:function(){this.scrollbar.init(),this.scrollbar.updateSize(),this.scrollbar.setTranslate()},update:function(){this.scrollbar.updateSize()},resize:function(){this.scrollbar.updateSize()},observerUpdate:function(){this.scrollbar.updateSize()},setTranslate:function(){this.scrollbar.setTranslate()},setTransition:function(e){this.scrollbar.setTransition(e)},destroy:function(){this.scrollbar.destroy()}}},{name:"parallax",params:{parallax:{enabled:!1}},create:function(){l.extend(this,{parallax:{setTransform:q.setTransform.bind(this),setTranslate:q.setTranslate.bind(this),setTransition:q.setTransition.bind(this)}})},on:{beforeInit:function(){this.params.parallax.enabled&&(this.params.watchSlidesProgress=!0,this.originalParams.watchSlidesProgress=!0)},init:function(){this.params.parallax&&this.parallax.setTranslate()},setTranslate:function(){this.params.parallax&&this.parallax.setTranslate()},setTransition:function(e){this.params.parallax&&this.parallax.setTransition(e)}}},{name:"zoom",params:{zoom:{enabled:!1,maxRatio:3,minRatio:1,toggle:!0,containerClass:"swiper-zoom-container",zoomedSlideClass:"swiper-slide-zoomed"}},create:function(){var e=this,t={enabled:!1,scale:1,currentScale:1,isScaling:!1,gesture:{$slideEl:void 0,slideWidth:void 0,slideHeight:void 0,$imageEl:void 0,$imageWrapEl:void 0,maxRatio:3},image:{isTouched:void 0,isMoved:void 0,currentX:void 0,currentY:void 0,minX:void 0,minY:void 0,maxX:void 0,maxY:void 0,width:void 0,height:void 0,startX:void 0,startY:void 0,touchesStart:{},touchesCurrent:{}},velocity:{x:void 0,y:void 0,prevPositionX:void 0,prevPositionY:void 0,prevTime:void 0}};"onGestureStart onGestureChange onGestureEnd onTouchStart onTouchMove onTouchEnd onTransitionEnd toggle enable disable in out".split(" ").forEach((function(i){t[i]=W[i].bind(e)})),l.extend(e,{zoom:t})},on:{init:function(){this.params.zoom.enabled&&this.zoom.enable()},destroy:function(){this.zoom.disable()},touchStart:function(e){this.zoom.enabled&&this.zoom.onTouchStart(e)},touchEnd:function(e){this.zoom.enabled&&this.zoom.onTouchEnd(e)},doubleTap:function(e){this.params.zoom.enabled&&this.zoom.enabled&&this.params.zoom.toggle&&this.zoom.toggle(e)},transitionEnd:function(){this.zoom.enabled&&this.params.zoom.enabled&&this.zoom.onTransitionEnd()}}},{name:"lazy",params:{lazy:{enabled:!1,loadPrevNext:!1,loadPrevNextAmount:1,loadOnTransitionStart:!1,elementClass:"swiper-lazy",loadingClass:"swiper-lazy-loading",loadedClass:"swiper-lazy-loaded",preloaderClass:"swiper-lazy-preloader"}},create:function(){l.extend(this,{lazy:{initialImageLoaded:!1,load:U.load.bind(this),loadInSlide:U.loadInSlide.bind(this)}})},on:{beforeInit:function(){this.params.lazy.enabled&&this.params.preloadImages&&(this.params.preloadImages=!1)},init:function(){this.params.lazy.enabled&&!this.params.loop&&0===this.params.initialSlide&&this.lazy.load()},scroll:function(){this.params.freeMode&&!this.params.freeModeSticky&&this.lazy.load()},resize:function(){this.params.lazy.enabled&&this.lazy.load()},scrollbarDragMove:function(){this.params.lazy.enabled&&this.lazy.load()},transitionStart:function(){this.params.lazy.enabled&&(this.params.lazy.loadOnTransitionStart||!this.params.lazy.loadOnTransitionStart&&!this.lazy.initialImageLoaded)&&this.lazy.load()},transitionEnd:function(){this.params.lazy.enabled&&!this.params.lazy.loadOnTransitionStart&&this.lazy.load()}}},Z,{name:"a11y",params:{a11y:{enabled:!0,notificationClass:"swiper-notification",prevSlideMessage:"Previous slide",nextSlideMessage:"Next slide",firstSlideMessage:"This is the first slide",lastSlideMessage:"This is the last slide",paginationBulletMessage:"Go to slide {{index}}"}},create:function(){var e=this;l.extend(e,{a11y:{liveRegion:s('<span class="'+e.params.a11y.notificationClass+'" aria-live="assertive" aria-atomic="true"></span>')}}),Object.keys(J).forEach((function(t){e.a11y[t]=J[t].bind(e)}))},on:{init:function(){this.params.a11y.enabled&&(this.a11y.init(),this.a11y.updateNavigation())},toEdge:function(){this.params.a11y.enabled&&this.a11y.updateNavigation()},fromEdge:function(){this.params.a11y.enabled&&this.a11y.updateNavigation()},paginationUpdate:function(){this.params.a11y.enabled&&this.a11y.updatePagination()},destroy:function(){this.params.a11y.enabled&&this.a11y.destroy()}}},{name:"history",params:{history:{enabled:!1,replaceState:!1,key:"slides"}},create:function(){l.extend(this,{history:{init:Q.init.bind(this),setHistory:Q.setHistory.bind(this),setHistoryPopState:Q.setHistoryPopState.bind(this),scrollToSlide:Q.scrollToSlide.bind(this),destroy:Q.destroy.bind(this)}})},on:{init:function(){this.params.history.enabled&&this.history.init()},destroy:function(){this.params.history.enabled&&this.history.destroy()},transitionEnd:function(){this.history.initialized&&this.history.setHistory(this.params.history.key,this.activeIndex)}}},{name:"hash-navigation",params:{hashNavigation:{enabled:!1,replaceState:!1,watchState:!1}},create:function(){l.extend(this,{hashNavigation:{initialized:!1,init:ee.init.bind(this),destroy:ee.destroy.bind(this),setHash:ee.setHash.bind(this),onHashCange:ee.onHashCange.bind(this)}})},on:{init:function(){this.params.hashNavigation.enabled&&this.hashNavigation.init()},destroy:function(){this.params.hashNavigation.enabled&&this.hashNavigation.destroy()},transitionEnd:function(){this.hashNavigation.initialized&&this.hashNavigation.setHash()}}},{name:"autoplay",params:{autoplay:{enabled:!1,delay:3e3,waitForTransition:!0,disableOnInteraction:!0,stopOnLastSlide:!1,reverseDirection:!1}},create:function(){var e=this;l.extend(e,{autoplay:{running:!1,paused:!1,run:te.run.bind(e),start:te.start.bind(e),stop:te.stop.bind(e),pause:te.pause.bind(e),onTransitionEnd:function(t){e&&!e.destroyed&&e.$wrapperEl&&t.target===this&&(e.$wrapperEl[0].removeEventListener("transitionend",e.autoplay.onTransitionEnd),e.$wrapperEl[0].removeEventListener("webkitTransitionEnd",e.autoplay.onTransitionEnd),e.autoplay.paused=!1,e.autoplay.running?e.autoplay.run():e.autoplay.stop())}}})},on:{init:function(){this.params.autoplay.enabled&&this.autoplay.start()},beforeTransitionStart:function(e,t){this.autoplay.running&&(t||!this.params.autoplay.disableOnInteraction?this.autoplay.pause(e):this.autoplay.stop())},sliderFirstMove:function(){this.autoplay.running&&(this.params.autoplay.disableOnInteraction?this.autoplay.stop():this.autoplay.pause())},destroy:function(){this.autoplay.running&&this.autoplay.stop()}}},{name:"effect-fade",params:{fadeEffect:{crossFade:!1}},create:function(){l.extend(this,{fadeEffect:{setTranslate:ie.setTranslate.bind(this),setTransition:ie.setTransition.bind(this)}})},on:{beforeInit:function(){if("fade"===this.params.effect){this.classNames.push(this.params.containerModifierClass+"fade");var e={slidesPerView:1,slidesPerColumn:1,slidesPerGroup:1,watchSlidesProgress:!0,spaceBetween:0,virtualTranslate:!0};l.extend(this.params,e),l.extend(this.originalParams,e)}},setTranslate:function(){"fade"===this.params.effect&&this.fadeEffect.setTranslate()},setTransition:function(e){"fade"===this.params.effect&&this.fadeEffect.setTransition(e)}}},{name:"effect-cube",params:{cubeEffect:{slideShadows:!0,shadow:!0,shadowOffset:20,shadowScale:.94}},create:function(){l.extend(this,{cubeEffect:{setTranslate:se.setTranslate.bind(this),setTransition:se.setTransition.bind(this)}})},on:{beforeInit:function(){if("cube"===this.params.effect){this.classNames.push(this.params.containerModifierClass+"cube"),this.classNames.push(this.params.containerModifierClass+"3d");var e={slidesPerView:1,slidesPerColumn:1,slidesPerGroup:1,watchSlidesProgress:!0,resistanceRatio:0,spaceBetween:0,centeredSlides:!1,virtualTranslate:!0};l.extend(this.params,e),l.extend(this.originalParams,e)}},setTranslate:function(){"cube"===this.params.effect&&this.cubeEffect.setTranslate()},setTransition:function(e){"cube"===this.params.effect&&this.cubeEffect.setTransition(e)}}},{name:"effect-flip",params:{flipEffect:{slideShadows:!0,limitRotation:!0}},create:function(){l.extend(this,{flipEffect:{setTranslate:ae.setTranslate.bind(this),setTransition:ae.setTransition.bind(this)}})},on:{beforeInit:function(){if("flip"===this.params.effect){this.classNames.push(this.params.containerModifierClass+"flip"),this.classNames.push(this.params.containerModifierClass+"3d");var e={slidesPerView:1,slidesPerColumn:1,slidesPerGroup:1,watchSlidesProgress:!0,spaceBetween:0,virtualTranslate:!0};l.extend(this.params,e),l.extend(this.originalParams,e)}},setTranslate:function(){"flip"===this.params.effect&&this.flipEffect.setTranslate()},setTransition:function(e){"flip"===this.params.effect&&this.flipEffect.setTransition(e)}}},{name:"effect-coverflow",params:{coverflowEffect:{rotate:50,stretch:0,depth:100,modifier:1,slideShadows:!0}},create:function(){l.extend(this,{coverflowEffect:{setTranslate:ne.setTranslate.bind(this),setTransition:ne.setTransition.bind(this)}})},on:{beforeInit:function(){"coverflow"===this.params.effect&&(this.classNames.push(this.params.containerModifierClass+"coverflow"),this.classNames.push(this.params.containerModifierClass+"3d"),this.params.watchSlidesProgress=!0,this.originalParams.watchSlidesProgress=!0)},setTranslate:function(){"coverflow"===this.params.effect&&this.coverflowEffect.setTranslate()},setTransition:function(e){"coverflow"===this.params.effect&&this.coverflowEffect.setTransition(e)}}},{name:"thumbs",params:{thumbs:{swiper:null,slideThumbActiveClass:"swiper-slide-thumb-active",thumbsContainerClass:"swiper-container-thumbs"}},create:function(){l.extend(this,{thumbs:{swiper:null,init:re.init.bind(this),update:re.update.bind(this),onThumbClick:re.onThumbClick.bind(this)}})},on:{beforeInit:function(){var e=this.params.thumbs;e&&e.swiper&&(this.thumbs.init(),this.thumbs.update(!0))},slideChange:function(){this.thumbs.swiper&&this.thumbs.update()},update:function(){this.thumbs.swiper&&this.thumbs.update()},resize:function(){this.thumbs.swiper&&this.thumbs.update()},observerUpdate:function(){this.thumbs.swiper&&this.thumbs.update()},setTransition:function(e){var t=this.thumbs.swiper;t&&t.setTransition(e)},beforeDestroy:function(){var e=this.thumbs.swiper;e&&this.thumbs.swiperCreated&&e&&e.destroy()}}}];return void 0===$.use&&($.use=$.Class.use,$.installModule=$.Class.installModule),$.use(oe),$}()},967:function(e,t,i){var s=i(1294);"string"==typeof s&&(s=[[e.i,s,""]]);var a={hmr:!0,transform:void 0,insertInto:void 0};i(31)(s,a);s.locals&&(e.exports=s.locals)},968:function(e,t,i){var s;e.exports=(s=i(1295),function(e){function t(s){if(i[s])return i[s].exports;var a=i[s]={i:s,l:!1,exports:{}};return e[s].call(a.exports,a,a.exports,t),a.l=!0,a.exports}var i={};return t.m=e,t.c=i,t.i=function(e){return e},t.d=function(e,i,s){t.o(e,i)||Object.defineProperty(e,i,{configurable:!1,enumerable:!0,get:s})},t.n=function(e){var i=e&&e.__esModule?function(){return e.default}:function(){return e};return t.d(i,"a",i),i},t.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},t.p="/",t(t.s=4)}([function(e,t){e.exports=s},function(e,t){e.exports=function(e,t,i,s,a,n){var r,o=e=e||{},l=typeof e.default;"object"!==l&&"function"!==l||(r=e,o=e.default);var d,h="function"==typeof o?o.options:o;if(t&&(h.render=t.render,h.staticRenderFns=t.staticRenderFns,h._compiled=!0),i&&(h.functional=!0),a&&(h._scopeId=a),n?(d=function(e){(e=e||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext)||"undefined"==typeof __VUE_SSR_CONTEXT__||(e=__VUE_SSR_CONTEXT__),s&&s.call(this,e),e&&e._registeredComponents&&e._registeredComponents.add(n)},h._ssrRegister=d):s&&(d=s),d){var p=h.functional,c=p?h.render:h.beforeCreate;p?(h._injectStyles=d,h.render=function(e,t){return d.call(t),c(e,t)}):h.beforeCreate=c?[].concat(c,d):[d]}return{esModule:r,exports:o,options:h}}},function(e,t,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var s=i(5),a=i.n(s),n=i(8),r=i(1)(a.a,n.a,!1,null,null,null);t.default=r.exports},function(e,t,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var s=i(6),a=i.n(s),n=i(7),r=i(1)(a.a,n.a,!1,null,null,null);t.default=r.exports},function(e,t,i){"use strict";function s(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(t,"__esModule",{value:!0}),t.install=t.swiperSlide=t.swiper=t.Swiper=void 0;var a=s(i(0)),n=s(i(2)),r=s(i(3)),o=window.Swiper||a.default,l=r.default,d=n.default,h=function(e,t){t&&(r.default.props.globalOptions.default=function(){return t}),e.component(r.default.name,r.default),e.component(n.default.name,n.default)},p={Swiper:o,swiper:l,swiperSlide:d,install:h};t.default=p,t.Swiper=o,t.swiper=l,t.swiperSlide=d,t.install=h},function(e,t,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default={name:"swiper-slide",data:function(){return{slideClass:"swiper-slide"}},ready:function(){this.update()},mounted:function(){this.update(),this.$parent&&this.$parent.options&&this.$parent.options.slideClass&&(this.slideClass=this.$parent.options.slideClass)},updated:function(){this.update()},attached:function(){this.update()},methods:{update:function(){this.$parent&&this.$parent.swiper&&this.$parent.update()}}}},function(e,t,i){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var s=function(e){return e&&e.__esModule?e:{default:e}}(i(0)),a=window.Swiper||s.default;"function"!=typeof Object.assign&&Object.defineProperty(Object,"assign",{value:function(e,t){if(null==e)throw new TypeError("Cannot convert undefined or null to object");for(var i=Object(e),s=1;s<arguments.length;s++){var a=arguments[s];if(null!=a)for(var n in a)Object.prototype.hasOwnProperty.call(a,n)&&(i[n]=a[n])}return i},writable:!0,configurable:!0});var n=["beforeDestroy","slideChange","slideChangeTransitionStart","slideChangeTransitionEnd","slideNextTransitionStart","slideNextTransitionEnd","slidePrevTransitionStart","slidePrevTransitionEnd","transitionStart","transitionEnd","touchStart","touchMove","touchMoveOpposite","sliderMove","touchEnd","click","tap","doubleTap","imagesReady","progress","reachBeginning","reachEnd","fromEdge","setTranslate","setTransition","resize"];t.default={name:"swiper",props:{options:{type:Object,default:function(){return{}}},globalOptions:{type:Object,required:!1,default:function(){return{}}}},data:function(){return{swiper:null,classes:{wrapperClass:"swiper-wrapper"}}},ready:function(){this.swiper||this.mountInstance()},mounted:function(){if(!this.swiper){var e=!1;for(var t in this.classes)this.classes.hasOwnProperty(t)&&this.options[t]&&(e=!0,this.classes[t]=this.options[t]);e?this.$nextTick(this.mountInstance):this.mountInstance()}},activated:function(){this.update()},updated:function(){this.update()},beforeDestroy:function(){this.$nextTick((function(){this.swiper&&(this.swiper.destroy&&this.swiper.destroy(),delete this.swiper)}))},methods:{update:function(){this.swiper&&(this.swiper.update&&this.swiper.update(),this.swiper.navigation&&this.swiper.navigation.update(),this.swiper.pagination&&this.swiper.pagination.render(),this.swiper.pagination&&this.swiper.pagination.update())},mountInstance:function(){var e=Object.assign({},this.globalOptions,this.options);this.swiper=new a(this.$el,e),this.bindEvents(),this.$emit("ready",this.swiper)},bindEvents:function(){var e=this,t=this;n.forEach((function(i){e.swiper.on(i,(function(){t.$emit.apply(t,[i].concat(Array.prototype.slice.call(arguments))),t.$emit.apply(t,[i.replace(/([A-Z])/g,"-$1").toLowerCase()].concat(Array.prototype.slice.call(arguments)))}))}))}}}},function(e,t,i){"use strict";var s={render:function(){var e=this,t=e.$createElement,i=e._self._c||t;return i("div",{staticClass:"swiper-container"},[e._t("parallax-bg"),e._v(" "),i("div",{class:e.classes.wrapperClass},[e._t("default")],2),e._v(" "),e._t("pagination"),e._v(" "),e._t("button-prev"),e._v(" "),e._t("button-next"),e._v(" "),e._t("scrollbar")],2)},staticRenderFns:[]};t.a=s},function(e,t,i){"use strict";var s={render:function(){var e=this,t=e.$createElement;return(e._self._c||t)("div",{class:e.slideClass},[e._t("default")],2)},staticRenderFns:[]};t.a=s}]))}}]);
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[9],{
+
+/***/ "./node_modules/chartist/dist/chartist.js":
+/*!************************************************!*\
+  !*** ./node_modules/chartist/dist/chartist.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (root, factory) {
+  if (true) {
+    // AMD. Register as an anonymous module unless amdModuleId is set
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function () {
+      return (root['Chartist'] = factory());
+    }).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else {}
+}(this, function () {
+
+/* Chartist.js 0.11.0
+ * Copyright © 2017 Gion Kunz
+ * Free to use under either the WTFPL license or the MIT license.
+ * https://raw.githubusercontent.com/gionkunz/chartist-js/master/LICENSE-WTFPL
+ * https://raw.githubusercontent.com/gionkunz/chartist-js/master/LICENSE-MIT
+ */
+/**
+ * The core module of Chartist that is mainly providing static functions and higher level functions for chart modules.
+ *
+ * @module Chartist.Core
+ */
+var Chartist = {
+  version: '0.11.0'
+};
+
+(function (window, document, Chartist) {
+  'use strict';
+
+  /**
+   * This object contains all namespaces used within Chartist.
+   *
+   * @memberof Chartist.Core
+   * @type {{svg: string, xmlns: string, xhtml: string, xlink: string, ct: string}}
+   */
+  Chartist.namespaces = {
+    svg: 'http://www.w3.org/2000/svg',
+    xmlns: 'http://www.w3.org/2000/xmlns/',
+    xhtml: 'http://www.w3.org/1999/xhtml',
+    xlink: 'http://www.w3.org/1999/xlink',
+    ct: 'http://gionkunz.github.com/chartist-js/ct'
+  };
+
+  /**
+   * Helps to simplify functional style code
+   *
+   * @memberof Chartist.Core
+   * @param {*} n This exact value will be returned by the noop function
+   * @return {*} The same value that was provided to the n parameter
+   */
+  Chartist.noop = function (n) {
+    return n;
+  };
+
+  /**
+   * Generates a-z from a number 0 to 26
+   *
+   * @memberof Chartist.Core
+   * @param {Number} n A number from 0 to 26 that will result in a letter a-z
+   * @return {String} A character from a-z based on the input number n
+   */
+  Chartist.alphaNumerate = function (n) {
+    // Limit to a-z
+    return String.fromCharCode(97 + n % 26);
+  };
+
+  /**
+   * Simple recursive object extend
+   *
+   * @memberof Chartist.Core
+   * @param {Object} target Target object where the source will be merged into
+   * @param {Object...} sources This object (objects) will be merged into target and then target is returned
+   * @return {Object} An object that has the same reference as target but is extended and merged with the properties of source
+   */
+  Chartist.extend = function (target) {
+    var i, source, sourceProp;
+    target = target || {};
+
+    for (i = 1; i < arguments.length; i++) {
+      source = arguments[i];
+      for (var prop in source) {
+        sourceProp = source[prop];
+        if (typeof sourceProp === 'object' && sourceProp !== null && !(sourceProp instanceof Array)) {
+          target[prop] = Chartist.extend(target[prop], sourceProp);
+        } else {
+          target[prop] = sourceProp;
+        }
+      }
+    }
+
+    return target;
+  };
+
+  /**
+   * Replaces all occurrences of subStr in str with newSubStr and returns a new string.
+   *
+   * @memberof Chartist.Core
+   * @param {String} str
+   * @param {String} subStr
+   * @param {String} newSubStr
+   * @return {String}
+   */
+  Chartist.replaceAll = function(str, subStr, newSubStr) {
+    return str.replace(new RegExp(subStr, 'g'), newSubStr);
+  };
+
+  /**
+   * Converts a number to a string with a unit. If a string is passed then this will be returned unmodified.
+   *
+   * @memberof Chartist.Core
+   * @param {Number} value
+   * @param {String} unit
+   * @return {String} Returns the passed number value with unit.
+   */
+  Chartist.ensureUnit = function(value, unit) {
+    if(typeof value === 'number') {
+      value = value + unit;
+    }
+
+    return value;
+  };
+
+  /**
+   * Converts a number or string to a quantity object.
+   *
+   * @memberof Chartist.Core
+   * @param {String|Number} input
+   * @return {Object} Returns an object containing the value as number and the unit as string.
+   */
+  Chartist.quantity = function(input) {
+    if (typeof input === 'string') {
+      var match = (/^(\d+)\s*(.*)$/g).exec(input);
+      return {
+        value : +match[1],
+        unit: match[2] || undefined
+      };
+    }
+    return { value: input };
+  };
+
+  /**
+   * This is a wrapper around document.querySelector that will return the query if it's already of type Node
+   *
+   * @memberof Chartist.Core
+   * @param {String|Node} query The query to use for selecting a Node or a DOM node that will be returned directly
+   * @return {Node}
+   */
+  Chartist.querySelector = function(query) {
+    return query instanceof Node ? query : document.querySelector(query);
+  };
+
+  /**
+   * Functional style helper to produce array with given length initialized with undefined values
+   *
+   * @memberof Chartist.Core
+   * @param length
+   * @return {Array}
+   */
+  Chartist.times = function(length) {
+    return Array.apply(null, new Array(length));
+  };
+
+  /**
+   * Sum helper to be used in reduce functions
+   *
+   * @memberof Chartist.Core
+   * @param previous
+   * @param current
+   * @return {*}
+   */
+  Chartist.sum = function(previous, current) {
+    return previous + (current ? current : 0);
+  };
+
+  /**
+   * Multiply helper to be used in `Array.map` for multiplying each value of an array with a factor.
+   *
+   * @memberof Chartist.Core
+   * @param {Number} factor
+   * @returns {Function} Function that can be used in `Array.map` to multiply each value in an array
+   */
+  Chartist.mapMultiply = function(factor) {
+    return function(num) {
+      return num * factor;
+    };
+  };
+
+  /**
+   * Add helper to be used in `Array.map` for adding a addend to each value of an array.
+   *
+   * @memberof Chartist.Core
+   * @param {Number} addend
+   * @returns {Function} Function that can be used in `Array.map` to add a addend to each value in an array
+   */
+  Chartist.mapAdd = function(addend) {
+    return function(num) {
+      return num + addend;
+    };
+  };
+
+  /**
+   * Map for multi dimensional arrays where their nested arrays will be mapped in serial. The output array will have the length of the largest nested array. The callback function is called with variable arguments where each argument is the nested array value (or undefined if there are no more values).
+   *
+   * @memberof Chartist.Core
+   * @param arr
+   * @param cb
+   * @return {Array}
+   */
+  Chartist.serialMap = function(arr, cb) {
+    var result = [],
+        length = Math.max.apply(null, arr.map(function(e) {
+          return e.length;
+        }));
+
+    Chartist.times(length).forEach(function(e, index) {
+      var args = arr.map(function(e) {
+        return e[index];
+      });
+
+      result[index] = cb.apply(null, args);
+    });
+
+    return result;
+  };
+
+  /**
+   * This helper function can be used to round values with certain precision level after decimal. This is used to prevent rounding errors near float point precision limit.
+   *
+   * @memberof Chartist.Core
+   * @param {Number} value The value that should be rounded with precision
+   * @param {Number} [digits] The number of digits after decimal used to do the rounding
+   * @returns {number} Rounded value
+   */
+  Chartist.roundWithPrecision = function(value, digits) {
+    var precision = Math.pow(10, digits || Chartist.precision);
+    return Math.round(value * precision) / precision;
+  };
+
+  /**
+   * Precision level used internally in Chartist for rounding. If you require more decimal places you can increase this number.
+   *
+   * @memberof Chartist.Core
+   * @type {number}
+   */
+  Chartist.precision = 8;
+
+  /**
+   * A map with characters to escape for strings to be safely used as attribute values.
+   *
+   * @memberof Chartist.Core
+   * @type {Object}
+   */
+  Chartist.escapingMap = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    '\'': '&#039;'
+  };
+
+  /**
+   * This function serializes arbitrary data to a string. In case of data that can't be easily converted to a string, this function will create a wrapper object and serialize the data using JSON.stringify. The outcoming string will always be escaped using Chartist.escapingMap.
+   * If called with null or undefined the function will return immediately with null or undefined.
+   *
+   * @memberof Chartist.Core
+   * @param {Number|String|Object} data
+   * @return {String}
+   */
+  Chartist.serialize = function(data) {
+    if(data === null || data === undefined) {
+      return data;
+    } else if(typeof data === 'number') {
+      data = ''+data;
+    } else if(typeof data === 'object') {
+      data = JSON.stringify({data: data});
+    }
+
+    return Object.keys(Chartist.escapingMap).reduce(function(result, key) {
+      return Chartist.replaceAll(result, key, Chartist.escapingMap[key]);
+    }, data);
+  };
+
+  /**
+   * This function de-serializes a string previously serialized with Chartist.serialize. The string will always be unescaped using Chartist.escapingMap before it's returned. Based on the input value the return type can be Number, String or Object. JSON.parse is used with try / catch to see if the unescaped string can be parsed into an Object and this Object will be returned on success.
+   *
+   * @memberof Chartist.Core
+   * @param {String} data
+   * @return {String|Number|Object}
+   */
+  Chartist.deserialize = function(data) {
+    if(typeof data !== 'string') {
+      return data;
+    }
+
+    data = Object.keys(Chartist.escapingMap).reduce(function(result, key) {
+      return Chartist.replaceAll(result, Chartist.escapingMap[key], key);
+    }, data);
+
+    try {
+      data = JSON.parse(data);
+      data = data.data !== undefined ? data.data : data;
+    } catch(e) {}
+
+    return data;
+  };
+
+  /**
+   * Create or reinitialize the SVG element for the chart
+   *
+   * @memberof Chartist.Core
+   * @param {Node} container The containing DOM Node object that will be used to plant the SVG element
+   * @param {String} width Set the width of the SVG element. Default is 100%
+   * @param {String} height Set the height of the SVG element. Default is 100%
+   * @param {String} className Specify a class to be added to the SVG element
+   * @return {Object} The created/reinitialized SVG element
+   */
+  Chartist.createSvg = function (container, width, height, className) {
+    var svg;
+
+    width = width || '100%';
+    height = height || '100%';
+
+    // Check if there is a previous SVG element in the container that contains the Chartist XML namespace and remove it
+    // Since the DOM API does not support namespaces we need to manually search the returned list http://www.w3.org/TR/selectors-api/
+    Array.prototype.slice.call(container.querySelectorAll('svg')).filter(function filterChartistSvgObjects(svg) {
+      return svg.getAttributeNS(Chartist.namespaces.xmlns, 'ct');
+    }).forEach(function removePreviousElement(svg) {
+      container.removeChild(svg);
+    });
+
+    // Create svg object with width and height or use 100% as default
+    svg = new Chartist.Svg('svg').attr({
+      width: width,
+      height: height
+    }).addClass(className);
+
+    svg._node.style.width = width;
+    svg._node.style.height = height;
+
+    // Add the DOM node to our container
+    container.appendChild(svg._node);
+
+    return svg;
+  };
+
+  /**
+   * Ensures that the data object passed as second argument to the charts is present and correctly initialized.
+   *
+   * @param  {Object} data The data object that is passed as second argument to the charts
+   * @return {Object} The normalized data object
+   */
+  Chartist.normalizeData = function(data, reverse, multi) {
+    var labelCount;
+    var output = {
+      raw: data,
+      normalized: {}
+    };
+
+    // Check if we should generate some labels based on existing series data
+    output.normalized.series = Chartist.getDataArray({
+      series: data.series || []
+    }, reverse, multi);
+
+    // If all elements of the normalized data array are arrays we're dealing with
+    // multi series data and we need to find the largest series if they are un-even
+    if (output.normalized.series.every(function(value) {
+        return value instanceof Array;
+      })) {
+      // Getting the series with the the most elements
+      labelCount = Math.max.apply(null, output.normalized.series.map(function(series) {
+        return series.length;
+      }));
+    } else {
+      // We're dealing with Pie data so we just take the normalized array length
+      labelCount = output.normalized.series.length;
+    }
+
+    output.normalized.labels = (data.labels || []).slice();
+    // Padding the labels to labelCount with empty strings
+    Array.prototype.push.apply(
+      output.normalized.labels,
+      Chartist.times(Math.max(0, labelCount - output.normalized.labels.length)).map(function() {
+        return '';
+      })
+    );
+
+    if(reverse) {
+      Chartist.reverseData(output.normalized);
+    }
+
+    return output;
+  };
+
+  /**
+   * This function safely checks if an objects has an owned property.
+   *
+   * @param {Object} object The object where to check for a property
+   * @param {string} property The property name
+   * @returns {boolean} Returns true if the object owns the specified property
+   */
+  Chartist.safeHasProperty = function(object, property) {
+    return object !== null &&
+      typeof object === 'object' &&
+      object.hasOwnProperty(property);
+  };
+
+  /**
+   * Checks if a value is considered a hole in the data series.
+   *
+   * @param {*} value
+   * @returns {boolean} True if the value is considered a data hole
+   */
+  Chartist.isDataHoleValue = function(value) {
+    return value === null ||
+      value === undefined ||
+      (typeof value === 'number' && isNaN(value));
+  };
+
+  /**
+   * Reverses the series, labels and series data arrays.
+   *
+   * @memberof Chartist.Core
+   * @param data
+   */
+  Chartist.reverseData = function(data) {
+    data.labels.reverse();
+    data.series.reverse();
+    for (var i = 0; i < data.series.length; i++) {
+      if(typeof(data.series[i]) === 'object' && data.series[i].data !== undefined) {
+        data.series[i].data.reverse();
+      } else if(data.series[i] instanceof Array) {
+        data.series[i].reverse();
+      }
+    }
+  };
+
+  /**
+   * Convert data series into plain array
+   *
+   * @memberof Chartist.Core
+   * @param {Object} data The series object that contains the data to be visualized in the chart
+   * @param {Boolean} [reverse] If true the whole data is reversed by the getDataArray call. This will modify the data object passed as first parameter. The labels as well as the series order is reversed. The whole series data arrays are reversed too.
+   * @param {Boolean} [multi] Create a multi dimensional array from a series data array where a value object with `x` and `y` values will be created.
+   * @return {Array} A plain array that contains the data to be visualized in the chart
+   */
+  Chartist.getDataArray = function(data, reverse, multi) {
+    // Recursively walks through nested arrays and convert string values to numbers and objects with value properties
+    // to values. Check the tests in data core -> data normalization for a detailed specification of expected values
+    function recursiveConvert(value) {
+      if(Chartist.safeHasProperty(value, 'value')) {
+        // We are dealing with value object notation so we need to recurse on value property
+        return recursiveConvert(value.value);
+      } else if(Chartist.safeHasProperty(value, 'data')) {
+        // We are dealing with series object notation so we need to recurse on data property
+        return recursiveConvert(value.data);
+      } else if(value instanceof Array) {
+        // Data is of type array so we need to recurse on the series
+        return value.map(recursiveConvert);
+      } else if(Chartist.isDataHoleValue(value)) {
+        // We're dealing with a hole in the data and therefore need to return undefined
+        // We're also returning undefined for multi value output
+        return undefined;
+      } else {
+        // We need to prepare multi value output (x and y data)
+        if(multi) {
+          var multiValue = {};
+
+          // Single series value arrays are assumed to specify the Y-Axis value
+          // For example: [1, 2] => [{x: undefined, y: 1}, {x: undefined, y: 2}]
+          // If multi is a string then it's assumed that it specified which dimension should be filled as default
+          if(typeof multi === 'string') {
+            multiValue[multi] = Chartist.getNumberOrUndefined(value);
+          } else {
+            multiValue.y = Chartist.getNumberOrUndefined(value);
+          }
+
+          multiValue.x = value.hasOwnProperty('x') ? Chartist.getNumberOrUndefined(value.x) : multiValue.x;
+          multiValue.y = value.hasOwnProperty('y') ? Chartist.getNumberOrUndefined(value.y) : multiValue.y;
+
+          return multiValue;
+
+        } else {
+          // We can return simple data
+          return Chartist.getNumberOrUndefined(value);
+        }
+      }
+    }
+
+    return data.series.map(recursiveConvert);
+  };
+
+  /**
+   * Converts a number into a padding object.
+   *
+   * @memberof Chartist.Core
+   * @param {Object|Number} padding
+   * @param {Number} [fallback] This value is used to fill missing values if a incomplete padding object was passed
+   * @returns {Object} Returns a padding object containing top, right, bottom, left properties filled with the padding number passed in as argument. If the argument is something else than a number (presumably already a correct padding object) then this argument is directly returned.
+   */
+  Chartist.normalizePadding = function(padding, fallback) {
+    fallback = fallback || 0;
+
+    return typeof padding === 'number' ? {
+      top: padding,
+      right: padding,
+      bottom: padding,
+      left: padding
+    } : {
+      top: typeof padding.top === 'number' ? padding.top : fallback,
+      right: typeof padding.right === 'number' ? padding.right : fallback,
+      bottom: typeof padding.bottom === 'number' ? padding.bottom : fallback,
+      left: typeof padding.left === 'number' ? padding.left : fallback
+    };
+  };
+
+  Chartist.getMetaData = function(series, index) {
+    var value = series.data ? series.data[index] : series[index];
+    return value ? value.meta : undefined;
+  };
+
+  /**
+   * Calculate the order of magnitude for the chart scale
+   *
+   * @memberof Chartist.Core
+   * @param {Number} value The value Range of the chart
+   * @return {Number} The order of magnitude
+   */
+  Chartist.orderOfMagnitude = function (value) {
+    return Math.floor(Math.log(Math.abs(value)) / Math.LN10);
+  };
+
+  /**
+   * Project a data length into screen coordinates (pixels)
+   *
+   * @memberof Chartist.Core
+   * @param {Object} axisLength The svg element for the chart
+   * @param {Number} length Single data value from a series array
+   * @param {Object} bounds All the values to set the bounds of the chart
+   * @return {Number} The projected data length in pixels
+   */
+  Chartist.projectLength = function (axisLength, length, bounds) {
+    return length / bounds.range * axisLength;
+  };
+
+  /**
+   * Get the height of the area in the chart for the data series
+   *
+   * @memberof Chartist.Core
+   * @param {Object} svg The svg element for the chart
+   * @param {Object} options The Object that contains all the optional values for the chart
+   * @return {Number} The height of the area in the chart for the data series
+   */
+  Chartist.getAvailableHeight = function (svg, options) {
+    return Math.max((Chartist.quantity(options.height).value || svg.height()) - (options.chartPadding.top +  options.chartPadding.bottom) - options.axisX.offset, 0);
+  };
+
+  /**
+   * Get highest and lowest value of data array. This Array contains the data that will be visualized in the chart.
+   *
+   * @memberof Chartist.Core
+   * @param {Array} data The array that contains the data to be visualized in the chart
+   * @param {Object} options The Object that contains the chart options
+   * @param {String} dimension Axis dimension 'x' or 'y' used to access the correct value and high / low configuration
+   * @return {Object} An object that contains the highest and lowest value that will be visualized on the chart.
+   */
+  Chartist.getHighLow = function (data, options, dimension) {
+    // TODO: Remove workaround for deprecated global high / low config. Axis high / low configuration is preferred
+    options = Chartist.extend({}, options, dimension ? options['axis' + dimension.toUpperCase()] : {});
+
+    var highLow = {
+        high: options.high === undefined ? -Number.MAX_VALUE : +options.high,
+        low: options.low === undefined ? Number.MAX_VALUE : +options.low
+      };
+    var findHigh = options.high === undefined;
+    var findLow = options.low === undefined;
+
+    // Function to recursively walk through arrays and find highest and lowest number
+    function recursiveHighLow(data) {
+      if(data === undefined) {
+        return undefined;
+      } else if(data instanceof Array) {
+        for (var i = 0; i < data.length; i++) {
+          recursiveHighLow(data[i]);
+        }
+      } else {
+        var value = dimension ? +data[dimension] : +data;
+
+        if (findHigh && value > highLow.high) {
+          highLow.high = value;
+        }
+
+        if (findLow && value < highLow.low) {
+          highLow.low = value;
+        }
+      }
+    }
+
+    // Start to find highest and lowest number recursively
+    if(findHigh || findLow) {
+      recursiveHighLow(data);
+    }
+
+    // Overrides of high / low based on reference value, it will make sure that the invisible reference value is
+    // used to generate the chart. This is useful when the chart always needs to contain the position of the
+    // invisible reference value in the view i.e. for bipolar scales.
+    if (options.referenceValue || options.referenceValue === 0) {
+      highLow.high = Math.max(options.referenceValue, highLow.high);
+      highLow.low = Math.min(options.referenceValue, highLow.low);
+    }
+
+    // If high and low are the same because of misconfiguration or flat data (only the same value) we need
+    // to set the high or low to 0 depending on the polarity
+    if (highLow.high <= highLow.low) {
+      // If both values are 0 we set high to 1
+      if (highLow.low === 0) {
+        highLow.high = 1;
+      } else if (highLow.low < 0) {
+        // If we have the same negative value for the bounds we set bounds.high to 0
+        highLow.high = 0;
+      } else if (highLow.high > 0) {
+        // If we have the same positive value for the bounds we set bounds.low to 0
+        highLow.low = 0;
+      } else {
+        // If data array was empty, values are Number.MAX_VALUE and -Number.MAX_VALUE. Set bounds to prevent errors
+        highLow.high = 1;
+        highLow.low = 0;
+      }
+    }
+
+    return highLow;
+  };
+
+  /**
+   * Checks if a value can be safely coerced to a number. This includes all values except null which result in finite numbers when coerced. This excludes NaN, since it's not finite.
+   *
+   * @memberof Chartist.Core
+   * @param value
+   * @returns {Boolean}
+   */
+  Chartist.isNumeric = function(value) {
+    return value === null ? false : isFinite(value);
+  };
+
+  /**
+   * Returns true on all falsey values except the numeric value 0.
+   *
+   * @memberof Chartist.Core
+   * @param value
+   * @returns {boolean}
+   */
+  Chartist.isFalseyButZero = function(value) {
+    return !value && value !== 0;
+  };
+
+  /**
+   * Returns a number if the passed parameter is a valid number or the function will return undefined. On all other values than a valid number, this function will return undefined.
+   *
+   * @memberof Chartist.Core
+   * @param value
+   * @returns {*}
+   */
+  Chartist.getNumberOrUndefined = function(value) {
+    return Chartist.isNumeric(value) ? +value : undefined;
+  };
+
+  /**
+   * Checks if provided value object is multi value (contains x or y properties)
+   *
+   * @memberof Chartist.Core
+   * @param value
+   */
+  Chartist.isMultiValue = function(value) {
+    return typeof value === 'object' && ('x' in value || 'y' in value);
+  };
+
+  /**
+   * Gets a value from a dimension `value.x` or `value.y` while returning value directly if it's a valid numeric value. If the value is not numeric and it's falsey this function will return `defaultValue`.
+   *
+   * @memberof Chartist.Core
+   * @param value
+   * @param dimension
+   * @param defaultValue
+   * @returns {*}
+   */
+  Chartist.getMultiValue = function(value, dimension) {
+    if(Chartist.isMultiValue(value)) {
+      return Chartist.getNumberOrUndefined(value[dimension || 'y']);
+    } else {
+      return Chartist.getNumberOrUndefined(value);
+    }
+  };
+
+  /**
+   * Pollard Rho Algorithm to find smallest factor of an integer value. There are more efficient algorithms for factorization, but this one is quite efficient and not so complex.
+   *
+   * @memberof Chartist.Core
+   * @param {Number} num An integer number where the smallest factor should be searched for
+   * @returns {Number} The smallest integer factor of the parameter num.
+   */
+  Chartist.rho = function(num) {
+    if(num === 1) {
+      return num;
+    }
+
+    function gcd(p, q) {
+      if (p % q === 0) {
+        return q;
+      } else {
+        return gcd(q, p % q);
+      }
+    }
+
+    function f(x) {
+      return x * x + 1;
+    }
+
+    var x1 = 2, x2 = 2, divisor;
+    if (num % 2 === 0) {
+      return 2;
+    }
+
+    do {
+      x1 = f(x1) % num;
+      x2 = f(f(x2)) % num;
+      divisor = gcd(Math.abs(x1 - x2), num);
+    } while (divisor === 1);
+
+    return divisor;
+  };
+
+  /**
+   * Calculate and retrieve all the bounds for the chart and return them in one array
+   *
+   * @memberof Chartist.Core
+   * @param {Number} axisLength The length of the Axis used for
+   * @param {Object} highLow An object containing a high and low property indicating the value range of the chart.
+   * @param {Number} scaleMinSpace The minimum projected length a step should result in
+   * @param {Boolean} onlyInteger
+   * @return {Object} All the values to set the bounds of the chart
+   */
+  Chartist.getBounds = function (axisLength, highLow, scaleMinSpace, onlyInteger) {
+    var i,
+      optimizationCounter = 0,
+      newMin,
+      newMax,
+      bounds = {
+        high: highLow.high,
+        low: highLow.low
+      };
+
+    bounds.valueRange = bounds.high - bounds.low;
+    bounds.oom = Chartist.orderOfMagnitude(bounds.valueRange);
+    bounds.step = Math.pow(10, bounds.oom);
+    bounds.min = Math.floor(bounds.low / bounds.step) * bounds.step;
+    bounds.max = Math.ceil(bounds.high / bounds.step) * bounds.step;
+    bounds.range = bounds.max - bounds.min;
+    bounds.numberOfSteps = Math.round(bounds.range / bounds.step);
+
+    // Optimize scale step by checking if subdivision is possible based on horizontalGridMinSpace
+    // If we are already below the scaleMinSpace value we will scale up
+    var length = Chartist.projectLength(axisLength, bounds.step, bounds);
+    var scaleUp = length < scaleMinSpace;
+    var smallestFactor = onlyInteger ? Chartist.rho(bounds.range) : 0;
+
+    // First check if we should only use integer steps and if step 1 is still larger than scaleMinSpace so we can use 1
+    if(onlyInteger && Chartist.projectLength(axisLength, 1, bounds) >= scaleMinSpace) {
+      bounds.step = 1;
+    } else if(onlyInteger && smallestFactor < bounds.step && Chartist.projectLength(axisLength, smallestFactor, bounds) >= scaleMinSpace) {
+      // If step 1 was too small, we can try the smallest factor of range
+      // If the smallest factor is smaller than the current bounds.step and the projected length of smallest factor
+      // is larger than the scaleMinSpace we should go for it.
+      bounds.step = smallestFactor;
+    } else {
+      // Trying to divide or multiply by 2 and find the best step value
+      while (true) {
+        if (scaleUp && Chartist.projectLength(axisLength, bounds.step, bounds) <= scaleMinSpace) {
+          bounds.step *= 2;
+        } else if (!scaleUp && Chartist.projectLength(axisLength, bounds.step / 2, bounds) >= scaleMinSpace) {
+          bounds.step /= 2;
+          if(onlyInteger && bounds.step % 1 !== 0) {
+            bounds.step *= 2;
+            break;
+          }
+        } else {
+          break;
+        }
+
+        if(optimizationCounter++ > 1000) {
+          throw new Error('Exceeded maximum number of iterations while optimizing scale step!');
+        }
+      }
+    }
+
+    var EPSILON = 2.221E-16;
+    bounds.step = Math.max(bounds.step, EPSILON);
+    function safeIncrement(value, increment) {
+      // If increment is too small use *= (1+EPSILON) as a simple nextafter
+      if (value === (value += increment)) {
+      	value *= (1 + (increment > 0 ? EPSILON : -EPSILON));
+      }
+      return value;
+    }
+
+    // Narrow min and max based on new step
+    newMin = bounds.min;
+    newMax = bounds.max;
+    while (newMin + bounds.step <= bounds.low) {
+    	newMin = safeIncrement(newMin, bounds.step);
+    }
+    while (newMax - bounds.step >= bounds.high) {
+    	newMax = safeIncrement(newMax, -bounds.step);
+    }
+    bounds.min = newMin;
+    bounds.max = newMax;
+    bounds.range = bounds.max - bounds.min;
+
+    var values = [];
+    for (i = bounds.min; i <= bounds.max; i = safeIncrement(i, bounds.step)) {
+      var value = Chartist.roundWithPrecision(i);
+      if (value !== values[values.length - 1]) {
+        values.push(value);
+      }
+    }
+    bounds.values = values;
+    return bounds;
+  };
+
+  /**
+   * Calculate cartesian coordinates of polar coordinates
+   *
+   * @memberof Chartist.Core
+   * @param {Number} centerX X-axis coordinates of center point of circle segment
+   * @param {Number} centerY X-axis coordinates of center point of circle segment
+   * @param {Number} radius Radius of circle segment
+   * @param {Number} angleInDegrees Angle of circle segment in degrees
+   * @return {{x:Number, y:Number}} Coordinates of point on circumference
+   */
+  Chartist.polarToCartesian = function (centerX, centerY, radius, angleInDegrees) {
+    var angleInRadians = (angleInDegrees - 90) * Math.PI / 180.0;
+
+    return {
+      x: centerX + (radius * Math.cos(angleInRadians)),
+      y: centerY + (radius * Math.sin(angleInRadians))
+    };
+  };
+
+  /**
+   * Initialize chart drawing rectangle (area where chart is drawn) x1,y1 = bottom left / x2,y2 = top right
+   *
+   * @memberof Chartist.Core
+   * @param {Object} svg The svg element for the chart
+   * @param {Object} options The Object that contains all the optional values for the chart
+   * @param {Number} [fallbackPadding] The fallback padding if partial padding objects are used
+   * @return {Object} The chart rectangles coordinates inside the svg element plus the rectangles measurements
+   */
+  Chartist.createChartRect = function (svg, options, fallbackPadding) {
+    var hasAxis = !!(options.axisX || options.axisY);
+    var yAxisOffset = hasAxis ? options.axisY.offset : 0;
+    var xAxisOffset = hasAxis ? options.axisX.offset : 0;
+    // If width or height results in invalid value (including 0) we fallback to the unitless settings or even 0
+    var width = svg.width() || Chartist.quantity(options.width).value || 0;
+    var height = svg.height() || Chartist.quantity(options.height).value || 0;
+    var normalizedPadding = Chartist.normalizePadding(options.chartPadding, fallbackPadding);
+
+    // If settings were to small to cope with offset (legacy) and padding, we'll adjust
+    width = Math.max(width, yAxisOffset + normalizedPadding.left + normalizedPadding.right);
+    height = Math.max(height, xAxisOffset + normalizedPadding.top + normalizedPadding.bottom);
+
+    var chartRect = {
+      padding: normalizedPadding,
+      width: function () {
+        return this.x2 - this.x1;
+      },
+      height: function () {
+        return this.y1 - this.y2;
+      }
+    };
+
+    if(hasAxis) {
+      if (options.axisX.position === 'start') {
+        chartRect.y2 = normalizedPadding.top + xAxisOffset;
+        chartRect.y1 = Math.max(height - normalizedPadding.bottom, chartRect.y2 + 1);
+      } else {
+        chartRect.y2 = normalizedPadding.top;
+        chartRect.y1 = Math.max(height - normalizedPadding.bottom - xAxisOffset, chartRect.y2 + 1);
+      }
+
+      if (options.axisY.position === 'start') {
+        chartRect.x1 = normalizedPadding.left + yAxisOffset;
+        chartRect.x2 = Math.max(width - normalizedPadding.right, chartRect.x1 + 1);
+      } else {
+        chartRect.x1 = normalizedPadding.left;
+        chartRect.x2 = Math.max(width - normalizedPadding.right - yAxisOffset, chartRect.x1 + 1);
+      }
+    } else {
+      chartRect.x1 = normalizedPadding.left;
+      chartRect.x2 = Math.max(width - normalizedPadding.right, chartRect.x1 + 1);
+      chartRect.y2 = normalizedPadding.top;
+      chartRect.y1 = Math.max(height - normalizedPadding.bottom, chartRect.y2 + 1);
+    }
+
+    return chartRect;
+  };
+
+  /**
+   * Creates a grid line based on a projected value.
+   *
+   * @memberof Chartist.Core
+   * @param position
+   * @param index
+   * @param axis
+   * @param offset
+   * @param length
+   * @param group
+   * @param classes
+   * @param eventEmitter
+   */
+  Chartist.createGrid = function(position, index, axis, offset, length, group, classes, eventEmitter) {
+    var positionalData = {};
+    positionalData[axis.units.pos + '1'] = position;
+    positionalData[axis.units.pos + '2'] = position;
+    positionalData[axis.counterUnits.pos + '1'] = offset;
+    positionalData[axis.counterUnits.pos + '2'] = offset + length;
+
+    var gridElement = group.elem('line', positionalData, classes.join(' '));
+
+    // Event for grid draw
+    eventEmitter.emit('draw',
+      Chartist.extend({
+        type: 'grid',
+        axis: axis,
+        index: index,
+        group: group,
+        element: gridElement
+      }, positionalData)
+    );
+  };
+
+  /**
+   * Creates a grid background rect and emits the draw event.
+   *
+   * @memberof Chartist.Core
+   * @param gridGroup
+   * @param chartRect
+   * @param className
+   * @param eventEmitter
+   */
+  Chartist.createGridBackground = function (gridGroup, chartRect, className, eventEmitter) {
+    var gridBackground = gridGroup.elem('rect', {
+        x: chartRect.x1,
+        y: chartRect.y2,
+        width: chartRect.width(),
+        height: chartRect.height(),
+      }, className, true);
+
+      // Event for grid background draw
+      eventEmitter.emit('draw', {
+        type: 'gridBackground',
+        group: gridGroup,
+        element: gridBackground
+      });
+  };
+
+  /**
+   * Creates a label based on a projected value and an axis.
+   *
+   * @memberof Chartist.Core
+   * @param position
+   * @param length
+   * @param index
+   * @param labels
+   * @param axis
+   * @param axisOffset
+   * @param labelOffset
+   * @param group
+   * @param classes
+   * @param useForeignObject
+   * @param eventEmitter
+   */
+  Chartist.createLabel = function(position, length, index, labels, axis, axisOffset, labelOffset, group, classes, useForeignObject, eventEmitter) {
+    var labelElement;
+    var positionalData = {};
+
+    positionalData[axis.units.pos] = position + labelOffset[axis.units.pos];
+    positionalData[axis.counterUnits.pos] = labelOffset[axis.counterUnits.pos];
+    positionalData[axis.units.len] = length;
+    positionalData[axis.counterUnits.len] = Math.max(0, axisOffset - 10);
+
+    if(useForeignObject) {
+      // We need to set width and height explicitly to px as span will not expand with width and height being
+      // 100% in all browsers
+      var content = document.createElement('span');
+      content.className = classes.join(' ');
+      content.setAttribute('xmlns', Chartist.namespaces.xhtml);
+      content.innerText = labels[index];
+      content.style[axis.units.len] = Math.round(positionalData[axis.units.len]) + 'px';
+      content.style[axis.counterUnits.len] = Math.round(positionalData[axis.counterUnits.len]) + 'px';
+
+      labelElement = group.foreignObject(content, Chartist.extend({
+        style: 'overflow: visible;'
+      }, positionalData));
+    } else {
+      labelElement = group.elem('text', positionalData, classes.join(' ')).text(labels[index]);
+    }
+
+    eventEmitter.emit('draw', Chartist.extend({
+      type: 'label',
+      axis: axis,
+      index: index,
+      group: group,
+      element: labelElement,
+      text: labels[index]
+    }, positionalData));
+  };
+
+  /**
+   * Helper to read series specific options from options object. It automatically falls back to the global option if
+   * there is no option in the series options.
+   *
+   * @param {Object} series Series object
+   * @param {Object} options Chartist options object
+   * @param {string} key The options key that should be used to obtain the options
+   * @returns {*}
+   */
+  Chartist.getSeriesOption = function(series, options, key) {
+    if(series.name && options.series && options.series[series.name]) {
+      var seriesOptions = options.series[series.name];
+      return seriesOptions.hasOwnProperty(key) ? seriesOptions[key] : options[key];
+    } else {
+      return options[key];
+    }
+  };
+
+  /**
+   * Provides options handling functionality with callback for options changes triggered by responsive options and media query matches
+   *
+   * @memberof Chartist.Core
+   * @param {Object} options Options set by user
+   * @param {Array} responsiveOptions Optional functions to add responsive behavior to chart
+   * @param {Object} eventEmitter The event emitter that will be used to emit the options changed events
+   * @return {Object} The consolidated options object from the defaults, base and matching responsive options
+   */
+  Chartist.optionsProvider = function (options, responsiveOptions, eventEmitter) {
+    var baseOptions = Chartist.extend({}, options),
+      currentOptions,
+      mediaQueryListeners = [],
+      i;
+
+    function updateCurrentOptions(mediaEvent) {
+      var previousOptions = currentOptions;
+      currentOptions = Chartist.extend({}, baseOptions);
+
+      if (responsiveOptions) {
+        for (i = 0; i < responsiveOptions.length; i++) {
+          var mql = window.matchMedia(responsiveOptions[i][0]);
+          if (mql.matches) {
+            currentOptions = Chartist.extend(currentOptions, responsiveOptions[i][1]);
+          }
+        }
+      }
+
+      if(eventEmitter && mediaEvent) {
+        eventEmitter.emit('optionsChanged', {
+          previousOptions: previousOptions,
+          currentOptions: currentOptions
+        });
+      }
+    }
+
+    function removeMediaQueryListeners() {
+      mediaQueryListeners.forEach(function(mql) {
+        mql.removeListener(updateCurrentOptions);
+      });
+    }
+
+    if (!window.matchMedia) {
+      throw 'window.matchMedia not found! Make sure you\'re using a polyfill.';
+    } else if (responsiveOptions) {
+
+      for (i = 0; i < responsiveOptions.length; i++) {
+        var mql = window.matchMedia(responsiveOptions[i][0]);
+        mql.addListener(updateCurrentOptions);
+        mediaQueryListeners.push(mql);
+      }
+    }
+    // Execute initially without an event argument so we get the correct options
+    updateCurrentOptions();
+
+    return {
+      removeMediaQueryListeners: removeMediaQueryListeners,
+      getCurrentOptions: function getCurrentOptions() {
+        return Chartist.extend({}, currentOptions);
+      }
+    };
+  };
+
+
+  /**
+   * Splits a list of coordinates and associated values into segments. Each returned segment contains a pathCoordinates
+   * valueData property describing the segment.
+   *
+   * With the default options, segments consist of contiguous sets of points that do not have an undefined value. Any
+   * points with undefined values are discarded.
+   *
+   * **Options**
+   * The following options are used to determine how segments are formed
+   * ```javascript
+   * var options = {
+   *   // If fillHoles is true, undefined values are simply discarded without creating a new segment. Assuming other options are default, this returns single segment.
+   *   fillHoles: false,
+   *   // If increasingX is true, the coordinates in all segments have strictly increasing x-values.
+   *   increasingX: false
+   * };
+   * ```
+   *
+   * @memberof Chartist.Core
+   * @param {Array} pathCoordinates List of point coordinates to be split in the form [x1, y1, x2, y2 ... xn, yn]
+   * @param {Array} values List of associated point values in the form [v1, v2 .. vn]
+   * @param {Object} options Options set by user
+   * @return {Array} List of segments, each containing a pathCoordinates and valueData property.
+   */
+  Chartist.splitIntoSegments = function(pathCoordinates, valueData, options) {
+    var defaultOptions = {
+      increasingX: false,
+      fillHoles: false
+    };
+
+    options = Chartist.extend({}, defaultOptions, options);
+
+    var segments = [];
+    var hole = true;
+
+    for(var i = 0; i < pathCoordinates.length; i += 2) {
+      // If this value is a "hole" we set the hole flag
+      if(Chartist.getMultiValue(valueData[i / 2].value) === undefined) {
+      // if(valueData[i / 2].value === undefined) {
+        if(!options.fillHoles) {
+          hole = true;
+        }
+      } else {
+        if(options.increasingX && i >= 2 && pathCoordinates[i] <= pathCoordinates[i-2]) {
+          // X is not increasing, so we need to make sure we start a new segment
+          hole = true;
+        }
+
+
+        // If it's a valid value we need to check if we're coming out of a hole and create a new empty segment
+        if(hole) {
+          segments.push({
+            pathCoordinates: [],
+            valueData: []
+          });
+          // As we have a valid value now, we are not in a "hole" anymore
+          hole = false;
+        }
+
+        // Add to the segment pathCoordinates and valueData
+        segments[segments.length - 1].pathCoordinates.push(pathCoordinates[i], pathCoordinates[i + 1]);
+        segments[segments.length - 1].valueData.push(valueData[i / 2]);
+      }
+    }
+
+    return segments;
+  };
+}(window, document, Chartist));
+;/**
+ * Chartist path interpolation functions.
+ *
+ * @module Chartist.Interpolation
+ */
+/* global Chartist */
+(function(window, document, Chartist) {
+  'use strict';
+
+  Chartist.Interpolation = {};
+
+  /**
+   * This interpolation function does not smooth the path and the result is only containing lines and no curves.
+   *
+   * @example
+   * var chart = new Chartist.Line('.ct-chart', {
+   *   labels: [1, 2, 3, 4, 5],
+   *   series: [[1, 2, 8, 1, 7]]
+   * }, {
+   *   lineSmooth: Chartist.Interpolation.none({
+   *     fillHoles: false
+   *   })
+   * });
+   *
+   *
+   * @memberof Chartist.Interpolation
+   * @return {Function}
+   */
+  Chartist.Interpolation.none = function(options) {
+    var defaultOptions = {
+      fillHoles: false
+    };
+    options = Chartist.extend({}, defaultOptions, options);
+    return function none(pathCoordinates, valueData) {
+      var path = new Chartist.Svg.Path();
+      var hole = true;
+
+      for(var i = 0; i < pathCoordinates.length; i += 2) {
+        var currX = pathCoordinates[i];
+        var currY = pathCoordinates[i + 1];
+        var currData = valueData[i / 2];
+
+        if(Chartist.getMultiValue(currData.value) !== undefined) {
+
+          if(hole) {
+            path.move(currX, currY, false, currData);
+          } else {
+            path.line(currX, currY, false, currData);
+          }
+
+          hole = false;
+        } else if(!options.fillHoles) {
+          hole = true;
+        }
+      }
+
+      return path;
+    };
+  };
+
+  /**
+   * Simple smoothing creates horizontal handles that are positioned with a fraction of the length between two data points. You can use the divisor option to specify the amount of smoothing.
+   *
+   * Simple smoothing can be used instead of `Chartist.Smoothing.cardinal` if you'd like to get rid of the artifacts it produces sometimes. Simple smoothing produces less flowing lines but is accurate by hitting the points and it also doesn't swing below or above the given data point.
+   *
+   * All smoothing functions within Chartist are factory functions that accept an options parameter. The simple interpolation function accepts one configuration parameter `divisor`, between 1 and ∞, which controls the smoothing characteristics.
+   *
+   * @example
+   * var chart = new Chartist.Line('.ct-chart', {
+   *   labels: [1, 2, 3, 4, 5],
+   *   series: [[1, 2, 8, 1, 7]]
+   * }, {
+   *   lineSmooth: Chartist.Interpolation.simple({
+   *     divisor: 2,
+   *     fillHoles: false
+   *   })
+   * });
+   *
+   *
+   * @memberof Chartist.Interpolation
+   * @param {Object} options The options of the simple interpolation factory function.
+   * @return {Function}
+   */
+  Chartist.Interpolation.simple = function(options) {
+    var defaultOptions = {
+      divisor: 2,
+      fillHoles: false
+    };
+    options = Chartist.extend({}, defaultOptions, options);
+
+    var d = 1 / Math.max(1, options.divisor);
+
+    return function simple(pathCoordinates, valueData) {
+      var path = new Chartist.Svg.Path();
+      var prevX, prevY, prevData;
+
+      for(var i = 0; i < pathCoordinates.length; i += 2) {
+        var currX = pathCoordinates[i];
+        var currY = pathCoordinates[i + 1];
+        var length = (currX - prevX) * d;
+        var currData = valueData[i / 2];
+
+        if(currData.value !== undefined) {
+
+          if(prevData === undefined) {
+            path.move(currX, currY, false, currData);
+          } else {
+            path.curve(
+              prevX + length,
+              prevY,
+              currX - length,
+              currY,
+              currX,
+              currY,
+              false,
+              currData
+            );
+          }
+
+          prevX = currX;
+          prevY = currY;
+          prevData = currData;
+        } else if(!options.fillHoles) {
+          prevX = currX = prevData = undefined;
+        }
+      }
+
+      return path;
+    };
+  };
+
+  /**
+   * Cardinal / Catmull-Rome spline interpolation is the default smoothing function in Chartist. It produces nice results where the splines will always meet the points. It produces some artifacts though when data values are increased or decreased rapidly. The line may not follow a very accurate path and if the line should be accurate this smoothing function does not produce the best results.
+   *
+   * Cardinal splines can only be created if there are more than two data points. If this is not the case this smoothing will fallback to `Chartist.Smoothing.none`.
+   *
+   * All smoothing functions within Chartist are factory functions that accept an options parameter. The cardinal interpolation function accepts one configuration parameter `tension`, between 0 and 1, which controls the smoothing intensity.
+   *
+   * @example
+   * var chart = new Chartist.Line('.ct-chart', {
+   *   labels: [1, 2, 3, 4, 5],
+   *   series: [[1, 2, 8, 1, 7]]
+   * }, {
+   *   lineSmooth: Chartist.Interpolation.cardinal({
+   *     tension: 1,
+   *     fillHoles: false
+   *   })
+   * });
+   *
+   * @memberof Chartist.Interpolation
+   * @param {Object} options The options of the cardinal factory function.
+   * @return {Function}
+   */
+  Chartist.Interpolation.cardinal = function(options) {
+    var defaultOptions = {
+      tension: 1,
+      fillHoles: false
+    };
+
+    options = Chartist.extend({}, defaultOptions, options);
+
+    var t = Math.min(1, Math.max(0, options.tension)),
+      c = 1 - t;
+
+    return function cardinal(pathCoordinates, valueData) {
+      // First we try to split the coordinates into segments
+      // This is necessary to treat "holes" in line charts
+      var segments = Chartist.splitIntoSegments(pathCoordinates, valueData, {
+        fillHoles: options.fillHoles
+      });
+
+      if(!segments.length) {
+        // If there were no segments return 'Chartist.Interpolation.none'
+        return Chartist.Interpolation.none()([]);
+      } else if(segments.length > 1) {
+        // If the split resulted in more that one segment we need to interpolate each segment individually and join them
+        // afterwards together into a single path.
+          var paths = [];
+        // For each segment we will recurse the cardinal function
+        segments.forEach(function(segment) {
+          paths.push(cardinal(segment.pathCoordinates, segment.valueData));
+        });
+        // Join the segment path data into a single path and return
+        return Chartist.Svg.Path.join(paths);
+      } else {
+        // If there was only one segment we can proceed regularly by using pathCoordinates and valueData from the first
+        // segment
+        pathCoordinates = segments[0].pathCoordinates;
+        valueData = segments[0].valueData;
+
+        // If less than two points we need to fallback to no smoothing
+        if(pathCoordinates.length <= 4) {
+          return Chartist.Interpolation.none()(pathCoordinates, valueData);
+        }
+
+        var path = new Chartist.Svg.Path().move(pathCoordinates[0], pathCoordinates[1], false, valueData[0]),
+          z;
+
+        for (var i = 0, iLen = pathCoordinates.length; iLen - 2 * !z > i; i += 2) {
+          var p = [
+            {x: +pathCoordinates[i - 2], y: +pathCoordinates[i - 1]},
+            {x: +pathCoordinates[i], y: +pathCoordinates[i + 1]},
+            {x: +pathCoordinates[i + 2], y: +pathCoordinates[i + 3]},
+            {x: +pathCoordinates[i + 4], y: +pathCoordinates[i + 5]}
+          ];
+          if (z) {
+            if (!i) {
+              p[0] = {x: +pathCoordinates[iLen - 2], y: +pathCoordinates[iLen - 1]};
+            } else if (iLen - 4 === i) {
+              p[3] = {x: +pathCoordinates[0], y: +pathCoordinates[1]};
+            } else if (iLen - 2 === i) {
+              p[2] = {x: +pathCoordinates[0], y: +pathCoordinates[1]};
+              p[3] = {x: +pathCoordinates[2], y: +pathCoordinates[3]};
+            }
+          } else {
+            if (iLen - 4 === i) {
+              p[3] = p[2];
+            } else if (!i) {
+              p[0] = {x: +pathCoordinates[i], y: +pathCoordinates[i + 1]};
+            }
+          }
+
+          path.curve(
+            (t * (-p[0].x + 6 * p[1].x + p[2].x) / 6) + (c * p[2].x),
+            (t * (-p[0].y + 6 * p[1].y + p[2].y) / 6) + (c * p[2].y),
+            (t * (p[1].x + 6 * p[2].x - p[3].x) / 6) + (c * p[2].x),
+            (t * (p[1].y + 6 * p[2].y - p[3].y) / 6) + (c * p[2].y),
+            p[2].x,
+            p[2].y,
+            false,
+            valueData[(i + 2) / 2]
+          );
+        }
+
+        return path;
+      }
+    };
+  };
+
+  /**
+   * Monotone Cubic spline interpolation produces a smooth curve which preserves monotonicity. Unlike cardinal splines, the curve will not extend beyond the range of y-values of the original data points.
+   *
+   * Monotone Cubic splines can only be created if there are more than two data points. If this is not the case this smoothing will fallback to `Chartist.Smoothing.none`.
+   *
+   * The x-values of subsequent points must be increasing to fit a Monotone Cubic spline. If this condition is not met for a pair of adjacent points, then there will be a break in the curve between those data points.
+   *
+   * All smoothing functions within Chartist are factory functions that accept an options parameter.
+   *
+   * @example
+   * var chart = new Chartist.Line('.ct-chart', {
+   *   labels: [1, 2, 3, 4, 5],
+   *   series: [[1, 2, 8, 1, 7]]
+   * }, {
+   *   lineSmooth: Chartist.Interpolation.monotoneCubic({
+   *     fillHoles: false
+   *   })
+   * });
+   *
+   * @memberof Chartist.Interpolation
+   * @param {Object} options The options of the monotoneCubic factory function.
+   * @return {Function}
+   */
+  Chartist.Interpolation.monotoneCubic = function(options) {
+    var defaultOptions = {
+      fillHoles: false
+    };
+
+    options = Chartist.extend({}, defaultOptions, options);
+
+    return function monotoneCubic(pathCoordinates, valueData) {
+      // First we try to split the coordinates into segments
+      // This is necessary to treat "holes" in line charts
+      var segments = Chartist.splitIntoSegments(pathCoordinates, valueData, {
+        fillHoles: options.fillHoles,
+        increasingX: true
+      });
+
+      if(!segments.length) {
+        // If there were no segments return 'Chartist.Interpolation.none'
+        return Chartist.Interpolation.none()([]);
+      } else if(segments.length > 1) {
+        // If the split resulted in more that one segment we need to interpolate each segment individually and join them
+        // afterwards together into a single path.
+          var paths = [];
+        // For each segment we will recurse the monotoneCubic fn function
+        segments.forEach(function(segment) {
+          paths.push(monotoneCubic(segment.pathCoordinates, segment.valueData));
+        });
+        // Join the segment path data into a single path and return
+        return Chartist.Svg.Path.join(paths);
+      } else {
+        // If there was only one segment we can proceed regularly by using pathCoordinates and valueData from the first
+        // segment
+        pathCoordinates = segments[0].pathCoordinates;
+        valueData = segments[0].valueData;
+
+        // If less than three points we need to fallback to no smoothing
+        if(pathCoordinates.length <= 4) {
+          return Chartist.Interpolation.none()(pathCoordinates, valueData);
+        }
+
+        var xs = [],
+          ys = [],
+          i,
+          n = pathCoordinates.length / 2,
+          ms = [],
+          ds = [], dys = [], dxs = [],
+          path;
+
+        // Populate x and y coordinates into separate arrays, for readability
+
+        for(i = 0; i < n; i++) {
+          xs[i] = pathCoordinates[i * 2];
+          ys[i] = pathCoordinates[i * 2 + 1];
+        }
+
+        // Calculate deltas and derivative
+
+        for(i = 0; i < n - 1; i++) {
+          dys[i] = ys[i + 1] - ys[i];
+          dxs[i] = xs[i + 1] - xs[i];
+          ds[i] = dys[i] / dxs[i];
+        }
+
+        // Determine desired slope (m) at each point using Fritsch-Carlson method
+        // See: http://math.stackexchange.com/questions/45218/implementation-of-monotone-cubic-interpolation
+
+        ms[0] = ds[0];
+        ms[n - 1] = ds[n - 2];
+
+        for(i = 1; i < n - 1; i++) {
+          if(ds[i] === 0 || ds[i - 1] === 0 || (ds[i - 1] > 0) !== (ds[i] > 0)) {
+            ms[i] = 0;
+          } else {
+            ms[i] = 3 * (dxs[i - 1] + dxs[i]) / (
+              (2 * dxs[i] + dxs[i - 1]) / ds[i - 1] +
+              (dxs[i] + 2 * dxs[i - 1]) / ds[i]);
+
+            if(!isFinite(ms[i])) {
+              ms[i] = 0;
+            }
+          }
+        }
+
+        // Now build a path from the slopes
+
+        path = new Chartist.Svg.Path().move(xs[0], ys[0], false, valueData[0]);
+
+        for(i = 0; i < n - 1; i++) {
+          path.curve(
+            // First control point
+            xs[i] + dxs[i] / 3,
+            ys[i] + ms[i] * dxs[i] / 3,
+            // Second control point
+            xs[i + 1] - dxs[i] / 3,
+            ys[i + 1] - ms[i + 1] * dxs[i] / 3,
+            // End point
+            xs[i + 1],
+            ys[i + 1],
+
+            false,
+            valueData[i + 1]
+          );
+        }
+
+        return path;
+      }
+    };
+  };
+
+  /**
+   * Step interpolation will cause the line chart to move in steps rather than diagonal or smoothed lines. This interpolation will create additional points that will also be drawn when the `showPoint` option is enabled.
+   *
+   * All smoothing functions within Chartist are factory functions that accept an options parameter. The step interpolation function accepts one configuration parameter `postpone`, that can be `true` or `false`. The default value is `true` and will cause the step to occur where the value actually changes. If a different behaviour is needed where the step is shifted to the left and happens before the actual value, this option can be set to `false`.
+   *
+   * @example
+   * var chart = new Chartist.Line('.ct-chart', {
+   *   labels: [1, 2, 3, 4, 5],
+   *   series: [[1, 2, 8, 1, 7]]
+   * }, {
+   *   lineSmooth: Chartist.Interpolation.step({
+   *     postpone: true,
+   *     fillHoles: false
+   *   })
+   * });
+   *
+   * @memberof Chartist.Interpolation
+   * @param options
+   * @returns {Function}
+   */
+  Chartist.Interpolation.step = function(options) {
+    var defaultOptions = {
+      postpone: true,
+      fillHoles: false
+    };
+
+    options = Chartist.extend({}, defaultOptions, options);
+
+    return function step(pathCoordinates, valueData) {
+      var path = new Chartist.Svg.Path();
+
+      var prevX, prevY, prevData;
+
+      for (var i = 0; i < pathCoordinates.length; i += 2) {
+        var currX = pathCoordinates[i];
+        var currY = pathCoordinates[i + 1];
+        var currData = valueData[i / 2];
+
+        // If the current point is also not a hole we can draw the step lines
+        if(currData.value !== undefined) {
+          if(prevData === undefined) {
+            path.move(currX, currY, false, currData);
+          } else {
+            if(options.postpone) {
+              // If postponed we should draw the step line with the value of the previous value
+              path.line(currX, prevY, false, prevData);
+            } else {
+              // If not postponed we should draw the step line with the value of the current value
+              path.line(prevX, currY, false, currData);
+            }
+            // Line to the actual point (this should only be a Y-Axis movement
+            path.line(currX, currY, false, currData);
+          }
+
+          prevX = currX;
+          prevY = currY;
+          prevData = currData;
+        } else if(!options.fillHoles) {
+          prevX = prevY = prevData = undefined;
+        }
+      }
+
+      return path;
+    };
+  };
+
+}(window, document, Chartist));
+;/**
+ * A very basic event module that helps to generate and catch events.
+ *
+ * @module Chartist.Event
+ */
+/* global Chartist */
+(function (window, document, Chartist) {
+  'use strict';
+
+  Chartist.EventEmitter = function () {
+    var handlers = [];
+
+    /**
+     * Add an event handler for a specific event
+     *
+     * @memberof Chartist.Event
+     * @param {String} event The event name
+     * @param {Function} handler A event handler function
+     */
+    function addEventHandler(event, handler) {
+      handlers[event] = handlers[event] || [];
+      handlers[event].push(handler);
+    }
+
+    /**
+     * Remove an event handler of a specific event name or remove all event handlers for a specific event.
+     *
+     * @memberof Chartist.Event
+     * @param {String} event The event name where a specific or all handlers should be removed
+     * @param {Function} [handler] An optional event handler function. If specified only this specific handler will be removed and otherwise all handlers are removed.
+     */
+    function removeEventHandler(event, handler) {
+      // Only do something if there are event handlers with this name existing
+      if(handlers[event]) {
+        // If handler is set we will look for a specific handler and only remove this
+        if(handler) {
+          handlers[event].splice(handlers[event].indexOf(handler), 1);
+          if(handlers[event].length === 0) {
+            delete handlers[event];
+          }
+        } else {
+          // If no handler is specified we remove all handlers for this event
+          delete handlers[event];
+        }
+      }
+    }
+
+    /**
+     * Use this function to emit an event. All handlers that are listening for this event will be triggered with the data parameter.
+     *
+     * @memberof Chartist.Event
+     * @param {String} event The event name that should be triggered
+     * @param {*} data Arbitrary data that will be passed to the event handler callback functions
+     */
+    function emit(event, data) {
+      // Only do something if there are event handlers with this name existing
+      if(handlers[event]) {
+        handlers[event].forEach(function(handler) {
+          handler(data);
+        });
+      }
+
+      // Emit event to star event handlers
+      if(handlers['*']) {
+        handlers['*'].forEach(function(starHandler) {
+          starHandler(event, data);
+        });
+      }
+    }
+
+    return {
+      addEventHandler: addEventHandler,
+      removeEventHandler: removeEventHandler,
+      emit: emit
+    };
+  };
+
+}(window, document, Chartist));
+;/**
+ * This module provides some basic prototype inheritance utilities.
+ *
+ * @module Chartist.Class
+ */
+/* global Chartist */
+(function(window, document, Chartist) {
+  'use strict';
+
+  function listToArray(list) {
+    var arr = [];
+    if (list.length) {
+      for (var i = 0; i < list.length; i++) {
+        arr.push(list[i]);
+      }
+    }
+    return arr;
+  }
+
+  /**
+   * Method to extend from current prototype.
+   *
+   * @memberof Chartist.Class
+   * @param {Object} properties The object that serves as definition for the prototype that gets created for the new class. This object should always contain a constructor property that is the desired constructor for the newly created class.
+   * @param {Object} [superProtoOverride] By default extens will use the current class prototype or Chartist.class. With this parameter you can specify any super prototype that will be used.
+   * @return {Function} Constructor function of the new class
+   *
+   * @example
+   * var Fruit = Class.extend({
+     * color: undefined,
+     *   sugar: undefined,
+     *
+     *   constructor: function(color, sugar) {
+     *     this.color = color;
+     *     this.sugar = sugar;
+     *   },
+     *
+     *   eat: function() {
+     *     this.sugar = 0;
+     *     return this;
+     *   }
+     * });
+   *
+   * var Banana = Fruit.extend({
+     *   length: undefined,
+     *
+     *   constructor: function(length, sugar) {
+     *     Banana.super.constructor.call(this, 'Yellow', sugar);
+     *     this.length = length;
+     *   }
+     * });
+   *
+   * var banana = new Banana(20, 40);
+   * console.log('banana instanceof Fruit', banana instanceof Fruit);
+   * console.log('Fruit is prototype of banana', Fruit.prototype.isPrototypeOf(banana));
+   * console.log('bananas prototype is Fruit', Object.getPrototypeOf(banana) === Fruit.prototype);
+   * console.log(banana.sugar);
+   * console.log(banana.eat().sugar);
+   * console.log(banana.color);
+   */
+  function extend(properties, superProtoOverride) {
+    var superProto = superProtoOverride || this.prototype || Chartist.Class;
+    var proto = Object.create(superProto);
+
+    Chartist.Class.cloneDefinitions(proto, properties);
+
+    var constr = function() {
+      var fn = proto.constructor || function () {},
+        instance;
+
+      // If this is linked to the Chartist namespace the constructor was not called with new
+      // To provide a fallback we will instantiate here and return the instance
+      instance = this === Chartist ? Object.create(proto) : this;
+      fn.apply(instance, Array.prototype.slice.call(arguments, 0));
+
+      // If this constructor was not called with new we need to return the instance
+      // This will not harm when the constructor has been called with new as the returned value is ignored
+      return instance;
+    };
+
+    constr.prototype = proto;
+    constr.super = superProto;
+    constr.extend = this.extend;
+
+    return constr;
+  }
+
+  // Variable argument list clones args > 0 into args[0] and retruns modified args[0]
+  function cloneDefinitions() {
+    var args = listToArray(arguments);
+    var target = args[0];
+
+    args.splice(1, args.length - 1).forEach(function (source) {
+      Object.getOwnPropertyNames(source).forEach(function (propName) {
+        // If this property already exist in target we delete it first
+        delete target[propName];
+        // Define the property with the descriptor from source
+        Object.defineProperty(target, propName,
+          Object.getOwnPropertyDescriptor(source, propName));
+      });
+    });
+
+    return target;
+  }
+
+  Chartist.Class = {
+    extend: extend,
+    cloneDefinitions: cloneDefinitions
+  };
+
+}(window, document, Chartist));
+;/**
+ * Base for all chart types. The methods in Chartist.Base are inherited to all chart types.
+ *
+ * @module Chartist.Base
+ */
+/* global Chartist */
+(function(window, document, Chartist) {
+  'use strict';
+
+  // TODO: Currently we need to re-draw the chart on window resize. This is usually very bad and will affect performance.
+  // This is done because we can't work with relative coordinates when drawing the chart because SVG Path does not
+  // work with relative positions yet. We need to check if we can do a viewBox hack to switch to percentage.
+  // See http://mozilla.6506.n7.nabble.com/Specyfing-paths-with-percentages-unit-td247474.html
+  // Update: can be done using the above method tested here: http://codepen.io/gionkunz/pen/KDvLj
+  // The problem is with the label offsets that can't be converted into percentage and affecting the chart container
+  /**
+   * Updates the chart which currently does a full reconstruction of the SVG DOM
+   *
+   * @param {Object} [data] Optional data you'd like to set for the chart before it will update. If not specified the update method will use the data that is already configured with the chart.
+   * @param {Object} [options] Optional options you'd like to add to the previous options for the chart before it will update. If not specified the update method will use the options that have been already configured with the chart.
+   * @param {Boolean} [override] If set to true, the passed options will be used to extend the options that have been configured already. Otherwise the chart default options will be used as the base
+   * @memberof Chartist.Base
+   */
+  function update(data, options, override) {
+    if(data) {
+      this.data = data || {};
+      this.data.labels = this.data.labels || [];
+      this.data.series = this.data.series || [];
+      // Event for data transformation that allows to manipulate the data before it gets rendered in the charts
+      this.eventEmitter.emit('data', {
+        type: 'update',
+        data: this.data
+      });
+    }
+
+    if(options) {
+      this.options = Chartist.extend({}, override ? this.options : this.defaultOptions, options);
+
+      // If chartist was not initialized yet, we just set the options and leave the rest to the initialization
+      // Otherwise we re-create the optionsProvider at this point
+      if(!this.initializeTimeoutId) {
+        this.optionsProvider.removeMediaQueryListeners();
+        this.optionsProvider = Chartist.optionsProvider(this.options, this.responsiveOptions, this.eventEmitter);
+      }
+    }
+
+    // Only re-created the chart if it has been initialized yet
+    if(!this.initializeTimeoutId) {
+      this.createChart(this.optionsProvider.getCurrentOptions());
+    }
+
+    // Return a reference to the chart object to chain up calls
+    return this;
+  }
+
+  /**
+   * This method can be called on the API object of each chart and will un-register all event listeners that were added to other components. This currently includes a window.resize listener as well as media query listeners if any responsive options have been provided. Use this function if you need to destroy and recreate Chartist charts dynamically.
+   *
+   * @memberof Chartist.Base
+   */
+  function detach() {
+    // Only detach if initialization already occurred on this chart. If this chart still hasn't initialized (therefore
+    // the initializationTimeoutId is still a valid timeout reference, we will clear the timeout
+    if(!this.initializeTimeoutId) {
+      window.removeEventListener('resize', this.resizeListener);
+      this.optionsProvider.removeMediaQueryListeners();
+    } else {
+      window.clearTimeout(this.initializeTimeoutId);
+    }
+
+    return this;
+  }
+
+  /**
+   * Use this function to register event handlers. The handler callbacks are synchronous and will run in the main thread rather than the event loop.
+   *
+   * @memberof Chartist.Base
+   * @param {String} event Name of the event. Check the examples for supported events.
+   * @param {Function} handler The handler function that will be called when an event with the given name was emitted. This function will receive a data argument which contains event data. See the example for more details.
+   */
+  function on(event, handler) {
+    this.eventEmitter.addEventHandler(event, handler);
+    return this;
+  }
+
+  /**
+   * Use this function to un-register event handlers. If the handler function parameter is omitted all handlers for the given event will be un-registered.
+   *
+   * @memberof Chartist.Base
+   * @param {String} event Name of the event for which a handler should be removed
+   * @param {Function} [handler] The handler function that that was previously used to register a new event handler. This handler will be removed from the event handler list. If this parameter is omitted then all event handlers for the given event are removed from the list.
+   */
+  function off(event, handler) {
+    this.eventEmitter.removeEventHandler(event, handler);
+    return this;
+  }
+
+  function initialize() {
+    // Add window resize listener that re-creates the chart
+    window.addEventListener('resize', this.resizeListener);
+
+    // Obtain current options based on matching media queries (if responsive options are given)
+    // This will also register a listener that is re-creating the chart based on media changes
+    this.optionsProvider = Chartist.optionsProvider(this.options, this.responsiveOptions, this.eventEmitter);
+    // Register options change listener that will trigger a chart update
+    this.eventEmitter.addEventHandler('optionsChanged', function() {
+      this.update();
+    }.bind(this));
+
+    // Before the first chart creation we need to register us with all plugins that are configured
+    // Initialize all relevant plugins with our chart object and the plugin options specified in the config
+    if(this.options.plugins) {
+      this.options.plugins.forEach(function(plugin) {
+        if(plugin instanceof Array) {
+          plugin[0](this, plugin[1]);
+        } else {
+          plugin(this);
+        }
+      }.bind(this));
+    }
+
+    // Event for data transformation that allows to manipulate the data before it gets rendered in the charts
+    this.eventEmitter.emit('data', {
+      type: 'initial',
+      data: this.data
+    });
+
+    // Create the first chart
+    this.createChart(this.optionsProvider.getCurrentOptions());
+
+    // As chart is initialized from the event loop now we can reset our timeout reference
+    // This is important if the chart gets initialized on the same element twice
+    this.initializeTimeoutId = undefined;
+  }
+
+  /**
+   * Constructor of chart base class.
+   *
+   * @param query
+   * @param data
+   * @param defaultOptions
+   * @param options
+   * @param responsiveOptions
+   * @constructor
+   */
+  function Base(query, data, defaultOptions, options, responsiveOptions) {
+    this.container = Chartist.querySelector(query);
+    this.data = data || {};
+    this.data.labels = this.data.labels || [];
+    this.data.series = this.data.series || [];
+    this.defaultOptions = defaultOptions;
+    this.options = options;
+    this.responsiveOptions = responsiveOptions;
+    this.eventEmitter = Chartist.EventEmitter();
+    this.supportsForeignObject = Chartist.Svg.isSupported('Extensibility');
+    this.supportsAnimations = Chartist.Svg.isSupported('AnimationEventsAttribute');
+    this.resizeListener = function resizeListener(){
+      this.update();
+    }.bind(this);
+
+    if(this.container) {
+      // If chartist was already initialized in this container we are detaching all event listeners first
+      if(this.container.__chartist__) {
+        this.container.__chartist__.detach();
+      }
+
+      this.container.__chartist__ = this;
+    }
+
+    // Using event loop for first draw to make it possible to register event listeners in the same call stack where
+    // the chart was created.
+    this.initializeTimeoutId = setTimeout(initialize.bind(this), 0);
+  }
+
+  // Creating the chart base class
+  Chartist.Base = Chartist.Class.extend({
+    constructor: Base,
+    optionsProvider: undefined,
+    container: undefined,
+    svg: undefined,
+    eventEmitter: undefined,
+    createChart: function() {
+      throw new Error('Base chart type can\'t be instantiated!');
+    },
+    update: update,
+    detach: detach,
+    on: on,
+    off: off,
+    version: Chartist.version,
+    supportsForeignObject: false
+  });
+
+}(window, document, Chartist));
+;/**
+ * Chartist SVG module for simple SVG DOM abstraction
+ *
+ * @module Chartist.Svg
+ */
+/* global Chartist */
+(function(window, document, Chartist) {
+  'use strict';
+
+  /**
+   * Chartist.Svg creates a new SVG object wrapper with a starting element. You can use the wrapper to fluently create sub-elements and modify them.
+   *
+   * @memberof Chartist.Svg
+   * @constructor
+   * @param {String|Element} name The name of the SVG element to create or an SVG dom element which should be wrapped into Chartist.Svg
+   * @param {Object} attributes An object with properties that will be added as attributes to the SVG element that is created. Attributes with undefined values will not be added.
+   * @param {String} className This class or class list will be added to the SVG element
+   * @param {Object} parent The parent SVG wrapper object where this newly created wrapper and it's element will be attached to as child
+   * @param {Boolean} insertFirst If this param is set to true in conjunction with a parent element the newly created element will be added as first child element in the parent element
+   */
+  function Svg(name, attributes, className, parent, insertFirst) {
+    // If Svg is getting called with an SVG element we just return the wrapper
+    if(name instanceof Element) {
+      this._node = name;
+    } else {
+      this._node = document.createElementNS(Chartist.namespaces.svg, name);
+
+      // If this is an SVG element created then custom namespace
+      if(name === 'svg') {
+        this.attr({
+          'xmlns:ct': Chartist.namespaces.ct
+        });
+      }
+    }
+
+    if(attributes) {
+      this.attr(attributes);
+    }
+
+    if(className) {
+      this.addClass(className);
+    }
+
+    if(parent) {
+      if (insertFirst && parent._node.firstChild) {
+        parent._node.insertBefore(this._node, parent._node.firstChild);
+      } else {
+        parent._node.appendChild(this._node);
+      }
+    }
+  }
+
+  /**
+   * Set attributes on the current SVG element of the wrapper you're currently working on.
+   *
+   * @memberof Chartist.Svg
+   * @param {Object|String} attributes An object with properties that will be added as attributes to the SVG element that is created. Attributes with undefined values will not be added. If this parameter is a String then the function is used as a getter and will return the attribute value.
+   * @param {String} [ns] If specified, the attribute will be obtained using getAttributeNs. In order to write namepsaced attributes you can use the namespace:attribute notation within the attributes object.
+   * @return {Object|String} The current wrapper object will be returned so it can be used for chaining or the attribute value if used as getter function.
+   */
+  function attr(attributes, ns) {
+    if(typeof attributes === 'string') {
+      if(ns) {
+        return this._node.getAttributeNS(ns, attributes);
+      } else {
+        return this._node.getAttribute(attributes);
+      }
+    }
+
+    Object.keys(attributes).forEach(function(key) {
+      // If the attribute value is undefined we can skip this one
+      if(attributes[key] === undefined) {
+        return;
+      }
+
+      if (key.indexOf(':') !== -1) {
+        var namespacedAttribute = key.split(':');
+        this._node.setAttributeNS(Chartist.namespaces[namespacedAttribute[0]], key, attributes[key]);
+      } else {
+        this._node.setAttribute(key, attributes[key]);
+      }
+    }.bind(this));
+
+    return this;
+  }
+
+  /**
+   * Create a new SVG element whose wrapper object will be selected for further operations. This way you can also create nested groups easily.
+   *
+   * @memberof Chartist.Svg
+   * @param {String} name The name of the SVG element that should be created as child element of the currently selected element wrapper
+   * @param {Object} [attributes] An object with properties that will be added as attributes to the SVG element that is created. Attributes with undefined values will not be added.
+   * @param {String} [className] This class or class list will be added to the SVG element
+   * @param {Boolean} [insertFirst] If this param is set to true in conjunction with a parent element the newly created element will be added as first child element in the parent element
+   * @return {Chartist.Svg} Returns a Chartist.Svg wrapper object that can be used to modify the containing SVG data
+   */
+  function elem(name, attributes, className, insertFirst) {
+    return new Chartist.Svg(name, attributes, className, this, insertFirst);
+  }
+
+  /**
+   * Returns the parent Chartist.SVG wrapper object
+   *
+   * @memberof Chartist.Svg
+   * @return {Chartist.Svg} Returns a Chartist.Svg wrapper around the parent node of the current node. If the parent node is not existing or it's not an SVG node then this function will return null.
+   */
+  function parent() {
+    return this._node.parentNode instanceof SVGElement ? new Chartist.Svg(this._node.parentNode) : null;
+  }
+
+  /**
+   * This method returns a Chartist.Svg wrapper around the root SVG element of the current tree.
+   *
+   * @memberof Chartist.Svg
+   * @return {Chartist.Svg} The root SVG element wrapped in a Chartist.Svg element
+   */
+  function root() {
+    var node = this._node;
+    while(node.nodeName !== 'svg') {
+      node = node.parentNode;
+    }
+    return new Chartist.Svg(node);
+  }
+
+  /**
+   * Find the first child SVG element of the current element that matches a CSS selector. The returned object is a Chartist.Svg wrapper.
+   *
+   * @memberof Chartist.Svg
+   * @param {String} selector A CSS selector that is used to query for child SVG elements
+   * @return {Chartist.Svg} The SVG wrapper for the element found or null if no element was found
+   */
+  function querySelector(selector) {
+    var foundNode = this._node.querySelector(selector);
+    return foundNode ? new Chartist.Svg(foundNode) : null;
+  }
+
+  /**
+   * Find the all child SVG elements of the current element that match a CSS selector. The returned object is a Chartist.Svg.List wrapper.
+   *
+   * @memberof Chartist.Svg
+   * @param {String} selector A CSS selector that is used to query for child SVG elements
+   * @return {Chartist.Svg.List} The SVG wrapper list for the element found or null if no element was found
+   */
+  function querySelectorAll(selector) {
+    var foundNodes = this._node.querySelectorAll(selector);
+    return foundNodes.length ? new Chartist.Svg.List(foundNodes) : null;
+  }
+
+  /**
+   * Returns the underlying SVG node for the current element.
+   *
+   * @memberof Chartist.Svg
+   * @returns {Node}
+   */
+  function getNode() {
+    return this._node;
+  }
+
+  /**
+   * This method creates a foreignObject (see https://developer.mozilla.org/en-US/docs/Web/SVG/Element/foreignObject) that allows to embed HTML content into a SVG graphic. With the help of foreignObjects you can enable the usage of regular HTML elements inside of SVG where they are subject for SVG positioning and transformation but the Browser will use the HTML rendering capabilities for the containing DOM.
+   *
+   * @memberof Chartist.Svg
+   * @param {Node|String} content The DOM Node, or HTML string that will be converted to a DOM Node, that is then placed into and wrapped by the foreignObject
+   * @param {String} [attributes] An object with properties that will be added as attributes to the foreignObject element that is created. Attributes with undefined values will not be added.
+   * @param {String} [className] This class or class list will be added to the SVG element
+   * @param {Boolean} [insertFirst] Specifies if the foreignObject should be inserted as first child
+   * @return {Chartist.Svg} New wrapper object that wraps the foreignObject element
+   */
+  function foreignObject(content, attributes, className, insertFirst) {
+    // If content is string then we convert it to DOM
+    // TODO: Handle case where content is not a string nor a DOM Node
+    if(typeof content === 'string') {
+      var container = document.createElement('div');
+      container.innerHTML = content;
+      content = container.firstChild;
+    }
+
+    // Adding namespace to content element
+    content.setAttribute('xmlns', Chartist.namespaces.xmlns);
+
+    // Creating the foreignObject without required extension attribute (as described here
+    // http://www.w3.org/TR/SVG/extend.html#ForeignObjectElement)
+    var fnObj = this.elem('foreignObject', attributes, className, insertFirst);
+
+    // Add content to foreignObjectElement
+    fnObj._node.appendChild(content);
+
+    return fnObj;
+  }
+
+  /**
+   * This method adds a new text element to the current Chartist.Svg wrapper.
+   *
+   * @memberof Chartist.Svg
+   * @param {String} t The text that should be added to the text element that is created
+   * @return {Chartist.Svg} The same wrapper object that was used to add the newly created element
+   */
+  function text(t) {
+    this._node.appendChild(document.createTextNode(t));
+    return this;
+  }
+
+  /**
+   * This method will clear all child nodes of the current wrapper object.
+   *
+   * @memberof Chartist.Svg
+   * @return {Chartist.Svg} The same wrapper object that got emptied
+   */
+  function empty() {
+    while (this._node.firstChild) {
+      this._node.removeChild(this._node.firstChild);
+    }
+
+    return this;
+  }
+
+  /**
+   * This method will cause the current wrapper to remove itself from its parent wrapper. Use this method if you'd like to get rid of an element in a given DOM structure.
+   *
+   * @memberof Chartist.Svg
+   * @return {Chartist.Svg} The parent wrapper object of the element that got removed
+   */
+  function remove() {
+    this._node.parentNode.removeChild(this._node);
+    return this.parent();
+  }
+
+  /**
+   * This method will replace the element with a new element that can be created outside of the current DOM.
+   *
+   * @memberof Chartist.Svg
+   * @param {Chartist.Svg} newElement The new Chartist.Svg object that will be used to replace the current wrapper object
+   * @return {Chartist.Svg} The wrapper of the new element
+   */
+  function replace(newElement) {
+    this._node.parentNode.replaceChild(newElement._node, this._node);
+    return newElement;
+  }
+
+  /**
+   * This method will append an element to the current element as a child.
+   *
+   * @memberof Chartist.Svg
+   * @param {Chartist.Svg} element The Chartist.Svg element that should be added as a child
+   * @param {Boolean} [insertFirst] Specifies if the element should be inserted as first child
+   * @return {Chartist.Svg} The wrapper of the appended object
+   */
+  function append(element, insertFirst) {
+    if(insertFirst && this._node.firstChild) {
+      this._node.insertBefore(element._node, this._node.firstChild);
+    } else {
+      this._node.appendChild(element._node);
+    }
+
+    return this;
+  }
+
+  /**
+   * Returns an array of class names that are attached to the current wrapper element. This method can not be chained further.
+   *
+   * @memberof Chartist.Svg
+   * @return {Array} A list of classes or an empty array if there are no classes on the current element
+   */
+  function classes() {
+    return this._node.getAttribute('class') ? this._node.getAttribute('class').trim().split(/\s+/) : [];
+  }
+
+  /**
+   * Adds one or a space separated list of classes to the current element and ensures the classes are only existing once.
+   *
+   * @memberof Chartist.Svg
+   * @param {String} names A white space separated list of class names
+   * @return {Chartist.Svg} The wrapper of the current element
+   */
+  function addClass(names) {
+    this._node.setAttribute('class',
+      this.classes(this._node)
+        .concat(names.trim().split(/\s+/))
+        .filter(function(elem, pos, self) {
+          return self.indexOf(elem) === pos;
+        }).join(' ')
+    );
+
+    return this;
+  }
+
+  /**
+   * Removes one or a space separated list of classes from the current element.
+   *
+   * @memberof Chartist.Svg
+   * @param {String} names A white space separated list of class names
+   * @return {Chartist.Svg} The wrapper of the current element
+   */
+  function removeClass(names) {
+    var removedClasses = names.trim().split(/\s+/);
+
+    this._node.setAttribute('class', this.classes(this._node).filter(function(name) {
+      return removedClasses.indexOf(name) === -1;
+    }).join(' '));
+
+    return this;
+  }
+
+  /**
+   * Removes all classes from the current element.
+   *
+   * @memberof Chartist.Svg
+   * @return {Chartist.Svg} The wrapper of the current element
+   */
+  function removeAllClasses() {
+    this._node.setAttribute('class', '');
+
+    return this;
+  }
+
+  /**
+   * Get element height using `getBoundingClientRect`
+   *
+   * @memberof Chartist.Svg
+   * @return {Number} The elements height in pixels
+   */
+  function height() {
+    return this._node.getBoundingClientRect().height;
+  }
+
+  /**
+   * Get element width using `getBoundingClientRect`
+   *
+   * @memberof Chartist.Core
+   * @return {Number} The elements width in pixels
+   */
+  function width() {
+    return this._node.getBoundingClientRect().width;
+  }
+
+  /**
+   * The animate function lets you animate the current element with SMIL animations. You can add animations for multiple attributes at the same time by using an animation definition object. This object should contain SMIL animation attributes. Please refer to http://www.w3.org/TR/SVG/animate.html for a detailed specification about the available animation attributes. Additionally an easing property can be passed in the animation definition object. This can be a string with a name of an easing function in `Chartist.Svg.Easing` or an array with four numbers specifying a cubic Bézier curve.
+   * **An animations object could look like this:**
+   * ```javascript
+   * element.animate({
+   *   opacity: {
+   *     dur: 1000,
+   *     from: 0,
+   *     to: 1
+   *   },
+   *   x1: {
+   *     dur: '1000ms',
+   *     from: 100,
+   *     to: 200,
+   *     easing: 'easeOutQuart'
+   *   },
+   *   y1: {
+   *     dur: '2s',
+   *     from: 0,
+   *     to: 100
+   *   }
+   * });
+   * ```
+   * **Automatic unit conversion**
+   * For the `dur` and the `begin` animate attribute you can also omit a unit by passing a number. The number will automatically be converted to milli seconds.
+   * **Guided mode**
+   * The default behavior of SMIL animations with offset using the `begin` attribute is that the attribute will keep it's original value until the animation starts. Mostly this behavior is not desired as you'd like to have your element attributes already initialized with the animation `from` value even before the animation starts. Also if you don't specify `fill="freeze"` on an animate element or if you delete the animation after it's done (which is done in guided mode) the attribute will switch back to the initial value. This behavior is also not desired when performing simple one-time animations. For one-time animations you'd want to trigger animations immediately instead of relative to the document begin time. That's why in guided mode Chartist.Svg will also use the `begin` property to schedule a timeout and manually start the animation after the timeout. If you're using multiple SMIL definition objects for an attribute (in an array), guided mode will be disabled for this attribute, even if you explicitly enabled it.
+   * If guided mode is enabled the following behavior is added:
+   * - Before the animation starts (even when delayed with `begin`) the animated attribute will be set already to the `from` value of the animation
+   * - `begin` is explicitly set to `indefinite` so it can be started manually without relying on document begin time (creation)
+   * - The animate element will be forced to use `fill="freeze"`
+   * - The animation will be triggered with `beginElement()` in a timeout where `begin` of the definition object is interpreted in milli seconds. If no `begin` was specified the timeout is triggered immediately.
+   * - After the animation the element attribute value will be set to the `to` value of the animation
+   * - The animate element is deleted from the DOM
+   *
+   * @memberof Chartist.Svg
+   * @param {Object} animations An animations object where the property keys are the attributes you'd like to animate. The properties should be objects again that contain the SMIL animation attributes (usually begin, dur, from, and to). The property begin and dur is auto converted (see Automatic unit conversion). You can also schedule multiple animations for the same attribute by passing an Array of SMIL definition objects. Attributes that contain an array of SMIL definition objects will not be executed in guided mode.
+   * @param {Boolean} guided Specify if guided mode should be activated for this animation (see Guided mode). If not otherwise specified, guided mode will be activated.
+   * @param {Object} eventEmitter If specified, this event emitter will be notified when an animation starts or ends.
+   * @return {Chartist.Svg} The current element where the animation was added
+   */
+  function animate(animations, guided, eventEmitter) {
+    if(guided === undefined) {
+      guided = true;
+    }
+
+    Object.keys(animations).forEach(function createAnimateForAttributes(attribute) {
+
+      function createAnimate(animationDefinition, guided) {
+        var attributeProperties = {},
+          animate,
+          timeout,
+          easing;
+
+        // Check if an easing is specified in the definition object and delete it from the object as it will not
+        // be part of the animate element attributes.
+        if(animationDefinition.easing) {
+          // If already an easing Bézier curve array we take it or we lookup a easing array in the Easing object
+          easing = animationDefinition.easing instanceof Array ?
+            animationDefinition.easing :
+            Chartist.Svg.Easing[animationDefinition.easing];
+          delete animationDefinition.easing;
+        }
+
+        // If numeric dur or begin was provided we assume milli seconds
+        animationDefinition.begin = Chartist.ensureUnit(animationDefinition.begin, 'ms');
+        animationDefinition.dur = Chartist.ensureUnit(animationDefinition.dur, 'ms');
+
+        if(easing) {
+          animationDefinition.calcMode = 'spline';
+          animationDefinition.keySplines = easing.join(' ');
+          animationDefinition.keyTimes = '0;1';
+        }
+
+        // Adding "fill: freeze" if we are in guided mode and set initial attribute values
+        if(guided) {
+          animationDefinition.fill = 'freeze';
+          // Animated property on our element should already be set to the animation from value in guided mode
+          attributeProperties[attribute] = animationDefinition.from;
+          this.attr(attributeProperties);
+
+          // In guided mode we also set begin to indefinite so we can trigger the start manually and put the begin
+          // which needs to be in ms aside
+          timeout = Chartist.quantity(animationDefinition.begin || 0).value;
+          animationDefinition.begin = 'indefinite';
+        }
+
+        animate = this.elem('animate', Chartist.extend({
+          attributeName: attribute
+        }, animationDefinition));
+
+        if(guided) {
+          // If guided we take the value that was put aside in timeout and trigger the animation manually with a timeout
+          setTimeout(function() {
+            // If beginElement fails we set the animated attribute to the end position and remove the animate element
+            // This happens if the SMIL ElementTimeControl interface is not supported or any other problems occured in
+            // the browser. (Currently FF 34 does not support animate elements in foreignObjects)
+            try {
+              animate._node.beginElement();
+            } catch(err) {
+              // Set animated attribute to current animated value
+              attributeProperties[attribute] = animationDefinition.to;
+              this.attr(attributeProperties);
+              // Remove the animate element as it's no longer required
+              animate.remove();
+            }
+          }.bind(this), timeout);
+        }
+
+        if(eventEmitter) {
+          animate._node.addEventListener('beginEvent', function handleBeginEvent() {
+            eventEmitter.emit('animationBegin', {
+              element: this,
+              animate: animate._node,
+              params: animationDefinition
+            });
+          }.bind(this));
+        }
+
+        animate._node.addEventListener('endEvent', function handleEndEvent() {
+          if(eventEmitter) {
+            eventEmitter.emit('animationEnd', {
+              element: this,
+              animate: animate._node,
+              params: animationDefinition
+            });
+          }
+
+          if(guided) {
+            // Set animated attribute to current animated value
+            attributeProperties[attribute] = animationDefinition.to;
+            this.attr(attributeProperties);
+            // Remove the animate element as it's no longer required
+            animate.remove();
+          }
+        }.bind(this));
+      }
+
+      // If current attribute is an array of definition objects we create an animate for each and disable guided mode
+      if(animations[attribute] instanceof Array) {
+        animations[attribute].forEach(function(animationDefinition) {
+          createAnimate.bind(this)(animationDefinition, false);
+        }.bind(this));
+      } else {
+        createAnimate.bind(this)(animations[attribute], guided);
+      }
+
+    }.bind(this));
+
+    return this;
+  }
+
+  Chartist.Svg = Chartist.Class.extend({
+    constructor: Svg,
+    attr: attr,
+    elem: elem,
+    parent: parent,
+    root: root,
+    querySelector: querySelector,
+    querySelectorAll: querySelectorAll,
+    getNode: getNode,
+    foreignObject: foreignObject,
+    text: text,
+    empty: empty,
+    remove: remove,
+    replace: replace,
+    append: append,
+    classes: classes,
+    addClass: addClass,
+    removeClass: removeClass,
+    removeAllClasses: removeAllClasses,
+    height: height,
+    width: width,
+    animate: animate
+  });
+
+  /**
+   * This method checks for support of a given SVG feature like Extensibility, SVG-animation or the like. Check http://www.w3.org/TR/SVG11/feature for a detailed list.
+   *
+   * @memberof Chartist.Svg
+   * @param {String} feature The SVG 1.1 feature that should be checked for support.
+   * @return {Boolean} True of false if the feature is supported or not
+   */
+  Chartist.Svg.isSupported = function(feature) {
+    return document.implementation.hasFeature('http://www.w3.org/TR/SVG11/feature#' + feature, '1.1');
+  };
+
+  /**
+   * This Object contains some standard easing cubic bezier curves. Then can be used with their name in the `Chartist.Svg.animate`. You can also extend the list and use your own name in the `animate` function. Click the show code button to see the available bezier functions.
+   *
+   * @memberof Chartist.Svg
+   */
+  var easingCubicBeziers = {
+    easeInSine: [0.47, 0, 0.745, 0.715],
+    easeOutSine: [0.39, 0.575, 0.565, 1],
+    easeInOutSine: [0.445, 0.05, 0.55, 0.95],
+    easeInQuad: [0.55, 0.085, 0.68, 0.53],
+    easeOutQuad: [0.25, 0.46, 0.45, 0.94],
+    easeInOutQuad: [0.455, 0.03, 0.515, 0.955],
+    easeInCubic: [0.55, 0.055, 0.675, 0.19],
+    easeOutCubic: [0.215, 0.61, 0.355, 1],
+    easeInOutCubic: [0.645, 0.045, 0.355, 1],
+    easeInQuart: [0.895, 0.03, 0.685, 0.22],
+    easeOutQuart: [0.165, 0.84, 0.44, 1],
+    easeInOutQuart: [0.77, 0, 0.175, 1],
+    easeInQuint: [0.755, 0.05, 0.855, 0.06],
+    easeOutQuint: [0.23, 1, 0.32, 1],
+    easeInOutQuint: [0.86, 0, 0.07, 1],
+    easeInExpo: [0.95, 0.05, 0.795, 0.035],
+    easeOutExpo: [0.19, 1, 0.22, 1],
+    easeInOutExpo: [1, 0, 0, 1],
+    easeInCirc: [0.6, 0.04, 0.98, 0.335],
+    easeOutCirc: [0.075, 0.82, 0.165, 1],
+    easeInOutCirc: [0.785, 0.135, 0.15, 0.86],
+    easeInBack: [0.6, -0.28, 0.735, 0.045],
+    easeOutBack: [0.175, 0.885, 0.32, 1.275],
+    easeInOutBack: [0.68, -0.55, 0.265, 1.55]
+  };
+
+  Chartist.Svg.Easing = easingCubicBeziers;
+
+  /**
+   * This helper class is to wrap multiple `Chartist.Svg` elements into a list where you can call the `Chartist.Svg` functions on all elements in the list with one call. This is helpful when you'd like to perform calls with `Chartist.Svg` on multiple elements.
+   * An instance of this class is also returned by `Chartist.Svg.querySelectorAll`.
+   *
+   * @memberof Chartist.Svg
+   * @param {Array<Node>|NodeList} nodeList An Array of SVG DOM nodes or a SVG DOM NodeList (as returned by document.querySelectorAll)
+   * @constructor
+   */
+  function SvgList(nodeList) {
+    var list = this;
+
+    this.svgElements = [];
+    for(var i = 0; i < nodeList.length; i++) {
+      this.svgElements.push(new Chartist.Svg(nodeList[i]));
+    }
+
+    // Add delegation methods for Chartist.Svg
+    Object.keys(Chartist.Svg.prototype).filter(function(prototypeProperty) {
+      return ['constructor',
+          'parent',
+          'querySelector',
+          'querySelectorAll',
+          'replace',
+          'append',
+          'classes',
+          'height',
+          'width'].indexOf(prototypeProperty) === -1;
+    }).forEach(function(prototypeProperty) {
+      list[prototypeProperty] = function() {
+        var args = Array.prototype.slice.call(arguments, 0);
+        list.svgElements.forEach(function(element) {
+          Chartist.Svg.prototype[prototypeProperty].apply(element, args);
+        });
+        return list;
+      };
+    });
+  }
+
+  Chartist.Svg.List = Chartist.Class.extend({
+    constructor: SvgList
+  });
+}(window, document, Chartist));
+;/**
+ * Chartist SVG path module for SVG path description creation and modification.
+ *
+ * @module Chartist.Svg.Path
+ */
+/* global Chartist */
+(function(window, document, Chartist) {
+  'use strict';
+
+  /**
+   * Contains the descriptors of supported element types in a SVG path. Currently only move, line and curve are supported.
+   *
+   * @memberof Chartist.Svg.Path
+   * @type {Object}
+   */
+  var elementDescriptions = {
+    m: ['x', 'y'],
+    l: ['x', 'y'],
+    c: ['x1', 'y1', 'x2', 'y2', 'x', 'y'],
+    a: ['rx', 'ry', 'xAr', 'lAf', 'sf', 'x', 'y']
+  };
+
+  /**
+   * Default options for newly created SVG path objects.
+   *
+   * @memberof Chartist.Svg.Path
+   * @type {Object}
+   */
+  var defaultOptions = {
+    // The accuracy in digit count after the decimal point. This will be used to round numbers in the SVG path. If this option is set to false then no rounding will be performed.
+    accuracy: 3
+  };
+
+  function element(command, params, pathElements, pos, relative, data) {
+    var pathElement = Chartist.extend({
+      command: relative ? command.toLowerCase() : command.toUpperCase()
+    }, params, data ? { data: data } : {} );
+
+    pathElements.splice(pos, 0, pathElement);
+  }
+
+  function forEachParam(pathElements, cb) {
+    pathElements.forEach(function(pathElement, pathElementIndex) {
+      elementDescriptions[pathElement.command.toLowerCase()].forEach(function(paramName, paramIndex) {
+        cb(pathElement, paramName, pathElementIndex, paramIndex, pathElements);
+      });
+    });
+  }
+
+  /**
+   * Used to construct a new path object.
+   *
+   * @memberof Chartist.Svg.Path
+   * @param {Boolean} close If set to true then this path will be closed when stringified (with a Z at the end)
+   * @param {Object} options Options object that overrides the default objects. See default options for more details.
+   * @constructor
+   */
+  function SvgPath(close, options) {
+    this.pathElements = [];
+    this.pos = 0;
+    this.close = close;
+    this.options = Chartist.extend({}, defaultOptions, options);
+  }
+
+  /**
+   * Gets or sets the current position (cursor) inside of the path. You can move around the cursor freely but limited to 0 or the count of existing elements. All modifications with element functions will insert new elements at the position of this cursor.
+   *
+   * @memberof Chartist.Svg.Path
+   * @param {Number} [pos] If a number is passed then the cursor is set to this position in the path element array.
+   * @return {Chartist.Svg.Path|Number} If the position parameter was passed then the return value will be the path object for easy call chaining. If no position parameter was passed then the current position is returned.
+   */
+  function position(pos) {
+    if(pos !== undefined) {
+      this.pos = Math.max(0, Math.min(this.pathElements.length, pos));
+      return this;
+    } else {
+      return this.pos;
+    }
+  }
+
+  /**
+   * Removes elements from the path starting at the current position.
+   *
+   * @memberof Chartist.Svg.Path
+   * @param {Number} count Number of path elements that should be removed from the current position.
+   * @return {Chartist.Svg.Path} The current path object for easy call chaining.
+   */
+  function remove(count) {
+    this.pathElements.splice(this.pos, count);
+    return this;
+  }
+
+  /**
+   * Use this function to add a new move SVG path element.
+   *
+   * @memberof Chartist.Svg.Path
+   * @param {Number} x The x coordinate for the move element.
+   * @param {Number} y The y coordinate for the move element.
+   * @param {Boolean} [relative] If set to true the move element will be created with relative coordinates (lowercase letter)
+   * @param {*} [data] Any data that should be stored with the element object that will be accessible in pathElement
+   * @return {Chartist.Svg.Path} The current path object for easy call chaining.
+   */
+  function move(x, y, relative, data) {
+    element('M', {
+      x: +x,
+      y: +y
+    }, this.pathElements, this.pos++, relative, data);
+    return this;
+  }
+
+  /**
+   * Use this function to add a new line SVG path element.
+   *
+   * @memberof Chartist.Svg.Path
+   * @param {Number} x The x coordinate for the line element.
+   * @param {Number} y The y coordinate for the line element.
+   * @param {Boolean} [relative] If set to true the line element will be created with relative coordinates (lowercase letter)
+   * @param {*} [data] Any data that should be stored with the element object that will be accessible in pathElement
+   * @return {Chartist.Svg.Path} The current path object for easy call chaining.
+   */
+  function line(x, y, relative, data) {
+    element('L', {
+      x: +x,
+      y: +y
+    }, this.pathElements, this.pos++, relative, data);
+    return this;
+  }
+
+  /**
+   * Use this function to add a new curve SVG path element.
+   *
+   * @memberof Chartist.Svg.Path
+   * @param {Number} x1 The x coordinate for the first control point of the bezier curve.
+   * @param {Number} y1 The y coordinate for the first control point of the bezier curve.
+   * @param {Number} x2 The x coordinate for the second control point of the bezier curve.
+   * @param {Number} y2 The y coordinate for the second control point of the bezier curve.
+   * @param {Number} x The x coordinate for the target point of the curve element.
+   * @param {Number} y The y coordinate for the target point of the curve element.
+   * @param {Boolean} [relative] If set to true the curve element will be created with relative coordinates (lowercase letter)
+   * @param {*} [data] Any data that should be stored with the element object that will be accessible in pathElement
+   * @return {Chartist.Svg.Path} The current path object for easy call chaining.
+   */
+  function curve(x1, y1, x2, y2, x, y, relative, data) {
+    element('C', {
+      x1: +x1,
+      y1: +y1,
+      x2: +x2,
+      y2: +y2,
+      x: +x,
+      y: +y
+    }, this.pathElements, this.pos++, relative, data);
+    return this;
+  }
+
+  /**
+   * Use this function to add a new non-bezier curve SVG path element.
+   *
+   * @memberof Chartist.Svg.Path
+   * @param {Number} rx The radius to be used for the x-axis of the arc.
+   * @param {Number} ry The radius to be used for the y-axis of the arc.
+   * @param {Number} xAr Defines the orientation of the arc
+   * @param {Number} lAf Large arc flag
+   * @param {Number} sf Sweep flag
+   * @param {Number} x The x coordinate for the target point of the curve element.
+   * @param {Number} y The y coordinate for the target point of the curve element.
+   * @param {Boolean} [relative] If set to true the curve element will be created with relative coordinates (lowercase letter)
+   * @param {*} [data] Any data that should be stored with the element object that will be accessible in pathElement
+   * @return {Chartist.Svg.Path} The current path object for easy call chaining.
+   */
+  function arc(rx, ry, xAr, lAf, sf, x, y, relative, data) {
+    element('A', {
+      rx: +rx,
+      ry: +ry,
+      xAr: +xAr,
+      lAf: +lAf,
+      sf: +sf,
+      x: +x,
+      y: +y
+    }, this.pathElements, this.pos++, relative, data);
+    return this;
+  }
+
+  /**
+   * Parses an SVG path seen in the d attribute of path elements, and inserts the parsed elements into the existing path object at the current cursor position. Any closing path indicators (Z at the end of the path) will be ignored by the parser as this is provided by the close option in the options of the path object.
+   *
+   * @memberof Chartist.Svg.Path
+   * @param {String} path Any SVG path that contains move (m), line (l) or curve (c) components.
+   * @return {Chartist.Svg.Path} The current path object for easy call chaining.
+   */
+  function parse(path) {
+    // Parsing the SVG path string into an array of arrays [['M', '10', '10'], ['L', '100', '100']]
+    var chunks = path.replace(/([A-Za-z])([0-9])/g, '$1 $2')
+      .replace(/([0-9])([A-Za-z])/g, '$1 $2')
+      .split(/[\s,]+/)
+      .reduce(function(result, element) {
+        if(element.match(/[A-Za-z]/)) {
+          result.push([]);
+        }
+
+        result[result.length - 1].push(element);
+        return result;
+      }, []);
+
+    // If this is a closed path we remove the Z at the end because this is determined by the close option
+    if(chunks[chunks.length - 1][0].toUpperCase() === 'Z') {
+      chunks.pop();
+    }
+
+    // Using svgPathElementDescriptions to map raw path arrays into objects that contain the command and the parameters
+    // For example {command: 'M', x: '10', y: '10'}
+    var elements = chunks.map(function(chunk) {
+        var command = chunk.shift(),
+          description = elementDescriptions[command.toLowerCase()];
+
+        return Chartist.extend({
+          command: command
+        }, description.reduce(function(result, paramName, index) {
+          result[paramName] = +chunk[index];
+          return result;
+        }, {}));
+      });
+
+    // Preparing a splice call with the elements array as var arg params and insert the parsed elements at the current position
+    var spliceArgs = [this.pos, 0];
+    Array.prototype.push.apply(spliceArgs, elements);
+    Array.prototype.splice.apply(this.pathElements, spliceArgs);
+    // Increase the internal position by the element count
+    this.pos += elements.length;
+
+    return this;
+  }
+
+  /**
+   * This function renders to current SVG path object into a final SVG string that can be used in the d attribute of SVG path elements. It uses the accuracy option to round big decimals. If the close parameter was set in the constructor of this path object then a path closing Z will be appended to the output string.
+   *
+   * @memberof Chartist.Svg.Path
+   * @return {String}
+   */
+  function stringify() {
+    var accuracyMultiplier = Math.pow(10, this.options.accuracy);
+
+    return this.pathElements.reduce(function(path, pathElement) {
+        var params = elementDescriptions[pathElement.command.toLowerCase()].map(function(paramName) {
+          return this.options.accuracy ?
+            (Math.round(pathElement[paramName] * accuracyMultiplier) / accuracyMultiplier) :
+            pathElement[paramName];
+        }.bind(this));
+
+        return path + pathElement.command + params.join(',');
+      }.bind(this), '') + (this.close ? 'Z' : '');
+  }
+
+  /**
+   * Scales all elements in the current SVG path object. There is an individual parameter for each coordinate. Scaling will also be done for control points of curves, affecting the given coordinate.
+   *
+   * @memberof Chartist.Svg.Path
+   * @param {Number} x The number which will be used to scale the x, x1 and x2 of all path elements.
+   * @param {Number} y The number which will be used to scale the y, y1 and y2 of all path elements.
+   * @return {Chartist.Svg.Path} The current path object for easy call chaining.
+   */
+  function scale(x, y) {
+    forEachParam(this.pathElements, function(pathElement, paramName) {
+      pathElement[paramName] *= paramName[0] === 'x' ? x : y;
+    });
+    return this;
+  }
+
+  /**
+   * Translates all elements in the current SVG path object. The translation is relative and there is an individual parameter for each coordinate. Translation will also be done for control points of curves, affecting the given coordinate.
+   *
+   * @memberof Chartist.Svg.Path
+   * @param {Number} x The number which will be used to translate the x, x1 and x2 of all path elements.
+   * @param {Number} y The number which will be used to translate the y, y1 and y2 of all path elements.
+   * @return {Chartist.Svg.Path} The current path object for easy call chaining.
+   */
+  function translate(x, y) {
+    forEachParam(this.pathElements, function(pathElement, paramName) {
+      pathElement[paramName] += paramName[0] === 'x' ? x : y;
+    });
+    return this;
+  }
+
+  /**
+   * This function will run over all existing path elements and then loop over their attributes. The callback function will be called for every path element attribute that exists in the current path.
+   * The method signature of the callback function looks like this:
+   * ```javascript
+   * function(pathElement, paramName, pathElementIndex, paramIndex, pathElements)
+   * ```
+   * If something else than undefined is returned by the callback function, this value will be used to replace the old value. This allows you to build custom transformations of path objects that can't be achieved using the basic transformation functions scale and translate.
+   *
+   * @memberof Chartist.Svg.Path
+   * @param {Function} transformFnc The callback function for the transformation. Check the signature in the function description.
+   * @return {Chartist.Svg.Path} The current path object for easy call chaining.
+   */
+  function transform(transformFnc) {
+    forEachParam(this.pathElements, function(pathElement, paramName, pathElementIndex, paramIndex, pathElements) {
+      var transformed = transformFnc(pathElement, paramName, pathElementIndex, paramIndex, pathElements);
+      if(transformed || transformed === 0) {
+        pathElement[paramName] = transformed;
+      }
+    });
+    return this;
+  }
+
+  /**
+   * This function clones a whole path object with all its properties. This is a deep clone and path element objects will also be cloned.
+   *
+   * @memberof Chartist.Svg.Path
+   * @param {Boolean} [close] Optional option to set the new cloned path to closed. If not specified or false, the original path close option will be used.
+   * @return {Chartist.Svg.Path}
+   */
+  function clone(close) {
+    var c = new Chartist.Svg.Path(close || this.close);
+    c.pos = this.pos;
+    c.pathElements = this.pathElements.slice().map(function cloneElements(pathElement) {
+      return Chartist.extend({}, pathElement);
+    });
+    c.options = Chartist.extend({}, this.options);
+    return c;
+  }
+
+  /**
+   * Split a Svg.Path object by a specific command in the path chain. The path chain will be split and an array of newly created paths objects will be returned. This is useful if you'd like to split an SVG path by it's move commands, for example, in order to isolate chunks of drawings.
+   *
+   * @memberof Chartist.Svg.Path
+   * @param {String} command The command you'd like to use to split the path
+   * @return {Array<Chartist.Svg.Path>}
+   */
+  function splitByCommand(command) {
+    var split = [
+      new Chartist.Svg.Path()
+    ];
+
+    this.pathElements.forEach(function(pathElement) {
+      if(pathElement.command === command.toUpperCase() && split[split.length - 1].pathElements.length !== 0) {
+        split.push(new Chartist.Svg.Path());
+      }
+
+      split[split.length - 1].pathElements.push(pathElement);
+    });
+
+    return split;
+  }
+
+  /**
+   * This static function on `Chartist.Svg.Path` is joining multiple paths together into one paths.
+   *
+   * @memberof Chartist.Svg.Path
+   * @param {Array<Chartist.Svg.Path>} paths A list of paths to be joined together. The order is important.
+   * @param {boolean} close If the newly created path should be a closed path
+   * @param {Object} options Path options for the newly created path.
+   * @return {Chartist.Svg.Path}
+   */
+
+  function join(paths, close, options) {
+    var joinedPath = new Chartist.Svg.Path(close, options);
+    for(var i = 0; i < paths.length; i++) {
+      var path = paths[i];
+      for(var j = 0; j < path.pathElements.length; j++) {
+        joinedPath.pathElements.push(path.pathElements[j]);
+      }
+    }
+    return joinedPath;
+  }
+
+  Chartist.Svg.Path = Chartist.Class.extend({
+    constructor: SvgPath,
+    position: position,
+    remove: remove,
+    move: move,
+    line: line,
+    curve: curve,
+    arc: arc,
+    scale: scale,
+    translate: translate,
+    transform: transform,
+    parse: parse,
+    stringify: stringify,
+    clone: clone,
+    splitByCommand: splitByCommand
+  });
+
+  Chartist.Svg.Path.elementDescriptions = elementDescriptions;
+  Chartist.Svg.Path.join = join;
+}(window, document, Chartist));
+;/* global Chartist */
+(function (window, document, Chartist) {
+  'use strict';
+
+  var axisUnits = {
+    x: {
+      pos: 'x',
+      len: 'width',
+      dir: 'horizontal',
+      rectStart: 'x1',
+      rectEnd: 'x2',
+      rectOffset: 'y2'
+    },
+    y: {
+      pos: 'y',
+      len: 'height',
+      dir: 'vertical',
+      rectStart: 'y2',
+      rectEnd: 'y1',
+      rectOffset: 'x1'
+    }
+  };
+
+  function Axis(units, chartRect, ticks, options) {
+    this.units = units;
+    this.counterUnits = units === axisUnits.x ? axisUnits.y : axisUnits.x;
+    this.chartRect = chartRect;
+    this.axisLength = chartRect[units.rectEnd] - chartRect[units.rectStart];
+    this.gridOffset = chartRect[units.rectOffset];
+    this.ticks = ticks;
+    this.options = options;
+  }
+
+  function createGridAndLabels(gridGroup, labelGroup, useForeignObject, chartOptions, eventEmitter) {
+    var axisOptions = chartOptions['axis' + this.units.pos.toUpperCase()];
+    var projectedValues = this.ticks.map(this.projectValue.bind(this));
+    var labelValues = this.ticks.map(axisOptions.labelInterpolationFnc);
+
+    projectedValues.forEach(function(projectedValue, index) {
+      var labelOffset = {
+        x: 0,
+        y: 0
+      };
+
+      // TODO: Find better solution for solving this problem
+      // Calculate how much space we have available for the label
+      var labelLength;
+      if(projectedValues[index + 1]) {
+        // If we still have one label ahead, we can calculate the distance to the next tick / label
+        labelLength = projectedValues[index + 1] - projectedValue;
+      } else {
+        // If we don't have a label ahead and we have only two labels in total, we just take the remaining distance to
+        // on the whole axis length. We limit that to a minimum of 30 pixel, so that labels close to the border will
+        // still be visible inside of the chart padding.
+        labelLength = Math.max(this.axisLength - projectedValue, 30);
+      }
+
+      // Skip grid lines and labels where interpolated label values are falsey (execpt for 0)
+      if(Chartist.isFalseyButZero(labelValues[index]) && labelValues[index] !== '') {
+        return;
+      }
+
+      // Transform to global coordinates using the chartRect
+      // We also need to set the label offset for the createLabel function
+      if(this.units.pos === 'x') {
+        projectedValue = this.chartRect.x1 + projectedValue;
+        labelOffset.x = chartOptions.axisX.labelOffset.x;
+
+        // If the labels should be positioned in start position (top side for vertical axis) we need to set a
+        // different offset as for positioned with end (bottom)
+        if(chartOptions.axisX.position === 'start') {
+          labelOffset.y = this.chartRect.padding.top + chartOptions.axisX.labelOffset.y + (useForeignObject ? 5 : 20);
+        } else {
+          labelOffset.y = this.chartRect.y1 + chartOptions.axisX.labelOffset.y + (useForeignObject ? 5 : 20);
+        }
+      } else {
+        projectedValue = this.chartRect.y1 - projectedValue;
+        labelOffset.y = chartOptions.axisY.labelOffset.y - (useForeignObject ? labelLength : 0);
+
+        // If the labels should be positioned in start position (left side for horizontal axis) we need to set a
+        // different offset as for positioned with end (right side)
+        if(chartOptions.axisY.position === 'start') {
+          labelOffset.x = useForeignObject ? this.chartRect.padding.left + chartOptions.axisY.labelOffset.x : this.chartRect.x1 - 10;
+        } else {
+          labelOffset.x = this.chartRect.x2 + chartOptions.axisY.labelOffset.x + 10;
+        }
+      }
+
+      if(axisOptions.showGrid) {
+        Chartist.createGrid(projectedValue, index, this, this.gridOffset, this.chartRect[this.counterUnits.len](), gridGroup, [
+          chartOptions.classNames.grid,
+          chartOptions.classNames[this.units.dir]
+        ], eventEmitter);
+      }
+
+      if(axisOptions.showLabel) {
+        Chartist.createLabel(projectedValue, labelLength, index, labelValues, this, axisOptions.offset, labelOffset, labelGroup, [
+          chartOptions.classNames.label,
+          chartOptions.classNames[this.units.dir],
+          (axisOptions.position === 'start' ? chartOptions.classNames[axisOptions.position] : chartOptions.classNames['end'])
+        ], useForeignObject, eventEmitter);
+      }
+    }.bind(this));
+  }
+
+  Chartist.Axis = Chartist.Class.extend({
+    constructor: Axis,
+    createGridAndLabels: createGridAndLabels,
+    projectValue: function(value, index, data) {
+      throw new Error('Base axis can\'t be instantiated!');
+    }
+  });
+
+  Chartist.Axis.units = axisUnits;
+
+}(window, document, Chartist));
+;/**
+ * The auto scale axis uses standard linear scale projection of values along an axis. It uses order of magnitude to find a scale automatically and evaluates the available space in order to find the perfect amount of ticks for your chart.
+ * **Options**
+ * The following options are used by this axis in addition to the default axis options outlined in the axis configuration of the chart default settings.
+ * ```javascript
+ * var options = {
+ *   // If high is specified then the axis will display values explicitly up to this value and the computed maximum from the data is ignored
+ *   high: 100,
+ *   // If low is specified then the axis will display values explicitly down to this value and the computed minimum from the data is ignored
+ *   low: 0,
+ *   // This option will be used when finding the right scale division settings. The amount of ticks on the scale will be determined so that as many ticks as possible will be displayed, while not violating this minimum required space (in pixel).
+ *   scaleMinSpace: 20,
+ *   // Can be set to true or false. If set to true, the scale will be generated with whole numbers only.
+ *   onlyInteger: true,
+ *   // The reference value can be used to make sure that this value will always be on the chart. This is especially useful on bipolar charts where the bipolar center always needs to be part of the chart.
+ *   referenceValue: 5
+ * };
+ * ```
+ *
+ * @module Chartist.AutoScaleAxis
+ */
+/* global Chartist */
+(function (window, document, Chartist) {
+  'use strict';
+
+  function AutoScaleAxis(axisUnit, data, chartRect, options) {
+    // Usually we calculate highLow based on the data but this can be overriden by a highLow object in the options
+    var highLow = options.highLow || Chartist.getHighLow(data, options, axisUnit.pos);
+    this.bounds = Chartist.getBounds(chartRect[axisUnit.rectEnd] - chartRect[axisUnit.rectStart], highLow, options.scaleMinSpace || 20, options.onlyInteger);
+    this.range = {
+      min: this.bounds.min,
+      max: this.bounds.max
+    };
+
+    Chartist.AutoScaleAxis.super.constructor.call(this,
+      axisUnit,
+      chartRect,
+      this.bounds.values,
+      options);
+  }
+
+  function projectValue(value) {
+    return this.axisLength * (+Chartist.getMultiValue(value, this.units.pos) - this.bounds.min) / this.bounds.range;
+  }
+
+  Chartist.AutoScaleAxis = Chartist.Axis.extend({
+    constructor: AutoScaleAxis,
+    projectValue: projectValue
+  });
+
+}(window, document, Chartist));
+;/**
+ * The fixed scale axis uses standard linear projection of values along an axis. It makes use of a divisor option to divide the range provided from the minimum and maximum value or the options high and low that will override the computed minimum and maximum.
+ * **Options**
+ * The following options are used by this axis in addition to the default axis options outlined in the axis configuration of the chart default settings.
+ * ```javascript
+ * var options = {
+ *   // If high is specified then the axis will display values explicitly up to this value and the computed maximum from the data is ignored
+ *   high: 100,
+ *   // If low is specified then the axis will display values explicitly down to this value and the computed minimum from the data is ignored
+ *   low: 0,
+ *   // If specified then the value range determined from minimum to maximum (or low and high) will be divided by this number and ticks will be generated at those division points. The default divisor is 1.
+ *   divisor: 4,
+ *   // If ticks is explicitly set, then the axis will not compute the ticks with the divisor, but directly use the data in ticks to determine at what points on the axis a tick need to be generated.
+ *   ticks: [1, 10, 20, 30]
+ * };
+ * ```
+ *
+ * @module Chartist.FixedScaleAxis
+ */
+/* global Chartist */
+(function (window, document, Chartist) {
+  'use strict';
+
+  function FixedScaleAxis(axisUnit, data, chartRect, options) {
+    var highLow = options.highLow || Chartist.getHighLow(data, options, axisUnit.pos);
+    this.divisor = options.divisor || 1;
+    this.ticks = options.ticks || Chartist.times(this.divisor).map(function(value, index) {
+      return highLow.low + (highLow.high - highLow.low) / this.divisor * index;
+    }.bind(this));
+    this.ticks.sort(function(a, b) {
+      return a - b;
+    });
+    this.range = {
+      min: highLow.low,
+      max: highLow.high
+    };
+
+    Chartist.FixedScaleAxis.super.constructor.call(this,
+      axisUnit,
+      chartRect,
+      this.ticks,
+      options);
+
+    this.stepLength = this.axisLength / this.divisor;
+  }
+
+  function projectValue(value) {
+    return this.axisLength * (+Chartist.getMultiValue(value, this.units.pos) - this.range.min) / (this.range.max - this.range.min);
+  }
+
+  Chartist.FixedScaleAxis = Chartist.Axis.extend({
+    constructor: FixedScaleAxis,
+    projectValue: projectValue
+  });
+
+}(window, document, Chartist));
+;/**
+ * The step axis for step based charts like bar chart or step based line charts. It uses a fixed amount of ticks that will be equally distributed across the whole axis length. The projection is done using the index of the data value rather than the value itself and therefore it's only useful for distribution purpose.
+ * **Options**
+ * The following options are used by this axis in addition to the default axis options outlined in the axis configuration of the chart default settings.
+ * ```javascript
+ * var options = {
+ *   // Ticks to be used to distribute across the axis length. As this axis type relies on the index of the value rather than the value, arbitrary data that can be converted to a string can be used as ticks.
+ *   ticks: ['One', 'Two', 'Three'],
+ *   // If set to true the full width will be used to distribute the values where the last value will be at the maximum of the axis length. If false the spaces between the ticks will be evenly distributed instead.
+ *   stretch: true
+ * };
+ * ```
+ *
+ * @module Chartist.StepAxis
+ */
+/* global Chartist */
+(function (window, document, Chartist) {
+  'use strict';
+
+  function StepAxis(axisUnit, data, chartRect, options) {
+    Chartist.StepAxis.super.constructor.call(this,
+      axisUnit,
+      chartRect,
+      options.ticks,
+      options);
+
+    var calc = Math.max(1, options.ticks.length - (options.stretch ? 1 : 0));
+    this.stepLength = this.axisLength / calc;
+  }
+
+  function projectValue(value, index) {
+    return this.stepLength * index;
+  }
+
+  Chartist.StepAxis = Chartist.Axis.extend({
+    constructor: StepAxis,
+    projectValue: projectValue
+  });
+
+}(window, document, Chartist));
+;/**
+ * The Chartist line chart can be used to draw Line or Scatter charts. If used in the browser you can access the global `Chartist` namespace where you find the `Line` function as a main entry point.
+ *
+ * For examples on how to use the line chart please check the examples of the `Chartist.Line` method.
+ *
+ * @module Chartist.Line
+ */
+/* global Chartist */
+(function(window, document, Chartist){
+  'use strict';
+
+  /**
+   * Default options in line charts. Expand the code view to see a detailed list of options with comments.
+   *
+   * @memberof Chartist.Line
+   */
+  var defaultOptions = {
+    // Options for X-Axis
+    axisX: {
+      // The offset of the labels to the chart area
+      offset: 30,
+      // Position where labels are placed. Can be set to `start` or `end` where `start` is equivalent to left or top on vertical axis and `end` is equivalent to right or bottom on horizontal axis.
+      position: 'end',
+      // Allows you to correct label positioning on this axis by positive or negative x and y offset.
+      labelOffset: {
+        x: 0,
+        y: 0
+      },
+      // If labels should be shown or not
+      showLabel: true,
+      // If the axis grid should be drawn or not
+      showGrid: true,
+      // Interpolation function that allows you to intercept the value from the axis label
+      labelInterpolationFnc: Chartist.noop,
+      // Set the axis type to be used to project values on this axis. If not defined, Chartist.StepAxis will be used for the X-Axis, where the ticks option will be set to the labels in the data and the stretch option will be set to the global fullWidth option. This type can be changed to any axis constructor available (e.g. Chartist.FixedScaleAxis), where all axis options should be present here.
+      type: undefined
+    },
+    // Options for Y-Axis
+    axisY: {
+      // The offset of the labels to the chart area
+      offset: 40,
+      // Position where labels are placed. Can be set to `start` or `end` where `start` is equivalent to left or top on vertical axis and `end` is equivalent to right or bottom on horizontal axis.
+      position: 'start',
+      // Allows you to correct label positioning on this axis by positive or negative x and y offset.
+      labelOffset: {
+        x: 0,
+        y: 0
+      },
+      // If labels should be shown or not
+      showLabel: true,
+      // If the axis grid should be drawn or not
+      showGrid: true,
+      // Interpolation function that allows you to intercept the value from the axis label
+      labelInterpolationFnc: Chartist.noop,
+      // Set the axis type to be used to project values on this axis. If not defined, Chartist.AutoScaleAxis will be used for the Y-Axis, where the high and low options will be set to the global high and low options. This type can be changed to any axis constructor available (e.g. Chartist.FixedScaleAxis), where all axis options should be present here.
+      type: undefined,
+      // This value specifies the minimum height in pixel of the scale steps
+      scaleMinSpace: 20,
+      // Use only integer values (whole numbers) for the scale steps
+      onlyInteger: false
+    },
+    // Specify a fixed width for the chart as a string (i.e. '100px' or '50%')
+    width: undefined,
+    // Specify a fixed height for the chart as a string (i.e. '100px' or '50%')
+    height: undefined,
+    // If the line should be drawn or not
+    showLine: true,
+    // If dots should be drawn or not
+    showPoint: true,
+    // If the line chart should draw an area
+    showArea: false,
+    // The base for the area chart that will be used to close the area shape (is normally 0)
+    areaBase: 0,
+    // Specify if the lines should be smoothed. This value can be true or false where true will result in smoothing using the default smoothing interpolation function Chartist.Interpolation.cardinal and false results in Chartist.Interpolation.none. You can also choose other smoothing / interpolation functions available in the Chartist.Interpolation module, or write your own interpolation function. Check the examples for a brief description.
+    lineSmooth: true,
+    // If the line chart should add a background fill to the .ct-grids group.
+    showGridBackground: false,
+    // Overriding the natural low of the chart allows you to zoom in or limit the charts lowest displayed value
+    low: undefined,
+    // Overriding the natural high of the chart allows you to zoom in or limit the charts highest displayed value
+    high: undefined,
+    // Padding of the chart drawing area to the container element and labels as a number or padding object {top: 5, right: 5, bottom: 5, left: 5}
+    chartPadding: {
+      top: 15,
+      right: 15,
+      bottom: 5,
+      left: 10
+    },
+    // When set to true, the last grid line on the x-axis is not drawn and the chart elements will expand to the full available width of the chart. For the last label to be drawn correctly you might need to add chart padding or offset the last label with a draw event handler.
+    fullWidth: false,
+    // If true the whole data is reversed including labels, the series order as well as the whole series data arrays.
+    reverseData: false,
+    // Override the class names that get used to generate the SVG structure of the chart
+    classNames: {
+      chart: 'ct-chart-line',
+      label: 'ct-label',
+      labelGroup: 'ct-labels',
+      series: 'ct-series',
+      line: 'ct-line',
+      point: 'ct-point',
+      area: 'ct-area',
+      grid: 'ct-grid',
+      gridGroup: 'ct-grids',
+      gridBackground: 'ct-grid-background',
+      vertical: 'ct-vertical',
+      horizontal: 'ct-horizontal',
+      start: 'ct-start',
+      end: 'ct-end'
+    }
+  };
+
+  /**
+   * Creates a new chart
+   *
+   */
+  function createChart(options) {
+    var data = Chartist.normalizeData(this.data, options.reverseData, true);
+
+    // Create new svg object
+    this.svg = Chartist.createSvg(this.container, options.width, options.height, options.classNames.chart);
+    // Create groups for labels, grid and series
+    var gridGroup = this.svg.elem('g').addClass(options.classNames.gridGroup);
+    var seriesGroup = this.svg.elem('g');
+    var labelGroup = this.svg.elem('g').addClass(options.classNames.labelGroup);
+
+    var chartRect = Chartist.createChartRect(this.svg, options, defaultOptions.padding);
+    var axisX, axisY;
+
+    if(options.axisX.type === undefined) {
+      axisX = new Chartist.StepAxis(Chartist.Axis.units.x, data.normalized.series, chartRect, Chartist.extend({}, options.axisX, {
+        ticks: data.normalized.labels,
+        stretch: options.fullWidth
+      }));
+    } else {
+      axisX = options.axisX.type.call(Chartist, Chartist.Axis.units.x, data.normalized.series, chartRect, options.axisX);
+    }
+
+    if(options.axisY.type === undefined) {
+      axisY = new Chartist.AutoScaleAxis(Chartist.Axis.units.y, data.normalized.series, chartRect, Chartist.extend({}, options.axisY, {
+        high: Chartist.isNumeric(options.high) ? options.high : options.axisY.high,
+        low: Chartist.isNumeric(options.low) ? options.low : options.axisY.low
+      }));
+    } else {
+      axisY = options.axisY.type.call(Chartist, Chartist.Axis.units.y, data.normalized.series, chartRect, options.axisY);
+    }
+
+    axisX.createGridAndLabels(gridGroup, labelGroup, this.supportsForeignObject, options, this.eventEmitter);
+    axisY.createGridAndLabels(gridGroup, labelGroup, this.supportsForeignObject, options, this.eventEmitter);
+
+    if (options.showGridBackground) {
+      Chartist.createGridBackground(gridGroup, chartRect, options.classNames.gridBackground, this.eventEmitter);
+    }
+
+    // Draw the series
+    data.raw.series.forEach(function(series, seriesIndex) {
+      var seriesElement = seriesGroup.elem('g');
+
+      // Write attributes to series group element. If series name or meta is undefined the attributes will not be written
+      seriesElement.attr({
+        'ct:series-name': series.name,
+        'ct:meta': Chartist.serialize(series.meta)
+      });
+
+      // Use series class from series data or if not set generate one
+      seriesElement.addClass([
+        options.classNames.series,
+        (series.className || options.classNames.series + '-' + Chartist.alphaNumerate(seriesIndex))
+      ].join(' '));
+
+      var pathCoordinates = [],
+        pathData = [];
+
+      data.normalized.series[seriesIndex].forEach(function(value, valueIndex) {
+        var p = {
+          x: chartRect.x1 + axisX.projectValue(value, valueIndex, data.normalized.series[seriesIndex]),
+          y: chartRect.y1 - axisY.projectValue(value, valueIndex, data.normalized.series[seriesIndex])
+        };
+        pathCoordinates.push(p.x, p.y);
+        pathData.push({
+          value: value,
+          valueIndex: valueIndex,
+          meta: Chartist.getMetaData(series, valueIndex)
+        });
+      }.bind(this));
+
+      var seriesOptions = {
+        lineSmooth: Chartist.getSeriesOption(series, options, 'lineSmooth'),
+        showPoint: Chartist.getSeriesOption(series, options, 'showPoint'),
+        showLine: Chartist.getSeriesOption(series, options, 'showLine'),
+        showArea: Chartist.getSeriesOption(series, options, 'showArea'),
+        areaBase: Chartist.getSeriesOption(series, options, 'areaBase')
+      };
+
+      var smoothing = typeof seriesOptions.lineSmooth === 'function' ?
+        seriesOptions.lineSmooth : (seriesOptions.lineSmooth ? Chartist.Interpolation.monotoneCubic() : Chartist.Interpolation.none());
+      // Interpolating path where pathData will be used to annotate each path element so we can trace back the original
+      // index, value and meta data
+      var path = smoothing(pathCoordinates, pathData);
+
+      // If we should show points we need to create them now to avoid secondary loop
+      // Points are drawn from the pathElements returned by the interpolation function
+      // Small offset for Firefox to render squares correctly
+      if (seriesOptions.showPoint) {
+
+        path.pathElements.forEach(function(pathElement) {
+          var point = seriesElement.elem('line', {
+            x1: pathElement.x,
+            y1: pathElement.y,
+            x2: pathElement.x + 0.01,
+            y2: pathElement.y
+          }, options.classNames.point).attr({
+            'ct:value': [pathElement.data.value.x, pathElement.data.value.y].filter(Chartist.isNumeric).join(','),
+            'ct:meta': Chartist.serialize(pathElement.data.meta)
+          });
+
+          this.eventEmitter.emit('draw', {
+            type: 'point',
+            value: pathElement.data.value,
+            index: pathElement.data.valueIndex,
+            meta: pathElement.data.meta,
+            series: series,
+            seriesIndex: seriesIndex,
+            axisX: axisX,
+            axisY: axisY,
+            group: seriesElement,
+            element: point,
+            x: pathElement.x,
+            y: pathElement.y
+          });
+        }.bind(this));
+      }
+
+      if(seriesOptions.showLine) {
+        var line = seriesElement.elem('path', {
+          d: path.stringify()
+        }, options.classNames.line, true);
+
+        this.eventEmitter.emit('draw', {
+          type: 'line',
+          values: data.normalized.series[seriesIndex],
+          path: path.clone(),
+          chartRect: chartRect,
+          index: seriesIndex,
+          series: series,
+          seriesIndex: seriesIndex,
+          seriesMeta: series.meta,
+          axisX: axisX,
+          axisY: axisY,
+          group: seriesElement,
+          element: line
+        });
+      }
+
+      // Area currently only works with axes that support a range!
+      if(seriesOptions.showArea && axisY.range) {
+        // If areaBase is outside the chart area (< min or > max) we need to set it respectively so that
+        // the area is not drawn outside the chart area.
+        var areaBase = Math.max(Math.min(seriesOptions.areaBase, axisY.range.max), axisY.range.min);
+
+        // We project the areaBase value into screen coordinates
+        var areaBaseProjected = chartRect.y1 - axisY.projectValue(areaBase);
+
+        // In order to form the area we'll first split the path by move commands so we can chunk it up into segments
+        path.splitByCommand('M').filter(function onlySolidSegments(pathSegment) {
+          // We filter only "solid" segments that contain more than one point. Otherwise there's no need for an area
+          return pathSegment.pathElements.length > 1;
+        }).map(function convertToArea(solidPathSegments) {
+          // Receiving the filtered solid path segments we can now convert those segments into fill areas
+          var firstElement = solidPathSegments.pathElements[0];
+          var lastElement = solidPathSegments.pathElements[solidPathSegments.pathElements.length - 1];
+
+          // Cloning the solid path segment with closing option and removing the first move command from the clone
+          // We then insert a new move that should start at the area base and draw a straight line up or down
+          // at the end of the path we add an additional straight line to the projected area base value
+          // As the closing option is set our path will be automatically closed
+          return solidPathSegments.clone(true)
+            .position(0)
+            .remove(1)
+            .move(firstElement.x, areaBaseProjected)
+            .line(firstElement.x, firstElement.y)
+            .position(solidPathSegments.pathElements.length + 1)
+            .line(lastElement.x, areaBaseProjected);
+
+        }).forEach(function createArea(areaPath) {
+          // For each of our newly created area paths, we'll now create path elements by stringifying our path objects
+          // and adding the created DOM elements to the correct series group
+          var area = seriesElement.elem('path', {
+            d: areaPath.stringify()
+          }, options.classNames.area, true);
+
+          // Emit an event for each area that was drawn
+          this.eventEmitter.emit('draw', {
+            type: 'area',
+            values: data.normalized.series[seriesIndex],
+            path: areaPath.clone(),
+            series: series,
+            seriesIndex: seriesIndex,
+            axisX: axisX,
+            axisY: axisY,
+            chartRect: chartRect,
+            index: seriesIndex,
+            group: seriesElement,
+            element: area
+          });
+        }.bind(this));
+      }
+    }.bind(this));
+
+    this.eventEmitter.emit('created', {
+      bounds: axisY.bounds,
+      chartRect: chartRect,
+      axisX: axisX,
+      axisY: axisY,
+      svg: this.svg,
+      options: options
+    });
+  }
+
+  /**
+   * This method creates a new line chart.
+   *
+   * @memberof Chartist.Line
+   * @param {String|Node} query A selector query string or directly a DOM element
+   * @param {Object} data The data object that needs to consist of a labels and a series array
+   * @param {Object} [options] The options object with options that override the default options. Check the examples for a detailed list.
+   * @param {Array} [responsiveOptions] Specify an array of responsive option arrays which are a media query and options object pair => [[mediaQueryString, optionsObject],[more...]]
+   * @return {Object} An object which exposes the API for the created chart
+   *
+   * @example
+   * // Create a simple line chart
+   * var data = {
+   *   // A labels array that can contain any sort of values
+   *   labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+   *   // Our series array that contains series objects or in this case series data arrays
+   *   series: [
+   *     [5, 2, 4, 2, 0]
+   *   ]
+   * };
+   *
+   * // As options we currently only set a static size of 300x200 px
+   * var options = {
+   *   width: '300px',
+   *   height: '200px'
+   * };
+   *
+   * // In the global name space Chartist we call the Line function to initialize a line chart. As a first parameter we pass in a selector where we would like to get our chart created. Second parameter is the actual data object and as a third parameter we pass in our options
+   * new Chartist.Line('.ct-chart', data, options);
+   *
+   * @example
+   * // Use specific interpolation function with configuration from the Chartist.Interpolation module
+   *
+   * var chart = new Chartist.Line('.ct-chart', {
+   *   labels: [1, 2, 3, 4, 5],
+   *   series: [
+   *     [1, 1, 8, 1, 7]
+   *   ]
+   * }, {
+   *   lineSmooth: Chartist.Interpolation.cardinal({
+   *     tension: 0.2
+   *   })
+   * });
+   *
+   * @example
+   * // Create a line chart with responsive options
+   *
+   * var data = {
+   *   // A labels array that can contain any sort of values
+   *   labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+   *   // Our series array that contains series objects or in this case series data arrays
+   *   series: [
+   *     [5, 2, 4, 2, 0]
+   *   ]
+   * };
+   *
+   * // In addition to the regular options we specify responsive option overrides that will override the default configutation based on the matching media queries.
+   * var responsiveOptions = [
+   *   ['screen and (min-width: 641px) and (max-width: 1024px)', {
+   *     showPoint: false,
+   *     axisX: {
+   *       labelInterpolationFnc: function(value) {
+   *         // Will return Mon, Tue, Wed etc. on medium screens
+   *         return value.slice(0, 3);
+   *       }
+   *     }
+   *   }],
+   *   ['screen and (max-width: 640px)', {
+   *     showLine: false,
+   *     axisX: {
+   *       labelInterpolationFnc: function(value) {
+   *         // Will return M, T, W etc. on small screens
+   *         return value[0];
+   *       }
+   *     }
+   *   }]
+   * ];
+   *
+   * new Chartist.Line('.ct-chart', data, null, responsiveOptions);
+   *
+   */
+  function Line(query, data, options, responsiveOptions) {
+    Chartist.Line.super.constructor.call(this,
+      query,
+      data,
+      defaultOptions,
+      Chartist.extend({}, defaultOptions, options),
+      responsiveOptions);
+  }
+
+  // Creating line chart type in Chartist namespace
+  Chartist.Line = Chartist.Base.extend({
+    constructor: Line,
+    createChart: createChart
+  });
+
+}(window, document, Chartist));
+;/**
+ * The bar chart module of Chartist that can be used to draw unipolar or bipolar bar and grouped bar charts.
+ *
+ * @module Chartist.Bar
+ */
+/* global Chartist */
+(function(window, document, Chartist){
+  'use strict';
+
+  /**
+   * Default options in bar charts. Expand the code view to see a detailed list of options with comments.
+   *
+   * @memberof Chartist.Bar
+   */
+  var defaultOptions = {
+    // Options for X-Axis
+    axisX: {
+      // The offset of the chart drawing area to the border of the container
+      offset: 30,
+      // Position where labels are placed. Can be set to `start` or `end` where `start` is equivalent to left or top on vertical axis and `end` is equivalent to right or bottom on horizontal axis.
+      position: 'end',
+      // Allows you to correct label positioning on this axis by positive or negative x and y offset.
+      labelOffset: {
+        x: 0,
+        y: 0
+      },
+      // If labels should be shown or not
+      showLabel: true,
+      // If the axis grid should be drawn or not
+      showGrid: true,
+      // Interpolation function that allows you to intercept the value from the axis label
+      labelInterpolationFnc: Chartist.noop,
+      // This value specifies the minimum width in pixel of the scale steps
+      scaleMinSpace: 30,
+      // Use only integer values (whole numbers) for the scale steps
+      onlyInteger: false
+    },
+    // Options for Y-Axis
+    axisY: {
+      // The offset of the chart drawing area to the border of the container
+      offset: 40,
+      // Position where labels are placed. Can be set to `start` or `end` where `start` is equivalent to left or top on vertical axis and `end` is equivalent to right or bottom on horizontal axis.
+      position: 'start',
+      // Allows you to correct label positioning on this axis by positive or negative x and y offset.
+      labelOffset: {
+        x: 0,
+        y: 0
+      },
+      // If labels should be shown or not
+      showLabel: true,
+      // If the axis grid should be drawn or not
+      showGrid: true,
+      // Interpolation function that allows you to intercept the value from the axis label
+      labelInterpolationFnc: Chartist.noop,
+      // This value specifies the minimum height in pixel of the scale steps
+      scaleMinSpace: 20,
+      // Use only integer values (whole numbers) for the scale steps
+      onlyInteger: false
+    },
+    // Specify a fixed width for the chart as a string (i.e. '100px' or '50%')
+    width: undefined,
+    // Specify a fixed height for the chart as a string (i.e. '100px' or '50%')
+    height: undefined,
+    // Overriding the natural high of the chart allows you to zoom in or limit the charts highest displayed value
+    high: undefined,
+    // Overriding the natural low of the chart allows you to zoom in or limit the charts lowest displayed value
+    low: undefined,
+    // Unless low/high are explicitly set, bar chart will be centered at zero by default. Set referenceValue to null to auto scale.
+    referenceValue: 0,
+    // Padding of the chart drawing area to the container element and labels as a number or padding object {top: 5, right: 5, bottom: 5, left: 5}
+    chartPadding: {
+      top: 15,
+      right: 15,
+      bottom: 5,
+      left: 10
+    },
+    // Specify the distance in pixel of bars in a group
+    seriesBarDistance: 15,
+    // If set to true this property will cause the series bars to be stacked. Check the `stackMode` option for further stacking options.
+    stackBars: false,
+    // If set to 'overlap' this property will force the stacked bars to draw from the zero line.
+    // If set to 'accumulate' this property will form a total for each series point. This will also influence the y-axis and the overall bounds of the chart. In stacked mode the seriesBarDistance property will have no effect.
+    stackMode: 'accumulate',
+    // Inverts the axes of the bar chart in order to draw a horizontal bar chart. Be aware that you also need to invert your axis settings as the Y Axis will now display the labels and the X Axis the values.
+    horizontalBars: false,
+    // If set to true then each bar will represent a series and the data array is expected to be a one dimensional array of data values rather than a series array of series. This is useful if the bar chart should represent a profile rather than some data over time.
+    distributeSeries: false,
+    // If true the whole data is reversed including labels, the series order as well as the whole series data arrays.
+    reverseData: false,
+    // If the bar chart should add a background fill to the .ct-grids group.
+    showGridBackground: false,
+    // Override the class names that get used to generate the SVG structure of the chart
+    classNames: {
+      chart: 'ct-chart-bar',
+      horizontalBars: 'ct-horizontal-bars',
+      label: 'ct-label',
+      labelGroup: 'ct-labels',
+      series: 'ct-series',
+      bar: 'ct-bar',
+      grid: 'ct-grid',
+      gridGroup: 'ct-grids',
+      gridBackground: 'ct-grid-background',
+      vertical: 'ct-vertical',
+      horizontal: 'ct-horizontal',
+      start: 'ct-start',
+      end: 'ct-end'
+    }
+  };
+
+  /**
+   * Creates a new chart
+   *
+   */
+  function createChart(options) {
+    var data;
+    var highLow;
+
+    if(options.distributeSeries) {
+      data = Chartist.normalizeData(this.data, options.reverseData, options.horizontalBars ? 'x' : 'y');
+      data.normalized.series = data.normalized.series.map(function(value) {
+        return [value];
+      });
+    } else {
+      data = Chartist.normalizeData(this.data, options.reverseData, options.horizontalBars ? 'x' : 'y');
+    }
+
+    // Create new svg element
+    this.svg = Chartist.createSvg(
+      this.container,
+      options.width,
+      options.height,
+      options.classNames.chart + (options.horizontalBars ? ' ' + options.classNames.horizontalBars : '')
+    );
+
+    // Drawing groups in correct order
+    var gridGroup = this.svg.elem('g').addClass(options.classNames.gridGroup);
+    var seriesGroup = this.svg.elem('g');
+    var labelGroup = this.svg.elem('g').addClass(options.classNames.labelGroup);
+
+    if(options.stackBars && data.normalized.series.length !== 0) {
+
+      // If stacked bars we need to calculate the high low from stacked values from each series
+      var serialSums = Chartist.serialMap(data.normalized.series, function serialSums() {
+        return Array.prototype.slice.call(arguments).map(function(value) {
+          return value;
+        }).reduce(function(prev, curr) {
+          return {
+            x: prev.x + (curr && curr.x) || 0,
+            y: prev.y + (curr && curr.y) || 0
+          };
+        }, {x: 0, y: 0});
+      });
+
+      highLow = Chartist.getHighLow([serialSums], options, options.horizontalBars ? 'x' : 'y');
+
+    } else {
+
+      highLow = Chartist.getHighLow(data.normalized.series, options, options.horizontalBars ? 'x' : 'y');
+    }
+
+    // Overrides of high / low from settings
+    highLow.high = +options.high || (options.high === 0 ? 0 : highLow.high);
+    highLow.low = +options.low || (options.low === 0 ? 0 : highLow.low);
+
+    var chartRect = Chartist.createChartRect(this.svg, options, defaultOptions.padding);
+
+    var valueAxis,
+      labelAxisTicks,
+      labelAxis,
+      axisX,
+      axisY;
+
+    // We need to set step count based on some options combinations
+    if(options.distributeSeries && options.stackBars) {
+      // If distributed series are enabled and bars need to be stacked, we'll only have one bar and therefore should
+      // use only the first label for the step axis
+      labelAxisTicks = data.normalized.labels.slice(0, 1);
+    } else {
+      // If distributed series are enabled but stacked bars aren't, we should use the series labels
+      // If we are drawing a regular bar chart with two dimensional series data, we just use the labels array
+      // as the bars are normalized
+      labelAxisTicks = data.normalized.labels;
+    }
+
+    // Set labelAxis and valueAxis based on the horizontalBars setting. This setting will flip the axes if necessary.
+    if(options.horizontalBars) {
+      if(options.axisX.type === undefined) {
+        valueAxis = axisX = new Chartist.AutoScaleAxis(Chartist.Axis.units.x, data.normalized.series, chartRect, Chartist.extend({}, options.axisX, {
+          highLow: highLow,
+          referenceValue: 0
+        }));
+      } else {
+        valueAxis = axisX = options.axisX.type.call(Chartist, Chartist.Axis.units.x, data.normalized.series, chartRect, Chartist.extend({}, options.axisX, {
+          highLow: highLow,
+          referenceValue: 0
+        }));
+      }
+
+      if(options.axisY.type === undefined) {
+        labelAxis = axisY = new Chartist.StepAxis(Chartist.Axis.units.y, data.normalized.series, chartRect, {
+          ticks: labelAxisTicks
+        });
+      } else {
+        labelAxis = axisY = options.axisY.type.call(Chartist, Chartist.Axis.units.y, data.normalized.series, chartRect, options.axisY);
+      }
+    } else {
+      if(options.axisX.type === undefined) {
+        labelAxis = axisX = new Chartist.StepAxis(Chartist.Axis.units.x, data.normalized.series, chartRect, {
+          ticks: labelAxisTicks
+        });
+      } else {
+        labelAxis = axisX = options.axisX.type.call(Chartist, Chartist.Axis.units.x, data.normalized.series, chartRect, options.axisX);
+      }
+
+      if(options.axisY.type === undefined) {
+        valueAxis = axisY = new Chartist.AutoScaleAxis(Chartist.Axis.units.y, data.normalized.series, chartRect, Chartist.extend({}, options.axisY, {
+          highLow: highLow,
+          referenceValue: 0
+        }));
+      } else {
+        valueAxis = axisY = options.axisY.type.call(Chartist, Chartist.Axis.units.y, data.normalized.series, chartRect, Chartist.extend({}, options.axisY, {
+          highLow: highLow,
+          referenceValue: 0
+        }));
+      }
+    }
+
+    // Projected 0 point
+    var zeroPoint = options.horizontalBars ? (chartRect.x1 + valueAxis.projectValue(0)) : (chartRect.y1 - valueAxis.projectValue(0));
+    // Used to track the screen coordinates of stacked bars
+    var stackedBarValues = [];
+
+    labelAxis.createGridAndLabels(gridGroup, labelGroup, this.supportsForeignObject, options, this.eventEmitter);
+    valueAxis.createGridAndLabels(gridGroup, labelGroup, this.supportsForeignObject, options, this.eventEmitter);
+
+    if (options.showGridBackground) {
+      Chartist.createGridBackground(gridGroup, chartRect, options.classNames.gridBackground, this.eventEmitter);
+    }
+
+    // Draw the series
+    data.raw.series.forEach(function(series, seriesIndex) {
+      // Calculating bi-polar value of index for seriesOffset. For i = 0..4 biPol will be -1.5, -0.5, 0.5, 1.5 etc.
+      var biPol = seriesIndex - (data.raw.series.length - 1) / 2;
+      // Half of the period width between vertical grid lines used to position bars
+      var periodHalfLength;
+      // Current series SVG element
+      var seriesElement;
+
+      // We need to set periodHalfLength based on some options combinations
+      if(options.distributeSeries && !options.stackBars) {
+        // If distributed series are enabled but stacked bars aren't, we need to use the length of the normaizedData array
+        // which is the series count and divide by 2
+        periodHalfLength = labelAxis.axisLength / data.normalized.series.length / 2;
+      } else if(options.distributeSeries && options.stackBars) {
+        // If distributed series and stacked bars are enabled we'll only get one bar so we should just divide the axis
+        // length by 2
+        periodHalfLength = labelAxis.axisLength / 2;
+      } else {
+        // On regular bar charts we should just use the series length
+        periodHalfLength = labelAxis.axisLength / data.normalized.series[seriesIndex].length / 2;
+      }
+
+      // Adding the series group to the series element
+      seriesElement = seriesGroup.elem('g');
+
+      // Write attributes to series group element. If series name or meta is undefined the attributes will not be written
+      seriesElement.attr({
+        'ct:series-name': series.name,
+        'ct:meta': Chartist.serialize(series.meta)
+      });
+
+      // Use series class from series data or if not set generate one
+      seriesElement.addClass([
+        options.classNames.series,
+        (series.className || options.classNames.series + '-' + Chartist.alphaNumerate(seriesIndex))
+      ].join(' '));
+
+      data.normalized.series[seriesIndex].forEach(function(value, valueIndex) {
+        var projected,
+          bar,
+          previousStack,
+          labelAxisValueIndex;
+
+        // We need to set labelAxisValueIndex based on some options combinations
+        if(options.distributeSeries && !options.stackBars) {
+          // If distributed series are enabled but stacked bars aren't, we can use the seriesIndex for later projection
+          // on the step axis for label positioning
+          labelAxisValueIndex = seriesIndex;
+        } else if(options.distributeSeries && options.stackBars) {
+          // If distributed series and stacked bars are enabled, we will only get one bar and therefore always use
+          // 0 for projection on the label step axis
+          labelAxisValueIndex = 0;
+        } else {
+          // On regular bar charts we just use the value index to project on the label step axis
+          labelAxisValueIndex = valueIndex;
+        }
+
+        // We need to transform coordinates differently based on the chart layout
+        if(options.horizontalBars) {
+          projected = {
+            x: chartRect.x1 + valueAxis.projectValue(value && value.x ? value.x : 0, valueIndex, data.normalized.series[seriesIndex]),
+            y: chartRect.y1 - labelAxis.projectValue(value && value.y ? value.y : 0, labelAxisValueIndex, data.normalized.series[seriesIndex])
+          };
+        } else {
+          projected = {
+            x: chartRect.x1 + labelAxis.projectValue(value && value.x ? value.x : 0, labelAxisValueIndex, data.normalized.series[seriesIndex]),
+            y: chartRect.y1 - valueAxis.projectValue(value && value.y ? value.y : 0, valueIndex, data.normalized.series[seriesIndex])
+          }
+        }
+
+        // If the label axis is a step based axis we will offset the bar into the middle of between two steps using
+        // the periodHalfLength value. Also we do arrange the different series so that they align up to each other using
+        // the seriesBarDistance. If we don't have a step axis, the bar positions can be chosen freely so we should not
+        // add any automated positioning.
+        if(labelAxis instanceof Chartist.StepAxis) {
+          // Offset to center bar between grid lines, but only if the step axis is not stretched
+          if(!labelAxis.options.stretch) {
+            projected[labelAxis.units.pos] += periodHalfLength * (options.horizontalBars ? -1 : 1);
+          }
+          // Using bi-polar offset for multiple series if no stacked bars or series distribution is used
+          projected[labelAxis.units.pos] += (options.stackBars || options.distributeSeries) ? 0 : biPol * options.seriesBarDistance * (options.horizontalBars ? -1 : 1);
+        }
+
+        // Enter value in stacked bar values used to remember previous screen value for stacking up bars
+        previousStack = stackedBarValues[valueIndex] || zeroPoint;
+        stackedBarValues[valueIndex] = previousStack - (zeroPoint - projected[labelAxis.counterUnits.pos]);
+
+        // Skip if value is undefined
+        if(value === undefined) {
+          return;
+        }
+
+        var positions = {};
+        positions[labelAxis.units.pos + '1'] = projected[labelAxis.units.pos];
+        positions[labelAxis.units.pos + '2'] = projected[labelAxis.units.pos];
+
+        if(options.stackBars && (options.stackMode === 'accumulate' || !options.stackMode)) {
+          // Stack mode: accumulate (default)
+          // If bars are stacked we use the stackedBarValues reference and otherwise base all bars off the zero line
+          // We want backwards compatibility, so the expected fallback without the 'stackMode' option
+          // to be the original behaviour (accumulate)
+          positions[labelAxis.counterUnits.pos + '1'] = previousStack;
+          positions[labelAxis.counterUnits.pos + '2'] = stackedBarValues[valueIndex];
+        } else {
+          // Draw from the zero line normally
+          // This is also the same code for Stack mode: overlap
+          positions[labelAxis.counterUnits.pos + '1'] = zeroPoint;
+          positions[labelAxis.counterUnits.pos + '2'] = projected[labelAxis.counterUnits.pos];
+        }
+
+        // Limit x and y so that they are within the chart rect
+        positions.x1 = Math.min(Math.max(positions.x1, chartRect.x1), chartRect.x2);
+        positions.x2 = Math.min(Math.max(positions.x2, chartRect.x1), chartRect.x2);
+        positions.y1 = Math.min(Math.max(positions.y1, chartRect.y2), chartRect.y1);
+        positions.y2 = Math.min(Math.max(positions.y2, chartRect.y2), chartRect.y1);
+
+        var metaData = Chartist.getMetaData(series, valueIndex);
+
+        // Create bar element
+        bar = seriesElement.elem('line', positions, options.classNames.bar).attr({
+          'ct:value': [value.x, value.y].filter(Chartist.isNumeric).join(','),
+          'ct:meta': Chartist.serialize(metaData)
+        });
+
+        this.eventEmitter.emit('draw', Chartist.extend({
+          type: 'bar',
+          value: value,
+          index: valueIndex,
+          meta: metaData,
+          series: series,
+          seriesIndex: seriesIndex,
+          axisX: axisX,
+          axisY: axisY,
+          chartRect: chartRect,
+          group: seriesElement,
+          element: bar
+        }, positions));
+      }.bind(this));
+    }.bind(this));
+
+    this.eventEmitter.emit('created', {
+      bounds: valueAxis.bounds,
+      chartRect: chartRect,
+      axisX: axisX,
+      axisY: axisY,
+      svg: this.svg,
+      options: options
+    });
+  }
+
+  /**
+   * This method creates a new bar chart and returns API object that you can use for later changes.
+   *
+   * @memberof Chartist.Bar
+   * @param {String|Node} query A selector query string or directly a DOM element
+   * @param {Object} data The data object that needs to consist of a labels and a series array
+   * @param {Object} [options] The options object with options that override the default options. Check the examples for a detailed list.
+   * @param {Array} [responsiveOptions] Specify an array of responsive option arrays which are a media query and options object pair => [[mediaQueryString, optionsObject],[more...]]
+   * @return {Object} An object which exposes the API for the created chart
+   *
+   * @example
+   * // Create a simple bar chart
+   * var data = {
+   *   labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+   *   series: [
+   *     [5, 2, 4, 2, 0]
+   *   ]
+   * };
+   *
+   * // In the global name space Chartist we call the Bar function to initialize a bar chart. As a first parameter we pass in a selector where we would like to get our chart created and as a second parameter we pass our data object.
+   * new Chartist.Bar('.ct-chart', data);
+   *
+   * @example
+   * // This example creates a bipolar grouped bar chart where the boundaries are limitted to -10 and 10
+   * new Chartist.Bar('.ct-chart', {
+   *   labels: [1, 2, 3, 4, 5, 6, 7],
+   *   series: [
+   *     [1, 3, 2, -5, -3, 1, -6],
+   *     [-5, -2, -4, -1, 2, -3, 1]
+   *   ]
+   * }, {
+   *   seriesBarDistance: 12,
+   *   low: -10,
+   *   high: 10
+   * });
+   *
+   */
+  function Bar(query, data, options, responsiveOptions) {
+    Chartist.Bar.super.constructor.call(this,
+      query,
+      data,
+      defaultOptions,
+      Chartist.extend({}, defaultOptions, options),
+      responsiveOptions);
+  }
+
+  // Creating bar chart type in Chartist namespace
+  Chartist.Bar = Chartist.Base.extend({
+    constructor: Bar,
+    createChart: createChart
+  });
+
+}(window, document, Chartist));
+;/**
+ * The pie chart module of Chartist that can be used to draw pie, donut or gauge charts
+ *
+ * @module Chartist.Pie
+ */
+/* global Chartist */
+(function(window, document, Chartist) {
+  'use strict';
+
+  /**
+   * Default options in line charts. Expand the code view to see a detailed list of options with comments.
+   *
+   * @memberof Chartist.Pie
+   */
+  var defaultOptions = {
+    // Specify a fixed width for the chart as a string (i.e. '100px' or '50%')
+    width: undefined,
+    // Specify a fixed height for the chart as a string (i.e. '100px' or '50%')
+    height: undefined,
+    // Padding of the chart drawing area to the container element and labels as a number or padding object {top: 5, right: 5, bottom: 5, left: 5}
+    chartPadding: 5,
+    // Override the class names that are used to generate the SVG structure of the chart
+    classNames: {
+      chartPie: 'ct-chart-pie',
+      chartDonut: 'ct-chart-donut',
+      series: 'ct-series',
+      slicePie: 'ct-slice-pie',
+      sliceDonut: 'ct-slice-donut',
+      sliceDonutSolid: 'ct-slice-donut-solid',
+      label: 'ct-label'
+    },
+    // The start angle of the pie chart in degrees where 0 points north. A higher value offsets the start angle clockwise.
+    startAngle: 0,
+    // An optional total you can specify. By specifying a total value, the sum of the values in the series must be this total in order to draw a full pie. You can use this parameter to draw only parts of a pie or gauge charts.
+    total: undefined,
+    // If specified the donut CSS classes will be used and strokes will be drawn instead of pie slices.
+    donut: false,
+    // If specified the donut segments will be drawn as shapes instead of strokes.
+    donutSolid: false,
+    // Specify the donut stroke width, currently done in javascript for convenience. May move to CSS styles in the future.
+    // This option can be set as number or string to specify a relative width (i.e. 100 or '30%').
+    donutWidth: 60,
+    // If a label should be shown or not
+    showLabel: true,
+    // Label position offset from the standard position which is half distance of the radius. This value can be either positive or negative. Positive values will position the label away from the center.
+    labelOffset: 0,
+    // This option can be set to 'inside', 'outside' or 'center'. Positioned with 'inside' the labels will be placed on half the distance of the radius to the border of the Pie by respecting the 'labelOffset'. The 'outside' option will place the labels at the border of the pie and 'center' will place the labels in the absolute center point of the chart. The 'center' option only makes sense in conjunction with the 'labelOffset' option.
+    labelPosition: 'inside',
+    // An interpolation function for the label value
+    labelInterpolationFnc: Chartist.noop,
+    // Label direction can be 'neutral', 'explode' or 'implode'. The labels anchor will be positioned based on those settings as well as the fact if the labels are on the right or left side of the center of the chart. Usually explode is useful when labels are positioned far away from the center.
+    labelDirection: 'neutral',
+    // If true the whole data is reversed including labels, the series order as well as the whole series data arrays.
+    reverseData: false,
+    // If true empty values will be ignored to avoid drawing unncessary slices and labels
+    ignoreEmptyValues: false
+  };
+
+  /**
+   * Determines SVG anchor position based on direction and center parameter
+   *
+   * @param center
+   * @param label
+   * @param direction
+   * @return {string}
+   */
+  function determineAnchorPosition(center, label, direction) {
+    var toTheRight = label.x > center.x;
+
+    if(toTheRight && direction === 'explode' ||
+      !toTheRight && direction === 'implode') {
+      return 'start';
+    } else if(toTheRight && direction === 'implode' ||
+      !toTheRight && direction === 'explode') {
+      return 'end';
+    } else {
+      return 'middle';
+    }
+  }
+
+  /**
+   * Creates the pie chart
+   *
+   * @param options
+   */
+  function createChart(options) {
+    var data = Chartist.normalizeData(this.data);
+    var seriesGroups = [],
+      labelsGroup,
+      chartRect,
+      radius,
+      labelRadius,
+      totalDataSum,
+      startAngle = options.startAngle;
+
+    // Create SVG.js draw
+    this.svg = Chartist.createSvg(this.container, options.width, options.height,options.donut ? options.classNames.chartDonut : options.classNames.chartPie);
+    // Calculate charting rect
+    chartRect = Chartist.createChartRect(this.svg, options, defaultOptions.padding);
+    // Get biggest circle radius possible within chartRect
+    radius = Math.min(chartRect.width() / 2, chartRect.height() / 2);
+    // Calculate total of all series to get reference value or use total reference from optional options
+    totalDataSum = options.total || data.normalized.series.reduce(function(previousValue, currentValue) {
+      return previousValue + currentValue;
+    }, 0);
+
+    var donutWidth = Chartist.quantity(options.donutWidth);
+    if (donutWidth.unit === '%') {
+      donutWidth.value *= radius / 100;
+    }
+
+    // If this is a donut chart we need to adjust our radius to enable strokes to be drawn inside
+    // Unfortunately this is not possible with the current SVG Spec
+    // See this proposal for more details: http://lists.w3.org/Archives/Public/www-svg/2003Oct/0000.html
+    radius -= options.donut && !options.donutSolid ? donutWidth.value / 2  : 0;
+
+    // If labelPosition is set to `outside` or a donut chart is drawn then the label position is at the radius,
+    // if regular pie chart it's half of the radius
+    if(options.labelPosition === 'outside' || options.donut && !options.donutSolid) {
+      labelRadius = radius;
+    } else if(options.labelPosition === 'center') {
+      // If labelPosition is center we start with 0 and will later wait for the labelOffset
+      labelRadius = 0;
+    } else if(options.donutSolid) {
+      labelRadius = radius - donutWidth.value / 2;
+    } else {
+      // Default option is 'inside' where we use half the radius so the label will be placed in the center of the pie
+      // slice
+      labelRadius = radius / 2;
+    }
+    // Add the offset to the labelRadius where a negative offset means closed to the center of the chart
+    labelRadius += options.labelOffset;
+
+    // Calculate end angle based on total sum and current data value and offset with padding
+    var center = {
+      x: chartRect.x1 + chartRect.width() / 2,
+      y: chartRect.y2 + chartRect.height() / 2
+    };
+
+    // Check if there is only one non-zero value in the series array.
+    var hasSingleValInSeries = data.raw.series.filter(function(val) {
+      return val.hasOwnProperty('value') ? val.value !== 0 : val !== 0;
+    }).length === 1;
+
+    // Creating the series groups
+    data.raw.series.forEach(function(series, index) {
+      seriesGroups[index] = this.svg.elem('g', null, null);
+    }.bind(this));
+    //if we need to show labels we create the label group now
+    if(options.showLabel) {
+      labelsGroup = this.svg.elem('g', null, null);
+    }
+
+    // Draw the series
+    // initialize series groups
+    data.raw.series.forEach(function(series, index) {
+      // If current value is zero and we are ignoring empty values then skip to next value
+      if (data.normalized.series[index] === 0 && options.ignoreEmptyValues) return;
+
+      // If the series is an object and contains a name or meta data we add a custom attribute
+      seriesGroups[index].attr({
+        'ct:series-name': series.name
+      });
+
+      // Use series class from series data or if not set generate one
+      seriesGroups[index].addClass([
+        options.classNames.series,
+        (series.className || options.classNames.series + '-' + Chartist.alphaNumerate(index))
+      ].join(' '));
+
+      // If the whole dataset is 0 endAngle should be zero. Can't divide by 0.
+      var endAngle = (totalDataSum > 0 ? startAngle + data.normalized.series[index] / totalDataSum * 360 : 0);
+
+      // Use slight offset so there are no transparent hairline issues
+      var overlappigStartAngle = Math.max(0, startAngle - (index === 0 || hasSingleValInSeries ? 0 : 0.2));
+
+      // If we need to draw the arc for all 360 degrees we need to add a hack where we close the circle
+      // with Z and use 359.99 degrees
+      if(endAngle - overlappigStartAngle >= 359.99) {
+        endAngle = overlappigStartAngle + 359.99;
+      }
+
+      var start = Chartist.polarToCartesian(center.x, center.y, radius, overlappigStartAngle),
+        end = Chartist.polarToCartesian(center.x, center.y, radius, endAngle);
+
+      var innerStart,
+        innerEnd,
+        donutSolidRadius;
+
+      // Create a new path element for the pie chart. If this isn't a donut chart we should close the path for a correct stroke
+      var path = new Chartist.Svg.Path(!options.donut || options.donutSolid)
+        .move(end.x, end.y)
+        .arc(radius, radius, 0, endAngle - startAngle > 180, 0, start.x, start.y);
+
+      // If regular pie chart (no donut) we add a line to the center of the circle for completing the pie
+      if(!options.donut) {
+        path.line(center.x, center.y);
+      } else if (options.donutSolid) {
+        donutSolidRadius = radius - donutWidth.value;
+        innerStart = Chartist.polarToCartesian(center.x, center.y, donutSolidRadius, startAngle - (index === 0 || hasSingleValInSeries ? 0 : 0.2));
+        innerEnd = Chartist.polarToCartesian(center.x, center.y, donutSolidRadius, endAngle);
+        path.line(innerStart.x, innerStart.y);
+        path.arc(donutSolidRadius, donutSolidRadius, 0, endAngle - startAngle  > 180, 1, innerEnd.x, innerEnd.y);
+      }
+
+      // Create the SVG path
+      // If this is a donut chart we add the donut class, otherwise just a regular slice
+      var pathClassName = options.classNames.slicePie;
+      if (options.donut) {
+        pathClassName = options.classNames.sliceDonut;
+        if (options.donutSolid) {
+          pathClassName = options.classNames.sliceDonutSolid;
+        }
+      }
+      var pathElement = seriesGroups[index].elem('path', {
+        d: path.stringify()
+      }, pathClassName);
+
+      // Adding the pie series value to the path
+      pathElement.attr({
+        'ct:value': data.normalized.series[index],
+        'ct:meta': Chartist.serialize(series.meta)
+      });
+
+      // If this is a donut, we add the stroke-width as style attribute
+      if(options.donut && !options.donutSolid) {
+        pathElement._node.style.strokeWidth = donutWidth.value + 'px';
+      }
+
+      // Fire off draw event
+      this.eventEmitter.emit('draw', {
+        type: 'slice',
+        value: data.normalized.series[index],
+        totalDataSum: totalDataSum,
+        index: index,
+        meta: series.meta,
+        series: series,
+        group: seriesGroups[index],
+        element: pathElement,
+        path: path.clone(),
+        center: center,
+        radius: radius,
+        startAngle: startAngle,
+        endAngle: endAngle
+      });
+
+      // If we need to show labels we need to add the label for this slice now
+      if(options.showLabel) {
+        var labelPosition;
+        if(data.raw.series.length === 1) {
+          // If we have only 1 series, we can position the label in the center of the pie
+          labelPosition = {
+            x: center.x,
+            y: center.y
+          };
+        } else {
+          // Position at the labelRadius distance from center and between start and end angle
+          labelPosition = Chartist.polarToCartesian(
+            center.x,
+            center.y,
+            labelRadius,
+            startAngle + (endAngle - startAngle) / 2
+          );
+        }
+
+        var rawValue;
+        if(data.normalized.labels && !Chartist.isFalseyButZero(data.normalized.labels[index])) {
+          rawValue = data.normalized.labels[index];
+        } else {
+          rawValue = data.normalized.series[index];
+        }
+
+        var interpolatedValue = options.labelInterpolationFnc(rawValue, index);
+
+        if(interpolatedValue || interpolatedValue === 0) {
+          var labelElement = labelsGroup.elem('text', {
+            dx: labelPosition.x,
+            dy: labelPosition.y,
+            'text-anchor': determineAnchorPosition(center, labelPosition, options.labelDirection)
+          }, options.classNames.label).text('' + interpolatedValue);
+
+          // Fire off draw event
+          this.eventEmitter.emit('draw', {
+            type: 'label',
+            index: index,
+            group: labelsGroup,
+            element: labelElement,
+            text: '' + interpolatedValue,
+            x: labelPosition.x,
+            y: labelPosition.y
+          });
+        }
+      }
+
+      // Set next startAngle to current endAngle.
+      // (except for last slice)
+      startAngle = endAngle;
+    }.bind(this));
+
+    this.eventEmitter.emit('created', {
+      chartRect: chartRect,
+      svg: this.svg,
+      options: options
+    });
+  }
+
+  /**
+   * This method creates a new pie chart and returns an object that can be used to redraw the chart.
+   *
+   * @memberof Chartist.Pie
+   * @param {String|Node} query A selector query string or directly a DOM element
+   * @param {Object} data The data object in the pie chart needs to have a series property with a one dimensional data array. The values will be normalized against each other and don't necessarily need to be in percentage. The series property can also be an array of value objects that contain a value property and a className property to override the CSS class name for the series group.
+   * @param {Object} [options] The options object with options that override the default options. Check the examples for a detailed list.
+   * @param {Array} [responsiveOptions] Specify an array of responsive option arrays which are a media query and options object pair => [[mediaQueryString, optionsObject],[more...]]
+   * @return {Object} An object with a version and an update method to manually redraw the chart
+   *
+   * @example
+   * // Simple pie chart example with four series
+   * new Chartist.Pie('.ct-chart', {
+   *   series: [10, 2, 4, 3]
+   * });
+   *
+   * @example
+   * // Drawing a donut chart
+   * new Chartist.Pie('.ct-chart', {
+   *   series: [10, 2, 4, 3]
+   * }, {
+   *   donut: true
+   * });
+   *
+   * @example
+   * // Using donut, startAngle and total to draw a gauge chart
+   * new Chartist.Pie('.ct-chart', {
+   *   series: [20, 10, 30, 40]
+   * }, {
+   *   donut: true,
+   *   donutWidth: 20,
+   *   startAngle: 270,
+   *   total: 200
+   * });
+   *
+   * @example
+   * // Drawing a pie chart with padding and labels that are outside the pie
+   * new Chartist.Pie('.ct-chart', {
+   *   series: [20, 10, 30, 40]
+   * }, {
+   *   chartPadding: 30,
+   *   labelOffset: 50,
+   *   labelDirection: 'explode'
+   * });
+   *
+   * @example
+   * // Overriding the class names for individual series as well as a name and meta data.
+   * // The name will be written as ct:series-name attribute and the meta data will be serialized and written
+   * // to a ct:meta attribute.
+   * new Chartist.Pie('.ct-chart', {
+   *   series: [{
+   *     value: 20,
+   *     name: 'Series 1',
+   *     className: 'my-custom-class-one',
+   *     meta: 'Meta One'
+   *   }, {
+   *     value: 10,
+   *     name: 'Series 2',
+   *     className: 'my-custom-class-two',
+   *     meta: 'Meta Two'
+   *   }, {
+   *     value: 70,
+   *     name: 'Series 3',
+   *     className: 'my-custom-class-three',
+   *     meta: 'Meta Three'
+   *   }]
+   * });
+   */
+  function Pie(query, data, options, responsiveOptions) {
+    Chartist.Pie.super.constructor.call(this,
+      query,
+      data,
+      defaultOptions,
+      Chartist.extend({}, defaultOptions, options),
+      responsiveOptions);
+  }
+
+  // Creating pie chart type in Chartist namespace
+  Chartist.Pie = Chartist.Base.extend({
+    constructor: Pie,
+    createChart: createChart,
+    determineAnchorPosition: determineAnchorPosition
+  });
+
+}(window, document, Chartist));
+
+return Chartist;
+
+}));
+
+
+/***/ }),
+
+/***/ "./node_modules/v-chartist/dist/vue-chartist.min.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/v-chartist/dist/vue-chartist.min.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+!function(e,t){ true?module.exports=t(__webpack_require__(/*! chartist */ "./node_modules/chartist/dist/chartist.js")):undefined}(this,function(e){return function(e){function t(r){if(n[r])return n[r].exports;var o=n[r]={i:r,l:!1,exports:{}};return e[r].call(o.exports,o,o.exports,t),o.l=!0,o.exports}var n={};return t.m=e,t.c=n,t.i=function(e){return e},t.d=function(e,n,r){t.o(e,n)||Object.defineProperty(e,n,{configurable:!1,enumerable:!0,get:r})},t.n=function(e){var n=e&&e.__esModule?function(){return e.default}:function(){return e};return t.d(n,"a",n),n},t.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},t.p="",t(t.s=2)}([function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r=n(1),o=n.n(r),i=n(4),s=n(3),u=s(o.a,i.a,null,null,null);u.options.__file="src/vue-chartist.vue",u.esModule&&Object.keys(u.esModule).some(function(e){return"default"!==e&&"__"!==e.substr(0,2)})&&console.error("named exports are not supported in *.vue files."),u.options.functional&&console.error("[vue-loader] vue-chartist.vue: functional components are not supported with templates, they should use render functions."),t.default=u.exports},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r=n(5),o=function(e){return e&&e.__esModule?e:{default:e}}(r);t.default={name:"vue-chartist",props:{type:{type:String,validator:function(e){return"Pie"===e||"Line"===e||"Bar"===e},default:function(){return"Line"}},data:{type:Object,required:!0},options:{type:Object},listener:{type:Object},responsiveOptions:{type:Array}},data:function(){return{chartist:void 0}},methods:{updateEventListener:function(e){var t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"on";e=e||{};for(var n in e)e.hasOwnProperty(n)&&this.chartist[t](n,e[n])},renderChart:function(){var e=this.data,t=this.options?this.options:{},n=this.responsiveOptions?this.responsiveOptions:[];this.chartist?this.chartist.update(e,t,n):(this.chartist=new o.default[this.type](this.$el,e,t,n),this.updateEventListener(this.listener,"on"))}},watch:{data:{handler:"renderChart",deep:!0},options:{handler:"renderChart",deep:!0},responsiveOptions:{handler:"renderChart",deep:!0},listener:function(e,t){this.updateEventListener(t,"off"),this.updateEventListener(e,"on")}},mounted:function(){this.renderChart()},destroyed:function(){this.chartist&&this.chartist.detach()}}},function(e,t,n){"use strict";var r=n(0),o=function(e){return e&&e.__esModule?e:{default:e}}(r);e.exports=o.default},function(e,t){e.exports=function(e,t,n,r,o){var i,s=e=e||{},u=typeof e.default;"object"!==u&&"function"!==u||(i=e,s=e.default);var a="function"==typeof s?s.options:s;t&&(a.render=t.render,a.staticRenderFns=t.staticRenderFns),r&&(a._scopeId=r);var c;if(o?(c=function(e){e=e||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext,e||"undefined"==typeof __VUE_SSR_CONTEXT__||(e=__VUE_SSR_CONTEXT__),n&&n.call(this,e),e&&e._registeredComponents&&e._registeredComponents.add(o)},a._ssrRegister=c):n&&(c=n),c){var d=a.functional,p=d?a.render:a.beforeCreate;d?a.render=function(e,t){return c.call(t),p(e,t)}:a.beforeCreate=p?[].concat(p,c):[c]}return{esModule:i,exports:s,options:a}}},function(e,t,n){"use strict";var r=function(){var e=this,t=e.$createElement;return(e._self._c||t)("div",{staticClass:"v-chartist-container"})},o=[];r._withStripped=!0;var i={render:r,staticRenderFns:o};t.a=i},function(t,n){t.exports=e}])});
+
+/***/ })
+
+}]);

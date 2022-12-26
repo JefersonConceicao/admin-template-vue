@@ -47,8 +47,6 @@ mix.js('resources/main.js', 'public/js');
  mix.setResourceRoot('/laravel_vue/')
  
 
-
-
 // Full API
 // mix.js(src, output);
 // mix.react(src, output); <-- Identical to mix.js(), but registers React Babel compilation.

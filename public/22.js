@@ -1,1 +1,1570 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[22],{1314:function(t,a,n){n(971)},1315:function(t,a,n){n(972)},1321:function(t,a,n){"use strict";var e=n(701);n.n(e).a},1322:function(t,a,n){(t.exports=n(30)(!1)).push([t.i,"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*feeds*/\n.tile_1[data-v-303e0338] {\n    background-color: rgba(82, 166, 223, .7);\n    height: 148px;\n}\n.tile_2[data-v-303e0338] {\n    height: 200px;\n}\n.live-tile .tile-time[data-v-303e0338] {\n    bottom: 4px;\n    left: 20px;\n}\n.live-tile .feed-title[data-v-303e0338] {\n    top: 5px;\n    left: 10px;\n    font-size: 19px;\n    font-weight: bold;\n}\n.live-tile .full[data-v-303e0338] {\n    padding: 40px 20px 10px 23px;\n}\n.live-tile[data-v-303e0338],\n.list-tile[data-v-303e0338],\n.copy-tile[data-v-303e0338],\n.tile-strip .flip-list > li[data-v-303e0338] {\n    height: 100%;\n    margin: 0;\n    outline: 1px solid transparent;\n    -webkit-box-sizing: border-box;\n    -moz-box-sizing: border-box;\n    box-sizing: border-box;\n    padding: 0;\n    width: 100%;\n}\n\n\n/*feeds ends*/\n\n",""])},1323:function(t,a,n){"use strict";var e=n(702);n.n(e).a},1324:function(t,a,n){(t.exports=n(30)(!1)).push([t.i,'\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*timeline chart*/\n.schedule-cont[data-v-c17e0c9e] {\n    padding-left: 0;\n}\n.schedule-cont .item[data-v-c17e0c9e] {\n    border-left: 1px solid #ccc;\n    margin-bottom: -14px;\n    min-height: 70px;\n    padding-top: 10px;\n}\n.schedule-cont .success[data-v-c17e0c9e] {\n    border-left: 1px solid #66CC99;\n}\n.schedule-cont .danger[data-v-c17e0c9e] {\n    border-left: 1px solid #FF6666;\n}\n.schedule-cont .item .text-muted[data-v-c17e0c9e] {\n    color: #888;\n    font-size: 11px;\n}\n.schedule-cont .item p[data-v-c17e0c9e] {\n    color: #555;\n}\n.schedule-cont .item[data-v-c17e0c9e]:before {\n    content: " ";\n    display: table;\n    background-color: #fff;\n    border: 1px solid #58748B;\n    border-radius: 10px;\n    height: 9px;\n    left: 0;\n    margin-left: -5px;\n    width: 9px;\n    clear: both;\n    bottom: auto;\n    top: 4px;\n}\n.schedule-cont .success[data-v-c17e0c9e]:before {\n    border-color: #66CC99;\n}\n.schedule-cont .danger[data-v-c17e0c9e]:before {\n    border-color: #FF6666;\n}\n.schedule-cont .item .data[data-v-c17e0c9e] {\n    padding-left: 20px;\n    margin-top: -10px;\n}\n\n\n/*timeline chart ends*/\n\n',""])},1325:function(t,a){t.exports="/laravel_vue/images/prev.png?84b76dee6b27b795e89e3649078a11c2"},1326:function(t,a){t.exports="/laravel_vue/images/next.png?31f15875975aab69085470aabbfec802"},1327:function(t,a,n){"use strict";var e=n(703);n.n(e).a},1328:function(t,a,n){var e=n(45);(t.exports=n(30)(!1)).push([t.i,"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*chats profile*/\n.profile-page .cover-image[data-v-ba53fe4a] {\n    width: 100%;\n    height: 114px;\n    background-image: url("+e(n(973))+");\n    background-size: cover;\n    border-top-left-radius: 3px;\n    border-top-right-radius: 3px;\n}\n.profile-page .cover-image .change_pic[data-v-ba53fe4a] {\n    background-color: rgba(225, 225, 225, .4);\n}\n.profile-page .cover-image .change_pic img[data-v-ba53fe4a] {\n    height: 20px;\n}\n.profile-page .cover-image .profile-name[data-v-ba53fe4a] {\n    top: 85px;\n    left: 174px;\n    position: absolute;\n    color: #fff;\n    font-size: 20px;\n}\n.profile-page .cover-image .follow-link[data-v-ba53fe4a] {\n    position: absolute;\n    right: 30px;\n    top: 140px;\n    border: 1px solid #509DE0;\n    background-color: #509DE0;\n    border-radius: 4px;\n}\n.profile-page .cover-image .follow-link .btn[data-v-ba53fe4a] {\n    font-size: 14px;\n    padding: 1px 9px;\n    color: #fff;\n}\n.profile-page .profile-pic[data-v-ba53fe4a] {\n    width: 120px;\n    height: 120px;\n    background-image: url("+e(n(698))+");\n    background-size: cover;\n    border-radius: 50%;\n    border: 4px solid rgba(225, 225, 225, 1.5);\n    margin-top: -75px;\n    margin-left: 25px;\n}\n.profile-page .about[data-v-ba53fe4a] {\n    min-height: 123px;\n    margin-top: -25px;\n}\n.profile-page .about .designation[data-v-ba53fe4a] {\n    padding-top: 24px;\n    padding-left: 7%;\n    color: #555;\n}\n.profile-page .about .designation .new-task[data-v-ba53fe4a],\n.profile-page .about .designation .new-task[data-v-ba53fe4a]:active {\n    border-color: #509DE0;\n    color: #509DE0;\n    border-radius: 200px;\n    font-size: 14px;\n    padding: 3px 10px;\n}\n.profile-page .about .designation .new-task[data-v-ba53fe4a]:hover {\n    color: #fff;\n    background-color: #509DE0;\n}\n.profile-page .about .brief[data-v-ba53fe4a] {\n    overflow-y: hidden;\n    height: 100px;\n    padding: 5px 35px 5px 20px;\n    color: #777;\n}\n.profile-page .about .brief[data-v-ba53fe4a]:before {\n    content: '';\n    height: 67%;\n    width: 1px;\n    position: absolute;\n    left: 0;\n    top: 26%;\n    background-color: #ccc;\n}\n.profile-page .about .brief h4[data-v-ba53fe4a] {\n    font-weight: 700;\n}\n\n\n/*chats profile ends*/\n",""])},1334:function(t,a,n){"use strict";var e=n(705);n.n(e).a},1335:function(t,a,n){var e=n(45);(t.exports=n(30)(!1)).push([t.i,"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*weather widget*/\n.weather-widget[data-v-72d04109] {\n    background-image: url("+e(n(1336))+");\n    background-size: cover;\n    height: 260px;\n    color: #fff;\n    position: relative;\n    border-radius: 5px;\n}\n.weather-data .temperature[data-v-72d04109] {\n    padding-top: 29px;\n    padding-left: 10%;\n}\n.weather-data .temperature h2 span[data-v-72d04109] {\n    font-size: 60px;\n    margin-right: 40px;\n}\n.weather-data .temperature .icon[data-v-72d04109] {\n    position: absolute;\n    font-size: 82px;\n    z-index: 0;\n}\n.weather-data .temperature .location[data-v-72d04109] {\n    font-size: 14px;\n    position: absolute;\n}\n.weather-footer[data-v-72d04109] {\n    background: rgba(0, 0, 0, 0.4);\n    height: 100px;\n    bottom: 0;\n    width: 100%;\n    position: absolute;\n    border-bottom-right-radius: 4px;\n    border-bottom-left-radius: 4px;\n}\n.weather-footer h5[data-v-72d04109] {\n    color: #B3B3B3;\n    margin-top: 1rem;\n}\n.weather-footer i[data-v-72d04109] {\n    font-size: 22px;\n    margin: 5px 0 8px 0;\n}\n.weather-footer p[data-v-72d04109] {\n    font-size: 15px;\n}\n.weather-footer .popup[data-v-72d04109] {\n    -webkit-transition: .1s ease-in-out;\n    -moz-transition: .1s ease-in-out;\n    -o-transition: .1s ease-in-out;\n    transition: .1s ease-in-out;\n}\n.weather-footer .popup[data-v-72d04109]:hover {\n    cursor: pointer;\n    -webkit-transform: scale(1.1);\n    -moz-transform: scale(1.1);\n    -o-transform: scale(1.1);\n    -ms-transform: scale(1.1);\n    transform: scale(1.1);\n}\n\n/*for test*/\n@media screen and (max-width: 375px) {\n.weather-data .temperature h2 span.pull-right[data-v-72d04109] {\n        font-size: 50px;\n        margin-right: 26px;\n        margin-top: -15px;\n}\n.weather-footer .popup[data-v-72d04109] {\n        padding-left: 10px;\n}\n.weather-data .temperature .icon[data-v-72d04109] {\n        font-size: 60px;\n}\n}\n@media (min-width: 320px) and (max-width:425px){\n.weather-footer .popup[data-v-72d04109]{\n        padding-right:0;\n        padding-left: 0;\n}\n}\n@media(min-width: 768px) and (max-width: 1024px){\n.weather-footer .popup[data-v-72d04109]{\n        padding-left: 0;\n        padding-right: 0;\n}\n}\n",""])},1336:function(t,a){t.exports="/laravel_vue/images/d4-weather.jpg?05573f6c7d1620ebbb544b7d395aa5d3"},1341:function(t,a,n){"use strict";var e=n(707);n.n(e).a},1342:function(t,a,n){(t.exports=n(30)(!1)).push([t.i,"\n#chartdiv[data-v-f6b60256] {\n    width: 100%;\n    height: 500px;\n}\n#serverload .card-body[data-v-f6b60256]\n{\n    padding: 0;\n}\n#serverload .card-text[data-v-f6b60256]\n{\n    padding: 1.25rem;\n}\n#serverload .card-header[data-v-f6b60256]\n{\n    padding:0.75rem 1.25rem 2.25rem;\n}\n#serverload .text-size[data-v-f6b60256]\n{\n    font-size:14px;\n}\n#chartdiv div.amcharts-chart-div a[data-v-f6b60256]\n{\n    visibility: hidden;\n}\n#serverload .card .card-header .dropdowngroup[data-v-f6b60256]\n{\n    width: 50%;\n    float:right;\n    position: absolute;\n    z-index: 99;\n    right: 2px;\n    transition:all 1s;\n}\n#serverload .card .card-header .dropdowngroup .dropdown-item[data-v-f6b60256]\n{\n    cursor:pointer;\n}\n#app .fullscreen[data-v-f6b60256]\n{\n    overflow-x:hidden;\n}\n.fullscreen .card[data-v-f6b60256]\n{\n    box-shadow: none;\n}\n.fullscreen[data-v-f6b60256]\n{\n    background-color:#fff !important;\n}\n#serverload .btn-group.b-dropdown.dropdown[data-v-f6b60256]\n{\n    float:right;\n}\n#serverload  .btn-group.b-dropdown.dropdown i[data-v-f6b60256]\n{\n    color:#212529;\n}\n.drop-set[data-v-f6b60256]\n{\n   position:absolute;\n    left: auto !important;\n    right:0 !important;\n}\n.header-noti-icon:hover i[data-v-f6b60256],  .header-noti-icon i[data-v-f6b60256]\n{\n    padding: 5px 10px 4px 11px;\n    border-radius:50px;\n\n    position: relative;\n    left: 9px;\n    top: -8px;\n}\n.header-noti-icon i[data-v-f6b60256]\n{\n    background:none;\n}\n.header-noti-icon:hover i[data-v-f6b60256]\n{\n    background-color:#eee;\n}\n#app .fullscreen[data-v-3354e48c][data-v-f6b60256]\n{\n    background-color:#fff !important;\n}\n#serverload .card .card-body[data-v-f6b60256]\n{\n    height: 386px;\n}\n#serverload .card[data-v-f6b60256]\n{\n    position:relative;\n}\n#serverload .card .card-body img[data-v-f6b60256]\n{\n    position: absolute;\n    text-align: center;\n    left: 43%;\n    top: 40%;\n    z-index:99;\n}\n@media (min-width:320px) and (max-width:767px)\n{\n#serverload .card .card-body[data-v-f6b60256]\n    {\n        height:420px;\n}\n}\n.cardstyles[data-v-f6b60256]\n{\n    opacity:0.5\n}\n.amcharts-chart-div[data-v-f6b60256]\n{\n    width:253px !important;\n}\n\n",""])},1343:function(t,a){},1346:function(t,a,n){"use strict";var e=n(709);n.n(e).a},1347:function(t,a,n){(t.exports=n(30)(!1)).push([t.i,'\n#chartdiv[data-v-5c43ae4a] {\n    width: 100%;\n    height: 500px;\n}\n#deviceload .card-body[data-v-5c43ae4a]\n{\n    padding: 0;\n}\n#deviceload .card-text[data-v-5c43ae4a]\n{\n    padding: 1.25rem;\n}\n#deviceload .card-header[data-v-5c43ae4a]\n{\n    padding:0.75rem 1.25rem 2.25rem;\n}\n#deviceload .text-size[data-v-5c43ae4a]\n{\n    font-size:14px;\n}\n#chartdiv div.amcharts-chart-div a[data-v-5c43ae4a]\n{\n    visibility: hidden;\n}\n.server-load-chart[data-v-5c43ae4a]\n{\n    bottom: -5.5rem;\n    left: 0;\n    position: relative;\n    right: 0;\n}\n#deviceload .card .card-header .dropdowngroup[data-v-5c43ae4a]\n{\n    width: 50%;\n    float:right;\n    position: absolute;\n    z-index: 99;\n    right: 2px;\n    transition:all 1s;\n}\n#deviceload .card .card-header .dropdowngroup .dropdown-item[data-v-5c43ae4a]\n{\n    cursor:pointer;\n}\n#app .fullscreen[data-v-5c43ae4a]\n{\n    overflow-x:hidden;\n}\n.fullscreen[data-v-5c43ae4a]\n{\n    background-color:#fff !important;\n}\n#deviceload .btn-group.b-dropdown.dropdown[data-v-5c43ae4a]\n{\n    float:right;\n}\n#deviceload .btn-group.b-dropdown.dropdown i[data-v-5c43ae4a]\n{\n    color:#212529;\n}\n#deviceload  .dropdown-menu[x-placement^="bottom"][data-v-5c43ae4a]{\n\n    position:absolute;\n    left: auto !important;\n    right:0 !important;\n    background-color:red;\n}\n#__BVID__196 > div[data-v-5c43ae4a]\n{\n    position:absolute;\n    left: auto !important;\n    right:0 !important;\n    background-color:red;\n}\n.drop-set[data-v-5c43ae4a]\n{\n    position:absolute;\n    left: auto !important;\n    right:0 !important;\n}\n#deviceload canvas[data-v-5c43ae4a]\n{\n    margin: auto;\n}\n#doughchart .overlay-content[data-v-5c43ae4a]\n{\n    position: absolute;\n    top: 44%;\n    left: 36%;\n    font-size: 24px;\n    color: #212529;\n    right: 0;\n    bottom: 0;\n    font-weight: 700;\n}\n.badge-secondary[data-v-5c43ae4a]\n{\n    background: none;\n}\n#doughchart .text-mobile[data-v-5c43ae4a]\n{\n    color:#f0ad4e;\n}\n#doughchart .text-tablet[data-v-5c43ae4a]\n{\n    color:#3b5998;\n}\n#serverload .card[data-v-5c43ae4a]\n{\n    position:relative;\n}\n#deviceload .card .card-body img[data-v-5c43ae4a]\n{\n    position: absolute;\n    text-align: center;\n    left: 43%;\n    top: 40%;\n    z-index:99;\n}\n.device-header-noti-icon:hover i[data-v-5c43ae4a],  .device-header-noti-icon i[data-v-5c43ae4a]\n{\n    padding: 5px 10px 4px 11px;\n    border-radius:50px;\n    position: relative;\n    left: 9px;\n    top: -8px;\n}\n.device-header-noti-icon i[data-v-5c43ae4a]\n{\n    background:none;\n}\n.device-header-noti-icon:hover i[data-v-5c43ae4a]\n{\n    background-color:#eee;\n}\n#deviceload .card[data-v-5c43ae4a]\n{\n    height: 389px;\n}\n.fullscreen .card[data-v-5c43ae4a]\n{\n    height: 100% !important;\n}\n@media (max-width: 768px)\n{\n#deviceload .card[data-v-5c43ae4a]\n    {\n        height: auto;\n}\n}\n\n',""])},1348:function(t,a){},1350:function(t,a,n){"use strict";var e=n(711);n.n(e).a},1351:function(t,a,n){(t.exports=n(30)(!1)).push([t.i,'\n.header-noti-icon:hover i[data-v-a01676cc],  .header-noti-icon i[data-v-a01676cc]\n{\n    padding: 5px 10px 4px 11px;\n    border-radius:50px;\n    position: relative;\n    left: 9px;\n    top: -8px;\n}\n.header-noti-icon i[data-v-a01676cc]\n{\n    background:none;\n}\n.header-noti-icon:hover i[data-v-a01676cc]\n{\n    background-color:#eee;\n}\n#todolist .btn-group.b-dropdown.dropdown i[data-v-a01676cc]\n{\n    color:#212529;\n}\n#todolist .row .col.offset-s3[data-v-a01676cc]\n{\n    margin-left: 0;\n}\n#todolist .card .card-title[data-v-a01676cc]\n{\n    font-size: 16px;\n}\n#todolist .card .collection .collection-item label[data-v-a01676cc]\n{\n    width: 100%;\n}\n#todolist .input-field[data-v-a01676cc]\n{\n    margin-top:4rem;\n}\n#to-list[data-v-a01676cc]\n{\n    height: 150px;\n    overflow-y: scroll;\n}\n#todolist .btn.waves-effect[data-v-a01676cc]:hover,#todolist .btn.waves-effect[data-v-a01676cc]\n{\n    background-color:#66cc99;\n}\n#todolist .teal-text[data-v-a01676cc], #todolist .prefix.active[data-v-a01676cc],#todolist label.active[data-v-a01676cc]\n{\n    color:#66cc99 !important;\n}\n#todolist [type="checkbox"]:checked+span[data-v-767e2d2a][data-v-a01676cc]:not(.lever):before\n{\n    border-right: 2px solid #66cc99;\n    border-bottom: 2px solid #66cc99;\n}\n#todolist .card[data-v-a01676cc]\n{\n    height:389px;\n}\n.collection .collection-item p[data-v-a01676cc]\n{\n    margin-bottom:0;\n    position: relative;\n    top: 4px;\n}\n.collection .collection-item p span[data-v-a01676cc]\n{\n    color:#555;\n}\n.hiddendiv[data-v-a01676cc]\n{\n    display:none;\n}\n',""])},1354:function(t,a,n){"use strict";var e=n(715);n.n(e).a},1355:function(t,a,n){(t.exports=n(30)(!1)).push([t.i,"/*global changes css*/\nbody > .header .logo[data-v-6ed84415] {\r\n    width: 241px;\n}\n.panel[data-v-6ed84415] {\r\n    background: #fff;\r\n    border-radius: 3px;\r\n    margin: 15px 0;\n}\n.panel-heading[data-v-6ed84415] {\r\n    border-bottom: 1px solid #efefef;\n}\r\n\r\n\r\n/*sales chart */\n#sales-chart svg[data-v-6ed84415] {\r\n    height: 350px;\r\n    margin-left: -21px;\r\n    margin-bottom: -9px;\n}\n.chart-header[data-v-6ed84415] {\r\n    color: #555;\r\n    font-size: 24px;\r\n    margin-top: 20px;\r\n    margin-bottom: 10px;\r\n    padding: 0 23px;\n}\n#main-chart[data-v-6ed84415] {\r\n    width: 100%;\n}\n#main-chart .ti-fullscreen[data-v-6ed84415] {\r\n    font-size: 18px;\n}\n#main-chart .dropdown-toggle[data-v-6ed84415]{\r\n    background-color: #fff;\n}\n.dropdown-toggle[data-v-6ed84415]::after{\r\n    display: none !important;\n}\n.statchart-data[data-v-6ed84415] {\r\n    width: 65%;\r\n    float: left;\r\n    color: #999;\r\n    margin-bottom: -26px;\r\n    margin-top: 15px;\n}\n.statchart-data .data[data-v-6ed84415] {\r\n    width: 30%;\r\n    float: left;\r\n    padding-left: 9%;\n}\n.statchart-data .percent[data-v-6ed84415] {\r\n    font-size: 24px;\r\n    color: #777;\n}\n.chart-header .option-more[data-v-6ed84415] {\r\n    font-size: 19px;\r\n    -webkit-transform: rotate(90deg);\r\n    -moz-transform: rotate(90deg);\r\n    -ms-transform: rotate(90deg);\r\n    -o-transform: rotate(90deg);\r\n    transform: rotate(90deg);\r\n    display: inline-block;\n}\n.chart-header .chartoption-menu[data-v-6ed84415] {\r\n    min-width: 100px;\n}\n#sales-chart svg .nv-legendWrap[data-v-6ed84415] {\r\n    pointer-events: none;\n}\n#sales-chart .nvd3 .nv-axis line[data-v-6ed84415] {\r\n    stroke: #f5f5f5;\n}\n#sales-chart .nvd3 .nv-groups .nv-group[data-v-6ed84415] {\r\n    fill-opacity: 1 !important;\n}\r\n\r\n\r\n/*sales chart ends here*/\r\n\r\n\r\n/*users, visits, hits tiles*/\n.main-cards h5[data-v-6ed84415] {\r\n    padding-left: 22px;\r\n    padding-top: 4px;\r\n    color: #555;\n}\n.main-cards p[data-v-6ed84415] {\r\n    padding: 9px 22px 5px 22px;\r\n    color: #555;\r\n    font-size: 24px;\n}\n.main-cards p small[data-v-6ed84415] {\r\n    font-size: 57%;\r\n    font-weight: bold;\n}\n.main-cards .progress-label[data-v-6ed84415] {\r\n    margin-right: 15px;\r\n    color: #29AC6A;\r\n    font-size: 14px;\n}\n.hits-progress[data-v-6ed84415] {\r\n    margin-bottom: 0;\r\n    background-color: #DAF6E8;\n}\n#user-chart canvas[data-v-6ed84415],\r\n#subscriber-chart canvas[data-v-6ed84415] {\r\n    margin-bottom: -3px;\r\n    margin-right: -4px;\n}\r\n\r\n\r\n/*users, visits, hits tiles ends*/\n@media (max-width:1024px){\n.profile-page .designation[data-v-6ed84415]{\r\n        padding-left: 20px !important;\n}\n}\n@media(max-width: 768px){\n.profile-page .about[data-v-6ed84415]{\r\n        margin-top: 5px;\n}\n.follow-link[data-v-6ed84415]{\r\n\r\n        right:45% !important;\n}\n}\r\n\r\n\r\n/*server load*/\n.server-load h4[data-v-6ed84415] {\r\n    font-weight: bold;\r\n    color: #777;\n}\r\n\r\n\r\n/*social networks*/\n.social .twitter[data-v-6ed84415] {\r\n    background-color: #1da1f2;\r\n    height: 77px;\r\n    padding-top: 13px;\n}\n.social .twitter i[data-v-6ed84415],\r\n.social .facebook i[data-v-6ed84415] {\r\n    color: #fff;\r\n    font-size: 50px;\r\n    vertical-align: middle;\n}\n.social .twitter i[data-v-6ed84415]:hover,\r\n.social .facebook i[data-v-6ed84415]:hover {\r\n    display: inline-block;\r\n    font-size: 60px;\r\n    -moz-transform: translate3d(0px, -7px, 0px);\r\n    -ms-transform: translate3d(0px, -7px, 0px);\r\n    -o-transform: translate3d(0px, -7px, 0px);\r\n    transform: translate3d(0px, -7px, 0px);\r\n    transition: transform .2s ease-in-out;\n}\n.social .facebook[data-v-6ed84415] {\r\n    background-color: #3b5998;\r\n    height: 77px;\r\n    padding-top: 13px;\r\n    width: 100%;\n}\n.social .info-1[data-v-6ed84415],\r\n.social .info-2[data-v-6ed84415] {\r\n    font-weight: bold;\r\n    color: #777;\n}\n.social .info-1 p[data-v-6ed84415],\r\n.social .info-2 p[data-v-6ed84415] {\r\n    color: #999;\n}\n.social .info-1[data-v-6ed84415] {\r\n    padding-left: 15px;\n}\n.social .info-2[data-v-6ed84415] {\r\n    padding-right: 17px;\n}\n.social .info-1 h3[data-v-6ed84415],\r\n.social .info-2 h3[data-v-6ed84415] {\r\n    font-weight: bold;\r\n    margin-bottom: 3px;\r\n    margin-top: 20px;\n}\r\n\r\n\r\n/*media queries*/\n@media screen and (max-width: 560px) {\n.rightsidebar-right .rightsidebar-right-content[data-v-6ed84415] {\r\n        padding-top: 103px;\n}\n.profile-page .profile-pic[data-v-6ed84415] {\r\n        width: 95px;\r\n        height: 95px;\r\n        margin-top: -58px;\n}\n.profile-page .cover-image .profile-name[data-v-6ed84415] {\r\n        left: 148px;\n}\n.profile-page .about .brief[data-v-6ed84415] {\r\n        height: 150px;\n}\nbody > .header .logo[data-v-6ed84415],\r\n    body > .header .navbar[data-v-6ed84415] {\r\n        width: 100%;\n}\n}\n@media screen and (max-width: 680px) {\n.statchart-data[data-v-6ed84415] {\r\n        width: 100%;\r\n        margin-bottom: 0;\n}\n}\n@media screen and (max-width: 767px) {\n.profile-page .about .brief[data-v-6ed84415] {\r\n        border-left: 0;\r\n        padding: 5px 35px;\n}\n.profile-page .cover-image .profile-name[data-v-6ed84415] {\r\n        top: 88px;\n}\n.profile-page .cover-image .follow-link[data-v-6ed84415] {\r\n        top: 127px;\n}\n.profile-page .about .brief[data-v-6ed84415]:before {\r\n        visibility: hidden;\n}\n}\n@media (max-width: 320px){\n.profile-page .cover-image .follow-link[data-v-6ed84415] {\r\n        top: 120px;\n}\n}\n@media(max-width:1024px){\n.boxed .about .designation[data-v-6ed84415]{\r\n        padding-left: 13px !important;\r\n        padding-right: 5px !important;\n}\n.boxed .cover-image .follow-link[data-v-6ed84415]{\r\n        right: 5px !important;\n}\n.boxed .about .brief h4[data-v-6ed84415]{\r\n        margin-left: 15px;\n}\n}\r\n/*dashboard 2*/\n.boxed .weather-footer .popup[data-v-6ed84415]{\r\n    padding-left: 0px;\r\n    padding-right: 0px;\n}\n.boxed .main-cards .card p[data-v-6ed84415]{\r\n    padding-left: 19px;\r\n    padding-right: 0;\n}",""])},1356:function(t,a,n){"use strict";var e=n(716);n.n(e).a},1357:function(t,a,n){(t.exports=n(30)(!1)).push([t.i,"\n#sales-chart svg {\r\n    height: 350px;\r\n    margin-left: -21px;\r\n    margin-bottom: -9px;\n}\n#sales-chart .nvd3 .nv-groups .nv-group {\r\n    fill-opacity: 1 !important;\n}\n.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child{\r\n    background-color: #fff;\r\n    color:#666;\r\n    border: none;\n}\n.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child:active{\r\n    border:none;\n}\n.dropdown-toggle::after{\r\n    display: none;\n}\nbody > #app .header .navbar-nav .user-dropdown .dropdown-toggle{\r\n    padding-bottom: 11px !important;\n}\n@media(min-width: 320px) and (max-width:768px){\n.profile-page .follow-link{\r\n        right: 16% !important;\n}\n}\n.circle_number{\r\n        font-size: 20px;\r\n        position: relative;\r\n        top: -67px;\n}\n@media(min-width: 320px) and (max-width: 425px){\n.designation{\r\n        margin-top: 15px;\n}\n.profile-page .about .brief:before {\r\n        visibility: hidden;\n}\n}\r\n",""])},2216:function(t,a,n){"use strict";var e={name:"recent_activities"},i=(n(1323),n(21)),s=Object(i.a)(e,(function(){var t=this.$createElement;this._self._c;return this._m(0)}),[function(){var t=this,a=t.$createElement,n=t._self._c||a;return n("div",{staticClass:"card"},[n("div",{staticClass:"card-header"},[n("h3",{staticClass:"card-title"},[t._v("Recent Activities")])]),t._v(" "),n("div",{staticClass:"card-body"},[n("ul",{staticClass:"schedule-cont"},[n("li",{staticClass:"item success"},[n("div",{staticClass:"data"},[n("div",{staticClass:"time text-muted"},[t._v(" Just now")]),t._v(" "),n("p",[n("span",{staticClass:"text-info"},[t._v("Jade")]),t._v(" Project team has successfully completed\n                        their\n                        first phase.")])])]),t._v(" "),n("li",{staticClass:"item danger"},[n("div",{staticClass:"data"},[n("div",{staticClass:"time text-muted"},[t._v(" 7min ago")]),t._v(" "),n("p",[t._v("Tinder Project's "),n("span",{staticClass:"text-info"},[t._v("Second")]),t._v(" review has completed.\n                    ")])])]),t._v(" "),n("li",{staticClass:"item"},[n("div",{staticClass:"data"},[n("div",{staticClass:"time text-muted"},[t._v("5hours ago")]),t._v(" "),n("p",[t._v("Richard McClintock, updated his project over view report.")])])]),t._v(" "),n("li",{staticClass:"item success"},[n("div",{staticClass:"data"},[n("div",{staticClass:"time text-muted"},[t._v(" Yesterday")]),t._v(" "),n("p",[t._v("Variations Project "),n("span",{staticClass:"text-info"},[t._v("Evaluation")]),t._v(" is going on to\n                        highlight\n                        the project success .")])])])])])])}],!1,null,"c17e0c9e",null);a.a=s.exports},2217:function(t,a,n){"use strict";var e={name:"profile_page",data:function(){return{images:[n(684),n(685),n(973)],profile_name:["Clinton Leo","Tony","Jenny Kerry"],profile_pic:[n(698),n(435),n(436)],desig:["Designer,","Editor,","Tester,"],desigtag:["Team Lead.","Manager.","Trainee."],currentNumber:0}},methods:{next:function(){this.currentNumber+=1},prev:function(){this.currentNumber-=1}}},i=(n(1327),n(21)),s=Object(i.a)(e,(function(){var t=this,a=t.$createElement,e=t._self._c||a;return e("div",{staticClass:"card profile-page"},[e("div",{staticClass:"cover-image",style:{backgroundImage:"url("+t.images[Math.abs(t.currentNumber)%t.images.length]+")"}},[e("a",{staticClass:"btn change_pic prev_pic",on:{click:t.prev}},[e("img",{attrs:{src:n(1325),alt:"previous"}})]),t._v(" "),e("a",{staticClass:"btn change_pic next_pic float-right",on:{click:t.next}},[e("img",{attrs:{src:n(1326),alt:"previous"}})]),t._v(" "),e("span",{staticClass:"profile-name"},[e("b",[t._v(t._s(t.profile_name[Math.abs(t.currentNumber)%t.profile_name.length]))])]),t._v(" "),t._m(0)]),t._v(" "),e("div",{staticClass:"profile-pic",style:{backgroundImage:"url("+t.profile_pic[Math.abs(t.currentNumber)%t.profile_pic.length]+")"}}),t._v(" "),e("div",{staticClass:"about"},[e("div",{staticClass:"row"},[e("div",{staticClass:"col-sm-4 designation text-center"},[e("h5",{staticClass:"mt-lg-1"},[t._v("\n                    "+t._s(t.desig[Math.abs(t.currentNumber)%t.desig.length])+"\n                    "),e("br",{staticClass:"hidden-xs"}),t._v("\n                    "+t._s(t.desigtag[Math.abs(t.currentNumber)%t.desigtag.length])+"\n                ")]),t._v(" "),t._m(1)]),t._v(" "),t._m(2)])])])}),[function(){var t=this.$createElement,a=this._self._c||t;return a("span",{staticClass:"follow-link"},[a("a",{staticClass:"btn btn-sm",attrs:{href:"javascript:void(0)"}},[this._v("+ Follow")])])},function(){var t=this.$createElement,a=this._self._c||t;return a("span",[a("a",{staticClass:"btn btn-sm button-pill new-task",attrs:{href:"javascript:void(0)"}},[this._v("New Task +")])])},function(){var t=this.$createElement,a=this._self._c||t;return a("div",{staticClass:"col-sm-8 brief"},[a("h4",[this._v("About")]),this._v(" "),a("p",[this._v("Lorem ipsum dolor sit amet, consectetur adipisicing elit.deserunt eveniet facilis possimus, omnis porro possimus rem repellat")])])}],!1,null,"ba53fe4a",null);a.a=s.exports},2218:function(t,a,n){"use strict";var e={name:"weather"},i=(n(1329),n(1334),n(21)),s=Object(i.a)(e,(function(){var t=this.$createElement;this._self._c;return this._m(0)}),[function(){var t=this,a=t.$createElement,n=t._self._c||a;return n("div",{staticClass:"card weather-widget"},[n("div",{staticClass:"row weather-data"},[n("div",{staticClass:"col-md-12 temperature"},[n("h2",[n("i",{staticClass:"wi wi-day-cloudy icon"}),n("span",{staticClass:"float-right"},[t._v("19"),n("sup",[n("sup",[t._v("o")])]),t._v("c "),n("br"),n("span",{staticClass:"location"},[n("i",{staticClass:"ti-location-pin text-default",attrs:{"aria-hidden":"true"}}),t._v("\n                                London, UK")])])])])]),t._v(" "),n("div",{staticClass:"weather-footer"},[n("div",{staticClass:"text-center row ml-0 mr-0"},[n("div",{staticClass:"col-2 popup"},[n("h5",[t._v("MON")]),t._v(" "),n("i",{staticClass:"wi wi-day-lightning"}),t._v(" "),n("p",[t._v("21°c")])]),t._v(" "),n("div",{staticClass:"col-2 popup"},[n("h5",[t._v("TUE")]),t._v(" "),n("i",{staticClass:"wi wi-cloudy"}),t._v(" "),n("p",[t._v("28°c")])]),t._v(" "),n("div",{staticClass:"col-2 popup"},[n("h5",[t._v("WED")]),t._v(" "),n("i",{staticClass:"wi wi-night-rain-mix"}),t._v(" "),n("p",[t._v("26°c")])]),t._v(" "),n("div",{staticClass:"col-2 popup"},[n("h5",[t._v("THU")]),t._v(" "),n("i",{staticClass:"wi wi-day-sunny"}),t._v(" "),n("p",[t._v("31°c")])]),t._v(" "),n("div",{staticClass:"col-2 popup"},[n("h5",[t._v("FRI")]),t._v(" "),n("i",{staticClass:"wi wi-day-lightning"}),t._v(" "),n("p",[t._v("24°c")])]),t._v(" "),n("div",{staticClass:"col-2 popup"},[n("h5",[t._v("SAT")]),t._v(" "),n("i",{staticClass:"wi wi-night-alt-snow"}),t._v(" "),n("p",[t._v("25°c")])])])])])}],!1,null,"72d04109",null);a.a=s.exports},2222:function(t,a,n){"use strict";var e=n(699).a,i=(n(1317),n(1321),n(21)),s=Object(i.a)(e,(function(){var t=this,a=t.$createElement,e=t._self._c||a;return e("div",{staticClass:"card"},[e("div",{staticClass:"row"},[t._m(0),t._v(" "),e("div",{staticClass:"col-md-12"},[e("div",{staticClass:"tile_2"},[e("div",{staticClass:"list-tile"},[e("ul",{staticClass:"flip-list fourTiles",attrs:{"data-mode":"flip-list","data-delay":"2000"}},[e("li",[e("div",[e("img",{staticClass:"full",attrs:{src:n(698),alt:"1"}})]),t._v(" "),e("div",[e("img",{staticClass:"full",attrs:{src:n(435),alt:"1"}})])]),t._v(" "),e("li",{attrs:{"data-direction":"horizontal"}},[e("div",[e("img",{staticClass:"full",attrs:{src:n(436),alt:"2"}})]),t._v(" "),e("div",[e("img",{staticClass:"full",attrs:{src:n(437),alt:"2"}})])]),t._v(" "),e("li",{attrs:{"data-direction":"horizontal"}},[e("div",[e("img",{staticClass:"full",attrs:{src:n(441),alt:"3"}})]),t._v(" "),e("div",[e("img",{staticClass:"full",attrs:{src:n(582),alt:"3"}})])]),t._v(" "),e("li",[e("div",[e("img",{staticClass:"full",attrs:{src:n(612),alt:"4"}})]),t._v(" "),e("div",[e("img",{staticClass:"full",attrs:{src:n(455),alt:"4"}})])])])])])])])])}),[function(){var t=this,a=t.$createElement,n=t._self._c||a;return n("div",{staticClass:"col-md-12"},[n("div",{staticClass:"tile_1"},[n("div",{staticClass:"live-tile",attrs:{"data-mode":"carousel","data-direction":"vertical","data-delay":"2500"}},[n("span",{staticClass:"tile-title feed-title"},[t._v("Feeds")]),t._v(" "),n("div",[n("h5",{staticClass:"full"},[t._v(" It is a long established fact that a reader will be\n                            distracted.")]),t._v(" "),n("span",{staticClass:"tile-title tile-time"},[t._v("17 min ago")])]),t._v(" "),n("div",[n("h5",{staticClass:"full"},[t._v(" Many desktop publishing packages and web page\n                            editors.")]),t._v(" "),n("span",{staticClass:"tile-title tile-time"},[t._v("40 min ago")])]),t._v(" "),n("div",[n("h5",{staticClass:"full"},[t._v(" Richard McClintock, a Latin Trainer at\n                            Hampden-Sydney.")]),t._v(" "),n("span",{staticClass:"tile-title tile-time"},[t._v("yesterday at 4pm")])]),t._v(" "),n("div",[n("h5",{staticClass:"full"},[t._v(" There are many variations of passages of Lorem Ipsum\n                            available.")]),t._v(" "),n("span",{staticClass:"tile-title tile-time"},[t._v("Dec 4")])])])])])}],!1,null,"303e0338",null);a.a=s.exports},2223:function(t,a,n){"use strict";var e=n(706).a,i=(n(1341),n(21)),s=n(1343),r=n.n(s),o=Object(i.a)(e,(function(){var t=this,a=t.$createElement,e=t._self._c||a;return e("div",{attrs:{id:"app"}},[e("fullscreen",{ref:"fullscreen",on:{change:t.fullscreenChange}},[t.cardhide?e("b-card-group",{attrs:{deck:"",id:"serverload"}},[e("b-card",{style:t.cardstyles},[t.cardstatus?e("div",[e("img",{attrs:{src:n(236),alt:"image missing"}})]):t._e(),t._v(" "),e("div",{staticClass:"card-header",attrs:{id:"dropdown-card"}},[e("h3",{staticClass:"card-title"},[t._v(" Server Load")]),t._v(" "),e("b-dropdown",{attrs:{variant:"link",size:"lg","no-caret":""}},[e("template",{slot:"button-content"},[e("span",{staticClass:"header-noti-icon",on:{click:t.menuOption}},[e("i",{staticClass:"fa fa-ellipsis-v",attrs:{"aria-hidden":"true"}})]),t._v(" "),e("span",{staticClass:"sr-only"},[t._v("Search")])]),t._v(" "),e("div",[e("b-dropdown-item",{attrs:{href:"#"},on:{click:t.toggle}},[e("span",{staticClass:"pr-3"},[e("i",{staticClass:"fa fa-arrows-alt"})]),t._v(" "),e("span",[t._v("Full Screen")])]),t._v(" "),e("b-dropdown-item",{attrs:{href:"#"},on:{click:function(a){return t.myReload(this)}}},[e("span",{staticClass:"pr-3"},[e("i",{staticClass:"fa fa-refresh"})]),t._v(" "),e("span",[t._v("Reload")])]),t._v(" "),e("b-dropdown-item",{attrs:{href:"#"},on:{click:t.notificationClose}},[e("span",{staticClass:"pr-3"},[e("i",{staticClass:"fa fa-close"})]),t._v(" "),e("span",[t._v("Close")])])],1)],2)],1),t._v(" "),e("div",{staticClass:"card-text"},[e("div",{staticClass:"row"},[e("div",{staticClass:"col-lg-6 col-6"},[e("span",[t._v("Space")]),t._v(" "),e("div",[e("span",{staticClass:"text-info text-size"},[t._v("98GB")]),e("span",{staticClass:"text-primary"},[t._v(" / 124GB")])])]),t._v(" "),e("div",{staticClass:"col-lg-6 col-6  text-right"},[e("span",[t._v("Bandwidth")]),t._v(" "),e("div",[e("span",{staticClass:"text-danger text-size"},[t._v("512MB")]),e("span",{staticClass:"text-primary"},[t._v(" / 1024MB")])])])]),t._v(" "),e("div",{staticClass:"col-12 px-0"},[e("div",{staticClass:"server-load-chart",staticStyle:{width:"100%",height:"400px"},attrs:{id:"chartdiv"}})])])])],1):t._e()],1)],1)}),[],!1,null,"f6b60256",null);"function"==typeof r.a&&r()(o);a.a=o.exports},2224:function(t,a,n){"use strict";var e=n(708).a,i=(n(1346),n(21)),s=n(1348),r=n.n(s),o=Object(i.a)(e,(function(){var t=this,a=t.$createElement,e=t._self._c||a;return e("div",{attrs:{id:"app"}},[e("fullscreen",{ref:"fullscreen",on:{change:t.fullscreenChange}},[t.cardhide?e("b-card-group",{attrs:{deck:"",id:"deviceload"}},[e("b-card",{style:t.cardstyles},[t.cardstatus?e("div",[e("img",{attrs:{src:n(236),alt:"image missing"}})]):t._e(),t._v(" "),e("div",{staticClass:"card-header",attrs:{id:"dropdown-card"}},[e("h3",{staticClass:"card-title"},[t._v(" Device Separations")]),t._v(" "),e("div",[e("b-dropdown",{attrs:{variant:"link",size:"lg","no-caret":""}},[e("template",{slot:"button-content"},[e("span",{staticClass:"device-header-noti-icon"},[e("i",{staticClass:"fa fa-ellipsis-v",attrs:{"aria-hidden":"true"}})]),t._v(" "),e("span",{staticClass:"sr-only"},[t._v("Search")])]),t._v(" "),e("div",[e("b-dropdown-item",{attrs:{href:"#"},on:{click:t.toggle}},[e("span",{staticClass:"pr-3"},[e("i",{staticClass:"fa fa-arrows-alt"})]),t._v(" "),e("span",[t._v("Full Screen")])]),t._v(" "),e("b-dropdown-item",{attrs:{href:"#"},on:{click:t.myReload}},[e("span",{staticClass:"pr-3"},[e("i",{staticClass:"fa fa-refresh"})]),t._v(" "),e("span",[t._v("Reload")])]),t._v(" "),e("b-dropdown-item",{attrs:{href:"#"},on:{click:t.notificationClose}},[e("span",{staticClass:"pr-3 "},[e("i",{staticClass:"fa fa-close"})]),t._v(" "),e("span",[t._v("Close")])])],1)],2)],1)]),t._v(" "),e("div",{staticClass:"card-text",attrs:{id:"doughchart"}},[e("div",{staticClass:"col-7 mx-auto"},[e("chartjs-doughnut",{attrs:{width:t.mywidth,height:t.myheight,scalesdisplay:!1,datasets:t.mydatasets,labels:["Computer","Mobile","Tablets"],option:t.myoption}})],1),t._v(" "),e("div",{staticClass:"row"},[e("div",{staticClass:"col-4 text-center px-0"},[e("b-badge",[e("i",{staticClass:"fa fa-circle text-primary fa-2x"})]),e("span",{},[t._v("Computer")])],1),t._v(" "),e("div",{staticClass:"col-4 text-center "},[e("b-badge",[e("i",{staticClass:"fa fa-circle text-mobile fa-2x"})]),e("span",{},[t._v("Mobile")])],1),t._v(" "),e("div",{staticClass:"col-4 text-center "},[e("b-badge",[e("i",{staticClass:"fa fa-circle text-tablet fa-2x"})]),e("span",{},[t._v("Tablets")])],1)])])])],1):t._e()],1)],1)}),[],!1,null,"5c43ae4a",null);"function"==typeof r.a&&r()(o);a.a=o.exports},2225:function(t,a,n){"use strict";var e=n(710).a,i=(n(1350),n(1352),n(21)),s=Object(i.a)(e,(function(){var t=this,a=t.$createElement,n=t._self._c||a;return n("div",[n("div",{staticClass:"card"},[t._m(0),t._v(" "),n("div",{staticClass:"col-12"},[n("div",{staticClass:"row"},[n("form",{staticClass:"col s6 offset-s3",on:{submit:function(a){return a.preventDefault(),t.submitTodo(a)}}},[n("div",{staticClass:"input-field"},[n("i",{staticClass:"material-icons prefix"},[t._v("list")]),t._v(" "),n("textarea",{directives:[{name:"model",rawName:"v-model",value:t.newTodo,expression:"newTodo"}],staticClass:"materialize-textarea",attrs:{id:"icon_prefix2"},domProps:{value:t.newTodo},on:{input:function(a){a.target.composing||(t.newTodo=a.target.value)}}}),t._v(" "),n("label",{attrs:{for:"icon_prefix2"}},[t._v("What to do?")])]),t._v(" "),n("button",{staticClass:"btn waves-effect col s12"},[t._v("Add")])])]),t._v(" "),n("div",{attrs:{id:"to-list"}},[n("div",{staticClass:"row"},[n("ul",{staticClass:"collection col s6 offset-s3"},[t._m(1),t._v(" "),t._l(t.todos,(function(a){return n("li",{staticClass:"collection-item"},[n("p",[n("label",[n("input",{attrs:{type:"checkbox"},domProps:{checked:a.done},on:{change:function(t){a.done=!a.done}}}),t._v(" "),n("span",[t._v(t._s(a.title))]),t._v(" "),n("span",[n("a",{on:{click:function(n){return n.preventDefault(),t.deleteTodo(a)}}},[n("i",{staticClass:"material-icons right teal-text"},[t._v("delete")])])])])])])}))],2)])])])])])}),[function(){var t=this.$createElement,a=this._self._c||t;return a("div",{staticClass:"card-header"},[a("div",{staticClass:"card-title"},[this._v("Todo List\n\n            ")])])},function(){var t=this.$createElement,a=this._self._c||t;return a("li",{staticClass:"collection-item",attrs:{"data-v-767e2d2a":""}},[a("p",{attrs:{"data-v-767e2d2a":""}},[a("label",{attrs:{"data-v-767e2d2a":""}},[a("input",{attrs:{"data-v-767e2d2a":"",type:"checkbox"}}),this._v(" "),a("span",{attrs:{"data-v-767e2d2a":""}},[this._v("Create Menu")]),this._v(" "),a("span",{attrs:{"data-v-767e2d2a":""}},[a("a",{attrs:{"data-v-767e2d2a":""}},[a("i",{staticClass:"material-icons right teal-text",attrs:{"data-v-767e2d2a":""}},[this._v("delete")])])])])])])}],!1,null,"a01676cc",null);a.a=s.exports},2289:function(t,a,n){"use strict";n.r(a);var e=n(697).a,i=(n(713),n(1354),n(1356),n(21)),s=Object(i.a)(e,(function(){var t=this,a=t.$createElement,n=t._self._c||a;return n("div",[n("div",{staticClass:"row"},[n("div",{staticClass:"col-md-12"},[n("div",{staticClass:"card",staticStyle:{width:"100%"},attrs:{id:"main-chart"}},[n("div",{staticClass:"chart-header"},[t._v("Recent Stats\n                    "),n("div",{staticClass:"btn-group float-right"},[t._m(0),t._v(" "),n("b-dd",{staticClass:"content-menu bg-light"},[n("template",{slot:"button-content"},[n("i",{staticClass:"ti-more-alt more option-more"})]),t._v(" "),n("b-dropdown-item",{staticClass:"content-header"},[t._v("\n                                Vue\n                            ")]),t._v(" "),n("b-dropdown-item",{staticClass:"content-header"},[t._v("\n                                Update\n                            ")]),t._v(" "),n("b-dropdown-item",{staticClass:"content-header"},[t._v("\n                                Settings\n                            ")])],2)],1)]),t._v(" "),t._m(1),t._v(" "),n("div",{staticClass:"with-3d-shadow with-transitions",attrs:{id:"sales-chart"}},[n("svg")])])])]),t._v(" "),t._m(2),t._v(" "),n("div",{staticClass:"row"},[n("div",{staticClass:"col-sm-6"},[n("profile_page")],1),t._v(" "),n("div",{staticClass:"col-sm-6"},[n("weather")],1)]),t._v(" "),n("div",{staticClass:"row"},[n("div",{staticClass:"col-lg-7 col-sm-7 col-xl-4"},[n("recent_activities")],1),t._v(" "),n("div",{staticClass:"col-sm-5 col-lg-5 col-xl-3"},[n("feeds")],1),t._v(" "),n("div",{staticClass:"col-sm-12 col-lg-12 col-xl-5"},[n("div",{staticClass:"row"},[n("div",{staticClass:"col-sm-6"},[n("div",{staticClass:"card"},[n("div",{staticClass:"card-body"},[n("div",{staticClass:"server-load text-center"},[n("circle-slider",{attrs:{"circle-width":8,"progress-width":9,"knob-radius":4.5,"progress-color":"#418AC9","knob-color":"#418AC9","circle-color":"#edeff0"},model:{value:t.val5,callback:function(a){t.val5=a},expression:"val5"}}),t._v(" "),n("div",{staticClass:"circle_number text-primary"},[t._v(t._s(t.val5)+"%")]),t._v(" "),n("h4",[t._v("CPU-LOAD")])],1)])])]),t._v(" "),n("div",{staticClass:"col-sm-6"},[n("div",{staticClass:"card"},[n("div",{staticClass:"card-body"},[n("div",{staticClass:"server-load text-center"},[n("circle-slider",{attrs:{"circle-width":8,"progress-width":9,"knob-radius":4.5,"progress-color":"#66cc99","knob-color":"#66cc99","circle-color":"#edeff0"},model:{value:t.val5,callback:function(a){t.val5=a},expression:"val5"}}),t._v(" "),n("div",{staticClass:"circle_number text-success"},[t._v(t._s(t.val5)+"%")]),t._v(" "),n("h4",[t._v("DISC-SPACE")])],1)])])]),t._v(" "),t._m(3),t._v(" "),t._m(4)])])]),t._v(" "),n("div",{staticClass:"row"},[n("div",{staticClass:"col-xl-4 col-lg-6 col-12"},[n("VueServerLoad")],1),t._v(" "),n("div",{staticClass:"col-xl-4 col-lg-6 col-12"},[n("VueDevice")],1),t._v(" "),n("div",{staticClass:"col-xl-4 col-lg-6 col-12 mt-2",attrs:{id:"todolist"}},[n("todolist")],1)])])}),[function(){var t=this.$createElement,a=this._self._c||t;return a("span",{attrs:{id:"fullscreen-toggle",role:"button"}},[a("small",[a("i",{staticClass:"ti-fullscreen"})])])},function(){var t=this,a=t.$createElement,n=t._self._c||a;return n("div",{staticClass:"statchart-data"},[n("div",{staticClass:"row"},[n("div",{staticClass:"data text-center"},[n("span",{staticClass:"percent"},[t._v(" 19%")]),t._v(" "),n("br",{staticClass:"hidden-sm hidden-md hidden-lg"}),t._v(" "),n("span",[t._v("Orders")])]),t._v(" "),n("div",{staticClass:"data text-center"},[n("span",{staticClass:"percent"},[t._v("23%")]),t._v(" "),n("br",{staticClass:"hidden-sm hidden-md hidden-lg"}),t._v(" "),n("span",[t._v("Sales")])]),t._v(" "),n("div",{staticClass:"data text-center"},[n("span",{staticClass:"percent"},[t._v("12%")]),t._v(" "),n("br",{staticClass:"hidden-sm hidden-md hidden-lg"}),t._v(" "),n("span",[t._v("Support")])])])])},function(){var t=this,a=t.$createElement,n=t._self._c||a;return n("div",{staticClass:"row main-cards"},[n("div",{staticClass:"col-md-3 col-sm-6"},[n("div",{staticClass:"card"},[n("h5",[n("b",[t._v("New Users")])]),t._v(" "),n("p",[t._v("14,205\n                    "),n("small",[t._v("Last month")])]),t._v(" "),n("span",{attrs:{id:"user-chart"}})])]),t._v(" "),n("div",{staticClass:"col-md-3 col-sm-6"},[n("div",{staticClass:"card"},[n("h5",[n("b",[t._v("Revenue")])]),t._v(" "),n("p",[t._v("$56,180\n                    "),n("small",[t._v("Target")])]),t._v(" "),n("span",{attrs:{id:"mr-chart"}})])]),t._v(" "),n("div",{staticClass:"clearfix hidden-md hidden-lg"}),t._v(" "),n("div",{staticClass:"col-md-3 col-sm-6"},[n("div",{staticClass:"card"},[n("h5",[n("b",[t._v("Hits")])]),t._v(" "),n("p",[t._v("24,525\n                    "),n("small",[t._v("Reached")])]),t._v(" "),n("h6",[n("span",{staticClass:"float-right progress-label"},[n("b",[t._v("6")]),n("small",[t._v("%")]),t._v(" "),n("i",{staticClass:"ti-stats-up"})])]),t._v(" "),n("div",{staticClass:"progress progress-xs progress-striped active hits-progress"},[n("div",{staticClass:"progress-bar progress-bar-success",staticStyle:{width:"40%"},attrs:{role:"progressbar","aria-valuenow":"40","aria-valuemin":"0","aria-valuemax":"100"}})])])]),t._v(" "),n("div",{staticClass:"col-md-3 col-sm-6"},[n("div",{staticClass:"card"},[n("h5",[n("b",[t._v("Subscribers")])]),t._v(" "),n("p",[t._v("8,958\n                    "),n("small",[t._v("Quarterly")])]),t._v(" "),n("span",{attrs:{id:"subscriber-chart"}})])])])},function(){var t=this,a=t.$createElement,n=t._self._c||a;return n("div",{staticClass:"col-sm-6"},[n("div",{staticClass:"card mt-3"},[n("div",{staticClass:"social"},[n("div",{staticClass:"row"},[n("div",{staticClass:"col-12"},[n("div",{staticClass:"twitter text-center"},[n("i",{staticClass:"ti-twitter-alt"})])]),t._v(" "),n("div",{staticClass:"col-6"},[n("div",{staticClass:"info-1 text-center"},[n("h3",[t._v("27k")]),t._v(" "),n("p",[t._v("Tweets")])])]),t._v(" "),n("div",{staticClass:"col-6"},[n("div",{staticClass:"info-2 text-center"},[n("h3",[t._v("9.2k")]),t._v(" "),n("p",[t._v("followers")])])])])])])])},function(){var t=this,a=t.$createElement,n=t._self._c||a;return n("div",{staticClass:"col-sm-6"},[n("div",{staticClass:"card mt-3"},[n("div",{staticClass:"social"},[n("div",{staticClass:"row"},[n("div",{staticClass:"col-12"},[n("div",{staticClass:"facebook text-center"},[n("i",{staticClass:"ti-facebook"})])]),t._v(" "),n("div",{staticClass:"col-6 text-center"},[n("div",{staticClass:"info-1"},[n("h3",[t._v("31k")]),t._v(" "),n("p",[t._v("Likes")])])]),t._v(" "),n("div",{staticClass:"col-6 text-center"},[n("div",{staticClass:"info-2"},[n("h3",[t._v("12k")]),t._v(" "),n("p",[t._v("feeds")])])])])])])])}],!1,null,"6ed84415",null);a.default=s.exports},435:function(t,a){t.exports="/laravel_vue/images/avatar.jpg?ac60ef718e8f9765886e30ee907fea17"},436:function(t,a){t.exports="/laravel_vue/images/avatar2.jpg?ac60ef718e8f9765886e30ee907fea17"},437:function(t,a){t.exports="/laravel_vue/images/avatar3.jpg?ac60ef718e8f9765886e30ee907fea17"},441:function(t,a){t.exports="/laravel_vue/images/avatar4.jpg?ac60ef718e8f9765886e30ee907fea17"},455:function(t,a){t.exports="/laravel_vue/images/avatar7.jpg?ac60ef718e8f9765886e30ee907fea17"},582:function(t,a){t.exports="/laravel_vue/images/avatar5.jpg?ac60ef718e8f9765886e30ee907fea17"},612:function(t,a){t.exports="/laravel_vue/images/avatar6.jpg?ac60ef718e8f9765886e30ee907fea17"},684:function(t,a){t.exports="/laravel_vue/images/slider1.jpg?dc0298a39154e143cda85e96559224e0"},685:function(t,a){t.exports="/laravel_vue/images/slider2.jpg?5d3ef85deccaa6bf8059ed84b9e29b24"},697:function(module,__webpack_exports__,__webpack_require__){"use strict";(function($){var vue__WEBPACK_IMPORTED_MODULE_0__=__webpack_require__(13),vue__WEBPACK_IMPORTED_MODULE_0___default=__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__),nvd3_build_nv_d3_min_js__WEBPACK_IMPORTED_MODULE_1__=__webpack_require__(690),nvd3_build_nv_d3_min_js__WEBPACK_IMPORTED_MODULE_1___default=__webpack_require__.n(nvd3_build_nv_d3_min_js__WEBPACK_IMPORTED_MODULE_1__),_js_custom_js_sparkline_jquery_flot_spline_js__WEBPACK_IMPORTED_MODULE_2__=__webpack_require__(639),_js_custom_js_sparkline_jquery_flot_spline_js__WEBPACK_IMPORTED_MODULE_2___default=__webpack_require__.n(_js_custom_js_sparkline_jquery_flot_spline_js__WEBPACK_IMPORTED_MODULE_2__),screenfull_dist_screenfull_js__WEBPACK_IMPORTED_MODULE_3__=__webpack_require__(971),screenfull_dist_screenfull_js__WEBPACK_IMPORTED_MODULE_3___default=__webpack_require__.n(screenfull_dist_screenfull_js__WEBPACK_IMPORTED_MODULE_3__),vue_circle_slider__WEBPACK_IMPORTED_MODULE_4__=__webpack_require__(584),_dashboard_dashboard_two_feeds_vue__WEBPACK_IMPORTED_MODULE_5__=__webpack_require__(2222),_dashboard_dashboard_two_recent_activities_vue__WEBPACK_IMPORTED_MODULE_6__=__webpack_require__(2216),_dashboard_dashboard_two_profile_page_vue__WEBPACK_IMPORTED_MODULE_7__=__webpack_require__(2217),_dashboard_dashboard_two_weather_vue__WEBPACK_IMPORTED_MODULE_8__=__webpack_require__(2218),_dashboard_dashboard_two_server_load_vue__WEBPACK_IMPORTED_MODULE_9__=__webpack_require__(2223),_dashboard_dashboard_two_device_vue__WEBPACK_IMPORTED_MODULE_10__=__webpack_require__(2224),_dashboard_dashboard_two_todolist_vue__WEBPACK_IMPORTED_MODULE_11__=__webpack_require__(2225);__webpack_require__(1314),vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_circle_slider__WEBPACK_IMPORTED_MODULE_4__.default),__webpack_require__(1315),__webpack_exports__.a={name:"index2",components:{feeds:_dashboard_dashboard_two_feeds_vue__WEBPACK_IMPORTED_MODULE_5__.a,recent_activities:_dashboard_dashboard_two_recent_activities_vue__WEBPACK_IMPORTED_MODULE_6__.a,profile_page:_dashboard_dashboard_two_profile_page_vue__WEBPACK_IMPORTED_MODULE_7__.a,weather:_dashboard_dashboard_two_weather_vue__WEBPACK_IMPORTED_MODULE_8__.a,VueServerLoad:_dashboard_dashboard_two_server_load_vue__WEBPACK_IMPORTED_MODULE_9__.a,VueDevice:_dashboard_dashboard_two_device_vue__WEBPACK_IMPORTED_MODULE_10__.a,todolist:_dashboard_dashboard_two_todolist_vue__WEBPACK_IMPORTED_MODULE_11__.a},data:function(){return{url:"",val5:65}},mounted:function mounted(){$(document).ready((function(){function sinAndCos(){for(var sin=[],sin2=[],cos=[],i=0;i<121;i++)sin.push({x:eval(i/10),y:Math.cos(i/9)+7.5}),sin2.push({x:eval(i/10),y:Math.cos(i/14)+5}),cos.push({x:eval(i/10),y:Math.cos(i/10)+4});return[{values:sin,key:"Orders",color:"#4285F4",area:!0},{values:sin2,key:"Sales",color:"#81ADF8",area:!0},{values:cos,key:"Support",color:"#BCD3F9",area:!0}]}function spark_user(){$("#user-chart").sparkline([209,210,209,210,210,211,212,210,210,211,213,212,211,210,212,211,210,212],{type:"line",width:"100%",height:"33",lineColor:"#6699CC",fillColor:"#D2E9FF",tooltipSuffix:" Users",highlightLineColor:"rgba(0,0,0,0)"})}function spark_revenue(){var t=$("#mr-chart").closest(".card"),a=[91,121,131,121,131,101,91,141,131,111,111,121,111,111,101,121,111,111,121,131,121,131,121];$("#mr-chart").sparkline(a,{type:"bar",width:"100%",barWidth:(t.width()-2*a.length)/a.length,height:"30",barSpacing:2,barColor:"#FFE5C0",tooltipSuffix:" Sales"})}function spark_subscribe(){$("#subscriber-chart").sparkline([209,210,209,210,210,211,212,211,210,211,209,211,213,210,212,214,211,210,212],{type:"line",width:"100%",height:"33",lineColor:"#ff6666",fillColor:"#FEEFEF",tooltipSuffix:" Subscribers",highlightLineColor:"rgba(0,0,0,0)"})}$("#fullscreen-toggle").on("click",(function(){$("#fullscreen-toggle").find("i").hasClass("ti-fullscreen")?(screenfull_dist_screenfull_js__WEBPACK_IMPORTED_MODULE_3___default.a.toggle($("#main-chart")[0]),$(".ti-fullscreen").toggleClass("ti-fullscreen ti-move")):(screenfull_dist_screenfull_js__WEBPACK_IMPORTED_MODULE_3___default.a.exit(),$(".ti-move").toggleClass("ti-fullscreen ti-move"))})),nv.addGraph((function(){var t=nv.models.lineChart().showYAxis(!1).showXAxis(!0);t.xAxis.tickFormat(d3.format(",r")),t.yAxis.tickFormat(d3.format(".1f"));var a=sinAndCos();return t.forceY([0,10]),d3.select("#sales-chart svg").datum(a).call(t),nv.utils.windowResize((function(){t.update()})),$(window).on("scroll",(function(){t.tooltip.hideDelay(100)})),$(".sidebar-toggle").on("click",(function(){$("#sales-chart").find("svg").remove(),$("#sales-chart").html("<svg></svg>"),d3.select("#sales-chart svg").datum(a).call(t),t.update()})),t})),spark_user(),spark_revenue(),spark_subscribe(),$(window).on("resize",(function(){spark_user(),spark_revenue(),spark_subscribe()})),$("[data-toggle='offcanvas']").on("click",(function(t){spark_user(),spark_revenue(),spark_subscribe()}))}))}}}).call(this,__webpack_require__(429))},698:function(t,a){t.exports="/laravel_vue/images/profile-pic.jpg?2bf04359593bef35efe6a567b373f42e"},699:function(t,a,n){"use strict";(function(t){n(1316);a.a={name:"feeds",mounted:function(){t(".live-tile, .flip-list").not(".exclude").liveTile()}}}).call(this,n(429))},701:function(t,a,n){var e=n(1322);"string"==typeof e&&(e=[[t.i,e,""]]);var i={hmr:!0,transform:void 0,insertInto:void 0};n(31)(e,i);e.locals&&(t.exports=e.locals)},702:function(t,a,n){var e=n(1324);"string"==typeof e&&(e=[[t.i,e,""]]);var i={hmr:!0,transform:void 0,insertInto:void 0};n(31)(e,i);e.locals&&(t.exports=e.locals)},703:function(t,a,n){var e=n(1328);"string"==typeof e&&(e=[[t.i,e,""]]);var i={hmr:!0,transform:void 0,insertInto:void 0};n(31)(e,i);e.locals&&(t.exports=e.locals)},705:function(t,a,n){var e=n(1335);"string"==typeof e&&(e=[[t.i,e,""]]);var i={hmr:!0,transform:void 0,insertInto:void 0};n(31)(e,i);e.locals&&(t.exports=e.locals)},706:function(t,a,n){"use strict";(function(t){n(972),n(1337),n(1338),n(1339),n(1340);var e=n(637);a.a={name:"server",components:{Fullscreen:e.a},data:function(){return{cardhide:!0,card:"closecard",fullscreen:!1,carddropdown:"",text:"",cardstatus:!1,cardstyle:{opacity:.5},cardstyles:""}},methods:{menuOption:function(){var t=this;setTimeout((function(){t.el=document.getElementById("dropdown-card").querySelectorAll(".dropdown .dropdown-menu.show"),t.el[0].style.left="auto",t.el[0].style.right="0"}),10)},toggle:function(){this.$refs.fullscreen.toggle()},fullscreenChange:function(t){this.fullscreen=t},notificationClose:function(){this.cardhide=!this.cardhide},mounted:function(){},destroyed:function(){},myReload:function(){var t=this;this.cardstatus=!0,this.cardstyles=this.cardstyle,setTimeout((function(){t.cardstatus=!1,t.cardstyles={opacity:1}}),2e3)}},created:function(){setTimeout((function(){var t=window.AmCharts.makeChart("chartdiv",{theme:"light",type:"gauge",axes:[{topTextFontSize:20,topTextYOffset:50,axisColor:"#42f4d7",axisThickness:1,endValue:100,gridInside:!0,inside:!0,radius:"50%",valueInterval:20,tickColor:"#67b7dc",startAngle:-90,endAngle:90,unit:"%",bandOutlineAlpha:0,allLabels:[{display:"false"}],bands:[{color:"#e2e7ee",endValue:100,innerRadius:"105%",radius:"170%",gradientRatio:[0,0,0],startValue:0},{color:"#c23616",endValue:0,innerRadius:"105%",radius:"170%",gradientRatio:[0,0,0],startValue:0}]}],arrows:[{alpha:1,innerRadius:"35%",nailRadius:0,radius:"170%"}]});setInterval((function(){var a=Math.round(100*Math.random());t.arrows[0].setValue(a),t.axes[0].setTopText(a+"%"),t.axes[0].bands[1].setEndValue(a)}),2e3)}),500)},mounted:function(){t(document).ready((function(){setTimeout((function(){t(".amcharts-chart-div").css("width","253px !important"),t(".amcharts-chart-div a").css("visibility","hidden")}),200)}))},beforeMount:function(){}}}).call(this,n(429))},707:function(t,a,n){var e=n(1342);"string"==typeof e&&(e=[[t.i,e,""]]);var i={hmr:!0,transform:void 0,insertInto:void 0};n(31)(e,i);e.locals&&(t.exports=e.locals)},708:function(t,a,n){"use strict";(function(t){n(1344),n(1345);var e=n(637);a.a={name:"app",components:{Fullscreen:e.a},data:function(){return{cardhide:!0,card:"closecard",fullscreen:!1,mywidth:300,myheight:500,cardstyle:{opacity:.5},cardstyles:"",cardstatus:!1,mydatasets:[{data:[300,50,100],backgroundColor:["#1da1f2","#3b5998","#f0ad4e"]}],myoption:{legend:{display:!1},responsive:!0,maintainAspectRatio:!0,title:{display:!1,position:"top",text:"3000"}}}},methods:{myReload:function(){var t=this;this.cardstatus=!0,this.cardstyles=this.cardstyle,setTimeout((function(){t.cardstatus=!1,t.cardstyles={opacity:1}}),2e3)},toggle:function(){this.$refs.fullscreen.toggle()},fullscreenChange:function(t){this.fullscreen=t},notificationClose:function(){this.cardhide=!this.cardhide}},mounted:function(){t(document).ready((function(){t(".fa-ellipsis-v").on("click",(function(){t(this).closest(".card").find(".dropdown-menu.show").addClass("hi")}))}))},destroyed:function(){}}}).call(this,n(429))},709:function(t,a,n){var e=n(1347);"string"==typeof e&&(e=[[t.i,e,""]]);var i={hmr:!0,transform:void 0,insertInto:void 0};n(31)(e,i);e.locals&&(t.exports=e.locals)},710:function(t,a,n){"use strict";(function(t){var e=n(637);n(1349);a.a={name:"todolist",components:{Fullscreen:e.a},data:function(){return{cardhide:!0,card:"closecard",fullscreen:!1,carddropdown:"",text:"",cardstatus:!1,cardstyle:{opacity:.5},cardstyles:"",todos:[],newTodo:""}},watch:{todos:{handler:function(){localStorage.todos=JSON.stringify(this.todos)},deep:!0}},methods:{menuOption:function(){var t=this;setTimeout((function(){t.el=document.getElementById("dropdown-card").querySelectorAll(".dropdown .dropdown-menu.show"),t.text=document.getElementById("chartdiv").querySelectorAll(".amcharts-chart-div a"),t.el[0].style.left="auto",t.el[0].style.right="0",t.text[0].style.visibility="hidden"}),10)},toggle:function(){this.$refs.fullscreen.toggle()},fullscreenChange:function(t){this.fullscreen=t},notificationClose:function(){this.cardhide=!this.cardhide},mounted:function(){localStorage.todos&&(this.todos=JSON.parse(localStorage.todos))},destroyed:function(){},myReload:function(){var t=this;this.cardstatus=!0,this.cardstyles=this.cardstyle,setTimeout((function(){t.cardstatus=!1,t.cardstyles={opacity:1}}),2e3)},submitTodo:function(){this.todos.push({title:this.newTodo,done:!1}),this.newTodo=""},deleteTodo:function(t){var a=this.todos.indexOf(t);this.todos.splice(a,1)}},created:function(){},mounted:function(){t(".btn.waves-effect").on("click",(function(){setTimeout((function(){t(".hiddendiv").remove()}),500)}))},beforeMount:function(){}}}).call(this,n(429))},711:function(t,a,n){var e=n(1351);"string"==typeof e&&(e=[[t.i,e,""]]);var i={hmr:!0,transform:void 0,insertInto:void 0};n(31)(e,i);e.locals&&(t.exports=e.locals)},715:function(t,a,n){var e=n(1355);"string"==typeof e&&(e=[[t.i,e,""]]);var i={hmr:!0,transform:void 0,insertInto:void 0};n(31)(e,i);e.locals&&(t.exports=e.locals)},716:function(t,a,n){var e=n(1357);"string"==typeof e&&(e=[[t.i,e,""]]);var i={hmr:!0,transform:void 0,insertInto:void 0};n(31)(e,i);e.locals&&(t.exports=e.locals)},973:function(t,a){t.exports="/laravel_vue/images/profile-cover.jpg?5bf901f44430175f0eb64d110af31834"}}]);
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[22],{
+
+/***/ "./node_modules/sweetalert2/dist/sweetalert2.js":
+/*!******************************************************!*\
+  !*** ./node_modules/sweetalert2/dist/sweetalert2.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/*!
+ * sweetalert2 v5.0.7
+ * Released under the MIT License.
+ */
+(function (global, factory) {
+   true ? module.exports = factory() :
+  undefined;
+}(this, function () { 'use strict';
+
+  var swalPrefix = 'swal2-';
+
+  var prefix = function(items) {
+    var result = {};
+    for (var i in items) {
+      result[items[i]] = swalPrefix + items[i];
+    }
+    return result;
+  };
+
+  var swalClasses = prefix([
+    'container',
+    'in',
+    'modal',
+    'overlay',
+    'close',
+    'content',
+    'spacer',
+    'confirm',
+    'cancel',
+    'icon',
+    'image',
+    'input',
+    'file',
+    'range',
+    'select',
+    'radio',
+    'checkbox',
+    'textarea',
+    'validationerror',
+    'progresssteps',
+    'activeprogressstep',
+    'progresscircle',
+    'progressline'
+  ]);
+
+  var iconTypes = prefix([
+    'success',
+    'warning',
+    'info',
+    'question',
+    'error'
+  ]);
+
+  var defaultParams = {
+    title: '',
+    text: '',
+    html: '',
+    type: null,
+    customClass: '',
+    animation: true,
+    allowOutsideClick: true,
+    allowEscapeKey: true,
+    showConfirmButton: true,
+    showCancelButton: false,
+    preConfirm: null,
+    confirmButtonText: 'OK',
+    confirmButtonColor: '#3085d6',
+    confirmButtonClass: null,
+    cancelButtonText: 'Cancel',
+    cancelButtonColor: '#aaa',
+    cancelButtonClass: null,
+    buttonsStyling: true,
+    reverseButtons: false,
+    focusCancel: false,
+    showCloseButton: false,
+    showLoaderOnConfirm: false,
+    imageUrl: null,
+    imageWidth: null,
+    imageHeight: null,
+    imageClass: null,
+    timer: null,
+    width: 500,
+    padding: 20,
+    background: '#fff',
+    input: null,
+    inputPlaceholder: '',
+    inputValue: '',
+    inputOptions: {},
+    inputAutoTrim: true,
+    inputClass: null,
+    inputAttributes: {},
+    inputValidator: null,
+    progressSteps: [],
+    currentProgressStep: null,
+    progressStepsDistance: '40px',
+    onOpen: null,
+    onClose: null
+  };
+
+  var sweetHTML = '<div class="' + swalClasses.modal + '" style="display: none" tabIndex="-1">' +
+      '<ul class="' + swalClasses.progresssteps + '"></ul>' +
+      '<div class="' + swalClasses.icon + ' ' + iconTypes.error + '">' +
+        '<span class="x-mark"><span class="line left"></span><span class="line right"></span></span>' +
+      '</div>' +
+      '<div class="' + swalClasses.icon + ' ' + iconTypes.question + '">?</div>' +
+      '<div class="' + swalClasses.icon + ' ' + iconTypes.warning + '">!</div>' +
+      '<div class="' + swalClasses.icon + ' ' + iconTypes.info + '">i</div>' +
+      '<div class="' + swalClasses.icon + ' ' + iconTypes.success + '">' +
+        '<span class="line tip"></span> <span class="line long"></span>' +
+        '<div class="placeholder"></div> <div class="fix"></div>' +
+      '</div>' +
+      '<img class="' + swalClasses.image + '">' +
+      '<h2></h2>' +
+      '<div class="' + swalClasses.content + '"></div>' +
+      '<input class="' + swalClasses.input + '">' +
+      '<input type="file" class="' + swalClasses.file + '">' +
+      '<div class="' + swalClasses.range + '">' +
+        '<output></output>' +
+        '<input type="range">' +
+      '</div>' +
+      '<select class="' + swalClasses.select + '"></select>' +
+      '<div class="' + swalClasses.radio + '"></div>' +
+      '<label for="' + swalClasses.checkbox + '" class="' + swalClasses.checkbox + '">' +
+        '<input type="checkbox">' +
+      '</label>' +
+      '<textarea class="' + swalClasses.textarea + '"></textarea>' +
+      '<div class="' + swalClasses.validationerror + '"></div>' +
+      '<hr class="' + swalClasses.spacer + '">' +
+      '<button type="button" class="' + swalClasses.confirm + '">OK</button>' +
+      '<button type="button" class="' + swalClasses.cancel + '">Cancel</button>' +
+      '<span class="' + swalClasses.close + '">&times;</span>' +
+    '</div>';
+
+  var sweetContainer;
+
+  var existingSweetContainers = document.getElementsByClassName(swalClasses.container);
+
+  if (existingSweetContainers.length) {
+    sweetContainer = existingSweetContainers[0];
+  } else {
+    sweetContainer = document.createElement('div');
+    sweetContainer.className = swalClasses.container;
+    sweetContainer.innerHTML = sweetHTML;
+  }
+
+  var extend = function(a, b) {
+    for (var key in b) {
+      if (b.hasOwnProperty(key)) {
+        a[key] = b[key];
+      }
+    }
+
+    return a;
+  };
+
+
+  /*
+   * Set hover, active and focus-states for buttons (source: http://www.sitepoint.com/javascript-generate-lighter-darker-color)
+   */
+  var colorLuminance = function(hex, lum) {
+    // Validate hex string
+    hex = String(hex).replace(/[^0-9a-f]/gi, '');
+    if (hex.length < 6) {
+      hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];
+    }
+    lum = lum || 0;
+
+    // Convert to decimal and change luminosity
+    var rgb = '#';
+    for (var i = 0; i < 3; i++) {
+      var c = parseInt(hex.substr(i * 2, 2), 16);
+      c = Math.round(Math.min(Math.max(0, c + (c * lum)), 255)).toString(16);
+      rgb += ('00' + c).substr(c.length);
+    }
+
+    return rgb;
+  };
+
+  // Remember state in cases where opening and handling a modal will fiddle with it.
+  var states = {
+    previousWindowKeyDown: null,
+    previousActiveElement: null,
+    previousBodyPadding: null
+  };
+
+  /*
+   * Manipulate DOM
+   */
+  var elementByClass = function(className) {
+    return sweetContainer.querySelector('.' + className);
+  };
+
+  var getModal = function() {
+    return elementByClass(swalClasses.modal);
+  };
+
+  var getIcons = function() {
+    var modal = getModal();
+    return modal.querySelectorAll('.' + swalClasses.icon);
+  };
+
+  var getSpacer = function() {
+    return elementByClass(swalClasses.spacer);
+  };
+
+  var getProgressSteps = function() {
+    return elementByClass(swalClasses.progresssteps);
+  };
+
+  var getConfirmButton = function() {
+    return elementByClass(swalClasses.confirm);
+  };
+
+  var getCancelButton = function() {
+    return elementByClass(swalClasses.cancel);
+  };
+
+  var getCloseButton = function() {
+    return elementByClass(swalClasses.close);
+  };
+
+  var getFocusableElements = function(focusCancel) {
+    var buttons = [getConfirmButton(), getCancelButton()];
+    if (focusCancel) {
+      buttons.reverse();
+    }
+    return buttons.concat(Array.prototype.slice.call(
+      getModal().querySelectorAll('button:not([class^=' + swalPrefix + ']), input:not([type=hidden]), textarea, select')
+    ));
+  };
+
+  var hasClass = function(elem, className) {
+    return elem.classList.contains(className);
+  };
+
+  var focusInput = function(input) {
+    input.focus();
+
+    // place cursor at end of text in text input
+    if (input.type !== 'file') {
+      // http://stackoverflow.com/a/2345915/1331425
+      var val = input.value;
+      input.value = '';
+      input.value = val;
+    }
+  };
+
+  var addClass = function(elem, className) {
+    if (!elem || !className) {
+      return;
+    }
+    var classes = className.split(/\s+/);
+    classes.forEach(function(className) {
+      elem.classList.add(className);
+    });
+  };
+
+  var removeClass = function(elem, className) {
+    if (!elem || !className) {
+      return;
+    }
+    var classes = className.split(/\s+/);
+    classes.forEach(function(className) {
+      elem.classList.remove(className);
+    });
+  };
+
+  var getChildByClass = function(elem, className) {
+    for (var i = 0; i < elem.childNodes.length; i++) {
+      if (hasClass(elem.childNodes[i], className)) {
+        return elem.childNodes[i];
+      }
+    }
+  };
+
+  var show = function(elem, display) {
+    if (!display) {
+      display = 'block';
+    }
+    elem.style.opacity = '';
+    elem.style.display = display;
+  };
+
+  var hide = function(elem) {
+    elem.style.opacity = '';
+    elem.style.display = 'none';
+  };
+
+  var empty = function(elem) {
+    while (elem.firstChild) {
+      elem.removeChild(elem.firstChild);
+    }
+  };
+
+  // borrowed from jqeury $(elem).is(':visible') implementation
+  var isVisible = function(elem) {
+    return elem.offsetWidth || elem.offsetHeight || elem.getClientRects().length;
+  };
+
+  var removeStyleProperty = function(elem, property) {
+    if (elem.style.removeProperty) {
+      elem.style.removeProperty(property);
+    } else {
+      elem.style.removeAttribute(property);
+    }
+  };
+
+  var fireClick = function(node) {
+    // Taken from http://www.nonobtrusive.com/2011/11/29/programatically-fire-crossbrowser-click-event-with-javascript/
+    // Then fixed for today's Chrome browser.
+    if (typeof MouseEvent === 'function') {
+      // Up-to-date approach
+      var mevt = new MouseEvent('click', {
+        view: window,
+        bubbles: false,
+        cancelable: true
+      });
+      node.dispatchEvent(mevt);
+    } else if (document.createEvent) {
+      // Fallback
+      var evt = document.createEvent('MouseEvents');
+      evt.initEvent('click', false, false);
+      node.dispatchEvent(evt);
+    } else if (document.createEventObject) {
+      node.fireEvent('onclick');
+    } else if (typeof node.onclick === 'function') {
+      node.onclick();
+    }
+  };
+
+  var stopEventPropagation = function(e) {
+    // In particular, make sure the space bar doesn't scroll the main window.
+    if (typeof e.stopPropagation === 'function') {
+      e.stopPropagation();
+      e.preventDefault();
+    } else if (window.event && window.event.hasOwnProperty('cancelBubble')) {
+      window.event.cancelBubble = true;
+    }
+  };
+
+  var animationEndEvent = (function() {
+    var testEl = document.createElement('div'),
+      transEndEventNames = {
+        'WebkitAnimation': 'webkitAnimationEnd',
+        'OAnimation': 'oAnimationEnd oanimationend',
+        'msAnimation': 'MSAnimationEnd',
+        'animation': 'animationend'
+      };
+    for (var i in transEndEventNames) {
+      if (transEndEventNames.hasOwnProperty(i) &&
+        testEl.style[i] !== undefined) {
+        return transEndEventNames[i];
+      }
+    }
+
+    return false;
+  })();
+
+
+  // Reset the page to its previous state
+  var resetPrevState = function() {
+    var modal = getModal();
+    window.onkeydown = states.previousWindowKeyDown;
+    if (states.previousActiveElement && states.previousActiveElement.focus) {
+      states.previousActiveElement.focus();
+    }
+    clearTimeout(modal.timeout);
+  };
+
+  // Measure width of scrollbar
+  // https://github.com/twbs/bootstrap/blob/master/js/modal.js#L279-L286
+  var measureScrollbar = function() {
+    var scrollDiv = document.createElement('div');
+    scrollDiv.style.width = '50px';
+    scrollDiv.style.height = '50px';
+    scrollDiv.style.overflow = 'scroll';
+    document.body.appendChild(scrollDiv);
+    var scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
+    document.body.removeChild(scrollDiv);
+    return scrollbarWidth;
+  };
+
+  // JavaScript Debounce Function
+  // https://davidwalsh.name/javascript-debounce-function
+  var debounce = function(func, wait, immediate) {
+    var timeout;
+    return function() {
+      var context = this, args = arguments;
+      var later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  };
+
+  var modalParams = extend({}, defaultParams);
+  var queue = [];
+  var swal2Observer;
+
+  /*
+   * Set type, text and actions on modal
+   */
+  var setParameters = function(params) {
+    var modal = getModal();
+
+    for (var param in params) {
+      if (!defaultParams.hasOwnProperty(param) && param !== 'extraParams') {
+        console.warn('SweetAlert2: Unknown parameter "' + param + '"');
+      }
+    }
+
+    // set modal width and margin-left
+    modal.style.width = (typeof params.width === 'number') ? params.width + 'px' : params.width;
+
+    modal.style.padding = params.padding + 'px';
+    modal.style.background = params.background;
+
+    var $title = modal.querySelector('h2');
+    var $content = modal.querySelector('.' + swalClasses.content);
+    var $confirmBtn = getConfirmButton();
+    var $cancelBtn = getCancelButton();
+    var $closeButton = modal.querySelector('.' + swalClasses.close);
+
+    // Title
+    $title.innerHTML = params.title.split('\n').join('<br>');
+
+    // Content
+    var i;
+    if (params.text || params.html) {
+      if (typeof params.html === 'object') {
+        $content.innerHTML = '';
+        if (0 in params.html) {
+          for (i = 0; i in params.html; i++) {
+            $content.appendChild(params.html[i].cloneNode(true));
+          }
+        } else {
+          $content.appendChild(params.html.cloneNode(true));
+        }
+      } else {
+        $content.innerHTML = params.html || (params.text.split('\n').join('<br>'));
+      }
+      show($content);
+    } else {
+      hide($content);
+    }
+
+    // Close button
+    if (params.showCloseButton) {
+      show($closeButton);
+    } else {
+      hide($closeButton);
+    }
+
+    // Custom Class
+    modal.className = swalClasses.modal;
+    if (params.customClass) {
+      addClass(modal, params.customClass);
+    }
+
+    // Progress steps
+    var progressStepsContainer = getProgressSteps();
+    var currentProgressStep = parseInt(params.currentProgressStep === null? swal.getQueueStep() : params.currentProgressStep, 10);
+    if (params.progressSteps.length) {
+      show(progressStepsContainer);
+      empty(progressStepsContainer);
+      if (currentProgressStep >= params.progressSteps.length) {
+        console.warn(
+          'SweetAlert2: Invalid currentProgressStep parameter, it should be less than progressSteps.length ' +
+          '(currentProgressStep like JS arrays starts from 0)'
+        );
+      }
+      params.progressSteps.forEach(function(step, index) {
+        var circle = document.createElement('li');
+        addClass(circle, swalClasses.progresscircle);
+        circle.innerHTML = step;
+        if (index === currentProgressStep) {
+          addClass(circle, swalClasses.activeprogressstep);
+        }
+        progressStepsContainer.appendChild(circle);
+        if (index !== params.progressSteps.length - 1) {
+          var line = document.createElement('li');
+          addClass(line, swalClasses.progressline);
+          line.style.width = params.progressStepsDistance;
+          progressStepsContainer.appendChild(line);
+        }
+      });
+    } else {
+      hide(progressStepsContainer);
+    }
+
+    // Icon
+    var icons = getIcons();
+    for (i = 0; i < icons.length; i++) {
+      hide(icons[i]);
+    }
+    if (params.type) {
+      var validType = false;
+      for (var iconType in iconTypes) {
+        if (params.type === iconType) {
+          validType = true;
+          break;
+        }
+      }
+      if (!validType) {
+        console.error('SweetAlert2: Unknown alert type: ' + params.type);
+        return false;
+      }
+      var $icon = modal.querySelector('.' + swalClasses.icon + '.' + iconTypes[params.type]);
+      show($icon);
+
+      // Animate icon
+      switch (params.type) {
+        case 'success':
+          addClass($icon, 'animate');
+          addClass($icon.querySelector('.tip'), 'animate-success-tip');
+          addClass($icon.querySelector('.long'), 'animate-success-long');
+          break;
+        case 'error':
+          addClass($icon, 'animate-error-icon');
+          addClass($icon.querySelector('.x-mark'), 'animate-x-mark');
+          break;
+        case 'warning':
+          addClass($icon, 'pulse-warning');
+          break;
+        default:
+          break;
+      }
+
+    }
+
+    // Custom image
+    var $customImage = modal.querySelector('.' + swalClasses.image);
+    if (params.imageUrl) {
+      $customImage.setAttribute('src', params.imageUrl);
+      show($customImage);
+
+      if (params.imageWidth) {
+        $customImage.setAttribute('width', params.imageWidth);
+      } else {
+        $customImage.removeAttribute('width');
+      }
+
+      if (params.imageHeight) {
+        $customImage.setAttribute('height', params.imageHeight);
+      } else {
+        $customImage.removeAttribute('height');
+      }
+
+      $customImage.className = swalClasses.image;
+      if (params.imageClass) {
+        addClass($customImage, params.imageClass);
+      }
+    } else {
+      hide($customImage);
+    }
+
+    // Cancel button
+    if (params.showCancelButton) {
+      $cancelBtn.style.display = 'inline-block';
+    } else {
+      hide($cancelBtn);
+    }
+
+    // Confirm button
+    if (params.showConfirmButton) {
+      removeStyleProperty($confirmBtn, 'display');
+    } else {
+      hide($confirmBtn);
+    }
+
+    // Buttons spacer
+    var spacer = getSpacer();
+    if (!params.showConfirmButton && !params.showCancelButton) {
+      hide(spacer);
+    } else {
+      show(spacer);
+    }
+
+    // Edit text on cancel and confirm buttons
+    $confirmBtn.innerHTML = params.confirmButtonText;
+    $cancelBtn.innerHTML = params.cancelButtonText;
+
+    // Set buttons to selected background colors
+    if (params.buttonsStyling) {
+      $confirmBtn.style.backgroundColor = params.confirmButtonColor;
+      $cancelBtn.style.backgroundColor = params.cancelButtonColor;
+    }
+
+    // Add buttons custom classes
+    $confirmBtn.className = swalClasses.confirm;
+    addClass($confirmBtn, params.confirmButtonClass);
+    $cancelBtn.className = swalClasses.cancel;
+    addClass($cancelBtn, params.cancelButtonClass);
+
+    // Buttons styling
+    if (params.buttonsStyling) {
+      addClass($confirmBtn, 'styled');
+      addClass($cancelBtn, 'styled');
+    } else {
+      removeClass($confirmBtn, 'styled');
+      removeClass($cancelBtn, 'styled');
+
+      $confirmBtn.style.backgroundColor = $confirmBtn.style.borderLeftColor = $confirmBtn.style.borderRightColor = '';
+      $cancelBtn.style.backgroundColor = $cancelBtn.style.borderLeftColor = $cancelBtn.style.borderRightColor = '';
+    }
+
+    // CSS animation
+    if (params.animation === true) {
+      removeClass(modal, 'no-animation');
+    } else {
+      addClass(modal, 'no-animation');
+    }
+  };
+
+  /*
+   * Animations
+   */
+  var openModal = function(animation, onComplete) {
+    var modal = getModal();
+    if (animation) {
+      addClass(modal, 'show-swal2');
+      addClass(sweetContainer, 'fade');
+      removeClass(modal, 'hide-swal2');
+    } else {
+      removeClass(modal, 'fade');
+    }
+    show(modal);
+
+    // scrolling is 'hidden' until animation is done, after that 'auto'
+    sweetContainer.style.overflowY = 'hidden';
+    if (animationEndEvent && !hasClass(modal, 'no-animation')) {
+      modal.addEventListener(animationEndEvent, function swalCloseEventFinished() {
+        modal.removeEventListener(animationEndEvent, swalCloseEventFinished);
+        sweetContainer.style.overflowY = 'auto';
+      });
+    } else {
+      sweetContainer.style.overflowY = 'auto';
+    }
+
+    addClass(sweetContainer, 'in');
+    addClass(document.body, swalClasses.in);
+    fixScrollbar();
+    states.previousActiveElement = document.activeElement;
+    if (onComplete !== null && typeof onComplete === 'function') {
+      onComplete.call(this, modal);
+    }
+  };
+
+  function fixScrollbar() {
+    // for queues, do not do this more than once
+    if (states.previousBodyPadding !== null) {
+      return;
+    }
+    // if the body has overflow
+    if (document.body.scrollHeight > window.innerHeight) {
+      // add padding so the content doesn't shift after removal of scrollbar
+      states.previousBodyPadding = document.body.style.paddingRight;
+      document.body.style.paddingRight = measureScrollbar() + 'px';
+    }
+  }
+
+  function undoScrollbar() {
+    if (states.previousBodyPadding !== null) {
+      document.body.style.paddingRight = states.previousBodyPadding;
+      states.previousBodyPadding = null;
+    }
+  }
+
+  function modalDependant() {
+    if (arguments[0] === undefined) {
+      console.error('SweetAlert2 expects at least 1 attribute!');
+      return false;
+    }
+
+    var params = extend({}, modalParams);
+
+    switch (typeof arguments[0]) {
+
+      case 'string':
+        params.title = arguments[0];
+        params.text  = arguments[1] || '';
+        params.type  = arguments[2] || '';
+
+        break;
+
+      case 'object':
+        extend(params, arguments[0]);
+        params.extraParams = arguments[0].extraParams;
+
+        if (params.input === 'email' && params.inputValidator === null) {
+          params.inputValidator = function(email) {
+            return new Promise(function(resolve, reject) {
+              var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+              if (emailRegex.test(email)) {
+                resolve();
+              } else {
+                reject('Invalid email address');
+              }
+            });
+          };
+        }
+
+        break;
+
+      default:
+        console.error('SweetAlert2: Unexpected type of argument! Expected "string" or "object", got ' + typeof arguments[0]);
+        return false;
+    }
+
+    setParameters(params);
+
+    // Modal interactions
+    var modal = getModal();
+
+    return new Promise(function(resolve, reject) {
+      // Close on timer
+      if (params.timer) {
+        modal.timeout = setTimeout(function() {
+          sweetAlert.closeModal(params.onClose);
+          reject('timer');
+        }, params.timer);
+      }
+
+      // Get input element by specified type or, if type isn't specified, by params.input
+      var getInput = function(inputType) {
+        inputType = inputType || params.input;
+        switch (inputType) {
+          case 'select':
+          case 'textarea':
+          case 'file':
+            return getChildByClass(modal, swalClasses[inputType]);
+          case 'checkbox':
+            return modal.querySelector('.' + swalClasses.checkbox + ' input');
+          case 'radio':
+            return modal.querySelector('.' + swalClasses.radio + ' input:checked') ||
+              modal.querySelector('.' + swalClasses.radio + ' input:first-child');
+          case 'range':
+            return modal.querySelector('.' + swalClasses.range + ' input');
+          default:
+            return getChildByClass(modal, swalClasses.input);
+        }
+      };
+
+      // Get the value of the modal input
+      var getInputValue = function() {
+        var input = getInput();
+        if (!input) {
+          return null;
+        }
+        switch (params.input) {
+          case 'checkbox':
+            return input.checked ? 1 : 0;
+          case 'radio':
+            return input.checked ? input.value : null;
+          case 'file':
+            return input.files.length ? input.files[0] : null;
+          default:
+            return params.inputAutoTrim? input.value.trim() : input.value;
+        }
+      };
+
+      // input autofocus
+      if (params.input) {
+        setTimeout(function() {
+          var input = getInput();
+          if (input) {
+            focusInput(input);
+          }
+        }, 0);
+      }
+
+      var confirm = function(value) {
+        if (params.showLoaderOnConfirm) {
+          sweetAlert.showLoading();
+        }
+
+        if (params.preConfirm) {
+          params.preConfirm(value, params.extraParams).then(
+            function(preConfirmValue) {
+              sweetAlert.closeModal(params.onClose);
+              resolve(preConfirmValue || value);
+            },
+            function(error) {
+              sweetAlert.hideLoading();
+              if (error) {
+                sweetAlert.showValidationError(error);
+              }
+            }
+          );
+        } else {
+          sweetAlert.closeModal(params.onClose);
+          resolve(value);
+        }
+      };
+
+      // Mouse interactions
+      var onButtonEvent = function(event) {
+        var e = event || window.event;
+        var target = e.target || e.srcElement;
+        var confirmBtn = getConfirmButton();
+        var cancelBtn = getCancelButton();
+        var targetedConfirm = confirmBtn === target || confirmBtn.contains(target);
+        var targetedCancel = cancelBtn === target || cancelBtn.contains(target);
+
+        switch (e.type) {
+          case 'mouseover':
+          case 'mouseup':
+            if (params.buttonsStyling) {
+              if (targetedConfirm) {
+                confirmBtn.style.backgroundColor = colorLuminance(params.confirmButtonColor, -0.1);
+              } else if (targetedCancel) {
+                cancelBtn.style.backgroundColor = colorLuminance(params.cancelButtonColor, -0.1);
+              }
+            }
+            break;
+          case 'mouseout':
+            if (params.buttonsStyling) {
+              if (targetedConfirm) {
+                confirmBtn.style.backgroundColor = params.confirmButtonColor;
+              } else if (targetedCancel) {
+                cancelBtn.style.backgroundColor = params.cancelButtonColor;
+              }
+            }
+            break;
+          case 'mousedown':
+            if (params.buttonsStyling) {
+              if (targetedConfirm) {
+                confirmBtn.style.backgroundColor = colorLuminance(params.confirmButtonColor, -0.2);
+              } else if (targetedCancel) {
+                cancelBtn.style.backgroundColor = colorLuminance(params.cancelButtonColor, -0.2);
+              }
+            }
+            break;
+          case 'click':
+            // Clicked 'confirm'
+            if (targetedConfirm && sweetAlert.isVisible()) {
+              if (params.input) {
+                var inputValue = getInputValue();
+
+                if (params.inputValidator) {
+                  sweetAlert.disableInput();
+                  params.inputValidator(inputValue, params.extraParams).then(
+                    function() {
+                      sweetAlert.enableInput();
+                      confirm(inputValue);
+                    },
+                    function(error) {
+                      sweetAlert.enableInput();
+                      if (error) {
+                        sweetAlert.showValidationError(error);
+                      }
+                    }
+                  );
+                } else {
+                  confirm(inputValue);
+                }
+
+              } else {
+                confirm(true);
+              }
+
+            // Clicked 'cancel'
+            } else if (targetedCancel && sweetAlert.isVisible()) {
+              sweetAlert.closeModal(params.onClose);
+              reject('cancel');
+            }
+
+            break;
+          default:
+        }
+      };
+
+      var $buttons = modal.querySelectorAll('button');
+      var i;
+      for (i = 0; i < $buttons.length; i++) {
+        $buttons[i].onclick     = onButtonEvent;
+        $buttons[i].onmouseover = onButtonEvent;
+        $buttons[i].onmouseout  = onButtonEvent;
+        $buttons[i].onmousedown = onButtonEvent;
+      }
+
+      // Closing modal by close button
+      getCloseButton().onclick = function() {
+        sweetAlert.closeModal(params.onClose);
+        reject('close');
+      };
+
+      // Closing modal by overlay click
+      sweetContainer.onclick = function(e) {
+        if (e.target !== sweetContainer) {
+          return;
+        }
+        if (params.allowOutsideClick) {
+          sweetAlert.closeModal(params.onClose);
+          reject('overlay');
+        }
+      };
+
+      var $confirmButton = getConfirmButton();
+      var $cancelButton = getCancelButton();
+
+      // Reverse buttons if neede d
+      if (params.reverseButtons) {
+        $confirmButton.parentNode.insertBefore($cancelButton, $confirmButton);
+      } else {
+        $confirmButton.parentNode.insertBefore($confirmButton, $cancelButton);
+      }
+
+      // Focus handling
+      function setFocus(index, increment) {
+        var focusableElements = getFocusableElements(params.focusCancel);
+        // search for visible elements and select the next possible match
+        for (var i = 0; i < focusableElements.length; i++) {
+          index = index + increment;
+
+          // rollover to first item
+          if (index === focusableElements.length) {
+            index = 0;
+
+          // go to last item
+          } else if (index === -1) {
+            index = focusableElements.length - 1;
+          }
+
+          // determine if element is visible
+          var el = focusableElements[index];
+          if (isVisible(el)) {
+            return el.focus();
+          }
+        }
+      }
+
+      function handleKeyDown(event) {
+        var e = event || window.event;
+        var keyCode = e.keyCode || e.which;
+
+        if ([9, 13, 32, 27].indexOf(keyCode) === -1) {
+          // Don't do work on keys we don't care about.
+          return;
+        }
+
+        var $targetElement = e.target || e.srcElement;
+
+        var focusableElements = getFocusableElements(params.focusCancel);
+        var btnIndex = -1; // Find the button - note, this is a nodelist, not an array.
+        for (var i = 0; i < focusableElements.length; i++) {
+          if ($targetElement === focusableElements[i]) {
+            btnIndex = i;
+            break;
+          }
+        }
+
+        // TAB
+        if (keyCode === 9) {
+          if (!e.shiftKey) {
+            // Cycle to the next button
+            setFocus(btnIndex, 1);
+          } else {
+            // Cycle to the prev button
+            setFocus(btnIndex, -1);
+          }
+
+          stopEventPropagation(e);
+
+        } else {
+          if (keyCode === 13 || keyCode === 32) {
+            if (btnIndex === -1) {
+              // ENTER/SPACE clicked outside of a button.
+              if (params.focusCancel) {
+                fireClick($cancelButton, e);
+              } else {
+                fireClick($confirmButton, e);
+              }
+            }
+          } else if (keyCode === 27 && params.allowEscapeKey === true) {
+            sweetAlert.closeModal(params.onClose);
+            reject('esc');
+          }
+        }
+      }
+
+      states.previousWindowKeyDown = window.onkeydown;
+      window.onkeydown = handleKeyDown;
+
+      // Loading state
+      if (params.buttonsStyling) {
+        $confirmButton.style.borderLeftColor = params.confirmButtonColor;
+        $confirmButton.style.borderRightColor = params.confirmButtonColor;
+      }
+
+      /**
+       * Show spinner instead of Confirm button and disable Cancel button
+       */
+      sweetAlert.showLoading = sweetAlert.enableLoading = function() {
+        show(getSpacer());
+        show($confirmButton, 'inline-block');
+        addClass($confirmButton, 'loading');
+        addClass(modal, 'loading');
+        $confirmButton.disabled = true;
+        $cancelButton.disabled = true;
+      };
+
+      /**
+       * Show spinner instead of Confirm button and disable Cancel button
+       */
+      sweetAlert.hideLoading = sweetAlert.disableLoading = function() {
+        if (!params.showConfirmButton) {
+          hide($confirmButton);
+          if (!params.showCancelButton) {
+            hide(getSpacer());
+          }
+        }
+        removeClass($confirmButton, 'loading');
+        removeClass(modal, 'loading');
+        $confirmButton.disabled = false;
+        $cancelButton.disabled = false;
+      };
+
+      sweetAlert.enableButtons = function() {
+        $confirmButton.disabled = false;
+        $cancelButton.disabled = false;
+      };
+
+      sweetAlert.disableButtons = function() {
+        $confirmButton.disabled = true;
+        $cancelButton.disabled = true;
+      };
+
+      sweetAlert.enableConfirmButton = function() {
+        $confirmButton.disabled = false;
+      };
+
+      sweetAlert.disableConfirmButton = function() {
+        $confirmButton.disabled = true;
+      };
+
+      sweetAlert.enableInput = function() {
+        var input = getInput();
+        if (!input) {
+          return false;
+        }
+        if (input.type === 'radio') {
+          var radiosContainer = input.parentNode.parentNode;
+          var radios = radiosContainer.querySelectorAll('input');
+          for (var i = 0; i < radios.length; i++) {
+            radios[i].disabled = false;
+          }
+        } else {
+          input.disabled = false;
+        }
+      };
+
+      sweetAlert.disableInput = function() {
+        var input = getInput();
+        if (!input) {
+          return false;
+        }
+        if (input && input.type === 'radio') {
+          var radiosContainer = input.parentNode.parentNode;
+          var radios = radiosContainer.querySelectorAll('input');
+          for (var i = 0; i < radios.length; i++) {
+            radios[i].disabled = true;
+          }
+        } else {
+          input.disabled = true;
+        }
+      };
+
+      // Set modal min-height to disable scrolling inside the modal
+      sweetAlert.recalculateHeight = function() {
+        var modal = getModal() || sweetAlert.init();
+        var prevState = modal.style.display;
+        modal.style.minHeight = '';
+        show(modal);
+        modal.style.minHeight = (modal.scrollHeight + 1) + 'px';
+        modal.style.display = prevState;
+      };
+
+      // Show block with validation error
+      sweetAlert.showValidationError = function(error) {
+        var $validationError = modal.querySelector('.' + swalClasses.validationerror);
+        $validationError.innerHTML = error;
+        show($validationError);
+
+        var input = getInput();
+        focusInput(input);
+        addClass(input, 'error');
+      };
+
+      // Hide block with validation error
+      sweetAlert.resetValidationError = function() {
+        var $validationError = modal.querySelector('.' + swalClasses.validationerror);
+        hide($validationError);
+
+        var input = getInput();
+        if (input) {
+          removeClass(input, 'error');
+        }
+      };
+
+      sweetAlert.getProgressSteps = function() {
+        return params.progressSteps;
+      };
+
+      sweetAlert.setProgressSteps = function(progressSteps) {
+        params.progressSteps = progressSteps;
+        setParameters(params);
+      };
+
+      sweetAlert.showProgressSteps = function() {
+        show(getProgressSteps());
+      };
+
+      sweetAlert.hideProgressSteps = function() {
+        hide(getProgressSteps());
+      };
+
+      sweetAlert.enableButtons();
+      sweetAlert.hideLoading();
+      sweetAlert.resetValidationError();
+
+      // inputs
+      var inputTypes = ['input', 'file', 'range', 'select', 'radio', 'checkbox', 'textarea'];
+      var input;
+      for (i = 0; i < inputTypes.length; i++) {
+        var inputClass = swalClasses[inputTypes[i]];
+        var inputContainer = getChildByClass(modal, inputClass);
+        input = getInput(inputTypes[i]);
+
+        // set attributes
+        if (input) {
+          for (var j in input.attributes) {
+            if (input.attributes.hasOwnProperty(j)) {
+              var attrName = input.attributes[j].name;
+              if (attrName !== 'type' && attrName !== 'value') {
+                input.removeAttribute(attrName);
+              }
+            }
+          }
+          for (var attr in params.inputAttributes) {
+            input.setAttribute(attr, params.inputAttributes[attr]);
+          }
+        }
+
+        // set class
+        inputContainer.className = inputClass;
+        if (params.inputClass) {
+          addClass(inputContainer, params.inputClass);
+        }
+
+        hide(inputContainer);
+      }
+
+      var populateInputOptions;
+      switch (params.input) {
+        case 'text':
+        case 'email':
+        case 'password':
+        case 'number':
+        case 'tel':
+          input = getChildByClass(modal, swalClasses.input);
+          input.value = params.inputValue;
+          input.placeholder = params.inputPlaceholder;
+          input.type = params.input;
+          show(input);
+          break;
+        case 'file':
+          input = getChildByClass(modal, swalClasses.file);
+          input.placeholder = params.inputPlaceholder;
+          input.type = params.input;
+          show(input);
+          break;
+        case 'range':
+          var range = getChildByClass(modal, swalClasses.range);
+          var rangeInput = range.querySelector('input');
+          var rangeOutput = range.querySelector('output');
+          rangeInput.value = params.inputValue;
+          rangeInput.type = params.input;
+          rangeOutput.value = params.inputValue;
+          show(range);
+          break;
+        case 'select':
+          var select = getChildByClass(modal, swalClasses.select);
+          select.innerHTML = '';
+          if (params.inputPlaceholder) {
+            var placeholder = document.createElement('option');
+            placeholder.innerHTML = params.inputPlaceholder;
+            placeholder.value = '';
+            placeholder.disabled = true;
+            placeholder.selected = true;
+            select.appendChild(placeholder);
+          }
+          populateInputOptions = function(inputOptions) {
+            for (var optionValue in inputOptions) {
+              var option = document.createElement('option');
+              option.value = optionValue;
+              option.innerHTML = inputOptions[optionValue];
+              if (params.inputValue === optionValue) {
+                option.selected = true;
+              }
+              select.appendChild(option);
+            }
+            show(select);
+            select.focus();
+          };
+          break;
+        case 'radio':
+          var radio = getChildByClass(modal, swalClasses.radio);
+          radio.innerHTML = '';
+          populateInputOptions = function(inputOptions) {
+            for (var radioValue in inputOptions) {
+              var id = 1;
+              var radioInput = document.createElement('input');
+              var radioLabel = document.createElement('label');
+              var radioLabelSpan = document.createElement('span');
+              radioInput.type = 'radio';
+              radioInput.name = swalClasses.radio;
+              radioInput.value = radioValue;
+              radioInput.id = swalClasses.radio + '-' + (id++);
+              if (params.inputValue === radioValue) {
+                radioInput.checked = true;
+              }
+              radioLabelSpan.innerHTML = inputOptions[radioValue];
+              radioLabel.appendChild(radioInput);
+              radioLabel.appendChild(radioLabelSpan);
+              radioLabel.for = radioInput.id;
+              radio.appendChild(radioLabel);
+            }
+            show(radio);
+            var radios = radio.querySelectorAll('input');
+            if (radios.length) {
+              radios[0].focus();
+            }
+          };
+          break;
+        case 'checkbox':
+          var checkbox = getChildByClass(modal, swalClasses.checkbox);
+          var checkboxInput = getInput('checkbox');
+          checkboxInput.type = 'checkbox';
+          checkboxInput.value = 1;
+          checkboxInput.id = swalClasses.checkbox;
+          checkboxInput.checked = Boolean(params.inputValue);
+          var label = checkbox.getElementsByTagName('span');
+          if (label.length) {
+            checkbox.removeChild(label[0]);
+          }
+          label = document.createElement('span');
+          label.innerHTML = params.inputPlaceholder;
+          checkbox.appendChild(label);
+          show(checkbox);
+          break;
+        case 'textarea':
+          var textarea = getChildByClass(modal, swalClasses.textarea);
+          textarea.value = params.inputValue;
+          textarea.placeholder = params.inputPlaceholder;
+          show(textarea);
+          break;
+        case null:
+          break;
+        default:
+          console.error('SweetAlert2: Unexpected type of input! Expected "text" or "email" or "password", "select", "checkbox", "textarea" or "file", got "' + params.input + '"');
+          break;
+      }
+
+      if (params.input === 'select' || params.input === 'radio') {
+        if (params.inputOptions instanceof Promise) {
+          sweetAlert.showLoading();
+          params.inputOptions.then(function(inputOptions) {
+            sweetAlert.hideLoading();
+            populateInputOptions(inputOptions);
+          });
+        } else if (typeof params.inputOptions === 'object') {
+          populateInputOptions(params.inputOptions);
+        } else {
+          console.error('SweetAlert2: Unexpected type of inputOptions! Expected object or Promise, got ' + typeof params.inputOptions);
+        }
+      }
+
+      openModal(params.animation, params.onOpen);
+
+      // Focus the first element (input or button)
+      setFocus(-1, 1);
+
+      // fix scroll
+      sweetContainer.scrollTop = 0;
+
+      // Observe changes inside the modal and adjust height
+      if (typeof MutationObserver !== 'undefined' && !swal2Observer) {
+        var mutationsHandler = debounce(function() {
+          sweetAlert.recalculateHeight();
+        }, 50);
+        swal2Observer = new MutationObserver(mutationsHandler);
+        swal2Observer.observe(modal, {childList: true, characterData: true, subtree: true});
+      }
+    });
+  }
+
+  // SweetAlert function
+  function sweetAlert() {
+    // Copy arguments to the local args variable
+    var args = arguments;
+    var modal = getModal();
+
+    if (modal === null) {
+      sweetAlert.init();
+      modal = getModal();
+    }
+
+    if (sweetAlert.isVisible()) {
+      sweetAlert.close();
+    }
+
+    return modalDependant.apply(this, args);
+  }
+
+  /*
+   * Global function to determine if swal2 modal is visible
+   */
+  sweetAlert.isVisible = function() {
+    var modal = getModal();
+    return isVisible(modal);
+  };
+
+  /*
+   * Global function for chaining sweetAlert modals
+   */
+  sweetAlert.queue = function(steps) {
+    queue = steps;
+    var modal = getModal() || sweetAlert.init();
+    var resetQueue = function() {
+      queue = [];
+      modal.removeAttribute('data-queue-step');
+    };
+    return new Promise(function(resolve, reject) {
+      (function step(i, callback) {
+        if (i < queue.length) {
+          modal.setAttribute('data-queue-step', i);
+
+          sweetAlert(queue[i]).then(function() {
+            step(i+1, callback);
+          }, function(dismiss) {
+            resetQueue();
+            reject(dismiss);
+          });
+        } else {
+          resetQueue();
+          resolve();
+        }
+      })(0);
+    });
+  };
+
+  /*
+   * Global function for getting the index of current modal in queue
+   */
+  sweetAlert.getQueueStep = function() {
+    return getModal().getAttribute('data-queue-step');
+  };
+
+  /*
+   * Global function for inserting a modal to the queue
+   */
+  sweetAlert.insertQueueStep = function(step, index) {
+    if (index && index < queue.length) {
+      return queue.splice(index, 0, step);
+    }
+    return queue.push(step);
+  };
+
+  /*
+   * Global function for deleting a modal from the queue
+   */
+  sweetAlert.deleteQueueStep = function(index) {
+    if (typeof queue[index] !== 'undefined') {
+      queue.splice(index, 1);
+    }
+  };
+
+  /*
+   * Global function to close sweetAlert
+   */
+  sweetAlert.close = sweetAlert.closeModal = function(onComplete) {
+    var modal = getModal();
+    removeClass(modal, 'show-swal2');
+    addClass(modal, 'hide-swal2');
+
+    // Reset icon animations
+    var $successIcon = modal.querySelector('.' + swalClasses.icon + '.' + iconTypes.success);
+    removeClass($successIcon, 'animate');
+    removeClass($successIcon.querySelector('.tip'), 'animate-success-tip');
+    removeClass($successIcon.querySelector('.long'), 'animate-success-long');
+
+    var $errorIcon = modal.querySelector('.' + swalClasses.icon + '.' + iconTypes.error);
+    removeClass($errorIcon, 'animate-error-icon');
+    removeClass($errorIcon.querySelector('.x-mark'), 'animate-x-mark');
+
+    var $warningIcon = modal.querySelector('.' + swalClasses.icon + '.' + iconTypes.warning);
+    removeClass($warningIcon, 'pulse-warning');
+
+    resetPrevState();
+
+    // If animation is supported, animate
+    if (animationEndEvent && !hasClass(modal, 'no-animation')) {
+      modal.addEventListener(animationEndEvent, function swalCloseEventFinished() {
+        modal.removeEventListener(animationEndEvent, swalCloseEventFinished);
+        if (hasClass(modal, 'hide-swal2')) {
+          hide(modal);
+          removeClass(sweetContainer, 'in');
+          removeClass(document.body, swalClasses.in);
+          undoScrollbar();
+        }
+      });
+    } else {
+      // Otherwise, hide immediately
+      hide(modal);
+      removeClass(sweetContainer, 'in');
+      removeClass(document.body, swalClasses.in);
+      undoScrollbar();
+    }
+    if (onComplete !== null && typeof onComplete === 'function') {
+      onComplete.call(this, modal);
+    }
+  };
+
+  /*
+   * Global function to click 'Confirm' button
+   */
+  sweetAlert.clickConfirm = function() {
+    getConfirmButton().click();
+  };
+
+  /*
+   * Global function to click 'Cancel' button
+   */
+  sweetAlert.clickCancel = function() {
+    getCancelButton().click();
+  };
+
+  /*
+   * Add modal + overlay to DOM
+   */
+  sweetAlert.init = function() {
+    if (typeof document === 'undefined') {
+      console.error('SweetAlert2 requires document to initialize');
+      return;
+    } else if (document.getElementsByClassName(swalClasses.container).length) {
+      return;
+    }
+
+    document.body.appendChild(sweetContainer);
+
+    var modal = getModal();
+    var input = getChildByClass(modal, swalClasses.input);
+    var file = getChildByClass(modal, swalClasses.file);
+    var range = modal.querySelector('.' + swalClasses.range + ' input');
+    var select = getChildByClass(modal, swalClasses.select);
+    var checkbox = modal.querySelector('.' + swalClasses.checkbox + ' input');
+    var textarea = getChildByClass(modal, swalClasses.textarea);
+
+    input.oninput = function() {
+      sweetAlert.resetValidationError();
+    };
+
+    input.onkeyup = function(event) {
+      event.stopPropagation();
+      if (event.keyCode === 13) {
+        sweetAlert.clickConfirm();
+      }
+    };
+
+    file.onchange = function() {
+      sweetAlert.resetValidationError();
+    };
+
+    range.oninput = function() {
+      sweetAlert.resetValidationError();
+      range.previousSibling.value = range.value;
+    };
+
+    range.onchange = function() {
+      sweetAlert.resetValidationError();
+      range.previousSibling.value = range.value;
+    };
+
+    select.onchange = function() {
+      sweetAlert.resetValidationError();
+    };
+
+    checkbox.onchange = function() {
+      sweetAlert.resetValidationError();
+    };
+
+    textarea.oninput = function() {
+      sweetAlert.resetValidationError();
+    };
+
+    return modal;
+  };
+
+  /**
+   * Set default params for each popup
+   * @param {Object} userParams
+   */
+  sweetAlert.setDefaults = function(userParams) {
+    if (!userParams) {
+      throw new Error('userParams is required');
+    }
+    if (typeof userParams !== 'object') {
+      throw new Error('userParams has to be a object');
+    }
+
+    extend(modalParams, userParams);
+  };
+
+  /**
+   * Reset default params for each popup
+   */
+  sweetAlert.resetDefaults = function() {
+    modalParams = extend({}, defaultParams);
+  };
+
+  sweetAlert.version = '5.0.7';
+
+  window.sweetAlert = window.swal = sweetAlert;
+
+  /*
+  * If library is injected after page has loaded
+  */
+  (function() {
+    if (document.readyState === 'complete' || document.readyState === 'interactive' && document.body) {
+      sweetAlert.init();
+    } else {
+      document.addEventListener('DOMContentLoaded', function onDomContentLoaded() {
+        document.removeEventListener('DOMContentLoaded', onDomContentLoaded, false);
+        sweetAlert.init();
+      }, false);
+    }
+  })();
+
+  if (typeof Promise === 'function') {
+    Promise.prototype.done = Promise.prototype.done || function() {
+      return this.catch(function() {
+        // Catch promise rejections silently.
+        // https://github.com/limonte/sweetalert2/issues/177
+      });
+    };
+  } else {
+    console.warn('SweetAlert2: Please inlude Promise polyfill BEFORE including sweetalert2.js if IE10+ support needed.');
+  }
+
+  return sweetAlert;
+
+}));
+
+/***/ })
+
+}]);

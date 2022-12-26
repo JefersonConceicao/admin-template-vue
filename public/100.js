@@ -1,1 +1,1073 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[100],{1431:function(t,s,a){"use strict";var o=a(750);a.n(o).a},1432:function(t,s,a){(t.exports=a(30)(!1)).push([t.i,".input-group-sm > .input-group-addon {\r\n    padding : 3px 10px;\n}\n.input-group-lg > .input-group-addon {\r\n    padding : 9px 16px;\n}\n.has-success .input-group-addon,\r\n.has-error .input-group-addon {\r\n    color : #fff;\n}\n.input-group-btn:last-child > .btn,\r\n.input-group-btn:last-child > .btn-group {\r\n    z-index : 0 !important;\n}\n.form-bordered .form-group > div {\r\n    padding     : 15px;\r\n    border-left : 1px solid #efefef;\n}\n.form-bordered .form-group {\r\n    margin        : 0;\r\n    border-bottom : 1px solid #efefef;\n}\n.form-bordered .control-label {\r\n    padding-top   : 17px;\r\n    margin-bottom : 0;\r\n    text-align    : right;\n}\n.form_layout form{\r\n    text-align: left;\n}\n.form-bordered-row .form-group {\r\n    margin        : 0;\r\n    border-bottom : 1px solid #efefef;\n}\n.form-bordered-row .control-label {\r\n    padding-top   : 17px;\r\n    margin-bottom : 0;\r\n    text-align    : right;\n}\n.form-bordered-row .form-group > div {\r\n    padding : 15px;\n}\n.right_aligned button {\r\n    margin-left : 7px;\n}\n.has-success .input-group-addon,\r\n.has-error .input-group-addon {\r\n    color : #555;\n}\n.fisrt_dropdwn{\r\n    /*z-index: 9999 !important;*/\n}\n.proc {\r\n    position : relative;\r\n    top      : -25px;\r\n    left     : 95%;\n}\n@media only screen and (max-width : 768px) {\n.form-bordered .form-group > div {\r\n        border : none;\n}\n}\n@media only screen and (max-width : 425px) {\n.proc {\r\n        position : relative;\r\n        top      : -25px;\r\n        left     : 91%;\n}\n}\n#tab3 .form-horizontal .radio, #tab3 .form-horizontal .checkbox,\r\n#tab3 .form-horizontal .radio-inline,#tab3 .form-horizontal .checkbox-inline {\r\n    padding-top: 0;\r\n    margin-bottom: 4px;\n}\n.m-l-10 {\r\n    margin-left :10px;\n}\n.panel-heading.tab-list {\r\n    padding: 2px 0 0 10px;\n}\n.tab-list .nav-tabs {\r\n    border-bottom: 0;\n}\n@media (min-width: 768px){\n.form-inline .form-group {\r\n        margin-bottom: 13px;\n}\n}\n.nav-link.active{\r\n    border-top: 3px solid #6699CC !important;\n}\n.remember .custom-control-description{\r\n    margin-left:20px;\n}\n.input-group-addon .custom-checkbox,.input-group-addon .custom-radio {\r\n    margin: 0;\n}\n@media(min-width: 320px) and (max-width:425px) {\n.form-horizontal select {\r\n        margin-bottom: 10px;\n}\n.form-bordered .control-label{\r\n        text-align: left;\n}\n.d-inline .input-group{\r\n        margin-bottom: 10px;\n}\n.tab-pane select{\r\n        margin-bottom: 10px;\n}\n}\n.striped-col{\r\n    background-color: #f9f9f9;\n}\n#inputError1:focus,#inputError2:focus{\r\n    box-shadow: 0px 0px 3px 0.1px #ff6666;\n}\n.form-control.is-valid{\r\n    border-color:#66cc99 !important;\n}\n.input-group-btn .b-dropdown .dropdown-toggle:active,.input-group-btn .btn-group.show .dropdown-toggle{\r\n    color: #fff !important;\n}\n.form-body{\r\n    clear:both;\n}\n.border-left-none{\r\n    border-left:none !important;\n}\n.custom-control.custom-radio,.custom-control.custom-checkbox{\r\n        padding-left: 1.1rem;\n}\n#example-file-input1,#example-file-multiple-input1,#example-file-input2,#example-file-multiple-input2,#example-file-input3,#example-file-multiple-input3{\r\n    width: 100%;\n}\n.fisrt_dropdwn .btn-info:not(:disabled):not(.disabled):active, .fisrt_dropdwn .btn-warning:not(:disabled):not(.disabled):active{\r\n    color: #fff;\n}",""])},2242:function(t,s,a){"use strict";a.r(s);var o={components:{card:a(433).a},data:function(){return{example_radio:[{text:"HTML",value:"HTML"},{text:"CSS",value:"CSS"},{text:"JavaScript",value:"JS"}],example_radio_seperated:[{text:"HTML",value:"HTML"},{text:"CSS",value:"CSS"},{text:"JavaScript",value:"JS"}],example_radio_bordered:[{text:"HTML",value:"HTML"},{text:"CSS",value:"CSS"},{text:"JavaScript",value:"JS"}],example_check:[{text:"HTML",value:"HTML"},{text:"CSS",value:"CSS"},{text:"JavaScript",value:"JS"}],example_check_seperated:[{text:"HTML",value:"HTML"},{text:"CSS",value:"CSS"},{text:"JavaScript",value:"JS"}],example_check_bordered:[{text:"HTML",value:"HTML"},{text:"CSS",value:"CSS"},{text:"JavaScript",value:"JS"}]}},name:"form_layouts",destroyed:function(){}},l=(a(1431),a(21)),i=Object(l.a)(o,(function(){var t=this,s=t.$createElement,a=t._self._c||s;return a("div",[a("div",{staticClass:"row form_layout"},[a("div",{staticClass:"col-lg-12"},[a("b-card",{attrs:{"no-body":""}},[a("b-tabs",{ref:"tabs",attrs:{card:""}},[a("b-tab",{attrs:{title:"Form Action",active:""}},[a("div",{staticClass:"row"},[a("div",{staticClass:"col-lg-6"},[a("card",{attrs:{title:"<i class='fa fa-fw ti-pencil'></i> Form Actions On Top"}},[a("form",{staticClass:"form-horizontal",attrs:{action:"#"}},[a("div",[a("div",{staticClass:"row"},[a("div",{staticClass:"col-sm-offset-3 col-sm-9 ml-auto"},[a("button",{staticClass:"btn  mb-3 btn-primary",attrs:{type:"button"}},[t._v("Submit\r\n                                                    ")]),t._v("\r\n                                                     \r\n                                                    "),a("button",{staticClass:"btn  mb-3 btn-danger",attrs:{type:"button"}},[t._v("Cancel\r\n                                                    ")]),t._v("\r\n                                                     \r\n                                                    "),a("button",{staticClass:"btn btn-secondary  mb-3 bttn_reset butn buttn",attrs:{type:"reset"}},[t._v("\r\n                                                        Reset\r\n                                                    ")])])])]),t._v(" "),a("div",{staticClass:"form-body"},[a("div",{staticClass:"form-group m-t-10 row"},[a("div",{staticClass:"col-sm-3 col-lg-4 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"inputUsername1"}},[t._v("\r\n                                                        Username\r\n                                                    ")])]),t._v(" "),a("div",{staticClass:"col-sm-9 col-lg-8"},[a("div",{staticClass:"input-group "},[a("div",{staticClass:"input-group-prepend"},[a("span",{staticClass:"input-group-text bg-white",attrs:{id:"basic-addon1"}},[a("i",{staticClass:"fa fa-fw ti-user"})])]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"text",placeholder:"Username",id:"inputUsername1"}})])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"inputEmail"}},[t._v("\r\n                                                        Email\r\n                                                    ")])]),t._v(" "),a("div",{staticClass:"col-sm-9 col-lg-8"},[a("div",{staticClass:"input-group "},[a("div",{staticClass:"input-group-prepend"},[a("span",{staticClass:"input-group-text bg-white"},[a("i",{staticClass:"fa ti-email"})])]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"text",placeholder:"Email Address",id:"inputEmail"}})])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"inputpass"}},[t._v("\r\n                                                        Password\r\n                                                    ")])]),t._v(" "),a("div",{staticClass:"col-sm-9 col-lg-8"},[a("div",{staticClass:"input-group "},[a("div",{staticClass:"input-group-prepend"},[a("span",{staticClass:"input-group-text bg-white"},[a("i",{staticClass:"fa fa-fw ti-key"})])]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"text",placeholder:"Password",id:"inputpass"}})])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"inputnumber1"}},[t._v("\r\n                                                        Phone Number\r\n                                                    ")])]),t._v(" "),a("div",{staticClass:"col-sm-9 col-lg-8"},[a("div",{staticClass:"input-group "},[a("div",{staticClass:"input-group-prepend"},[a("span",{staticClass:"input-group-text bg-white"},[a("i",{staticClass:"fa fa-fw ti-mobile"})])]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"text",placeholder:"Phone Number",id:"inputnumber1"}})])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"inputAddress"}},[t._v("\r\n                                                        Address\r\n                                                    ")])]),t._v(" "),a("div",{staticClass:"col-sm-9 col-lg-8"},[a("div",{staticClass:"input-group "},[a("div",{staticClass:"input-group-prepend"},[a("span",{staticClass:"input-group-text bg-white"},[a("i",{staticClass:"fa fa-fw ti-pencil"})])]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"text",placeholder:"Address",id:"inputAddress"}})])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"inputContent1"}},[t._v("Message")])]),t._v(" "),a("div",{staticClass:"col-sm-9 col-lg-8"},[a("textarea",{staticClass:"form-control resize_vertical",attrs:{id:"inputContent1",rows:"3",name:"inputContent1"}})])])])])])],1),t._v(" "),a("div",{staticClass:"col-lg-6"},[a("card",{attrs:{title:"<i class='fa fa-fw ti-pencil'></i> Form Actions On Bottom"}},[a("form",{staticClass:"form-horizontal",attrs:{action:"#"}},[a("div",{staticClass:"form-body"},[a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"inputUsername2"}},[t._v("\r\n                                                        Username\r\n                                                    ")])]),t._v(" "),a("div",{staticClass:"col-sm-9 col-lg-8"},[a("div",{staticClass:"input-group "},[a("div",{staticClass:"input-group-prepend"},[a("span",{staticClass:"input-group-text bg-white"},[a("i",{staticClass:"fa fa-fw ti-user"})])]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"text",placeholder:"Username",id:"inputUsername2"}})])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"inputEmail2"}},[t._v("\r\n                                                        Email\r\n                                                    ")])]),t._v(" "),a("div",{staticClass:"col-sm-9 col-lg-8"},[a("div",{staticClass:"input-group "},[a("div",{staticClass:"input-group-prepend"},[a("span",{staticClass:"input-group-text bg-white"},[a("i",{staticClass:"fa ti-email"})])]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"text",placeholder:"Email Address",id:"inputEmail2"}})])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"keypassword"}},[t._v("\r\n                                                        Password\r\n                                                    ")])]),t._v(" "),a("div",{staticClass:"col-sm-9 col-lg-8"},[a("div",{staticClass:"input-group "},[a("div",{staticClass:"input-group-prepend"},[a("span",{staticClass:"input-group-text bg-white"},[a("i",{staticClass:"fa fa-fw ti-key"})])]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"password",placeholder:"Password",id:"keypassword"}})])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"inputnumber2"}},[t._v("\r\n                                                        Phone Number\r\n                                                    ")])]),t._v(" "),a("div",{staticClass:"col-sm-9 col-lg-8"},[a("div",{staticClass:"input-group "},[a("div",{staticClass:"input-group-prepend"},[a("span",{staticClass:"input-group-text bg-white"},[a("i",{staticClass:"fa fa-fw ti-mobile"})])]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"text",placeholder:"Phone Number",id:"inputnumber2"}})])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"inputAddress2"}},[t._v("\r\n                                                        Address\r\n                                                    ")])]),t._v(" "),a("div",{staticClass:"col-sm-9 col-lg-8"},[a("div",{staticClass:"input-group "},[a("div",{staticClass:"input-group-prepend"},[a("span",{staticClass:"input-group-text bg-white"},[a("i",{staticClass:"fa fa-fw ti-pencil"})])]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"text",placeholder:"Address",id:"inputAddress2"}})])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"inputContent2"}},[t._v("Message")])]),t._v(" "),a("div",{staticClass:"col-sm-9 col-lg-8"},[a("textarea",{staticClass:"form-control resize_vertical",attrs:{id:"inputContent2",rows:"3"}})])])]),t._v(" "),a("div",{staticClass:"form-actions"},[a("div",{staticClass:"row"},[a("div",{staticClass:"col-sm-offset-3  col-sm-9 ml-auto"},[a("button",{staticClass:"btn btn-primary  mb-3",attrs:{type:"button"}},[t._v("Submit\r\n                                                    ")]),t._v("\r\n                                                     \r\n                                                    "),a("button",{staticClass:"btn btn-danger  mb-3",attrs:{type:"button"}},[t._v("Cancel\r\n                                                    ")]),t._v("\r\n                                                     \r\n                                                    "),a("button",{staticClass:"btn btn-secondary bttn_reset butn buttn  mb-3",attrs:{type:"reset"}},[t._v("\r\n                                                        Reset\r\n                                                    ")])])])])])])],1),t._v(" "),a("div",{staticClass:"col-lg-12"},[a("card",{attrs:{title:"<i class='fa fa-fw ti-pencil'></i> Form Actions On Top & Bottom"}},[a("form",{staticClass:"form-horizontal",attrs:{action:"#"}},[a("div",[a("div",{staticClass:"row"},[a("div",{staticClass:"col-sm-12 text-center"},[a("button",{staticClass:"btn btn-primary  mb-3",attrs:{type:"button"}},[t._v("Submit\r\n                                                    ")]),t._v("\r\n                                                     \r\n                                                    "),a("button",{staticClass:"btn btn-danger  mb-3",attrs:{type:"button"}},[t._v("Cancel\r\n                                                    ")]),t._v("\r\n                                                     \r\n                                                    "),a("button",{staticClass:"btn btn-secondary bttn_reset butn  mb-3",attrs:{type:"reset"}},[t._v("\r\n                                                        Reset\r\n                                                    ")])])])]),t._v(" "),a("div",{staticClass:"form-body"},[a("div",{staticClass:"form-group m-t-10 row"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"inputUsername3"}},[t._v("\r\n                                                        Username\r\n                                                    ")])]),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("div",{staticClass:"input-group "},[a("div",{staticClass:"input-group-prepend"},[a("span",{staticClass:"input-group-text bg-white"},[a("i",{staticClass:"fa fa-fw ti-user"})])]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"text",id:"inputUsername3",placeholder:"Username"}})])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"inputEmail3"}},[t._v("\r\n                                                        Email\r\n                                                    ")])]),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("div",{staticClass:"input-group "},[a("div",{staticClass:"input-group-prepend"},[a("span",{staticClass:"input-group-text bg-white"},[a("i",{staticClass:"fa ti-email"})])]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"text",id:"inputEmail3",placeholder:"Email Address"}})])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"fapassword"}},[t._v("\r\n                                                        Password\r\n                                                    ")])]),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("div",{staticClass:"input-group "},[a("div",{staticClass:"input-group-prepend"},[a("span",{staticClass:"input-group-text bg-white"},[a("i",{staticClass:"fa fa-fw ti-key"})])]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"password",placeholder:"Password",id:"fapassword"}})])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"inputnumber3"}},[t._v("\r\n                                                        Phone Number\r\n                                                    ")])]),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("div",{staticClass:"input-group "},[a("div",{staticClass:"input-group-prepend"},[a("span",{staticClass:"input-group-text bg-white"},[a("i",{staticClass:"fa fa-fw ti-mobile"})])]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"text",id:"inputnumber3",placeholder:"Phone Number"}})])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"inputAddress3"}},[t._v("\r\n                                                        Address\r\n                                                    ")])]),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("div",{staticClass:"input-group "},[a("div",{staticClass:"input-group-prepend"},[a("span",{staticClass:"input-group-text bg-white"},[a("i",{staticClass:"fa fa-fw ti-pencil"})])]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"text",id:"inputAddress3",placeholder:"Address"}})])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"inputContent3"}},[t._v("Message")])]),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("textarea",{staticClass:"form-control resize_vertical",attrs:{id:"inputContent3",rows:"3"}})])])]),t._v(" "),a("div",{staticClass:"form-actions"},[a("div",{staticClass:"row"},[a("div",{staticClass:"col-sm-12 text-center"},[a("button",{staticClass:"btn btn-primary  mb-3",attrs:{type:"button"}},[t._v("Submit\r\n                                                    ")]),t._v("\r\n                                                     \r\n                                                    "),a("button",{staticClass:"btn btn-danger  mb-3",attrs:{type:"button"}},[t._v("Cancel\r\n                                                    ")]),t._v("\r\n                                                     \r\n                                                    "),a("button",{staticClass:"btn btn-secondary bttn_reset butn  mb-3",attrs:{type:"reset"}},[t._v("\r\n                                                        Reset\r\n                                                    ")])])])])])])],1),t._v(" "),a("div",{staticClass:"col-lg-6"},[a("card",{attrs:{title:" <i class='fa fa-fw ti-pencil'></i> Left Aligned"}},[a("form",{attrs:{action:"#"}},[a("div",[a("button",{staticClass:"btn btn-primary  mb-3",attrs:{type:"button"}},[t._v("Submit\r\n                                            ")]),t._v("\r\n                                             \r\n                                            "),a("button",{staticClass:"btn btn-danger  mb-3",attrs:{type:"button"}},[t._v("Cancel")]),t._v("\r\n                                             \r\n                                            "),a("button",{staticClass:"btn btn-secondary bttn_reset butn  mb-3",attrs:{type:"reset"}},[t._v("\r\n                                                Reset\r\n                                            ")])]),t._v(" "),a("div",{staticClass:"form-body"},[a("div",{staticClass:"form-group m-t-10"},[a("label",{staticClass:"control-label",attrs:{for:"inputUsername4"}},[t._v("\r\n                                                    Username\r\n                                                ")]),t._v(" "),a("div",{staticClass:"input-group "},[a("div",{staticClass:"input-group-prepend"},[a("span",{staticClass:"input-group-text bg-white"},[a("i",{staticClass:"fa fa-fw ti-user"})])]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"text",id:"inputUsername4",placeholder:"Username"}})])]),t._v(" "),a("div",{staticClass:"form-group"},[a("label",{staticClass:"control-label",attrs:{for:"inputEmail4"}},[t._v("\r\n                                                    Email\r\n                                                ")]),t._v(" "),a("div",{staticClass:"input-group "},[a("div",{staticClass:"input-group-prepend"},[a("span",{staticClass:"input-group-text bg-white"},[a("i",{staticClass:"fa ti-email"})])]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"text",id:"inputEmail4",placeholder:"Email Address"}})])]),t._v(" "),a("div",{staticClass:"form-group"},[a("label",{staticClass:"control-label",attrs:{for:"validpassword"}},[t._v("\r\n                                                    Password\r\n                                                ")]),t._v(" "),a("div",{staticClass:"input-group "},[a("div",{staticClass:"input-group-prepend"},[a("span",{staticClass:"input-group-text bg-white"},[a("i",{staticClass:"fa fa-fw ti-key"})])]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"password",placeholder:"Password",id:"validpassword"}})])]),t._v(" "),a("div",{staticClass:"form-group"},[a("label",{staticClass:"control-label",attrs:{for:"inputnumber4"}},[t._v("\r\n                                                    Phone Number\r\n                                                ")]),t._v(" "),a("div",{staticClass:"input-group "},[a("div",{staticClass:"input-group-prepend"},[a("span",{staticClass:"input-group-text bg-white"},[a("i",{staticClass:"fa fa-fw ti-mobile"})])]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"text",id:"inputnumber4",placeholder:"Phone Number"}})])]),t._v(" "),a("div",{staticClass:"form-group"},[a("label",{staticClass:"control-label",attrs:{for:"inputAddress4"}},[t._v("\r\n                                                    Address\r\n                                                ")]),t._v(" "),a("div",{staticClass:"input-group "},[a("div",{staticClass:"input-group-prepend"},[a("span",{staticClass:"input-group-text bg-white"},[a("i",{staticClass:"fa fa-fw ti-pencil"})])]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"text",id:"inputAddress4",placeholder:"Address"}})])]),t._v(" "),a("div",{staticClass:"form-group mbn"},[a("label",{staticClass:"control-label",attrs:{for:"inputContent4"}},[t._v("Message")]),t._v(" "),a("textarea",{staticClass:"form-control resize_vertical",attrs:{id:"inputContent4",rows:"3"}})])]),t._v(" "),a("div",{staticClass:"form-actions"},[a("button",{staticClass:"btn  mb-3 btn-primary",attrs:{type:"button"}},[t._v("Submit\r\n                                            ")]),t._v("\r\n                                             \r\n                                            "),a("button",{staticClass:"btn  mb-3 btn-danger",attrs:{type:"button"}},[t._v("Cancel")]),t._v("\r\n                                             \r\n                                            "),a("button",{staticClass:"btn  mb-3 btn-secondary bttn_reset butn",attrs:{type:"reset"}},[t._v("\r\n                                                Reset\r\n                                            ")])])])])],1),t._v(" "),a("div",{staticClass:"col-lg-6"},[a("card",{attrs:{title:"<i class='fa fa-fw ti-pencil'></i> Right Aligned"}},[a("form",{staticClass:"right_aligned",attrs:{action:"#"}},[a("div",{staticClass:"float-md-right "},[a("button",{staticClass:"btn  mb-3 btn-primary",attrs:{type:"button"}},[t._v("Submit\r\n                                            ")]),t._v(" "),a("button",{staticClass:"btn  mb-3 btn-danger",attrs:{type:"button"}},[t._v("Cancel")]),t._v(" "),a("button",{staticClass:"btn  mb-3 btn-secondary bttn_reset butn",attrs:{type:"reset"}},[t._v("\r\n                                                Reset\r\n                                            ")])]),t._v(" "),a("div",{staticClass:"form-body"},[a("div",{staticClass:"form-group"},[a("label",{staticClass:"control-label",attrs:{for:"inputUsername5"}},[t._v("\r\n                                                    Username\r\n                                                ")]),t._v(" "),a("div",{staticClass:"input-group "},[a("div",{staticClass:"input-group-prepend"},[a("span",{staticClass:"input-group-text bg-white"},[a("i",{staticClass:"fa fa-fw ti-user"})])]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"text",id:"inputUsername5",placeholder:"Username"}})])]),t._v(" "),a("div",{staticClass:"form-group"},[a("label",{staticClass:"control-label",attrs:{for:"inputEmail5"}},[t._v("\r\n                                                    Email\r\n                                                ")]),t._v(" "),a("div",{staticClass:"input-group "},[a("div",{staticClass:"input-group-prepend"},[a("span",{staticClass:"input-group-text bg-white"},[a("i",{staticClass:"fa ti-email"})])]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"text",placeholder:"Email Address",id:"inputEmail5"}})])]),t._v(" "),a("div",{staticClass:"form-group"},[a("label",{staticClass:"control-label",attrs:{for:"uniquepassword"}},[t._v("\r\n                                                    Password\r\n                                                ")]),t._v(" "),a("div",{staticClass:"input-group "},[a("div",{staticClass:"input-group-prepend"},[a("span",{staticClass:"input-group-text bg-white"},[a("i",{staticClass:"fa fa-fw ti-key"})])]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"password",placeholder:"Password",id:"uniquepassword"}})])]),t._v(" "),a("div",{staticClass:"form-group"},[a("label",{staticClass:"control-label",attrs:{for:"inputnumber5"}},[t._v("\r\n                                                    Phone Number\r\n                                                ")]),t._v(" "),a("div",{staticClass:"input-group "},[a("div",{staticClass:"input-group-prepend"},[a("span",{staticClass:"input-group-text bg-white"},[a("i",{staticClass:"fa fa-fw ti-mobile"})])]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"text",id:"inputnumber5",placeholder:"Phone Number"}})])]),t._v(" "),a("div",{staticClass:"form-group"},[a("label",{staticClass:"control-label",attrs:{for:"inputAddress5"}},[t._v("\r\n                                                    Address\r\n                                                ")]),t._v(" "),a("div",{staticClass:"input-group "},[a("div",{staticClass:"input-group-prepend"},[a("span",{staticClass:"input-group-text bg-white"},[a("i",{staticClass:"fa fa-fw ti-pencil"})])]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"text",placeholder:"Address",id:"inputAddress5"}})])]),t._v(" "),a("div",{staticClass:"form-group mbn"},[a("label",{staticClass:"control-label",attrs:{for:"inputContent"}},[t._v("Message")]),t._v(" "),a("textarea",{staticClass:"form-control resize_vertical",attrs:{id:"inputContent",rows:"3"}})])]),t._v(" "),a("div",{staticClass:"form-actions float-md-right "},[a("button",{staticClass:"btn  mb-3 btn-primary",attrs:{type:"button"}},[t._v("Submit\r\n                                            ")]),t._v(" "),a("button",{staticClass:"btn  mb-3 btn-danger",attrs:{type:"button"}},[t._v("Cancel")]),t._v(" "),a("button",{staticClass:"btn  mb-3 btn-secondary bttn_reset butn",attrs:{type:"reset"}},[t._v("\r\n                                                Reset\r\n                                            ")])])])])],1)])]),t._v(" "),a("b-tab",{attrs:{title:"2 Columns"}},[a("div",{staticClass:"row"},[a("div",{staticClass:"col-sm-12"},[a("card",{attrs:{title:"<i class='fa fa-fw ti-pencil'></i> Form 2 Columns Default"}},[a("div",{staticClass:"row"},[a("div",{staticClass:" col-sm-6"},[a("form",[a("div",{staticClass:"form-group row has-success"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label text-success",attrs:{for:"inputSuccess1"}},[t._v("First\r\n                                                            Name\r\n                                                        ")])]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("input",{staticClass:"form-control form-control-success is-valid",attrs:{type:"text",id:"inputSuccess1",placeholder:"Input with success"}}),t._v(" "),a("span",{staticClass:"form-text text-success"},[t._v("\r\n                                                                        First name is too small\r\n                                                                    ")])])]),t._v(" "),a("div",{staticClass:"form-group has-error row"},[a("div",{staticClass:"col-sm-3 float-md-right text-danger txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"inputError1"}},[t._v("Email")])]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("input",{staticClass:"form-control",attrs:{type:"email",id:"inputError1",placeholder:"Input with error"}}),t._v(" "),a("span",{staticClass:"form-text text-danger"},[t._v("\r\n                                                                        Please enter a valid email address\r\n                                                                    ")])])])])]),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("form",[a("div",{staticClass:"form-group row has-success has-feedback"},[a("div",{staticClass:"col-sm-3 float-md-right text-success txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"inputSuccess2"}},[t._v("\r\n                                                            Second Name\r\n                                                        ")])]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("input",{staticClass:"form-control is-valid ",attrs:{type:"text",id:"inputSuccess2",placeholder:"Input with success"}}),t._v(" "),a("span",{staticClass:"form-text text-success"},[t._v("\r\n                                                                        Second name is too small\r\n                                                                    ")])])]),t._v(" "),a("div",{staticClass:"form-group row has-error has-feedback"},[a("div",{staticClass:"col-sm-3 float-md-right text-danger txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"inputError2"}},[t._v("\r\n                                                            Confirm Email\r\n                                                        ")])]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("input",{staticClass:"form-control brdr_danger",attrs:{type:"email",id:"inputError2",placeholder:"Input with error"}}),t._v(" "),a("span",{staticClass:"form-text text-danger"},[t._v("\r\n                                                                        Email mis-match\r\n                                                                    ")])])]),t._v(" "),a("div",{staticClass:"form-group"},[a("div",{staticClass:"col-sm-10 ml-auto"},[a("button",{staticClass:"btn   btn-primary",attrs:{type:"button"}},[t._v("\r\n                                                            Login\r\n                                                        ")])])])])])])])],1),t._v(" "),a("div",{staticClass:"col-lg-12"},[a("card",{attrs:{title:"<i class='fa fa-fw ti-pencil'></i> Personal Details Horizontal"}},[a("form",{staticClass:"form-horizontal",attrs:{method:"post"}},[a("div",{staticClass:"row"},[a("div",{staticClass:"col-sm-6"},[a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"first_Name"}},[t._v("First\r\n                                                            Name:\r\n                                                        ")])]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("input",{staticClass:"form-control",attrs:{type:"text",id:"first_Name",placeholder:"First Name"}})])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"input_Email"}},[t._v("Email:")])]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("input",{staticClass:"form-control",attrs:{type:"email",id:"input_Email",placeholder:"Email"}})])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"input_Password"}},[t._v("Password:")])]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("input",{staticClass:"form-control",attrs:{type:"password",id:"input_Password",placeholder:"Password"}})])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label m-t-10"},[t._v("Date of\r\n                                                            Birth:")])]),t._v(" "),a("div",{staticClass:"col-sm-3 m-t-10"},[a("select",{staticClass:"form-control"},[a("option",[t._v("Date")]),t._v(" "),a("option",[t._v("1")]),t._v(" "),a("option",[t._v("2")]),t._v(" "),a("option",[t._v("3")]),t._v(" "),a("option",[t._v("4")]),t._v(" "),a("option",[t._v("5")]),t._v(" "),a("option",[t._v("6")]),t._v(" "),a("option",[t._v("7")]),t._v(" "),a("option",[t._v("8")]),t._v(" "),a("option",[t._v("9")]),t._v(" "),a("option",[t._v("10")]),t._v(" "),a("option",[t._v("11")]),t._v(" "),a("option",[t._v("12")]),t._v(" "),a("option",[t._v("13")]),t._v(" "),a("option",[t._v("14")]),t._v(" "),a("option",[t._v("15")]),t._v(" "),a("option",[t._v("16")]),t._v(" "),a("option",[t._v("17")]),t._v(" "),a("option",[t._v("18")]),t._v(" "),a("option",[t._v("19")]),t._v(" "),a("option",[t._v("20")]),t._v(" "),a("option",[t._v("21")]),t._v(" "),a("option",[t._v("22")]),t._v(" "),a("option",[t._v("23")]),t._v(" "),a("option",[t._v("24")]),t._v(" "),a("option",[t._v("25")]),t._v(" "),a("option",[t._v("26")]),t._v(" "),a("option",[t._v("27")]),t._v(" "),a("option",[t._v("28")]),t._v(" "),a("option",[t._v("29")]),t._v(" "),a("option",[t._v("30")]),t._v(" "),a("option",[t._v("31")])])]),t._v(" "),a("div",{staticClass:"col-sm-3 m-t-10"},[a("select",{staticClass:"form-control"},[a("option",[t._v("Month")]),t._v(" "),a("option",[t._v("1")]),t._v(" "),a("option",[t._v("2")]),t._v(" "),a("option",[t._v("3")]),t._v(" "),a("option",[t._v("4")]),t._v(" "),a("option",[t._v("5")]),t._v(" "),a("option",[t._v("6")]),t._v(" "),a("option",[t._v("7")]),t._v(" "),a("option",[t._v("8")]),t._v(" "),a("option",[t._v("9")]),t._v(" "),a("option",[t._v("10")]),t._v(" "),a("option",[t._v("11")]),t._v(" "),a("option",[t._v("12")])])]),t._v(" "),a("div",{staticClass:"col-sm-3 m-t-10"},[a("select",{staticClass:"form-control"},[a("option",[t._v("Year")]),t._v(" "),a("option",[t._v("1991")]),t._v(" "),a("option",[t._v("1992")]),t._v(" "),a("option",[t._v("1993")]),t._v(" "),a("option",[t._v("1994")]),t._v(" "),a("option",[t._v("1995")]),t._v(" "),a("option",[t._v("1996")]),t._v(" "),a("option",[t._v("1997")]),t._v(" "),a("option",[t._v("1998")]),t._v(" "),a("option",[t._v("1999")]),t._v(" "),a("option",[t._v("2000")]),t._v(" "),a("option",[t._v("2001")]),t._v(" "),a("option",[t._v("2002")]),t._v(" "),a("option",[t._v("2003")]),t._v(" "),a("option",[t._v("2004")]),t._v(" "),a("option",[t._v("2005")]),t._v(" "),a("option",[t._v("2006")]),t._v(" "),a("option",[t._v("2007")]),t._v(" "),a("option",[t._v("2008")]),t._v(" "),a("option",[t._v("2009")]),t._v(" "),a("option",[t._v("2000")]),t._v(" "),a("option",[t._v("2011")]),t._v(" "),a("option",[t._v("2012")]),t._v(" "),a("option",[t._v("2013")]),t._v(" "),a("option",[t._v("2014")]),t._v(" "),a("option",[t._v("2015")]),t._v(" "),a("option",[t._v("2016")]),t._v(" "),a("option",[t._v("2017")]),t._v(" "),a("option",[t._v("2018")])])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"Zip_Code"}},[t._v("Zip\r\n                                                            Code:\r\n                                                        ")])]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("input",{staticClass:"form-control",attrs:{type:"text",id:"Zip_Code",placeholder:"Zip Code"}})])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"city"}},[t._v("City:")])]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("input",{staticClass:"form-control",attrs:{type:"text",id:"city",placeholder:"City"}})])]),t._v(" "),a("div",{staticClass:"form-group"},[a("div",{staticClass:"col-sm-9 ml-auto"},[a("label",{staticClass:"checkbox-inline"},[a("b-form-checkbox",[t._v("\r\n\r\n                                                                All Flavors\r\n                                                            ")])],1)])])]),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"last_Name"}},[t._v("Last\r\n                                                            Name:\r\n                                                        ")])]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("input",{staticClass:"form-control",attrs:{type:"text",id:"last_Name",placeholder:"Last Name"}})])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"phone_Number"}},[t._v("phone:\r\n                                                        ")])]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("input",{staticClass:"form-control",attrs:{type:"text",id:"phone_Number",placeholder:"Phone Number"}})])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"confirm_Password"}},[t._v("confirm password:\r\n                                                        ")])]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("input",{staticClass:"form-control",attrs:{type:"text",id:"confirm_Password",placeholder:"Confirm Password"}})])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"postal_Address"}},[t._v("Address:")])]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("textarea",{staticClass:"form-control resize_vertical",attrs:{rows:"3",id:"postal_Address",placeholder:"Postal Address"}})])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"control-label"},[t._v("Gender:")])]),t._v(" "),a("div",{staticClass:"col-sm-8"},[a("b-form-radio",{attrs:{name:"gender",checked:"false"}},[t._v("\r\n                                                            Male\r\n                                                        ")]),t._v(" "),a("b-form-radio",{attrs:{name:"gender",checked:"false"}},[t._v("\r\n                                                            Female\r\n                                                        ")])],1)]),t._v(" "),a("div",{staticClass:"form-group"},[a("div",{staticClass:"col-sm-9 ml-auto mr-4"},[a("label",{staticClass:"checkbox-inline"},[a("b-form-checkbox",[t._v("\r\n                                                                I agree to the\r\n                                                                "),a("a",{staticClass:"forgot",attrs:{href:"#"}},[t._v("Terms and\r\n                                                                    Conditions.")])])],1)])]),t._v(" "),a("div",{staticClass:"form-group form-actions"},[a("div",{staticClass:"col-sm-offset-3 col-sm-9 ml-auto"},[a("button",{staticClass:"btn  btn-primary",attrs:{type:"button"}},[t._v("\r\n                                                            Submit\r\n                                                        ")]),t._v("\r\n                                                          \r\n                                                        "),a("button",{staticClass:"btn btn-effect-ripple  btn-secondary  reset_btn1",attrs:{type:"reset"}},[t._v("\r\n                                                            Reset\r\n                                                        ")])])])])])])])],1)]),t._v(" "),a("div",{staticClass:"row"},[a("div",{staticClass:"col-lg-12"},[a("card",{attrs:{title:"<i class='fa fa-fw ti-pencil'></i> Form 2 Columns Readonly"}},[a("form",{attrs:{action:"#"}},[a("div",{staticClass:"form-body"},[a("h3",[t._v("Personal")]),t._v(" "),a("div",{staticClass:"row"},[a("div",{staticClass:"col-sm-6"},[a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-5 col-6 float-md-right txt_media"},[a("label",{staticClass:"form-control-label"},[t._v("\r\n                                                                First Name:\r\n                                                            ")])]),t._v(" "),a("div",{staticClass:"col-sm-7 col-6"},[a("span",{staticClass:"form-control-plaintext"},[t._v("Jenny")])])])]),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-5 col-6 float-md-right txt_media"},[a("label",{staticClass:"form-control-label"},[t._v("\r\n                                                                Last Name:\r\n                                                            ")])]),t._v(" "),a("div",{staticClass:"col-sm-7 col-6"},[a("span",{staticClass:"form-control-plaintext"},[t._v("Kerry")])])])])]),t._v(" "),a("div",{staticClass:"row"},[a("div",{staticClass:"col-sm-6"},[a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-5 col-6 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"inputEmail6"}},[t._v("Email\r\n                                                                :\r\n                                                            ")])]),t._v(" "),a("div",{staticClass:"col-sm-7 col-6"},[a("span",{staticClass:"form-control-plaintext"},[a("a",{staticClass:"forgot",attrs:{href:"mailto:whisfat1935@jourrapide.com"}},[t._v("\r\n                                                                                    Jenny321@example.com\r\n                                                                                ")])])])])]),t._v(" "),a("div",{staticClass:"col-sm-6 col-sm-6"},[a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-5 col-6 float-md-right txt_media"},[a("label",{staticClass:"form-control-label"},[t._v("Gender :\r\n                                                            ")])]),t._v(" "),a("div",{staticClass:"col-sm-7 col-6"},[a("span",{staticClass:"form-control-plaintext"},[t._v("Female")])])])])]),t._v(" "),a("div",{staticClass:"row"},[a("div",{staticClass:"col-sm-6 col-sm-6"},[a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-5 col-6 float-md-right txt_media"},[a("label",{staticClass:"form-control-label"},[t._v("Birthday :\r\n                                                            ")])]),t._v(" "),a("div",{staticClass:"col-sm-7 col-6"},[a("span",{staticClass:"form-control-plaintext"},[t._v("\r\n                                                                                10.11.1980")])])])]),t._v(" "),a("div",{staticClass:"col-sm-6 col-sm-6"},[a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-5 col-6 float-md-right txt_media"},[a("label",{staticClass:"form-control-label"},[t._v("Phone :\r\n                                                            ")])]),t._v(" "),a("div",{staticClass:"col-sm-7 col-6"},[a("p",{staticClass:"form-control-plaintext"},[t._v("\r\n                                                                321-333-5432\r\n                                                            ")])])])])]),t._v(" "),a("h3",[t._v("Address")]),t._v(" "),a("div",{staticClass:"row"},[a("div",{staticClass:"col-sm-6"},[a("div",{staticClass:"row form-group"},[a("div",{staticClass:"col-sm-5 col-6 float-md-right txt_media"},[a("label",{staticClass:"form-control-label"},[t._v("\r\n                                                                Address 1:\r\n                                                            ")])]),t._v(" "),a("div",{staticClass:"col-sm-7 col-6"},[a("p",{staticClass:"form-text"},[t._v("\r\n                                                                1219 Quiet Subdivision\r\n                                                            ")])])])]),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-5 col-6 float-md-right txt_media"},[a("label",{staticClass:"form-control-label"},[t._v("\r\n                                                                Address 2:\r\n                                                            ")])]),t._v(" "),a("div",{staticClass:"col-sm-7 col-6"},[a("p",{staticClass:"form-text"},[t._v("\r\n                                                                3536 Petunia Way\r\n                                                            ")])])])])]),t._v(" "),a("div",{staticClass:"row"},[a("div",{staticClass:"col-sm-6 col-sm-6"},[a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-5 col-6 float-md-right txt_media"},[a("label",{staticClass:"form-control-label"},[t._v("City\r\n                                                                :")])]),t._v(" "),a("div",{staticClass:"col-sm-7 col-6"},[a("p",{staticClass:"form-text"},[t._v("Albany")])])])]),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("div",{staticClass:"row form-group"},[a("div",{staticClass:"col-sm-5 col-6 float-md-right txt_media"},[a("label",{staticClass:"form-control-label"},[t._v("State :\r\n                                                            ")])]),t._v(" "),a("div",{staticClass:"col-sm-7 col-6"},[a("p",{staticClass:"form-text"},[t._v("New york")])])])])]),t._v(" "),a("div",{staticClass:"row"},[a("div",{staticClass:"col-sm-6"},[a("div",{staticClass:"row form-group"},[a("div",{staticClass:"col-sm-5 col-6 float-md-right txt_media"},[a("label",{staticClass:"control-label"},[t._v("\r\n                                                                Country :\r\n                                                            ")])]),t._v(" "),a("div",{staticClass:"col-sm-7 col-6"},[a("p",{staticClass:"form-text"},[t._v("USA")])])])]),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("div",{staticClass:"row form-group"},[a("div",{staticClass:"col-sm-5 col-6 float-md-right txt_media"},[a("label",{staticClass:"control-label"},[t._v("\r\n                                                                Post Code:\r\n                                                            ")])]),t._v(" "),a("div",{staticClass:"col-sm-7 col-6"},[a("p",{staticClass:"form-text"},[t._v("12203")])])])])])])])])],1)])]),t._v(" "),a("b-tab",{attrs:{title:"Form Striped"}},[a("div",{staticClass:"row"},[a("div",{staticClass:"col-lg-12"},[a("card",{staticClass:"striped_full",attrs:{title:"<i class='fa fa-fw ti-move'></i> Form Bordered Striped"}},[a("form",{staticClass:"form-bordered",attrs:{method:"post",enctype:"multipart/form-data"}},[a("div",{staticClass:"form-group row striped-col"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label"},[t._v("Static")])]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("p",{staticClass:"form-control-plaintext"},[t._v("\r\n                                                    Static text\r\n                                                ")])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"example-text-input1"}},[t._v("Text")])]),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("input",{staticClass:"form-control",attrs:{type:"text",id:"example-text-input1",name:"example-text-input",placeholder:"Text"}}),t._v(" "),a("span",{staticClass:"form-control-plaintext"},[t._v("\r\n                                                            This is a help text\r\n                                                        ")])])]),t._v(" "),a("div",{staticClass:"form-group row striped-col"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"example-email1"}},[t._v("Email")])]),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("input",{staticClass:"form-control",attrs:{type:"email",id:"example-email1",name:"example-email",placeholder:"Email"}})])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"example-password1"}},[t._v("Password")])]),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("input",{staticClass:"form-control",attrs:{type:"password",id:"example-password1",name:"example-password",placeholder:"Password"}})])]),t._v(" "),a("div",{staticClass:"form-group row striped-col"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"example-disabled1"}},[t._v("Disabled")])]),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("input",{staticClass:"form-control",attrs:{type:"text",id:"example-disabled1",name:"example-disabled",placeholder:"Disabled",disabled:""}})])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"example-textarea-input2"}},[t._v("Textarea")])]),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("textarea",{staticClass:"form-control resize_vertical",attrs:{id:"example-textarea-input2",name:"example-textarea-input",rows:"7",placeholder:"Description...."}})])]),t._v(" "),a("div",{staticClass:"form-group row striped-col"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"example-select1"}},[t._v("Select")])]),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("select",{staticClass:"form-control",attrs:{id:"example-select1",name:"example-select",size:"1"}},[a("option",{attrs:{value:"0"}},[t._v("\r\n                                                        Please select\r\n                                                    ")]),t._v(" "),a("option",{attrs:{value:"1"}},[t._v("Bootstrap")]),t._v(" "),a("option",{attrs:{value:"2"}},[t._v("CSS")]),t._v(" "),a("option",{attrs:{value:"3"}},[t._v("JavaScript")]),t._v(" "),a("option",{attrs:{value:"4"}},[t._v("HTML")])])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"example-multiple-select2"}},[t._v("Multiple")])]),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("select",{staticClass:"form-control",attrs:{id:"example-multiple-select2",name:"example-multiple-select",size:"5",multiple:""}},[a("option",{attrs:{value:"1"}},[t._v("Option #1")]),t._v(" "),a("option",{attrs:{value:"2"}},[t._v("Option #2")]),t._v(" "),a("option",{attrs:{value:"3"}},[t._v("Option #3")]),t._v(" "),a("option",{attrs:{value:"4"}},[t._v("Option #4")]),t._v(" "),a("option",{attrs:{value:"5"}},[t._v("Option #5")]),t._v(" "),a("option",{attrs:{value:"6"}},[t._v("Option #6")]),t._v(" "),a("option",{attrs:{value:"7"}},[t._v("Option #7")]),t._v(" "),a("option",{attrs:{value:"8"}},[t._v("Option #8")]),t._v(" "),a("option",{attrs:{value:"9"}},[t._v("Option #9")]),t._v(" "),a("option",{attrs:{value:"10"}},[t._v("Option #10")])])])]),t._v(" "),a("div",{staticClass:"form-group row  striped-col"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label"},[t._v("Radio\r\n                                                    Buttons")])]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("b-form-radio-group",{attrs:{stacked:"",options:t.example_radio}})],1)]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label"},[t._v("\r\n                                                    Inline Radio Buttons\r\n                                                ")])]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("b-form-radio",{attrs:{name:"example-inline-radio",checked:"false"}},[t._v("HTML")]),t._v(" "),a("b-form-radio",{attrs:{name:"example-inline-radio",checked:"false"}},[t._v("CSS")]),t._v(" "),a("b-form-radio",{attrs:{name:"example-inline-radio",checked:"false"}},[t._v("JavaScript")])],1)]),t._v(" "),a("div",{staticClass:"form-group row striped-col"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label"},[t._v("Checkboxes")])]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("b-form-checkbox-group",{attrs:{stacked:"",options:t.example_check}})],1)]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label"},[t._v("\r\n                                                    Inline Checkboxes\r\n                                                ")])]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("div",{staticClass:"row"},[a("div",{staticClass:"col-sm-4"},[a("b-form-checkbox",[t._v("HTML")])],1),t._v(" "),a("div",{staticClass:"col-sm-4"},[a("b-form-checkbox",[t._v("CSS")])],1),t._v(" "),a("div",{staticClass:"col-sm-4"},[a("b-form-checkbox",[t._v("JavaScript")])],1)])])]),t._v(" "),a("div",{staticClass:"form-group row striped-col"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"example-file-input1"}},[t._v("File")])]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("input",{attrs:{type:"file",id:"example-file-input1",name:"example-file-input"}})])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"example-file-multiple-input1"}},[t._v("\r\n                                                    Multiple File\r\n                                                ")])]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("input",{attrs:{type:"file",id:"example-file-multiple-input1",name:"example-file-multiple-input",multiple:""}})])]),t._v(" "),a("div",{staticClass:"form-group row form-actions"},[a("div",{staticClass:"col-sm-9 col-sm-offset-3 ml-auto"},[a("button",{staticClass:"btn btn-effect-ripple  btn-primary   ",attrs:{type:"button"}},[t._v("\r\n                                                    Submit\r\n                                                ")]),t._v(" "),a("button",{staticClass:"btn btn-effect-ripple  btn-secondary reset_btn2",attrs:{type:"reset"}},[t._v("\r\n                                                    Reset\r\n                                                ")])])])])]),t._v(" "),a("card",{staticClass:"striped_full",attrs:{title:"<i class='fa fa-fw ti-move'></i> Form Seperated Row Striped"}},[a("form",{staticClass:"form-bordered-row",attrs:{method:"post",enctype:"multipart/form-data"}},[a("div",{staticClass:"form-group row striped-col"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label"},[t._v("Static")])]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("p",{staticClass:"form-control-plaintext"},[t._v("\r\n                                                    Static text\r\n                                                ")])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"example-text-input2"}},[t._v("Text")])]),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("input",{staticClass:"form-control",attrs:{type:"text",id:"example-text-input2",name:"example-text-input",placeholder:"Text"}}),t._v(" "),a("span",{staticClass:"help-block"},[t._v("\r\n                                                                This is a help text\r\n                                                            ")])])]),t._v(" "),a("div",{staticClass:"form-group row striped-col"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"example-email2"}},[t._v("Email")])]),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("input",{staticClass:"form-control",attrs:{type:"email",id:"example-email2",name:"example-email",placeholder:"Email"}})])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"example-password2"}},[t._v("Password")])]),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("input",{staticClass:"form-control",attrs:{type:"password",id:"example-password2",name:"example-password",placeholder:"Password"}})])]),t._v(" "),a("div",{staticClass:"form-group row striped-col"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"example-disabled2"}},[t._v("Disabled")])]),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("input",{staticClass:"form-control",attrs:{type:"text",id:"example-disabled2",name:"example-disabled",placeholder:"Disabled",disabled:""}})])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"example-textarea-input1"}},[t._v("Textarea")])]),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("textarea",{staticClass:"form-control resize_vertical",attrs:{id:"example-textarea-input1",name:"example-textarea-input",rows:"7",placeholder:"Description.."}})])]),t._v(" "),a("div",{staticClass:"form-group row striped-col"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"example-select2"}},[t._v("Select")])]),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("select",{staticClass:"form-control",attrs:{id:"example-select2",name:"example-select",size:"1"}},[a("option",{attrs:{value:"0"}},[t._v("\r\n                                                        Please select\r\n                                                    ")]),t._v(" "),a("option",{attrs:{value:"1"}},[t._v("Bootstrap")]),t._v(" "),a("option",{attrs:{value:"2"}},[t._v("CSS")]),t._v(" "),a("option",{attrs:{value:"3"}},[t._v("JavaScript")]),t._v(" "),a("option",{attrs:{value:"4"}},[t._v("HTML")])])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"example-multiple-select1"}},[t._v("Multiple")])]),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("select",{staticClass:"form-control",attrs:{id:"example-multiple-select1",name:"example-multiple-select",size:"5",multiple:""}},[a("option",{attrs:{value:"1"}},[t._v("Option #1")]),t._v(" "),a("option",{attrs:{value:"2"}},[t._v("Option #2")]),t._v(" "),a("option",{attrs:{value:"3"}},[t._v("Option #3")]),t._v(" "),a("option",{attrs:{value:"4"}},[t._v("Option #4")]),t._v(" "),a("option",{attrs:{value:"5"}},[t._v("Option #5")]),t._v(" "),a("option",{attrs:{value:"6"}},[t._v("Option #6")]),t._v(" "),a("option",{attrs:{value:"7"}},[t._v("Option #7")]),t._v(" "),a("option",{attrs:{value:"8"}},[t._v("Option #8")]),t._v(" "),a("option",{attrs:{value:"9"}},[t._v("Option #9")]),t._v(" "),a("option",{attrs:{value:"10"}},[t._v("Option #10")])])])]),t._v(" "),a("div",{staticClass:"form-group row striped-col"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label"},[t._v("Radio\r\n                                                    Buttons")])]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("b-form-radio-group",{attrs:{stacked:"",options:t.example_radio_seperated}})],1)]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label"},[t._v("\r\n                                                    Inline Radio Buttons\r\n                                                ")])]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("div",{staticClass:"row"},[a("div",{staticClass:"col-sm-4"},[a("b-form-radio",{attrs:{checked:"false",name:"example-inline-radio"}},[t._v("HTML")])],1),t._v(" "),a("div",{staticClass:"col-sm-4"},[a("b-form-radio",{attrs:{checked:"false",name:"example-inline-radio"}},[t._v("CSS")])],1),t._v(" "),a("div",{staticClass:"col-sm-4"},[a("b-form-radio",{attrs:{checked:"false",name:"example-inline-radio"}},[t._v("JavaScript")])],1)])])]),t._v(" "),a("div",{staticClass:"form-group row striped-col"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label"},[t._v("Checkboxes")])]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("b-form-checkbox-group",{attrs:{stacked:"",options:t.example_check_seperated}})],1)]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label"},[t._v("\r\n                                                    Inline Checkboxes\r\n                                                ")])]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("div",{staticClass:"row"},[a("div",{staticClass:"col-sm-4"},[a("b-form-checkbox",[t._v("HTML")])],1),t._v(" "),a("div",{staticClass:"col-sm-4"},[a("b-form-checkbox",[t._v("CSS")])],1),t._v(" "),a("div",{staticClass:"col-sm-4"},[a("b-form-checkbox",[t._v("JavaScript")])],1)])])]),t._v(" "),a("div",{staticClass:"form-group row striped-col "},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"example-file-input2"}},[t._v("File")])]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("input",{attrs:{type:"file",id:"example-file-input2",name:"example-file-input"}})])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"example-file-multiple-input2"}},[t._v("\r\n                                                    Multiple File\r\n                                                ")])]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("input",{attrs:{type:"file",id:"example-file-multiple-input2",name:"example-file-multiple-input",multiple:""}})])]),t._v(" "),a("div",{staticClass:"form-group form-actions"},[a("div",{staticClass:"col-sm-9 col-sm-offset-3 ml-auto"},[a("button",{staticClass:"btn btn-effect-ripple  btn-primary",attrs:{type:"button"}},[t._v("\r\n                                                    Submit\r\n                                                ")]),t._v(" "),a("button",{staticClass:"btn btn-effect-ripple btn-secondary  reset_btn3",attrs:{type:"reset"}},[t._v("\r\n                                                    Reset\r\n                                                ")])])])])]),t._v(" "),a("card",{staticClass:"striped_full border",attrs:{title:" <i class='fa fa-fw ti-move'></i> Form Bordered"}},[a("form",{staticClass:"form-bordered",attrs:{method:"post",enctype:"multipart/form-data"}},[a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3  txt_media border-left-none"},[a("label",{staticClass:"form-control-label float-md-right"},[t._v("Static")])]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("p",{staticClass:"form-control-plaintext"},[t._v("\r\n                                                    Static text\r\n                                                ")])])]),t._v(" "),a("div",{staticClass:"row form-group"},[a("label",{staticClass:"col-sm-3 control-label txt_media",attrs:{for:"example-text-input3"}},[t._v("Text")]),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("input",{staticClass:"form-control",attrs:{type:"text",id:"example-text-input3",name:"example-text-input",placeholder:"Text"}}),t._v(" "),a("span",{staticClass:"help-block"},[t._v("\r\n                                                                This is a help text\r\n                                                            ")])])]),t._v(" "),a("div",{staticClass:"row form-group"},[a("label",{staticClass:"col-sm-3 control-label txt_media",attrs:{for:"example-email3"}},[t._v("Email")]),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("input",{staticClass:"form-control",attrs:{type:"email",id:"example-email3",name:"example-email",placeholder:"Email"}})])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("label",{staticClass:"col-sm-3 control-label txt_media",attrs:{for:"example-password3"}},[t._v("Password")]),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("input",{staticClass:"form-control",attrs:{type:"password",id:"example-password3",name:"example-password",placeholder:"Password"}})])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("label",{staticClass:"col-sm-3 control-label txt_media",attrs:{for:"example-disabled3"}},[t._v("Disabled")]),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("input",{staticClass:"form-control",attrs:{type:"text",id:"example-disabled3",name:"example-disabled",placeholder:"Disabled",disabled:""}})])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("label",{staticClass:"col-sm-3 control-label txt_media",attrs:{for:"example-textarea-input3"}},[t._v("Textarea")]),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("textarea",{staticClass:"form-control resize_vertical",attrs:{id:"example-textarea-input3",name:"example-textarea-input",rows:"7",placeholder:"Description.."}})])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("label",{staticClass:"col-sm-3 control-label txt_media",attrs:{for:"example-select3"}},[t._v("Select")]),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("select",{staticClass:"form-control",attrs:{id:"example-select3",name:"example-select",size:"1"}},[a("option",{attrs:{value:"0"}},[t._v("\r\n                                                        Please select\r\n                                                    ")]),t._v(" "),a("option",{attrs:{value:"1"}},[t._v("Bootstrap")]),t._v(" "),a("option",{attrs:{value:"2"}},[t._v("CSS")]),t._v(" "),a("option",{attrs:{value:"3"}},[t._v("JavaScript")]),t._v(" "),a("option",{attrs:{value:"4"}},[t._v("HTML")])])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("label",{staticClass:"col-sm-3 control-label txt_media",attrs:{for:"example-multiple-select3"}},[t._v("Multiple")]),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("select",{staticClass:"form-control",attrs:{id:"example-multiple-select3",name:"example-multiple-select",size:"5",multiple:""}},[a("option",{attrs:{value:"1"}},[t._v("Option #1")]),t._v(" "),a("option",{attrs:{value:"2"}},[t._v("Option #2")]),t._v(" "),a("option",{attrs:{value:"3"}},[t._v("Option #3")]),t._v(" "),a("option",{attrs:{value:"4"}},[t._v("Option #4")]),t._v(" "),a("option",{attrs:{value:"5"}},[t._v("Option #5")]),t._v(" "),a("option",{attrs:{value:"6"}},[t._v("Option #6")]),t._v(" "),a("option",{attrs:{value:"7"}},[t._v("Option #7")]),t._v(" "),a("option",{attrs:{value:"8"}},[t._v("Option #8")]),t._v(" "),a("option",{attrs:{value:"9"}},[t._v("Option #9")]),t._v(" "),a("option",{attrs:{value:"10"}},[t._v("Option #10")])])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("label",{staticClass:"col-sm-3 control-label txt_media"},[t._v("Radio\r\n                                                Buttons")]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("b-form-radio-group",{attrs:{stacked:"",options:t.example_radio_bordered}})],1)]),t._v(" "),a("div",{staticClass:"form-group row"},[a("label",{staticClass:"col-sm-3 control-label txt_media"},[t._v("\r\n                                                Inline Radio Buttons\r\n                                            ")]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("div",{staticClass:"row"},[a("div",{staticClass:"col-sm-4"},[a("b-form-radio",{attrs:{checked:"false",name:"exaple_radio_bordered_inline"}},[t._v("HTML")])],1),t._v(" "),a("div",{staticClass:"col-sm-4"},[a("b-form-radio",{attrs:{checked:"false",name:"exaple_radio_bordered_inline"}},[t._v("CSS")])],1),t._v(" "),a("div",{staticClass:"col-sm-4"},[a("b-form-radio",{attrs:{checked:"false",name:"exaple_radio_bordered_inline"}},[t._v("JavaScript")])],1)])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("label",{staticClass:"col-sm-3 control-label txt_media"},[t._v("Checkboxes")]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("b-form-checkbox-group",{attrs:{stacked:"",options:t.example_check_bordered}})],1)]),t._v(" "),a("div",{staticClass:"form-group row"},[a("label",{staticClass:"col-sm-3 control-label txt_media"},[t._v("\r\n                                                Inline Checkboxes\r\n                                            ")]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("div",{staticClass:"row"},[a("div",{staticClass:"col-sm-4"},[a("b-form-checkbox",[t._v("HTML")])],1),t._v(" "),a("div",{staticClass:"col-sm-4"},[a("b-form-checkbox",[t._v("CSS")])],1),t._v(" "),a("div",{staticClass:"col-sm-4"},[a("b-form-checkbox",[t._v("JavaScript")])],1)])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("label",{staticClass:"col-sm-3 control-label txt_media",attrs:{for:"example-file-input3"}},[t._v("File")]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("input",{attrs:{type:"file",id:"example-file-input3",name:"example-file-input3"}})])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("label",{staticClass:"col-sm-3 control-label txt_media",attrs:{for:"example-file-multiple-input3"}},[t._v("\r\n                                                Multiple File\r\n                                            ")]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("input",{attrs:{type:"file",id:"example-file-multiple-input3",name:"example-file-multiple-input3",multiple:""}})])]),a("div",{staticClass:"form-group form-actions"},[a("div",{staticClass:"col-sm-9 col-sm-offset-3 ml-auto"},[a("button",{staticClass:"btn btn-effect-ripple  btn-primary",attrs:{type:"button"}},[t._v("\r\n                                                Submit\r\n                                            ")]),t._v(" "),a("button",{staticClass:"btn btn-effect-ripple btn-secondary  reset_btn4",attrs:{type:"reset"}},[t._v("\r\n                                                Reset\r\n                                            ")])])])])])],1)])]),t._v(" "),a("b-tab",{attrs:{title:"More Examples"}},[a("div",{staticClass:"row"},[a("div",{staticClass:"col-sm-6"},[a("card",{attrs:{title:"<i class='fa fa-fw ti-heart'></i> Vertical Form Layout"}},[a("form",[a("div",{staticClass:"form-group"},[a("label",{attrs:{for:"inputEmail7"}},[t._v("Email")]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"email",id:"inputEmail7",placeholder:"Email"}})]),t._v(" "),a("div",{staticClass:"form-group"},[a("label",{attrs:{for:"inputPassword1"}},[t._v("Password")]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"password",id:"inputPassword1",placeholder:"Password"}})]),t._v(" "),a("div",{staticClass:"checkbox"},[a("label",[a("b-form-checkbox",{staticClass:"remember"},[t._v("Remember me")])],1)]),t._v(" "),a("div",[a("button",{staticClass:"btn btn-primary  m-t-10",attrs:{type:"button"}},[t._v("Login\r\n                                            ")])])])]),t._v(" "),a("card",{attrs:{title:"<i class='fa fa-fw ti-pencil'></i> Inline Form Layout"}},[a("form",{staticClass:"form-inline",attrs:{role:"form"}},[a("div",{staticClass:"form-group"},[a("label",{staticClass:"sr-only",attrs:{for:"inputEmail8"}},[t._v("Email")]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"email",id:"inputEmail8",placeholder:"Email"}})]),t._v("\r\n                                          \r\n                                        "),a("div",{staticClass:"form-group ml-1"},[a("label",{staticClass:"sr-only",attrs:{for:"inputPassword2"}},[t._v("Password")]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"password",id:"inputPassword2",placeholder:"Password"}})]),t._v(" "),a("label",[a("b-form-checkbox",{staticClass:"remember ml-2"},[t._v("Remember me")])],1),t._v(" "),a("button",{staticClass:"btn btn-primary  mr-1",attrs:{type:"button"}},[t._v("Login")])])]),t._v(" "),a("card",{attrs:{title:" <i class='fa fa-fw ti-pencil'></i> Static Form Control"}},[a("form",[a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"inputEmail9"}},[t._v("Email")])]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("p",{staticClass:"form-text"},[t._v("\r\n                                                    harrypotter@mail.com\r\n                                                ")])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("label",{staticClass:"control-label col-sm-3 float-md-right txt_media",attrs:{for:"static_inputPassword3"}},[t._v("Password")]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("input",{staticClass:"form-control",attrs:{type:"password",id:"static_inputPassword3",placeholder:"Password"}})])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-offset-3 col-sm-9 ml-auto txt_media"},[a("label",[a("b-form-checkbox",{staticClass:"remember"},[t._v("Remember me")])],1)])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-offset-3 col-sm-9 ml-auto txt_media"},[a("button",{staticClass:"btn  btn-primary",attrs:{type:"button"}},[t._v("Login\r\n                                                ")])])])])]),t._v(" "),a("card",{attrs:{title:"<i class='fa fa-fw ti-pencil'></i> Button Dropdowns"}},[a("form",{staticClass:"d-inline"},[a("div",{staticClass:"row"},[a("div",{staticClass:"col-12 m-t-10"},[a("div",{staticClass:"input-group mb-3"},[a("div",{staticClass:"input-group-prepend fisrt_dropdwn"},[a("b-dropdown",{staticClass:"text-white",attrs:{text:"Action",variant:"info"}},[a("b-dropdown-item-button",[t._v("action")]),t._v(" "),a("b-dropdown-item-button",[t._v("another action")]),t._v(" "),a("b-dropdown-item-button",[t._v("something else here")]),t._v(" "),a("b-dropdown-divider"),t._v(" "),a("b-dropdown-item-button",[a("a",{attrs:{href:"#"}},[t._v("seperated link here")])])],1)],1),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"text","aria-label":"Text input with checkbox"}})])]),t._v(" "),a("div",{staticClass:"col-12 mt-2"},[a("div",{staticClass:"input-group"},[a("div",{staticClass:"input-group-prepend fisrt_dropdwn"},[a("b-dropdown",{staticClass:"text-white",attrs:{text:"Action",variant:"warning"}},[a("b-dropdown-item-button",[t._v("action")]),t._v(" "),a("b-dropdown-item-button",[t._v("another action")]),t._v(" "),a("b-dropdown-item-button",[t._v("something else here")]),t._v(" "),a("b-dropdown-divider"),t._v(" "),a("b-dropdown-item-button",[a("a",{attrs:{href:"#"}},[t._v("seperated link here")])])],1)],1),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"text","aria-label":"Text input with checkbox"}})]),t._v(" "),a("br")])])])]),t._v(" "),a("card",{attrs:{title:"<i class='fa fa-fw ti-pencil'></i> Disabled Inputs"}},[a("form",[a("input",{staticClass:"form-control",attrs:{type:"text",placeholder:"Disabled input",disabled:""}})]),t._v(" "),a("hr"),t._v(" "),a("form",{staticClass:"form-horizontal"},[a("fieldset",[a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"inputEmail10"}},[t._v("Email")])]),t._v(" "),a("div",{staticClass:"col-sm-9 col-lg-8"},[a("input",{staticClass:"form-control",attrs:{type:"email",id:"inputEmail10",placeholder:"Email",disabled:""}})])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"inputPassword4"}},[t._v("Password")])]),t._v(" "),a("div",{staticClass:"col-sm-9 col-lg-8"},[a("input",{staticClass:"form-control",attrs:{type:"password",id:"inputPassword4",placeholder:"Password",disabled:""}})])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-offset-3 col-sm-9 col-lg-8 ml-auto txt_media"},[a("div",{staticClass:"checkbox"},[a("label",[a("b-form-checkbox",{staticClass:"remember",attrs:{disabled:""}},[t._v("Remember me")])],1)])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-offset-3 col-sm-9 ml-auto txt_media"},[a("button",{staticClass:"btn  btn-primary",attrs:{type:"submit",disabled:""}},[t._v("Login\r\n                                                    ")])])])])])]),t._v(" "),a("card",{attrs:{title:"<i class='fa fa-fw ti-pencil'></i> Supported Form Controls in Twitter Bootstrap"}},[a("form",{attrs:{action:"#"}},[a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"more_inputEmail4"}},[t._v("Email")])]),t._v(" "),a("div",{staticClass:"col-sm-9 col-12 col-lg-8"},[a("input",{staticClass:"form-control",attrs:{type:"email",id:"more_inputEmail4",placeholder:"Email"}})])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"more_inputPassword5"}},[t._v("Password")])]),t._v(" "),a("div",{staticClass:"col-sm-9 col-12 col-lg-8"},[a("input",{staticClass:"form-control",attrs:{type:"password",id:"more_inputPassword5",placeholder:"Password"}})])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"confirmPassword2"}},[t._v("Confirm Password")])]),t._v(" "),a("div",{staticClass:"col-sm-9 col-12 col-lg-8"},[a("input",{staticClass:"form-control",attrs:{type:"password",id:"confirmPassword2",placeholder:"Confirm Password"}})])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"more_firstName"}},[t._v("\r\n                                                    First Name\r\n                                                ")])]),t._v(" "),a("div",{staticClass:"col-sm-9 col-12 col-lg-8"},[a("input",{staticClass:"form-control",attrs:{type:"text",id:"more_firstName",placeholder:"First Name"}})])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"more_lastName"}},[t._v("Last\r\n                                                    Name\r\n                                                ")])]),t._v(" "),a("div",{staticClass:"col-sm-9 col-12 col-lg-8"},[a("input",{staticClass:"form-control",attrs:{type:"text",id:"more_lastName",placeholder:"Last Name"}})])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"mobile_phoneNumber"}},[t._v("Phone")])]),t._v(" "),a("div",{staticClass:"col-sm-9 col-12 col-lg-8"},[a("input",{staticClass:"form-control",attrs:{type:"tel",id:"mobile_phoneNumber",placeholder:"Phone Number"}})])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"more_mobile"}},[t._v("\r\n                                                    Date of Birth\r\n                                                ")])]),t._v(" "),a("div",{staticClass:"col-sm-3 col-lg-2 col-12 m-t-10"},[a("select",{staticClass:"form-control",attrs:{id:"more_mobile"}},[a("option",[t._v("Date")]),t._v(" "),a("option",[t._v("1")]),t._v(" "),a("option",[t._v("2")]),t._v(" "),a("option",[t._v("3")]),t._v(" "),a("option",[t._v("4")]),t._v(" "),a("option",[t._v("5")]),t._v(" "),a("option",[t._v("6")]),t._v(" "),a("option",[t._v("7")]),t._v(" "),a("option",[t._v("8")]),t._v(" "),a("option",[t._v("9")]),t._v(" "),a("option",[t._v("10")]),t._v(" "),a("option",[t._v("11")]),t._v(" "),a("option",[t._v("12")]),t._v(" "),a("option",[t._v("13")]),t._v(" "),a("option",[t._v("14")]),t._v(" "),a("option",[t._v("15")]),t._v(" "),a("option",[t._v("16")]),t._v(" "),a("option",[t._v("17")]),t._v(" "),a("option",[t._v("18")]),t._v(" "),a("option",[t._v("19")]),t._v(" "),a("option",[t._v("20")]),t._v(" "),a("option",[t._v("21")]),t._v(" "),a("option",[t._v("22")]),t._v(" "),a("option",[t._v("23")]),t._v(" "),a("option",[t._v("24")]),t._v(" "),a("option",[t._v("25")]),t._v(" "),a("option",[t._v("26")]),t._v(" "),a("option",[t._v("27")]),t._v(" "),a("option",[t._v("28")]),t._v(" "),a("option",[t._v("29")]),t._v(" "),a("option",[t._v("30")]),t._v(" "),a("option",[t._v("31")])])]),t._v(" "),a("div",{staticClass:"col-sm-3 col-lg-3 col-12 m-t-10"},[a("select",{staticClass:"form-control"},[a("option",[t._v("Month")]),t._v(" "),a("option",[t._v("1")]),t._v(" "),a("option",[t._v("2")]),t._v(" "),a("option",[t._v("3")]),t._v(" "),a("option",[t._v("4")]),t._v(" "),a("option",[t._v("5")]),t._v(" "),a("option",[t._v("6")]),t._v(" "),a("option",[t._v("7")]),t._v(" "),a("option",[t._v("8")]),t._v(" "),a("option",[t._v("9")]),t._v(" "),a("option",[t._v("10")]),t._v(" "),a("option",[t._v("11")]),t._v(" "),a("option",[t._v("12")])])]),t._v(" "),a("div",{staticClass:"col-sm-3 col-lg-3 col-12 m-t-10"},[a("select",{staticClass:"form-control"},[a("option",[t._v("Year")]),t._v(" "),a("option",[t._v("1991")]),t._v(" "),a("option",[t._v("1992")]),t._v(" "),a("option",[t._v("1993")]),t._v(" "),a("option",[t._v("1994")]),t._v(" "),a("option",[t._v("1995")]),t._v(" "),a("option",[t._v("1996")]),t._v(" "),a("option",[t._v("1997")]),t._v(" "),a("option",[t._v("1998")]),t._v(" "),a("option",[t._v("1999")]),t._v(" "),a("option",[t._v("2000")]),t._v(" "),a("option",[t._v("2001")]),t._v(" "),a("option",[t._v("2002")]),t._v(" "),a("option",[t._v("2003")]),t._v(" "),a("option",[t._v("2004")]),t._v(" "),a("option",[t._v("2005")]),t._v(" "),a("option",[t._v("2006")]),t._v(" "),a("option",[t._v("2007")]),t._v(" "),a("option",[t._v("2008")]),t._v(" "),a("option",[t._v("2009")]),t._v(" "),a("option",[t._v("2000")]),t._v(" "),a("option",[t._v("2011")]),t._v(" "),a("option",[t._v("2012")]),t._v(" "),a("option",[t._v("2013")]),t._v(" "),a("option",[t._v("2014")]),t._v(" "),a("option",[t._v("2015")]),t._v(" "),a("option",[t._v("2016")]),t._v(" "),a("option",[t._v("2017")]),t._v(" "),a("option",[t._v("2018")])])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 float-md-right txt_media"},[a("label",{staticClass:"control-label",attrs:{for:"more_postalAddress"}},[t._v("Address")])]),t._v(" "),a("div",{staticClass:"col-sm-9 col-lg-8 col-12"},[a("textarea",{staticClass:"form-control resize_vertical",attrs:{rows:"3",id:"more_postalAddress",placeholder:"Postal Address"}})])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"ZipCode"}},[t._v("Zip\r\n                                                    Code\r\n                                                ")])]),t._v(" "),a("div",{staticClass:"col-sm-9 col-lg-8 col-12"},[a("input",{staticClass:"form-control",attrs:{type:"text",id:"ZipCode",placeholder:"Zip Code"}})])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 float-md-right txt_media"},[a("label",{staticClass:"form-control-label"},[t._v("Gender")])]),t._v(" "),a("div",{staticClass:"col-sm-9 col-12 col-lg-8"},[a("div",{staticClass:"row"},[a("div",{staticClass:"col-sm-4"},[a("b-form-radio",{attrs:{checked:"false",name:"radio_twitter"}},[t._v("Male")])],1),t._v(" "),a("div",{staticClass:"col-sm-4"},[a("b-form-radio",{attrs:{checked:"false",name:"radio_twitter"}},[t._v("Female")])],1),t._v(" "),a("div",{staticClass:"col-sm-4 col-lg-6"},[a("b-form-radio",{attrs:{checked:"false",name:"radio_twitter"}},[t._v("Others")])],1)])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-offset-3 col-lg-offset-4 col-8 ml-auto txt_media"},[a("label",[a("b-form-checkbox",[t._v("  Send me\r\n                                                        latest news and updates.")])],1)])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-offset-3 col-8 ml-auto txt_media"},[a("label",[a("b-form-checkbox",[t._v(" I agree\r\n                                                        to\r\n                                                        the\r\n                                                        "),a("a",{attrs:{href:"#"}},[t._v("\r\n                                                            Terms and Conditions\r\n                                                        ")])])],1)])]),t._v(" "),a("br"),t._v(" "),a("div",{staticClass:"form-group"},[a("div",{staticClass:"col-sm-offset-3= col-9 ml-auto txt_media"},[a("input",{staticClass:"btn  btn-primary ",attrs:{type:"button",value:"Submit "}}),t._v(" "),a("button",{staticClass:"btn  btn-secondary mt-1 mt-sm-0",attrs:{type:"reset"}},[t._v("Reset\r\n                                                ")])])])])])],1),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("card",{attrs:{title:"<i class='fa fa-fw ti-check-box'></i> Horizontal Form Layout"}},[a("form",[a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 float-md-right txt_media"},[a("label",{staticClass:"control-label ",attrs:{for:"horizontal_inputEmail"}},[t._v("Email")])]),t._v(" "),a("div",{staticClass:"col-sm-9 col-lg-8"},[a("input",{staticClass:"form-control",attrs:{type:"email",id:"horizontal_inputEmail",placeholder:"Email"}})])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 float-md-right txt_media"},[a("label",{staticClass:"control-label hidden-xs",attrs:{for:"horizontal_inputPassword"}},[t._v("Password")])]),t._v(" "),a("div",{staticClass:"col-sm-9 col-lg-8"},[a("input",{staticClass:"form-control",attrs:{type:"password",id:"horizontal_inputPassword",placeholder:"Password"}})])]),t._v(" "),a("div",{staticClass:"form-group"},[a("div",{staticClass:"col-sm-offset-3 col-sm-9 col-lg-8  ml-auto txt_media"},[a("div",{staticClass:"checkbox"},[a("label",[a("b-form-checkbox",{staticClass:"remember"},[t._v("Remember me")])],1)])])]),t._v(" "),a("div",{staticClass:"form-group"},[a("div",{staticClass:"col-sm-offset-3 col-sm-9 ml-auto txt_media"},[a("button",{staticClass:"btn  btn-primary",attrs:{type:"button"}},[t._v("Login\r\n                                                ")])])])])]),t._v(" "),a("card",{attrs:{title:"<i class='fa fa-fw ti-move'></i> General Controls"}},[a("form",{attrs:{method:"post",enctype:"multipart/form-data"}},[a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 float-md-right txt_media"},[a("label",{staticClass:"form-control-label"},[t._v("Static")])]),t._v(" "),a("div",{staticClass:"col-sm-9 col-lg-8"},[a("p",{staticClass:"form-text"},[t._v("\r\n                                                    Static text\r\n                                                ")])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"example-text-input"}},[t._v("Text")])]),t._v(" "),a("div",{staticClass:"col-sm-9 col-lg-8"},[a("input",{staticClass:"form-control",attrs:{type:"text",id:"example-text-input",name:"example-text-input",placeholder:"Text"}}),t._v(" "),a("span",{staticClass:"help-block"},[t._v("\r\n                                                                        This is a help text\r\n                                                                    ")])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"example-email"}},[t._v("Email")])]),t._v(" "),a("div",{staticClass:"col-sm-9 col-lg-8"},[a("input",{staticClass:"form-control",attrs:{type:"email",id:"example-email",name:"example-email",placeholder:"Email"}})])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"example-password"}},[t._v("Password")])]),t._v(" "),a("div",{staticClass:"col-sm-9 col-lg-8"},[a("input",{staticClass:"form-control",attrs:{type:"password",id:"example-password",name:"example-password",placeholder:"Password"}})])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"example-disabled"}},[t._v("Disabled")])]),t._v(" "),a("div",{staticClass:"col-sm-9 col-lg-8"},[a("input",{staticClass:"form-control",attrs:{type:"text",id:"example-disabled",name:"example-disabled",placeholder:"Disabled",disabled:""}})])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"example-textarea-input"}},[t._v("Textarea")])]),t._v(" "),a("div",{staticClass:"col-sm-9 col-lg-8"},[a("textarea",{staticClass:"form-control resize_vertical",attrs:{id:"example-textarea-input",name:"example-textarea-input",rows:"7",placeholder:"Description.."}})])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"example-select"}},[t._v("Select")])]),t._v(" "),a("div",{staticClass:"col-sm-9 col-lg-8"},[a("select",{staticClass:"form-control",attrs:{id:"example-select",name:"example-select",size:"1"}},[a("option",{attrs:{value:"0"}},[t._v("\r\n                                                        Please select\r\n                                                    ")]),t._v(" "),a("option",{attrs:{value:"1"}},[t._v("Bootstrap")]),t._v(" "),a("option",{attrs:{value:"2"}},[t._v("CSS")]),t._v(" "),a("option",{attrs:{value:"3"}},[t._v("JavaScript")]),t._v(" "),a("option",{attrs:{value:"4"}},[t._v("HTML")])])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"example-multiple-select"}},[t._v("Multiple")])]),t._v(" "),a("div",{staticClass:"col-sm-9 col-lg-8"},[a("select",{staticClass:"form-control",attrs:{id:"example-multiple-select",name:"example-multiple-select",size:"5",multiple:""}},[a("option",{attrs:{value:"1"}},[t._v("Option #1")]),t._v(" "),a("option",{attrs:{value:"2"}},[t._v("Option #2")]),t._v(" "),a("option",{attrs:{value:"3"}},[t._v("Option #3")]),t._v(" "),a("option",{attrs:{value:"4"}},[t._v("Option #4")]),t._v(" "),a("option",{attrs:{value:"5"}},[t._v("Option #5")]),t._v(" "),a("option",{attrs:{value:"6"}},[t._v("Option #6")]),t._v(" "),a("option",{attrs:{value:"7"}},[t._v("Option #7")]),t._v(" "),a("option",{attrs:{value:"8"}},[t._v("Option #8")]),t._v(" "),a("option",{attrs:{value:"9"}},[t._v("Option #9")]),t._v(" "),a("option",{attrs:{value:"10"}},[t._v("Option #10")])])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 float-md-right txt_media"},[a("label",{staticClass:"form-control-label"},[t._v("Radio Buttons")])]),t._v(" "),a("div",{staticClass:"col-sm-9 col-lg-8"},[a("div",{staticClass:"m-l-10 m-t-6"},[a("b-form-radio",{attrs:{checked:"false",name:"radio_ganeral"}},[t._v("HTML")])],1),t._v(" "),a("div",{staticClass:"m-l-10"},[a("b-form-radio",{attrs:{checked:"false",name:"radio_ganeral"}},[t._v("HTML")])],1),t._v(" "),a("div",{staticClass:"m-l-10"},[a("b-form-radio",{attrs:{checked:"false",name:"radio_ganeral"}},[t._v("HTML")])],1)])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 float-md-right txt_media"},[a("label",{staticClass:"form-control-label"},[t._v("\r\n                                                    Inline Radio Buttons\r\n                                                ")])]),t._v(" "),a("div",{staticClass:"col-sm-9 col-lg-8"},[a("b-form-radio",{staticClass:"mr-0",attrs:{checked:"false",name:"radio_ganeral_inline"}},[t._v("HTML")]),t._v(" "),a("b-form-radio",{staticClass:"mr-0",attrs:{checked:"false",name:"radio_ganeral_inline"}},[t._v("CSS")]),t._v(" "),a("b-form-radio",{staticClass:"mr-0",attrs:{checked:"false",name:"radio_ganeral_inline"}},[t._v("JavaScript")])],1)]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 float-md-right txt_media"},[a("label",{staticClass:"form-control-label"},[t._v("Checkboxes")])]),t._v(" "),a("div",{staticClass:"col-sm-9 col-lg-8"},[a("div",{staticClass:"m-l-10 m-t-6"},[a("b-form-checkbox",[t._v("HTML")])],1),t._v(" "),a("div",{staticClass:"m-l-10"},[a("b-form-checkbox",[t._v("HTML")])],1),t._v(" "),a("div",{staticClass:"m-l-10"},[a("b-form-checkbox",[t._v("HTML")])],1)])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 float-md-right txt_media"},[a("label",{staticClass:"form-control-label"},[t._v("\r\n                                                    Inline Checkboxes\r\n                                                ")])]),t._v(" "),a("div",{staticClass:"col-sm-9 col-lg-8"},[a("b-form-checkbox",{staticClass:"mr-0 mr-sm-1"},[t._v("HTML")]),t._v(" "),a("b-form-checkbox",{staticClass:"mr-0 mr-sm-1"},[t._v("HTML")]),t._v(" "),a("b-form-checkbox",{staticClass:"mr-0 mr-sm-1"},[t._v("HTML")])],1)]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"example-file-input"}},[t._v("File")])]),t._v(" "),a("div",{staticClass:"col-sm-9 m-t-10 col-lg-8"},[a("input",{attrs:{type:"file",id:"example-file-input",name:"example-file-input"}})])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-3 col-lg-4 float-md-right txt_media"},[a("label",{staticClass:"form-control-label",attrs:{for:"example-file-multiple-input"}},[t._v("\r\n                                                    Multiple File\r\n                                                ")])]),t._v(" "),a("div",{staticClass:"col-sm-9 m-t-10 col-lg-8"},[a("input",{attrs:{type:"file",id:"example-file-multiple-input",name:"example-file-multiple-input",multiple:""}})])]),t._v(" "),a("div",{staticClass:"form-group form-actions"},[a("div",{staticClass:"col-sm-9 col-sm-offset-3 ml-auto"},[a("button",{staticClass:"btn btn-effect-ripple  btn-primary",attrs:{type:"button"}},[t._v("Submit\r\n                                                ")]),t._v(" "),a("button",{staticClass:"btn btn-effect-ripple btn-secondary reset_btn5",attrs:{type:"reset"}},[t._v("\r\n                                                    Reset\r\n                                                ")])])])])]),t._v(" "),a("card",{attrs:{title:"<i class='fa fa-fw ti-pencil'></i> Twitter Bootstrap Form Validation States"}},[a("form",[a("div",{staticClass:"form-group row has-success"},[a("label",{staticClass:"col-sm-3 control-label text-success",attrs:{for:"inputSuccess3"}},[t._v("Username")]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("input",{staticClass:"form-control is-valid",attrs:{type:"text",id:"inputSuccess3",placeholder:"Input with success"}}),t._v(" "),a("span",{staticClass:"form-text text-success"},[t._v("\r\n                                                                        Username is available\r\n                                                                    ")])])]),t._v(" "),a("div",{staticClass:"form-group row has-error"},[a("label",{staticClass:"col-sm-3 control-label text-danger",attrs:{for:"inputError3"}},[t._v("Email")]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("input",{staticClass:"form-control brdr_danger is-invalid",attrs:{type:"email",id:"inputError3",placeholder:"Input with error"}}),t._v(" "),a("span",{staticClass:"form-text text-danger"},[t._v("\r\n                                                                        Please enter a valid email address\r\n                                                                    ")])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("div",{staticClass:"col-sm-offset-3 col-sm-9 ml-auto"},[a("button",{staticClass:"btn  btn-primary",attrs:{type:"button"}},[t._v("Login\r\n                                                ")])])])]),t._v(" "),a("form",[a("div",{staticClass:"form-group row has-success has-feedback"},[a("label",{staticClass:"col-sm-3 control-label text-success",attrs:{for:"inputSuccess"}},[t._v("Username")]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("input",{staticClass:"form-control is-valid ",attrs:{type:"text",id:"inputSuccess",placeholder:"Input with success"}}),t._v(" "),a("span",{staticClass:"form-text text-success"},[t._v("\r\n                                                                        Username is available\r\n                                                                    ")])])]),t._v(" "),a("div",{staticClass:"form-group row has-error has-feedback"},[a("label",{staticClass:"col-sm-3 control-label text-danger",attrs:{for:"inputError"}},[t._v("Email")]),t._v(" "),a("div",{staticClass:"col-sm-9"},[a("input",{staticClass:"form-control is-invalid brdr_danger",attrs:{type:"email",id:"inputError",placeholder:"Input with error"}}),t._v(" "),a("span",{staticClass:"form-text text-danger"},[t._v("\r\n                                                                        Please enter a valid email address\r\n                                                                    ")])])]),t._v(" "),a("div",{staticClass:"form-group"},[a("div",{staticClass:"col-sm-offset-3 col-sm-9 ml-auto"},[a("button",{staticClass:"btn  btn-primary",attrs:{type:"button"}},[t._v("Login\r\n                                                ")])])])])])],1),t._v(" "),a("div",{staticClass:"col-sm-12"},[a("card",{staticClass:"card_brdr",attrs:{title:"<i class='fa fa-fw ti-pencil'></i> Bootstrap Form Inputs"}},[a("form",{staticClass:"form-horizontal",attrs:{role:"form"}},[a("div",{staticClass:"form-group row"},[a("label",{staticClass:"col-sm-2 control-label float-md-right txt_media",attrs:{for:"valid_email"}},[t._v("\r\n                                                Email Address\r\n                                            ")]),t._v(" "),a("div",{staticClass:"col-sm-8"},[a("div",{staticClass:"input-group "},[a("div",{staticClass:"input-group-prepend"},[a("span",{staticClass:"input-group-text bg-white"},[a("i",{staticClass:"fa ti-email"})])]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"text",placeholder:"Email Address",id:"valid_email"}})])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("label",{staticClass:"col-sm-2 control-label float-md-right txt_media",attrs:{for:"exampleInputPassword1"}},[t._v("Password")]),t._v(" "),a("div",{staticClass:"col-sm-8"},[a("div",{staticClass:"input-group "},[a("div",{staticClass:"input-group-prepend"},[a("span",{staticClass:"input-group-text bg-white"},[a("i",{staticClass:"fa ti-key"})])]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"password",id:"exampleInputPassword1",placeholder:"Password"}})])])]),t._v(" "),a("div",{staticClass:"form-group row has-success"},[a("label",{staticClass:"col-sm-2 control-label float-md-right txt_media",attrs:{for:"valid_email2"}},[t._v("\r\n                                                Validation Email\r\n                                            ")]),t._v(" "),a("div",{staticClass:"col-sm-8"},[a("div",{staticClass:"input-group input-icon right"},[a("div",{staticClass:"input-group-prepend"},[a("span",{staticClass:"input-group-text bg-white"},[a("i",{staticClass:"fa ti-email"})])]),t._v(" "),a("input",{staticClass:"input-error form-control",attrs:{id:"valid_email2",type:"text",placeholder:"Email Address"}})])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("label",{staticClass:"col-sm-2 control-label float-md-right",attrs:{for:"validate_confirm"}},[t._v("\r\n                                                Validation Password\r\n                                            ")]),t._v(" "),a("div",{staticClass:"col-sm-8"},[a("div",{staticClass:"input-group input-icon right"},[a("div",{staticClass:"input-group-prepend"},[a("span",{staticClass:"input-group-text bg-white"},[a("i",{staticClass:"fa ti-key"})])]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"password",placeholder:"Password",id:"validate_confirm"}})])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("label",{staticClass:"col-sm-2 control-label float-md-right txt_media",attrs:{for:"left_check"}},[t._v("\r\n                                                Checkbox Left\r\n                                            ")]),t._v(" "),a("div",{staticClass:"col-sm-8"},[a("div",{staticClass:"input-group"},[a("div",{staticClass:"input-group-prepend"},[a("div",{staticClass:"input-group-text bg-white"},[a("b-form-checkbox",{staticClass:"mr-0"})],1)]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"text",id:"left_check"}})])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("label",{staticClass:"col-sm-2 control-label float-md-right txt_media",attrs:{for:"right_check"}},[t._v("\r\n                                                Checkbox right\r\n                                            ")]),t._v(" "),a("div",{staticClass:"col-sm-8"},[a("div",{staticClass:"input-group"},[a("input",{staticClass:"form-control",attrs:{type:"text",id:"right_check"}}),t._v(" "),a("div",{staticClass:"input-group-append"},[a("div",{staticClass:"input-group-text bg-white"},[a("b-form-checkbox",{staticClass:"mr-0"})],1)])])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("label",{staticClass:"col-sm-2 control-label float-md-right txt_media",attrs:{for:"right_on"}},[t._v("\r\n                                                Radio on left\r\n                                            ")]),t._v(" "),a("div",{staticClass:"col-sm-8"},[a("div",{staticClass:"input-group"},[a("div",{staticClass:"input-group-prepend"},[a("div",{staticClass:"input-group-text bg-white"},[a("b-form-checkbox",{staticClass:"mr-0"})],1)]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"text",id:"right_on"}})])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("label",{staticClass:"col-sm-2 control-label float-md-right txt_media",attrs:{for:"right_off"}},[t._v("\r\n                                                Radio on right\r\n                                            ")]),t._v(" "),a("div",{staticClass:"col-sm-8"},[a("div",{staticClass:"input-group"},[a("input",{staticClass:"form-control",attrs:{type:"text",id:"right_off"}}),t._v(" "),a("div",{staticClass:"input-group-append"},[a("div",{staticClass:"input-group-text bg-white"},[a("b-form-checkbox",{staticClass:"mr-0"})],1)])])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("label",{staticClass:"col-sm-2 control-label float-md-right txt_media",attrs:{for:"process_right"}},[t._v("\r\n                                                Processing right\r\n                                            ")]),t._v(" "),a("div",{staticClass:"col-sm-8"},[a("div",{staticClass:"input-icon left spinner"},[a("input",{staticClass:"input-error form-control",attrs:{type:"text",placeholder:"",id:"process_right"}}),t._v(" "),a("i",{staticClass:"fa fa-fw fa-spin fa-spinner proc text-primary"})])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("label",{staticClass:"col-sm-2 control-label float-md-right txt_media"},[t._v("\r\n                                                Static Paragraph\r\n                                            ")]),t._v(" "),a("div",{staticClass:"col-sm-8"},[a("p",{staticClass:"form-control"},[t._v("\r\n                                                    email@example.com\r\n                                                ")])])]),t._v(" "),a("div",{staticClass:"form-group row"},[a("label",{staticClass:"col-sm-2 control-label float-md-right txt_media",attrs:{for:"bootstrap_readonly"}},[t._v("Readonly")]),t._v(" "),a("div",{staticClass:"col-sm-8"},[a("input",{staticClass:"form-control",attrs:{type:"text",placeholder:"Readonly",readonly:"",id:"bootstrap_readonly"}})])]),t._v(" "),a("div",{staticClass:"row"},[a("div",{staticClass:"col-sm-8 col-sm-offset-2 ml-auto"},[a("button",{staticClass:"btn  btn-primary m-t-10",attrs:{type:"button"}},[t._v("\r\n                                                    Submit\r\n                                                ")]),t._v(" "),a("button",{staticClass:"btn  btn-danger m-t-10",attrs:{type:"button"}},[t._v("\r\n                                                    Cancel\r\n                                                ")]),t._v(" "),a("button",{staticClass:"btn btn-effect-ripple  btn-secondary m-t-10 reset_btn6",attrs:{type:"reset"}},[t._v("\r\n                                                    Reset\r\n                                                ")])])])])])],1)])])],1)],1)],1)])])}),[],!1,null,null,null);s.default=i.exports},426:function(t,s,a){var o=a(431);"string"==typeof o&&(o=[[t.i,o,""]]);var l={hmr:!0,transform:void 0,insertInto:void 0};a(31)(o,l);o.locals&&(t.exports=o.locals)},430:function(t,s,a){"use strict";var o=a(426);a.n(o).a},431:function(t,s,a){(t.exports=a(30)(!1)).push([t.i,"\n.dNone{\n    display: none;\n}\n.rotate{\n    transform:rotate(180deg);\n}\n",""])},433:function(t,s,a){"use strict";var o={name:"card",data:function(){return{show:!0,isActive:!1}},methods:{hide:function(){this.isActive=!0}},mounted:function(){},props:{title:{required:!1}},destroy:function(){}},l=(a(430),a(21)),i=Object(l.a)(o,(function(){var t=this,s=t.$createElement,a=t._self._c||s;return a("div",{staticClass:"card",class:{dNone:t.isActive}},[a("div",{staticClass:"card-header"},[a("h3",{staticClass:"card-title",domProps:{innerHTML:t._s(t.title)}}),t._v(" "),a("span",{staticClass:"float-right"},[a("i",{staticClass:"fa fa-fw ti-angle-up",class:{rotate:t.show},on:{click:function(s){t.show=!t.show}}}),t._v(" "),a("i",{staticClass:"fa fa-fw ti-close removecard",on:{click:t.hide}})])]),t._v(" "),a("div",{directives:[{name:"show",rawName:"v-show",value:t.show,expression:"show"}],staticClass:"card-body"},[t._t("default")],2)])}),[],!1,null,null,null);s.a=i.exports},750:function(t,s,a){var o=a(1432);"string"==typeof o&&(o=[[t.i,o,""]]);var l={hmr:!0,transform:void 0,insertInto:void 0};a(31)(o,l);o.locals&&(t.exports=o.locals)}}]);
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[100],{
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/edashboard.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/components/pages/edashboard.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var v_chartist__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! v-chartist */ "./node_modules/v-chartist/dist/vue-chartist.min.js");
+/* harmony import */ var v_chartist__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(v_chartist__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var chartist__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! chartist */ "./node_modules/chartist/dist/chartist.js");
+/* harmony import */ var chartist__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(chartist__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var vue_circle_slider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-circle-slider */ "./node_modules/vue-circle-slider/index.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+vue__WEBPACK_IMPORTED_MODULE_2___default.a.use(vue_circle_slider__WEBPACK_IMPORTED_MODULE_3__["default"]);
+var unsub;
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'edashboard',
+  data: function data() {
+    return {
+      value: 70,
+      val3: 70,
+      progress: 30,
+      visited: [{
+        src: __webpack_require__(/*! img/ecommerce/product.png */ "./resources/img/ecommerce/product.png"),
+        price: "$250",
+        mrp: "$500",
+        name: "US-Polo T-shirt",
+        sale: "50%",
+        visits: "22,350"
+      }, {
+        src: __webpack_require__(/*! img/ecommerce/product2.png */ "./resources/img/ecommerce/product2.png"),
+        price: "$450.45",
+        mrp: "$585",
+        name: "US-Polo Red Shirt",
+        sale: "23%",
+        visits: "11,260"
+      }, {
+        src: __webpack_require__(/*! img/ecommerce/product3.png */ "./resources/img/ecommerce/product3.png"),
+        price: "$280",
+        mrp: "$350",
+        name: "Gift box",
+        sale: "20%",
+        visits: "10,360"
+      }],
+      trending: [{
+        src: __webpack_require__(/*! img/ecommerce/product.png */ "./resources/img/ecommerce/product.png"),
+        price: "$250",
+        mrp: "$500",
+        name: "US-Polo T-shirt",
+        sale: "50%",
+        visits: "22,350"
+      }, {
+        src: __webpack_require__(/*! img/ecommerce/product4.png */ "./resources/img/ecommerce/product4.png"),
+        price: "$1000",
+        mrp: "1500",
+        name: "Apple Macbook pro",
+        sale: "33%",
+        visits: "16,234",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate earum esse harum illo necessitatibus officia ullam vitae! Cum dolor tempore ut vero. Debitis dolor enim ex harum minima necessitatibus quae."
+      }, {
+        src: __webpack_require__(/*! img/ecommerce/product2.png */ "./resources/img/ecommerce/product2.png"),
+        price: "$450.45",
+        mrp: "$585",
+        name: "US-Polo Red Shirt",
+        sale: "23%",
+        visits: "11,260"
+      }],
+      // =======line chart start===========
+      time: {
+        data: {
+          labels: ['12am', '4am', '8am', '12pm', '4pm', '8pm'],
+          series: [{
+            name: 'series-1',
+            data: [{
+              x: new Date(143134652600),
+              y: 53
+            }, {
+              x: new Date(143234652600),
+              y: 40
+            }, {
+              x: new Date(143340052600),
+              y: 45
+            }, {
+              x: new Date(143366652600),
+              y: 40
+            }, {
+              x: new Date(143410652600),
+              y: 20
+            }, {
+              x: new Date(143508652600),
+              y: 32
+            }]
+          }, {
+            name: 'series-2',
+            data: [{
+              x: new Date(143134652600),
+              y: 53
+            }, {
+              x: new Date(143234652600),
+              y: 35
+            }, {
+              x: new Date(143334652600),
+              y: 30
+            }, {
+              x: new Date(143384652600),
+              y: 30
+            }, {
+              x: new Date(143568652600),
+              y: 10
+            }]
+          }]
+        },
+        options: {
+          fullWidth: true,
+          chartPadding: {
+            right: 40
+          }
+        }
+      },
+      // =======Line chart end========
+      // ======donut chart start=======
+      donut: {
+        data: {
+          labels: ['Old 6,25,300', 'New 20,598'],
+          series: [83, 17]
+        },
+        options: {
+          donut: true,
+          donutWidth: 45 //                        labelInterpolationFnc: function(value) {
+          //                            return value[0]
+          //                        }
+
+        },
+        responsiveoptions: [['screen and (min-width: 320px)', {
+          labelOffset: 50,
+          chartPadding: 20
+        }], ['screen and (min-width: 640px)', {
+          chartPadding: 20,
+          labelOffset: 50,
+          labelDirection: 'explode',
+          labelInterpolationFnc: function labelInterpolationFnc(value) {
+            return value;
+          }
+        }], ['screen and (min-width: 1024px)', {
+          labelOffset: 50,
+          chartPadding: 20
+        }]]
+      },
+      // ======donut chart end================
+      // ======pie chart start=======
+      pie: {
+        data: {
+          labels: ['Social media', 'TV ads', 'Brochures', 'Hoardings'],
+          series: [40, 30, 15, 15]
+        },
+        options: {//                        labelInterpolationFnc: function(value) {
+          //                            return value[0]
+          //                        }
+        },
+        responsiveoptions: [['screen and (min-width: 640px)', {
+          chartPadding: 30,
+          labelOffset: 50,
+          labelDirection: 'explode',
+          labelInterpolationFnc: function labelInterpolationFnc(value) {
+            return value;
+          }
+        }], ['screen and (min-width: 1024px)', {
+          labelOffset: 45,
+          chartPadding: 20
+        }]]
+      } // ======pie chart end================
+
+    };
+  },
+  components: {
+    VueChartist: v_chartist__WEBPACK_IMPORTED_MODULE_0___default.a
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    unsub = this.$store.subscribe(function (mutation, state) {
+      if (mutation.type == "left_menu") {
+        setTimeout(function () {
+          _this.$refs.chartist8.renderChart();
+        });
+      }
+    });
+  },
+  beforeRouteLeave: function beforeRouteLeave(to, from, next) {
+    unsub();
+    next();
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/edashboard.vue?vue&type=style&index=1&lang=css&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--5-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--5-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/components/pages/edashboard.vue?vue&type=style&index=1&lang=css& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.shipping_perc{\n     margin-top: 52px;\n     margin-left: -32px;\n     position: absolute;\n}\n.top_revenue li{\n     line-height: 26px;\n}\n.sale-tag{\n     margin-top: 10px;\n     position: absolute;\n}\n.sale-tag:after{\n     content: ' ';\n     position: absolute;\n     width: 0;\n     height: 0;\n     left: 30px;\n     right: auto;\n     top: 0px;\n     bottom: auto;\n     border: 10px solid;\n     border-color: #ff6666  transparent transparent transparent;\n}\n.sale-tag:before{\n     content: ' ';\n     position: absolute;\n     width: 0;\n     height: 0;\n     left: 30px;\n     right: auto;\n     top: -1px;\n     bottom: auto;\n     border: 10px solid;\n     border-color:  transparent transparent  #ff6666 transparent;\n}\n.visit_sources li {\n     font-size: 15px;\n     line-height: 30px;\n}\n.visit_sources li i{\n     line-height: 3;\n     font-size:16px;\n     padding: 0.75rem;\n     border-radius: 20px;\n     border: 1px solid #c1c1c1;\n}\n.new_visits .ct-series-b .ct-slice-donut{\n     stroke: #66cc99;\n}\n.new_visits .ct-series-a .ct-slice-donut{\n     stroke:#6699cc;\n}\n.new_visits .v-chartist-container,.marketing_camp .v-chartist-container{\n     height: 300px;\n}\n.donut-label{\n     height:5px;\n     width: 5px;\n}\n.ct-label {\n     fill: rgb(0, 0, 0);\n     color: rgb(0, 0, 0);\n     font-size: 0.75rem;\n     line-height: 1;\n}\n.marketing_camp .ct-series-d .ct-slice-pie{\n     fill:#6699cc;\n}\n.marketing_camp .ct-series-a .ct-slice-pie{\n     fill:#66cc99;\n}\n.marketing_camp .ct-series-b .ct-slice-pie{\n     fill:#ff6666;\n}\n.marketing_camp .ct-series-c .ct-slice-pie{\n     fill: #ec9f1c;\n}\n.ct-series-a .ct-line,.ct-series-a .ct-point{\n     stroke: #66cc99;\n}\n.top_revenue{\n     margin-top: -8px;\n}\n@media(max-width:320px){\n.ct-label.ct-horizontal.ct-end{\n        margin-left: -5px;\n        transform: rotate(40deg);\n}\n}\n@media(max-width:1440px) {\n.most_trending .nav-link{\n         padding: 0.7rem 1rem;\n}\n}\n@media(max-width:375px){\n.edashboard{\n         margin-top: 15px;\n}\n}\n@media(min-width:320px) and (max-width: 425px){\n.top_revenue{\n         margin-top: 0;\n}\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/edashboard.vue?vue&type=style&index=1&lang=css&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--5-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--5-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/components/pages/edashboard.vue?vue&type=style&index=1&lang=css& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--5-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--5-2!../../../node_modules/vue-loader/lib??vue-loader-options!./edashboard.vue?vue&type=style&index=1&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/edashboard.vue?vue&type=style&index=1&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/edashboard.vue?vue&type=template&id=ef15626a&":
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/components/pages/edashboard.vue?vue&type=template&id=ef15626a& ***!
+  \****************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "edashboard" }, [
+    _c("h5", [_vm._v("Today's sales")]),
+    _vm._v(" "),
+    _c("div", { staticClass: "row" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "col-sm-12 col-xl-6" },
+        [
+          _c(
+            "b-card",
+            { staticClass: "bg-primary-card", attrs: { "header-tag": "h5" } },
+            [
+              _c("vue-chartist", {
+                ref: "chartist8",
+                attrs: {
+                  data: _vm.time.data,
+                  options: _vm.time.options,
+                  type: "Line"
+                }
+              })
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-sm-4 col-lg-6" }, [
+        _c("div", { staticClass: "card" }, [
+          _c("div", { staticClass: "card-body" }, [
+            _c("h5", { staticClass: "text-center" }, [
+              _vm._v(
+                "\n                        Today's Shipments\n                    "
+              )
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "text-center" },
+              [
+                _vm._m(1),
+                _vm._v(" "),
+                _c("circle-slider", {
+                  attrs: {
+                    side: 150,
+                    "circle-width": 9,
+                    "progress-width": 8,
+                    "knob-radius": 7,
+                    "progress-color": "#418AC9",
+                    "knob-color": "#418AC9",
+                    "circle-color": "#edeff0"
+                  },
+                  model: {
+                    value: _vm.val3,
+                    callback: function($$v) {
+                      _vm.val3 = $$v
+                    },
+                    expression: "val3"
+                  }
+                })
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "row mt-5" }, [
+              _c(
+                "div",
+                { staticClass: "col-sm-6 text-center" },
+                [
+                  _vm._v(
+                    "\n                            45% completed\n                            "
+                  ),
+                  _c("b-progress", {
+                    attrs: {
+                      height: "3px",
+                      value: _vm.value,
+                      variant: "success"
+                    }
+                  })
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "col-sm-6 text-center" },
+                [
+                  _vm._v(
+                    "\n                            55% in progress\n                            "
+                  ),
+                  _c("b-progress", {
+                    attrs: {
+                      height: "3px",
+                      value: _vm.progress,
+                      variant: "danger"
+                    }
+                  })
+                ],
+                1
+              )
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-sm-8 col-lg-6" }, [
+        _c("div", { staticClass: "card" }, [
+          _c("div", { staticClass: "card-body" }, [
+            _c("h5", { staticClass: "text-center" }, [
+              _vm._v("Todays top product by revenue")
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-sm-6" }, [
+                _c("img", {
+                  staticClass: "img-fluid",
+                  attrs: {
+                    src: __webpack_require__(/*! ../../img/ecommerce/product.png */ "./resources/img/ecommerce/product.png"),
+                    alt: "product"
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _vm._m(2)
+            ])
+          ])
+        ])
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "row" }, [
+      _c(
+        "div",
+        { staticClass: "col-sm-12" },
+        [
+          _c(
+            "b-tabs",
+            { staticClass: "mt-4 most_trending" },
+            [
+              _c("b-tab", { attrs: { title: "Most visited", active: "" } }, [
+                _c(
+                  "div",
+                  { staticClass: "row mt-3" },
+                  _vm._l(_vm.visited, function(element, index) {
+                    return _c("div", { key: index, staticClass: "col-sm-4" }, [
+                      _c(
+                        "span",
+                        {
+                          staticClass: "bg-danger text-white pl-2 pr-2 sale-tag"
+                        },
+                        [_vm._v(_vm._s(element.sale))]
+                      ),
+                      _vm._v(" "),
+                      _c("img", {
+                        staticClass: "img-fluid",
+                        attrs: { src: element.src, alt: "product" }
+                      }),
+                      _vm._v(" "),
+                      _c("ul", { staticClass: "pl-0" }, [
+                        _c("li", [
+                          _c("h4", { staticClass: "mt-2" }, [
+                            _vm._v(_vm._s(element.price))
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("p", { staticClass: "text-secondary mb-0" }, [
+                            _vm._v("M.R.P: "),
+                            _c("del", [_vm._v(" " + _vm._s(element.mrp))])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [_vm._v("Name: " + _vm._s(element.name))]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _vm._v("Number of visitors: "),
+                          _c("span", { staticClass: "text-danger" }, [
+                            _vm._v(_vm._s(element.visits))
+                          ])
+                        ])
+                      ])
+                    ])
+                  }),
+                  0
+                )
+              ]),
+              _vm._v(" "),
+              _c("b-tab", { attrs: { title: "Trending products" } }, [
+                _c(
+                  "div",
+                  { staticClass: "row mt-3" },
+                  _vm._l(_vm.trending, function(element, index) {
+                    return _c("div", { key: index, staticClass: "col-sm-4" }, [
+                      _c(
+                        "span",
+                        {
+                          staticClass: "bg-danger text-white pl-2 pr-2 sale-tag"
+                        },
+                        [_vm._v(_vm._s(element.sale))]
+                      ),
+                      _vm._v(" "),
+                      _c("img", {
+                        staticClass: "img-fluid",
+                        attrs: { src: element.src, alt: "product" }
+                      }),
+                      _vm._v(" "),
+                      _c("ul", { staticClass: "pl-0" }, [
+                        _c("li", [
+                          _c("h4", { staticClass: "mt-2" }, [
+                            _vm._v(_vm._s(element.price))
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("p", { staticClass: "text-secondary mb-0" }, [
+                            _vm._v("M.R.P: "),
+                            _c("del", [_vm._v(" " + _vm._s(element.mrp))])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [_vm._v("Name: " + _vm._s(element.name))]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _vm._v("Number of visitors: "),
+                          _c("span", { staticClass: "text-danger" }, [
+                            _vm._v(_vm._s(element.visits))
+                          ])
+                        ])
+                      ])
+                    ])
+                  }),
+                  0
+                )
+              ])
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "row mt-3" }, [
+      _vm._m(3),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-sm-6 col-xl-4" }, [
+        _c("div", { staticClass: "card" }, [
+          _c(
+            "div",
+            { staticClass: "card-body new_visits" },
+            [
+              _c("h5", [_vm._v("Visitors")]),
+              _vm._v(" "),
+              _c("vue-chartist", {
+                ref: "chartist6",
+                attrs: {
+                  data: _vm.donut.data,
+                  options: _vm.donut.options,
+                  type: "Pie",
+                  responsiveOptions: _vm.donut.responsiveoptions
+                }
+              })
+            ],
+            1
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-sm-6 col-xl-5" }, [
+        _c("div", { staticClass: "card marketing_camp" }, [
+          _c(
+            "div",
+            { staticClass: "card-body" },
+            [
+              _c("h5", [
+                _vm._v(
+                  "\n                       Marketing campaign\n                   "
+                )
+              ]),
+              _vm._v(" "),
+              _c("vue-chartist", {
+                ref: "chartist6",
+                attrs: {
+                  data: _vm.pie.data,
+                  options: _vm.pie.options,
+                  type: "Pie",
+                  responsiveOptions: _vm.pie.responsiveoptions
+                }
+              })
+            ],
+            1
+          )
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-sm-12 col-xl-6" }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-sm-4" }, [
+          _c("div", { staticClass: "card p-3 text-center bg-success" }, [
+            _c("h5", { staticClass: "text-white" }, [_vm._v("Total sales")]),
+            _vm._v(" "),
+            _c("i", {
+              staticClass: "fa fa-bar-chart text-white fa-2x mt-3 mb-3"
+            }),
+            _vm._v(" "),
+            _c("h5", { staticClass: "text-white font-weight-bold" }, [
+              _c("i", { staticClass: "fa fa-long-arrow-up" }),
+              _vm._v(" 15%")
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-sm-4" }, [
+          _c("div", { staticClass: "card p-3 text-center bg-primary" }, [
+            _c("h5", { staticClass: "text-white" }, [_vm._v("Total orders")]),
+            _vm._v(" "),
+            _c("i", {
+              staticClass: "fa fa-shopping-cart text-white fa-2x mt-3 mb-3"
+            }),
+            _vm._v(" "),
+            _c("h5", { staticClass: "text-white font-weight-bold" }, [
+              _c("i", { staticClass: "fa fa-long-arrow-up" }),
+              _vm._v(" 2,23,100")
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-sm-4" }, [
+          _c("div", { staticClass: "card p-3 text-center bg-warning" }, [
+            _c("h5", { staticClass: "text-white" }, [_vm._v("Total products")]),
+            _vm._v(" "),
+            _c("i", {
+              staticClass: "fa fa-list-alt text-white mt-3 mb-3 fa-2x"
+            }),
+            _vm._v(" "),
+            _c("h5", { staticClass: "text-white font-weight-bold" }, [
+              _c("i", { staticClass: "fa fa-long-arrow-up" }),
+              _vm._v(" 6,56,529")
+            ])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "shipping_perc" }, [
+      _vm._v("\n                            70% "),
+      _c("br"),
+      _vm._v("bouce rate\n                        ")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-sm-6" }, [
+      _c("ul", { staticClass: "pl-0 top_revenue" }, [
+        _c("li", [_vm._v("Name: US Polo T-shirt")]),
+        _vm._v(" "),
+        _c("li", [_vm._v("Seller: Lorvent Solutions")]),
+        _vm._v(" "),
+        _c("li", [
+          _c("p", [
+            _c("span", { staticClass: "fa fa-star star_icon text-warning" }),
+            _vm._v(" "),
+            _c("span", { staticClass: "fa fa-star star_icon text-warning" }),
+            _vm._v(" "),
+            _c("span", { staticClass: "fa fa-star star_icon text-warning" }),
+            _vm._v(" "),
+            _c("span", { staticClass: "fa fa-star star_icon text-warning" }),
+            _vm._v(" "),
+            _c("span", {
+              staticClass: "fa fa-star-half star_icon text-warning"
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c("span", { staticClass: "text-success" }, [_vm._v("Offer 1")]),
+          _vm._v(
+            ": Lorem ipsum dolor sit amet, consectetur adipisicing elit.....\n                              "
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c("span", { staticClass: "text-primary" }, [
+            _vm._v("Number of sales today")
+          ]),
+          _vm._v(": "),
+          _c("span", { staticClass: "text-danger font-weight-bold" }, [
+            _vm._v("12,550")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c("span", { staticClass: "text-primary" }, [_vm._v("Total income")]),
+          _vm._v(": "),
+          _c("span", { staticClass: "text-danger font-weight-bold" }, [
+            _vm._v("31,37,500")
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-sm-6 col-xl-3" }, [
+      _c("div", { staticClass: "card" }, [
+        _c("div", { staticClass: "card-body" }, [
+          _c("h5", [_vm._v("Visitors sources")]),
+          _vm._v(" "),
+          _c("ul", { staticClass: "pl-0 visit_sources" }, [
+            _c("li", [
+              _c("i", { staticClass: "ti-facebook text-primary" }),
+              _vm._v(" Facebook "),
+              _c("span", { staticClass: "text-danger float-right mt-3" }, [
+                _vm._v("15,320")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("i", { staticClass: "ti-twitter text-primary" }),
+              _vm._v(" Twitter "),
+              _c("span", { staticClass: "text-danger float-right mt-3" }, [
+                _vm._v("15,320")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("i", { staticClass: "ti-instagram text-primary" }),
+              _vm._v(" Instagram "),
+              _c("span", { staticClass: "text-danger float-right mt-3" }, [
+                _vm._v("15,320")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("i", { staticClass: "ti-mobile text-success" }),
+              _vm._v(" Application "),
+              _c("span", { staticClass: "text-danger float-right mt-3" }, [
+                _vm._v("15,320")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("i", { staticClass: "ti-home text-warning" }),
+              _vm._v(" Store"),
+              _c("span", { staticClass: "text-danger float-right mt-3" }, [
+                _vm._v("15,320")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("i", { staticClass: "ti-desktop text-danger" }),
+              _vm._v(" Direct site"),
+              _c("span", { staticClass: "text-danger float-right mt-3" }, [
+                _vm._v("15,320")
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./resources/components/pages/edashboard.vue":
+/*!***************************************************!*\
+  !*** ./resources/components/pages/edashboard.vue ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _edashboard_vue_vue_type_template_id_ef15626a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./edashboard.vue?vue&type=template&id=ef15626a& */ "./resources/components/pages/edashboard.vue?vue&type=template&id=ef15626a&");
+/* harmony import */ var _edashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./edashboard.vue?vue&type=script&lang=js& */ "./resources/components/pages/edashboard.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var chartist_dist_chartist_css_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! chartist/dist/chartist.css?vue&type=style&index=0&lang=css& */ "./node_modules/chartist/dist/chartist.css?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _edashboard_vue_vue_type_style_index_1_lang_css___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./edashboard.vue?vue&type=style&index=1&lang=css& */ "./resources/components/pages/edashboard.vue?vue&type=style&index=1&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_4__["default"])(
+  _edashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _edashboard_vue_vue_type_template_id_ef15626a___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _edashboard_vue_vue_type_template_id_ef15626a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/components/pages/edashboard.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/components/pages/edashboard.vue?vue&type=script&lang=js&":
+/*!****************************************************************************!*\
+  !*** ./resources/components/pages/edashboard.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_edashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./edashboard.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/edashboard.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_edashboard_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/components/pages/edashboard.vue?vue&type=style&index=1&lang=css&":
+/*!************************************************************************************!*\
+  !*** ./resources/components/pages/edashboard.vue?vue&type=style&index=1&lang=css& ***!
+  \************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_edashboard_vue_vue_type_style_index_1_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader??ref--5-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--5-2!../../../node_modules/vue-loader/lib??vue-loader-options!./edashboard.vue?vue&type=style&index=1&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/edashboard.vue?vue&type=style&index=1&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_edashboard_vue_vue_type_style_index_1_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_edashboard_vue_vue_type_style_index_1_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_edashboard_vue_vue_type_style_index_1_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_edashboard_vue_vue_type_style_index_1_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_edashboard_vue_vue_type_style_index_1_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/components/pages/edashboard.vue?vue&type=template&id=ef15626a&":
+/*!**********************************************************************************!*\
+  !*** ./resources/components/pages/edashboard.vue?vue&type=template&id=ef15626a& ***!
+  \**********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_edashboard_vue_vue_type_template_id_ef15626a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./edashboard.vue?vue&type=template&id=ef15626a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/edashboard.vue?vue&type=template&id=ef15626a&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_edashboard_vue_vue_type_template_id_ef15626a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_edashboard_vue_vue_type_template_id_ef15626a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/img/ecommerce/product.png":
+/*!*********************************************!*\
+  !*** ./resources/img/ecommerce/product.png ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/laravel_vue/images/product.png?921f475804236cccb1e348d8ea00ae2a";
+
+/***/ }),
+
+/***/ "./resources/img/ecommerce/product2.png":
+/*!**********************************************!*\
+  !*** ./resources/img/ecommerce/product2.png ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/laravel_vue/images/product2.png?8d301375df448ee3e714523880e4068a";
+
+/***/ }),
+
+/***/ "./resources/img/ecommerce/product3.png":
+/*!**********************************************!*\
+  !*** ./resources/img/ecommerce/product3.png ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/laravel_vue/images/product3.png?8d301375df448ee3e714523880e4068a";
+
+/***/ }),
+
+/***/ "./resources/img/ecommerce/product4.png":
+/*!**********************************************!*\
+  !*** ./resources/img/ecommerce/product4.png ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/laravel_vue/images/product4.png?8d301375df448ee3e714523880e4068a";
+
+/***/ })
+
+}]);
