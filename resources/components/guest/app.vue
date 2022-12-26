@@ -37,8 +37,8 @@ export default {
 </script>
 
 
+<style src="toastr/build/toastr.min.css"></style>
 <style src="bootstrapValidator/dist/css/bootstrapValidator.min.css">
-
 </style>
 <style src="../../css/login.css" scoped>
 
