@@ -1,297 +1,510 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[146],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/guest/app.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/components/guest/app.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/vddl/dist/vddl.runtime.js":
+/*!************************************************!*\
+  !*** ./node_modules/vddl/dist/vddl.runtime.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({
+/*!
+ * Vddl.js v0.7.1
+ * (c) 2017 Hejx
+ * Released under the MIT License.
+ * https://github.com/hejianxian/vddl#readme
+ */
+
+(function (global, factory) {
+   true ? module.exports = factory() :
+  undefined;
+}(this, (function () {
+
+var Draggable = {render: function(){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"vddl-draggable",on:{"dragstart":function($event){$event.stopPropagation();_vm.handleDragstart($event);},"dragend":function($event){$event.stopPropagation();_vm.handleDragend($event);},"click":function($event){$event.stopPropagation();_vm.handleClick($event);},"selectstart":_vm.handleSelected}},[_vm._t("default")],2)},staticRenderFns: [],
+  name: 'vddl-draggable',
+  // css: vddl-dragging, vddl-dragging-source
+  props: {
+    draggable: [ Object, Array ],
+    wrapper: Array,
+    index: Number,
+
+    effectAllowed: String,
+    type: String,
+
+    // diable
+    disableIf: Boolean,
+
+    // callback fn
+    dragstart: Function,
+    selected: Function,
+    dragend: Function,
+    moved: Function,
+    copied: Function,
+    canceled: Function,
+  },
   data: function data() {
-    return {
-      propImageHeader: {
-        src: "https://transonline2.salvador.ba.gov.br/zona-verde/web/images/topos/zona-verde-logo.png",
-        style: {
-          width: '100%'
-        },
-        alt: "header-image"
+    return {};
+  },
+  computed: {},
+  methods: {
+    handleDragstart: function handleDragstart(event) {
+      var this$1 = this;
+
+      var draggable = JSON.stringify(this.draggable);
+      // Check whether the element is draggable, since dragstart might be triggered on a child.
+      if (draggable == 'false' || this.disableIf) { return true; }
+
+      // Serialize the data associated with this element. IE only supports the Text drag type
+      event.dataTransfer.setData("Text", draggable);
+
+      // Only allow actions specified in effect-allowed attribute
+      event.dataTransfer.effectAllowed = this.effectAllowed || "move";
+
+      // Add CSS classes. IE9 not support 'classList'
+      this.$el.className = this.$el.className.trim() + " vddl-dragging";
+      setTimeout(function () {
+        this$1.$el.className = this$1.$el.className.trim() + " vddl-dragging-source";
+      }, 0);
+
+      // Workarounds for stupid browsers, see description below
+      this.vddlDropEffectWorkaround.dropEffect = "none";
+      this.vddlDragTypeWorkaround.isDragging = true;
+
+      // Save type of item in global state. Usually, this would go into the dataTransfer
+      // typename, but we have to use "Text" there to support IE
+      this.vddlDragTypeWorkaround.dragType = this.type || undefined;
+
+      // Try setting a proper drag image if triggered on a vddl-handle (won't work in IE).
+      if (event._dndHandle && event.dataTransfer.setDragImage) {
+        event.dataTransfer.setDragImage(this.$el, event._dndHandleLeft, event._dndHandleTop);
       }
-    };
-  }
-});
 
-/***/ }),
+      // Invoke callback
+      if (typeof(this.dragstart) === 'function') {
+        this.dragstart.call(this, event.target);
+      }
+    },
 
-/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/guest/app.vue?vue&type=style&index=3&id=0194e6e9&scoped=true&lang=css&":
-/*!************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--5-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--5-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/components/guest/app.vue?vue&type=style&index=3&id=0194e6e9&scoped=true&lang=css& ***!
-  \************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+    handleDragend: function handleDragend(event) {
+      var this$1 = this;
 
-exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
+      var dropEffect = this.vddlDropEffectWorkaround.dropEffect;
+      switch (dropEffect) {
+        case "move":
+          if (typeof(this.moved) === 'function') {
+            this.$nextTick(function () {
+              this$1.moved({
+                index: this$1.index,
+                list: this$1.wrapper,
+                event: event.target,
+                draggable: this$1.draggable,
+              });
+            });
+          } else {
+            this.$nextTick(function () {
+              this$1.wrapper.splice(this$1.index, 1);
+            });
+          }
+          break;
+        case "copy":
+          if (typeof(this.copied) === 'function') {
+            this.copied(this.draggable, event.target);
+          }
+          break;
+        case "none":
+          if (typeof(this.canceled) === 'function') {
+            this.canceled(event.target);
+          }
+          break;
+      }
+      if (typeof(this.dragend) === 'function') {
+        this.dragend(dropEffect, event.target);
+      }
 
+      // Clean up
+      this.$el.className = this.$el.className.replace("vddl-dragging", "").trim();
+      setTimeout(function () {
+        if (this$1.$el) { this$1.$el.className = this$1.$el.className.replace("vddl-dragging-source", "").trim(); }
+      }, 0);
+      this.vddlDragTypeWorkaround.isDragging = false;
+    },
 
-// module
-exports.push([module.i, "\n.login[data-v-0194e6e9] {\r\n    padding-top: 6.5%;\r\n    padding-bottom: 2%;\r\n    width: 100%;\r\n    height: 100vh;\r\n    position: absolute;\r\n    top: 0;\r\n    background: url('https://transonline2.salvador.ba.gov.br/zona-verde/web/images/zona-verde/ssa-zona-verde.png');\r\n    overflow-y: auto;\r\n    opacity: 0.6;\r\n    filter: blur(10px);\r\n    z-index: -1;\r\n    background-size: 2024px;\n}\r\n", ""]);
+    handleClick: function handleClick(event) {
+      if (!this.selected) { return; }
 
-// exports
+      if (typeof(this.selected) === 'function') {
+        this.selected(this.wrapper[this.index], event.target);
+      }
+    },
 
+    /**
+     * Workaround to make element draggable in IE9
+     * http://stackoverflow.com/questions/5500615/internet-explorer-9-drag-and-drop-dnd
+     */
+    handleSelected: function handleSelected() {
+      if (this.dragDrop) { this.dragDrop(); }
+      return false;
+    },
 
-/***/ }),
+    // init
+    init: function init() {
+      var status = true;
+      if (this.disableIf) { status = false; }
+      this.$el.setAttribute('draggable', status);
+    },
+  },
+  watch: {
+    disableIf: function disableIf(val) {
+      this.$el.setAttribute('draggable', !val);
+    },
+  },
+  // For Vue 1.0
+  ready: function ready() {
+    this.init();
+  },
+  mounted: function mounted() {
+    this.init();
+  },
+};
 
-/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./resources/css/login.css?vue&type=style&index=2&id=0194e6e9&scoped=true&lang=css&":
-/*!***********************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--5-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--5-2!./resources/css/login.css?vue&type=style&index=2&id=0194e6e9&scoped=true&lang=css& ***!
-  \***********************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+var List = {render: function(){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"vddl-list",on:{"dragenter":function($event){$event.preventDefault();_vm.handleDragenter($event);},"dragover":function($event){$event.stopPropagation();$event.preventDefault();_vm.handleDragover($event);},"drop":function($event){$event.stopPropagation();$event.preventDefault();_vm.handleDrop($event);},"dragleave":_vm.handleDragleave}},[_vm._t("default")],2)},staticRenderFns: [],
+  name: 'vddl-list',
+  // css: placeholder, dragover
+  props: {
+    list: Array,
 
-exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);", ""]);
+    allowedTypes: Array,
+    disableIf: Boolean,
+    horizontal: Boolean,
+    externalSources: Boolean,
 
-// module
-exports.push([module.i, "/* Fonts Imported from Google */\r\n\r\n/*   Core: General style\r\n----------------------------*/\nbody[data-v-0194e6e9] {\r\n    font-family: 'Open Sans', sans-serif;\r\n    height: 100%;\r\n    padding: 6.5% 0;\n}\n#sign-in[data-v-0194e6e9],\r\n#sign-up[data-v-0194e6e9] {\r\n    background: radial-gradient(ellipse at center, #5A93AF 0%, #004E74 100%);\n}\n.login-form[data-v-0194e6e9] {\r\n    background-color: rgba(255, 255, 255, .9);\r\n    border-radius: 4px;\r\n    padding-top: 15px;\r\n    padding-bottom: 15px;\r\n    border: 1px solid #23527c;\n}\n.btn-primary[data-v-0194e6e9],\r\n.primary[data-v-0194e6e9],\r\n.tags a.primary[data-v-0194e6e9] {\r\n    border-color: #509DE0;\r\n    background: #509DE0 !important;\n}\n.btn[data-v-0194e6e9]{\r\n    cursor: pointer;\n}\n.btn-primary[data-v-0194e6e9]:hover {\r\n    border-color: #509DE0;\r\n    background: #509DE0 !important;\n}\n.icheckbox_minimal-blue[data-v-0194e6e9] {\r\n    background-position: -20px 0;\n}\na[data-v-0194e6e9]:hover,\r\na[data-v-0194e6e9]:focus {\r\n    text-decoration: none;\n}\n.social a[data-v-0194e6e9] {\r\n    border-radius: 50px;\r\n    padding: 10px 12px 2px 12px;\r\n    font-size: 25px;\n}\n.btn-facebook[data-v-0194e6e9],\r\n.btn-facebook[data-v-0194e6e9]:hover,\r\n.btn-facebook[data-v-0194e6e9]:focus {\r\n    color: #5F7AB3;\r\n    border: 1px solid #5F7AB3;\n}\n.btn-twitter[data-v-0194e6e9],\r\n.btn-twitter[data-v-0194e6e9]:hover,\r\n.btn-twitter[data-v-0194e6e9]:focus {\r\n    background: #3BACF2;\r\n    color: rgba(255, 255, 255, .85);\r\n    border: 1px solid #3BACF2;\n}\n.has-error .help-block[data-v-0194e6e9],\r\n.has-error .control-label[data-v-0194e6e9],\r\n.has-error .radio[data-v-0194e6e9],\r\n.has-error .checkbox[data-v-0194e6e9],\r\n.has-error .radio-inline[data-v-0194e6e9],\r\n.has-error .checkbox-inline[data-v-0194e6e9] {\r\n    color: #ff6666;\n}\n.has-error.radio label[data-v-0194e6e9],\r\n.has-error.checkbox label[data-v-0194e6e9],\r\n.has-success.radio label[data-v-0194e6e9],\r\n.has-success.checkbox label[data-v-0194e6e9] {\r\n    color: #333;\n}\n.radio[data-v-0194e6e9],\r\n.checkbox[data-v-0194e6e9] {\r\n    display: block;\n}\n.has-error .form-control[data-v-0194e6e9],\r\n.has-error .form-control[data-v-0194e6e9]:focus {\r\n    border-color: #ff6666;\r\n    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n}\n.has-success .form-control[data-v-0194e6e9],\r\n.has-success .form-control[data-v-0194e6e9]:focus {\r\n    border-color: #66cc99;\r\n    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n}\n.btn-google[data-v-0194e6e9],\r\n.btn-google[data-v-0194e6e9]:hover,\r\n.btn-google[data-v-0194e6e9]:focus {\r\n    color: #dd4b39;\r\n    border: 1px solid #dd4b39;\n}\n.social .alter[data-v-0194e6e9] {\r\n    font-size: 21px;\r\n    color: #666;\r\n    margin-top: 15px;\r\n    margin-bottom: 15px;\n}\n#forgot[data-v-0194e6e9]:hover {\r\n    color: #2a6496 !important;\n}\n@media screen and (max-width: 400px) {\n.mar-left5[data-v-0194e6e9] {\r\n        margin-left: 18px !important;\r\n        margin-top: -10px;\n}\n.mar-top4[data-v-0194e6e9] {\r\n        margin-top: -10px;\n}\n.mar-left[data-v-0194e6e9] {\r\n        margin-left: -5px !important;\n}\n.sign-up[data-v-0194e6e9] {\r\n        float: left !important;\n}\n#forgot[data-v-0194e6e9]::after {\r\n        content: \"\\A\";\r\n        white-space: pre;\n}\n}\r\n\r\n/* Chrome, Safari, Opera */\n@-webkit-keyframes CAnimation-data-v-0194e6e9 {\nfrom {\r\n        -webkit-filter: hue-rotate(0deg);\n}\nto {\r\n        -webkit-filter: hue-rotate(-360deg);\n}\n}\r\n\r\n\r\n/* Standard syntax */\n@keyframes CAnimation-data-v-0194e6e9 {\nfrom {\r\n        -webkit-filter: hue-rotate(0deg);\n}\nto {\r\n        -webkit-filter: hue-rotate(-360deg);\n}\n}\n.forgot[data-v-0194e6e9] {\r\n    color: #428BCA !important;\n}\na[data-v-0194e6e9]:hover {\r\n    text-decoration: none;\n}\n.radio label[data-v-0194e6e9],\r\n.checkbox label[data-v-0194e6e9] {\r\n    padding-left: 0;\n}\n@media (min-width: 768px) {\n.form_width[data-v-0194e6e9] {\r\n        margin-left: 12%;\n}\n}\r\n\r\n\r\n/* ===== Preloader =====*/\n.preloader[data-v-0194e6e9] {\r\n    position: fixed;\r\n    width: 100%;\r\n    height: 100%;\r\n    top: 0;\r\n    left: 0;\r\n    z-index: 100000;\r\n    backface-visibility: hidden;\r\n    background: #ffffff;\n}\n.loader_img[data-v-0194e6e9] {\r\n    width: 50px;\r\n    height: 50px;\r\n    position: absolute;\r\n    left: 50%;\r\n    top: 50%;\r\n    background-position: center;\r\n    margin: -25px 0 0 -25px;\n}\r\n", ""]);
+    dragover: Function,
+    inserted: Function,
+    drop: Function,
+  },
+  data: function data() {
+    return {};
+  },
+  computed: {},
+  methods: {
+    handleDragenter: function handleDragenter(event) {
+      if (!this.isDropAllowed(event)) { return true; }
+    },
 
-// exports
+    handleDragover: function handleDragover(event) {
+      var this$1 = this;
 
+      if (!this.isDropAllowed(event)) { return true; }
 
-/***/ }),
+      if (this.placeholderNode.parentNode != this.listNode) {
+        this.listNode.appendChild(this.placeholderNode);
+      }
 
-/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/guest/app.vue?vue&type=style&index=3&id=0194e6e9&scoped=true&lang=css&":
-/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--5-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--5-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/components/guest/app.vue?vue&type=style&index=3&id=0194e6e9&scoped=true&lang=css& ***!
-  \****************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+      if (event.target !== this.listNode) {
+        // Try to find the node direct directly below the list node.
+        var listItemNode = event.target;
+        while (listItemNode.parentNode !== this.listNode && listItemNode.parentNode) {
+          listItemNode = listItemNode.parentNode;
+        }
+        if (listItemNode.parentNode === this.listNode && listItemNode !== this.placeholderNode) {
+          // If the mouse pointer is in the upper half of the child element,
+          // we place it before the child element, otherwise below it.
+          if (this.isMouseInFirstHalf(event, listItemNode)) {
+            this.listNode.insertBefore(this.placeholderNode, listItemNode);
+          } else {
+            this.listNode.insertBefore(this.placeholderNode, listItemNode.nextSibling);
+          }
+        }
+      } else {
+        // This branch is reached when we are dragging directly over the list element.
+        // Usually we wouldn't need to do anything here, but the IE does not fire it's
+        // events for the child element, only for the list directly. Therefore, we repeat
+        // the positioning algorithm for IE here.
+        if (this.isMouseInFirstHalf(event, this.placeholderNode, true)) {
+          // Check if we should move the placeholder element one spot towards the top.
+          // Note that display none elements will have offsetTop and offsetHeight set to
+          // zero, therefore we need a special check for them.
+          while (this.placeholderNode.previousElementSibling
+                && (this.isMouseInFirstHalf(event, this.placeholderNode.previousElementSibling, true)
+                || this.placeholderNode.previousElementSibling.offsetHeight === 0)) {
+            this$1.listNode.insertBefore(this$1.placeholderNode, this$1.placeholderNode.previousElementSibling);
+          }
+        } else {
+          // Check if we should move the placeholder element one spot towards the bottom
+          while (this.placeholderNode.nextElementSibling &&
+                !this.isMouseInFirstHalf(event, this.placeholderNode.nextElementSibling, true)) {
+            this$1.listNode.insertBefore(this$1.placeholderNode,
+                this$1.placeholderNode.nextElementSibling.nextElementSibling);
+          }
+        }
+      }
 
+      // At this point we invoke the callback, which still can disallow the drop.
+      // We can't do this earlier because we want to pass the index of the placeholder.
+      if (this.dragover && !this.invokeCallback('dragover', event, this.getPlaceholderIndex())) {
+        return this.stopDragover(event);
+      }
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--5-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--5-2!../../../node_modules/vue-loader/lib??vue-loader-options!./app.vue?vue&type=style&index=3&id=0194e6e9&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/guest/app.vue?vue&type=style&index=3&id=0194e6e9&scoped=true&lang=css&");
+      if (this.$el.className.indexOf("vddl-dragover") < 0) { this.$el.className = this.$el.className.trim() + " vddl-dragover"; }
+      return false;
+    },
+    handleDrop: function handleDrop(event) {
+      if (!this.isDropAllowed(event)) { return true; }
 
-if(typeof content === 'string') content = [[module.i, content, '']];
+      // The default behavior in Firefox is to interpret the dropped element as URL and
+      // forward to it. We want to prevent that even if our drop is aborted.
 
-var transform;
-var insertInto;
+      // Unserialize the data that was serialized in dragstart. According to the HTML5 specs,
+      // the "Text" drag type will be converted to text/plain, but IE does not do that.
+      var data = event.dataTransfer.getData("Text") || event.dataTransfer.getData("text/plain");
+      var transferredObject;
+      try {
+        transferredObject = JSON.parse(data);
+      } catch(e) {
+        return this.stopDragover();
+      }
 
+      // Invoke the callback, which can transform the transferredObject and even abort the drop.
+      var index = this.getPlaceholderIndex();
+      if (this.drop) {
+        transferredObject = this.invokeCallback('drop', event, index, transferredObject);
+        if (!transferredObject) {
+          return this.stopDragover();
+        }
+      }
 
+      // Insert the object into the array, unless drop took care of that (returned true).
+      if (transferredObject !== true) {
+        this.list.splice(index, 0, transferredObject);
+      }
+      this.invokeCallback('inserted', event, index, transferredObject);
 
-var options = {"hmr":true}
+      // In Chrome on Windows the dropEffect will always be none...
+      // We have to determine the actual effect manually from the allowed effects
+      if (event.dataTransfer.dropEffect === "none") {
+        if (event.dataTransfer.effectAllowed === "copy" ||
+            event.dataTransfer.effectAllowed === "move") {
+          this.vddlDropEffectWorkaround.dropEffect = event.dataTransfer.effectAllowed;
+        } else {
+          this.vddlDropEffectWorkaround.dropEffect = event.ctrlKey ? "copy" : "move";
+        }
+      } else {
+        this.vddlDropEffectWorkaround.dropEffect = event.dataTransfer.dropEffect;
+      }
 
-options.transform = transform
-options.insertInto = undefined;
+      // Clean up
+      this.stopDragover();
+      return false;
+    },
+    handleDragleave: function handleDragleave(event) {
+      var this$1 = this;
 
-var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+      this.$el.className = this.$el.className.replace("vddl-dragover", "").trim();
+      setTimeout(function () {
+        if (this$1.$el.className.indexOf("vddl-dragover") < 0) {
+          this$1.placeholderNode.parentNode && this$1.placeholderNode.parentNode.removeChild(this$1.placeholderNode);
+        }
+      }, 100);
+    },
 
-if(content.locals) module.exports = content.locals;
+    // Checks whether the mouse pointer is in the first half of the given target element.
+    isMouseInFirstHalf: function isMouseInFirstHalf(event, targetNode, relativeToParent) {
+      var mousePointer = this.horizontal ? (event.offsetX || event.layerX)
+                                    : (event.offsetY || event.layerY);
+      var targetSize = this.horizontal ? targetNode.offsetWidth : targetNode.offsetHeight;
+      var targetPosition = this.horizontal ? targetNode.offsetLeft : targetNode.offsetTop;
+      targetPosition = relativeToParent ? targetPosition : 0;
+      return mousePointer < targetPosition + targetSize / 2;
+    },
 
-if(false) {}
+    /**
+     * Tries to find a child element that has the 'vddl-placeholder' class set. If none was found, a
+     * new div element is created.
+     */
+    getPlaceholderElement: function getPlaceholderElement() {
+      var placeholder,
+          oldPlaceholder = this.$el.parentNode.querySelectorAll('.vddl-placeholder');
+      if (oldPlaceholder.length > 0) {
+        placeholder = oldPlaceholder[0];
+        return placeholder;
+      }
+      var newPlaceholder = document.createElement('div');
+      newPlaceholder.setAttribute('class', 'vddl-placeholder');
+      return newPlaceholder;
+    },
 
-/***/ }),
+    getPlaceholderIndex: function getPlaceholderIndex() {
+      return Array.prototype.indexOf.call(this.listNode.children, this.placeholderNode);
+    },
 
-/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./resources/css/login.css?vue&type=style&index=2&id=0194e6e9&scoped=true&lang=css&":
-/*!***************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--5-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--5-2!./resources/css/login.css?vue&type=style&index=2&id=0194e6e9&scoped=true&lang=css& ***!
-  \***************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+    /**
+     * Checks various conditions that must be fulfilled for a drop to be allowed
+     */
+    isDropAllowed: function isDropAllowed(event) {
+      // Disallow drop from external source unless it's allowed explicitly.
+      if (!this.vddlDragTypeWorkaround.isDragging && !this.externalSources) { return false; }
 
+      // Check mimetype. Usually we would use a custom drag type instead of Text, but IE doesn't
+      // support that.
+      if (!this.hasTextMimetype(event.dataTransfer.types)) { return false; }
 
-var content = __webpack_require__(/*! !../../node_modules/css-loader??ref--5-1!../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../node_modules/postcss-loader/src??ref--5-2!./login.css?vue&type=style&index=2&id=0194e6e9&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./resources/css/login.css?vue&type=style&index=2&id=0194e6e9&scoped=true&lang=css&");
+      // Now check the allowed-types against the type of the incoming element. For drops from
+      // external sources we don't know the type, so it will need to be checked via drop.
+      if (this.allowedTypes && this.vddlDragTypeWorkaround.isDragging) {
+        var allowed = this.allowedTypes;
+        if (Array.isArray(allowed) && allowed.indexOf(this.vddlDragTypeWorkaround.dragType) === -1) {
+          return false;
+        }
+      }
 
-if(typeof content === 'string') content = [[module.i, content, '']];
+      // Check whether droping is disabled completely
+      if (this.disableIf) { return false; }
 
-var transform;
-var insertInto;
+      return true;
+    },
 
+    /**
+     * Small helper function that cleans up if we aborted a drop.
+     */
+    stopDragover: function stopDragover() {
+      this.placeholderNode.parentNode && this.placeholderNode.parentNode.removeChild(this.placeholderNode);
+      this.$el.className = this.$el.className.replace("vddl-dragover", "").trim();
+      return true;
+    },
 
+    /**
+     * Invokes a callback with some interesting parameters and returns the callbacks return value.
+     */
+    invokeCallback: function invokeCallback(expression, event, index, item) {
+      var fn = this[expression];
+      if (fn) {
+        fn({
+          event: event,
+          index: index,
+          item: item || undefined,
+          list: this.list,
+          external: !this.vddlDragTypeWorkaround.isDragging,
+          type: this.vddlDragTypeWorkaround.isDragging ? this.vddlDragTypeWorkaround.dragType : undefined
+        });
+      }
+      return fn ? true : false;
+    },
 
-var options = {"hmr":true}
+    /**
+     * Check if the dataTransfer object contains a drag type that we can handle. In old versions
+     * of IE the types collection will not even be there, so we just assume a drop is possible.
+     */
+    hasTextMimetype: function hasTextMimetype(types) {
+      if (!types) { return true; }
+        for (var i = 0; i < types.length; i += 1) {
+          if (types[i] === "Text" || types[i] === "text/plain") { return true; }
+        }
 
-options.transform = transform
-options.insertInto = undefined;
+      return false;
+    },
+    init: function init() {
+      this.placeholderNode = this.getPlaceholderElement();
+      this.listNode = this.$el;
+      this.placeholderNode.parentNode && this.placeholderNode.parentNode.removeChild(this.placeholderNode);
+    },
+  },
+  ready: function ready() {
+    this.init();
+  },
+  mounted: function mounted() {
+    this.init();
+  },
+};
 
-var update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+var Handle = {render: function(){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"vddl-handle",on:{"dragstart":_vm.handle,"dragend":_vm.handle}},[_vm._t("default")],2)},staticRenderFns: [],
+  name: 'vddl-handle',
+  props: {
+    handleLeft: Number,
+    handleTop: Number,
+  },
+  data: function data() {
+    return {};
+  },
+  computed: {},
+  methods: {
+    handle: function handle(event) {
+      event._dndHandle = true;
+      event._dndHandleLeft = this.handleLeft || 0;
+      event._dndHandleTop = this.handleTop || 0;
+    },
+    init: function init() {
+      this.$el.setAttribute('draggable', true);
+    },
+  },
+  ready: function ready() {
+    this.init();
+  },
+  mounted: function mounted() {
+    this.init();
+  },
+};
 
-if(content.locals) module.exports = content.locals;
+var Nodrag = {render: function(){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"vddl-nodrag",on:{"dragstart":_vm.handleDragstart,"dragend":_vm.handleDragend}},[_vm._t("default")],2)},staticRenderFns: [],
+  name: 'vddl-nodrag',
+  props: {},
+  data: function data() {
+    return {};
+  },
+  computed: {},
+  methods: {
+    handleDragstart: function handleDragstart(event) {
+      if (!event._dndHandle) {
+        // If a child element already reacted to dragstart and set a dataTransfer object, we will
+        // allow that. For example, this is the case for user selections inside of input elements.
+        if (!(event.dataTransfer.types && event.dataTransfer.types.length)) {
+          event.preventDefault();
+        }
+        event.stopPropagation();
+      }
+    },
+    handleDragend: function handleDragend(event) {
+      if (!event._dndHandle) {
+        event.stopPropagation();
+      }
+    },
+    init: function init() {
+      this.$el.setAttribute('draggable', true);
+    },
+  },
+  ready: function ready() {
+    this.init();
+  },
+  mounted: function mounted() {
+    this.init();
+  },
+};
 
-if(false) {}
+var Placeholder = {render: function(){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"vddl-placeholder"},[_vm._t("default")],2)},staticRenderFns: [],
+  name: 'vddl-placeholder',
+};
 
-/***/ }),
+var install = function (Vue) {
+  /* eslint no-param-reassign: 0 */
+  Vue.prototype.vddlDropEffectWorkaround = {};
+  Vue.prototype.vddlDragTypeWorkaround = {};
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/guest/app.vue?vue&type=template&id=0194e6e9&scoped=true&":
-/*!*********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/components/guest/app.vue?vue&type=template&id=0194e6e9&scoped=true& ***!
-  \*********************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+  Vue.component(Draggable.name, Draggable);
+  Vue.component(List.name, List);
+  Vue.component(Handle.name, Handle);
+  Vue.component(Nodrag.name, Nodrag);
+  Vue.component(Placeholder.name, Placeholder);
+};
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("div", { staticClass: "container-header-image-guest" }, [
-      _c("img", _vm._b({}, "img", _vm.propImageHeader, false))
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "login" }),
-    _vm._v(" "),
-    _c("div", { staticClass: "container-fluid mt-5" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "row" }, [
-          _c(
-            "div",
-            { staticClass: "col-lg-6 col-10 col-sm-8 mx-auto login-form px-3" },
-            [_c("div", { staticClass: "card-body" }, [_c("router-view")], 1)]
-          )
-        ])
-      ])
-    ])
-  ])
+/* eslint no-undef:0 */
+if (typeof window !== 'undefined' && window.Vue) {
+  install(window.Vue);
 }
-var staticRenderFns = []
-render._withStripped = true
 
+var install$1 = { install: install };
 
+return install$1;
 
-/***/ }),
+})));
 
-/***/ "./resources/components/guest/app.vue":
-/*!********************************************!*\
-  !*** ./resources/components/guest/app.vue ***!
-  \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _app_vue_vue_type_template_id_0194e6e9_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app.vue?vue&type=template&id=0194e6e9&scoped=true& */ "./resources/components/guest/app.vue?vue&type=template&id=0194e6e9&scoped=true&");
-/* harmony import */ var _app_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app.vue?vue&type=script&lang=js& */ "./resources/components/guest/app.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var toastr_build_toastr_min_css_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! toastr/build/toastr.min.css?vue&type=style&index=0&lang=css& */ "./node_modules/toastr/build/toastr.min.css?vue&type=style&index=0&lang=css&");
-/* harmony import */ var bootstrapValidator_dist_css_bootstrapValidator_min_css_vue_type_style_index_1_lang_css___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! bootstrapValidator/dist/css/bootstrapValidator.min.css?vue&type=style&index=1&lang=css& */ "./node_modules/bootstrapValidator/dist/css/bootstrapValidator.min.css?vue&type=style&index=1&lang=css&");
-/* harmony import */ var _css_login_css_vue_type_style_index_2_id_0194e6e9_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../css/login.css?vue&type=style&index=2&id=0194e6e9&scoped=true&lang=css& */ "./resources/css/login.css?vue&type=style&index=2&id=0194e6e9&scoped=true&lang=css&");
-/* harmony import */ var _app_vue_vue_type_style_index_3_id_0194e6e9_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.vue?vue&type=style&index=3&id=0194e6e9&scoped=true&lang=css& */ "./resources/components/guest/app.vue?vue&type=style&index=3&id=0194e6e9&scoped=true&lang=css&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_6__["default"])(
-  _app_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _app_vue_vue_type_template_id_0194e6e9_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _app_vue_vue_type_template_id_0194e6e9_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  "0194e6e9",
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/components/guest/app.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/components/guest/app.vue?vue&type=script&lang=js&":
-/*!*********************************************************************!*\
-  !*** ./resources/components/guest/app.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_app_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./app.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/guest/app.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_app_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/components/guest/app.vue?vue&type=style&index=3&id=0194e6e9&scoped=true&lang=css&":
-/*!*****************************************************************************************************!*\
-  !*** ./resources/components/guest/app.vue?vue&type=style&index=3&id=0194e6e9&scoped=true&lang=css& ***!
-  \*****************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_app_vue_vue_type_style_index_3_id_0194e6e9_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader??ref--5-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--5-2!../../../node_modules/vue-loader/lib??vue-loader-options!./app.vue?vue&type=style&index=3&id=0194e6e9&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/guest/app.vue?vue&type=style&index=3&id=0194e6e9&scoped=true&lang=css&");
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_app_vue_vue_type_style_index_3_id_0194e6e9_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_app_vue_vue_type_style_index_3_id_0194e6e9_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_app_vue_vue_type_style_index_3_id_0194e6e9_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_app_vue_vue_type_style_index_3_id_0194e6e9_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_app_vue_vue_type_style_index_3_id_0194e6e9_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
-
-/***/ }),
-
-/***/ "./resources/components/guest/app.vue?vue&type=template&id=0194e6e9&scoped=true&":
-/*!***************************************************************************************!*\
-  !*** ./resources/components/guest/app.vue?vue&type=template&id=0194e6e9&scoped=true& ***!
-  \***************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_app_vue_vue_type_template_id_0194e6e9_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./app.vue?vue&type=template&id=0194e6e9&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/guest/app.vue?vue&type=template&id=0194e6e9&scoped=true&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_app_vue_vue_type_template_id_0194e6e9_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_app_vue_vue_type_template_id_0194e6e9_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/css/login.css?vue&type=style&index=2&id=0194e6e9&scoped=true&lang=css&":
-/*!******************************************************************************************!*\
-  !*** ./resources/css/login.css?vue&type=style&index=2&id=0194e6e9&scoped=true&lang=css& ***!
-  \******************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_login_css_vue_type_style_index_2_id_0194e6e9_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/style-loader!../../node_modules/css-loader??ref--5-1!../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../node_modules/postcss-loader/src??ref--5-2!./login.css?vue&type=style&index=2&id=0194e6e9&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./resources/css/login.css?vue&type=style&index=2&id=0194e6e9&scoped=true&lang=css&");
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_login_css_vue_type_style_index_2_id_0194e6e9_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_login_css_vue_type_style_index_2_id_0194e6e9_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_login_css_vue_type_style_index_2_id_0194e6e9_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_login_css_vue_type_style_index_2_id_0194e6e9_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_login_css_vue_type_style_index_2_id_0194e6e9_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ })
 

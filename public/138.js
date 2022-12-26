@@ -1,498 +1,67 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[138],{
 
-/***/ "./node_modules/Nestable/jquery.nestable.js":
-/*!**************************************************!*\
-  !*** ./node_modules/Nestable/jquery.nestable.js ***!
-  \**************************************************/
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/imagehover.css/css/imagehover.css?vue&type=style&index=0&lang=css&":
+/*!**********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--5-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--5-2!./node_modules/imagehover.css/css/imagehover.css?vue&type=style&index=0&lang=css& ***!
+  \**********************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {/*!
- * Nestable jQuery Plugin - Copyright (c) 2012 David Bushell - http://dbushell.com/
- * Dual-licensed under the BSD or MIT licenses
- */
-;(function($, window, document, undefined)
-{
-    var hasTouch = 'ontouchstart' in document;
+exports = module.exports = __webpack_require__(/*! ../../css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
 
-    /**
-     * Detect CSS pointer-events property
-     * events are normally disabled on the dragging element to avoid conflicts
-     * https://github.com/ausi/Feature-detection-technique-for-pointer-events/blob/master/modernizr-pointerevents.js
-     */
-    var hasPointerEvents = (function()
-    {
-        var el    = document.createElement('div'),
-            docEl = document.documentElement;
-        if (!('pointerEvents' in el.style)) {
-            return false;
-        }
-        el.style.pointerEvents = 'auto';
-        el.style.pointerEvents = 'x';
-        docEl.appendChild(el);
-        var supports = window.getComputedStyle && window.getComputedStyle(el, '').pointerEvents === 'auto';
-        docEl.removeChild(el);
-        return !!supports;
-    })();
 
-    var defaults = {
-            listNodeName    : 'ol',
-            itemNodeName    : 'li',
-            rootClass       : 'dd',
-            listClass       : 'dd-list',
-            itemClass       : 'dd-item',
-            dragClass       : 'dd-dragel',
-            handleClass     : 'dd-handle',
-            collapsedClass  : 'dd-collapsed',
-            placeClass      : 'dd-placeholder',
-            noDragClass     : 'dd-nodrag',
-            emptyClass      : 'dd-empty',
-            expandBtnHTML   : '<button data-action="expand" type="button">Expand</button>',
-            collapseBtnHTML : '<button data-action="collapse" type="button">Collapse</button>',
-            group           : 0,
-            maxDepth        : 5,
-            threshold       : 20
-        };
+// module
+exports.push([module.i, "@charset \"UTF-8\";\r\n/*!\r\n * ImageHover.css - http://www.imagehover.io\r\n * Version 1.0\r\n * Author: Ciarán Walsh\r\n\r\n * Made available under a MIT License:\r\n * http://www.opensource.org/licenses/mit-license.php\r\n\r\n */\n[class^='imghvr-'], [class*=' imghvr-'] {\r\n    position: relative;\r\n    display: inline-block;\r\n    margin: 0;\r\n    max-width: 100%;\r\n    background-color: #2266a5;\r\n    color: #fff;\r\n    overflow: hidden;\r\n    -webkit-backface-visibility: hidden;\r\n    backface-visibility: hidden;\r\n    -moz-osx-font-smoothing: grayscale;\r\n    -webkit-transform: translateZ(0);\r\n    -moz-transform: translateZ(0);\r\n    -ms-transform: translateZ(0);\r\n    -o-transform: translateZ(0);\r\n    transform: translateZ(0);\n}\n[class^='imghvr-'] > img, [class*=' imghvr-'] > img {\r\n    vertical-align: top;\r\n    max-width: 100%;\n}\n[class^='imghvr-'] figcaption, [class*=' imghvr-'] figcaption {\r\n    background-color: #135796;\r\n    padding: 30px;\r\n    position: absolute;\r\n    top: 0;\r\n    bottom: 0;\r\n    left: 0;\r\n    right: 0;\r\n    color: #ffffff;\n}\n[class^='imghvr-'] figcaption h1, [class^='imghvr-'] figcaption h2, [class^='imghvr-'] figcaption h3, [class^='imghvr-'] figcaption h4, [class^='imghvr-'] figcaption h5, [class^='imghvr-'] figcaption h6, [class*=' imghvr-'] figcaption h1, [class*=' imghvr-'] figcaption h2, [class*=' imghvr-'] figcaption h3, [class*=' imghvr-'] figcaption h4, [class*=' imghvr-'] figcaption h5, [class*=' imghvr-'] figcaption h6 {\r\n    color: #ffffff;\n}\n[class^='imghvr-'] a, [class*=' imghvr-'] a {\r\n    position: absolute;\r\n    top: 0;\r\n    bottom: 0;\r\n    left: 0;\r\n    right: 0;\r\n    z-index: 1;\n}\n[class^='imghvr-'], [class*=' imghvr-'], [class^='imghvr-']:before,\r\n[class^='imghvr-']:after, [class*=' imghvr-']:before, [class*=' imghvr-']:after,\r\n[class^='imghvr-'] *, [class*=' imghvr-'] *, [class^='imghvr-'] *:before,\r\n[class^='imghvr-'] *:after, [class*=' imghvr-'] *:before, [class*=' imghvr-'] *:after {\r\n    box-sizing: border-box;\r\n    -webkit-transition: all 0.35s ease;\r\n    -moz-transition: all 0.35s ease;\r\n    transition: all 0.35s ease;\n}\r\n\r\n/* imghvr-fade-*\r\n   ----------------------------- */\n[class^='imghvr-fade'] figcaption, [class*=' imghvr-fade'] figcaption {\r\n    opacity: 0;\n}\n[class^='imghvr-fade']:hover > img, [class*=' imghvr-fade']:hover > img {\r\n    opacity: 0;\n}\n[class^='imghvr-fade']:hover figcaption, [class*=' imghvr-fade']:hover figcaption {\r\n    opacity: 1;\n}\n[class^='imghvr-fade']:hover > img, [class^='imghvr-fade']:hover figcaption, [class*=' imghvr-fade']:hover > img, [class*=' imghvr-fade']:hover figcaption {\r\n    -webkit-transform: translate(0, 0);\r\n    -moz-transform: translate(0, 0);\r\n    -ms-transform: translate(0, 0);\r\n    -o-transform: translate(0, 0);\r\n    transform: translate(0, 0);\n}\r\n\r\n/* imghvr-fade\r\n   ----------------------------- */\r\n/* imghvr-fade-in-up\r\n   ----------------------------- */\n.imghvr-fade-in-up figcaption {\r\n    -webkit-transform: translate(0, 15%);\r\n    -moz-transform: translate(0, 15%);\r\n    -ms-transform: translate(0, 15%);\r\n    -o-transform: translate(0, 15%);\r\n    transform: translate(0, 15%);\n}\r\n\r\n/* imghvr-fade-in-down\r\n   ----------------------------- */\n.imghvr-fade-in-down figcaption {\r\n    -webkit-transform: translate(0, -15%);\r\n    -moz-transform: translate(0, -15%);\r\n    -ms-transform: translate(0, -15%);\r\n    -o-transform: translate(0, -15%);\r\n    transform: translate(0, -15%);\n}\r\n\r\n/* imghvr-fade-in-left\r\n   ----------------------------- */\n.imghvr-fade-in-left figcaption {\r\n    -webkit-transform: translate(-15%, 0);\r\n    -moz-transform: translate(-15%, 0);\r\n    -ms-transform: translate(-15%, 0);\r\n    -o-transform: translate(-15%, 0);\r\n    transform: translate(-15%, 0);\n}\r\n\r\n/* imghvr-fade-in-right\r\n   ----------------------------- */\n.imghvr-fade-in-right figcaption {\r\n    -webkit-transform: translate(15%, 0);\r\n    -moz-transform: translate(15%, 0);\r\n    -ms-transform: translate(15%, 0);\r\n    -o-transform: translate(15%, 0);\r\n    transform: translate(15%, 0);\n}\r\n\r\n/* imghvr-push-*\r\n   ----------------------------- */\n[class^='imghvr-push-']:hover figcaption, [class*=' imghvr-push-']:hover figcaption {\r\n    -webkit-transform: translate(0, 0);\r\n    -moz-transform: translate(0, 0);\r\n    -ms-transform: translate(0, 0);\r\n    -o-transform: translate(0, 0);\r\n    transform: translate(0, 0);\n}\r\n\r\n/* imghvr-push-up\r\n   ----------------------------- */\n.imghvr-push-up figcaption {\r\n    -webkit-transform: translateY(100%);\r\n    -moz-transform: translateY(100%);\r\n    -ms-transform: translateY(100%);\r\n    -o-transform: translateY(100%);\r\n    transform: translateY(100%);\n}\n.imghvr-push-up:hover > img {\r\n    -webkit-transform: translateY(-100%);\r\n    -moz-transform: translateY(-100%);\r\n    -ms-transform: translateY(-100%);\r\n    -o-transform: translateY(-100%);\r\n    transform: translateY(-100%);\n}\r\n\r\n/* imghvr-push-down\r\n   ----------------------------- */\n.imghvr-push-down figcaption {\r\n    -webkit-transform: translateY(-100%);\r\n    -moz-transform: translateY(-100%);\r\n    -ms-transform: translateY(-100%);\r\n    -o-transform: translateY(-100%);\r\n    transform: translateY(-100%);\n}\n.imghvr-push-down:hover > img {\r\n    -webkit-transform: translateY(100%);\r\n    -moz-transform: translateY(100%);\r\n    -ms-transform: translateY(100%);\r\n    -o-transform: translateY(100%);\r\n    transform: translateY(100%);\n}\r\n\r\n/* imghvr-push-left\r\n   ----------------------------- */\n.imghvr-push-left figcaption {\r\n    -webkit-transform: translateX(100%);\r\n    -moz-transform: translateX(100%);\r\n    -ms-transform: translateX(100%);\r\n    -o-transform: translateX(100%);\r\n    transform: translateX(100%);\n}\n.imghvr-push-left:hover > img {\r\n    -webkit-transform: translateX(-100%);\r\n    -moz-transform: translateX(-100%);\r\n    -ms-transform: translateX(-100%);\r\n    -o-transform: translateX(-100%);\r\n    transform: translateX(-100%);\n}\r\n\r\n/* imghvr-push--right\r\n   ----------------------------- */\n.imghvr-push-right figcaption {\r\n    -webkit-transform: translateX(-100%);\r\n    -moz-transform: translateX(-100%);\r\n    -ms-transform: translateX(-100%);\r\n    -o-transform: translateX(-100%);\r\n    transform: translateX(-100%);\n}\n.imghvr-push-right:hover > img {\r\n    -webkit-transform: translateX(100%);\r\n    -moz-transform: translateX(100%);\r\n    -ms-transform: translateX(100%);\r\n    -o-transform: translateX(100%);\r\n    transform: translateX(100%);\n}\r\n\r\n/* imghvr-slide-*\r\n   ----------------------------- */\n[class^='imghvr-slide-']:hover figcaption, [class*=' imghvr-slide-']:hover figcaption {\r\n    -webkit-transform: translate(0, 0);\r\n    -moz-transform: translate(0, 0);\r\n    -ms-transform: translate(0, 0);\r\n    -o-transform: translate(0, 0);\r\n    transform: translate(0, 0);\n}\r\n\r\n/* imghvr-slide-up\r\n   ----------------------------- */\n.imghvr-slide-up figcaption {\r\n    -webkit-transform: translateY(100%);\r\n    -moz-transform: translateY(100%);\r\n    -ms-transform: translateY(100%);\r\n    -o-transform: translateY(100%);\r\n    transform: translateY(100%);\n}\r\n\r\n/* imghvr-slide-down\r\n   ----------------------------- */\n.imghvr-slide-down figcaption {\r\n    -webkit-transform: translateY(-100%);\r\n    -moz-transform: translateY(-100%);\r\n    -ms-transform: translateY(-100%);\r\n    -o-transform: translateY(-100%);\r\n    transform: translateY(-100%);\n}\r\n\r\n/* imghvr-slide-left\r\n   ----------------------------- */\n.imghvr-slide-left figcaption {\r\n    -webkit-transform: translateX(100%);\r\n    -moz-transform: translateX(100%);\r\n    -ms-transform: translateX(100%);\r\n    -o-transform: translateX(100%);\r\n    transform: translateX(100%);\n}\r\n\r\n/* imghvr-slide-right\r\n   ----------------------------- */\n.imghvr-slide-right figcaption {\r\n    -webkit-transform: translateX(-100%);\r\n    -moz-transform: translateX(-100%);\r\n    -ms-transform: translateX(-100%);\r\n    -o-transform: translateX(-100%);\r\n    transform: translateX(-100%);\n}\r\n\r\n/* imghvr-slide-top-left\r\n   ----------------------------- */\n.imghvr-slide-top-left figcaption {\r\n    -webkit-transform: translate(-100%, -100%);\r\n    -moz-transform: translate(-100%, -100%);\r\n    -ms-transform: translate(-100%, -100%);\r\n    -o-transform: translate(-100%, -100%);\r\n    transform: translate(-100%, -100%);\n}\r\n\r\n/* imghvr-slide-top-right\r\n   ----------------------------- */\n.imghvr-slide-top-right figcaption {\r\n    -webkit-transform: translate(100%, -100%);\r\n    -moz-transform: translate(100%, -100%);\r\n    -ms-transform: translate(100%, -100%);\r\n    -o-transform: translate(100%, -100%);\r\n    transform: translate(100%, -100%);\n}\r\n\r\n/* imghvr-slide-bottom-left\r\n   ----------------------------- */\n.imghvr-slide-bottom-left figcaption {\r\n    -webkit-transform: translate(-100%, 100%);\r\n    -moz-transform: translate(-100%, 100%);\r\n    -ms-transform: translate(-100%, 100%);\r\n    -o-transform: translate(-100%, 100%);\r\n    transform: translate(-100%, 100%);\n}\r\n\r\n/* imghvr-slide-bottom-right\r\n   ----------------------------- */\n.imghvr-slide-bottom-right figcaption {\r\n    -webkit-transform: translate(100%, 100%);\r\n    -moz-transform: translate(100%, 100%);\r\n    -ms-transform: translate(100%, 100%);\r\n    -o-transform: translate(100%, 100%);\r\n    transform: translate(100%, 100%);\n}\r\n\r\n/* imghvr-reveal-*\r\n   ----------------------------- */\n[class^='imghvr-reveal-']:before, [class*=' imghvr-reveal-']:before {\r\n    position: absolute;\r\n    top: 0;\r\n    bottom: 0;\r\n    left: 0;\r\n    right: 0;\r\n    content: '';\r\n    background-color: #135796;\n}\n[class^='imghvr-reveal-'] figcaption, [class*=' imghvr-reveal-'] figcaption {\r\n    opacity: 0;\n}\n[class^='imghvr-reveal-']:hover:before, [class*=' imghvr-reveal-']:hover:before {\r\n    -webkit-transform: translate(0, 0);\r\n    -moz-transform: translate(0, 0);\r\n    -ms-transform: translate(0, 0);\r\n    -o-transform: translate(0, 0);\r\n    transform: translate(0, 0);\n}\n[class^='imghvr-reveal-']:hover figcaption, [class*=' imghvr-reveal-']:hover figcaption {\r\n    opacity: 1;\r\n    -webkit-transition-delay: 0.21s;\r\n    -moz-transition-delay: 0.21s;\r\n    transition-delay: 0.21s;\n}\r\n\r\n/* imghvr-reveal-up\r\n   ----------------------------- */\n.imghvr-reveal-up:before {\r\n    -webkit-transform: translateY(100%);\r\n    -moz-transform: translateY(100%);\r\n    -ms-transform: translateY(100%);\r\n    -o-transform: translateY(100%);\r\n    transform: translateY(100%);\n}\r\n\r\n/* imghvr-reveal-down\r\n   ----------------------------- */\n.imghvr-reveal-down:before {\r\n    -webkit-transform: translateY(-100%);\r\n    -moz-transform: translateY(-100%);\r\n    -ms-transform: translateY(-100%);\r\n    -o-transform: translateY(-100%);\r\n    transform: translateY(-100%);\n}\r\n\r\n/* imghvr-reveal-left\r\n   ----------------------------- */\n.imghvr-reveal-left:before {\r\n    -webkit-transform: translateX(100%);\r\n    -moz-transform: translateX(100%);\r\n    -ms-transform: translateX(100%);\r\n    -o-transform: translateX(100%);\r\n    transform: translateX(100%);\n}\r\n\r\n/* imghvr-reveal-right\r\n   ----------------------------- */\n.imghvr-reveal-right:before {\r\n    -webkit-transform: translateX(-100%);\r\n    -moz-transform: translateX(-100%);\r\n    -ms-transform: translateX(-100%);\r\n    -o-transform: translateX(-100%);\r\n    transform: translateX(-100%);\n}\r\n\r\n/* imghvr-reveal-top-left\r\n   ----------------------------- */\n.imghvr-reveal-top-left:before {\r\n    -webkit-transform: translate(-100%, -100%);\r\n    -moz-transform: translate(-100%, -100%);\r\n    -ms-transform: translate(-100%, -100%);\r\n    -o-transform: translate(-100%, -100%);\r\n    transform: translate(-100%, -100%);\n}\r\n\r\n/* imghvr-reveal-top-right\r\n   ----------------------------- */\n.imghvr-reveal-top-right:before {\r\n    -webkit-transform: translate(100%, -100%);\r\n    -moz-transform: translate(100%, -100%);\r\n    -ms-transform: translate(100%, -100%);\r\n    -o-transform: translate(100%, -100%);\r\n    transform: translate(100%, -100%);\n}\r\n\r\n/* imghvr-reveal-bottom-left\r\n   ----------------------------- */\n.imghvr-reveal-bottom-left:before {\r\n    -webkit-transform: translate(-100%, 100%);\r\n    -moz-transform: translate(-100%, 100%);\r\n    -ms-transform: translate(-100%, 100%);\r\n    -o-transform: translate(-100%, 100%);\r\n    transform: translate(-100%, 100%);\n}\r\n\r\n/* imghvr-reveal-bottom-right\r\n   ----------------------------- */\n.imghvr-reveal-bottom-right:before {\r\n    -webkit-transform: translate(100%, 100%);\r\n    -moz-transform: translate(100%, 100%);\r\n    -ms-transform: translate(100%, 100%);\r\n    -o-transform: translate(100%, 100%);\r\n    transform: translate(100%, 100%);\n}\r\n\r\n/* imghvr-hinge-*\r\n   ----------------------------- */\n[class^='imghvr-hinge-'], [class*=' imghvr-hinge-'] {\r\n    -webkit-perspective: 50em;\r\n    -moz-perspective: 50em;\r\n    perspective: 50em;\n}\n[class^='imghvr-hinge-'] figcaption, [class*=' imghvr-hinge-'] figcaption {\r\n    opacity: 0;\r\n    z-index: 1;\n}\n[class^='imghvr-hinge-']:hover img, [class*=' imghvr-hinge-']:hover img {\r\n    opacity: 0;\n}\n[class^='imghvr-hinge-']:hover figcaption, [class*=' imghvr-hinge-']:hover figcaption {\r\n    opacity: 1;\r\n    -webkit-transition-delay: 0.21s;\r\n    -moz-transition-delay: 0.21s;\r\n    transition-delay: 0.21s;\n}\r\n\r\n/* imghvr-hinge-up\r\n   ----------------------------- */\n.imghvr-hinge-up img {\r\n    -webkit-transform-origin: 50% 0%;\r\n    -moz-transform-origin: 50% 0%;\r\n    -ms-transform-origin: 50% 0%;\r\n    -o-transform-origin: 50% 0%;\r\n    transform-origin: 50% 0%;\n}\n.imghvr-hinge-up figcaption {\r\n    -webkit-transform: rotateX(90deg);\r\n    -moz-transform: rotateX(90deg);\r\n    -ms-transform: rotateX(90deg);\r\n    -o-transform: rotateX(90deg);\r\n    transform: rotateX(90deg);\r\n    -webkit-transform-origin: 50% 100%;\r\n    -moz-transform-origin: 50% 100%;\r\n    -ms-transform-origin: 50% 100%;\r\n    -o-transform-origin: 50% 100%;\r\n    transform-origin: 50% 100%;\n}\n.imghvr-hinge-up:hover > img {\r\n    -webkit-transform: rotateX(-90deg);\r\n    -moz-transform: rotateX(-90deg);\r\n    -ms-transform: rotateX(-90deg);\r\n    -o-transform: rotateX(-90deg);\r\n    transform: rotateX(-90deg);\n}\n.imghvr-hinge-up:hover figcaption {\r\n    -webkit-transform: rotateX(0);\r\n    -moz-transform: rotateX(0);\r\n    -ms-transform: rotateX(0);\r\n    -o-transform: rotateX(0);\r\n    transform: rotateX(0);\n}\r\n\r\n/* imghvr-hinge-down\r\n   ----------------------------- */\n.imghvr-hinge-down img {\r\n    -webkit-transform-origin: 50% 100%;\r\n    -moz-transform-origin: 50% 100%;\r\n    -ms-transform-origin: 50% 100%;\r\n    -o-transform-origin: 50% 100%;\r\n    transform-origin: 50% 100%;\n}\n.imghvr-hinge-down figcaption {\r\n    -webkit-transform: rotateX(-90deg);\r\n    -moz-transform: rotateX(-90deg);\r\n    -ms-transform: rotateX(-90deg);\r\n    -o-transform: rotateX(-90deg);\r\n    transform: rotateX(-90deg);\r\n    -webkit-transform-origin: 50% -50%;\r\n    -moz-transform-origin: 50% -50%;\r\n    -ms-transform-origin: 50% -50%;\r\n    -o-transform-origin: 50% -50%;\r\n    transform-origin: 50% -50%;\n}\n.imghvr-hinge-down:hover > img {\r\n    -webkit-transform: rotateX(90deg);\r\n    -moz-transform: rotateX(90deg);\r\n    -ms-transform: rotateX(90deg);\r\n    -o-transform: rotateX(90deg);\r\n    transform: rotateX(90deg);\r\n    opacity: 0;\n}\n.imghvr-hinge-down:hover figcaption {\r\n    -webkit-transform: rotateX(0);\r\n    -moz-transform: rotateX(0);\r\n    -ms-transform: rotateX(0);\r\n    -o-transform: rotateX(0);\r\n    transform: rotateX(0);\n}\r\n\r\n/* imghvr-hinge-left\r\n   ----------------------------- */\n.imghvr-hinge-left img {\r\n    -webkit-transform-origin: 0% 50%;\r\n    -moz-transform-origin: 0% 50%;\r\n    -ms-transform-origin: 0% 50%;\r\n    -o-transform-origin: 0% 50%;\r\n    transform-origin: 0% 50%;\n}\n.imghvr-hinge-left figcaption {\r\n    -webkit-transform: rotateY(-90deg);\r\n    -moz-transform: rotateY(-90deg);\r\n    -ms-transform: rotateY(-90deg);\r\n    -o-transform: rotateY(-90deg);\r\n    transform: rotateY(-90deg);\r\n    -webkit-transform-origin: 100% 50%;\r\n    -moz-transform-origin: 100% 50%;\r\n    -ms-transform-origin: 100% 50%;\r\n    -o-transform-origin: 100% 50%;\r\n    transform-origin: 100% 50%;\n}\n.imghvr-hinge-left:hover > img {\r\n    -webkit-transform: rotateY(90deg);\r\n    -moz-transform: rotateY(90deg);\r\n    -ms-transform: rotateY(90deg);\r\n    -o-transform: rotateY(90deg);\r\n    transform: rotateY(90deg);\n}\n.imghvr-hinge-left:hover figcaption {\r\n    -webkit-transform: rotateY(0);\r\n    -moz-transform: rotateY(0);\r\n    -ms-transform: rotateY(0);\r\n    -o-transform: rotateY(0);\r\n    transform: rotateY(0);\n}\r\n\r\n/* imghvr-hinge-right\r\n   ----------------------------- */\n.imghvr-hinge-right img {\r\n    -webkit-transform-origin: 100% 50%;\r\n    -moz-transform-origin: 100% 50%;\r\n    -ms-transform-origin: 100% 50%;\r\n    -o-transform-origin: 100% 50%;\r\n    transform-origin: 100% 50%;\n}\n.imghvr-hinge-right figcaption {\r\n    -webkit-transform: rotateY(90deg);\r\n    -moz-transform: rotateY(90deg);\r\n    -ms-transform: rotateY(90deg);\r\n    -o-transform: rotateY(90deg);\r\n    transform: rotateY(90deg);\r\n    -webkit-transform-origin: 0 50%;\r\n    -moz-transform-origin: 0 50%;\r\n    -ms-transform-origin: 0 50%;\r\n    -o-transform-origin: 0 50%;\r\n    transform-origin: 0 50%;\n}\n.imghvr-hinge-right:hover > img {\r\n    -webkit-transform: rotateY(-90deg);\r\n    -moz-transform: rotateY(-90deg);\r\n    -ms-transform: rotateY(-90deg);\r\n    -o-transform: rotateY(-90deg);\r\n    transform: rotateY(-90deg);\n}\n.imghvr-hinge-right:hover figcaption {\r\n    -webkit-transform: rotateY(0);\r\n    -moz-transform: rotateY(0);\r\n    -ms-transform: rotateY(0);\r\n    -o-transform: rotateY(0);\r\n    transform: rotateY(0);\n}\r\n\r\n/* imghvr-flip-*\r\n   ----------------------------- */\n[class^='imghvr-flip-'], [class*=' imghvr-flip-'] {\r\n    -webkit-perspective: 50em;\r\n    -moz-perspective: 50em;\r\n    perspective: 50em;\n}\n[class^='imghvr-flip-'] img, [class*=' imghvr-flip-'] img {\r\n    backface-visibility: hidden;\n}\n[class^='imghvr-flip-'] figcaption, [class*=' imghvr-flip-'] figcaption {\r\n    opacity: 0;\n}\n[class^='imghvr-flip-']:hover > img, [class*=' imghvr-flip-']:hover > img {\r\n    opacity: 0;\n}\n[class^='imghvr-flip-']:hover figcaption, [class*=' imghvr-flip-']:hover figcaption {\r\n    opacity: 1;\r\n    -webkit-transition-delay: 0.14s;\r\n    -moz-transition-delay: 0.14s;\r\n    transition-delay: 0.14s;\n}\r\n\r\n/* imghvr-flip-horiz\r\n   ----------------------------- */\n.imghvr-flip-horiz figcaption {\r\n    -webkit-transform: rotateX(90deg);\r\n    -moz-transform: rotateX(90deg);\r\n    -ms-transform: rotateX(90deg);\r\n    -o-transform: rotateX(90deg);\r\n    transform: rotateX(90deg);\r\n    -webkit-transform-origin: 0% 50%;\r\n    -moz-transform-origin: 0% 50%;\r\n    -ms-transform-origin: 0% 50%;\r\n    -o-transform-origin: 0% 50%;\r\n    transform-origin: 0% 50%;\n}\n.imghvr-flip-horiz:hover img {\r\n    -webkit-transform: rotateX(-180deg);\r\n    -moz-transform: rotateX(-180deg);\r\n    -ms-transform: rotateX(-180deg);\r\n    -o-transform: rotateX(-180deg);\r\n    transform: rotateX(-180deg);\n}\n.imghvr-flip-horiz:hover figcaption {\r\n    -webkit-transform: rotateX(0deg);\r\n    -moz-transform: rotateX(0deg);\r\n    -ms-transform: rotateX(0deg);\r\n    -o-transform: rotateX(0deg);\r\n    transform: rotateX(0deg);\n}\r\n\r\n/* imghvr-flip-vert\r\n   ----------------------------- */\n.imghvr-flip-vert figcaption {\r\n    -webkit-transform: rotateY(90deg);\r\n    -moz-transform: rotateY(90deg);\r\n    -ms-transform: rotateY(90deg);\r\n    -o-transform: rotateY(90deg);\r\n    transform: rotateY(90deg);\r\n    -webkit-transform-origin: 50% 0%;\r\n    -moz-transform-origin: 50% 0%;\r\n    -ms-transform-origin: 50% 0%;\r\n    -o-transform-origin: 50% 0%;\r\n    transform-origin: 50% 0%;\n}\n.imghvr-flip-vert:hover > img {\r\n    -webkit-transform: rotateY(-180deg);\r\n    -moz-transform: rotateY(-180deg);\r\n    -ms-transform: rotateY(-180deg);\r\n    -o-transform: rotateY(-180deg);\r\n    transform: rotateY(-180deg);\n}\n.imghvr-flip-vert:hover figcaption {\r\n    -webkit-transform: rotateY(0deg);\r\n    -moz-transform: rotateY(0deg);\r\n    -ms-transform: rotateY(0deg);\r\n    -o-transform: rotateY(0deg);\r\n    transform: rotateY(0deg);\n}\r\n\r\n/* imghvr-flip-diag-1\r\n   ----------------------------- */\n.imghvr-flip-diag-1 figcaption {\r\n    -webkit-transform: rotate3d(1, -1, 0, 100deg);\r\n    -moz-transform: rotate3d(1, -1, 0, 100deg);\r\n    -ms-transform: rotate3d(1, -1, 0, 100deg);\r\n    -o-transform: rotate3d(1, -1, 0, 100deg);\r\n    transform: rotate3d(1, -1, 0, 100deg);\n}\n.imghvr-flip-diag-1:hover > img {\r\n    -webkit-transform: rotate3d(-1, 1, 0, 100deg);\r\n    -moz-transform: rotate3d(-1, 1, 0, 100deg);\r\n    -ms-transform: rotate3d(-1, 1, 0, 100deg);\r\n    -o-transform: rotate3d(-1, 1, 0, 100deg);\r\n    transform: rotate3d(-1, 1, 0, 100deg);\n}\n.imghvr-flip-diag-1:hover figcaption {\r\n    -webkit-transform: rotate3d(0, 0, 0, 0deg);\r\n    -moz-transform: rotate3d(0, 0, 0, 0deg);\r\n    -ms-transform: rotate3d(0, 0, 0, 0deg);\r\n    -o-transform: rotate3d(0, 0, 0, 0deg);\r\n    transform: rotate3d(0, 0, 0, 0deg);\n}\r\n\r\n/* imghvr-flip-diag-2\r\n   ----------------------------- */\n.imghvr-flip-diag-2 figcaption {\r\n    -webkit-transform: rotate3d(1, 1, 0, 100deg);\r\n    -moz-transform: rotate3d(1, 1, 0, 100deg);\r\n    -ms-transform: rotate3d(1, 1, 0, 100deg);\r\n    -o-transform: rotate3d(1, 1, 0, 100deg);\r\n    transform: rotate3d(1, 1, 0, 100deg);\n}\n.imghvr-flip-diag-2:hover > img {\r\n    -webkit-transform: rotate3d(-1, -1, 0, 100deg);\r\n    -moz-transform: rotate3d(-1, -1, 0, 100deg);\r\n    -ms-transform: rotate3d(-1, -1, 0, 100deg);\r\n    -o-transform: rotate3d(-1, -1, 0, 100deg);\r\n    transform: rotate3d(-1, -1, 0, 100deg);\n}\n.imghvr-flip-diag-2:hover figcaption {\r\n    -webkit-transform: rotate3d(0, 0, 0, 0deg);\r\n    -moz-transform: rotate3d(0, 0, 0, 0deg);\r\n    -ms-transform: rotate3d(0, 0, 0, 0deg);\r\n    -o-transform: rotate3d(0, 0, 0, 0deg);\r\n    transform: rotate3d(0, 0, 0, 0deg);\n}\r\n\r\n/* imghvr-shutter-out-*\r\n   ----------------------------- */\n[class^='imghvr-shutter-out-']:before, [class*=' imghvr-shutter-out-']:before {\r\n    background: #135796;\r\n    position: absolute;\r\n    content: '';\r\n    -webkit-transition-delay: 0.105s;\r\n    -moz-transition-delay: 0.105s;\r\n    transition-delay: 0.105s;\n}\n[class^='imghvr-shutter-out-'] figcaption, [class*=' imghvr-shutter-out-'] figcaption {\r\n    opacity: 0;\r\n    -webkit-transition-delay: 0s;\r\n    -moz-transition-delay: 0s;\r\n    transition-delay: 0s;\n}\n[class^='imghvr-shutter-out-']:hover:before, [class*=' imghvr-shutter-out-']:hover:before {\r\n    -webkit-transition-delay: 0s;\r\n    -moz-transition-delay: 0s;\r\n    transition-delay: 0s;\n}\n[class^='imghvr-shutter-out-']:hover figcaption, [class*=' imghvr-shutter-out-']:hover figcaption {\r\n    opacity: 1;\r\n    -webkit-transition-delay: 0.105s;\r\n    -moz-transition-delay: 0.105s;\r\n    transition-delay: 0.105s;\n}\r\n\r\n/* imghvr-shutter-out-horiz\r\n   ----------------------------- */\n.imghvr-shutter-out-horiz:before {\r\n    left: 50%;\r\n    right: 50%;\r\n    top: 0;\r\n    bottom: 0;\n}\n.imghvr-shutter-out-horiz:hover:before {\r\n    left: 0;\r\n    right: 0;\n}\r\n\r\n/* imghvr-shutter-out-vert\r\n   ----------------------------- */\n.imghvr-shutter-out-vert:before {\r\n    top: 50%;\r\n    bottom: 50%;\r\n    left: 0;\r\n    right: 0;\n}\n.imghvr-shutter-out-vert:hover:before {\r\n    top: 0;\r\n    bottom: 0;\n}\r\n\r\n/* imghvr-shutter-out-diag-1\r\n   ----------------------------- */\n.imghvr-shutter-out-diag-1:before {\r\n    top: 50%;\r\n    bottom: 50%;\r\n    left: -35%;\r\n    right: -35%;\r\n    -webkit-transform: rotate(45deg);\r\n    -moz-transform: rotate(45deg);\r\n    -ms-transform: rotate(45deg);\r\n    -o-transform: rotate(45deg);\r\n    transform: rotate(45deg);\n}\n.imghvr-shutter-out-diag-1:hover:before {\r\n    top: -35%;\r\n    bottom: -35%;\n}\r\n\r\n/* imghvr-shutter-out-diag-2\r\n   ----------------------------- */\n.imghvr-shutter-out-diag-2:before {\r\n    top: 50%;\r\n    bottom: 50%;\r\n    left: -35%;\r\n    right: -35%;\r\n    -webkit-transform: rotate(-45deg);\r\n    -moz-transform: rotate(-45deg);\r\n    -ms-transform: rotate(-45deg);\r\n    -o-transform: rotate(-45deg);\r\n    transform: rotate(-45deg);\n}\n.imghvr-shutter-out-diag-2:hover:before {\r\n    top: -35%;\r\n    bottom: -35%;\n}\r\n\r\n/* imghvr-shutter-in-*\r\n   ----------------------------- */\n[class^='imghvr-shutter-in-']:after, [class^='imghvr-shutter-in-']:before, [class*=' imghvr-shutter-in-']:after, [class*=' imghvr-shutter-in-']:before {\r\n    background: #135796;\r\n    position: absolute;\r\n    content: '';\n}\n[class^='imghvr-shutter-in-']:after, [class*=' imghvr-shutter-in-']:after {\r\n    top: 0;\r\n    left: 0;\n}\n[class^='imghvr-shutter-in-']:before, [class*=' imghvr-shutter-in-']:before {\r\n    right: 0;\r\n    bottom: 0;\n}\n[class^='imghvr-shutter-in-'] figcaption, [class*=' imghvr-shutter-in-'] figcaption {\r\n    opacity: 0;\r\n    z-index: 1;\n}\n[class^='imghvr-shutter-in-']:hover figcaption, [class*=' imghvr-shutter-in-']:hover figcaption {\r\n    opacity: 1;\r\n    -webkit-transition-delay: 0.21s;\r\n    -moz-transition-delay: 0.21s;\r\n    transition-delay: 0.21s;\n}\r\n\r\n/* imghvr-shutter-in-horiz\r\n   ----------------------------- */\n.imghvr-shutter-in-horiz:after, .imghvr-shutter-in-horiz:before {\r\n    width: 0;\r\n    height: 100%;\n}\n.imghvr-shutter-in-horiz:hover:after, .imghvr-shutter-in-horiz:hover:before {\r\n    width: 50%;\n}\r\n\r\n/* imghvr-shutter-in-vert\r\n   ----------------------------- */\n.imghvr-shutter-in-vert:after, .imghvr-shutter-in-vert:before {\r\n    height: 0;\r\n    width: 100%;\n}\n.imghvr-shutter-in-vert:hover:after, .imghvr-shutter-in-vert:hover:before {\r\n    height: 50%;\n}\r\n\r\n/* imghvr-shutter-in-out-horiz\r\n   ----------------------------- */\n.imghvr-shutter-in-out-horiz:after, .imghvr-shutter-in-out-horiz:before {\r\n    width: 0;\r\n    height: 100%;\r\n    opacity: 0.75;\n}\n.imghvr-shutter-in-out-horiz:hover:after, .imghvr-shutter-in-out-horiz:hover:before {\r\n    width: 100%;\n}\r\n\r\n/* imghvr-shutter-in-out-vert\r\n   ----------------------------- */\n.imghvr-shutter-in-out-vert:after, .imghvr-shutter-in-out-vert:before {\r\n    height: 0;\r\n    width: 100%;\r\n    opacity: 0.75;\n}\n.imghvr-shutter-in-out-vert:hover:after, .imghvr-shutter-in-out-vert:hover:before {\r\n    height: 100%;\n}\r\n\r\n/* imghvr-shutter-in-out-diag-1\r\n   ----------------------------- */\n.imghvr-shutter-in-out-diag-1:after, .imghvr-shutter-in-out-diag-1:before {\r\n    width: 200%;\r\n    height: 200%;\r\n    -webkit-transition: all 0.6s ease;\r\n    -moz-transition: all 0.6s ease;\r\n    transition: all 0.6s ease;\r\n    opacity: 0.75;\n}\n.imghvr-shutter-in-out-diag-1:after {\r\n    -webkit-transform: skew(-45deg) translateX(-150%);\r\n    -moz-transform: skew(-45deg) translateX(-150%);\r\n    -ms-transform: skew(-45deg) translateX(-150%);\r\n    -o-transform: skew(-45deg) translateX(-150%);\r\n    transform: skew(-45deg) translateX(-150%);\n}\n.imghvr-shutter-in-out-diag-1:before {\r\n    -webkit-transform: skew(-45deg) translateX(150%);\r\n    -moz-transform: skew(-45deg) translateX(150%);\r\n    -ms-transform: skew(-45deg) translateX(150%);\r\n    -o-transform: skew(-45deg) translateX(150%);\r\n    transform: skew(-45deg) translateX(150%);\n}\n.imghvr-shutter-in-out-diag-1:hover:after {\r\n    -webkit-transform: skew(-45deg) translateX(-50%);\r\n    -moz-transform: skew(-45deg) translateX(-50%);\r\n    -ms-transform: skew(-45deg) translateX(-50%);\r\n    -o-transform: skew(-45deg) translateX(-50%);\r\n    transform: skew(-45deg) translateX(-50%);\n}\n.imghvr-shutter-in-out-diag-1:hover:before {\r\n    -webkit-transform: skew(-45deg) translateX(50%);\r\n    -moz-transform: skew(-45deg) translateX(50%);\r\n    -ms-transform: skew(-45deg) translateX(50%);\r\n    -o-transform: skew(-45deg) translateX(50%);\r\n    transform: skew(-45deg) translateX(50%);\n}\r\n\r\n/* imghvr-shutter-in-out-diag-2\r\n   ----------------------------- */\n.imghvr-shutter-in-out-diag-2:after, .imghvr-shutter-in-out-diag-2:before {\r\n    width: 200%;\r\n    height: 200%;\r\n    -webkit-transition: all 0.6s ease;\r\n    -moz-transition: all 0.6s ease;\r\n    transition: all 0.6s ease;\r\n    opacity: 0.75;\n}\n.imghvr-shutter-in-out-diag-2:after {\r\n    -webkit-transform: skew(45deg) translateX(-100%);\r\n    -moz-transform: skew(45deg) translateX(-100%);\r\n    -ms-transform: skew(45deg) translateX(-100%);\r\n    -o-transform: skew(45deg) translateX(-100%);\r\n    transform: skew(45deg) translateX(-100%);\n}\n.imghvr-shutter-in-out-diag-2:before {\r\n    -webkit-transform: skew(45deg) translateX(100%);\r\n    -moz-transform: skew(45deg) translateX(100%);\r\n    -ms-transform: skew(45deg) translateX(100%);\r\n    -o-transform: skew(45deg) translateX(100%);\r\n    transform: skew(45deg) translateX(100%);\n}\n.imghvr-shutter-in-out-diag-2:hover:after {\r\n    -webkit-transform: skew(45deg) translateX(0%);\r\n    -moz-transform: skew(45deg) translateX(0%);\r\n    -ms-transform: skew(45deg) translateX(0%);\r\n    -o-transform: skew(45deg) translateX(0%);\r\n    transform: skew(45deg) translateX(0%);\n}\n.imghvr-shutter-in-out-diag-2:hover:before {\r\n    -webkit-transform: skew(45deg) translateX(0%);\r\n    -moz-transform: skew(45deg) translateX(0%);\r\n    -ms-transform: skew(45deg) translateX(0%);\r\n    -o-transform: skew(45deg) translateX(0%);\r\n    transform: skew(45deg) translateX(0%);\n}\r\n\r\n/* imghvr-fold*\r\n   ----------------------------- */\n[class^='imghvr-fold'], [class*=' imghvr-fold'] {\r\n    -webkit-perspective: 50em;\r\n    -moz-perspective: 50em;\r\n    perspective: 50em;\n}\n[class^='imghvr-fold'] img, [class*=' imghvr-fold'] img {\r\n    -webkit-transform-origin: 50% 0%;\r\n    -moz-transform-origin: 50% 0%;\r\n    -ms-transform-origin: 50% 0%;\r\n    -o-transform-origin: 50% 0%;\r\n    transform-origin: 50% 0%;\n}\n[class^='imghvr-fold'] figcaption, [class*=' imghvr-fold'] figcaption {\r\n    z-index: 1;\r\n    opacity: 0;\n}\n[class^='imghvr-fold']:hover > img, [class*=' imghvr-fold']:hover > img {\r\n    opacity: 0;\r\n    -webkit-transition-delay: 0;\r\n    -moz-transition-delay: 0;\r\n    transition-delay: 0;\n}\n[class^='imghvr-fold']:hover figcaption, [class*=' imghvr-fold']:hover figcaption {\r\n    -webkit-transform: rotateX(0) translate3d(0, 0%, 0) scale(1);\r\n    -moz-transform: rotateX(0) translate3d(0, 0%, 0) scale(1);\r\n    -ms-transform: rotateX(0) translate3d(0, 0%, 0) scale(1);\r\n    -o-transform: rotateX(0) translate3d(0, 0%, 0) scale(1);\r\n    transform: rotateX(0) translate3d(0, 0%, 0) scale(1);\r\n    opacity: 1;\r\n    -webkit-transition-delay: 0.21s;\r\n    -moz-transition-delay: 0.21s;\r\n    transition-delay: 0.21s;\n}\r\n\r\n/* imghvr-fold-up\r\n   ----------------------------- */\n.imghvr-fold-up > img {\r\n    -webkit-transform-origin: 50% 0%;\r\n    -moz-transform-origin: 50% 0%;\r\n    -ms-transform-origin: 50% 0%;\r\n    -o-transform-origin: 50% 0%;\r\n    transform-origin: 50% 0%;\n}\n.imghvr-fold-up figcaption {\r\n    -webkit-transform: rotateX(-90deg) translate3d(0%, -50%, 0) scale(0.6);\r\n    -moz-transform: rotateX(-90deg) translate3d(0%, -50%, 0) scale(0.6);\r\n    -ms-transform: rotateX(-90deg) translate3d(0%, -50%, 0) scale(0.6);\r\n    -o-transform: rotateX(-90deg) translate3d(0%, -50%, 0) scale(0.6);\r\n    transform: rotateX(-90deg) translate3d(0%, -50%, 0) scale(0.6);\r\n    -webkit-transform-origin: 50% 100%;\r\n    -moz-transform-origin: 50% 100%;\r\n    -ms-transform-origin: 50% 100%;\r\n    -o-transform-origin: 50% 100%;\r\n    transform-origin: 50% 100%;\n}\n.imghvr-fold-up:hover > img {\r\n    -webkit-transform: rotateX(90deg) scale(0.6) translateY(50%);\r\n    -moz-transform: rotateX(90deg) scale(0.6) translateY(50%);\r\n    -ms-transform: rotateX(90deg) scale(0.6) translateY(50%);\r\n    -o-transform: rotateX(90deg) scale(0.6) translateY(50%);\r\n    transform: rotateX(90deg) scale(0.6) translateY(50%);\n}\r\n\r\n/* imghvr-fold-down\r\n   ----------------------------- */\n.imghvr-fold-down > img {\r\n    -webkit-transform-origin: 50% 100%;\r\n    -moz-transform-origin: 50% 100%;\r\n    -ms-transform-origin: 50% 100%;\r\n    -o-transform-origin: 50% 100%;\r\n    transform-origin: 50% 100%;\n}\n.imghvr-fold-down figcaption {\r\n    -webkit-transform: rotateX(90deg) translate3d(0%, 50%, 0) scale(0.6);\r\n    -moz-transform: rotateX(90deg) translate3d(0%, 50%, 0) scale(0.6);\r\n    -ms-transform: rotateX(90deg) translate3d(0%, 50%, 0) scale(0.6);\r\n    -o-transform: rotateX(90deg) translate3d(0%, 50%, 0) scale(0.6);\r\n    transform: rotateX(90deg) translate3d(0%, 50%, 0) scale(0.6);\r\n    -webkit-transform-origin: 50% 0%;\r\n    -moz-transform-origin: 50% 0%;\r\n    -ms-transform-origin: 50% 0%;\r\n    -o-transform-origin: 50% 0%;\r\n    transform-origin: 50% 0%;\n}\n.imghvr-fold-down:hover > img {\r\n    -webkit-transform: rotateX(-90deg) scale(0.6) translateY(-50%);\r\n    -moz-transform: rotateX(-90deg) scale(0.6) translateY(-50%);\r\n    -ms-transform: rotateX(-90deg) scale(0.6) translateY(-50%);\r\n    -o-transform: rotateX(-90deg) scale(0.6) translateY(-50%);\r\n    transform: rotateX(-90deg) scale(0.6) translateY(-50%);\n}\r\n\r\n/* imghvr-fold-left\r\n   ----------------------------- */\n.imghvr-fold-left > img {\r\n    -webkit-transform-origin: 0% 50%;\r\n    -moz-transform-origin: 0% 50%;\r\n    -ms-transform-origin: 0% 50%;\r\n    -o-transform-origin: 0% 50%;\r\n    transform-origin: 0% 50%;\n}\n.imghvr-fold-left figcaption {\r\n    -webkit-transform: rotateY(90deg) translate3d(-50%, 0%, 0) scale(0.6);\r\n    -moz-transform: rotateY(90deg) translate3d(-50%, 0%, 0) scale(0.6);\r\n    -ms-transform: rotateY(90deg) translate3d(-50%, 0%, 0) scale(0.6);\r\n    -o-transform: rotateY(90deg) translate3d(-50%, 0%, 0) scale(0.6);\r\n    transform: rotateY(90deg) translate3d(-50%, 0%, 0) scale(0.6);\r\n    -webkit-transform-origin: 100% 50%;\r\n    -moz-transform-origin: 100% 50%;\r\n    -ms-transform-origin: 100% 50%;\r\n    -o-transform-origin: 100% 50%;\r\n    transform-origin: 100% 50%;\n}\n.imghvr-fold-left:hover > img {\r\n    -webkit-transform: rotateY(-90deg) scale(0.6) translateX(50%);\r\n    -moz-transform: rotateY(-90deg) scale(0.6) translateX(50%);\r\n    -ms-transform: rotateY(-90deg) scale(0.6) translateX(50%);\r\n    -o-transform: rotateY(-90deg) scale(0.6) translateX(50%);\r\n    transform: rotateY(-90deg) scale(0.6) translateX(50%);\n}\r\n\r\n/* imghvr-fold-right\r\n   ----------------------------- */\n.imghvr-fold-right > img {\r\n    -webkit-transform-origin: 100% 50%;\r\n    -moz-transform-origin: 100% 50%;\r\n    -ms-transform-origin: 100% 50%;\r\n    -o-transform-origin: 100% 50%;\r\n    transform-origin: 100% 50%;\n}\n.imghvr-fold-right figcaption {\r\n    -webkit-transform: rotateY(-90deg) translate3d(50%, 0%, 0) scale(0.6);\r\n    -moz-transform: rotateY(-90deg) translate3d(50%, 0%, 0) scale(0.6);\r\n    -ms-transform: rotateY(-90deg) translate3d(50%, 0%, 0) scale(0.6);\r\n    -o-transform: rotateY(-90deg) translate3d(50%, 0%, 0) scale(0.6);\r\n    transform: rotateY(-90deg) translate3d(50%, 0%, 0) scale(0.6);\r\n    -webkit-transform-origin: 0 50%;\r\n    -moz-transform-origin: 0 50%;\r\n    -ms-transform-origin: 0 50%;\r\n    -o-transform-origin: 0 50%;\r\n    transform-origin: 0 50%;\n}\n.imghvr-fold-right:hover > img {\r\n    -webkit-transform: rotateY(90deg) scale(0.6) translateX(-50%);\r\n    -moz-transform: rotateY(90deg) scale(0.6) translateX(-50%);\r\n    -ms-transform: rotateY(90deg) scale(0.6) translateX(-50%);\r\n    -o-transform: rotateY(90deg) scale(0.6) translateX(-50%);\r\n    transform: rotateY(90deg) scale(0.6) translateX(-50%);\n}\r\n\r\n/* imghvr-zoom-in\r\n   ----------------------------- */\n.imghvr-zoom-in figcaption {\r\n    opacity: 0;\r\n    -webkit-transform: scale(0.5);\r\n    -moz-transform: scale(0.5);\r\n    -ms-transform: scale(0.5);\r\n    -o-transform: scale(0.5);\r\n    transform: scale(0.5);\n}\n.imghvr-zoom-in:hover figcaption {\r\n    -webkit-transform: scale(1);\r\n    -moz-transform: scale(1);\r\n    -ms-transform: scale(1);\r\n    -o-transform: scale(1);\r\n    transform: scale(1);\r\n    opacity: 1;\n}\r\n\r\n/* imghvr-zoom-out*\r\n   ----------------------------- */\n[class^='imghvr-zoom-out'] figcaption, [class*=' imghvr-zoom-out'] figcaption {\r\n    -webkit-transform: scale(0.5);\r\n    -moz-transform: scale(0.5);\r\n    -ms-transform: scale(0.5);\r\n    -o-transform: scale(0.5);\r\n    transform: scale(0.5);\r\n    -webkit-transform-origin: 50% 50%;\r\n    -moz-transform-origin: 50% 50%;\r\n    -ms-transform-origin: 50% 50%;\r\n    -o-transform-origin: 50% 50%;\r\n    transform-origin: 50% 50%;\r\n    opacity: 0;\n}\n[class^='imghvr-zoom-out']:hover figcaption, [class^='imghvr-zoom-out'].hover figcaption, [class*=' imghvr-zoom-out']:hover figcaption, [class*=' imghvr-zoom-out'].hover figcaption {\r\n    -webkit-transform: scale(1);\r\n    -moz-transform: scale(1);\r\n    -ms-transform: scale(1);\r\n    -o-transform: scale(1);\r\n    transform: scale(1);\r\n    opacity: 1;\r\n    -webkit-transition-delay: 0.35s;\r\n    -moz-transition-delay: 0.35s;\r\n    transition-delay: 0.35s;\n}\r\n\r\n/* imghvr-zoom-out\r\n   ----------------------------- */\n.imghvr-zoom-out:hover > img {\r\n    -webkit-transform: scale(0.5);\r\n    -moz-transform: scale(0.5);\r\n    -ms-transform: scale(0.5);\r\n    -o-transform: scale(0.5);\r\n    transform: scale(0.5);\r\n    opacity: 0;\n}\r\n\r\n/* imghvr-zoom-out-up\r\n   ----------------------------- */\n.imghvr-zoom-out-up:hover > img, .imghvr-zoom-out-up.hover > img {\r\n    -webkit-animation: imghvr-zoom-out-up 0.4025s linear;\r\n    -moz-animation: imghvr-zoom-out-up 0.4025s linear;\r\n    animation: imghvr-zoom-out-up 0.4025s linear;\r\n    -webkit-animation-iteration-count: 1;\r\n    -moz-animation-iteration-count: 1;\r\n    animation-iteration-count: 1;\r\n    -webkit-animation-fill-mode: forwards;\r\n    -moz-animation-fill-mode: forwards;\r\n    animation-fill-mode: forwards;\n}\n@-webkit-keyframes imghvr-zoom-out-up {\n50% {\r\n        -webkit-transform: scale(0.8) translateY(0%);\r\n        -moz-transform: scale(0.8) translateY(0%);\r\n        -ms-transform: scale(0.8) translateY(0%);\r\n        -o-transform: scale(0.8) translateY(0%);\r\n        transform: scale(0.8) translateY(0%);\r\n        opacity: 0.5;\n}\n100% {\r\n        -webkit-transform: scale(0.8) translateY(-150%);\r\n        -moz-transform: scale(0.8) translateY(-150%);\r\n        -ms-transform: scale(0.8) translateY(-150%);\r\n        -o-transform: scale(0.8) translateY(-150%);\r\n        transform: scale(0.8) translateY(-150%);\r\n        opacity: 0.5;\n}\n}\n@keyframes imghvr-zoom-out-up {\n50% {\r\n        -webkit-transform: scale(0.8) translateY(0%);\r\n        -moz-transform: scale(0.8) translateY(0%);\r\n        -ms-transform: scale(0.8) translateY(0%);\r\n        -o-transform: scale(0.8) translateY(0%);\r\n        transform: scale(0.8) translateY(0%);\r\n        opacity: 0.5;\n}\n100% {\r\n        -webkit-transform: scale(0.8) translateY(-150%);\r\n        -moz-transform: scale(0.8) translateY(-150%);\r\n        -ms-transform: scale(0.8) translateY(-150%);\r\n        -o-transform: scale(0.8) translateY(-150%);\r\n        transform: scale(0.8) translateY(-150%);\r\n        opacity: 0.5;\n}\n}\r\n\r\n/* imghvr-zoom-out-down\r\n   ----------------------------- */\n.imghvr-zoom-out-down:hover > img, .imghvr-zoom-out-down.hover > img {\r\n    -webkit-animation: imghvr-zoom-out-down 0.4025s linear;\r\n    -moz-animation: imghvr-zoom-out-down 0.4025s linear;\r\n    animation: imghvr-zoom-out-down 0.4025s linear;\r\n    -webkit-animation-iteration-count: 1;\r\n    -moz-animation-iteration-count: 1;\r\n    animation-iteration-count: 1;\r\n    -webkit-animation-fill-mode: forwards;\r\n    -moz-animation-fill-mode: forwards;\r\n    animation-fill-mode: forwards;\n}\n@-webkit-keyframes imghvr-zoom-out-down {\n50% {\r\n        -webkit-transform: scale(0.8) translateY(0%);\r\n        -moz-transform: scale(0.8) translateY(0%);\r\n        -ms-transform: scale(0.8) translateY(0%);\r\n        -o-transform: scale(0.8) translateY(0%);\r\n        transform: scale(0.8) translateY(0%);\r\n        opacity: 0.5;\n}\n100% {\r\n        -webkit-transform: scale(0.8) translateY(150%);\r\n        -moz-transform: scale(0.8) translateY(150%);\r\n        -ms-transform: scale(0.8) translateY(150%);\r\n        -o-transform: scale(0.8) translateY(150%);\r\n        transform: scale(0.8) translateY(150%);\r\n        opacity: 0.5;\n}\n}\n@keyframes imghvr-zoom-out-down {\n50% {\r\n        -webkit-transform: scale(0.8) translateY(0%);\r\n        -moz-transform: scale(0.8) translateY(0%);\r\n        -ms-transform: scale(0.8) translateY(0%);\r\n        -o-transform: scale(0.8) translateY(0%);\r\n        transform: scale(0.8) translateY(0%);\r\n        opacity: 0.5;\n}\n100% {\r\n        -webkit-transform: scale(0.8) translateY(150%);\r\n        -moz-transform: scale(0.8) translateY(150%);\r\n        -ms-transform: scale(0.8) translateY(150%);\r\n        -o-transform: scale(0.8) translateY(150%);\r\n        transform: scale(0.8) translateY(150%);\r\n        opacity: 0.5;\n}\n}\r\n\r\n/* imghvr-zoom-out-left\r\n   ----------------------------- */\n.imghvr-zoom-out-left:hover > img, .imghvr-zoom-out-left.hover > img {\r\n    -webkit-animation: imghvr-zoom-out-left 0.4025s linear;\r\n    -moz-animation: imghvr-zoom-out-left 0.4025s linear;\r\n    animation: imghvr-zoom-out-left 0.4025s linear;\r\n    -webkit-animation-iteration-count: 1;\r\n    -moz-animation-iteration-count: 1;\r\n    animation-iteration-count: 1;\r\n    -webkit-animation-fill-mode: forwards;\r\n    -moz-animation-fill-mode: forwards;\r\n    animation-fill-mode: forwards;\n}\n@-webkit-keyframes imghvr-zoom-out-left {\n50% {\r\n        -webkit-transform: scale(0.8) translateX(0%);\r\n        -moz-transform: scale(0.8) translateX(0%);\r\n        -ms-transform: scale(0.8) translateX(0%);\r\n        -o-transform: scale(0.8) translateX(0%);\r\n        transform: scale(0.8) translateX(0%);\r\n        opacity: 0.5;\n}\n100% {\r\n        -webkit-transform: scale(0.8) translateX(-150%);\r\n        -moz-transform: scale(0.8) translateX(-150%);\r\n        -ms-transform: scale(0.8) translateX(-150%);\r\n        -o-transform: scale(0.8) translateX(-150%);\r\n        transform: scale(0.8) translateX(-150%);\r\n        opacity: 0.5;\n}\n}\n@keyframes imghvr-zoom-out-left {\n50% {\r\n        -webkit-transform: scale(0.8) translateX(0%);\r\n        -moz-transform: scale(0.8) translateX(0%);\r\n        -ms-transform: scale(0.8) translateX(0%);\r\n        -o-transform: scale(0.8) translateX(0%);\r\n        transform: scale(0.8) translateX(0%);\r\n        opacity: 0.5;\n}\n100% {\r\n        -webkit-transform: scale(0.8) translateX(-150%);\r\n        -moz-transform: scale(0.8) translateX(-150%);\r\n        -ms-transform: scale(0.8) translateX(-150%);\r\n        -o-transform: scale(0.8) translateX(-150%);\r\n        transform: scale(0.8) translateX(-150%);\r\n        opacity: 0.5;\n}\n}\r\n\r\n/* imghvr-zoom-out-right\r\n   ----------------------------- */\n.imghvr-zoom-out-right:hover > img, .imghvr-zoom-out-right.hover > img {\r\n    -webkit-animation: imghvr-zoom-out-right 0.4025s linear;\r\n    -moz-animation: imghvr-zoom-out-right 0.4025s linear;\r\n    animation: imghvr-zoom-out-right 0.4025s linear;\r\n    -webkit-animation-iteration-count: 1;\r\n    -moz-animation-iteration-count: 1;\r\n    animation-iteration-count: 1;\r\n    -webkit-animation-fill-mode: forwards;\r\n    -moz-animation-fill-mode: forwards;\r\n    animation-fill-mode: forwards;\n}\n@-webkit-keyframes imghvr-zoom-out-right {\n50% {\r\n        -webkit-transform: scale(0.8) translateX(0%);\r\n        -moz-transform: scale(0.8) translateX(0%);\r\n        -ms-transform: scale(0.8) translateX(0%);\r\n        -o-transform: scale(0.8) translateX(0%);\r\n        transform: scale(0.8) translateX(0%);\r\n        opacity: 0.5;\n}\n100% {\r\n        -webkit-transform: scale(0.8) translateX(150%);\r\n        -moz-transform: scale(0.8) translateX(150%);\r\n        -ms-transform: scale(0.8) translateX(150%);\r\n        -o-transform: scale(0.8) translateX(150%);\r\n        transform: scale(0.8) translateX(150%);\r\n        opacity: 0.5;\n}\n}\n@keyframes imghvr-zoom-out-right {\n50% {\r\n        -webkit-transform: scale(0.8) translateX(0%);\r\n        -moz-transform: scale(0.8) translateX(0%);\r\n        -ms-transform: scale(0.8) translateX(0%);\r\n        -o-transform: scale(0.8) translateX(0%);\r\n        transform: scale(0.8) translateX(0%);\r\n        opacity: 0.5;\n}\n100% {\r\n        -webkit-transform: scale(0.8) translateX(150%);\r\n        -moz-transform: scale(0.8) translateX(150%);\r\n        -ms-transform: scale(0.8) translateX(150%);\r\n        -o-transform: scale(0.8) translateX(150%);\r\n        transform: scale(0.8) translateX(150%);\r\n        opacity: 0.5;\n}\n}\r\n\r\n/* imghvr-zoom-out-flip-horiz\r\n   ----------------------------- */\n.imghvr-zoom-out-flip-horiz {\r\n    -webkit-perspective: 50em;\r\n    -moz-perspective: 50em;\r\n    perspective: 50em;\n}\n.imghvr-zoom-out-flip-horiz figcaption {\r\n    opacity: 0;\r\n    -webkit-transform: rotateX(90deg) translateY(-100%) scale(0.5);\r\n    -moz-transform: rotateX(90deg) translateY(-100%) scale(0.5);\r\n    -ms-transform: rotateX(90deg) translateY(-100%) scale(0.5);\r\n    -o-transform: rotateX(90deg) translateY(-100%) scale(0.5);\r\n    transform: rotateX(90deg) translateY(-100%) scale(0.5);\n}\n.imghvr-zoom-out-flip-horiz:hover > img, .imghvr-zoom-out-flip-horiz.hover > img {\r\n    -webkit-transform: rotateX(-100deg) translateY(50%) scale(0.5);\r\n    -moz-transform: rotateX(-100deg) translateY(50%) scale(0.5);\r\n    -ms-transform: rotateX(-100deg) translateY(50%) scale(0.5);\r\n    -o-transform: rotateX(-100deg) translateY(50%) scale(0.5);\r\n    transform: rotateX(-100deg) translateY(50%) scale(0.5);\r\n    opacity: 0;\r\n    -webkit-transition-delay: 0;\r\n    -moz-transition-delay: 0;\r\n    transition-delay: 0;\n}\n.imghvr-zoom-out-flip-horiz:hover figcaption, .imghvr-zoom-out-flip-horiz.hover figcaption {\r\n    -webkit-transform: rotateX(0) translateY(0%) scale(1);\r\n    -moz-transform: rotateX(0) translateY(0%) scale(1);\r\n    -ms-transform: rotateX(0) translateY(0%) scale(1);\r\n    -o-transform: rotateX(0) translateY(0%) scale(1);\r\n    transform: rotateX(0) translateY(0%) scale(1);\r\n    opacity: 1;\r\n    -webkit-transition-delay: 0.35s;\r\n    -moz-transition-delay: 0.35s;\r\n    transition-delay: 0.35s;\n}\r\n\r\n/* imghvr-zoom-out-flip-vert\r\n   ----------------------------- */\n.imghvr-zoom-out-flip-vert {\r\n    -webkit-perspective: 50em;\r\n    -moz-perspective: 50em;\r\n    perspective: 50em;\n}\n.imghvr-zoom-out-flip-vert figcaption {\r\n    opacity: 0;\r\n    -webkit-transform: rotateY(90deg) translate(50%, 0) scale(0.5);\r\n    -moz-transform: rotateY(90deg) translate(50%, 0) scale(0.5);\r\n    -ms-transform: rotateY(90deg) translate(50%, 0) scale(0.5);\r\n    -o-transform: rotateY(90deg) translate(50%, 0) scale(0.5);\r\n    transform: rotateY(90deg) translate(50%, 0) scale(0.5);\n}\n.imghvr-zoom-out-flip-vert:hover > img, .imghvr-zoom-out-flip-vert.hover > img {\r\n    -webkit-transform: rotateY(-100deg) translateX(50%) scale(0.5);\r\n    -moz-transform: rotateY(-100deg) translateX(50%) scale(0.5);\r\n    -ms-transform: rotateY(-100deg) translateX(50%) scale(0.5);\r\n    -o-transform: rotateY(-100deg) translateX(50%) scale(0.5);\r\n    transform: rotateY(-100deg) translateX(50%) scale(0.5);\r\n    opacity: 0;\r\n    -webkit-transition-delay: 0;\r\n    -moz-transition-delay: 0;\r\n    transition-delay: 0;\n}\n.imghvr-zoom-out-flip-vert:hover figcaption, .imghvr-zoom-out-flip-vert.hover figcaption {\r\n    -webkit-transform: rotateY(0) translate(0, 0) scale(1);\r\n    -moz-transform: rotateY(0) translate(0, 0) scale(1);\r\n    -ms-transform: rotateY(0) translate(0, 0) scale(1);\r\n    -o-transform: rotateY(0) translate(0, 0) scale(1);\r\n    transform: rotateY(0) translate(0, 0) scale(1);\r\n    opacity: 1;\r\n    -webkit-transition-delay: 0.35s;\r\n    -moz-transition-delay: 0.35s;\r\n    transition-delay: 0.35s;\n}\r\n\r\n/* imghvr-blur\r\n   ----------------------------- */\n.imghvr-blur figcaption {\r\n    opacity: 0;\n}\n.imghvr-blur:hover > img {\r\n    -webkit-filter: blur(30px);\r\n    filter: blur(30px);\r\n    -webkit-transform: scale(1.2);\r\n    -moz-transform: scale(1.2);\r\n    -ms-transform: scale(1.2);\r\n    -o-transform: scale(1.2);\r\n    transform: scale(1.2);\r\n    opacity: 0;\n}\n.imghvr-blur:hover figcaption {\r\n    opacity: 1;\r\n    -webkit-transition-delay: 0.21s;\r\n    -moz-transition-delay: 0.21s;\r\n    transition-delay: 0.21s;\n}\r\n", ""]);
 
-    function Plugin(element, options)
-    {
-        this.w  = $(document);
-        this.el = $(element);
-        this.options = $.extend({}, defaults, options);
-        this.init();
-    }
+// exports
 
-    Plugin.prototype = {
 
-        init: function()
-        {
-            var list = this;
+/***/ }),
 
-            list.reset();
+/***/ "./node_modules/imagehover.css/css/imagehover.css?vue&type=style&index=0&lang=css&":
+/*!*****************************************************************************************!*\
+  !*** ./node_modules/imagehover.css/css/imagehover.css?vue&type=style&index=0&lang=css& ***!
+  \*****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-            list.el.data('nestable-group', this.options.group);
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _style_loader_index_js_css_loader_index_js_ref_5_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_src_index_js_ref_5_2_imagehover_css_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../style-loader!../../css-loader??ref--5-1!../../vue-loader/lib/loaders/stylePostLoader.js!../../postcss-loader/src??ref--5-2!./imagehover.css?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/imagehover.css/css/imagehover.css?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _style_loader_index_js_css_loader_index_js_ref_5_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_src_index_js_ref_5_2_imagehover_css_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_loader_index_js_css_loader_index_js_ref_5_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_src_index_js_ref_5_2_imagehover_css_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _style_loader_index_js_css_loader_index_js_ref_5_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_src_index_js_ref_5_2_imagehover_css_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _style_loader_index_js_css_loader_index_js_ref_5_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_src_index_js_ref_5_2_imagehover_css_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_style_loader_index_js_css_loader_index_js_ref_5_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_src_index_js_ref_5_2_imagehover_css_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
-            list.placeEl = $('<div class="' + list.options.placeClass + '"/>');
+/***/ }),
 
-            $.each(this.el.find(list.options.itemNodeName), function(k, el) {
-                list.setParent($(el));
-            });
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/imagehover.css/css/imagehover.css?vue&type=style&index=0&lang=css&":
+/*!**************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--5-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--5-2!./node_modules/imagehover.css/css/imagehover.css?vue&type=style&index=0&lang=css& ***!
+  \**************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
-            list.el.on('click', 'button', function(e) {
-                if (list.dragEl) {
-                    return;
-                }
-                var target = $(e.currentTarget),
-                    action = target.data('action'),
-                    item   = target.parent(list.options.itemNodeName);
-                if (action === 'collapse') {
-                    list.collapseItem(item);
-                }
-                if (action === 'expand') {
-                    list.expandItem(item);
-                }
-            });
 
-            var onStartEvent = function(e)
-            {
-                var handle = $(e.target);
-                if (!handle.hasClass(list.options.handleClass)) {
-                    if (handle.closest('.' + list.options.noDragClass).length) {
-                        return;
-                    }
-                    handle = handle.closest('.' + list.options.handleClass);
-                }
+var content = __webpack_require__(/*! !../../css-loader??ref--5-1!../../vue-loader/lib/loaders/stylePostLoader.js!../../postcss-loader/src??ref--5-2!./imagehover.css?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/imagehover.css/css/imagehover.css?vue&type=style&index=0&lang=css&");
 
-                if (!handle.length || list.dragEl) {
-                    return;
-                }
+if(typeof content === 'string') content = [[module.i, content, '']];
 
-                list.isTouch = /^touch/.test(e.type);
-                if (list.isTouch && e.touches.length !== 1) {
-                    return;
-                }
+var transform;
+var insertInto;
 
-                e.preventDefault();
-                list.dragStart(e.touches ? e.touches[0] : e);
-            };
 
-            var onMoveEvent = function(e)
-            {
-                if (list.dragEl) {
-                    e.preventDefault();
-                    list.dragMove(e.touches ? e.touches[0] : e);
-                }
-            };
 
-            var onEndEvent = function(e)
-            {
-                if (list.dragEl) {
-                    e.preventDefault();
-                    list.dragStop(e.touches ? e.touches[0] : e);
-                }
-            };
+var options = {"hmr":true}
 
-            if (hasTouch) {
-                list.el[0].addEventListener('touchstart', onStartEvent, false);
-                window.addEventListener('touchmove', onMoveEvent, false);
-                window.addEventListener('touchend', onEndEvent, false);
-                window.addEventListener('touchcancel', onEndEvent, false);
-            }
+options.transform = transform
+options.insertInto = undefined;
 
-            list.el.on('mousedown', onStartEvent);
-            list.w.on('mousemove', onMoveEvent);
-            list.w.on('mouseup', onEndEvent);
+var update = __webpack_require__(/*! ../../style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
 
-        },
+if(content.locals) module.exports = content.locals;
 
-        serialize: function()
-        {
-            var data,
-                depth = 0,
-                list  = this;
-                step  = function(level, depth)
-                {
-                    var array = [ ],
-                        items = level.children(list.options.itemNodeName);
-                    items.each(function()
-                    {
-                        var li   = $(this),
-                            item = $.extend({}, li.data()),
-                            sub  = li.children(list.options.listNodeName);
-                        if (sub.length) {
-                            item.children = step(sub, depth + 1);
-                        }
-                        array.push(item);
-                    });
-                    return array;
-                };
-            data = step(list.el.find(list.options.listNodeName).first(), depth);
-            return data;
-        },
-
-        serialise: function()
-        {
-            return this.serialize();
-        },
-
-        reset: function()
-        {
-            this.mouse = {
-                offsetX   : 0,
-                offsetY   : 0,
-                startX    : 0,
-                startY    : 0,
-                lastX     : 0,
-                lastY     : 0,
-                nowX      : 0,
-                nowY      : 0,
-                distX     : 0,
-                distY     : 0,
-                dirAx     : 0,
-                dirX      : 0,
-                dirY      : 0,
-                lastDirX  : 0,
-                lastDirY  : 0,
-                distAxX   : 0,
-                distAxY   : 0
-            };
-            this.isTouch    = false;
-            this.moving     = false;
-            this.dragEl     = null;
-            this.dragRootEl = null;
-            this.dragDepth  = 0;
-            this.hasNewRoot = false;
-            this.pointEl    = null;
-        },
-
-        expandItem: function(li)
-        {
-            li.removeClass(this.options.collapsedClass);
-            li.children('[data-action="expand"]').hide();
-            li.children('[data-action="collapse"]').show();
-            li.children(this.options.listNodeName).show();
-        },
-
-        collapseItem: function(li)
-        {
-            var lists = li.children(this.options.listNodeName);
-            if (lists.length) {
-                li.addClass(this.options.collapsedClass);
-                li.children('[data-action="collapse"]').hide();
-                li.children('[data-action="expand"]').show();
-                li.children(this.options.listNodeName).hide();
-            }
-        },
-
-        expandAll: function()
-        {
-            var list = this;
-            list.el.find(list.options.itemNodeName).each(function() {
-                list.expandItem($(this));
-            });
-        },
-
-        collapseAll: function()
-        {
-            var list = this;
-            list.el.find(list.options.itemNodeName).each(function() {
-                list.collapseItem($(this));
-            });
-        },
-
-        setParent: function(li)
-        {
-            if (li.children(this.options.listNodeName).length) {
-                li.prepend($(this.options.expandBtnHTML));
-                li.prepend($(this.options.collapseBtnHTML));
-            }
-            li.children('[data-action="expand"]').hide();
-        },
-
-        unsetParent: function(li)
-        {
-            li.removeClass(this.options.collapsedClass);
-            li.children('[data-action]').remove();
-            li.children(this.options.listNodeName).remove();
-        },
-
-        dragStart: function(e)
-        {
-            var mouse    = this.mouse,
-                target   = $(e.target),
-                dragItem = target.closest(this.options.itemNodeName);
-
-            this.placeEl.css('height', dragItem.height());
-
-            mouse.offsetX = e.offsetX !== undefined ? e.offsetX : e.pageX - target.offset().left;
-            mouse.offsetY = e.offsetY !== undefined ? e.offsetY : e.pageY - target.offset().top;
-            mouse.startX = mouse.lastX = e.pageX;
-            mouse.startY = mouse.lastY = e.pageY;
-
-            this.dragRootEl = this.el;
-
-            this.dragEl = $(document.createElement(this.options.listNodeName)).addClass(this.options.listClass + ' ' + this.options.dragClass);
-            this.dragEl.css('width', dragItem.width());
-
-            dragItem.after(this.placeEl);
-            dragItem[0].parentNode.removeChild(dragItem[0]);
-            dragItem.appendTo(this.dragEl);
-
-            $(document.body).append(this.dragEl);
-            this.dragEl.css({
-                'left' : e.pageX - mouse.offsetX,
-                'top'  : e.pageY - mouse.offsetY
-            });
-            // total depth of dragging item
-            var i, depth,
-                items = this.dragEl.find(this.options.itemNodeName);
-            for (i = 0; i < items.length; i++) {
-                depth = $(items[i]).parents(this.options.listNodeName).length;
-                if (depth > this.dragDepth) {
-                    this.dragDepth = depth;
-                }
-            }
-        },
-
-        dragStop: function(e)
-        {
-            var el = this.dragEl.children(this.options.itemNodeName).first();
-            el[0].parentNode.removeChild(el[0]);
-            this.placeEl.replaceWith(el);
-
-            this.dragEl.remove();
-            this.el.trigger('change');
-            if (this.hasNewRoot) {
-                this.dragRootEl.trigger('change');
-            }
-            this.reset();
-        },
-
-        dragMove: function(e)
-        {
-            var list, parent, prev, next, depth,
-                opt   = this.options,
-                mouse = this.mouse;
-
-            this.dragEl.css({
-                'left' : e.pageX - mouse.offsetX,
-                'top'  : e.pageY - mouse.offsetY
-            });
-
-            // mouse position last events
-            mouse.lastX = mouse.nowX;
-            mouse.lastY = mouse.nowY;
-            // mouse position this events
-            mouse.nowX  = e.pageX;
-            mouse.nowY  = e.pageY;
-            // distance mouse moved between events
-            mouse.distX = mouse.nowX - mouse.lastX;
-            mouse.distY = mouse.nowY - mouse.lastY;
-            // direction mouse was moving
-            mouse.lastDirX = mouse.dirX;
-            mouse.lastDirY = mouse.dirY;
-            // direction mouse is now moving (on both axis)
-            mouse.dirX = mouse.distX === 0 ? 0 : mouse.distX > 0 ? 1 : -1;
-            mouse.dirY = mouse.distY === 0 ? 0 : mouse.distY > 0 ? 1 : -1;
-            // axis mouse is now moving on
-            var newAx   = Math.abs(mouse.distX) > Math.abs(mouse.distY) ? 1 : 0;
-
-            // do nothing on first move
-            if (!mouse.moving) {
-                mouse.dirAx  = newAx;
-                mouse.moving = true;
-                return;
-            }
-
-            // calc distance moved on this axis (and direction)
-            if (mouse.dirAx !== newAx) {
-                mouse.distAxX = 0;
-                mouse.distAxY = 0;
-            } else {
-                mouse.distAxX += Math.abs(mouse.distX);
-                if (mouse.dirX !== 0 && mouse.dirX !== mouse.lastDirX) {
-                    mouse.distAxX = 0;
-                }
-                mouse.distAxY += Math.abs(mouse.distY);
-                if (mouse.dirY !== 0 && mouse.dirY !== mouse.lastDirY) {
-                    mouse.distAxY = 0;
-                }
-            }
-            mouse.dirAx = newAx;
-
-            /**
-             * move horizontal
-             */
-            if (mouse.dirAx && mouse.distAxX >= opt.threshold) {
-                // reset move distance on x-axis for new phase
-                mouse.distAxX = 0;
-                prev = this.placeEl.prev(opt.itemNodeName);
-                // increase horizontal level if previous sibling exists and is not collapsed
-                if (mouse.distX > 0 && prev.length && !prev.hasClass(opt.collapsedClass)) {
-                    // cannot increase level when item above is collapsed
-                    list = prev.find(opt.listNodeName).last();
-                    // check if depth limit has reached
-                    depth = this.placeEl.parents(opt.listNodeName).length;
-                    if (depth + this.dragDepth <= opt.maxDepth) {
-                        // create new sub-level if one doesn't exist
-                        if (!list.length) {
-                            list = $('<' + opt.listNodeName + '/>').addClass(opt.listClass);
-                            list.append(this.placeEl);
-                            prev.append(list);
-                            this.setParent(prev);
-                        } else {
-                            // else append to next level up
-                            list = prev.children(opt.listNodeName).last();
-                            list.append(this.placeEl);
-                        }
-                    }
-                }
-                // decrease horizontal level
-                if (mouse.distX < 0) {
-                    // we can't decrease a level if an item preceeds the current one
-                    next = this.placeEl.next(opt.itemNodeName);
-                    if (!next.length) {
-                        parent = this.placeEl.parent();
-                        this.placeEl.closest(opt.itemNodeName).after(this.placeEl);
-                        if (!parent.children().length) {
-                            this.unsetParent(parent.parent());
-                        }
-                    }
-                }
-            }
-
-            var isEmpty = false;
-
-            // find list item under cursor
-            if (!hasPointerEvents) {
-                this.dragEl[0].style.visibility = 'hidden';
-            }
-            this.pointEl = $(document.elementFromPoint(e.pageX - document.body.scrollLeft, e.pageY - (window.pageYOffset || document.documentElement.scrollTop)));
-            if (!hasPointerEvents) {
-                this.dragEl[0].style.visibility = 'visible';
-            }
-            if (this.pointEl.hasClass(opt.handleClass)) {
-                this.pointEl = this.pointEl.parent(opt.itemNodeName);
-            }
-            if (this.pointEl.hasClass(opt.emptyClass)) {
-                isEmpty = true;
-            }
-            else if (!this.pointEl.length || !this.pointEl.hasClass(opt.itemClass)) {
-                return;
-            }
-
-            // find parent list of item under cursor
-            var pointElRoot = this.pointEl.closest('.' + opt.rootClass),
-                isNewRoot   = this.dragRootEl.data('nestable-id') !== pointElRoot.data('nestable-id');
-
-            /**
-             * move vertical
-             */
-            if (!mouse.dirAx || isNewRoot || isEmpty) {
-                // check if groups match if dragging over new root
-                if (isNewRoot && opt.group !== pointElRoot.data('nestable-group')) {
-                    return;
-                }
-                // check depth limit
-                depth = this.dragDepth - 1 + this.pointEl.parents(opt.listNodeName).length;
-                if (depth > opt.maxDepth) {
-                    return;
-                }
-                var before = e.pageY < (this.pointEl.offset().top + this.pointEl.height() / 2);
-                    parent = this.placeEl.parent();
-                // if empty create new list to replace empty placeholder
-                if (isEmpty) {
-                    list = $(document.createElement(opt.listNodeName)).addClass(opt.listClass);
-                    list.append(this.placeEl);
-                    this.pointEl.replaceWith(list);
-                }
-                else if (before) {
-                    this.pointEl.before(this.placeEl);
-                }
-                else {
-                    this.pointEl.after(this.placeEl);
-                }
-                if (!parent.children().length) {
-                    this.unsetParent(parent.parent());
-                }
-                if (!this.dragRootEl.find(opt.itemNodeName).length) {
-                    this.dragRootEl.append('<div class="' + opt.emptyClass + '"/>');
-                }
-                // parent root list has changed
-                if (isNewRoot) {
-                    this.dragRootEl = pointElRoot;
-                    this.hasNewRoot = this.el[0] !== this.dragRootEl[0];
-                }
-            }
-        }
-
-    };
-
-    $.fn.nestable = function(params)
-    {
-        var lists  = this,
-            retval = this;
-
-        lists.each(function()
-        {
-            var plugin = $(this).data("nestable");
-
-            if (!plugin) {
-                $(this).data("nestable", new Plugin(this, params));
-                $(this).data("nestable-id", new Date().getTime());
-            } else {
-                if (typeof params === 'string' && typeof plugin[params] === 'function') {
-                    retval = plugin[params]();
-                }
-            }
-        });
-
-        return retval || lists;
-    };
-
-})(__webpack_provided_window_dot_jQuery || window.Zepto, window, document);
-
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
+if(false) {}
 
 /***/ })
 

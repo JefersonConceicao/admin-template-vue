@@ -1,510 +1,498 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[142],{
 
-/***/ "./node_modules/vddl/dist/vddl.runtime.js":
-/*!************************************************!*\
-  !*** ./node_modules/vddl/dist/vddl.runtime.js ***!
-  \************************************************/
+/***/ "./node_modules/Nestable/jquery.nestable.js":
+/*!**************************************************!*\
+  !*** ./node_modules/Nestable/jquery.nestable.js ***!
+  \**************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/*!
- * Vddl.js v0.7.1
- * (c) 2017 Hejx
- * Released under the MIT License.
- * https://github.com/hejianxian/vddl#readme
+/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {/*!
+ * Nestable jQuery Plugin - Copyright (c) 2012 David Bushell - http://dbushell.com/
+ * Dual-licensed under the BSD or MIT licenses
  */
+;(function($, window, document, undefined)
+{
+    var hasTouch = 'ontouchstart' in document;
 
-(function (global, factory) {
-   true ? module.exports = factory() :
-  undefined;
-}(this, (function () {
+    /**
+     * Detect CSS pointer-events property
+     * events are normally disabled on the dragging element to avoid conflicts
+     * https://github.com/ausi/Feature-detection-technique-for-pointer-events/blob/master/modernizr-pointerevents.js
+     */
+    var hasPointerEvents = (function()
+    {
+        var el    = document.createElement('div'),
+            docEl = document.documentElement;
+        if (!('pointerEvents' in el.style)) {
+            return false;
+        }
+        el.style.pointerEvents = 'auto';
+        el.style.pointerEvents = 'x';
+        docEl.appendChild(el);
+        var supports = window.getComputedStyle && window.getComputedStyle(el, '').pointerEvents === 'auto';
+        docEl.removeChild(el);
+        return !!supports;
+    })();
 
-var Draggable = {render: function(){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"vddl-draggable",on:{"dragstart":function($event){$event.stopPropagation();_vm.handleDragstart($event);},"dragend":function($event){$event.stopPropagation();_vm.handleDragend($event);},"click":function($event){$event.stopPropagation();_vm.handleClick($event);},"selectstart":_vm.handleSelected}},[_vm._t("default")],2)},staticRenderFns: [],
-  name: 'vddl-draggable',
-  // css: vddl-dragging, vddl-dragging-source
-  props: {
-    draggable: [ Object, Array ],
-    wrapper: Array,
-    index: Number,
+    var defaults = {
+            listNodeName    : 'ol',
+            itemNodeName    : 'li',
+            rootClass       : 'dd',
+            listClass       : 'dd-list',
+            itemClass       : 'dd-item',
+            dragClass       : 'dd-dragel',
+            handleClass     : 'dd-handle',
+            collapsedClass  : 'dd-collapsed',
+            placeClass      : 'dd-placeholder',
+            noDragClass     : 'dd-nodrag',
+            emptyClass      : 'dd-empty',
+            expandBtnHTML   : '<button data-action="expand" type="button">Expand</button>',
+            collapseBtnHTML : '<button data-action="collapse" type="button">Collapse</button>',
+            group           : 0,
+            maxDepth        : 5,
+            threshold       : 20
+        };
 
-    effectAllowed: String,
-    type: String,
+    function Plugin(element, options)
+    {
+        this.w  = $(document);
+        this.el = $(element);
+        this.options = $.extend({}, defaults, options);
+        this.init();
+    }
 
-    // diable
-    disableIf: Boolean,
+    Plugin.prototype = {
 
-    // callback fn
-    dragstart: Function,
-    selected: Function,
-    dragend: Function,
-    moved: Function,
-    copied: Function,
-    canceled: Function,
-  },
-  data: function data() {
-    return {};
-  },
-  computed: {},
-  methods: {
-    handleDragstart: function handleDragstart(event) {
-      var this$1 = this;
+        init: function()
+        {
+            var list = this;
 
-      var draggable = JSON.stringify(this.draggable);
-      // Check whether the element is draggable, since dragstart might be triggered on a child.
-      if (draggable == 'false' || this.disableIf) { return true; }
+            list.reset();
 
-      // Serialize the data associated with this element. IE only supports the Text drag type
-      event.dataTransfer.setData("Text", draggable);
+            list.el.data('nestable-group', this.options.group);
 
-      // Only allow actions specified in effect-allowed attribute
-      event.dataTransfer.effectAllowed = this.effectAllowed || "move";
+            list.placeEl = $('<div class="' + list.options.placeClass + '"/>');
 
-      // Add CSS classes. IE9 not support 'classList'
-      this.$el.className = this.$el.className.trim() + " vddl-dragging";
-      setTimeout(function () {
-        this$1.$el.className = this$1.$el.className.trim() + " vddl-dragging-source";
-      }, 0);
-
-      // Workarounds for stupid browsers, see description below
-      this.vddlDropEffectWorkaround.dropEffect = "none";
-      this.vddlDragTypeWorkaround.isDragging = true;
-
-      // Save type of item in global state. Usually, this would go into the dataTransfer
-      // typename, but we have to use "Text" there to support IE
-      this.vddlDragTypeWorkaround.dragType = this.type || undefined;
-
-      // Try setting a proper drag image if triggered on a vddl-handle (won't work in IE).
-      if (event._dndHandle && event.dataTransfer.setDragImage) {
-        event.dataTransfer.setDragImage(this.$el, event._dndHandleLeft, event._dndHandleTop);
-      }
-
-      // Invoke callback
-      if (typeof(this.dragstart) === 'function') {
-        this.dragstart.call(this, event.target);
-      }
-    },
-
-    handleDragend: function handleDragend(event) {
-      var this$1 = this;
-
-      var dropEffect = this.vddlDropEffectWorkaround.dropEffect;
-      switch (dropEffect) {
-        case "move":
-          if (typeof(this.moved) === 'function') {
-            this.$nextTick(function () {
-              this$1.moved({
-                index: this$1.index,
-                list: this$1.wrapper,
-                event: event.target,
-                draggable: this$1.draggable,
-              });
+            $.each(this.el.find(list.options.itemNodeName), function(k, el) {
+                list.setParent($(el));
             });
-          } else {
-            this.$nextTick(function () {
-              this$1.wrapper.splice(this$1.index, 1);
+
+            list.el.on('click', 'button', function(e) {
+                if (list.dragEl) {
+                    return;
+                }
+                var target = $(e.currentTarget),
+                    action = target.data('action'),
+                    item   = target.parent(list.options.itemNodeName);
+                if (action === 'collapse') {
+                    list.collapseItem(item);
+                }
+                if (action === 'expand') {
+                    list.expandItem(item);
+                }
             });
-          }
-          break;
-        case "copy":
-          if (typeof(this.copied) === 'function') {
-            this.copied(this.draggable, event.target);
-          }
-          break;
-        case "none":
-          if (typeof(this.canceled) === 'function') {
-            this.canceled(event.target);
-          }
-          break;
-      }
-      if (typeof(this.dragend) === 'function') {
-        this.dragend(dropEffect, event.target);
-      }
 
-      // Clean up
-      this.$el.className = this.$el.className.replace("vddl-dragging", "").trim();
-      setTimeout(function () {
-        if (this$1.$el) { this$1.$el.className = this$1.$el.className.replace("vddl-dragging-source", "").trim(); }
-      }, 0);
-      this.vddlDragTypeWorkaround.isDragging = false;
-    },
+            var onStartEvent = function(e)
+            {
+                var handle = $(e.target);
+                if (!handle.hasClass(list.options.handleClass)) {
+                    if (handle.closest('.' + list.options.noDragClass).length) {
+                        return;
+                    }
+                    handle = handle.closest('.' + list.options.handleClass);
+                }
 
-    handleClick: function handleClick(event) {
-      if (!this.selected) { return; }
+                if (!handle.length || list.dragEl) {
+                    return;
+                }
 
-      if (typeof(this.selected) === 'function') {
-        this.selected(this.wrapper[this.index], event.target);
-      }
-    },
+                list.isTouch = /^touch/.test(e.type);
+                if (list.isTouch && e.touches.length !== 1) {
+                    return;
+                }
 
-    /**
-     * Workaround to make element draggable in IE9
-     * http://stackoverflow.com/questions/5500615/internet-explorer-9-drag-and-drop-dnd
-     */
-    handleSelected: function handleSelected() {
-      if (this.dragDrop) { this.dragDrop(); }
-      return false;
-    },
+                e.preventDefault();
+                list.dragStart(e.touches ? e.touches[0] : e);
+            };
 
-    // init
-    init: function init() {
-      var status = true;
-      if (this.disableIf) { status = false; }
-      this.$el.setAttribute('draggable', status);
-    },
-  },
-  watch: {
-    disableIf: function disableIf(val) {
-      this.$el.setAttribute('draggable', !val);
-    },
-  },
-  // For Vue 1.0
-  ready: function ready() {
-    this.init();
-  },
-  mounted: function mounted() {
-    this.init();
-  },
-};
+            var onMoveEvent = function(e)
+            {
+                if (list.dragEl) {
+                    e.preventDefault();
+                    list.dragMove(e.touches ? e.touches[0] : e);
+                }
+            };
 
-var List = {render: function(){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"vddl-list",on:{"dragenter":function($event){$event.preventDefault();_vm.handleDragenter($event);},"dragover":function($event){$event.stopPropagation();$event.preventDefault();_vm.handleDragover($event);},"drop":function($event){$event.stopPropagation();$event.preventDefault();_vm.handleDrop($event);},"dragleave":_vm.handleDragleave}},[_vm._t("default")],2)},staticRenderFns: [],
-  name: 'vddl-list',
-  // css: placeholder, dragover
-  props: {
-    list: Array,
+            var onEndEvent = function(e)
+            {
+                if (list.dragEl) {
+                    e.preventDefault();
+                    list.dragStop(e.touches ? e.touches[0] : e);
+                }
+            };
 
-    allowedTypes: Array,
-    disableIf: Boolean,
-    horizontal: Boolean,
-    externalSources: Boolean,
+            if (hasTouch) {
+                list.el[0].addEventListener('touchstart', onStartEvent, false);
+                window.addEventListener('touchmove', onMoveEvent, false);
+                window.addEventListener('touchend', onEndEvent, false);
+                window.addEventListener('touchcancel', onEndEvent, false);
+            }
 
-    dragover: Function,
-    inserted: Function,
-    drop: Function,
-  },
-  data: function data() {
-    return {};
-  },
-  computed: {},
-  methods: {
-    handleDragenter: function handleDragenter(event) {
-      if (!this.isDropAllowed(event)) { return true; }
-    },
+            list.el.on('mousedown', onStartEvent);
+            list.w.on('mousemove', onMoveEvent);
+            list.w.on('mouseup', onEndEvent);
 
-    handleDragover: function handleDragover(event) {
-      var this$1 = this;
+        },
 
-      if (!this.isDropAllowed(event)) { return true; }
+        serialize: function()
+        {
+            var data,
+                depth = 0,
+                list  = this;
+                step  = function(level, depth)
+                {
+                    var array = [ ],
+                        items = level.children(list.options.itemNodeName);
+                    items.each(function()
+                    {
+                        var li   = $(this),
+                            item = $.extend({}, li.data()),
+                            sub  = li.children(list.options.listNodeName);
+                        if (sub.length) {
+                            item.children = step(sub, depth + 1);
+                        }
+                        array.push(item);
+                    });
+                    return array;
+                };
+            data = step(list.el.find(list.options.listNodeName).first(), depth);
+            return data;
+        },
 
-      if (this.placeholderNode.parentNode != this.listNode) {
-        this.listNode.appendChild(this.placeholderNode);
-      }
+        serialise: function()
+        {
+            return this.serialize();
+        },
 
-      if (event.target !== this.listNode) {
-        // Try to find the node direct directly below the list node.
-        var listItemNode = event.target;
-        while (listItemNode.parentNode !== this.listNode && listItemNode.parentNode) {
-          listItemNode = listItemNode.parentNode;
+        reset: function()
+        {
+            this.mouse = {
+                offsetX   : 0,
+                offsetY   : 0,
+                startX    : 0,
+                startY    : 0,
+                lastX     : 0,
+                lastY     : 0,
+                nowX      : 0,
+                nowY      : 0,
+                distX     : 0,
+                distY     : 0,
+                dirAx     : 0,
+                dirX      : 0,
+                dirY      : 0,
+                lastDirX  : 0,
+                lastDirY  : 0,
+                distAxX   : 0,
+                distAxY   : 0
+            };
+            this.isTouch    = false;
+            this.moving     = false;
+            this.dragEl     = null;
+            this.dragRootEl = null;
+            this.dragDepth  = 0;
+            this.hasNewRoot = false;
+            this.pointEl    = null;
+        },
+
+        expandItem: function(li)
+        {
+            li.removeClass(this.options.collapsedClass);
+            li.children('[data-action="expand"]').hide();
+            li.children('[data-action="collapse"]').show();
+            li.children(this.options.listNodeName).show();
+        },
+
+        collapseItem: function(li)
+        {
+            var lists = li.children(this.options.listNodeName);
+            if (lists.length) {
+                li.addClass(this.options.collapsedClass);
+                li.children('[data-action="collapse"]').hide();
+                li.children('[data-action="expand"]').show();
+                li.children(this.options.listNodeName).hide();
+            }
+        },
+
+        expandAll: function()
+        {
+            var list = this;
+            list.el.find(list.options.itemNodeName).each(function() {
+                list.expandItem($(this));
+            });
+        },
+
+        collapseAll: function()
+        {
+            var list = this;
+            list.el.find(list.options.itemNodeName).each(function() {
+                list.collapseItem($(this));
+            });
+        },
+
+        setParent: function(li)
+        {
+            if (li.children(this.options.listNodeName).length) {
+                li.prepend($(this.options.expandBtnHTML));
+                li.prepend($(this.options.collapseBtnHTML));
+            }
+            li.children('[data-action="expand"]').hide();
+        },
+
+        unsetParent: function(li)
+        {
+            li.removeClass(this.options.collapsedClass);
+            li.children('[data-action]').remove();
+            li.children(this.options.listNodeName).remove();
+        },
+
+        dragStart: function(e)
+        {
+            var mouse    = this.mouse,
+                target   = $(e.target),
+                dragItem = target.closest(this.options.itemNodeName);
+
+            this.placeEl.css('height', dragItem.height());
+
+            mouse.offsetX = e.offsetX !== undefined ? e.offsetX : e.pageX - target.offset().left;
+            mouse.offsetY = e.offsetY !== undefined ? e.offsetY : e.pageY - target.offset().top;
+            mouse.startX = mouse.lastX = e.pageX;
+            mouse.startY = mouse.lastY = e.pageY;
+
+            this.dragRootEl = this.el;
+
+            this.dragEl = $(document.createElement(this.options.listNodeName)).addClass(this.options.listClass + ' ' + this.options.dragClass);
+            this.dragEl.css('width', dragItem.width());
+
+            dragItem.after(this.placeEl);
+            dragItem[0].parentNode.removeChild(dragItem[0]);
+            dragItem.appendTo(this.dragEl);
+
+            $(document.body).append(this.dragEl);
+            this.dragEl.css({
+                'left' : e.pageX - mouse.offsetX,
+                'top'  : e.pageY - mouse.offsetY
+            });
+            // total depth of dragging item
+            var i, depth,
+                items = this.dragEl.find(this.options.itemNodeName);
+            for (i = 0; i < items.length; i++) {
+                depth = $(items[i]).parents(this.options.listNodeName).length;
+                if (depth > this.dragDepth) {
+                    this.dragDepth = depth;
+                }
+            }
+        },
+
+        dragStop: function(e)
+        {
+            var el = this.dragEl.children(this.options.itemNodeName).first();
+            el[0].parentNode.removeChild(el[0]);
+            this.placeEl.replaceWith(el);
+
+            this.dragEl.remove();
+            this.el.trigger('change');
+            if (this.hasNewRoot) {
+                this.dragRootEl.trigger('change');
+            }
+            this.reset();
+        },
+
+        dragMove: function(e)
+        {
+            var list, parent, prev, next, depth,
+                opt   = this.options,
+                mouse = this.mouse;
+
+            this.dragEl.css({
+                'left' : e.pageX - mouse.offsetX,
+                'top'  : e.pageY - mouse.offsetY
+            });
+
+            // mouse position last events
+            mouse.lastX = mouse.nowX;
+            mouse.lastY = mouse.nowY;
+            // mouse position this events
+            mouse.nowX  = e.pageX;
+            mouse.nowY  = e.pageY;
+            // distance mouse moved between events
+            mouse.distX = mouse.nowX - mouse.lastX;
+            mouse.distY = mouse.nowY - mouse.lastY;
+            // direction mouse was moving
+            mouse.lastDirX = mouse.dirX;
+            mouse.lastDirY = mouse.dirY;
+            // direction mouse is now moving (on both axis)
+            mouse.dirX = mouse.distX === 0 ? 0 : mouse.distX > 0 ? 1 : -1;
+            mouse.dirY = mouse.distY === 0 ? 0 : mouse.distY > 0 ? 1 : -1;
+            // axis mouse is now moving on
+            var newAx   = Math.abs(mouse.distX) > Math.abs(mouse.distY) ? 1 : 0;
+
+            // do nothing on first move
+            if (!mouse.moving) {
+                mouse.dirAx  = newAx;
+                mouse.moving = true;
+                return;
+            }
+
+            // calc distance moved on this axis (and direction)
+            if (mouse.dirAx !== newAx) {
+                mouse.distAxX = 0;
+                mouse.distAxY = 0;
+            } else {
+                mouse.distAxX += Math.abs(mouse.distX);
+                if (mouse.dirX !== 0 && mouse.dirX !== mouse.lastDirX) {
+                    mouse.distAxX = 0;
+                }
+                mouse.distAxY += Math.abs(mouse.distY);
+                if (mouse.dirY !== 0 && mouse.dirY !== mouse.lastDirY) {
+                    mouse.distAxY = 0;
+                }
+            }
+            mouse.dirAx = newAx;
+
+            /**
+             * move horizontal
+             */
+            if (mouse.dirAx && mouse.distAxX >= opt.threshold) {
+                // reset move distance on x-axis for new phase
+                mouse.distAxX = 0;
+                prev = this.placeEl.prev(opt.itemNodeName);
+                // increase horizontal level if previous sibling exists and is not collapsed
+                if (mouse.distX > 0 && prev.length && !prev.hasClass(opt.collapsedClass)) {
+                    // cannot increase level when item above is collapsed
+                    list = prev.find(opt.listNodeName).last();
+                    // check if depth limit has reached
+                    depth = this.placeEl.parents(opt.listNodeName).length;
+                    if (depth + this.dragDepth <= opt.maxDepth) {
+                        // create new sub-level if one doesn't exist
+                        if (!list.length) {
+                            list = $('<' + opt.listNodeName + '/>').addClass(opt.listClass);
+                            list.append(this.placeEl);
+                            prev.append(list);
+                            this.setParent(prev);
+                        } else {
+                            // else append to next level up
+                            list = prev.children(opt.listNodeName).last();
+                            list.append(this.placeEl);
+                        }
+                    }
+                }
+                // decrease horizontal level
+                if (mouse.distX < 0) {
+                    // we can't decrease a level if an item preceeds the current one
+                    next = this.placeEl.next(opt.itemNodeName);
+                    if (!next.length) {
+                        parent = this.placeEl.parent();
+                        this.placeEl.closest(opt.itemNodeName).after(this.placeEl);
+                        if (!parent.children().length) {
+                            this.unsetParent(parent.parent());
+                        }
+                    }
+                }
+            }
+
+            var isEmpty = false;
+
+            // find list item under cursor
+            if (!hasPointerEvents) {
+                this.dragEl[0].style.visibility = 'hidden';
+            }
+            this.pointEl = $(document.elementFromPoint(e.pageX - document.body.scrollLeft, e.pageY - (window.pageYOffset || document.documentElement.scrollTop)));
+            if (!hasPointerEvents) {
+                this.dragEl[0].style.visibility = 'visible';
+            }
+            if (this.pointEl.hasClass(opt.handleClass)) {
+                this.pointEl = this.pointEl.parent(opt.itemNodeName);
+            }
+            if (this.pointEl.hasClass(opt.emptyClass)) {
+                isEmpty = true;
+            }
+            else if (!this.pointEl.length || !this.pointEl.hasClass(opt.itemClass)) {
+                return;
+            }
+
+            // find parent list of item under cursor
+            var pointElRoot = this.pointEl.closest('.' + opt.rootClass),
+                isNewRoot   = this.dragRootEl.data('nestable-id') !== pointElRoot.data('nestable-id');
+
+            /**
+             * move vertical
+             */
+            if (!mouse.dirAx || isNewRoot || isEmpty) {
+                // check if groups match if dragging over new root
+                if (isNewRoot && opt.group !== pointElRoot.data('nestable-group')) {
+                    return;
+                }
+                // check depth limit
+                depth = this.dragDepth - 1 + this.pointEl.parents(opt.listNodeName).length;
+                if (depth > opt.maxDepth) {
+                    return;
+                }
+                var before = e.pageY < (this.pointEl.offset().top + this.pointEl.height() / 2);
+                    parent = this.placeEl.parent();
+                // if empty create new list to replace empty placeholder
+                if (isEmpty) {
+                    list = $(document.createElement(opt.listNodeName)).addClass(opt.listClass);
+                    list.append(this.placeEl);
+                    this.pointEl.replaceWith(list);
+                }
+                else if (before) {
+                    this.pointEl.before(this.placeEl);
+                }
+                else {
+                    this.pointEl.after(this.placeEl);
+                }
+                if (!parent.children().length) {
+                    this.unsetParent(parent.parent());
+                }
+                if (!this.dragRootEl.find(opt.itemNodeName).length) {
+                    this.dragRootEl.append('<div class="' + opt.emptyClass + '"/>');
+                }
+                // parent root list has changed
+                if (isNewRoot) {
+                    this.dragRootEl = pointElRoot;
+                    this.hasNewRoot = this.el[0] !== this.dragRootEl[0];
+                }
+            }
         }
-        if (listItemNode.parentNode === this.listNode && listItemNode !== this.placeholderNode) {
-          // If the mouse pointer is in the upper half of the child element,
-          // we place it before the child element, otherwise below it.
-          if (this.isMouseInFirstHalf(event, listItemNode)) {
-            this.listNode.insertBefore(this.placeholderNode, listItemNode);
-          } else {
-            this.listNode.insertBefore(this.placeholderNode, listItemNode.nextSibling);
-          }
-        }
-      } else {
-        // This branch is reached when we are dragging directly over the list element.
-        // Usually we wouldn't need to do anything here, but the IE does not fire it's
-        // events for the child element, only for the list directly. Therefore, we repeat
-        // the positioning algorithm for IE here.
-        if (this.isMouseInFirstHalf(event, this.placeholderNode, true)) {
-          // Check if we should move the placeholder element one spot towards the top.
-          // Note that display none elements will have offsetTop and offsetHeight set to
-          // zero, therefore we need a special check for them.
-          while (this.placeholderNode.previousElementSibling
-                && (this.isMouseInFirstHalf(event, this.placeholderNode.previousElementSibling, true)
-                || this.placeholderNode.previousElementSibling.offsetHeight === 0)) {
-            this$1.listNode.insertBefore(this$1.placeholderNode, this$1.placeholderNode.previousElementSibling);
-          }
-        } else {
-          // Check if we should move the placeholder element one spot towards the bottom
-          while (this.placeholderNode.nextElementSibling &&
-                !this.isMouseInFirstHalf(event, this.placeholderNode.nextElementSibling, true)) {
-            this$1.listNode.insertBefore(this$1.placeholderNode,
-                this$1.placeholderNode.nextElementSibling.nextElementSibling);
-          }
-        }
-      }
 
-      // At this point we invoke the callback, which still can disallow the drop.
-      // We can't do this earlier because we want to pass the index of the placeholder.
-      if (this.dragover && !this.invokeCallback('dragover', event, this.getPlaceholderIndex())) {
-        return this.stopDragover(event);
-      }
+    };
 
-      if (this.$el.className.indexOf("vddl-dragover") < 0) { this.$el.className = this.$el.className.trim() + " vddl-dragover"; }
-      return false;
-    },
-    handleDrop: function handleDrop(event) {
-      if (!this.isDropAllowed(event)) { return true; }
+    $.fn.nestable = function(params)
+    {
+        var lists  = this,
+            retval = this;
 
-      // The default behavior in Firefox is to interpret the dropped element as URL and
-      // forward to it. We want to prevent that even if our drop is aborted.
+        lists.each(function()
+        {
+            var plugin = $(this).data("nestable");
 
-      // Unserialize the data that was serialized in dragstart. According to the HTML5 specs,
-      // the "Text" drag type will be converted to text/plain, but IE does not do that.
-      var data = event.dataTransfer.getData("Text") || event.dataTransfer.getData("text/plain");
-      var transferredObject;
-      try {
-        transferredObject = JSON.parse(data);
-      } catch(e) {
-        return this.stopDragover();
-      }
-
-      // Invoke the callback, which can transform the transferredObject and even abort the drop.
-      var index = this.getPlaceholderIndex();
-      if (this.drop) {
-        transferredObject = this.invokeCallback('drop', event, index, transferredObject);
-        if (!transferredObject) {
-          return this.stopDragover();
-        }
-      }
-
-      // Insert the object into the array, unless drop took care of that (returned true).
-      if (transferredObject !== true) {
-        this.list.splice(index, 0, transferredObject);
-      }
-      this.invokeCallback('inserted', event, index, transferredObject);
-
-      // In Chrome on Windows the dropEffect will always be none...
-      // We have to determine the actual effect manually from the allowed effects
-      if (event.dataTransfer.dropEffect === "none") {
-        if (event.dataTransfer.effectAllowed === "copy" ||
-            event.dataTransfer.effectAllowed === "move") {
-          this.vddlDropEffectWorkaround.dropEffect = event.dataTransfer.effectAllowed;
-        } else {
-          this.vddlDropEffectWorkaround.dropEffect = event.ctrlKey ? "copy" : "move";
-        }
-      } else {
-        this.vddlDropEffectWorkaround.dropEffect = event.dataTransfer.dropEffect;
-      }
-
-      // Clean up
-      this.stopDragover();
-      return false;
-    },
-    handleDragleave: function handleDragleave(event) {
-      var this$1 = this;
-
-      this.$el.className = this.$el.className.replace("vddl-dragover", "").trim();
-      setTimeout(function () {
-        if (this$1.$el.className.indexOf("vddl-dragover") < 0) {
-          this$1.placeholderNode.parentNode && this$1.placeholderNode.parentNode.removeChild(this$1.placeholderNode);
-        }
-      }, 100);
-    },
-
-    // Checks whether the mouse pointer is in the first half of the given target element.
-    isMouseInFirstHalf: function isMouseInFirstHalf(event, targetNode, relativeToParent) {
-      var mousePointer = this.horizontal ? (event.offsetX || event.layerX)
-                                    : (event.offsetY || event.layerY);
-      var targetSize = this.horizontal ? targetNode.offsetWidth : targetNode.offsetHeight;
-      var targetPosition = this.horizontal ? targetNode.offsetLeft : targetNode.offsetTop;
-      targetPosition = relativeToParent ? targetPosition : 0;
-      return mousePointer < targetPosition + targetSize / 2;
-    },
-
-    /**
-     * Tries to find a child element that has the 'vddl-placeholder' class set. If none was found, a
-     * new div element is created.
-     */
-    getPlaceholderElement: function getPlaceholderElement() {
-      var placeholder,
-          oldPlaceholder = this.$el.parentNode.querySelectorAll('.vddl-placeholder');
-      if (oldPlaceholder.length > 0) {
-        placeholder = oldPlaceholder[0];
-        return placeholder;
-      }
-      var newPlaceholder = document.createElement('div');
-      newPlaceholder.setAttribute('class', 'vddl-placeholder');
-      return newPlaceholder;
-    },
-
-    getPlaceholderIndex: function getPlaceholderIndex() {
-      return Array.prototype.indexOf.call(this.listNode.children, this.placeholderNode);
-    },
-
-    /**
-     * Checks various conditions that must be fulfilled for a drop to be allowed
-     */
-    isDropAllowed: function isDropAllowed(event) {
-      // Disallow drop from external source unless it's allowed explicitly.
-      if (!this.vddlDragTypeWorkaround.isDragging && !this.externalSources) { return false; }
-
-      // Check mimetype. Usually we would use a custom drag type instead of Text, but IE doesn't
-      // support that.
-      if (!this.hasTextMimetype(event.dataTransfer.types)) { return false; }
-
-      // Now check the allowed-types against the type of the incoming element. For drops from
-      // external sources we don't know the type, so it will need to be checked via drop.
-      if (this.allowedTypes && this.vddlDragTypeWorkaround.isDragging) {
-        var allowed = this.allowedTypes;
-        if (Array.isArray(allowed) && allowed.indexOf(this.vddlDragTypeWorkaround.dragType) === -1) {
-          return false;
-        }
-      }
-
-      // Check whether droping is disabled completely
-      if (this.disableIf) { return false; }
-
-      return true;
-    },
-
-    /**
-     * Small helper function that cleans up if we aborted a drop.
-     */
-    stopDragover: function stopDragover() {
-      this.placeholderNode.parentNode && this.placeholderNode.parentNode.removeChild(this.placeholderNode);
-      this.$el.className = this.$el.className.replace("vddl-dragover", "").trim();
-      return true;
-    },
-
-    /**
-     * Invokes a callback with some interesting parameters and returns the callbacks return value.
-     */
-    invokeCallback: function invokeCallback(expression, event, index, item) {
-      var fn = this[expression];
-      if (fn) {
-        fn({
-          event: event,
-          index: index,
-          item: item || undefined,
-          list: this.list,
-          external: !this.vddlDragTypeWorkaround.isDragging,
-          type: this.vddlDragTypeWorkaround.isDragging ? this.vddlDragTypeWorkaround.dragType : undefined
+            if (!plugin) {
+                $(this).data("nestable", new Plugin(this, params));
+                $(this).data("nestable-id", new Date().getTime());
+            } else {
+                if (typeof params === 'string' && typeof plugin[params] === 'function') {
+                    retval = plugin[params]();
+                }
+            }
         });
-      }
-      return fn ? true : false;
-    },
 
-    /**
-     * Check if the dataTransfer object contains a drag type that we can handle. In old versions
-     * of IE the types collection will not even be there, so we just assume a drop is possible.
-     */
-    hasTextMimetype: function hasTextMimetype(types) {
-      if (!types) { return true; }
-        for (var i = 0; i < types.length; i += 1) {
-          if (types[i] === "Text" || types[i] === "text/plain") { return true; }
-        }
+        return retval || lists;
+    };
 
-      return false;
-    },
-    init: function init() {
-      this.placeholderNode = this.getPlaceholderElement();
-      this.listNode = this.$el;
-      this.placeholderNode.parentNode && this.placeholderNode.parentNode.removeChild(this.placeholderNode);
-    },
-  },
-  ready: function ready() {
-    this.init();
-  },
-  mounted: function mounted() {
-    this.init();
-  },
-};
+})(__webpack_provided_window_dot_jQuery || window.Zepto, window, document);
 
-var Handle = {render: function(){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"vddl-handle",on:{"dragstart":_vm.handle,"dragend":_vm.handle}},[_vm._t("default")],2)},staticRenderFns: [],
-  name: 'vddl-handle',
-  props: {
-    handleLeft: Number,
-    handleTop: Number,
-  },
-  data: function data() {
-    return {};
-  },
-  computed: {},
-  methods: {
-    handle: function handle(event) {
-      event._dndHandle = true;
-      event._dndHandleLeft = this.handleLeft || 0;
-      event._dndHandleTop = this.handleTop || 0;
-    },
-    init: function init() {
-      this.$el.setAttribute('draggable', true);
-    },
-  },
-  ready: function ready() {
-    this.init();
-  },
-  mounted: function mounted() {
-    this.init();
-  },
-};
-
-var Nodrag = {render: function(){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"vddl-nodrag",on:{"dragstart":_vm.handleDragstart,"dragend":_vm.handleDragend}},[_vm._t("default")],2)},staticRenderFns: [],
-  name: 'vddl-nodrag',
-  props: {},
-  data: function data() {
-    return {};
-  },
-  computed: {},
-  methods: {
-    handleDragstart: function handleDragstart(event) {
-      if (!event._dndHandle) {
-        // If a child element already reacted to dragstart and set a dataTransfer object, we will
-        // allow that. For example, this is the case for user selections inside of input elements.
-        if (!(event.dataTransfer.types && event.dataTransfer.types.length)) {
-          event.preventDefault();
-        }
-        event.stopPropagation();
-      }
-    },
-    handleDragend: function handleDragend(event) {
-      if (!event._dndHandle) {
-        event.stopPropagation();
-      }
-    },
-    init: function init() {
-      this.$el.setAttribute('draggable', true);
-    },
-  },
-  ready: function ready() {
-    this.init();
-  },
-  mounted: function mounted() {
-    this.init();
-  },
-};
-
-var Placeholder = {render: function(){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"vddl-placeholder"},[_vm._t("default")],2)},staticRenderFns: [],
-  name: 'vddl-placeholder',
-};
-
-var install = function (Vue) {
-  /* eslint no-param-reassign: 0 */
-  Vue.prototype.vddlDropEffectWorkaround = {};
-  Vue.prototype.vddlDragTypeWorkaround = {};
-
-  Vue.component(Draggable.name, Draggable);
-  Vue.component(List.name, List);
-  Vue.component(Handle.name, Handle);
-  Vue.component(Nodrag.name, Nodrag);
-  Vue.component(Placeholder.name, Placeholder);
-};
-
-/* eslint no-undef:0 */
-if (typeof window !== 'undefined' && window.Vue) {
-  install(window.Vue);
-}
-
-var install$1 = { install: install };
-
-return install$1;
-
-})));
-
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ })
 

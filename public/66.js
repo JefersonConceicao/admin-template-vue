@@ -1,1 +1,860 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[66],{1448:function(t,s,a){"use strict";var i=a(758);a.n(i).a},1449:function(t,s,a){(t.exports=a(30)(!1)).push([t.i,'\n.trip-type, .trip-type-multi {\r\n    background-color: rgba(0, 0, 0, .35);\r\n    border-radius: 50%;\r\n    width: 36px;\r\n    height: 36px;\r\n    margin: 21px auto 0;\r\n    padding: 7px;\n}\n.trip-type .icon, .trip-type-multi .icon {\r\n    color     : #FFF;\r\n    font-size : 20px;\n}\n#adult:focus, #adult-multi:focus,\r\n#child:focus, #child-multi:focus,\r\n#infant:focus, #infant-multi:focus {\r\n    border-color : #CCC;\r\n    outline      : 0;\r\n    box-shadow   : none;\n}\n.multi-flight-data {\r\n    padding-top: 10px;\r\n    padding-bottom: 7px;\r\n    border-bottom : 1px dashed #EEEEEE;\n}\n#nonsingle-stop .remove-flight {\r\n    position: absolute;\r\n    right: 5px;\r\n    bottom: 27px;\r\n    background-color: #ff6666;\r\n    color: #fff;\r\n    padding: 2px;\r\n    border-radius: 50px;\n}\n.price-alert {\r\n    margin-top : 10px;\n}\n.radio-inline, .radio-inline + .radio-inline, .checkbox-inline + .checkbox-inline {\r\n    padding-top: 7px;\r\n    margin-left: 18px;\n}\n@media screen and (max-width : 767px) {\n.trip-type {\r\n        margin : 41px auto -60px;\r\n        background: 0;\n}\n.trip-type .icon, .trip-type-multi .icon {\r\n        color: rgba(0, 0, 0, .35);\n}\n}\r\n/*cab booking*/\n.ride-time .ride-on {\r\n    background-color : #C5E043;\r\n    display          : inline-block;\r\n    padding          : 5px 10px;\n}\n.ride-time input[type=radio] {\r\n    display : none\n}\n.ride-time input[type=radio]:checked + .ride-on {\r\n    background-color : #241009;\r\n    color            : #C5E043;\n}\n.cab-types .cab-type {\r\n    background-color : #eee;\r\n    display          : inline-block;\r\n    padding: 4% 10%;\n}\n.cab-types input[type=radio] {\r\n    display : none\n}\n.cab-types input[type=radio]:checked + .cab-type {\r\n    background-color : #241009;\r\n    color            : #eee;\n}\n.fund_text{\r\n    font-size: 16px;\r\n    font-weight: 700;\r\n    line-height: 18px;\r\n    color: #333333;\n}\r\n/*gmaps*/\n.gmap {\r\n    width  : 100%;\r\n    height : 300px;\r\n    margin : 5px auto;\n}\n.chooseon-map {\r\n    margin-top: 24px;\r\n    background-color: #fff;\r\n    border: 1px solid #ccc;\n}\n@media screen and (min-width : 768px) {\n.m-l-16 {\r\n        margin-left: -16px;\n}\n}\n@media screen and (max-width : 767px) {\n.m-r-20 {\r\n        margin-right: 21px;\n}\n}\n.btn-default{\r\n    color:#333;\n}\n.control-label{\r\n    width: 100%;\n}\n@media(max-width:768px){\n#multi-air{\r\n        margin-bottom: 10px;\n}\n}\n.prev .glyphicon-chevron-left:before{\r\n    content: "\\E64A";\r\n    font-family: "themify";\n}\n.next .glyphicon-chevron-right:before{\r\n    content: "\\E649";\r\n    font-family: "themify";\n}\n.dropdown-menu.usetwentyfour{\r\n    z-index: 99;\n}\n.btn{\r\n    cursor: pointer;\n}\n@media(min-width: 320px) and (max-width: 425px)\r\n{\n#nonsingle-stop .remove-flight{\r\n        bottom: 8px;\r\n        right:-20px;\n}\n}\n@media(max-width:320px){\n.bootstrap-datetimepicker-widget{\r\n      left: 10px !important;\n}\n}\n.btn:active{\r\n    color: #fff !important;\n}\n.bootstrap-datetimepicker-widget{\r\n    bottom:0;\n}\n.multi-flight-data label.m-l-16{\r\n    margin-bottom: 0;\n}\n@media(max-width: 1024px){\n.boxed .bootstrap-datetimepicker-widget{\r\n        left: -100px !important;\n}\n}\n.popover-container{\r\n    padding: 0;\r\n    z-index: inherit !important;\n}\n#single-stop .popover-origin{\r\n    z-index: 99 !important;\n}\n#single-stop .popover-container input{\r\n    padding: 0.35rem 0.75rem;\r\n    width:100%;\r\n    border:none;\n}\n#single-stop .popover-container input:focus{\r\n    outline: none;\n}\n#single-stop .popover-container input:focus{\r\n    border: 1px solid #7EC4E7 !important;\n}\n.realtime_forms #multistop_departure:focus,.realtime_forms #multistop_departure2:focus,.realtime_forms #departure_date:focus,.realtime_forms #return_date:focus{\r\n    border-top-right-radius: 3px;\r\n    border-bottom-right-radius: 3px;\n}\r\n\r\n/*bootstrap 3 overrides*/\n#nonsingle-stop .bootstrap-touchspin-down,#nonsingle-stop .bootstrap-touchspin-up,#single-stop .bootstrap-touchspin-down,#single-stop .bootstrap-touchspin-up{\r\n    border-radius: 0;\n}',""])},2292:function(t,s,a){"use strict";a.r(s);var i=a(754).a,e=(a(1444),a(1446),a(1448),a(21)),o=Object(e.a)(i,(function(){var t=this,s=t.$createElement,a=t._self._c||s;return a("div",[a("div",{staticClass:"row mt-3"},[a("div",{staticClass:"col-md-12"},[a("card",{staticClass:"realtime_forms",attrs:{title:"<i class='fa fa-fw ti-user'></i> Book Flight Tickets"}},[a("div",{staticClass:"row"},[a("div",{staticClass:"col-sm-12 text-sm-center"},[a("div",{staticClass:"form-group"},[a("label",{staticClass:"radio-inline iradio m-l-18"},[a("input",{directives:[{name:"model",rawName:"v-model",value:t.selected,expression:"selected"}],attrs:{type:"radio",id:"one_way",name:"trip-type",value:"option1"},domProps:{checked:t._q(t.selected,"option1")},on:{change:function(s){t.selected="option1"}}}),t._v(" One Way\n                                ")]),t._v(" "),a("label",{staticClass:"radio-inline iradio m-l-18"},[a("input",{directives:[{name:"model",rawName:"v-model",value:t.selected,expression:"selected"}],attrs:{type:"radio",id:"round_trip",name:"trip-type",value:"option2"},domProps:{checked:t._q(t.selected,"option2")},on:{change:function(s){t.selected="option2"}}}),t._v(" Round trip\n                                ")]),t._v(" "),a("label",{staticClass:"radio-inline iradio m-l-18"},[a("input",{directives:[{name:"model",rawName:"v-model",value:t.selected,expression:"selected"}],attrs:{type:"radio",id:"multi_stops",name:"trip-type",value:"option3"},domProps:{checked:t._q(t.selected,"option3")},on:{change:function(s){t.selected="option3"}}}),t._v(" Multi Stops\n                                ")])])])]),t._v(" "),a("form",{directives:[{name:"show",rawName:"v-show",value:"option1"==t.selected||"option2"==t.selected,expression:"(selected=='option1' || selected=='option2')?true:false"}],attrs:{id:"single-stop"}},[a("div",{staticClass:"row m-t-10"},[a("div",{staticClass:"trip-type d-sm-none"},[a("i",{staticClass:"fa-rotate-90 fa ti-exchange-vertical icon"})]),t._v(" "),a("div",{staticClass:"col-sm-5 col-xs-6"},[a("div",{staticClass:"form-group"},[a("label",{staticClass:"control-label",attrs:{for:"origin"}},[t._v("From")]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"text",id:"origin",placeholder:"Origin City"}})])]),t._v(" "),a("div",{staticClass:"col-sm-2"},[a("div",{staticClass:"trip-type"},["option2"==t.selected?a("i",{staticClass:"fa-rotate-90 fa ti-exchange-vertical icon"}):a("i",{staticClass:"fa ti-arrow-right icon"})])]),t._v(" "),a("div",{staticClass:"col-sm-5 col-xs-6"},[a("div",{staticClass:"form-group"},[a("label",{staticClass:"control-label",attrs:{for:"destination"}},[t._v("To")]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"text",id:"destination",placeholder:"Destination City"}})])])]),t._v(" "),a("div",{staticClass:"row m-t-10"},[a("div",{staticClass:"col-sm-6"},[a("div",{staticClass:"form-group"},[a("div",{staticClass:"row"},[a("div",{staticClass:"col-sm-6"},[a("label",{attrs:{for:"departure_date"}},[t._v("Departure")]),t._v(" "),a("div",{staticClass:"input-group"},[a("div",{staticClass:"input-group-prepend"},[a("span",{staticClass:"input-group-text bg-white"},[a("i",{staticClass:"fa fa-fw ti-calendar"})])]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"text",id:"departure_date",placeholder:"Select Date"}})])]),t._v(" "),a("br",{staticClass:"d-sm-none"}),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("label",{attrs:{for:"return_date"}},[t._v("Return")]),t._v(" "),a("div",{staticClass:"input-group"},[a("div",{staticClass:"input-group-prepend"},[a("span",{staticClass:"input-group-text bg-white"},[a("i",{staticClass:"fa fa-fw ti-calendar"})])]),t._v(" "),a("input",{staticClass:"form-control",attrs:{id:"return_date",placeholder:"Select Date",disabled:"option1"==t.selected}})])])])])]),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("div",{staticClass:"form-group"},[a("div",{staticClass:"row"},[a("div",{staticClass:"col-sm-6"},[a("label",{attrs:{for:"class-type"}},[t._v("Class")]),t._v(" "),a("select",{staticClass:"form-control",attrs:{name:"class",id:"class-type"}},[a("option",{attrs:{value:""}},[t._v("Economy")]),t._v(" "),a("option",{attrs:{value:""}},[t._v("Business")]),t._v(" "),a("option",{attrs:{value:""}},[t._v("First")]),t._v(" "),a("option",{attrs:{value:""}},[t._v("Premium Economy")])])]),t._v(" "),a("br",{staticClass:"d-sm-none"}),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("label",{staticClass:"control-label",attrs:{for:"pref-Air"}},[t._v("Preferred Airline\n                                            ")]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"text",id:"pref-Air",placeholder:"Airline name"}})])])])])]),t._v(" "),a("div",{staticClass:"row m-t-10"},[a("div",{staticClass:"col-sm-8 col-md-10 col-lg-8 mx-auto"},[a("div",{staticClass:"row"},[a("div",{staticClass:"col-sm-4"},[a("div",{staticClass:"form-group"},[a("label",{attrs:{for:"adult"}},[t._v("Adult")]),t._v(" "),a("input",{attrs:{id:"adult",type:"text",value:"1",readonly:"",name:"adult_count"}})])]),t._v(" "),a("div",{staticClass:"col-sm-4"},[a("div",{staticClass:"form-group"},[a("label",{attrs:{for:"child"}},[t._v("Child")]),t._v(" "),a("input",{attrs:{id:"child",type:"text",value:"0",readonly:"",name:"child_count"}})])]),t._v(" "),a("div",{staticClass:"col-sm-4"},[a("div",{staticClass:"form-group"},[a("label",{attrs:{for:"infant"}},[t._v("Infant")]),t._v(" "),a("input",{attrs:{id:"infant",type:"text",value:"0",readonly:"",name:"infant_count"}})])])])])]),t._v(" "),a("div",{staticClass:"row m-t-10"},[a("div",{staticClass:"col-sm-8"},[a("div",{staticClass:"form-group icheck-element"},[a("label",{staticClass:"price-alert"},[a("input",{attrs:{type:"checkbox",name:"c1",id:"c1",value:""}}),t._v(" Alert me when price changes\n                                    ")])])]),t._v(" "),a("div",{staticClass:"col-sm-4"},[a("button",{staticClass:"btn btn-warning btn-block"},[t._v("Search Flights")])])])]),t._v(" "),a("form",{directives:[{name:"show",rawName:"v-show",value:"option1"!=t.selected&&"option2"!=t.selected,expression:"(selected=='option1' || selected=='option2')?false:true"}],attrs:{id:"nonsingle-stop"}},[a("div",{staticClass:"row"},[a("div",{staticClass:"col-sm-12"},[a("div",{staticClass:"flight-count"},[a("div",{staticClass:"row multi-flight-data"},[a("div",{staticClass:"trip-type d-sm-none"},[a("i",{staticClass:"fa ti-arrow-right icon"})]),t._v(" "),a("div",{staticClass:"col-sm-4 col-xs-6"},[a("div",{staticClass:"form-group"},[a("label",{staticClass:"control-label"},[t._v("From\n                                                    "),a("input",{staticClass:"form-control",attrs:{type:"text",placeholder:"Origin City"}})])])]),t._v(" "),a("div",{staticClass:"col-sm-1 hidden-xs"},[a("div",{staticClass:"trip-type-multi"},[a("i",{staticClass:"fa ti-arrow-right icon"})])]),t._v(" "),a("div",{staticClass:"col-sm-4 col-xs-6"},[a("div",{staticClass:"form-group"},[a("label",{staticClass:"control-label"},[t._v("To\n                                                    "),a("input",{staticClass:"form-control",attrs:{type:"text",placeholder:"Destination City"}})])])]),t._v(" "),a("div",{staticClass:"col-sm-3 col-sm-offset-0 col-xs-12"},[a("label",{staticClass:"m-l-16",attrs:{for:"multistop_departure"}},[t._v("Departure")]),t._v(" "),a("div",{staticClass:"input-group m-l-16"},[a("div",{staticClass:"input-group-prepend"},[a("span",{staticClass:"input-group-text bg-white"},[a("i",{staticClass:"fa fa-fw ti-calendar"})])]),t._v(" "),a("input",{staticClass:"form-control departure_date",attrs:{type:"text",id:"multistop_departure",placeholder:"Select Date"}})])])]),t._v(" "),a("div",{staticClass:"row multi-flight-data"},[a("div",{staticClass:"trip-type d-sm-none"},[a("i",{staticClass:"fa ti-arrow-right icon"})]),t._v(" "),a("div",{staticClass:"col-sm-4 col-xs-6"},[a("div",{staticClass:"form-group"},[a("label",{staticClass:"control-label"},[t._v("From\n                                                    "),a("input",{staticClass:"form-control",attrs:{type:"text",placeholder:"Origin City"}})])])]),t._v(" "),a("div",{staticClass:"col-sm-1 hidden-xs"},[a("div",{staticClass:"trip-type-multi"},[a("i",{staticClass:"fa ti-arrow-right icon"})])]),t._v(" "),a("div",{staticClass:"col-sm-4 col-xs-6"},[a("div",{staticClass:"form-group"},[a("label",{staticClass:"control-label"},[t._v("To\n                                                    "),a("input",{staticClass:"form-control",attrs:{type:"text",placeholder:"Destination City"}})])])]),t._v(" "),a("div",{staticClass:"col-sm-3 col-sm-offset-0 col-xs-12"},[a("label",{staticClass:"m-l-16",attrs:{for:"multistop_departure2"}},[t._v("Departure")]),t._v(" "),a("div",{staticClass:"input-group m-l-16"},[a("div",{staticClass:"input-group-prepend"},[a("span",{staticClass:"input-group-text bg-white"},[a("i",{staticClass:"fa fa-fw ti-calendar"})])]),t._v(" "),a("input",{staticClass:"form-control departure_date",attrs:{type:"text",id:"multistop_departure2",placeholder:"Select Date"}})])])]),t._v(" "),t._l(t.inputs,(function(s,i){return a("div",{staticClass:"row multi-flight-data"},[a("div",{staticClass:"trip-type d-sm-none"},[a("i",{staticClass:"fa ti-arrow-right icon"})]),t._v(" "),a("div",{staticClass:"col-sm-4 col-xs-6"},[a("div",{staticClass:"form-group"},[a("label",{staticClass:"control-label"},[t._v("From\n                                                ")]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"text",placeholder:"Origin City"}})])]),t._v(" "),a("div",{staticClass:"col-sm-1 hidden-xs"},[a("div",{staticClass:"trip-type-multi"},[a("i",{staticClass:"fa ti-arrow-right icon"})])]),t._v(" "),a("div",{staticClass:"col-sm-4 col-xs-6"},[a("div",{staticClass:"form-group"},[a("label",{staticClass:"control-label"},[t._v("To\n                                                ")]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"text",placeholder:"Destination City"}})])]),t._v(" "),a("div",{staticClass:"col-sm-3 col-sm-offset-0 col-11"},[a("label",{staticClass:"m-l-16 mb-2"},[t._v("Departure")]),t._v(" "),a("div",{staticClass:"input-group m-l-16"},[a("div",{staticClass:"input-group-prepend"},[a("span",{staticClass:"input-group-text bg-white"},[a("i",{staticClass:"fa fa-fw ti-calendar"})])]),t._v(" "),a("input",{staticClass:"form-control departure_date",attrs:{type:"text",placeholder:"Select Date"}})]),t._v(" "),a("span",{on:{click:function(s){return t.deleteRow(i)}}},[a("i",{staticClass:"fa fa-fw ti-minus remove-flight"})])])])}))],2),t._v(" "),a("div",{staticClass:"row m-t-10 mt-3"},[a("div",{staticClass:"col-sm-6"},[a("a",{staticClass:"btn btn-secondary text-white mr-3",attrs:{id:"add-flight"},on:{click:t.addRow}},[a("i",{staticClass:"fa fa-fw ti-plus"}),t._v(" Add flight\n                                        ")]),t._v(" "),a("label",[t._v("Add Flight(Upto 6)")])]),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("label",{attrs:{for:"class-type1"}},[t._v("Class")]),t._v(" "),a("select",{staticClass:"form-control",attrs:{name:"class",id:"class-type1"}},[a("option",{attrs:{value:""}},[t._v("Economy")]),t._v(" "),a("option",{attrs:{value:""}},[t._v("Business")]),t._v(" "),a("option",{attrs:{value:""}},[t._v("First")]),t._v(" "),a("option",{attrs:{value:""}},[t._v("Premium Economy")])])])]),t._v(" "),a("div",{staticClass:"row m-t-10"},[a("div",{staticClass:"col-sm-8 col-md-10 col-lg-8"},[a("div",{staticClass:"row"},[a("div",{staticClass:"col-sm-4"},[a("div",{staticClass:"form-group"},[a("label",{attrs:{for:"adult-multi"}},[t._v("Adult")]),t._v(" "),a("input",{attrs:{id:"adult-multi",type:"text",value:"1",readonly:"",name:"adult_count"}})])]),t._v(" "),a("div",{staticClass:"col-sm-4"},[a("div",{staticClass:"form-group"},[a("label",{attrs:{for:"child-multi"}},[t._v("Child")]),t._v(" "),a("input",{attrs:{id:"child-multi",type:"text",value:"0",readonly:"",name:"child_count"}})])]),t._v(" "),a("div",{staticClass:"col-sm-4"},[a("div",{staticClass:"form-group"},[a("label",{attrs:{for:"infant-multi"}},[t._v("Infant")]),t._v(" "),a("input",{attrs:{id:"infant-multi",type:"text",value:"0",readonly:"",name:"infant_count"}})])])])]),t._v(" "),a("div",{staticClass:"col-sm-4 col-md-2 col-lg-4"},[a("label",{staticClass:"control-label",attrs:{for:"multi-air"}},[t._v("Preferred Airline\n                                        ")]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"text",id:"multi-air",placeholder:"Airline name"}})])]),t._v(" "),a("div",{staticClass:"row m-t-10"},[a("div",{staticClass:"col-sm-8"},[a("div",{staticClass:"form-group icheck-element"},[a("label",{staticClass:"price-alert"},[a("input",{attrs:{type:"checkbox",name:"price-alert",value:""}}),t._v(" Alert me when price changes\n                                            ")])])]),t._v(" "),a("div",{staticClass:"col-sm-4"},[a("button",{staticClass:"btn btn-warning btn-block"},[t._v("Search Flights")])])])])])])])],1)]),t._v(" "),a("div",{staticClass:"row"},[a("div",{staticClass:"col-md-8"},[a("card",{attrs:{title:"<i class='fa fa-fw ti-money'></i> Fund Transfer"}},[a("div",{staticClass:"row"},[a("div",{staticClass:"col-sm-12"},[a("form",{staticClass:"form-horizontal",attrs:{id:"form-validation"}},[a("div",{staticClass:"form-group"},[a("label",{staticClass:"col-sm-6 control-label",attrs:{for:"skill"}},[t._v("\n                                    Select Account :\n                                ")]),t._v(" "),a("div",{staticClass:"col-12"},[a("select",{staticClass:"form-control",attrs:{id:"skill",name:"skill"}},[a("option",{attrs:{value:"",disabled:"",selected:""}},[t._v("\n                                            Select account\n                                        ")]),t._v(" "),a("option",{attrs:{value:"234"}},[t._v("0000432187653456")]),t._v(" "),a("option",{attrs:{value:"345"}},[t._v("0000891236543567")])])])]),t._v(" "),a("div",{staticClass:"form-group"},[a("label",{staticClass:"col-sm-5 control-label",attrs:{for:"number"}},[t._v("\n                                    Amount :\n                                ")]),t._v(" "),a("div",{staticClass:"col-12"},[a("input",{staticClass:"form-control",attrs:{type:"text",id:"number",name:"number",placeholder:"Enter amount",onkeypress:"return isNumber(event, this)"}})])]),t._v(" "),a("div",{staticClass:"form-group"},[a("label",{staticClass:"col-sm-5 control-label",attrs:{for:"val-username"}},[t._v("\n                                    Sender name :\n                                ")]),t._v(" "),a("div",{staticClass:"col-12"},[a("input",{staticClass:"form-control",attrs:{type:"text",id:"val-username",name:"firstName",placeholder:"Account holder name"}})])]),t._v(" "),a("div",{staticClass:"fund_text mt-2 ml-3 mb-2"},[t._v("Information of the account you want to transfer fund")]),t._v(" "),a("div",{staticClass:"form-group"},[a("label",{staticClass:"col-sm-5 control-label",attrs:{for:"holder-name"}},[t._v("\n                                    Account Holder name :\n                                ")]),t._v(" "),a("div",{staticClass:"col-12"},[a("input",{staticClass:"form-control",attrs:{type:"text",id:"holder-name",name:"holderName",placeholder:"Account holder name"}})])]),t._v(" "),a("div",{staticClass:"form-group"},[a("label",{staticClass:"col-sm-5 control-label",attrs:{for:"bank-name"}},[t._v("\n                                    Name of the Bank :\n                                ")]),t._v(" "),a("div",{staticClass:"col-12"},[a("input",{staticClass:"form-control",attrs:{type:"text",id:"bank-name",name:"bankName",placeholder:"Bank name"}})])]),t._v(" "),a("div",{staticClass:"form-group"},[a("label",{staticClass:"col-sm-5 control-label",attrs:{for:"swift-code"}},[t._v("\n                                    SWIFT Code :\n                                ")]),t._v(" "),a("div",{staticClass:"col-12"},[a("input",{staticClass:"form-control",attrs:{type:"text",id:"swift-code",name:"bankName",placeholder:"SWIFT code"}})])]),t._v(" "),a("div",{staticClass:"form-group"},[a("label",{staticClass:"col-sm-5 control-label",attrs:{for:"acc-number"}},[t._v("\n                                    Account Number/BAN :\n                                ")]),t._v(" "),a("div",{staticClass:"col-12"},[a("input",{staticClass:"form-control",attrs:{type:"text",id:"acc-number",name:"number",placeholder:"Account Number",onkeypress:"return event.charCode >= 48 && event.charCode <= 57"}})])]),t._v(" "),a("div",{staticClass:"form-group"},[a("label",{staticClass:"col-sm-5 control-label",attrs:{for:"purpose"}},[t._v("\n                                    Purpose (optional) :\n                                ")]),t._v(" "),a("div",{staticClass:"col-12"},[a("input",{staticClass:"form-control",attrs:{type:"text",id:"purpose",name:"purpose",placeholder:"optional"}})])]),t._v(" "),a("div",{staticClass:"form-group form-actions"},[a("div",{staticClass:"col-12 col-sm-offset-5"},[a("button",{staticClass:"btn btn-effect-ripple btn-primary",attrs:{type:"submit"}},[t._v("Transfer")]),t._v(" "),a("button",{staticClass:"btn btn-effect-ripple btn-secondary reset_btn",attrs:{type:"reset"}},[t._v("Reset\n                                    ")])])])])])])])],1),t._v(" "),a("div",{staticClass:"col-md-4"},[a("card",{attrs:{title:"<i class='fa fa-fw ti-home'></i> Book your Stay"}},[a("form",[a("div",{staticClass:"row"},[a("div",{staticClass:"col-sm-12"},[a("div",{staticClass:"form-group"},[a("label",{staticClass:"control-label",attrs:{for:"stay"}},[t._v("Name")]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"text",id:"stay",placeholder:"City, Area or Hotel"}})])])]),t._v(" "),a("div",{staticClass:"row"},[a("div",{staticClass:"col-sm-12"},[a("div",{staticClass:"form-group"},[a("label",{attrs:{for:"checkin_date"}},[t._v("Check-In")]),t._v(" "),a("div",{staticClass:"input-group"},[a("div",{staticClass:"input-group-prepend"},[a("span",{staticClass:"input-group-text bg-white"},[a("i",{staticClass:"fa fa-fw ti-calendar"})])]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"text",id:"checkin_date",placeholder:"Select Check-in Date"}})])])]),t._v(" "),a("div",{staticClass:"col-sm-12"},[a("div",{staticClass:"form-group"},[a("label",{attrs:{for:"checkout_date"}},[t._v("Check-Out")]),t._v(" "),a("div",{staticClass:"input-group"},[a("div",{staticClass:"input-group-prepend"},[a("span",{staticClass:"input-group-text bg-white"},[a("i",{staticClass:"fa fa-fw ti-calendar"})])]),t._v(" "),a("input",{staticClass:"form-control",attrs:{type:"text",id:"checkout_date",placeholder:"Select Check-out Date"}})])])])]),t._v(" "),a("div",{staticClass:"row"},[a("div",{staticClass:"col-sm-6"},[a("div",{staticClass:"form-group"},[a("label",{attrs:{for:"adult-number"}},[t._v("Adult")]),t._v(" "),a("select",{staticClass:"form-control",attrs:{name:"count",id:"adult-number"}},[a("option",{attrs:{value:"0"}},[t._v("1")]),t._v(" "),a("option",{attrs:{value:"1"}},[t._v("2")]),t._v(" "),a("option",{attrs:{value:"2"}},[t._v("3")]),t._v(" "),a("option",{attrs:{value:"3"}},[t._v("4")]),t._v(" "),a("option",{attrs:{value:"4"}},[t._v("5")])])])]),t._v(" "),a("div",{staticClass:"col-sm-6"},[a("div",{staticClass:"form-group"},[a("label",{attrs:{for:"child-number"}},[t._v("Child")]),t._v(" "),a("select",{staticClass:"form-control",attrs:{name:"count",id:"child-number"}},[a("option",{attrs:{value:"0"}},[t._v("0")]),t._v(" "),a("option",{attrs:{value:"1"}},[t._v("1")]),t._v(" "),a("option",{attrs:{value:"2"}},[t._v("2")]),t._v(" "),a("option",{attrs:{value:"3"}},[t._v("3")])])])])]),t._v(" "),a("div",{staticClass:"row"},[a("div",{staticClass:"col-sm-12"},[a("div",{staticClass:"form-group icheck-element"},[a("label",{staticClass:"guest-rooms"},[a("input",{attrs:{type:"checkbox",name:"price-alert",value:""}}),t._v(" Guest Rooms\n                                ")])])]),t._v(" "),a("div",{staticClass:"col-sm-12"},[a("button",{staticClass:"btn btn-warning btn-block"},[t._v("Search Hotels")])])])])])],1)])])}),[],!1,null,null,null);s.default=o.exports},426:function(t,s,a){var i=a(431);"string"==typeof i&&(i=[[t.i,i,""]]);var e={hmr:!0,transform:void 0,insertInto:void 0};a(31)(i,e);i.locals&&(t.exports=i.locals)},430:function(t,s,a){"use strict";var i=a(426);a.n(i).a},431:function(t,s,a){(t.exports=a(30)(!1)).push([t.i,"\n.dNone{\n    display: none;\n}\n.rotate{\n    transform:rotate(180deg);\n}\n",""])},433:function(t,s,a){"use strict";var i={name:"card",data:function(){return{show:!0,isActive:!1}},methods:{hide:function(){this.isActive=!0}},mounted:function(){},props:{title:{required:!1}},destroy:function(){}},e=(a(430),a(21)),o=Object(e.a)(i,(function(){var t=this,s=t.$createElement,a=t._self._c||s;return a("div",{staticClass:"card",class:{dNone:t.isActive}},[a("div",{staticClass:"card-header"},[a("h3",{staticClass:"card-title",domProps:{innerHTML:t._s(t.title)}}),t._v(" "),a("span",{staticClass:"float-right"},[a("i",{staticClass:"fa fa-fw ti-angle-up",class:{rotate:t.show},on:{click:function(s){t.show=!t.show}}}),t._v(" "),a("i",{staticClass:"fa fa-fw ti-close removecard",on:{click:t.hide}})])]),t._v(" "),a("div",{directives:[{name:"show",rawName:"v-show",value:t.show,expression:"show"}],staticClass:"card-body"},[t._t("default")],2)])}),[],!1,null,null,null);s.a=o.exports},638:function(t,s,a){var i={"./af":456,"./af.js":456,"./ar":457,"./ar-dz":458,"./ar-dz.js":458,"./ar-kw":459,"./ar-kw.js":459,"./ar-ly":460,"./ar-ly.js":460,"./ar-ma":461,"./ar-ma.js":461,"./ar-sa":462,"./ar-sa.js":462,"./ar-tn":463,"./ar-tn.js":463,"./ar.js":457,"./az":464,"./az.js":464,"./be":465,"./be.js":465,"./bg":466,"./bg.js":466,"./bm":467,"./bm.js":467,"./bn":468,"./bn.js":468,"./bo":469,"./bo.js":469,"./br":470,"./br.js":470,"./bs":471,"./bs.js":471,"./ca":472,"./ca.js":472,"./cs":473,"./cs.js":473,"./cv":474,"./cv.js":474,"./cy":475,"./cy.js":475,"./da":476,"./da.js":476,"./de":477,"./de-at":478,"./de-at.js":478,"./de-ch":479,"./de-ch.js":479,"./de.js":477,"./dv":480,"./dv.js":480,"./el":481,"./el.js":481,"./en-au":482,"./en-au.js":482,"./en-ca":483,"./en-ca.js":483,"./en-gb":484,"./en-gb.js":484,"./en-ie":485,"./en-ie.js":485,"./en-il":486,"./en-il.js":486,"./en-nz":487,"./en-nz.js":487,"./eo":488,"./eo.js":488,"./es":489,"./es-do":490,"./es-do.js":490,"./es-us":491,"./es-us.js":491,"./es.js":489,"./et":492,"./et.js":492,"./eu":493,"./eu.js":493,"./fa":494,"./fa.js":494,"./fi":495,"./fi.js":495,"./fo":496,"./fo.js":496,"./fr":497,"./fr-ca":498,"./fr-ca.js":498,"./fr-ch":499,"./fr-ch.js":499,"./fr.js":497,"./fy":500,"./fy.js":500,"./gd":501,"./gd.js":501,"./gl":502,"./gl.js":502,"./gom-latn":503,"./gom-latn.js":503,"./gu":504,"./gu.js":504,"./he":505,"./he.js":505,"./hi":506,"./hi.js":506,"./hr":507,"./hr.js":507,"./hu":508,"./hu.js":508,"./hy-am":509,"./hy-am.js":509,"./id":510,"./id.js":510,"./is":511,"./is.js":511,"./it":512,"./it.js":512,"./ja":513,"./ja.js":513,"./jv":514,"./jv.js":514,"./ka":515,"./ka.js":515,"./kk":516,"./kk.js":516,"./km":517,"./km.js":517,"./kn":518,"./kn.js":518,"./ko":519,"./ko.js":519,"./ky":520,"./ky.js":520,"./lb":521,"./lb.js":521,"./lo":522,"./lo.js":522,"./lt":523,"./lt.js":523,"./lv":524,"./lv.js":524,"./me":525,"./me.js":525,"./mi":526,"./mi.js":526,"./mk":527,"./mk.js":527,"./ml":528,"./ml.js":528,"./mn":529,"./mn.js":529,"./mr":530,"./mr.js":530,"./ms":531,"./ms-my":532,"./ms-my.js":532,"./ms.js":531,"./mt":533,"./mt.js":533,"./my":534,"./my.js":534,"./nb":535,"./nb.js":535,"./ne":536,"./ne.js":536,"./nl":537,"./nl-be":538,"./nl-be.js":538,"./nl.js":537,"./nn":539,"./nn.js":539,"./pa-in":540,"./pa-in.js":540,"./pl":541,"./pl.js":541,"./pt":542,"./pt-br":543,"./pt-br.js":543,"./pt.js":542,"./ro":544,"./ro.js":544,"./ru":545,"./ru.js":545,"./sd":546,"./sd.js":546,"./se":547,"./se.js":547,"./si":548,"./si.js":548,"./sk":549,"./sk.js":549,"./sl":550,"./sl.js":550,"./sq":551,"./sq.js":551,"./sr":552,"./sr-cyrl":553,"./sr-cyrl.js":553,"./sr.js":552,"./ss":554,"./ss.js":554,"./sv":555,"./sv.js":555,"./sw":556,"./sw.js":556,"./ta":557,"./ta.js":557,"./te":558,"./te.js":558,"./tet":559,"./tet.js":559,"./tg":560,"./tg.js":560,"./th":561,"./th.js":561,"./tl-ph":562,"./tl-ph.js":562,"./tlh":563,"./tlh.js":563,"./tr":564,"./tr.js":564,"./tzl":565,"./tzl.js":565,"./tzm":566,"./tzm-latn":567,"./tzm-latn.js":567,"./tzm.js":566,"./ug-cn":568,"./ug-cn.js":568,"./uk":569,"./uk.js":569,"./ur":570,"./ur.js":570,"./uz":571,"./uz-latn":572,"./uz-latn.js":572,"./uz.js":571,"./vi":573,"./vi.js":573,"./x-pseudo":574,"./x-pseudo.js":574,"./yo":575,"./yo.js":575,"./zh-cn":576,"./zh-cn.js":576,"./zh-hk":577,"./zh-hk.js":577,"./zh-tw":578,"./zh-tw.js":578};function e(t){var s=o(t);return a(s)}function o(t){if(!a.o(i,t)){var s=new Error("Cannot find module '"+t+"'");throw s.code="MODULE_NOT_FOUND",s}return i[t]}e.keys=function(){return Object.keys(i)},e.resolve=o,t.exports=e,e.id=638},754:function(t,s,a){"use strict";(function(t){var i=a(433);a(755),a(1443),a(427);s.a={name:"blank",components:{card:i.a},data:function(){return{get:"",selected:"option3",inputs:[]}},methods:{addRow:function(){this.inputs.length<4&&(this.inputs.push({one:"",two:""}),setTimeout((function(){t(".departure_date").datetimepicker({format:"DD/MM/YYYY"})})))},deleteRow:function(t){this.inputs.splice(t,1)}},mounted:function(){t("#departure_date,#return_date,.departure_date,#checkin_date,#checkout_date").datetimepicker({format:"DD/MM/YYYY"}),t("input[name='adult_count']").TouchSpin({initval:1,min:1,max:9,mousewheel:!1}),t("input[name='child_count']").TouchSpin({initval:0,min:0,max:9,mousewheel:!1}),t("input[name='infant_count']").TouchSpin({initval:0,min:0,max:4,mousewheel:!1})},destroyed:function(){}}}).call(this,a(429))},758:function(t,s,a){var i=a(1449);"string"==typeof i&&(i=[[t.i,i,""]]);var e={hmr:!0,transform:void 0,insertInto:void 0};a(31)(i,e);i.locals&&(t.exports=i.locals)}}]);
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[66],{
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/advanced_date_pickers.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/components/pages/advanced_date_pickers.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _card_card_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./card/card.vue */ "./resources/components/pages/card/card.vue");
+/* harmony import */ var vuejs_datepicker__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuejs-datepicker */ "./node_modules/vuejs-datepicker/dist/build.js");
+/* harmony import */ var vuejs_datepicker__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vuejs_datepicker__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var vue_flatpickr_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-flatpickr-component */ "./node_modules/vue-flatpickr-component/dist/vue-flatpickr.js");
+/* harmony import */ var vue_flatpickr_component__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vue_flatpickr_component__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var flatpickr_dist_flatpickr_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! flatpickr/dist/flatpickr.css */ "./node_modules/flatpickr/dist/flatpickr.css");
+/* harmony import */ var flatpickr_dist_flatpickr_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(flatpickr_dist_flatpickr_css__WEBPACK_IMPORTED_MODULE_4__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "advanced_date_pickers",
+  data: function data() {
+    return {
+      datebasic: new Date(),
+      datetwo: new Date(),
+      multiple: new Date(),
+      datetime: new Date(),
+      date: new Date(),
+      configbasic: {
+        dateFormat: 'd-m-y'
+      },
+      config: {
+        enableTime: true,
+        dateFormat: 'd-m-y h:i'
+      },
+      configtwo: {
+        minDate: "today",
+        maxDate: new Date().fp_incr(14)
+      },
+      configmultiple: {
+        mode: "multiple",
+        dateFormat: "Y-m-d"
+      },
+      range: {
+        mode: "range"
+      },
+      disable: {
+        disable: ["2018-01-30", "2018-01-21", "2018-01-08", new Date(2018, 1, 1)],
+        dateFormat: "Y-m-d"
+      }
+    };
+  },
+  components: {
+    card: _card_card_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    Datepicker: vuejs_datepicker__WEBPACK_IMPORTED_MODULE_2___default.a,
+    flatPickr: vue_flatpickr_component__WEBPACK_IMPORTED_MODULE_3___default.a
+  },
+  mounted: function mounted() {},
+  destroyed: function destroyed() {}
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/card/card.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/components/pages/card/card.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'card',
+  data: function data() {
+    return {
+      show: true,
+      isActive: false
+    };
+  },
+  methods: {
+    hide: function hide() {
+      this.isActive = true;
+    }
+  },
+  mounted: function mounted() {},
+  props: {
+    title: {
+      required: false
+    }
+  },
+  destroy: function destroy() {}
+});
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/advanced_date_pickers.vue?vue&type=style&index=0&lang=css&":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--5-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--5-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/components/pages/advanced_date_pickers.vue?vue&type=style&index=0&lang=css& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.vdp-datepicker input {\n    padding: 0;\n}\nhtml{\n    background-color: #fff;\n}\n@media(max-width: 320px){\n#datepickers-container .datepicker.active{\n        left: 60px !important;\n}\n}\n.form-group{\n    margin-bottom: 0.5rem;\n}\n.date_picker input,.clockpicker-with-callbacks .date_picker div{\n    width: 100%;\n    border:none;\n}\n.date_picker input:focus{\n    outline: none;\n}\n.vdp-datepicker__calendar .cell.selected{\n    background-color: #428bca !important;\n    color:#fff;\n}\n.content{\n    min-height: 145vh;\n}\n.popover-container,.input-group .form-control{\n    z-index: inherit !important;\n}\n.picker .popover-origin,.flatpickr-calendar.open{\n    z-index: 99 !important;\n}\n.flatpickr-day.selected{\n    background-color: #428bca !important;\n}\n.flatpickr-input[readonly=\"readonly\"]{\n    background-color: #fff;\n}\n.clockpicker-with-callbacks .date_picker div{\n    width: 100%;\n    left:-18px;\n}\n@media(max-width: 320px){\n.popover-origin.direction-bottom.align-left{\n        left: -47px !important;\n}\n.clockpicker-with-callbacks .date_picker .vdp-datepicker__calendar{\n        width: 270px;\n}\n.flatpickr-calendar.open{\n        right:6px !important;\n}\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/card/card.vue?vue&type=style&index=0&lang=css&":
+/*!******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--5-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--5-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/components/pages/card/card.vue?vue&type=style&index=0&lang=css& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.dNone{\n    display: none;\n}\n.rotate{\n    transform:rotate(180deg);\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/advanced_date_pickers.vue?vue&type=style&index=0&lang=css&":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--5-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--5-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/components/pages/advanced_date_pickers.vue?vue&type=style&index=0&lang=css& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--5-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--5-2!../../../node_modules/vue-loader/lib??vue-loader-options!./advanced_date_pickers.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/advanced_date_pickers.vue?vue&type=style&index=0&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/card/card.vue?vue&type=style&index=0&lang=css&":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--5-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--5-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/components/pages/card/card.vue?vue&type=style&index=0&lang=css& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--5-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--5-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./card.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/card/card.vue?vue&type=style&index=0&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/advanced_date_pickers.vue?vue&type=template&id=1e6af6c5&":
+/*!***************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/components/pages/advanced_date_pickers.vue?vue&type=template&id=1e6af6c5& ***!
+  \***************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "row" }, [
+      _c(
+        "div",
+        { staticClass: "col-md-6" },
+        [
+          _c(
+            "card",
+            { attrs: { title: "<i class='ti-calendar'></i>  Date Picker" } },
+            [
+              _c("div", { staticClass: "box-body" }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [
+                    _vm._v(
+                      "\n                            Date Picker:\n                        "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "input-group" },
+                    [
+                      _c("div", { staticClass: "input-group-prepend" }, [
+                        _c(
+                          "span",
+                          { staticClass: "input-group-text bg-white" },
+                          [_c("i", { staticClass: "fa fa-fw ti-calendar" })]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("flat-pickr", {
+                        staticClass: "form-control",
+                        model: {
+                          value: _vm.datebasic,
+                          callback: function($$v) {
+                            _vm.datebasic = $$v
+                          },
+                          expression: "datebasic"
+                        }
+                      })
+                    ],
+                    1
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [
+                    _vm._v(
+                      "\n                            Multiple Date Picker:\n                        "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "input-group clockpicker",
+                      attrs: {
+                        "data-placement": "left",
+                        "data-align": "top",
+                        "data-autoclose": "true"
+                      }
+                    },
+                    [
+                      _c("flat-pickr", {
+                        staticClass: "form-control",
+                        attrs: { config: _vm.configmultiple },
+                        model: {
+                          value: _vm.multiple,
+                          callback: function($$v) {
+                            _vm.multiple = $$v
+                          },
+                          expression: "multiple"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "input-group-append" }, [
+                        _c(
+                          "span",
+                          { staticClass: "input-group-text bg-white" },
+                          [_c("i", { staticClass: "fa fa-fw ti-calendar" })]
+                        )
+                      ])
+                    ],
+                    1
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [
+                    _vm._v(
+                      "\n                            Year and Month selection:\n                        "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "input-group clockpicker-with-callbacks" },
+                    [
+                      _c("datepicker", {
+                        staticClass: "form-control date_picker",
+                        attrs: {
+                          minimumView: "month",
+                          maximumView: "year",
+                          initialView: "year",
+                          readonly: false
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "input-group-append" }, [
+                        _c(
+                          "span",
+                          { staticClass: "input-group-text bg-white" },
+                          [_c("i", { staticClass: "fa fa-fw ti-calendar" })]
+                        )
+                      ])
+                    ],
+                    1
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [
+                    _vm._v(
+                      "\n                            Minimum and Maximum Dates:\n                        "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "input-group" },
+                    [
+                      _c("div", { staticClass: "input-group-prepend" }, [
+                        _c(
+                          "span",
+                          { staticClass: "input-group-text bg-white" },
+                          [_c("i", { staticClass: "fa fa-fw ti-time" })]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("flat-pickr", {
+                        staticClass: "form-control",
+                        attrs: { config: _vm.configtwo, readonly: false },
+                        model: {
+                          value: _vm.datetwo,
+                          callback: function($$v) {
+                            _vm.datetwo = $$v
+                          },
+                          expression: "datetwo"
+                        }
+                      })
+                    ],
+                    1
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [
+                    _vm._v(
+                      "\n                            Date and Time Picker:\n                        "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "input-group" },
+                    [
+                      _c("div", { staticClass: "input-group-prepend" }, [
+                        _c(
+                          "span",
+                          { staticClass: "input-group-text bg-white" },
+                          [_c("i", { staticClass: "fa fa-fw ti-calendar" })]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("flat-pickr", {
+                        staticClass: "form-control",
+                        attrs: { config: _vm.config, readonly: false },
+                        model: {
+                          value: _vm.datetime,
+                          callback: function($$v) {
+                            _vm.datetime = $$v
+                          },
+                          expression: "datetime"
+                        }
+                      })
+                    ],
+                    1
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [
+                    _vm._v(
+                      "\n                            Range of Dates:\n                        "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "input-group" },
+                    [
+                      _c("div", { staticClass: "input-group-prepend" }, [
+                        _c(
+                          "span",
+                          { staticClass: "input-group-text bg-white" },
+                          [_c("i", { staticClass: "fa fa-fw ti-calendar" })]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("flat-pickr", {
+                        staticClass: "form-control",
+                        attrs: { config: _vm.range, readonly: false },
+                        model: {
+                          value: _vm.date,
+                          callback: function($$v) {
+                            _vm.date = $$v
+                          },
+                          expression: "date"
+                        }
+                      })
+                    ],
+                    1
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", [
+                    _vm._v(
+                      "\n                            Disable Days of Week:\n                        "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "input-group" },
+                    [
+                      _c("div", { staticClass: "input-group-prepend" }, [
+                        _c(
+                          "span",
+                          { staticClass: "input-group-text bg-white" },
+                          [_c("i", { staticClass: "fa fa-fw ti-calendar" })]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("flat-pickr", {
+                        staticClass: "form-control",
+                        attrs: { config: _vm.disable, readonly: false },
+                        model: {
+                          value: _vm.date,
+                          callback: function($$v) {
+                            _vm.date = $$v
+                          },
+                          expression: "date"
+                        }
+                      })
+                    ],
+                    1
+                  )
+                ])
+              ])
+            ]
+          )
+        ],
+        1
+      )
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/card/card.vue?vue&type=template&id=15e33d3a&":
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/components/pages/card/card.vue?vue&type=template&id=15e33d3a& ***!
+  \***************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "card", class: { dNone: _vm.isActive } }, [
+    _c("div", { staticClass: "card-header" }, [
+      _c("h3", {
+        staticClass: "card-title",
+        domProps: { innerHTML: _vm._s(_vm.title) }
+      }),
+      _vm._v(" "),
+      _c("span", { staticClass: "float-right" }, [
+        _c("i", {
+          staticClass: "fa fa-fw ti-angle-up",
+          class: { rotate: _vm.show },
+          on: {
+            click: function($event) {
+              _vm.show = !_vm.show
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c("i", {
+          staticClass: "fa fa-fw ti-close removecard",
+          on: { click: _vm.hide }
+        })
+      ])
+    ]),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        directives: [
+          {
+            name: "show",
+            rawName: "v-show",
+            value: _vm.show,
+            expression: "show"
+          }
+        ],
+        staticClass: "card-body"
+      },
+      [_vm._t("default")],
+      2
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./resources/components/pages/advanced_date_pickers.vue":
+/*!**************************************************************!*\
+  !*** ./resources/components/pages/advanced_date_pickers.vue ***!
+  \**************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _advanced_date_pickers_vue_vue_type_template_id_1e6af6c5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./advanced_date_pickers.vue?vue&type=template&id=1e6af6c5& */ "./resources/components/pages/advanced_date_pickers.vue?vue&type=template&id=1e6af6c5&");
+/* harmony import */ var _advanced_date_pickers_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./advanced_date_pickers.vue?vue&type=script&lang=js& */ "./resources/components/pages/advanced_date_pickers.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _advanced_date_pickers_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./advanced_date_pickers.vue?vue&type=style&index=0&lang=css& */ "./resources/components/pages/advanced_date_pickers.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _advanced_date_pickers_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _advanced_date_pickers_vue_vue_type_template_id_1e6af6c5___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _advanced_date_pickers_vue_vue_type_template_id_1e6af6c5___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/components/pages/advanced_date_pickers.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/components/pages/advanced_date_pickers.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************!*\
+  !*** ./resources/components/pages/advanced_date_pickers.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_advanced_date_pickers_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./advanced_date_pickers.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/advanced_date_pickers.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_advanced_date_pickers_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/components/pages/advanced_date_pickers.vue?vue&type=style&index=0&lang=css&":
+/*!***********************************************************************************************!*\
+  !*** ./resources/components/pages/advanced_date_pickers.vue?vue&type=style&index=0&lang=css& ***!
+  \***********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_advanced_date_pickers_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader??ref--5-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--5-2!../../../node_modules/vue-loader/lib??vue-loader-options!./advanced_date_pickers.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/advanced_date_pickers.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_advanced_date_pickers_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_advanced_date_pickers_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_advanced_date_pickers_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_advanced_date_pickers_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_advanced_date_pickers_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/components/pages/advanced_date_pickers.vue?vue&type=template&id=1e6af6c5&":
+/*!*********************************************************************************************!*\
+  !*** ./resources/components/pages/advanced_date_pickers.vue?vue&type=template&id=1e6af6c5& ***!
+  \*********************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_advanced_date_pickers_vue_vue_type_template_id_1e6af6c5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./advanced_date_pickers.vue?vue&type=template&id=1e6af6c5& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/advanced_date_pickers.vue?vue&type=template&id=1e6af6c5&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_advanced_date_pickers_vue_vue_type_template_id_1e6af6c5___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_advanced_date_pickers_vue_vue_type_template_id_1e6af6c5___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/components/pages/card/card.vue":
+/*!**************************************************!*\
+  !*** ./resources/components/pages/card/card.vue ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _card_vue_vue_type_template_id_15e33d3a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./card.vue?vue&type=template&id=15e33d3a& */ "./resources/components/pages/card/card.vue?vue&type=template&id=15e33d3a&");
+/* harmony import */ var _card_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./card.vue?vue&type=script&lang=js& */ "./resources/components/pages/card/card.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _card_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./card.vue?vue&type=style&index=0&lang=css& */ "./resources/components/pages/card/card.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _card_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _card_vue_vue_type_template_id_15e33d3a___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _card_vue_vue_type_template_id_15e33d3a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/components/pages/card/card.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/components/pages/card/card.vue?vue&type=script&lang=js&":
+/*!***************************************************************************!*\
+  !*** ./resources/components/pages/card/card.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_card_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./card.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/card/card.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_card_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/components/pages/card/card.vue?vue&type=style&index=0&lang=css&":
+/*!***********************************************************************************!*\
+  !*** ./resources/components/pages/card/card.vue?vue&type=style&index=0&lang=css& ***!
+  \***********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_card_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader!../../../../node_modules/css-loader??ref--5-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--5-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./card.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/card/card.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_card_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_card_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_card_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_card_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_card_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/components/pages/card/card.vue?vue&type=template&id=15e33d3a&":
+/*!*********************************************************************************!*\
+  !*** ./resources/components/pages/card/card.vue?vue&type=template&id=15e33d3a& ***!
+  \*********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_card_vue_vue_type_template_id_15e33d3a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./card.vue?vue&type=template&id=15e33d3a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/card/card.vue?vue&type=template&id=15e33d3a&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_card_vue_vue_type_template_id_15e33d3a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_card_vue_vue_type_template_id_15e33d3a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ })
+
+}]);

@@ -20,7 +20,7 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
-    store.commit("routeChange", "start");
+    //store.commit("routeChange", "start");
     next();
 })
 

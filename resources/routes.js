@@ -1,3 +1,5 @@
+import { transition } from "d3"
+
 const routes = [{
     path: '/',
     component: resolve => require(['./components/layout/app.vue'], resolve),
@@ -1209,7 +1211,8 @@ const routes = [{
             component: resolve => require(['./components/guest/Login/login.vue'], resolve),
             meta: {
                 title: 'Login',
-                breadcrumb: ``
+                breadcrumb: ``,
+                transition: 'slide-left'
             },
         },
         {
@@ -1218,7 +1221,8 @@ const routes = [{
             component: resolve => require(['./components/guest/Login/loginNextStep.vue'], resolve),
             meta: {
                 title: 'Login Etapa 2',
-                breadcrumb: ``
+                breadcrumb: ``,
+                transition: 'slide-right'
             },
         },
         {

@@ -2,7 +2,7 @@
     <div>
         <div class="row">
             <div class="col-12">
-                <h4 class="bold text-primary"> Entre ou cadastre-se </h4>
+                <h5 class="bold text-transalvador"> Entre ou cadastre-se </h5>
                 <p> Preencha seu CPF </p>
             </div>
         </div>
@@ -13,21 +13,28 @@
                         <div class="col-sm-12 mt-3 ">
                             <div class="form-group">
                                 <validate tag="div">
-                                    <input v-model="model.login" name="login" class="form-control"
-                                        placeholder="preencha seu login ou CPF" required />
+                                    <input 
+                                        v-model="model.login"
+                                        name="login" class="form-control"
+                                        placeholder="preencha seu login ou CPF" 
+                                        required 
+                                    />
 
-                                    <field-messages name="login" show="$invalid && $focused || $invalid && $submitted"
-                                        class="text-danger">
+                                    <field-messages 
+                                        name="login" show="$invalid && $focused || $invalid && $submitted"
+                                        class="text-danger mt-2"
+                                    >
                                         <div slot="required"> É obrigatório informar o login </div>
                                     </field-messages>
                                 </validate>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row mt-3">
                         <div class="col-12">
-                            <b-button variant="primary" class="btn-block" type="submit" :disabled="loading">
-                                <span v-if="!loading"> Avançar <span class="el-icon-arrow-right"> </span> </span>
+                            <b-button variant="primary" class="btn-block btn-transalvador" type="submit"
+                                :disabled="loading">
+                                <span v-if="!loading"> Avançar </span>
                                 <span v-else> Carregando <span class="el-icon-loading"> </span> </span>
                             </b-button>
                         </div>
@@ -39,7 +46,6 @@
 </template>
 
 <script>
-
 import Vue from "vue"
 import VueForm from "vue-form";
 import options from "../../../validations/validations.js";
@@ -51,10 +57,11 @@ Vue.use(VueForm, options);
 export default {
     name: "login",
     data() {
+        console.log(this.$route)
         return {
             formstate: {},
             model: {
-                login: "",
+                login: this.$route.params.usu_nom_login || "",
             },
 
             loading: false,
@@ -67,7 +74,7 @@ export default {
 
                 const { data: response } = await axios.get('/laravel_vue/api/verifyUserExists', {
                     params: {
-                        usu_nom_login: this.model.login
+                        usu_nom_login: this.model.login.replaceAll(".")
                     }
                 });
 
@@ -85,11 +92,7 @@ export default {
 }
 </script>
 
-
 <style src="bootstrapValidator/dist/css/bootstrapValidator.min.css">
-
-</style>
-<style src="../../../css/login.css" scoped>
 
 </style>
 <style type="text/css" scoped>
