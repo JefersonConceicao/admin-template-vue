@@ -6,18 +6,18 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Support\Facades\Hash;
 
 class User extends Authenticatable
 {
     use Notifiable, HasApiTokens;
 
-    /**
-     * @var array
-     */
-
     protected $table = 'usu_usuario';
     protected $primaryKey = 'usu_id_usu';
 
+    /**
+     * @var array
+     */
     protected $fillable = [
         'usu_nom_usuario',
         'usu_nom_login',
@@ -43,7 +43,7 @@ class User extends Authenticatable
 
     public function getAuthPassword()
     {
-        return $this->usu_num_senha;
+        return Hash::make($this->usu_num_senha);
     }
 
 }

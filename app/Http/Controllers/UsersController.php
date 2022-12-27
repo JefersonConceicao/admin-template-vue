@@ -11,7 +11,6 @@ class UsersController extends Controller
     /**
      * @return \Illuminate\Http\Response
      */
-
     public function verifyUserExists(Request $request)
     {   
         $user = User::where(['usu_nom_login' => $request->usu_nom_login])->first();
@@ -21,9 +20,10 @@ class UsersController extends Controller
     /**
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $dadosUsuarios = User::paginate(20);
+        return response()->json($dadosUsuarios);
     }
 
     /**
