@@ -11,21 +11,23 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var vue_form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-form */ "./node_modules/vue-form/dist/vue-form.js");
-/* harmony import */ var vue_form__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue_form__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _validations_validations_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../validations/validations.js */ "./resources/validations/validations.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var toastr_build_toastr_min_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! toastr/build/toastr.min.js */ "./node_modules/toastr/build/toastr.min.js");
-/* harmony import */ var toastr_build_toastr_min_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(toastr_build_toastr_min_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var toastr_build_toastr_min_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! toastr/build/toastr.min.js */ "./node_modules/toastr/build/toastr.min.js");
+/* harmony import */ var toastr_build_toastr_min_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(toastr_build_toastr_min_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 //
 //
 //
@@ -76,13 +78,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 
-
-
-vue__WEBPACK_IMPORTED_MODULE_1___default.a.use(vue_form__WEBPACK_IMPORTED_MODULE_2___default.a, _validations_validations_js__WEBPACK_IMPORTED_MODULE_3__["default"]);
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "login",
   data: function data() {
-    console.log(this.$route);
     return {
       formstate: {},
       model: {
@@ -91,7 +89,7 @@ vue__WEBPACK_IMPORTED_MODULE_1___default.a.use(vue_form__WEBPACK_IMPORTED_MODULE
       loading: false
     };
   },
-  methods: {
+  methods: _objectSpread({
     onSubmit: function onSubmit() {
       var _this = this;
 
@@ -109,7 +107,7 @@ vue__WEBPACK_IMPORTED_MODULE_1___default.a.use(vue_form__WEBPACK_IMPORTED_MODULE
 
                 _this.loading = true;
                 _context.next = 4;
-                return axios__WEBPACK_IMPORTED_MODULE_4___default.a.get('/laravel_vue/api/verifyUserExists', {
+                return axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('/laravel_vue/api/verifyUserExists', {
                   params: {
                     usu_nom_login: _this.model.login.replaceAll(".")
                   }
@@ -124,7 +122,7 @@ vue__WEBPACK_IMPORTED_MODULE_1___default.a.use(vue_form__WEBPACK_IMPORTED_MODULE
                   break;
                 }
 
-                toastr_build_toastr_min_js__WEBPACK_IMPORTED_MODULE_5___default.a.error("Não foi encntrado usuário com este login ou CPF");
+                toastr_build_toastr_min_js__WEBPACK_IMPORTED_MODULE_2___default.a.error("Não foi encntrado usuário com este login ou CPF");
                 _this.loading = false;
                 return _context.abrupt("return");
 
@@ -144,7 +142,9 @@ vue__WEBPACK_IMPORTED_MODULE_1___default.a.use(vue_form__WEBPACK_IMPORTED_MODULE
         }, _callee);
       }))();
     }
-  }
+  }, Object(vuex__WEBPACK_IMPORTED_MODULE_3__["mapActions"])({
+    testeActionVue: 'requestLogin'
+  }))
 });
 
 /***/ }),
@@ -228,7 +228,6 @@ var render = function() {
               on: {
                 submit: function($event) {
                   $event.preventDefault()
-                  return _vm.onSubmit($event)
                 }
               }
             },
@@ -314,9 +313,10 @@ var render = function() {
                         staticClass: "btn-block btn-transalvador",
                         attrs: {
                           variant: "primary",
-                          type: "submit",
+                          type: "button",
                           disabled: _vm.loading
-                        }
+                        },
+                        on: { click: _vm.testeActionVue }
                       },
                       [
                         !_vm.loading
@@ -447,30 +447,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_login_vue_vue_type_template_id_654ac4eb_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
-
-/***/ }),
-
-/***/ "./resources/validations/validations.js":
-/*!**********************************************!*\
-  !*** ./resources/validations/validations.js ***!
-  \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-var options = {
-  validators: {
-    checkbox: function checkbox(value, attrValue, vnode) {
-      // return true to set input as $valid, false to set as $invalid
-      return value;
-    },
-    sameas: function sameas(value, attrValue, vnode) {
-      return value == attrValue;
-    }
-  }
-};
-/* harmony default export */ __webpack_exports__["default"] = (options);
 
 /***/ })
 

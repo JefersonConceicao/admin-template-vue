@@ -1,24 +1,19 @@
 import 'es6-promise/auto';
 import Vue from 'vue';
 import Vuex from 'vuex';
-import mutations from '../store/mutations';
+
+import ModuleLogin from './modules/login';
+import ModuleTheme from './modules/theme';
 
 Vue.use(Vuex);
 
 //=======vuex store start===========
-
 const store = new Vuex.Store({
-    state: {
-        left_open: true,
-        right_open: false,
-        preloader: true,
-        user: {
-            name: "Addison",
-            picture: require('../img/authors/avatar1.jpg'),
-            job: "Project Manager"
-        }
-    },
-    mutations
+    modules:{
+        login: ModuleLogin,
+        theme: ModuleTheme
+    }   
 });
+
 //=======vuex store end===========
 export default store

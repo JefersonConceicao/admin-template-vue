@@ -4,6 +4,8 @@ import store from './store/store'
 import App from './App'
 import routes from './routes'
 import BootstrapVue from 'bootstrap-vue'
+import VueForm from "vue-form";
+import options from "./validations/validations";
 
 import "chart.js";
 import "hchs-vue-charts";
@@ -11,6 +13,7 @@ import "hchs-vue-charts";
 Vue.use(window.VueCharts);
 Vue.use(VueRouter)
 Vue.use(BootstrapVue)
+Vue.use(VueForm, options);
 
 const router = new VueRouter({
     mode: 'history',

@@ -5,9 +5,150 @@
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/components/guest/Login/loginNextStep.vue?vue&type=script&lang=js& ***!
   \*********************************************************************************************************************************************************************************/
 /*! exports provided: default */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\laragon\\www\\laravel_vue\\resources\\components\\guest\\Login\\loginNextStep.vue: Unexpected token, expected \",\" (81:8)\n\n\u001b[0m \u001b[90m 79 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 80 | \u001b[39m        }\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 81 | \u001b[39m        cutStringName(name) {\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 82 | \u001b[39m            \u001b[36mreturn\u001b[39m \u001b[33m!\u001b[39m\u001b[33m!\u001b[39mname \u001b[33m?\u001b[39m name\u001b[33m.\u001b[39msplit(\u001b[32m' '\u001b[39m)[\u001b[35m0\u001b[39m] \u001b[33m:\u001b[39m \u001b[32m\"\"\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 83 | \u001b[39m        }\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 84 | \u001b[39m        backFirstStep() {\u001b[0m\n    at Parser._raise (C:\\laragon\\www\\laravel_vue\\node_modules\\@babel\\parser\\lib\\index.js:742:17)\n    at Parser.raiseWithData (C:\\laragon\\www\\laravel_vue\\node_modules\\@babel\\parser\\lib\\index.js:735:17)\n    at Parser.raise (C:\\laragon\\www\\laravel_vue\\node_modules\\@babel\\parser\\lib\\index.js:729:17)\n    at Parser.unexpected (C:\\laragon\\www\\laravel_vue\\node_modules\\@babel\\parser\\lib\\index.js:8757:16)\n    at Parser.expect (C:\\laragon\\www\\laravel_vue\\node_modules\\@babel\\parser\\lib\\index.js:8743:28)\n    at Parser.parseObj (C:\\laragon\\www\\laravel_vue\\node_modules\\@babel\\parser\\lib\\index.js:10365:14)\n    at Parser.parseExprAtom (C:\\laragon\\www\\laravel_vue\\node_modules\\@babel\\parser\\lib\\index.js:9995:28)\n    at Parser.parseExprSubscripts (C:\\laragon\\www\\laravel_vue\\node_modules\\@babel\\parser\\lib\\index.js:9602:23)\n    at Parser.parseMaybeUnary (C:\\laragon\\www\\laravel_vue\\node_modules\\@babel\\parser\\lib\\index.js:9582:21)\n    at Parser.parseExprOps (C:\\laragon\\www\\laravel_vue\\node_modules\\@babel\\parser\\lib\\index.js:9452:23)\n    at Parser.parseMaybeConditional (C:\\laragon\\www\\laravel_vue\\node_modules\\@babel\\parser\\lib\\index.js:9425:23)\n    at Parser.parseMaybeAssign (C:\\laragon\\www\\laravel_vue\\node_modules\\@babel\\parser\\lib\\index.js:9380:21)\n    at Parser.parseObjectProperty (C:\\laragon\\www\\laravel_vue\\node_modules\\@babel\\parser\\lib\\index.js:10512:101)\n    at Parser.parseObjPropValue (C:\\laragon\\www\\laravel_vue\\node_modules\\@babel\\parser\\lib\\index.js:10537:101)\n    at Parser.parseObjectMember (C:\\laragon\\www\\laravel_vue\\node_modules\\@babel\\parser\\lib\\index.js:10461:10)\n    at Parser.parseObj (C:\\laragon\\www\\laravel_vue\\node_modules\\@babel\\parser\\lib\\index.js:10374:25)\n    at Parser.parseExprAtom (C:\\laragon\\www\\laravel_vue\\node_modules\\@babel\\parser\\lib\\index.js:9995:28)\n    at Parser.parseExprSubscripts (C:\\laragon\\www\\laravel_vue\\node_modules\\@babel\\parser\\lib\\index.js:9602:23)\n    at Parser.parseMaybeUnary (C:\\laragon\\www\\laravel_vue\\node_modules\\@babel\\parser\\lib\\index.js:9582:21)\n    at Parser.parseExprOps (C:\\laragon\\www\\laravel_vue\\node_modules\\@babel\\parser\\lib\\index.js:9452:23)\n    at Parser.parseMaybeConditional (C:\\laragon\\www\\laravel_vue\\node_modules\\@babel\\parser\\lib\\index.js:9425:23)\n    at Parser.parseMaybeAssign (C:\\laragon\\www\\laravel_vue\\node_modules\\@babel\\parser\\lib\\index.js:9380:21)\n    at Parser.parseExportDefaultExpression (C:\\laragon\\www\\laravel_vue\\node_modules\\@babel\\parser\\lib\\index.js:12274:24)\n    at Parser.parseExport (C:\\laragon\\www\\laravel_vue\\node_modules\\@babel\\parser\\lib\\index.js:12176:31)\n    at Parser.parseStatementContent (C:\\laragon\\www\\laravel_vue\\node_modules\\@babel\\parser\\lib\\index.js:11185:27)\n    at Parser.parseStatement (C:\\laragon\\www\\laravel_vue\\node_modules\\@babel\\parser\\lib\\index.js:11081:17)\n    at Parser.parseBlockOrModuleBlockBody (C:\\laragon\\www\\laravel_vue\\node_modules\\@babel\\parser\\lib\\index.js:11655:25)\n    at Parser.parseBlockBody (C:\\laragon\\www\\laravel_vue\\node_modules\\@babel\\parser\\lib\\index.js:11642:10)\n    at Parser.parseTopLevel (C:\\laragon\\www\\laravel_vue\\node_modules\\@babel\\parser\\lib\\index.js:11012:10)\n    at Parser.parse (C:\\laragon\\www\\laravel_vue\\node_modules\\@babel\\parser\\lib\\index.js:12628:10)\n    at parse (C:\\laragon\\www\\laravel_vue\\node_modules\\@babel\\parser\\lib\\index.js:12679:38)\n    at parser (C:\\laragon\\www\\laravel_vue\\node_modules\\@babel\\core\\lib\\parser\\index.js:54:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (C:\\laragon\\www\\laravel_vue\\node_modules\\@babel\\core\\lib\\transformation\\normalize-file.js:93:38)\n    at normalizeFile.next (<anonymous>)\n    at run (C:\\laragon\\www\\laravel_vue\\node_modules\\@babel\\core\\lib\\transformation\\index.js:31:50)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "loginNextStep",
+  created: function created() {
+    var _this$$route$params$u;
+
+    if (!((_this$$route$params$u = this.$route.params.user) === null || _this$$route$params$u === void 0 ? void 0 : _this$$route$params$u.usu_nom_login)) {
+      this.$router.push({
+        name: 'AuthLogin'
+      });
+    }
+  },
+  data: function data() {
+    return {
+      dataParams: this.$route.params,
+      formstate: {},
+      model: {
+        password: ""
+      }
+    };
+  },
+  methods: {
+    onSubmit: function onSubmit() {
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }))();
+    },
+    cutStringName: function cutStringName(name) {
+      return !!name ? name.split(' ')[0] : "";
+    },
+    backFirstStep: function backFirstStep() {
+      this.$router.push({
+        name: 'AuthLogin',
+        params: {
+          usu_nom_login: this.dataParams.user.usu_nom_login
+        }
+      });
+    }
+  },
+  computed: {
+    saudacoesUsuario: function saudacoesUsuario() {
+      var _this$dataParams$user4;
+
+      var dataAtual = new Date();
+      var horario = dataAtual.getHours();
+
+      if (horario < 12) {
+        var _this$dataParams$user;
+
+        return "Bom dia, ".concat(this.cutStringName((_this$dataParams$user = this.dataParams.user) === null || _this$dataParams$user === void 0 ? void 0 : _this$dataParams$user.usu_nom_usuario));
+      }
+
+      if (horario > 12 && horario < 18) {
+        var _this$dataParams$user2;
+
+        return "Boa tarde, ".concat(this.cutStringName((_this$dataParams$user2 = this.dataParams.user) === null || _this$dataParams$user2 === void 0 ? void 0 : _this$dataParams$user2.usu_nom_usuario));
+      }
+
+      if (horario > 18 && horario < 23) {
+        var _this$dataParams$user3;
+
+        return "Boa noite, ".concat(this.cutStringName((_this$dataParams$user3 = this.dataParams.user) === null || _this$dataParams$user3 === void 0 ? void 0 : _this$dataParams$user3.usu_nom_usuario));
+      }
+
+      return "Ol\xE1, ".concat(this.cutStringName((_this$dataParams$user4 = this.dataParams.user) === null || _this$dataParams$user4 === void 0 ? void 0 : _this$dataParams$user4.usu_nom_usuario));
+    }
+  }
+});
 
 /***/ }),
 

@@ -47,21 +47,322 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/date_pickers.vue?vue&type=script&lang=js&":
-/*!**************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/components/pages/date_pickers.vue?vue&type=script&lang=js& ***!
-  \**************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/form-validations.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/components/pages/form-validations.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var vue_masked_input__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-masked-input */ "./node_modules/vue-masked-input/dist/maskedInput.js");
-/* harmony import */ var vuejs_datepicker__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuejs-datepicker */ "./node_modules/vuejs-datepicker/dist/build.js");
-/* harmony import */ var vuejs_datepicker__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vuejs_datepicker__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _card_card_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./card/card.vue */ "./resources/components/pages/card/card.vue");
+/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var _card_card_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./card/card.vue */ "./resources/components/pages/card/card.vue");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var vee_validate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vee-validate */ "./node_modules/vee-validate/dist/vee-validate.esm.js");
+/* harmony import */ var card__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! card */ "./node_modules/card/lib/card.js");
+/* harmony import */ var card__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(card__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var vue_form__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue-form */ "./node_modules/vue-form/dist/vue-form.js");
+/* harmony import */ var vue_form__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(vue_form__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _validations_validations_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../validations/validations.js */ "./resources/validations/validations.js");
+/* harmony import */ var vue_password_strength_meter__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vue-password-strength-meter */ "./node_modules/vue-password-strength-meter/dist/vue-password-strength-meter.min.js");
+/* harmony import */ var vue_password_strength_meter__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(vue_password_strength_meter__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var sweetalert2_dist_sweetalert2_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! sweetalert2/dist/sweetalert2.js */ "./node_modules/sweetalert2/dist/sweetalert2.js");
+/* harmony import */ var sweetalert2_dist_sweetalert2_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(sweetalert2_dist_sweetalert2_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var bootstrapValidator_dist_js_bootstrapValidator_min_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! bootstrapValidator/dist/js/bootstrapValidator.min.js */ "./node_modules/bootstrapValidator/dist/js/bootstrapValidator.min.js");
+/* harmony import */ var bootstrapValidator_dist_js_bootstrapValidator_min_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(bootstrapValidator_dist_js_bootstrapValidator_min_js__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var bootstrap_maxlength_src_bootstrap_maxlength_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! bootstrap-maxlength/src/bootstrap-maxlength.js */ "./node_modules/bootstrap-maxlength/src/bootstrap-maxlength.js");
+/* harmony import */ var bootstrap_maxlength_src_bootstrap_maxlength_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(bootstrap_maxlength_src_bootstrap_maxlength_js__WEBPACK_IMPORTED_MODULE_9__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -144,54 +445,150 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+vue__WEBPACK_IMPORTED_MODULE_1___default.a.use(vee_validate__WEBPACK_IMPORTED_MODULE_2__["default"]);
 
-var state = {
-  date1: new Date()
-};
+
+
+vue__WEBPACK_IMPORTED_MODULE_1___default.a.use(vue_form__WEBPACK_IMPORTED_MODULE_4___default.a, _validations_validations_js__WEBPACK_IMPORTED_MODULE_5__["default"]);
+
+
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
-  components: {
-    card: _card_card_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
-    Datepicker: vuejs_datepicker__WEBPACK_IMPORTED_MODULE_2___default.a,
-    MaskedInput: vue_masked_input__WEBPACK_IMPORTED_MODULE_1__["default"]
-  },
   data: function data() {
     return {
-      format: 'd MMMM yyyy',
-      disabled: {},
-      eventMsg: null,
-      state: state,
-      date: '',
-      date2: '',
-      phone: '',
-      intlphone: '',
-      ip: ''
+      username: '',
+      formstate: {},
+      model: {
+        number: "",
+        password: ""
+      },
+      password: null,
+      confirmpassword: null
     };
   },
+  components: {
+    Password: vue_password_strength_meter__WEBPACK_IMPORTED_MODULE_6___default.a,
+    card: _card_card_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
   methods: {
-    disableTo: function disableTo(val) {
-      console.log(val);
-
-      if (typeof this.disabled.to === 'undefined') {
-        this.disabled = {
-          to: null,
-          from: this.disabled.from
-        };
+    onSubmit: function onSubmit() {
+      if (this.formstate.$invalid) {
+        swal({
+          type: "error",
+          title: 'Error',
+          html: 'Please Fill The Mandatory Fields'
+        });
+        return;
+      } else {
+        swal({
+          type: "success",
+          title: "Transaction Successful",
+          html: 'This card is saved for better Payment experience'
+        });
       }
-
-      this.disabled.to = val;
     },
-    disableFrom: function disableFrom(val) {
-      if (typeof this.disabled.from === 'undefined') {
-        this.disabled = {
-          to: this.disabled.to,
-          from: null
-        };
-      }
-
-      this.disabled.from = val;
+    showModal: function showModal() {
+      this.$refs.myModalRef.show();
+    },
+    hideModal: function hideModal() {
+      this.$refs.myModalRef.hide();
+    },
+    validateForm: function validateForm(scope) {
+      this.$validator.validateAll(scope).then(function (result) {
+        if (result) {
+          // eslint-disable-next-line
+          alert('Form Submitted!');
+        }
+      });
     }
-  }
+  },
+  name: "blank",
+  mounted: function mounted() {
+    "use strict"; // =========== payment gateway start
+
+    var card = new card__WEBPACK_IMPORTED_MODULE_3___default.a({
+      // a selector or DOM element for the form where users will
+      // be entering their information
+      form: '#form',
+      // *required*
+      // a selector or DOM element for the container
+      // where you want the card to appear
+      container: '.card-wrapper',
+      // *required*
+      formSelectors: {
+        numberInput: 'input[name="cardnumber"]',
+        // optional — default input[name="number"]
+        expiryInput: 'input[name="cardexpiry"]',
+        // optional — default input[name="expiry"]
+        cvcInput: 'input[name="cardcvc"]',
+        // optional — default input[name="cvc"]
+        nameInput: 'input[name="cardname"]' // optional - defaults input[name="name"]
+
+      },
+      width: 300,
+      // optional — default 350px
+      formatting: true,
+      // optional - default true
+      // Strings for translation - optional
+      messages: {
+        validDate: 'valid\ndate',
+        // optional - default 'valid\nthru'
+        monthYear: 'mm/yyyy' // optional - default 'month/year'
+
+      },
+      // Default placeholders for rendered fields - optional
+      placeholders: {
+        number: '•••• •••• •••• ••••',
+        name: 'Full Name',
+        expiry: '••/••',
+        cvc: '•••'
+      },
+      //
+      //                masks: {
+      //                    cardNumber: '•' // optional - mask card number
+      //                },
+      // if true, will log helpful messages for setting up Card
+      debug: false // optional - default false
+
+    }); // =========== payment gateway end
+
+    $(document).ready(function () {
+      $('input#defaultconfig').maxlength();
+      $('input#thresholdconfig').maxlength({
+        threshold: 20
+      });
+      $("#placement").maxlength({
+        alwaysShow: true,
+        placement: 'top',
+        warningClass: "label bg-success text-white",
+        limitReachedClass: "label bg-danger text-white"
+      });
+      $('input#moreoptions').maxlength({
+        alwaysShow: true,
+        warningClass: "label bg-success text-white",
+        limitReachedClass: "label bg-danger text-white"
+      });
+      $('input#alloptions').maxlength({
+        alwaysShow: true,
+        warningClass: "label bg-success text-white",
+        limitReachedClass: "label bg-danger text-white",
+        separator: ' chars out of ',
+        preText: 'You typed ',
+        postText: ' chars.',
+        validate: true
+      });
+      $('#textarea').maxlength({
+        alwaysShow: true,
+        appendToParent: true,
+        warningClass: "label bg-success text-white",
+        limitReachedClass: "label bg-danger text-white  "
+      });
+    });
+  },
+  destroyed: function destroyed() {}
 });
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),
 
@@ -214,10 +611,10 @@ exports.push([module.i, "\n.dNone{\n    display: none;\n}\n.rotate{\n    transfo
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/date_pickers.vue?vue&type=style&index=0&id=2914c190&scoped=true&lang=css&":
-/*!*********************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--5-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--5-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/components/pages/date_pickers.vue?vue&type=style&index=0&id=2914c190&scoped=true&lang=css& ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/form-validations.vue?vue&type=style&index=3&lang=css&":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--5-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--5-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/components/pages/form-validations.vue?vue&type=style&index=3&lang=css& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -226,17 +623,17 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\ncode[data-v-2914c190],\npre[data-v-2914c190] {\n    margin: 1em 0;\n    padding: 1em;\n    border: 1px solid #bbb;\n    display: block;\n    background: #f1f1f1;\n    border-radius: 3px;\n}\n.settings[data-v-2914c190] {\n    margin: 2em 0;\n    /*padding: 0 1.5em 1.5em;*/\n    background: #fff;\n}\nh5[data-v-2914c190] {\n    font-size: 100%;\n    padding: 0;\n}\n.form-group[data-v-2914c190] {\n    margin-bottom: 1em;\n}\n.form-group label[data-v-2914c190] {\n    font-size: 80%;\n    display: block;\n}\nselect[data-v-2914c190] {\n    height: 2.5em;\n    padding: 0;\n}\n\n", ""]);
+exports.push([module.i, "\n.btn:active{\n    color: #fff !important;\n}\n.jp-card{\n    min-width: 100% !important;\n    width: 100% !important;\n}\n.input.is-danger{\n    border: 1px solid #ff6666;\n}\n.label legend{\n    font-size: 1rem;\n}\n.Password .Password__strength-meter{\n    margin-top: 0;\n}\n.Password .Password__strength-meter:before,.Password .Password__strength-meter:after{\n    content: initial;\n}\n#passwordForm .Password__badge{\n    line-height: 0.7;\n    padding: 3px 10px;\n}\n@media(max-width: 320px){\n.card-body .jp-card-container{\n        transform: scale(1.05) !important;\n}\n}\n.fa-check.green2{\n    color: red;\n}\n.fa-check.green{\n    color: #0F9E5E;\n}\n\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/date_pickers.vue?vue&type=style&index=1&lang=css&":
-/*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--5-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--5-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/components/pages/date_pickers.vue?vue&type=style&index=1&lang=css& ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./resources/css/passtrength/passtrength.css?vue&type=style&index=0&lang=css&":
+/*!*****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--5-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--5-2!./resources/css/passtrength/passtrength.css?vue&type=style&index=0&lang=css& ***!
+  \*****************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -245,7 +642,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.example .vdp-datepicker__calendar{\n    margin: 0 auto;\n}\n.label_font{\n    font-size: 12px !important;\n}\n.vdp-datepicker input{\n    padding: 0.75rem 0.5rem;\n    width: 100%;\n}\n.vdp-datepicker .vdp-datepicker__calendar{\n    margin: auto;\n}\n.c-pane-container.is-double-paned,.c-pane-container,.settings select{\n    width: 100% !important;\n}\n.full_calendar .vdp-datepicker__calendar{\n    margin-left:0 !important;\n    width:100%!important;\n}\n.popover-container input{\n    width: 100%;\n    padding: 0.5rem;\n    border-radius: 5px;\n    border: 1px solid #A9A9A9;\n}\n.usetweentyfour{\n    margin-left: -20px;\n}\n@media(max-width: 768px){\n.c-pane-container.is-double-paned{\n        margin-left: -8px;\n}\n}\n@media (min-width: 720px) and (max-width: 1024px){\n.popover-origin .popover-content-wrapper .popover-content.direction-bottom{\n        left: -15px;\n}\n}\n@media(min-width:320px) and (max-width: 768px){\n.vdp-datepicker__calendar{\n        width: 265px !important;\n        margin-left: -20px !important;\n}\n}\n.c-pane-container.is-double-paned{\n    min-width:100px !important;\n}\n@media(min-width: 1440px){\n.vdp-datepicker input {\n        border: 1px solid #909090;\n}\n}\n", ""]);
+exports.push([module.i, ".passtrengthMeter {\r\n    position : relative;\r\n    width    : 100%;\n}\n.passtrengthMeter > input {\r\n    width              : 100%;\r\n    display            : inline-block;\r\n    padding            : 5px;\r\n    box-sizing         : border-box;\n}\n.passtrengthMeter > input:focus {\r\n    outline-width : 0;\n}\n.passtrengthMeter::after {\r\n    content    : '';\r\n    height     : 3px;\r\n    overflow   : hidden;\r\n    width      : 0;\r\n    transition : width .5s;\r\n    position   : absolute;\r\n    left       : 0;\r\n    bottom     : 0;\n}\n.passtrengthMeter.weak::after {\r\n    background-color : #EC644B;\r\n    width            : 25%;\n}\n.passtrengthMeter.medium::after {\r\n    content          : '';\r\n    background-color : #E87E04;\r\n    width            : 50%;\n}\n.passtrengthMeter.strong::after {\r\n    content          : '';\r\n    background-color : #EFBF17;\r\n    width            : 75%;\n}\n.passtrengthMeter.very-strong::after {\r\n    content          : '';\r\n    background-color : #42A72A;\r\n    width            : 100%;\n}\n.passtrengthMeter .showPassword {\r\n    position : absolute;\r\n    width    : 20px;\r\n    top      : calc(50% - 10px);\r\n    right    : 10px;\n}\n.passtrengthMeter .showPassword.active {\r\n    opacity : .5;\n}\n.passtrengthMeter .showPassword img {\r\n    display : block;\r\n    width   : 100%;\r\n    height  : auto;\n}\n.passtrengthMeter .showPassword:hover {\r\n    cursor : pointer;\n}\n.passtrengthMeter .tooltip {\r\n    background         : #000000;\r\n    top                : 100%;\r\n    color              : #FFF;\r\n    font-size          : 12px;\r\n    display            : block;\r\n    left               : 50%;\r\n    margin-bottom      : 15px;\r\n    opacity            : 0;\r\n    padding            : 5px 10px;\r\n    pointer-events     : none;\r\n    position           : absolute;\r\n    min-width          : 70px;\r\n    box-sizing         : border-box;\r\n    text-align         : center;\r\n    z-index            : 10;\r\n    -webkit-transform  : translateY(5px);\r\n    -moz-transform     : translateY(5px);\r\n    -ms-transform      : translateY(5px);\r\n    -o-transform       : translateY(5px);\r\n    transform          : translateY(5px);\r\n    -webkit-transition : all .25s ease-out;\r\n    -moz-transition    : all .25s ease-out;\r\n    -o-transition      : all .25s ease-out;\r\n    transition         : all .25s ease-out;\r\n    -webkit-box-shadow : 2px 2px 6px rgba(0, 0, 0, 0.28);\r\n    -moz-box-shadow    : 2px 2px 6px rgba(0, 0, 0, 0.28);\r\n    -o-box-shadow      : 2px 2px 6px rgba(0, 0, 0, 0.28);\r\n    box-shadow         : 2px 2px 6px rgba(0, 0, 0, 0.28);\n}\n.passtrengthMeter.weak .tooltip {\r\n    background-color : #EC644B;\n}\n.passtrengthMeter.weak .tooltip:after {\r\n    border-left   : solid transparent 7px;\r\n    border-right  : solid transparent 7px;\r\n    border-bottom : solid #EC644B 7px;\r\n    top           : -7px;\r\n    content       : \" \";\r\n    height        : 0;\r\n    left          : 50%;\r\n    margin-left   : -7px;\r\n    position      : absolute;\r\n    width         : 0;\n}\n.passtrengthMeter.medium .tooltip {\r\n    background-color : #E87E04;\n}\n.passtrengthMeter.medium .tooltip:after {\r\n    border-left   : solid transparent 7px;\r\n    border-right  : solid transparent 7px;\r\n    border-bottom : solid #E87E04 7px;\r\n    top           : -7px;\r\n    content       : \" \";\r\n    height        : 0;\r\n    left          : 50%;\r\n    margin-left   : -7px;\r\n    position      : absolute;\r\n    width         : 0;\n}\n.passtrengthMeter.strong .tooltip {\r\n    background-color : #EFBF17;\n}\n.passtrengthMeter.strong .tooltip:after {\r\n    border-left   : solid transparent 7px;\r\n    border-right  : solid transparent 7px;\r\n    border-bottom : solid #EFBF17 7px;\r\n    top           : -7px;\r\n    content       : \" \";\r\n    height        : 0;\r\n    left          : 50%;\r\n    margin-left   : -7px;\r\n    position      : absolute;\r\n    width         : 0;\n}\n.passtrengthMeter.very-strong .tooltip {\r\n    background-color : #42A72A;\n}\n.passtrengthMeter.very-strong .tooltip:after {\r\n    border-left   : solid transparent 7px;\r\n    border-right  : solid transparent 7px;\r\n    border-bottom : solid #42A72A 7px;\r\n    top           : -7px;\r\n    content       : \" \";\r\n    height        : 0;\r\n    left          : 50%;\r\n    margin-left   : -7px;\r\n    position      : absolute;\r\n    width         : 0;\n}\n.passtrengthMeter.weak .tooltip:before {\r\n    top      : -20px;\r\n    content  : \" \";\r\n    display  : block;\r\n    height   : 20px;\r\n    left     : 0;\r\n    position : absolute;\r\n    width    : 100%;\n}\n.passtrengthMeter .tooltip:after {\r\n    border-left        : solid transparent 7px;\r\n    border-right       : solid transparent 7px;\r\n    border-bottom      : solid #000000 7px;\r\n    top                : -7px;\r\n    content            : \" \";\r\n    height             : 0;\r\n    left               : 50%;\r\n    margin-left        : -7px;\r\n    position           : absolute;\r\n    width              : 0;\r\n    -webkit-transition : all .25s ease-out;\r\n    -moz-transition    : all .25s ease-out;\r\n    -o-transition      : all .25s ease-out;\r\n    transition         : all .25s ease-out;\n}\n.passtrengthMeter:hover .tooltip {\r\n    opacity           : 1;\r\n    pointer-events    : auto;\r\n    -webkit-transform : translateY(10px);\r\n    -moz-transform    : translateY(10px);\r\n    -ms-transform     : translateY(10px);\r\n    -o-transform      : translateY(10px);\r\n    transform         : translateY(10px);\n}\n.lte8 .passtrengthMeter .tooltip {\r\n    display : none;\n}\n.lte8 .passtrengthMeter:hover .tooltip {\r\n    display : block;\n}", ""]);
 
 // exports
 
@@ -282,15 +679,15 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/date_pickers.vue?vue&type=style&index=0&id=2914c190&scoped=true&lang=css&":
-/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--5-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--5-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/components/pages/date_pickers.vue?vue&type=style&index=0&id=2914c190&scoped=true&lang=css& ***!
-  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/form-validations.vue?vue&type=style&index=3&lang=css&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--5-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--5-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/components/pages/form-validations.vue?vue&type=style&index=3&lang=css& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--5-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--5-2!../../../node_modules/vue-loader/lib??vue-loader-options!./date_pickers.vue?vue&type=style&index=0&id=2914c190&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/date_pickers.vue?vue&type=style&index=0&id=2914c190&scoped=true&lang=css&");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--5-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--5-2!../../../node_modules/vue-loader/lib??vue-loader-options!./form-validations.vue?vue&type=style&index=3&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/form-validations.vue?vue&type=style&index=3&lang=css&");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -312,15 +709,15 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/date_pickers.vue?vue&type=style&index=1&lang=css&":
-/*!*************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--5-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--5-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/components/pages/date_pickers.vue?vue&type=style&index=1&lang=css& ***!
-  \*************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./resources/css/passtrength/passtrength.css?vue&type=style&index=0&lang=css&":
+/*!*********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--5-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--5-2!./resources/css/passtrength/passtrength.css?vue&type=style&index=0&lang=css& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--5-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--5-2!../../../node_modules/vue-loader/lib??vue-loader-options!./date_pickers.vue?vue&type=style&index=1&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/date_pickers.vue?vue&type=style&index=1&lang=css&");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--5-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--5-2!./passtrength.css?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./resources/css/passtrength/passtrength.css?vue&type=style&index=0&lang=css&");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -407,10 +804,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/date_pickers.vue?vue&type=template&id=2914c190&scoped=true&":
-/*!******************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/components/pages/date_pickers.vue?vue&type=template&id=2914c190&scoped=true& ***!
-  \******************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/form-validations.vue?vue&type=template&id=872512e6&":
+/*!**********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/components/pages/form-validations.vue?vue&type=template&id=872512e6& ***!
+  \**********************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -426,231 +823,1998 @@ var render = function() {
     _c("div", { staticClass: "row" }, [
       _c(
         "div",
-        { staticClass: "col-md-6" },
+        { staticClass: "col-md-12 col-lg-6" },
         [
           _c(
             "card",
             {
               attrs: {
-                title: "<i class='ti-calendar'></i> Default Date Picker"
+                title: "<i class='fa fa-fw ti-star'></i> Basic Form Validation"
               }
             },
             [
-              _c("datepicker", { attrs: { placeholder: "Select Date" } }),
-              _vm._v(" "),
-              _c("code", [
-                _vm._v(
-                  "\n                    <datepicker></datepicker>\n                "
-                )
-              ])
-            ],
-            1
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "col-md-6" },
-        [
-          _c(
-            "card",
-            { attrs: { title: " <i class='ti-calendar'></i> Date Format" } },
-            [
-              _c("datepicker", { attrs: { format: _vm.format } }),
-              _vm._v(" "),
-              _c("code", [
-                _vm._v(
-                  '\n                    <datepicker :format="format"></datepicker>\n                '
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "settings" }, [
-                _c("h5", [_vm._v("Settings")]),
-                _vm._v(" "),
-                _c("div", { staticClass: "form-group" }, [
-                  _c("label", { staticClass: "label_font" }, [
-                    _vm._v("Format")
+              _c(
+                "form",
+                {
+                  staticClass: "columns column is-multiline is-12",
+                  attrs: { "data-vv-scope": "form-1" },
+                  on: {
+                    submit: function($event) {
+                      $event.preventDefault()
+                      return _vm.validateForm("form-1")
+                    }
+                  }
+                },
+                [
+                  _c("div", { staticClass: "column is-12 row" }, [
+                    _c(
+                      "label",
+                      {
+                        staticClass: "label col-sm-4",
+                        attrs: { for: "basic_user" }
+                      },
+                      [
+                        _vm._v("User Name\n                            "),
+                        _c("span", { staticClass: "text-danger" }, [
+                          _vm._v("*")
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "p",
+                      {
+                        staticClass: "control has-icon has-icon-right col-sm-6"
+                      },
+                      [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.username,
+                              expression: "username"
+                            },
+                            {
+                              name: "validate",
+                              rawName: "v-validate",
+                              value: "required|alpha",
+                              expression: "'required|alpha'"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          class: {
+                            input: true,
+                            "is-danger": _vm.errors.has("form-1.username")
+                          },
+                          attrs: {
+                            name: "username",
+                            id: "basic_user",
+                            type: "text",
+                            placeholder: "User Name"
+                          },
+                          domProps: { value: _vm.username },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.username = $event.target.value
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("i", {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.errors.has("form-1.username"),
+                              expression: "errors.has('form-1.username')"
+                            }
+                          ],
+                          staticClass: "fa fa-warning text-danger"
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.has("form-1.username"),
+                                expression: "errors.has('form-1.username')"
+                              }
+                            ],
+                            staticClass: "help is-danger text-danger"
+                          },
+                          [_vm._v(_vm._s(_vm.errors.first("form-1.username")))]
+                        )
+                      ]
+                    )
                   ]),
                   _vm._v(" "),
-                  _c(
-                    "select",
-                    {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.format,
-                          expression: "format"
-                        }
-                      ],
-                      on: {
-                        change: function($event) {
-                          var $$selectedVal = Array.prototype.filter
-                            .call($event.target.options, function(o) {
-                              return o.selected
-                            })
-                            .map(function(o) {
-                              var val = "_value" in o ? o._value : o.value
-                              return val
-                            })
-                          _vm.format = $event.target.multiple
-                            ? $$selectedVal
-                            : $$selectedVal[0]
-                        }
-                      }
-                    },
-                    [
+                  _c("div", { staticClass: "column is-12 row" }, [
+                    _c(
+                      "label",
+                      {
+                        staticClass: "label col-sm-4",
+                        attrs: { for: "basic_email" }
+                      },
+                      [
+                        _vm._v("Email\n                            "),
+                        _c("span", { staticClass: "text-danger" }, [
+                          _vm._v("*")
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "p",
+                      {
+                        staticClass: "control has-icon has-icon-right col-sm-6"
+                      },
+                      [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "validate",
+                              rawName: "v-validate",
+                              value: "required|email",
+                              expression: "'required|email'"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          class: {
+                            input: true,
+                            "is-danger": _vm.errors.has("form-1.email")
+                          },
+                          attrs: {
+                            name: "email",
+                            id: "basic_email",
+                            type: "text",
+                            placeholder: "Email"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("i", {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.errors.has("form-1.email"),
+                              expression: "errors.has('form-1.email')"
+                            }
+                          ],
+                          staticClass: "fa fa-warning text-danger"
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.has("form-1.email"),
+                                expression: "errors.has('form-1.email')"
+                              }
+                            ],
+                            staticClass: "help is-danger text-danger"
+                          },
+                          [_vm._v(_vm._s(_vm.errors.first("form-1.email")))]
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "column is-12 row" }, [
+                    _c(
+                      "label",
+                      {
+                        staticClass: "label col-sm-4",
+                        attrs: { for: "basic_pass" }
+                      },
+                      [
+                        _vm._v("Password\n                            "),
+                        _c("span", { staticClass: "text-danger" }, [
+                          _vm._v("*")
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "p",
+                      {
+                        staticClass: "control has-icon has-icon-right col-sm-6"
+                      },
+                      [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "validate",
+                              rawName: "v-validate",
+                              value: "required|min:6",
+                              expression: "'required|min:6'"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          class: {
+                            input: true,
+                            "is-danger": _vm.errors.has("form-1.password")
+                          },
+                          attrs: {
+                            name: "password",
+                            id: "basic_pass",
+                            type: "password",
+                            placeholder: "Password"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("i", {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.errors.has("form-1.password"),
+                              expression: "errors.has('form-1.password')"
+                            }
+                          ],
+                          staticClass: "fa fa-warning text-danger"
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.has("form-1.password"),
+                                expression: "errors.has('form-1.password')"
+                              }
+                            ],
+                            staticClass: "help is-danger text-danger"
+                          },
+                          [_vm._v(_vm._s(_vm.errors.first("form-1.password")))]
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "column is-12 row" }, [
+                    _c(
+                      "label",
+                      {
+                        staticClass: "label col-sm-4",
+                        attrs: { for: "basic_confimpass" }
+                      },
+                      [
+                        _vm._v(
+                          "Confirm Password\n                            "
+                        ),
+                        _c("span", { staticClass: "text-danger" }, [
+                          _vm._v("*")
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "p",
+                      {
+                        staticClass: "control has-icon has-icon-right col-sm-6"
+                      },
+                      [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "validate",
+                              rawName: "v-validate",
+                              value: "required|min:6|confirmed:password",
+                              expression: "'required|min:6|confirmed:password'"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          class: {
+                            input: true,
+                            "is-danger": _vm.errors.has(
+                              "form-1.confirmpassword"
+                            )
+                          },
+                          attrs: {
+                            name: "confirmpassword",
+                            id: "basic_confimpass",
+                            type: "password",
+                            placeholder: "Confirm Password"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("i", {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.errors.has("form-1.confirmpassword"),
+                              expression: "errors.has('form-1.confirmpassword')"
+                            }
+                          ],
+                          staticClass: "fa fa-warning text-danger"
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.has("form-1.confirmpassword"),
+                                expression:
+                                  "errors.has('form-1.confirmpassword')"
+                              }
+                            ],
+                            staticClass: "help is-danger text-danger"
+                          },
+                          [
+                            _vm._v(
+                              _vm._s(_vm.errors.first("form-1.confirmpassword"))
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "column is-12 row" }, [
+                    _c(
+                      "label",
+                      {
+                        staticClass: "label col-sm-4",
+                        attrs: { for: "basic_message" }
+                      },
+                      [
+                        _vm._v("Message\n                            "),
+                        _c("span", { staticClass: "text-danger" }, [
+                          _vm._v("*")
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "p",
+                      {
+                        staticClass: "control has-icon has-icon-right col-sm-6"
+                      },
+                      [
+                        _c("textarea", {
+                          directives: [
+                            {
+                              name: "validate",
+                              rawName: "v-validate",
+                              value: "required|min:2",
+                              expression: "'required|min:2'"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          class: {
+                            input: true,
+                            "is-danger": _vm.errors.has("form-1.message")
+                          },
+                          attrs: {
+                            name: "message",
+                            id: "basic_message",
+                            type: "password",
+                            placeholder: "Message"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("i", {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.errors.has("form-1.message"),
+                              expression: "errors.has('form-1.message')"
+                            }
+                          ],
+                          staticClass: "fa fa-warning text-danger"
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.has("form-1.message"),
+                                expression: "errors.has('form-1.message')"
+                              }
+                            ],
+                            staticClass: "help is-danger text-danger"
+                          },
+                          [_vm._v(_vm._s(_vm.errors.first("form-1.message")))]
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "column is-12 row" }, [
+                    _c(
+                      "label",
+                      {
+                        staticClass: "label col-sm-4",
+                        attrs: { for: "basic_skills" }
+                      },
+                      [
+                        _vm._v("Best Skill\n                            "),
+                        _c("span", { staticClass: "text-danger" }, [
+                          _vm._v("*")
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "p",
+                      {
+                        staticClass: "control has-icon has-icon-right col-sm-6"
+                      },
+                      [
+                        _c(
+                          "select",
+                          {
+                            directives: [
+                              {
+                                name: "validate",
+                                rawName: "v-validate",
+                                value:
+                                  "required|in:html,css,javascript,php,mysql",
+                                expression:
+                                  "'required|in:html,css,javascript,php,mysql'"
+                              }
+                            ],
+                            staticClass: "form-control",
+                            class: {
+                              input: true,
+                              "is-danger": _vm.errors.has("form-1.skill")
+                            },
+                            attrs: { id: "basic_skills", name: "skill" }
+                          },
+                          [
+                            _c("option", { attrs: { value: "" } }, [
+                              _vm._v(
+                                "\n                                    Please select\n                                "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "html" } }, [
+                              _vm._v("HTML")
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "css" } }, [
+                              _vm._v("CSS")
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "javascript" } }, [
+                              _vm._v("Javascript")
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "php" } }, [
+                              _vm._v("PHP")
+                            ]),
+                            _vm._v(" "),
+                            _c("option", { attrs: { value: "mysql" } }, [
+                              _vm._v("MySQL")
+                            ])
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("i", {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.errors.has("form-1.skill"),
+                              expression: "errors.has('form-1.skill')"
+                            }
+                          ],
+                          staticClass: "fa fa-warning text-danger"
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.has("form-1.skill"),
+                                expression: "errors.has('form-1.skill')"
+                              }
+                            ],
+                            staticClass: "help is-danger text-danger"
+                          },
+                          [_vm._v(_vm._s(_vm.errors.first("form-1.skill")))]
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "column is-12 row" }, [
+                    _c(
+                      "label",
+                      {
+                        staticClass: "label col-sm-4",
+                        attrs: { for: "basic_web" }
+                      },
+                      [
+                        _vm._v("Website\n                            "),
+                        _c("span", { staticClass: "text-danger" }, [
+                          _vm._v("*")
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "p",
+                      {
+                        staticClass: "control has-icon has-icon-right col-sm-6"
+                      },
+                      [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "validate",
+                              rawName: "v-validate",
+                              value: "required|url:require_protocol?",
+                              expression: "'required|url:require_protocol?'"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          class: {
+                            input: true,
+                            "is-danger": _vm.errors.has("form-1.website")
+                          },
+                          attrs: {
+                            name: "website",
+                            id: "basic_web",
+                            type: "text",
+                            placeholder: "http://example.com"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("i", {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.errors.has("form-1.website"),
+                              expression: "errors.has('form-1.website')"
+                            }
+                          ],
+                          staticClass: "fa fa-warning text-danger"
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.has("form-1.website"),
+                                expression: "errors.has('form-1.website')"
+                              }
+                            ],
+                            staticClass: "help is-danger text-danger"
+                          },
+                          [_vm._v(_vm._s(_vm.errors.first("form-1.website")))]
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "column is-12 row" }, [
+                    _c(
+                      "label",
+                      {
+                        staticClass: "label col-sm-4",
+                        attrs: { for: "basic_mobile" }
+                      },
+                      [
+                        _vm._v("Phone\n                            "),
+                        _c("span", { staticClass: "text-danger" }, [
+                          _vm._v("*")
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "p",
+                      {
+                        staticClass: "control has-icon has-icon-right col-sm-6"
+                      },
+                      [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "validate",
+                              rawName: "v-validate",
+                              value: "required|numeric|max:10|min:10",
+                              expression: "'required|numeric|max:10|min:10'"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          class: {
+                            input: true,
+                            "is-danger": _vm.errors.has("form-1.phone")
+                          },
+                          attrs: {
+                            name: "phone",
+                            id: "basic_mobile",
+                            type: "text",
+                            placeholder: "Enter your phone number"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("i", {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.errors.has("form-1.phone"),
+                              expression: "errors.has('form-1.phone')"
+                            }
+                          ],
+                          staticClass: "fa fa-warning text-danger"
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.has("form-1.phone"),
+                                expression: "errors.has('form-1.phone')"
+                              }
+                            ],
+                            staticClass: "help is-danger text-danger"
+                          },
+                          [_vm._v(_vm._s(_vm.errors.first("form-1.phone")))]
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "column is-12 row" }, [
+                    _c("label", { staticClass: "label col-sm-4" }, [
                       _c(
-                        "option",
-                        { attrs: { value: "d MMM yyyy", selected: "" } },
-                        [_vm._v("d MMM yyyy - e.g 12 Feb 2016")]
+                        "legend",
+                        {
+                          staticClass: "label",
+                          class: { error: _vm.errors.has("form-1.gender") }
+                        },
+                        [
+                          _vm._v("Gender\n                                "),
+                          _c("span", { staticClass: "text-danger" }, [
+                            _vm._v("*")
+                          ])
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-sm-6" }, [
+                      _c("p", { staticClass: "control" }, [
+                        _c("label", { staticClass: "radio" }, [
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "validate",
+                                rawName: "v-validate",
+                                value: "required|in:male,female,others",
+                                expression: "'required|in:male,female,others'"
+                              }
+                            ],
+                            attrs: {
+                              name: "gender",
+                              value: "male",
+                              type: "radio"
+                            }
+                          }),
+                          _vm._v(
+                            "\n                                    Male\n                                "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("br"),
+                        _vm._v(" "),
+                        _c("label", { staticClass: "radio" }, [
+                          _c("input", {
+                            attrs: {
+                              name: "gender",
+                              value: "female",
+                              type: "radio"
+                            }
+                          }),
+                          _vm._v(
+                            "\n                                    Female\n                                "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("br"),
+                        _vm._v(" "),
+                        _c("label", { staticClass: "radio" }, [
+                          _c("input", {
+                            attrs: {
+                              name: "gender",
+                              value: "others",
+                              type: "radio"
+                            }
+                          }),
+                          _vm._v(
+                            "\n                                    Others\n                                "
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.errors.has("form-1.gender"),
+                              expression: "errors.has('form-1.gender')    "
+                            }
+                          ],
+                          staticClass: "help is-danger text-danger"
+                        },
+                        [_vm._v(_vm._s(_vm.errors.first("form-1.gender")))]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "column is-6" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group row" }, [
+                    _c(
+                      "div",
+                      { staticClass: "col-md-8 ml-auto" },
+                      [
+                        _c("b-form-checkbox", [
+                          _vm._v(
+                            "\n                                  I agree to\n                                "
+                          ),
+                          _c(
+                            "a",
+                            {
+                              attrs: {
+                                href: "#modal-terms",
+                                "data-toggle": "modal"
+                              }
+                            },
+                            [
+                              _vm._v(
+                                "\n                                    Terms & Conditions\n                                "
+                              )
+                            ]
+                          )
+                        ])
+                      ],
+                      1
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "column is-12" }, [
+                    _c("div", { staticClass: "control text-center" }, [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "button btn btn-primary",
+                          attrs: { type: "submit", name: "button" }
+                        },
+                        [_vm._v("Sign up")]
                       ),
                       _vm._v(" "),
-                      _c("option", { attrs: { value: "d MMMM yyyy" } }, [
-                        _vm._v("d MMMM yyyy - e.g 12 February 2016")
-                      ]),
-                      _vm._v(" "),
-                      _c("option", { attrs: { value: "yyyy-MM-dd" } }, [
-                        _vm._v("yyyy-MM-dd - e.g 2016-02-12")
-                      ]),
-                      _vm._v(" "),
-                      _c("option", { attrs: { value: "dsu MMM yyyy" } }, [
-                        _vm._v("dsu MMM yyyy - e.g 12th Feb 2016")
-                      ]),
-                      _vm._v(" "),
-                      _c("option", { attrs: { value: "D dsu MMM yyyy" } }, [
-                        _vm._v("D dsu MMM yyyy - e.g Sat 12th Feb 2016")
-                      ])
-                    ]
-                  )
-                ])
-              ])
-            ],
-            1
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "col-md-6" },
-        [
-          _c(
-            "card",
-            { attrs: { title: " <i class='ti-calendar'></i> Translations" } },
-            [
-              _c("h5", [_vm._v("Spanish datepicker")]),
-              _vm._v(" "),
-              _c("datepicker", { attrs: { language: "es" } }),
-              _vm._v(" "),
-              _c("code", [
-                _vm._v(
-                  '\n                    <datepicker language="es"></datepicker>\n                '
-                )
-              ]),
-              _vm._v(" "),
-              _c("h5", [_vm._v("French datepicker")]),
-              _vm._v(" "),
-              _c("datepicker", { attrs: { language: "fr" } }),
-              _vm._v(" "),
-              _c("code", [
-                _vm._v(
-                  '\n                    <datepicker language="fr"></datepicker>\n                '
-                )
-              ])
-            ],
-            1
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "col-md-6" },
-        [
+                      _c(
+                        "button",
+                        {
+                          staticClass: "button btn btn-secondary",
+                          attrs: { type: "reset", name: "button" },
+                          on: {
+                            click: function($event) {
+                              return _vm.errors.clear("form-1")
+                            }
+                          }
+                        },
+                        [_vm._v("Reset")]
+                      )
+                    ])
+                  ])
+                ]
+              )
+            ]
+          ),
+          _vm._v(" "),
           _c(
             "card",
             {
               attrs: {
-                title:
-                  "<i class='ti-calendar'></i> With minimum and maximum date range"
+                title: "<i class='fa fa-fw ti-folder'></i> Validations In Modal"
               }
-            },
-            [
-              _c("datepicker", { attrs: { disabled: _vm.disabled } }),
-              _vm._v(" "),
-              _c("code", [
-                _vm._v(
-                  '\n                    <datepicker :disabled="disabled"></datepicker>\n                '
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "settings " }, [
-                _c("h5", { staticClass: "mt-2" }, [_vm._v("Settings")]),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "form-group" },
-                  [
-                    _c("label", { staticClass: "label_font" }, [
-                      _vm._v("Range from:")
-                    ]),
-                    _vm._v(" "),
-                    _c("datepicker", { on: { selected: _vm.disableTo } })
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "form-group" },
-                  [
-                    _c("label", { staticClass: "label_font" }, [
-                      _vm._v("Range to:")
-                    ]),
-                    _vm._v(" "),
-                    _c("datepicker", { on: { selected: _vm.disableFrom } })
-                  ],
-                  1
-                )
-              ])
-            ],
-            1
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "col-md-6" },
-        [
-          _c(
-            "card",
-            {
-              attrs: { title: "<i class='ti-calendar'></i> Inline datepicker" }
             },
             [
               _c(
                 "div",
-                { staticClass: "full_calendar" },
+                { staticClass: "row" },
                 [
-                  _c("datepicker", { attrs: { inline: true } }),
+                  [
+                    _c(
+                      "b-button",
+                      {
+                        staticClass: "mx-auto btn-lg  btn-info",
+                        on: { click: _vm.showModal }
+                      },
+                      [
+                        _vm._v(
+                          "\n                            Click to open form in modal\n                        "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "b-modal",
+                      {
+                        ref: "myModalRef",
+                        attrs: { "hide-footer": "", title: "Form Modal" }
+                      },
+                      [
+                        _c("div", { staticClass: "d-block " }, [
+                          _c(
+                            "form",
+                            {
+                              staticClass: "columns column is-multiline is-12",
+                              attrs: {
+                                id: "form-validation3",
+                                "data-vv-scope": "form-2"
+                              },
+                              on: {
+                                submit: function($event) {
+                                  $event.preventDefault()
+                                  return _vm.validateForm("form-2")
+                                }
+                              }
+                            },
+                            [
+                              _c("div", { staticClass: "row" }, [
+                                _c(
+                                  "div",
+                                  { staticClass: "col-12 col-sm-6 col-md-6" },
+                                  [
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c(
+                                        "p",
+                                        {
+                                          staticClass:
+                                            "control has-icon has-icon-right"
+                                        },
+                                        [
+                                          _c("input", {
+                                            directives: [
+                                              {
+                                                name: "validate",
+                                                rawName: "v-validate",
+                                                value: "required|alpha",
+                                                expression: "'required|alpha'"
+                                              }
+                                            ],
+                                            staticClass: "form-control",
+                                            class: {
+                                              input: true,
+                                              "is-danger": _vm.errors.has(
+                                                "form-2.firstname"
+                                              )
+                                            },
+                                            attrs: {
+                                              name: "firstname",
+                                              type: "text",
+                                              placeholder: "First Name"
+                                            }
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            directives: [
+                                              {
+                                                name: "show",
+                                                rawName: "v-show",
+                                                value: _vm.errors.has(
+                                                  "form-2.firstname"
+                                                ),
+                                                expression:
+                                                  "errors.has('form-2.firstname')"
+                                              }
+                                            ],
+                                            staticClass:
+                                              "fa fa-warning text-danger"
+                                          }),
+                                          _vm._v(" "),
+                                          _c(
+                                            "span",
+                                            {
+                                              directives: [
+                                                {
+                                                  name: "show",
+                                                  rawName: "v-show",
+                                                  value: _vm.errors.has(
+                                                    "form-2.firstname"
+                                                  ),
+                                                  expression:
+                                                    "errors.has('form-2.firstname')"
+                                                }
+                                              ],
+                                              staticClass:
+                                                "help is-danger text-danger"
+                                            },
+                                            [
+                                              _vm._v(
+                                                _vm._s(
+                                                  _vm.errors.first(
+                                                    "form-2.firstname"
+                                                  )
+                                                )
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      )
+                                    ])
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "col-12 col-sm-6 col-md-6" },
+                                  [
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c(
+                                        "p",
+                                        {
+                                          staticClass:
+                                            "control has-icon has-icon-right"
+                                        },
+                                        [
+                                          _c("input", {
+                                            directives: [
+                                              {
+                                                name: "validate",
+                                                rawName: "v-validate",
+                                                value: "required|alpha",
+                                                expression: "'required|alpha'"
+                                              }
+                                            ],
+                                            staticClass: "form-control",
+                                            class: {
+                                              input: true,
+                                              "is-danger": _vm.errors.has(
+                                                "form-2.lastname"
+                                              )
+                                            },
+                                            attrs: {
+                                              name: "lastname",
+                                              type: "text",
+                                              placeholder: "Last Name"
+                                            }
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            directives: [
+                                              {
+                                                name: "show",
+                                                rawName: "v-show",
+                                                value: _vm.errors.has(
+                                                  "form-2.lastname"
+                                                ),
+                                                expression:
+                                                  "errors.has('form-2.lastname')"
+                                              }
+                                            ],
+                                            staticClass:
+                                              "fa fa-warning text-danger"
+                                          }),
+                                          _vm._v(" "),
+                                          _c(
+                                            "span",
+                                            {
+                                              directives: [
+                                                {
+                                                  name: "show",
+                                                  rawName: "v-show",
+                                                  value: _vm.errors.has(
+                                                    "form-2.lastname"
+                                                  ),
+                                                  expression:
+                                                    "errors.has('form-2.lastname')"
+                                                }
+                                              ],
+                                              staticClass:
+                                                "help is-danger text-danger"
+                                            },
+                                            [
+                                              _vm._v(
+                                                _vm._s(
+                                                  _vm.errors.first(
+                                                    "form-2.lastname"
+                                                  )
+                                                )
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      )
+                                    ])
+                                  ]
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "row" }, [
+                                _c("div", { staticClass: "col-md-12" }, [
+                                  _c("div", { staticClass: "form-group" }, [
+                                    _c(
+                                      "p",
+                                      {
+                                        staticClass:
+                                          "control has-icon has-icon-right"
+                                      },
+                                      [
+                                        _c("input", {
+                                          directives: [
+                                            {
+                                              name: "validate",
+                                              rawName: "v-validate",
+                                              value: "required|alpha",
+                                              expression: "'required|alpha'"
+                                            }
+                                          ],
+                                          staticClass: "form-control",
+                                          class: {
+                                            input: true,
+                                            "is-danger": _vm.errors.has(
+                                              "form-2.displayname"
+                                            )
+                                          },
+                                          attrs: {
+                                            name: "displayname",
+                                            type: "text",
+                                            placeholder: "Display Name"
+                                          }
+                                        }),
+                                        _vm._v(" "),
+                                        _c("i", {
+                                          directives: [
+                                            {
+                                              name: "show",
+                                              rawName: "v-show",
+                                              value: _vm.errors.has(
+                                                "form-2.displayname"
+                                              ),
+                                              expression:
+                                                "errors.has('form-2.displayname')"
+                                            }
+                                          ],
+                                          staticClass:
+                                            "fa fa-warning text-danger"
+                                        }),
+                                        _vm._v(" "),
+                                        _c(
+                                          "span",
+                                          {
+                                            directives: [
+                                              {
+                                                name: "show",
+                                                rawName: "v-show",
+                                                value: _vm.errors.has(
+                                                  "form-2.displayname"
+                                                ),
+                                                expression:
+                                                  "errors.has('form-2.displayname')"
+                                              }
+                                            ],
+                                            staticClass:
+                                              "help is-danger text-danger"
+                                          },
+                                          [
+                                            _vm._v(
+                                              _vm._s(
+                                                _vm.errors.first(
+                                                  "form-2.displayname"
+                                                )
+                                              )
+                                            )
+                                          ]
+                                        )
+                                      ]
+                                    )
+                                  ])
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "row" }, [
+                                _c("div", { staticClass: "col-md-12" }, [
+                                  _c("div", { staticClass: "form-group" }, [
+                                    _c(
+                                      "p",
+                                      {
+                                        staticClass:
+                                          "control has-icon has-icon-right"
+                                      },
+                                      [
+                                        _c("input", {
+                                          directives: [
+                                            {
+                                              name: "validate",
+                                              rawName: "v-validate",
+                                              value: "required|email",
+                                              expression: "'required|email'"
+                                            }
+                                          ],
+                                          staticClass: "form-control",
+                                          class: {
+                                            input: true,
+                                            "is-danger": _vm.errors.has(
+                                              "form-2.email"
+                                            )
+                                          },
+                                          attrs: {
+                                            name: "email",
+                                            type: "text",
+                                            placeholder: "Email"
+                                          }
+                                        }),
+                                        _vm._v(" "),
+                                        _c("i", {
+                                          directives: [
+                                            {
+                                              name: "show",
+                                              rawName: "v-show",
+                                              value: _vm.errors.has(
+                                                "form-2.email"
+                                              ),
+                                              expression:
+                                                "errors.has('form-2.email')"
+                                            }
+                                          ],
+                                          staticClass:
+                                            "fa fa-warning text-danger"
+                                        }),
+                                        _vm._v(" "),
+                                        _c(
+                                          "span",
+                                          {
+                                            directives: [
+                                              {
+                                                name: "show",
+                                                rawName: "v-show",
+                                                value: _vm.errors.has(
+                                                  "form-2.email"
+                                                ),
+                                                expression:
+                                                  "errors.has('form-2.email')"
+                                              }
+                                            ],
+                                            staticClass:
+                                              "help is-danger text-danger"
+                                          },
+                                          [
+                                            _vm._v(
+                                              _vm._s(
+                                                _vm.errors.first("form-2.email")
+                                              )
+                                            )
+                                          ]
+                                        )
+                                      ]
+                                    )
+                                  ])
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "row" }, [
+                                _c(
+                                  "div",
+                                  { staticClass: "col-12 col-sm-6 col-md-6" },
+                                  [
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c(
+                                        "p",
+                                        {
+                                          staticClass:
+                                            "control has-icon has-icon-right"
+                                        },
+                                        [
+                                          _c("input", {
+                                            directives: [
+                                              {
+                                                name: "validate",
+                                                rawName: "v-validate",
+                                                value: "required|min:6",
+                                                expression: "'required|min:6'"
+                                              }
+                                            ],
+                                            staticClass: "form-control",
+                                            class: {
+                                              input: true,
+                                              "is-danger": _vm.errors.has(
+                                                "form-2.passwordmodal"
+                                              )
+                                            },
+                                            attrs: {
+                                              name: "passwordmodal",
+                                              type: "password",
+                                              placeholder: "Password"
+                                            }
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            directives: [
+                                              {
+                                                name: "show",
+                                                rawName: "v-show",
+                                                value: _vm.errors.has(
+                                                  "form-2.passwordmodal"
+                                                ),
+                                                expression:
+                                                  "errors.has('form-2.passwordmodal')"
+                                              }
+                                            ],
+                                            staticClass:
+                                              "fa fa-warning text-danger"
+                                          }),
+                                          _vm._v(" "),
+                                          _c(
+                                            "span",
+                                            {
+                                              directives: [
+                                                {
+                                                  name: "show",
+                                                  rawName: "v-show",
+                                                  value: _vm.errors.has(
+                                                    "form-2.passwordmodal"
+                                                  ),
+                                                  expression:
+                                                    "errors.has('form-2.passwordmodal')"
+                                                }
+                                              ],
+                                              staticClass:
+                                                "help is-danger text-danger"
+                                            },
+                                            [
+                                              _vm._v(
+                                                _vm._s(
+                                                  _vm.errors.first(
+                                                    "form-2.passwordmodal"
+                                                  )
+                                                )
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      )
+                                    ])
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "col-12 col-sm-6 col-md-6" },
+                                  [
+                                    _c("div", { staticClass: "form-group" }, [
+                                      _c(
+                                        "p",
+                                        {
+                                          staticClass:
+                                            "control has-icon has-icon-right"
+                                        },
+                                        [
+                                          _c("input", {
+                                            directives: [
+                                              {
+                                                name: "validate",
+                                                rawName: "v-validate",
+                                                value:
+                                                  "required|min:6|confirmed:passwordmodal",
+                                                expression:
+                                                  "'required|min:6|confirmed:passwordmodal'"
+                                              }
+                                            ],
+                                            staticClass: "form-control",
+                                            class: {
+                                              input: true,
+                                              "is-danger": _vm.errors.has(
+                                                "form-2.confirmpasswordmodal"
+                                              )
+                                            },
+                                            attrs: {
+                                              name: "confirmpasswordmodal",
+                                              type: "password",
+                                              placeholder: "Confirm Password"
+                                            }
+                                          }),
+                                          _vm._v(" "),
+                                          _c("i", {
+                                            directives: [
+                                              {
+                                                name: "show",
+                                                rawName: "v-show",
+                                                value: _vm.errors.has(
+                                                  "form-2.confirmpasswordmodal"
+                                                ),
+                                                expression:
+                                                  "errors.has('form-2.confirmpasswordmodal')"
+                                              }
+                                            ],
+                                            staticClass:
+                                              "fa fa-warning text-danger"
+                                          }),
+                                          _vm._v(" "),
+                                          _c(
+                                            "span",
+                                            {
+                                              directives: [
+                                                {
+                                                  name: "show",
+                                                  rawName: "v-show",
+                                                  value: _vm.errors.has(
+                                                    "form-2.confirmpasswordmodal"
+                                                  ),
+                                                  expression:
+                                                    "errors.has('form-2.confirmpasswordmodal')"
+                                                }
+                                              ],
+                                              staticClass:
+                                                "help is-danger text-danger"
+                                            },
+                                            [
+                                              _vm._v(
+                                                _vm._s(
+                                                  _vm.errors.first(
+                                                    "form-2.confirmpasswordmodal"
+                                                  )
+                                                )
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      )
+                                    ])
+                                  ]
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "row" }, [
+                                _c("div", { staticClass: "col-md-12" }, [
+                                  _c("div", { staticClass: "form-group" }, [
+                                    _c(
+                                      "div",
+                                      { staticClass: "col-12 text-left" },
+                                      [
+                                        _c(
+                                          "label",
+                                          { staticClass: "padding7" },
+                                          [
+                                            _c("b-form-checkbox", [
+                                              _vm._v("  I agree")
+                                            ])
+                                          ],
+                                          1
+                                        )
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", {
+                                      staticClass: "help-block with-errors"
+                                    })
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "col-md-12" }, [
+                                  _c("p", { staticClass: "margin-top" }, [
+                                    _vm._v(
+                                      "\n                                                By clicking on the\n                                                "
+                                    ),
+                                    _c(
+                                      "strong",
+                                      { staticClass: "label label-primary" },
+                                      [_vm._v("Register")]
+                                    ),
+                                    _vm._v(
+                                      "\n                                                , you agree the following\n                                                "
+                                    ),
+                                    _c("a", { attrs: { href: "#" } }, [
+                                      _vm._v("Terms and Conditions")
+                                    ]),
+                                    _vm._v(
+                                      " liability\n                                                as set out in this site, including our Cookie\n                                                Use.\n                                            "
+                                    )
+                                  ])
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "row marginTop" }, [
+                                _c("div", { staticClass: "col-6 col-md-6" }, [
+                                  _c("input", {
+                                    staticClass:
+                                      "btn btn-primary btn-block btn-md btn-responsive",
+                                    attrs: {
+                                      type: "submit",
+                                      id: "btncheck",
+                                      value: "Register",
+                                      tabindex: "7"
+                                    }
+                                  })
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "col-6 col-md-6" }, [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "btn btn-success text_white btn-block text-white btn-md btn-responsive"
+                                    },
+                                    [
+                                      _vm._v(
+                                        "Sign\n                                                In"
+                                      )
+                                    ]
+                                  )
+                                ])
+                              ])
+                            ]
+                          )
+                        ])
+                      ]
+                    )
+                  ]
+                ],
+                2
+              )
+            ]
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "col-md-12 col-lg-6" },
+        [
+          _c(
+            "card",
+            {
+              attrs: {
+                title: "<i class='fa fa-fw ti-key'></i> Password Strength"
+              }
+            },
+            [
+              _c(
+                "form",
+                { attrs: { action: "#", method: "post", id: "passwordForm" } },
+                [
+                  _c("password", {
+                    attrs: { name: "pswdstrength", id: "password" },
+                    model: {
+                      value: _vm.password,
+                      callback: function($$v) {
+                        _vm.password = $$v
+                      },
+                      expression: "password"
+                    }
+                  }),
                   _vm._v(" "),
-                  _c("code", [
-                    _vm._v(
-                      '\n                        <datepicker :inline="true"></datepicker>\n                    '
+                  _c("password", {
+                    attrs: {
+                      name: "cpswdstrength",
+                      id: "confirm_passowrd",
+                      placeholder: "Confirm password"
+                    },
+                    model: {
+                      value: _vm.confirmpassword,
+                      callback: function($$v) {
+                        _vm.confirmpassword = $$v
+                      },
+                      expression: "confirmpassword"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("div", [
+                    _c("div", { staticClass: "col-sm-12 padding" }, [
+                      _c("span", { staticStyle: { color: "#2ECC71" } }, [
+                        _c("i", {
+                          staticClass: "fa fa-check green2",
+                          class: { green: _vm.password == _vm.confirmpassword },
+                          attrs: { id: "pwmatch" }
+                        })
+                      ]),
+                      _vm._v(
+                        "\n                            Passwords Match\n                        "
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-12" }, [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "col-12 btn btn-primary btn-load btn-md",
+                        attrs: {
+                          href: "#",
+                          "data-loading-text": "Changing Password..."
+                        }
+                      },
+                      [_vm._v("Change Password")]
                     )
                   ])
                 ],
                 1
               )
             ]
-          )
+          ),
+          _vm._v(" "),
+          _c(
+            "card",
+            {
+              attrs: {
+                title: "<i class='fa fa-fw ti-credit-card'></i> Payment Gateway"
+              }
+            },
+            [
+              _c("div", { staticClass: "card-wrapper" }),
+              _vm._v(" "),
+              _c(
+                "vue-form",
+                {
+                  attrs: { state: _vm.formstate, id: "form" },
+                  on: {
+                    submit: function($event) {
+                      $event.preventDefault()
+                      return _vm.onSubmit($event)
+                    }
+                  }
+                },
+                [
+                  _c("div", { staticClass: "row" }, [
+                    _c("div", { staticClass: "col-sm-12 mt-3 " }, [
+                      _c(
+                        "div",
+                        { staticClass: "form-group" },
+                        [
+                          _c(
+                            "validate",
+                            { attrs: { tag: "div" } },
+                            [
+                              _c("input", {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.model.cardnumber,
+                                    expression: "model.cardnumber"
+                                  }
+                                ],
+                                staticClass: "form-control",
+                                attrs: {
+                                  name: "cardnumber",
+                                  id: "cardnumber",
+                                  type: "text",
+                                  required: "",
+                                  autofocus: "",
+                                  placeholder: "Card number",
+                                  minlength: "19",
+                                  maxlength: "22"
+                                },
+                                domProps: { value: _vm.model.cardnumber },
+                                on: {
+                                  input: function($event) {
+                                    if ($event.target.composing) {
+                                      return
+                                    }
+                                    _vm.$set(
+                                      _vm.model,
+                                      "cardnumber",
+                                      $event.target.value
+                                    )
+                                  }
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "field-messages",
+                                {
+                                  staticClass: "text-danger",
+                                  attrs: {
+                                    name: "cardnumber",
+                                    show: "$invalid && $submitted"
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "div",
+                                    {
+                                      attrs: { slot: "required" },
+                                      slot: "required"
+                                    },
+                                    [_vm._v("Card number is a required field")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      attrs: { slot: "minlength" },
+                                      slot: "minlength"
+                                    },
+                                    [
+                                      _vm._v(
+                                        "Card number must be 16 to 18 digits"
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      attrs: { slot: "maxlength" },
+                                      slot: "maxlength"
+                                    },
+                                    [
+                                      _vm._v(
+                                        "Cardnumber must be 16 to 18 digits"
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-sm-6" }, [
+                      _c(
+                        "div",
+                        { staticClass: "form-group" },
+                        [
+                          _c(
+                            "validate",
+                            { attrs: { tag: "div" } },
+                            [
+                              _c("input", {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.model.cardexpiry,
+                                    expression: "model.cardexpiry"
+                                  }
+                                ],
+                                staticClass: "form-control",
+                                attrs: {
+                                  name: "cardexpiry",
+                                  id: "cardexpiry",
+                                  type: "text",
+                                  required: "",
+                                  placeholder: "Expiry"
+                                },
+                                domProps: { value: _vm.model.cardexpiry },
+                                on: {
+                                  input: function($event) {
+                                    if ($event.target.composing) {
+                                      return
+                                    }
+                                    _vm.$set(
+                                      _vm.model,
+                                      "cardexpiry",
+                                      $event.target.value
+                                    )
+                                  }
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "field-messages",
+                                {
+                                  staticClass: "text-danger",
+                                  attrs: {
+                                    name: "cardexpiry",
+                                    show: "$invalid && $submitted"
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "div",
+                                    {
+                                      attrs: { slot: "required" },
+                                      slot: "required"
+                                    },
+                                    [_vm._v("Expiry date is required")]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-sm-6" }, [
+                      _c(
+                        "div",
+                        { staticClass: "form-group" },
+                        [
+                          _c(
+                            "validate",
+                            { attrs: { tag: "div" } },
+                            [
+                              _c("input", {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.model.cardcvc,
+                                    expression: "model.cardcvc"
+                                  }
+                                ],
+                                staticClass: "form-control",
+                                attrs: {
+                                  name: "cardcvc",
+                                  id: "cardcvc",
+                                  type: "text",
+                                  required: "",
+                                  placeholder: "CVV"
+                                },
+                                domProps: { value: _vm.model.cardcvc },
+                                on: {
+                                  input: function($event) {
+                                    if ($event.target.composing) {
+                                      return
+                                    }
+                                    _vm.$set(
+                                      _vm.model,
+                                      "cardcvc",
+                                      $event.target.value
+                                    )
+                                  }
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "field-messages",
+                                {
+                                  staticClass: "text-danger",
+                                  attrs: {
+                                    name: "cardcvc",
+                                    show: "$invalid && $submitted"
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "div",
+                                    {
+                                      attrs: { slot: "required" },
+                                      slot: "required"
+                                    },
+                                    [_vm._v("CVV is required")]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-sm-12" }, [
+                      _c(
+                        "div",
+                        { staticClass: "form-group" },
+                        [
+                          _c(
+                            "validate",
+                            { attrs: { tag: "div" } },
+                            [
+                              _c("input", {
+                                directives: [
+                                  {
+                                    name: "model",
+                                    rawName: "v-model",
+                                    value: _vm.model.cardname,
+                                    expression: "model.cardname"
+                                  }
+                                ],
+                                staticClass: "form-control",
+                                attrs: {
+                                  name: "cardname",
+                                  id: "cardname",
+                                  type: "text",
+                                  required: "",
+                                  placeholder: "Card holder name"
+                                },
+                                domProps: { value: _vm.model.cardname },
+                                on: {
+                                  input: function($event) {
+                                    if ($event.target.composing) {
+                                      return
+                                    }
+                                    _vm.$set(
+                                      _vm.model,
+                                      "cardname",
+                                      $event.target.value
+                                    )
+                                  }
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "field-messages",
+                                {
+                                  staticClass: "text-danger",
+                                  attrs: {
+                                    name: "cardname",
+                                    show: "$invalid && $submitted"
+                                  }
+                                },
+                                [
+                                  _c(
+                                    "div",
+                                    {
+                                      attrs: { slot: "required" },
+                                      slot: "required"
+                                    },
+                                    [_vm._v("Card name is required")]
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-sm-12" }, [
+                      _c("input", {
+                        staticClass: "btn btn-warning btn-block mb-3",
+                        attrs: { type: "submit", value: "Save and pay" }
+                      })
+                    ])
+                  ])
+                ]
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c(
+              "div",
+              { staticClass: "col-md-12" },
+              [
+                _c(
+                  "card",
+                  {
+                    attrs: {
+                      title:
+                        "<i class='fa fa-fw ti-ink-pen'></i> Bootstrap Input MaxLength"
+                    }
+                  },
+                  [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        {
+                          staticClass: "control-label",
+                          attrs: { for: "placement" }
+                        },
+                        [
+                          _vm._v(
+                            "\n                                Custom Position\n                            "
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass: "form-control",
+                        attrs: {
+                          type: "text",
+                          maxlength: "25",
+                          name: "placement",
+                          id: "placement"
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        {
+                          staticClass: "control-label",
+                          attrs: { for: "moreoptions" }
+                        },
+                        [_vm._v("Options")]
+                      ),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass: "form-control experment",
+                        attrs: {
+                          type: "text",
+                          maxlength: "25",
+                          name: "moreoptions",
+                          id: "moreoptions"
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        {
+                          staticClass: "control-label",
+                          attrs: { for: "alloptions" }
+                        },
+                        [
+                          _vm._v(
+                            "\n                                All the options\n                            "
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass: "form-control experment",
+                        attrs: {
+                          type: "text",
+                          maxlength: "25",
+                          name: "alloptions",
+                          id: "alloptions"
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "form-group" }, [
+                      _c(
+                        "label",
+                        {
+                          staticClass: "control-label",
+                          attrs: { for: "textarea" }
+                        },
+                        [_vm._v("Text Area")]
+                      ),
+                      _vm._v(" "),
+                      _c("textarea", {
+                        staticClass: "form-control resize_vertical",
+                        attrs: {
+                          id: "textarea",
+                          maxlength: "225",
+                          rows: "4",
+                          placeholder: "This textarea has a limit of 225 chars."
+                        }
+                      })
+                    ])
+                  ]
+                )
+              ],
+              1
+            )
+          ])
         ],
         1
       )
@@ -751,20 +2915,24 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/components/pages/date_pickers.vue":
-/*!*****************************************************!*\
-  !*** ./resources/components/pages/date_pickers.vue ***!
-  \*****************************************************/
+/***/ "./resources/components/pages/form-validations.vue":
+/*!*********************************************************!*\
+  !*** ./resources/components/pages/form-validations.vue ***!
+  \*********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _date_pickers_vue_vue_type_template_id_2914c190_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./date_pickers.vue?vue&type=template&id=2914c190&scoped=true& */ "./resources/components/pages/date_pickers.vue?vue&type=template&id=2914c190&scoped=true&");
-/* harmony import */ var _date_pickers_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./date_pickers.vue?vue&type=script&lang=js& */ "./resources/components/pages/date_pickers.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _date_pickers_vue_vue_type_style_index_0_id_2914c190_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./date_pickers.vue?vue&type=style&index=0&id=2914c190&scoped=true&lang=css& */ "./resources/components/pages/date_pickers.vue?vue&type=style&index=0&id=2914c190&scoped=true&lang=css&");
-/* harmony import */ var _date_pickers_vue_vue_type_style_index_1_lang_css___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./date_pickers.vue?vue&type=style&index=1&lang=css& */ "./resources/components/pages/date_pickers.vue?vue&type=style&index=1&lang=css&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _form_validations_vue_vue_type_template_id_872512e6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./form-validations.vue?vue&type=template&id=872512e6& */ "./resources/components/pages/form-validations.vue?vue&type=template&id=872512e6&");
+/* harmony import */ var _form_validations_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./form-validations.vue?vue&type=script&lang=js& */ "./resources/components/pages/form-validations.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _css_passtrength_passtrength_css_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../css/passtrength/passtrength.css?vue&type=style&index=0&lang=css& */ "./resources/css/passtrength/passtrength.css?vue&type=style&index=0&lang=css&");
+/* harmony import */ var sweetalert2_dist_sweetalert2_css_vue_type_style_index_1_lang_css___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! sweetalert2/dist/sweetalert2.css?vue&type=style&index=1&lang=css& */ "./node_modules/sweetalert2/dist/sweetalert2.css?vue&type=style&index=1&lang=css&");
+/* harmony import */ var bootstrapValidator_dist_css_bootstrapValidator_min_css_vue_type_style_index_2_lang_css___WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! bootstrapValidator/dist/css/bootstrapValidator.min.css?vue&type=style&index=2&lang=css& */ "./node_modules/bootstrapValidator/dist/css/bootstrapValidator.min.css?vue&type=style&index=2&lang=css&");
+/* harmony import */ var _form_validations_vue_vue_type_style_index_3_lang_css___WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./form-validations.vue?vue&type=style&index=3&lang=css& */ "./resources/components/pages/form-validations.vue?vue&type=style&index=3&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
 
 
 
@@ -774,85 +2942,85 @@ __webpack_require__.r(__webpack_exports__);
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_4__["default"])(
-  _date_pickers_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _date_pickers_vue_vue_type_template_id_2914c190_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _date_pickers_vue_vue_type_template_id_2914c190_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_6__["default"])(
+  _form_validations_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _form_validations_vue_vue_type_template_id_872512e6___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _form_validations_vue_vue_type_template_id_872512e6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
-  "2914c190",
+  null,
   null
   
 )
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/components/pages/date_pickers.vue"
+component.options.__file = "resources/components/pages/form-validations.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/components/pages/date_pickers.vue?vue&type=script&lang=js&":
-/*!******************************************************************************!*\
-  !*** ./resources/components/pages/date_pickers.vue?vue&type=script&lang=js& ***!
-  \******************************************************************************/
+/***/ "./resources/components/pages/form-validations.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************!*\
+  !*** ./resources/components/pages/form-validations.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_date_pickers_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./date_pickers.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/date_pickers.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_date_pickers_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_form_validations_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./form-validations.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/form-validations.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_form_validations_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/components/pages/date_pickers.vue?vue&type=style&index=0&id=2914c190&scoped=true&lang=css&":
-/*!**************************************************************************************************************!*\
-  !*** ./resources/components/pages/date_pickers.vue?vue&type=style&index=0&id=2914c190&scoped=true&lang=css& ***!
-  \**************************************************************************************************************/
+/***/ "./resources/components/pages/form-validations.vue?vue&type=style&index=3&lang=css&":
+/*!******************************************************************************************!*\
+  !*** ./resources/components/pages/form-validations.vue?vue&type=style&index=3&lang=css& ***!
+  \******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_date_pickers_vue_vue_type_style_index_0_id_2914c190_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader??ref--5-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--5-2!../../../node_modules/vue-loader/lib??vue-loader-options!./date_pickers.vue?vue&type=style&index=0&id=2914c190&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/date_pickers.vue?vue&type=style&index=0&id=2914c190&scoped=true&lang=css&");
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_date_pickers_vue_vue_type_style_index_0_id_2914c190_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_date_pickers_vue_vue_type_style_index_0_id_2914c190_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_date_pickers_vue_vue_type_style_index_0_id_2914c190_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_date_pickers_vue_vue_type_style_index_0_id_2914c190_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_date_pickers_vue_vue_type_style_index_0_id_2914c190_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_form_validations_vue_vue_type_style_index_3_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader??ref--5-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--5-2!../../../node_modules/vue-loader/lib??vue-loader-options!./form-validations.vue?vue&type=style&index=3&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/form-validations.vue?vue&type=style&index=3&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_form_validations_vue_vue_type_style_index_3_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_form_validations_vue_vue_type_style_index_3_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_form_validations_vue_vue_type_style_index_3_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_form_validations_vue_vue_type_style_index_3_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_form_validations_vue_vue_type_style_index_3_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
-/***/ "./resources/components/pages/date_pickers.vue?vue&type=style&index=1&lang=css&":
-/*!**************************************************************************************!*\
-  !*** ./resources/components/pages/date_pickers.vue?vue&type=style&index=1&lang=css& ***!
-  \**************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_date_pickers_vue_vue_type_style_index_1_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader??ref--5-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--5-2!../../../node_modules/vue-loader/lib??vue-loader-options!./date_pickers.vue?vue&type=style&index=1&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/date_pickers.vue?vue&type=style&index=1&lang=css&");
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_date_pickers_vue_vue_type_style_index_1_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_date_pickers_vue_vue_type_style_index_1_lang_css___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_date_pickers_vue_vue_type_style_index_1_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_date_pickers_vue_vue_type_style_index_1_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_node_modules_vue_loader_lib_index_js_vue_loader_options_date_pickers_vue_vue_type_style_index_1_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
-
-/***/ }),
-
-/***/ "./resources/components/pages/date_pickers.vue?vue&type=template&id=2914c190&scoped=true&":
-/*!************************************************************************************************!*\
-  !*** ./resources/components/pages/date_pickers.vue?vue&type=template&id=2914c190&scoped=true& ***!
-  \************************************************************************************************/
+/***/ "./resources/components/pages/form-validations.vue?vue&type=template&id=872512e6&":
+/*!****************************************************************************************!*\
+  !*** ./resources/components/pages/form-validations.vue?vue&type=template&id=872512e6& ***!
+  \****************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_date_pickers_vue_vue_type_template_id_2914c190_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./date_pickers.vue?vue&type=template&id=2914c190&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/date_pickers.vue?vue&type=template&id=2914c190&scoped=true&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_date_pickers_vue_vue_type_template_id_2914c190_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_form_validations_vue_vue_type_template_id_872512e6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./form-validations.vue?vue&type=template&id=872512e6& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/components/pages/form-validations.vue?vue&type=template&id=872512e6&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_form_validations_vue_vue_type_template_id_872512e6___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_date_pickers_vue_vue_type_template_id_2914c190_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_form_validations_vue_vue_type_template_id_872512e6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
+
+/***/ }),
+
+/***/ "./resources/css/passtrength/passtrength.css?vue&type=style&index=0&lang=css&":
+/*!************************************************************************************!*\
+  !*** ./resources/css/passtrength/passtrength.css?vue&type=style&index=0&lang=css& ***!
+  \************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_passtrength_css_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader??ref--5-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--5-2!./passtrength.css?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./resources/css/passtrength/passtrength.css?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_passtrength_css_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_passtrength_css_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_passtrength_css_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_passtrength_css_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_5_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_5_2_passtrength_css_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ })
 

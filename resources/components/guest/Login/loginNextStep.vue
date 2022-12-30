@@ -112,6 +112,4 @@ export default {
 }
 
 </script>
-<style src="../../../css/login.css" scoped>
-
-</style>
+<style src="../../../css/login.css" scoped></style>

@@ -1,67 +1,1133 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[18],{
 
-/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/nvd3/build/nv.d3.min.css?vue&type=style&index=0&lang=css&":
-/*!*************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--5-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--5-2!./node_modules/nvd3/build/nv.d3.min.css?vue&type=style&index=0&lang=css& ***!
-  \*************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue2-scrollbar/dist/style/app.css":
+/*!*****************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--5-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue2-scrollbar/dist/style/app.css ***!
+  \*****************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(/*! ../../css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+exports = module.exports = __webpack_require__(/*! ../../../css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
 // imports
 
 
 // module
-exports.push([module.i, ".nvd3 .nv-axis line,.nvd3 .nv-axis path{fill:none;shape-rendering:crispEdges}.nv-brush .extent,.nvd3 .background path,.nvd3 .nv-axis line,.nvd3 .nv-axis path{shape-rendering:crispEdges}.nv-distx,.nv-disty,.nv-noninteractive,.nvd3 .nv-axis,.nvd3.nv-pie .nv-label,.nvd3.nv-sparklineplus g.nv-hoverValue{pointer-events:none}.nvd3 .nv-axis{opacity:1}.nvd3 .nv-axis.nv-disabled,.nvd3 .nv-controlsWrap .nv-legend .nv-check-box .nv-check{opacity:0}.nvd3 .nv-axis path{stroke:#000;stroke-opacity:.75}.nvd3 .nv-axis path.domain{stroke-opacity:.75}.nvd3 .nv-axis.nv-x path.domain{stroke-opacity:0}.nvd3 .nv-axis line{stroke:#e5e5e5}.nvd3 .nv-axis .zero line, .nvd3 .nv-axis line.zero{stroke-opacity:.75}.nvd3 .nv-axis .nv-axisMaxMin text{font-weight:700}.nvd3 .x .nv-axis .nv-axisMaxMin text,.nvd3 .x2 .nv-axis .nv-axisMaxMin text,.nvd3 .x3 .nv-axis .nv-axisMaxMin text{text-anchor:middle}.nvd3 .nv-bars rect{fill-opacity:.75;transition:fill-opacity 250ms linear}.nvd3 .nv-bars rect.hover{fill-opacity:1}.nvd3 .nv-bars .hover rect{fill:#add8e6}.nvd3 .nv-bars text{fill:transparent}.nvd3 .nv-bars .hover text{fill:rgba(0,0,0,1)}.nvd3 .nv-discretebar .nv-groups rect,.nvd3 .nv-multibar .nv-groups rect,.nvd3 .nv-multibarHorizontal .nv-groups rect{stroke-opacity:0;transition:fill-opacity 250ms linear}.with-transitions .nv-candlestickBar .nv-ticks .nv-tick,.with-transitions .nvd3 .nv-groups .nv-point{transition:stroke-width 250ms linear,stroke-opacity 250ms linear}.nvd3 .nv-candlestickBar .nv-ticks rect:hover,.nvd3 .nv-discretebar .nv-groups rect:hover,.nvd3 .nv-multibar .nv-groups rect:hover,.nvd3 .nv-multibarHorizontal .nv-groups rect:hover{fill-opacity:1}.nvd3 .nv-discretebar .nv-groups text,.nvd3 .nv-multibarHorizontal .nv-groups text{font-weight:700;fill:rgba(0,0,0,1);stroke:transparent}.nvd3 .nv-boxplot circle{fill-opacity:.5}.nvd3 .nv-boxplot circle:hover,.nvd3 .nv-boxplot rect:hover{fill-opacity:1}.nvd3 line.nv-boxplot-median{stroke:#000}.nv-boxplot-tick:hover{stroke-width:2.5px}.nvd3.nv-bullet{font:10px sans-serif}.nvd3.nv-bullet .nv-measure{fill-opacity:.8}.nvd3.nv-bullet .nv-measure:hover{fill-opacity:1}.nvd3.nv-bullet .nv-marker{stroke:#000;stroke-width:2px}.nvd3.nv-bullet .nv-markerTriangle{stroke:#000;fill:#fff;stroke-width:1.5px}.nvd3.nv-bullet .nv-markerLine{stroke:#000;stroke-width:1.5px}.nvd3.nv-bullet .nv-tick line{stroke:#666;stroke-width:.5px}.nvd3.nv-bullet .nv-range.nv-s0{fill:#eee}.nvd3.nv-bullet .nv-range.nv-s1{fill:#ddd}.nvd3.nv-bullet .nv-range.nv-s2{fill:#ccc}.nvd3.nv-bullet .nv-title{font-size:14px;font-weight:700}.nvd3.nv-bullet .nv-subtitle{fill:#999}.nvd3.nv-bullet .nv-range{fill:#bababa;fill-opacity:.4}.nvd3.nv-bullet .nv-range:hover{fill-opacity:.7}.nvd3.nv-candlestickBar .nv-ticks .nv-tick{stroke-width:1px}.nvd3.nv-candlestickBar .nv-ticks .nv-tick.hover{stroke-width:2px}.nvd3.nv-candlestickBar .nv-ticks .nv-tick.positive rect{stroke:#2ca02c;fill:#2ca02c}.nvd3.nv-candlestickBar .nv-ticks .nv-tick.negative rect{stroke:#d62728;fill:#d62728}.nvd3.nv-candlestickBar .nv-ticks line{stroke:#333}.nv-force-node{stroke:#fff;stroke-width:1.5px}.nv-force-link{stroke:#999;stroke-opacity:.6}.nv-force-node text{stroke-width:0}.nvd3 .nv-check-box .nv-box{fill-opacity:0;stroke-width:2}.nvd3 .nv-check-box .nv-check{fill-opacity:0;stroke-width:4}.nvd3 .nv-series.nv-disabled .nv-check-box .nv-check{fill-opacity:0;stroke-opacity:0}.nvd3.nv-linePlusBar .nv-bar rect{fill-opacity:.75}.nvd3.nv-linePlusBar .nv-bar rect:hover{fill-opacity:1}.nvd3 .nv-groups path.nv-line{fill:none}.nvd3 .nv-groups path.nv-area{stroke:none}.nvd3.nv-line .nvd3.nv-scatter .nv-groups .nv-point{fill-opacity:0;stroke-opacity:0}.nvd3.nv-scatter.nv-single-point .nv-groups .nv-point{fill-opacity:.5!important;stroke-opacity:.5!important}.nvd3 .nv-groups .nv-point.hover,.nvd3.nv-scatter .nv-groups .nv-point.hover{stroke-width:7px;fill-opacity:.95!important;stroke-opacity:.95!important}.nvd3 .nv-point-paths path{stroke:#aaa;stroke-opacity:0;fill:#eee;fill-opacity:0}.nvd3 .nv-indexLine{cursor:ew-resize}svg.nvd3-svg{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;display:block;width:100%;height:100%}.nvtooltip.with-3d-shadow,.with-3d-shadow .nvtooltip{box-shadow:0 5px 10px rgba(0,0,0,.2);border-radius:5px}.nvd3 text{font:400 12px Arial,sans-serif}.nvd3 .title{font:700 14px Arial,sans-serif}.nvd3 .nv-background{fill:#fff;fill-opacity:0}.nvd3.nv-noData{font-size:18px;font-weight:700}.nv-brush .extent{fill-opacity:.125}.nv-brush .resize path{fill:#eee;stroke:#666}.nvd3 .nv-legend .nv-series{cursor:pointer}.nvd3 .nv-legend .nv-disabled circle{fill-opacity:0}.nvd3 .nv-brush .extent{fill-opacity:0!important}.nvd3 .nv-brushBackground rect{stroke:#000;stroke-width:.4;fill:#fff;fill-opacity:.7}@media print{.nvd3 text{stroke-width:0;fill-opacity:1}}.nvd3.nv-ohlcBar .nv-ticks .nv-tick{stroke-width:1px}.nvd3.nv-ohlcBar .nv-ticks .nv-tick.hover{stroke-width:2px}.nvd3.nv-ohlcBar .nv-ticks .nv-tick.positive{stroke:#2ca02c}.nvd3.nv-ohlcBar .nv-ticks .nv-tick.negative{stroke:#d62728}.nvd3 .background path{fill:none;stroke:#EEE;stroke-opacity:.4}.nvd3 .foreground path{fill:none;stroke-opacity:.7}.nvd3 .nv-parallelCoordinates-brush .extent{fill:#fff;fill-opacity:.6;stroke:gray;shape-rendering:crispEdges}.nvd3 .nv-parallelCoordinates .hover{fill-opacity:1;stroke-width:3px}.nvd3 .missingValuesline line{fill:none;stroke:#000;stroke-width:1;stroke-opacity:1;stroke-dasharray:5,5}.nvd3.nv-pie .nv-pie-title{font-size:24px;fill:rgba(19,196,249,.59)}.nvd3.nv-pie .nv-slice text{stroke:#000;stroke-width:0}.nvd3.nv-pie path{transition:fill-opacity 250ms linear,stroke-width 250ms linear,stroke-opacity 250ms linear;stroke:#fff;stroke-width:1px;stroke-opacity:1;fill-opacity:.7}.nvd3.nv-pie .hover path{fill-opacity:1}.nvd3.nv-pie .nv-label rect{fill-opacity:0;stroke-opacity:0}.nvd3 .nv-groups .nv-point.hover{stroke-width:20px;stroke-opacity:.5}.nvd3 .nv-scatter .nv-point.hover{fill-opacity:1}.nvd3.nv-sparkline path{fill:none}.nvd3.nv-sparklineplus .nv-hoverValue line{stroke:#333;stroke-width:1.5px}.nvd3.nv-sparklineplus,.nvd3.nv-sparklineplus g{pointer-events:all}.nvd3 .nv-interactiveGuideLine,.nvtooltip{pointer-events:none}.nvd3 .nv-hoverArea{fill-opacity:0;stroke-opacity:0}.nvd3.nv-sparklineplus .nv-xValue,.nvd3.nv-sparklineplus .nv-yValue{stroke-width:0;font-size:.9em;font-weight:400}.nvd3.nv-sparklineplus .nv-yValue{stroke:#f66}.nvd3.nv-sparklineplus .nv-maxValue{stroke:#2ca02c;fill:#2ca02c}.nvd3.nv-sparklineplus .nv-minValue{stroke:#d62728;fill:#d62728}.nvd3.nv-sparklineplus .nv-currentValue{font-weight:700;font-size:1.1em}.nvtooltip h3,.nvtooltip table td.key{font-weight:400}.nvd3.nv-stackedarea path.nv-area{fill-opacity:.7;stroke-opacity:0;transition:fill-opacity 250ms linear,stroke-opacity 250ms linear}.nvd3.nv-stackedarea path.nv-area.hover{fill-opacity:.9}.nvd3.nv-stackedarea .nv-groups .nv-point{stroke-opacity:0;fill-opacity:0}.nvtooltip{position:absolute;color:rgba(0,0,0,1);padding:1px;z-index:10000;display:block;font-family:Arial,sans-serif;font-size:13px;text-align:left;white-space:nowrap;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background:rgba(255,255,255,.8);border:1px solid rgba(0,0,0,.5);border-radius:4px}.nvtooltip h3,.nvtooltip p{margin:0;text-align:center}.nvtooltip.with-transitions,.with-transitions .nvtooltip{transition:opacity 50ms linear;transition-delay:200ms}.nvtooltip.x-nvtooltip,.nvtooltip.y-nvtooltip{padding:8px}.nvtooltip h3{padding:4px 14px;line-height:18px;background-color:rgba(247,247,247,.75);color:rgba(0,0,0,1);border-bottom:1px solid #ebebeb;border-radius:5px 5px 0 0}.nvtooltip p{padding:5px 14px}.nvtooltip span{display:inline-block;margin:2px 0}.nvtooltip table{margin:6px;border-spacing:0}.nvtooltip table td{padding:2px 9px 2px 0;vertical-align:middle}.nvtooltip table td.key.total{font-weight:700}.nvtooltip table td.value{text-align:right;font-weight:700}.nvtooltip table td.percent{color:#a9a9a9}.nvtooltip table tr.highlight td{padding:1px 9px 1px 0;border-bottom-style:solid;border-bottom-width:1px;border-top-style:solid;border-top-width:1px}.nvtooltip table td.legend-color-guide div{vertical-align:middle;width:12px;height:12px;border:1px solid #999}.nvtooltip .footer{padding:3px;text-align:center}.nvtooltip-pending-removal{pointer-events:none;display:none}.nvd3 line.nv-guideline{stroke:#ccc}", ""]);
+exports.push([module.i, "\nbody {\n  background: #f9f9f9;\n  height: 1000px;\n}\np {\n  margin-top: 0;\n}\n.my-scrollbar {\n  width: 35%;\n  min-width: 300px;\n  max-height: 450px;\n}\n.scroll-me {\n  background: #EEE;\n  min-width: 750px;\n}\n.kolom {\n  background: #2196F3;\n  width: 150px;\n  height: 150px;\n  float: left;\n  display: inline-block;\n  margin: 15px;\n}\n.clearfix {\n  clear: both;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ "./node_modules/nvd3/build/nv.d3.min.css?vue&type=style&index=0&lang=css&":
-/*!********************************************************************************!*\
-  !*** ./node_modules/nvd3/build/nv.d3.min.css?vue&type=style&index=0&lang=css& ***!
-  \********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _style_loader_index_js_css_loader_index_js_ref_5_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_src_index_js_ref_5_2_nv_d3_min_css_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../style-loader!../../css-loader??ref--5-1!../../vue-loader/lib/loaders/stylePostLoader.js!../../postcss-loader/src??ref--5-2!./nv.d3.min.css?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/nvd3/build/nv.d3.min.css?vue&type=style&index=0&lang=css&");
-/* harmony import */ var _style_loader_index_js_css_loader_index_js_ref_5_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_src_index_js_ref_5_2_nv_d3_min_css_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_loader_index_js_css_loader_index_js_ref_5_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_src_index_js_ref_5_2_nv_d3_min_css_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _style_loader_index_js_css_loader_index_js_ref_5_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_src_index_js_ref_5_2_nv_d3_min_css_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _style_loader_index_js_css_loader_index_js_ref_5_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_src_index_js_ref_5_2_nv_d3_min_css_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_style_loader_index_js_css_loader_index_js_ref_5_1_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_src_index_js_ref_5_2_nv_d3_min_css_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
-
-/***/ }),
-
-/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/nvd3/build/nv.d3.min.css?vue&type=style&index=0&lang=css&":
-/*!*****************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--5-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--5-2!./node_modules/nvd3/build/nv.d3.min.css?vue&type=style&index=0&lang=css& ***!
-  \*****************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue2-scrollbar/dist/style/vue2-scrollbar.css":
+/*!****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--5-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/vue2-scrollbar/dist/style/vue2-scrollbar.css ***!
+  \****************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-
-var content = __webpack_require__(/*! !../../css-loader??ref--5-1!../../vue-loader/lib/loaders/stylePostLoader.js!../../postcss-loader/src??ref--5-2!./nv.d3.min.css?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/nvd3/build/nv.d3.min.css?vue&type=style&index=0&lang=css&");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
+exports = module.exports = __webpack_require__(/*! ../../../css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
 
 
+// module
+exports.push([module.i, ".vue-scrollbar-transition, .vue-scrollbar__scrollbar-vertical, .vue-scrollbar__scrollbar-horizontal {\n  transition: all 0.5s ease;\n  -moz-transition: all 0.5s ease;\n  -webkit-transition: all 0.5s ease;\n  -o-transition: all 0.5s ease;\n}\n.vue-scrollbar-transition--scrollbar {\n  transition: opacity 0.5s linear;\n  -moz-transition: opacity 0.5s linear;\n  -webkit-transition: opacity 0.5s linear;\n  -o-transition: opacity 0.5s linear;\n}\n.vue-scrollbar__wrapper {\n  margin: 0 auto;\n  overflow: hidden;\n  position: relative;\n  background: white;\n}\n.vue-scrollbar__wrapper:hover .vue-scrollbar__scrollbar-vertical, .vue-scrollbar__wrapper:hover .vue-scrollbar__scrollbar-horizontal {\n  opacity: 1;\n}\n.vue-scrollbar__scrollbar-vertical, .vue-scrollbar__scrollbar-horizontal {\n  opacity: 0.5;\n  position: absolute;\n  background: transparent;\n}\n.vue-scrollbar__scrollbar-vertical:hover, .vue-scrollbar__scrollbar-horizontal:hover {\n  background: rgba(0, 0, 0, 0.3);\n}\n.vue-scrollbar__scrollbar-vertical .scrollbar, .vue-scrollbar__scrollbar-horizontal .scrollbar {\n  position: relative;\n  background: rgba(0, 0, 0, 0.5);\n  cursor: default;\n}\n.vue-scrollbar__scrollbar-vertical {\n  width: 10px;\n  height: 100%;\n  top: 0;\n  right: 0;\n}\n.vue-scrollbar__scrollbar-vertical .scrollbar {\n  width: 10px;\n}\n.vue-scrollbar__scrollbar-horizontal {\n  height: 10px;\n  width: 100%;\n  bottom: 0;\n  right: 0;\n}\n.vue-scrollbar__scrollbar-horizontal .scrollbar {\n  height: 10px;\n}\n", ""]);
 
-var options = {"hmr":true}
+// exports
 
-options.transform = transform
-options.insertInto = undefined;
 
-var update = __webpack_require__(/*! ../../style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+/***/ }),
 
-if(content.locals) module.exports = content.locals;
+/***/ "./node_modules/vue2-scrollbar/dist/vue2-scrollbar.js":
+/*!************************************************************!*\
+  !*** ./node_modules/vue2-scrollbar/dist/vue2-scrollbar.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
-if(false) {}
+/*!
+ * Copyright (c) 2016 Naufal Rabbani (http://github.com/BosNaufal),
+ * ,Licensed Under MIT (http://opensource.org/licenses/MIT),
+ * ,
+ * ,Vue 2 Scrollbar @ Version 0.0.2,
+ * 
+ */
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(true)
+		module.exports = factory();
+	else {}
+})(this, function() {
+return /******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// identity function for calling harmony imports with the correct context
+/******/ 	__webpack_require__.i = function(value) { return value; };
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "../dist/";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports) {
+
+/* globals __VUE_SSR_CONTEXT__ */
+
+// this module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle
+
+module.exports = function normalizeComponent (
+  rawScriptExports,
+  compiledTemplate,
+  injectStyles,
+  scopeId,
+  moduleIdentifier /* server only */
+) {
+  var esModule
+  var scriptExports = rawScriptExports = rawScriptExports || {}
+
+  // ES6 modules interop
+  var type = typeof rawScriptExports.default
+  if (type === 'object' || type === 'function') {
+    esModule = rawScriptExports
+    scriptExports = rawScriptExports.default
+  }
+
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // render functions
+  if (compiledTemplate) {
+    options.render = compiledTemplate.render
+    options.staticRenderFns = compiledTemplate.staticRenderFns
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = scopeId
+  }
+
+  var hook
+  if (moduleIdentifier) { // server build
+    hook = function (context) {
+      // 2.3 injection
+      context =
+        context || // cached call
+        (this.$vnode && this.$vnode.ssrContext) || // stateful
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+      // 2.2 with runInNewContext: true
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__
+      }
+      // inject component styles
+      if (injectStyles) {
+        injectStyles.call(this, context)
+      }
+      // register component module identifier for async chunk inferrence
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier)
+      }
+    }
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook
+  } else if (injectStyles) {
+    hook = injectStyles
+  }
+
+  if (hook) {
+    var functional = options.functional
+    var existing = functional
+      ? options.render
+      : options.beforeCreate
+    if (!functional) {
+      // inject component registration as beforeCreate hook
+      options.beforeCreate = existing
+        ? [].concat(existing, hook)
+        : [hook]
+    } else {
+      // register for functioal component in vue file
+      options.render = function renderWithStyleInjection (h, context) {
+        hook.call(context)
+        return existing(h, context)
+      }
+    }
+  }
+
+  return {
+    esModule: esModule,
+    exports: scriptExports,
+    options: options
+  }
+}
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_vue_scrollbar_vue__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_vue_scrollbar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_vue_scrollbar_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_7ec59f76_hasScoped_false_node_modules_vue_loader_lib_selector_type_template_index_0_vue_scrollbar_vue__ = __webpack_require__(9);
+var disposed = false
+var normalizeComponent = __webpack_require__(0)
+/* script */
+
+/* template */
+
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_vue_scrollbar_vue___default.a,
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_7ec59f76_hasScoped_false_node_modules_vue_loader_lib_selector_type_template_index_0_vue_scrollbar_vue__["a" /* default */],
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "src/js/components/vue-scrollbar.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] vue-scrollbar.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {}
+
+/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
+
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+exports.default = {
+
+  props: {
+    draggingFromParent: Boolean,
+    scrolling: Number,
+    wrapper: Object,
+    area: Object,
+    onChangePosition: Function,
+    onDragging: Function,
+    onStopDrag: Function
+  },
+
+  data: function data() {
+    return {
+      width: 0,
+      dragging: false,
+      start: 0
+    };
+  },
+
+
+  watch: {
+    'wrapper.width': function wrapperWidth(val, old) {
+      this.calculateSize(this);
+    },
+    'area.width': function areaWidth(val, old) {
+      this.calculateSize(this);
+    }
+  },
+
+  methods: {
+    startDrag: function startDrag(e) {
+
+      e.preventDefault();
+      e.stopPropagation();
+
+      e = e.changedTouches ? e.changedTouches[0] : e;
+
+      // Prepare To Drag
+      this.dragging = true;
+      this.start = e.clientX;
+    },
+    onDrag: function onDrag(e) {
+
+      if (this.dragging) {
+
+        // Make The Parent being in the Dragging State
+        this.onDragging();
+
+        e.preventDefault();
+        e.stopPropagation();
+
+        e = e.changedTouches ? e.changedTouches[0] : e;
+
+        var xMovement = e.clientX - this.start;
+        var xMovementPercentage = xMovement / this.wrapper.width * 100;
+
+        // Update the last e.clientX
+        this.start = e.clientX;
+
+        // The next Horizontal Value will be
+        var next = this.scrolling + xMovementPercentage;
+
+        // Tell the parent to change the position
+        this.onChangePosition(next, 'horizontal');
+      }
+    },
+    stopDrag: function stopDrag(e) {
+      if (this.dragging) {
+        // Parent Should Change the Dragging State
+        this.onStopDrag();
+        this.dragging = false;
+      }
+    },
+    jump: function jump(e) {
+
+      var isContainer = e.target === this.$refs.container;
+
+      if (isContainer) {
+
+        // Get the Element Position
+        var position = this.$refs.scrollbar.getBoundingClientRect();
+
+        // Calculate the horizontal Movement
+        var xMovement = e.clientX - position.left;
+        var centerize = this.width / 2;
+        var xMovementPercentage = xMovement / this.wrapper.width * 100 - centerize;
+
+        // Update the last e.clientX
+        this.start = e.clientX;
+
+        // The next Horizontal Value will be
+        var next = this.scrolling + xMovementPercentage;
+
+        // Tell the parent to change the position
+        this.onChangePosition(next, 'horizontal');
+      }
+    },
+    calculateSize: function calculateSize(source) {
+      // Scrollbar Width
+      this.width = source.wrapper.width / source.area.width * 100;
+    }
+  },
+
+  mounted: function mounted() {
+    this.calculateSize(this);
+
+    // Put the Listener
+    document.addEventListener("mousemove", this.onDrag);
+    document.addEventListener("touchmove", this.onDrag);
+    document.addEventListener("mouseup", this.stopDrag);
+    document.addEventListener("touchend", this.stopDrag);
+  },
+  beforeDestroy: function beforeDestroy() {
+    // Remove the Listener
+    document.removeEventListener("mousemove", this.onDrag);
+    document.removeEventListener("touchmove", this.onDrag);
+    document.removeEventListener("mouseup", this.stopDrag);
+    document.removeEventListener("touchend", this.stopDrag);
+  }
+};
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+exports.default = {
+
+  props: {
+    draggingFromParent: Boolean,
+    scrolling: Number,
+    wrapper: Object,
+    area: Object,
+    onChangePosition: Function,
+    onDragging: Function,
+    onStopDrag: Function
+  },
+
+  data: function data() {
+    return {
+      height: 0,
+      dragging: false,
+      start: 0
+    };
+  },
+
+
+  watch: {
+    'wrapper.height': function wrapperHeight(val, old) {
+      this.calculateSize(this);
+    },
+    'area.height': function areaHeight(val, old) {
+      this.calculateSize(this);
+    }
+  },
+
+  methods: {
+    startDrag: function startDrag(e) {
+
+      e.preventDefault();
+      e.stopPropagation();
+
+      e = e.changedTouches ? e.changedTouches[0] : e;
+
+      // Prepare to drag
+      this.dragging = true, this.start = e.clientY;
+    },
+    onDrag: function onDrag(e) {
+
+      if (this.dragging) {
+
+        // Make The Parent being in the Dragging State
+        this.onDragging();
+
+        e.preventDefault();
+        e.stopPropagation();
+
+        e = e.changedTouches ? e.changedTouches[0] : e;
+
+        var yMovement = e.clientY - this.start;
+        var yMovementPercentage = yMovement / this.wrapper.height * 100;
+
+        // Update the last e.clientY
+        this.start = e.clientY;
+
+        // The next Vertical Value will be
+        var next = this.scrolling + yMovementPercentage;
+
+        // Tell the parent to change the position
+        this.onChangePosition(next, 'vertical');
+      }
+    },
+    stopDrag: function stopDrag(e) {
+      if (this.dragging) {
+        // Parent Should Change the Dragging State
+        this.onStopDrag();
+        this.dragging = false;
+      }
+    },
+    jump: function jump(e) {
+
+      var isContainer = e.target === this.$refs.container;
+
+      if (isContainer) {
+
+        // Get the Element Position
+        var position = this.$refs.scrollbar.getBoundingClientRect();
+
+        // Calculate the vertical Movement
+        var yMovement = e.clientY - position.top;
+        var centerize = this.height / 2;
+        var yMovementPercentage = yMovement / this.wrapper.height * 100 - centerize;
+
+        // Update the last e.clientY
+        this.start = e.clientY;
+
+        // The next Vertical Value will be
+        var next = this.scrolling + yMovementPercentage;
+
+        // Tell the parent to change the position
+        this.onChangePosition(next, 'vertical');
+      }
+    },
+    calculateSize: function calculateSize(source) {
+      // Scrollbar Height
+      this.height = source.wrapper.height / source.area.height * 100;
+    },
+    getSize: function getSize() {
+      // The Elements
+      var $scrollArea = this.$refs.container.parentElement;
+      var $scrollWrapper = $scrollArea.parentElement;
+
+      // Get new Elements Size
+      var elementSize = {
+        // Scroll Area Height and Width
+        scrollAreaHeight: $scrollArea.children[0].clientHeight,
+        scrollAreaWidth: $scrollArea.children[0].clientWidth,
+
+        // Scroll Wrapper Height and Width
+        scrollWrapperHeight: $scrollWrapper.clientHeight,
+        scrollWrapperWidth: $scrollWrapper.clientWidth
+      };
+      return elementSize;
+    }
+  },
+
+  mounted: function mounted() {
+    this.calculateSize(this);
+
+    // Put the Listener
+    document.addEventListener("mousemove", this.onDrag);
+    document.addEventListener("touchmove", this.onDrag);
+    document.addEventListener("mouseup", this.stopDrag);
+    document.addEventListener("touchend", this.stopDrag);
+  },
+  beforeDestroy: function beforeDestroy() {
+    // Remove the Listener
+    document.removeEventListener("mousemove", this.onDrag);
+    document.removeEventListener("touchmove", this.onDrag);
+    document.removeEventListener("mouseup", this.stopDrag);
+    document.removeEventListener("touchend", this.stopDrag);
+  }
+};
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _verticalScrollbar = __webpack_require__(7);
+
+var _verticalScrollbar2 = _interopRequireDefault(_verticalScrollbar);
+
+var _horizontalScrollbar = __webpack_require__(6);
+
+var _horizontalScrollbar2 = _interopRequireDefault(_horizontalScrollbar);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+exports.default = {
+
+  props: {
+    classes: String,
+    styles: Object,
+    speed: {
+      type: Number,
+      default: 53
+    },
+    onMaxScroll: Function
+  },
+
+  components: {
+    VerticalScrollbar: _verticalScrollbar2.default,
+    HorizontalScrollbar: _horizontalScrollbar2.default
+  },
+
+  data: function data() {
+    return {
+      ready: false,
+      top: 0,
+      left: 0,
+      scrollAreaHeight: null,
+      scrollAreaWidth: null,
+      scrollWrapperHeight: null,
+      scrollWrapperWidth: null,
+      vMovement: 0,
+      hMovement: 0,
+      dragging: false,
+      start: { y: 0, x: 0 },
+      allowBodyScroll: false
+    };
+  },
+
+
+  methods: {
+    scroll: function scroll(e) {
+      var _this = this;
+
+      // Make sure the content height is not changed
+      this.calculateSize(function () {
+        // Set the wheel step
+        var num = _this.speed;
+
+        // DOM events
+        var shifted = e.shiftKey;
+        var scrollY = e.deltaY > 0 ? num : -num;
+        var scrollX = e.deltaX > 0 ? num : -num;
+
+        // Fix Mozilla Shifted Wheel~
+        if (shifted && e.deltaX == 0) scrollX = e.deltaY > 0 ? num : -num;
+
+        // Next Value
+        var nextY = _this.top + scrollY;
+        var nextX = _this.left + scrollX;
+
+        // Is it Scrollable?
+        var canScrollY = _this.scrollAreaHeight > _this.scrollWrapperHeight;
+        var canScrollX = _this.scrollAreaWidth > _this.scrollWrapperWidth;
+
+        // Vertical Scrolling
+        if (canScrollY && !shifted) _this.normalizeVertical(nextY);
+
+        // Horizontal Scrolling
+        if (shifted && canScrollX) _this.normalizeHorizontal(nextX);
+      });
+
+      // prevent Default only if scrolled content is not at the top/bottom
+      if (!this.allowBodyScroll) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+    },
+
+
+    // DRAG EVENT JUST FOR TOUCH DEVICE~
+    startDrag: function startDrag(e) {
+      var _this2 = this;
+
+      this.touchEvent = e;
+
+      var evt = e.changedTouches ? e.changedTouches[0] : e;
+
+      // Make sure the content height is not changed
+      this.calculateSize(function () {
+        // Prepare to drag
+        _this2.dragging = true, _this2.start = { y: evt.pageY, x: evt.pageX };
+      });
+    },
+    onDrag: function onDrag(e) {
+      if (this.dragging) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        // Prevent Click Event When it dragging
+        if (this.touchEvent) {
+          this.touchEvent.preventDefault();
+          this.touchEvent.stopPropagation();
+        }
+
+        var evt = e.changedTouches ? e.changedTouches[0] : e;
+
+        // Invers the Movement
+        var yMovement = this.start.y - evt.clientY;
+        var xMovement = this.start.x - evt.clientX;
+
+        // Update the last e.client
+        this.start = { y: evt.clientY, x: evt.clientX
+
+          // The next Vertical Value will be
+        };var nextY = this.top + yMovement;
+        var nextX = this.left + xMovement;
+
+        this.normalizeVertical(nextY);
+        this.normalizeHorizontal(nextX);
+      }
+    },
+    stopDrag: function stopDrag(e) {
+      this.dragging = false;
+      this.touchEvent = false;
+    },
+    scrollToY: function scrollToY(y) {
+      this.normalizeVertical(y);
+    },
+    scrollToX: function scrollToX(x) {
+      this.normalizeHorizontal(x);
+    },
+    normalizeVertical: function normalizeVertical(next) {
+      var elementSize = this.getSize();
+
+      // Vertical Scrolling
+      var lowerEnd = elementSize.scrollAreaHeight - elementSize.scrollWrapperHeight;
+
+      // Max Scroll Down
+      var maxBottom = next > lowerEnd;
+      if (maxBottom) next = lowerEnd;
+
+      // Max Scroll Up
+      var maxTop = next < 0;
+      if (maxTop) next = 0;
+
+      // Update the Vertical Value if it's needed
+      var shouldScroll = this.top !== next;
+      this.allowBodyScroll = !shouldScroll;
+      if (shouldScroll) {
+        this.top = next, this.vMovement = next / elementSize.scrollAreaHeight * 100;
+
+        if (this.onMaxScroll && (maxTop || maxBottom)) {
+          this.onMaxScroll({ top: maxTop, bottom: maxBottom, right: false, left: false });
+        }
+      }
+    },
+    normalizeHorizontal: function normalizeHorizontal(next) {
+      var elementSize = this.getSize();
+
+      // Horizontal Scrolling
+      var rightEnd = elementSize.scrollAreaWidth - this.scrollWrapperWidth;
+
+      // Max Scroll Right
+      var maxRight = next > rightEnd;
+      if (maxRight) next = rightEnd;
+
+      // Max Scroll Left
+      var maxLeft = next < 0;
+      if (next < 0) next = 0;
+
+      // Update the Horizontal Value
+      var shouldScroll = this.left !== next;
+      this.allowBodyScroll = !shouldScroll;
+      if (shouldScroll) {
+        this.left = next, this.hMovement = next / elementSize.scrollAreaWidth * 100;
+
+        if (this.onMaxScroll && (maxRight || maxLeft)) {
+          this.onMaxScroll({ right: maxRight, left: maxLeft, top: false, bottom: false });
+        }
+      }
+    },
+    handleChangePosition: function handleChangePosition(movement, orientation) {
+      var _this3 = this;
+
+      // Make sure the content height is not changed
+      this.calculateSize(function () {
+        // Convert Percentage to Pixel
+        var next = movement / 100;
+        if (orientation == 'vertical') _this3.normalizeVertical(next * _this3.scrollAreaHeight);
+        if (orientation == 'horizontal') _this3.normalizeHorizontal(next * _this3.scrollAreaWidth);
+      });
+    },
+    handleScrollbarDragging: function handleScrollbarDragging() {
+      this.dragging = true;
+    },
+    handleScrollbarStopDrag: function handleScrollbarStopDrag() {
+      this.dragging = false;
+    },
+    getSize: function getSize() {
+      // The Elements
+      var $scrollArea = this.$refs.scrollArea;
+      var $scrollWrapper = this.$refs.scrollWrapper;
+
+      // Get new Elements Size
+      var elementSize = {
+        // Scroll Area Height and Width
+        scrollAreaHeight: $scrollArea.children[0].clientHeight,
+        scrollAreaWidth: $scrollArea.children[0].clientWidth,
+
+        // Scroll Wrapper Height and Width
+        scrollWrapperHeight: $scrollWrapper.clientHeight,
+        scrollWrapperWidth: $scrollWrapper.clientWidth
+      };
+      return elementSize;
+    },
+    calculateSize: function calculateSize(cb) {
+      if (typeof cb !== 'function') cb = null;
+
+      var elementSize = this.getSize();
+
+      if (elementSize.scrollWrapperHeight !== this.scrollWrapperHeight || elementSize.scrollWrapperWidth !== this.scrollWrapperWidth || elementSize.scrollAreaHeight !== this.scrollAreaHeight || elementSize.scrollAreaWidth !== this.scrollAreaWidth) {
+
+        // Scroll Area Height and Width
+        this.scrollAreaHeight = elementSize.scrollAreaHeight, this.scrollAreaWidth = elementSize.scrollAreaWidth,
+
+        // Scroll Wrapper Height and Width
+        this.scrollWrapperHeight = elementSize.scrollWrapperHeight, this.scrollWrapperWidth = elementSize.scrollWrapperWidth,
+
+        // Make sure The wrapper is Ready, then render the scrollbar
+        this.ready = true;
+
+        return cb ? cb() : false;
+      } else return cb ? cb() : false;
+    }
+  },
+
+  mounted: function mounted() {
+    this.calculateSize();
+
+    // Attach The Event for Responsive View~
+    window.addEventListener('resize', this.calculateSize);
+  },
+  beforeDestroy: function beforeDestroy() {
+    // Remove Event
+    window.removeEventListener('resize', this.calculateSize);
+  }
+};
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _vueScrollbar = __webpack_require__(1);
+
+var _vueScrollbar2 = _interopRequireDefault(_vueScrollbar);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+module.exports = _vueScrollbar2.default;
+
+/***/ }),
+/* 6 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_horizontal_scrollbar_vue__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_horizontal_scrollbar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_horizontal_scrollbar_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_03d7e587_hasScoped_false_node_modules_vue_loader_lib_selector_type_template_index_0_horizontal_scrollbar_vue__ = __webpack_require__(8);
+var disposed = false
+var normalizeComponent = __webpack_require__(0)
+/* script */
+
+/* template */
+
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_horizontal_scrollbar_vue___default.a,
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_03d7e587_hasScoped_false_node_modules_vue_loader_lib_selector_type_template_index_0_horizontal_scrollbar_vue__["a" /* default */],
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "src/js/components/horizontal-scrollbar.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] horizontal-scrollbar.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {}
+
+/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
+
+
+/***/ }),
+/* 7 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_vertical_scrollbar_vue__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_vertical_scrollbar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_vertical_scrollbar_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_9fd7644e_hasScoped_false_node_modules_vue_loader_lib_selector_type_template_index_0_vertical_scrollbar_vue__ = __webpack_require__(10);
+var disposed = false
+var normalizeComponent = __webpack_require__(0)
+/* script */
+
+/* template */
+
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_vertical_scrollbar_vue___default.a,
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_9fd7644e_hasScoped_false_node_modules_vue_loader_lib_selector_type_template_index_0_vertical_scrollbar_vue__["a" /* default */],
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "src/js/components/vertical-scrollbar.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] vertical-scrollbar.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {}
+
+/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
+
+
+/***/ }),
+/* 8 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [(_vm.width < 100) ? _c('div', {
+    ref: "container",
+    staticClass: "vue-scrollbar__scrollbar-horizontal",
+    on: {
+      "click": _vm.jump
+    }
+  }, [_c('div', {
+    ref: "scrollbar",
+    class: 'scrollbar' + (_vm.dragging || _vm.draggingFromParent ? '' : ' vue-scrollbar-transition'),
+    style: ({
+      width: this.width + '%',
+      left: this.scrolling + '%'
+    }),
+    on: {
+      "touchstart": _vm.startDrag,
+      "mousedown": _vm.startDrag
+    }
+  })]) : _vm._e()])
+}
+var staticRenderFns = []
+render._withStripped = true
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+if (false) {}
+
+/***/ }),
+/* 9 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    ref: "scrollWrapper",
+    class: 'vue-scrollbar__wrapper' + (this.classes ? ' ' + this.classes : ''),
+    style: (this.styles),
+    on: {
+      "click": _vm.calculateSize
+    }
+  }, [_c('div', {
+    ref: "scrollArea",
+    class: 'vue-scrollbar__area' + (this.dragging ? ' ' : ' vue-scrollbar-transition'),
+    style: ({
+      marginTop: this.top * -1 + 'px',
+      marginLeft: this.left * -1 + 'px'
+    }),
+    on: {
+      "wheel": _vm.scroll,
+      "touchstart": _vm.startDrag,
+      "touchmove": _vm.onDrag,
+      "touchend": _vm.stopDrag
+    }
+  }, [_vm._t("default"), _vm._v(" "), (_vm.ready) ? _c('vertical-scrollbar', {
+    attrs: {
+      "area": {
+        height: _vm.scrollAreaHeight
+      },
+      "wrapper": {
+        height: _vm.scrollWrapperHeight
+      },
+      "scrolling": _vm.vMovement,
+      "dragging-from-parent": _vm.dragging,
+      "on-change-position": _vm.handleChangePosition,
+      "on-dragging": _vm.handleScrollbarDragging,
+      "on-stop-drag": _vm.handleScrollbarStopDrag
+    }
+  }) : _vm._e(), _vm._v(" "), (_vm.ready) ? _c('horizontal-scrollbar', {
+    attrs: {
+      "area": {
+        width: _vm.scrollAreaWidth
+      },
+      "wrapper": {
+        width: _vm.scrollWrapperWidth
+      },
+      "scrolling": _vm.hMovement,
+      "dragging-from-parent": _vm.dragging,
+      "on-change-position": _vm.handleChangePosition,
+      "on-dragging": _vm.handleScrollbarDragging,
+      "on-stop-drag": _vm.handleScrollbarStopDrag
+    }
+  }) : _vm._e()], 2)])
+}
+var staticRenderFns = []
+render._withStripped = true
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+if (false) {}
+
+/***/ }),
+/* 10 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [(_vm.height < 100) ? _c('div', {
+    ref: "container",
+    staticClass: "vue-scrollbar__scrollbar-vertical",
+    on: {
+      "click": _vm.jump
+    }
+  }, [_c('div', {
+    ref: "scrollbar",
+    class: 'scrollbar' + (_vm.dragging || _vm.draggingFromParent ? '' : ' vue-scrollbar-transition'),
+    style: ({
+      height: _vm.height + '%',
+      top: _vm.scrolling + '%'
+    }),
+    on: {
+      "touchstart": _vm.startDrag,
+      "mousedown": _vm.startDrag
+    }
+  })]) : _vm._e()])
+}
+var staticRenderFns = []
+render._withStripped = true
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+if (false) {}
+
+/***/ })
+/******/ ]);
+});
 
 /***/ })
 

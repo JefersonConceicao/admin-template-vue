@@ -8,7 +8,7 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <vue-form :state="formstate" @submit.prevent="onSubmit">
+                <vue-form :state="formstate" @submit.prevent="">
                     <div class="row">
                         <div class="col-sm-12 mt-3 ">
                             <div class="form-group">
@@ -32,7 +32,7 @@
                     </div>
                     <div class="row mt-3">
                         <div class="col-12">
-                            <b-button variant="primary" class="btn-block btn-transalvador" type="submit"
+                            <b-button @click="onSubmit" variant="primary" class="btn-block btn-transalvador" type="button"
                                 :disabled="loading">
                                 <span v-if="!loading"> Avançar </span>
                                 <span v-else> Carregando <span class="el-icon-loading"> </span> </span>
@@ -46,18 +46,13 @@
 </template>
 
 <script>
-import Vue from "vue"
-import VueForm from "vue-form";
-import options from "../../../validations/validations.js";
 import axios from 'axios';
 import toastr from "toastr/build/toastr.min.js"
-
-Vue.use(VueForm, options);
+import { mapActions  } from 'vuex';
 
 export default {
     name: "login",
     data() {
-        console.log(this.$route)
         return {
             formstate: {},
             model: {
@@ -88,6 +83,9 @@ export default {
                 this.$router.push({ name: 'AuthLoginEtapa2', params: { user: response.user } });
             }
         },
+        ...mapActions({
+            testeActionVue: 'requestLoginAsync'
+        })
     },
 }
 </script>

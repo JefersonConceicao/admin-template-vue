@@ -1,3 +1,15 @@
+let state = () => ({
+    count: 0,
+    left_open: true,
+    right_open: false,
+    preloader: true,
+    user: {
+        name: "Addison",
+        picture: require('../../../img/authors/avatar1.jpg'),
+        job: "Project Manager"
+    }
+})
+
 let mutations = {
     left_menu(state, option) {
         if (option == "open") {
@@ -13,6 +25,7 @@ let mutations = {
             document.getElementsByTagName("body")[0].classList.add("left-hidden")
         }
     },
+    
     rightside_bar(state, option) {
         if (option == "open") {
             state.right_open = true
@@ -27,6 +40,7 @@ let mutations = {
             document.getElementsByTagName("body")[0].classList.remove("sidebar-right-opened")
         }
     },
+
     routeChange(state, loader) {
         if (loader == "start") {
             state.preloader = true
@@ -35,4 +49,8 @@ let mutations = {
         }
     }
 }
-export default mutations
+
+export default{
+    state,
+    mutations
+}
